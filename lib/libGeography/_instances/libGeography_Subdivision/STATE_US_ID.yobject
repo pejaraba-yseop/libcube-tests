@@ -1,0 +1,55 @@
+LibGeography:Subdivision STATE_US_ID
+  --> iso3166_2    "US-ID"
+  --> postal_code  "ID"
+  --> status       STATE
+  --> label
+    -> MultilingualText
+      --> i18nName_fr
+        -> NlgSubstantive
+          --> root    "Idaho"
+          --> plural  "Idaho"
+          --> gender  MASCULINE
+          --> number  SINGULAR
+        ;
+      --> i18nName_en
+        -> NlgSubstantive
+          --> root    "Idaho"
+          --> plural  "Idaho"
+          --> gender  INANIMATE
+          --> number  SINGULAR
+        ;
+      --> i18nName_es
+        -> NlgSubstantive
+          --> root    "Idaho"
+          --> plural  "Idaho"
+          --> gender  MASCULINE
+          --> number  SINGULAR
+        ;
+      --> i18nName_de
+        -> NlgSubstantive
+          --> root    "Idaho"
+          --> plural  "Idaho"
+          --> gender  NEUTRAL
+          --> number  SINGULAR
+        ;
+      --> i18nName_ja
+        -> NlgSubstantive
+          --> root    " アイダホ州"
+          --> plural  " アイダホ州"
+          --> gender  INANIMATE
+          --> number  SINGULAR
+        ;
+    ;
+  --> demonym
+    -> MultilingualText
+      --> i18nName_en  "Idahoan"
+    ;
+  --> adjective
+    -> MultilingualText
+      --> i18nName_en
+        -> NlgAdjective
+          --> root      "Idahoan"
+        ;
+    ;
+  --> useArticle_en  false
+;

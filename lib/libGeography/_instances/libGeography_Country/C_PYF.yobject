@@ -1,0 +1,76 @@
+LibGeography:Country C_PYF
+  --> iso3166_1_numeric_code  "258"
+  --> iso3166_1_alpha_2       "PF"
+  --> iso3166_1_alpha_3       "PYF"
+  --> label
+    -> MultilingualText
+      --> i18nName_fr
+        -> NlgSubstantive
+          --> root    "Polynésie française"
+          --> plural  "Polynésie française"
+          --> gender  FEMININE
+          --> number  SINGULAR
+        ;
+      --> i18nName_en
+        -> NlgSubstantive
+          --> root    "French Polynesia"
+          --> plural  "French Polynesia"
+          --> gender  INANIMATE
+          --> number  SINGULAR
+        ;
+      --> i18nName_es
+        -> NlgSubstantive
+          --> root    "Polinesia Francesa"
+          --> plural  "Polinesia Francesa"
+          --> gender  FEMININE
+          --> number  SINGULAR
+        ;
+      --> i18nName_de
+        -> NlgSubstantive
+          --> root    "Französisch-Polynesien"
+          --> plural  "Französisch-Polynesien"
+          --> gender  NEUTRAL
+          --> number  SINGULAR
+        ;
+      --> i18nName_ja
+        -> NlgSubstantive
+          --> root    "フランス領ポリネシア"
+          --> plural  "フランス領ポリネシア"
+          --> gender  INANIMATE
+          --> number  SINGULAR
+        ;
+    ;
+  --> demonym
+    -> MultilingualText
+      --> i18nName_fr
+        -> NlgGenderAgreeableSubstantive
+          --> masculine "Polynésien"
+          --> feminine  "Polynésienne"
+        ;
+      --> i18nName_en  "Polynesian"
+      --> i18nName_es  "polinesio"
+      --> i18nName_de  "von Französisch-Polynesien"
+    ;
+  --> adjective
+    -> MultilingualText
+      --> i18nName_fr
+        -> NlgAdjective
+          --> root      "polynésien"
+          --> feminine  "polynésienne"
+        ;
+      --> i18nName_en
+        -> NlgAdjective
+          --> root      "Polynesian"
+        ;
+      --> i18nName_es
+        -> NlgAdjective
+          --> root      "polinesio"
+        ;
+      --> i18nName_de
+        -> NlgAdjective
+          --> root      "von Französisch-Polynesien"
+        ;
+    ;
+  --> useArticle_fr  true
+  --> useArticle_en  false
+;

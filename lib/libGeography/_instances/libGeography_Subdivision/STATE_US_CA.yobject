@@ -1,0 +1,55 @@
+LibGeography:Subdivision STATE_US_CA
+  --> iso3166_2    "US-CA"
+  --> postal_code  "CA"
+  --> status       STATE
+  --> label
+    -> MultilingualText
+      --> i18nName_fr
+        -> NlgSubstantive
+          --> root    "Californie"
+          --> plural  "Californie"
+          --> gender  FEMININE
+          --> number  SINGULAR
+        ;
+      --> i18nName_en
+        -> NlgSubstantive
+          --> root    "California"
+          --> plural  "California"
+          --> gender  INANIMATE
+          --> number  SINGULAR
+        ;
+      --> i18nName_es
+        -> NlgSubstantive
+          --> root    "California"
+          --> plural  "California"
+          --> gender  FEMININE
+          --> number  SINGULAR
+        ;
+      --> i18nName_de
+        -> NlgSubstantive
+          --> root    "California"
+          --> plural  "California"
+          --> gender  NEUTRAL
+          --> number  SINGULAR
+        ;
+      --> i18nName_ja
+        -> NlgSubstantive
+          --> root    " カリフォルニア州"
+          --> plural  " カリフォルニア州"
+          --> gender  INANIMATE
+          --> number  SINGULAR
+        ;
+    ;
+  --> demonym
+    -> MultilingualText
+      --> i18nName_en  "Californian"
+    ;
+  --> adjective
+    -> MultilingualText
+      --> i18nName_en
+        -> NlgAdjective
+          --> root      "Californian"
+        ;
+    ;
+  --> useArticle_en  false
+;

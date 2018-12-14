@@ -1,0 +1,26 @@
+LibGeography:Region US_REG_MIDEAST
+  --> label
+    -> MultilingualText
+      --> i18nName_en
+        -> NlgSubstantive
+          --> root    "Mideast"
+          --> plural  "Mideast"
+          --> gender  INANIMATE
+          --> number  SINGULAR
+        ;
+      --> i18nName_ja
+        -> NlgSubstantive
+          --> root    "中東"
+          --> plural  "中東"
+          --> gender  INANIMATE
+          --> number  SINGULAR
+        ;
+    ;
+  --> demonym
+    -> MultilingualText
+    ;
+  --> adjective
+    -> MultilingualText
+    ;
+  --> useArticle_en  true
+;

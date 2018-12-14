@@ -1,0 +1,80 @@
+LibGeography:Country C_BRA
+  --> iso3166_1_numeric_code  "076"
+  --> iso3166_1_alpha_2       "BR"
+  --> iso3166_1_alpha_3       "BRA"
+  --> label
+    -> MultilingualText
+      --> i18nName_fr
+        -> NlgSubstantive
+          --> root    "Brésil"
+          --> plural  "Brésil"
+          --> gender  MASCULINE
+          --> number  SINGULAR
+        ;
+      --> i18nName_en
+        -> NlgSubstantive
+          --> root    "Brazil"
+          --> plural  "Brazil"
+          --> gender  INANIMATE
+          --> number  SINGULAR
+        ;
+      --> i18nName_es
+        -> NlgSubstantive
+          --> root    "Brasil"
+          --> plural  "Brasil"
+          --> gender  MASCULINE
+          --> number  SINGULAR
+        ;
+      --> i18nName_de
+        -> NlgSubstantive
+          --> root    "Brasilien"
+          --> plural  "Brasilien"
+          --> gender  NEUTRAL
+          --> number  SINGULAR
+        ;
+      --> i18nName_ja
+        -> NlgSubstantive
+          --> root    "ブラジル"
+          --> plural  "ブラジル"
+          --> gender  INANIMATE
+          --> number  SINGULAR
+        ;
+    ;
+  --> demonym
+    -> MultilingualText
+      --> i18nName_fr
+        -> NlgGenderAgreeableSubstantive
+          --> masculine "Brésilien"
+          --> feminine  "Brésilienne"
+        ;
+      --> i18nName_en  "Brazilian"
+      --> i18nName_es  "brasileño"
+      --> i18nName_de
+        -> NlgGenderAgreeableSubstantive
+          --> masculine "Brasilianer"
+          --> feminine  "Brasilianerin"
+        ;
+    ;
+  --> adjective
+    -> MultilingualText
+      --> i18nName_fr
+        -> NlgAdjective
+          --> root      "brésilien"
+          --> feminine  "brésilienne"
+        ;
+      --> i18nName_en
+        -> NlgAdjective
+          --> root      "Brazilian"
+        ;
+      --> i18nName_es
+        -> NlgAdjective
+          --> root      "brasileño"
+        ;
+      --> i18nName_de
+        -> NlgAdjective
+          --> root      "brasilianisch"
+        ;
+    ;
+  --> useArticle_fr  true
+  --> useArticle_en  false
+;

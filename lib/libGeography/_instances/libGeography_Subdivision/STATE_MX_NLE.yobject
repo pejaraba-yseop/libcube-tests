@@ -1,0 +1,47 @@
+LibGeography:Subdivision STATE_MX_NLE
+  --> iso3166_2    "MX-NLE"
+  --> postal_code  "NL"
+  --> status       STATE
+  --> label
+    -> MultilingualText
+      --> i18nName_fr
+        -> NlgSubstantive
+          --> root    "Nuevo León"
+          --> plural  "Nuevo León"
+          --> number  SINGULAR
+        ;
+      --> i18nName_en
+        -> NlgSubstantive
+          --> root    "Nuevo León"
+          --> plural  "Nuevo León"
+          --> gender  INANIMATE
+          --> number  SINGULAR
+        ;
+      --> i18nName_es
+        -> NlgSubstantive
+          --> root    "Nuevo León"
+          --> plural  "Nuevo León"
+          --> number  SINGULAR
+        ;
+      --> i18nName_de
+        -> NlgSubstantive
+          --> root    "Nuevo León"
+          --> plural  "Nuevo León"
+          --> gender  NEUTRAL
+          --> number  SINGULAR
+        ;
+      --> i18nName_ja
+        -> NlgSubstantive
+          --> root    "ヌエボ・レオン州"
+          --> plural  "ヌエボ・レオン州"
+          --> gender  INANIMATE
+          --> number  SINGULAR
+        ;
+    ;
+  --> demonym
+    -> MultilingualText
+    ;
+  --> adjective
+    -> MultilingualText
+    ;
+;

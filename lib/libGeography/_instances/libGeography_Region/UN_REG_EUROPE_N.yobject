@@ -1,0 +1,52 @@
+LibGeography:Region UN_REG_EUROPE_N
+  --> label
+    -> MultilingualText
+      --> i18nName_fr
+        -> NlgSubstantive
+          --> root    "Europe du Nord"
+          --> plural  "Europe du Nord"
+          --> gender  FEMININE
+          --> number  SINGULAR
+        ;
+      --> i18nName_en
+        -> NlgSubstantive
+          --> root    "Northern Europe"
+          --> plural  "Northern Europe"
+          --> gender  INANIMATE
+          --> number  SINGULAR
+        ;
+      --> i18nName_es
+        -> NlgSubstantive
+          --> root    "Europa septentrional"
+          --> plural  "Europa septentrional"
+          --> gender  FEMININE
+          --> number  SINGULAR
+        ;
+      --> i18nName_de
+        -> NlgSubstantive
+          --> root    "Nördliches Europa"
+          --> plural  "Nördliches Europa"
+          --> gender  NEUTRAL
+          --> number  SINGULAR
+        ;
+      --> i18nName_ja
+        -> NlgSubstantive
+          --> root    "北ヨーロッパ"
+          --> plural  "北ヨーロッパ"
+          --> gender  INANIMATE
+          --> number  SINGULAR
+        ;
+    ;
+  --> demonym
+    -> MultilingualText
+      --> i18nName_en  "Northern European"
+    ;
+  --> adjective
+    -> MultilingualText
+      --> i18nName_en
+        -> NlgAdjective
+          --> root      "Northern European"
+        ;
+    ;
+  --> useArticle_en  false
+;

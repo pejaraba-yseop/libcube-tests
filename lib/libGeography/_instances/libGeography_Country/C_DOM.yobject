@@ -1,0 +1,80 @@
+LibGeography:Country C_DOM
+  --> iso3166_1_numeric_code  "214"
+  --> iso3166_1_alpha_2       "DO"
+  --> iso3166_1_alpha_3       "DOM"
+  --> label
+    -> MultilingualText
+      --> i18nName_fr
+        -> NlgSubstantive
+          --> root    "République dominicaine"
+          --> plural  "République dominicaine"
+          --> gender  FEMININE
+          --> number  SINGULAR
+        ;
+      --> i18nName_en
+        -> NlgSubstantive
+          --> root    "Dominican Republic"
+          --> plural  "Dominican Republic"
+          --> gender  INANIMATE
+          --> number  SINGULAR
+        ;
+      --> i18nName_es
+        -> NlgSubstantive
+          --> root    "República Dominicana"
+          --> plural  "República Dominicana"
+          --> gender  FEMININE
+          --> number  SINGULAR
+        ;
+      --> i18nName_de
+        -> NlgSubstantive
+          --> root    "Dominikanische Republik"
+          --> plural  "Dominikanische Republik"
+          --> gender  NEUTRAL
+          --> number  SINGULAR
+        ;
+      --> i18nName_ja
+        -> NlgSubstantive
+          --> root    "ドミニカ共和国"
+          --> plural  "ドミニカ共和国"
+          --> gender  INANIMATE
+          --> number  SINGULAR
+        ;
+    ;
+  --> demonym
+    -> MultilingualText
+      --> i18nName_fr
+        -> NlgGenderAgreeableSubstantive
+          --> masculine "Dominicain"
+          --> feminine  "Dominicaine"
+        ;
+      --> i18nName_en  "Dominican"
+      --> i18nName_es  "dominicano"
+      --> i18nName_de
+        -> NlgGenderAgreeableSubstantive
+          --> masculine "Dominikaner"
+          --> feminine  "Dominikanerin"
+        ;
+    ;
+  --> adjective
+    -> MultilingualText
+      --> i18nName_fr
+        -> NlgAdjective
+          --> root      "dominicain"
+          --> feminine  "dominicaine"
+        ;
+      --> i18nName_en
+        -> NlgAdjective
+          --> root      "Dominican"
+        ;
+      --> i18nName_es
+        -> NlgAdjective
+          --> root      "dominicano"
+        ;
+      --> i18nName_de
+        -> NlgAdjective
+          --> root      "dominikanisch"
+        ;
+    ;
+  --> useArticle_fr  true
+  --> useArticle_en  true
+;

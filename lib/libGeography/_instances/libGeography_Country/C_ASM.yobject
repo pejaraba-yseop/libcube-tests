@@ -1,0 +1,71 @@
+LibGeography:Country C_ASM
+  --> iso3166_1_numeric_code  "016"
+  --> iso3166_1_alpha_2       "AS"
+  --> iso3166_1_alpha_3       "ASM"
+  --> label
+    -> MultilingualText
+      --> i18nName_fr
+        -> NlgSubstantive
+          --> root    "Samoa américaines"
+          --> plural  "Samoa américaines"
+          --> gender  FEMININE
+          --> number  PLURAL
+        ;
+      --> i18nName_en
+        -> NlgSubstantive
+          --> root    "American Samoa"
+          --> plural  "American Samoa"
+          --> gender  INANIMATE
+          --> number  PLURAL
+        ;
+      --> i18nName_es
+        -> NlgSubstantive
+          --> root    "Samoa Americana"
+          --> plural  "Samoa Americana"
+          --> gender  FEMININE
+          --> number  PLURAL
+        ;
+      --> i18nName_de
+        -> NlgSubstantive
+          --> root    "Amerikanisch-Samoa"
+          --> plural  "Amerikanisch-Samoa"
+          --> gender  NEUTRAL
+          --> number  PLURAL
+        ;
+      --> i18nName_ja
+        -> NlgSubstantive
+          --> root    "アメリカンサモア"
+          --> plural  "アメリカンサモア"
+          --> gender  INANIMATE
+          --> number  PLURAL
+        ;
+    ;
+  --> demonym
+    -> MultilingualText
+      --> i18nName_fr  "des Samoa américaines"
+      --> i18nName_en  "American Samoan"
+      --> i18nName_es  "de Samoa Americana"
+      --> i18nName_de  "von Amerikanisch-Samoa"
+    ;
+  --> adjective
+    -> MultilingualText
+      --> i18nName_fr
+        -> NlgAdjective
+          --> root      "des Samoa américaines"
+        ;
+      --> i18nName_en
+        -> NlgAdjective
+          --> root      "American Samoan"
+        ;
+      --> i18nName_es
+        -> NlgAdjective
+          --> root      "de Samoa Americana"
+        ;
+      --> i18nName_de
+        -> NlgAdjective
+          --> root      "von Amerikanisch-Samoa"
+        ;
+    ;
+  --> useArticle_fr  true
+  --> useArticle_en  false
+;

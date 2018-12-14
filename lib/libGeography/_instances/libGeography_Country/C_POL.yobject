@@ -1,0 +1,80 @@
+LibGeography:Country C_POL
+  --> iso3166_1_numeric_code  "616"
+  --> iso3166_1_alpha_2       "PL"
+  --> iso3166_1_alpha_3       "POL"
+  --> label
+    -> MultilingualText
+      --> i18nName_fr
+        -> NlgSubstantive
+          --> root    "Pologne"
+          --> plural  "Pologne"
+          --> gender  FEMININE
+          --> number  SINGULAR
+        ;
+      --> i18nName_en
+        -> NlgSubstantive
+          --> root    "Poland"
+          --> plural  "Poland"
+          --> gender  INANIMATE
+          --> number  SINGULAR
+        ;
+      --> i18nName_es
+        -> NlgSubstantive
+          --> root    "Polonia"
+          --> plural  "Polonia"
+          --> gender  FEMININE
+          --> number  SINGULAR
+        ;
+      --> i18nName_de
+        -> NlgSubstantive
+          --> root    "Polen"
+          --> plural  "Polen"
+          --> gender  NEUTRAL
+          --> number  SINGULAR
+        ;
+      --> i18nName_ja
+        -> NlgSubstantive
+          --> root    "ポーランド"
+          --> plural  "ポーランド"
+          --> gender  INANIMATE
+          --> number  SINGULAR
+        ;
+    ;
+  --> demonym
+    -> MultilingualText
+      --> i18nName_fr
+        -> NlgGenderAgreeableSubstantive
+          --> masculine "Polonais"
+          --> feminine  "Polonaise"
+        ;
+      --> i18nName_en  "Pole"
+      --> i18nName_es  "polaco"
+      --> i18nName_de
+        -> NlgGenderAgreeableSubstantive
+          --> masculine "Pole"
+          --> feminine  "Polin"
+        ;
+    ;
+  --> adjective
+    -> MultilingualText
+      --> i18nName_fr
+        -> NlgAdjective
+          --> root      "polonais"
+          --> feminine  "polonaise"
+        ;
+      --> i18nName_en
+        -> NlgAdjective
+          --> root      "Polish"
+        ;
+      --> i18nName_es
+        -> NlgAdjective
+          --> root      "polaco"
+        ;
+      --> i18nName_de
+        -> NlgAdjective
+          --> root      "polnisch"
+        ;
+    ;
+  --> useArticle_fr  true
+  --> useArticle_en  false
+;

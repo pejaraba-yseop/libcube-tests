@@ -1,0 +1,76 @@
+LibGeography:Country C_CPV
+  --> iso3166_1_numeric_code  "132"
+  --> iso3166_1_alpha_2       "CV"
+  --> iso3166_1_alpha_3       "CPV"
+  --> label
+    -> MultilingualText
+      --> i18nName_fr
+        -> NlgSubstantive
+          --> root    "Cap-Vert"
+          --> plural  "Cap-Vert"
+          --> gender  MASCULINE
+          --> number  SINGULAR
+        ;
+      --> i18nName_en
+        -> NlgSubstantive
+          --> root    "Cape Verde"
+          --> plural  "Cape Verde"
+          --> gender  INANIMATE
+          --> number  SINGULAR
+        ;
+      --> i18nName_es
+        -> NlgSubstantive
+          --> root    "Cabo Verde"
+          --> plural  "Cabo Verde"
+          --> gender  MASCULINE
+          --> number  SINGULAR
+        ;
+      --> i18nName_de
+        -> NlgSubstantive
+          --> root    "Cabo Verde"
+          --> plural  "Cabo Verde"
+          --> gender  NEUTRAL
+          --> number  SINGULAR
+        ;
+      --> i18nName_ja
+        -> NlgSubstantive
+          --> root    "カーボベルデ"
+          --> plural  "カーボベルデ"
+          --> gender  INANIMATE
+          --> number  SINGULAR
+        ;
+    ;
+  --> demonym
+    -> MultilingualText
+      --> i18nName_fr
+        -> NlgGenderAgreeableSubstantive
+          --> masculine "Cap-Verdien"
+          --> feminine  "Cap-Verdienne"
+        ;
+      --> i18nName_en  "Cape Verdean"
+      --> i18nName_es  "caboverdiano"
+      --> i18nName_de  "von Cabo Verde"
+    ;
+  --> adjective
+    -> MultilingualText
+      --> i18nName_fr
+        -> NlgAdjective
+          --> root      "cap-verdien"
+          --> feminine  "cap-verdienne"
+        ;
+      --> i18nName_en
+        -> NlgAdjective
+          --> root      "Cape Verdean"
+        ;
+      --> i18nName_es
+        -> NlgAdjective
+          --> root      "caboverdiano"
+        ;
+      --> i18nName_de
+        -> NlgAdjective
+          --> root      "von Cabo Verde"
+        ;
+    ;
+  --> useArticle_fr  true
+  --> useArticle_en  false
+;

@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<yseop-yml:ymlTextFunction xmlns:yseop-yml="http://www.yseop.com/yml/storage" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" domainModelVersion="3" identifier="f5bd2a78-c307-49d0-bd1b-1feab8d51100">
+    <yseop-yml:textGranule domainModelVersion="3" identifier="b5e412a7-1bde-4543-97e3-023d4e1e7459">
+        <yseop-yml:granuleI18nContents>
+            <yseop-yml:granuleUnilingueContent locale="en">
+                <yseop-yml:granuleContent>
+                    <yseop-yml:text>The overweight allocation to insurance securities such as Bupa and Society of Lloyd's also enhanced returns. Conversely, the bias towards Verizon was a key detractor from performance at the issuer level.
+
+This was due to a rise in event risk as Verizon explored the possibility of a merger with Charter early in the quarter .</yseop-yml:text>
+                    <yseop-yml:inline-assemblies/>
+                    <yseop-yml:inline-dslFunctionCalls/>
+                </yseop-yml:granuleContent>
+            </yseop-yml:granuleUnilingueContent>
+            <yseop-yml:granuleUnilingueContent locale="es">
+                <yseop-yml:granuleContent>
+                    <yseop-yml:text/>
+                    <yseop-yml:inline-assemblies/>
+                    <yseop-yml:inline-dslFunctionCalls/>
+                </yseop-yml:granuleContent>
+            </yseop-yml:granuleUnilingueContent>
+            <yseop-yml:granuleUnilingueContent locale="fr">
+                <yseop-yml:granuleContent>
+                    <yseop-yml:text/>
+                    <yseop-yml:inline-assemblies/>
+                    <yseop-yml:inline-dslFunctionCalls/>
+                </yseop-yml:granuleContent>
+            </yseop-yml:granuleUnilingueContent>
+        </yseop-yml:granuleI18nContents>
+        <yseop-yml:dslCondition/>
+        <yseop-yml:name/>
+        <yseop-yml:creationDate>2018-04-23T18:53:58.444Z</yseop-yml:creationDate>
+        <yseop-yml:properties identifier="ec8df4cb-6c79-4db7-8ebc-96ebe8284890">
+            <yseop-yml:property identifier="ec8df4cb-6c79-4db7-8ebc-96ebe8284890|condition" type="YML_PROPERTY" name="condition"></yseop-yml:property>
+        </yseop-yml:properties>
+    </yseop-yml:textGranule>
+    <yseop-yml:localVariables/>
+    <yseop-yml:advancedContent/>
+    <yseop-yml:ymlParameters/>
+    <yseop-yml:name>SecondDriverSectorContribution</yseop-yml:name>
+    <yseop-yml:properties identifier="e6a9b50c-002d-446d-8eff-6697961d9c85">
+        <yseop-yml:property identifier="e6a9b50c-002d-446d-8eff-6697961d9c85|dsl" type="YML_PROPERTY" name="dsl">"Second Driver Sector Contribution"</yseop-yml:property>
+    </yseop-yml:properties>
+</yseop-yml:ymlTextFunction>

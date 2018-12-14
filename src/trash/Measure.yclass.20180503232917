@@ -1,0 +1,29 @@
+
+interface Measureee extends LibCube:HierarchyElement
+    field sign
+        --> domains Text
+        --> xmlMapping XmlMappingProperty_NO_SAVE
+        --> dsl -> Textualization
+            --> language LANG_en
+            --> root "sign"
+            --> number SINGULAR
+        ;
+    field isExplainable
+        --> domains Boolean
+        --> xmlMapping XmlMappingProperty_NO_SAVE
+        --> dsl -> Textualization
+            --> language LANG_en
+            --> root "isExplainable"
+            --> number SINGULAR
+        ;
+    classProperties
+    --> dsl -> Textualization
+        --> language LANG_en
+        --> root "Measureee"
+        --> number SINGULAR
+    ;
+;
+
+implementation Measureee
+;
+

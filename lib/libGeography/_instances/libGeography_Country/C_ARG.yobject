@@ -1,0 +1,80 @@
+LibGeography:Country C_ARG
+  --> iso3166_1_numeric_code  "032"
+  --> iso3166_1_alpha_2       "AR"
+  --> iso3166_1_alpha_3       "ARG"
+  --> label
+    -> MultilingualText
+      --> i18nName_fr
+        -> NlgSubstantive
+          --> root    "Argentine"
+          --> plural  "Argentine"
+          --> gender  FEMININE
+          --> number  SINGULAR
+        ;
+      --> i18nName_en
+        -> NlgSubstantive
+          --> root    "Argentina"
+          --> plural  "Argentina"
+          --> gender  INANIMATE
+          --> number  SINGULAR
+        ;
+      --> i18nName_es
+        -> NlgSubstantive
+          --> root    "Argentina"
+          --> plural  "Argentina"
+          --> gender  FEMININE
+          --> number  SINGULAR
+        ;
+      --> i18nName_de
+        -> NlgSubstantive
+          --> root    "Argentinien"
+          --> plural  "Argentinien"
+          --> gender  NEUTRAL
+          --> number  SINGULAR
+        ;
+      --> i18nName_ja
+        -> NlgSubstantive
+          --> root    "アルゼンチン"
+          --> plural  "アルゼンチン"
+          --> gender  INANIMATE
+          --> number  SINGULAR
+        ;
+    ;
+  --> demonym
+    -> MultilingualText
+      --> i18nName_fr
+        -> NlgGenderAgreeableSubstantive
+          --> masculine "Argentin"
+          --> feminine  "Argentine"
+        ;
+      --> i18nName_en  "Argentinian"
+      --> i18nName_es  "argentino"
+      --> i18nName_de
+        -> NlgGenderAgreeableSubstantive
+          --> masculine "Argentinier"
+          --> feminine  "Argentinierin"
+        ;
+    ;
+  --> adjective
+    -> MultilingualText
+      --> i18nName_fr
+        -> NlgAdjective
+          --> root      "argentin"
+          --> feminine  "argentine"
+        ;
+      --> i18nName_en
+        -> NlgAdjective
+          --> root      "Argentinian"
+        ;
+      --> i18nName_es
+        -> NlgAdjective
+          --> root      "argentino"
+        ;
+      --> i18nName_de
+        -> NlgAdjective
+          --> root      "argentinisch"
+        ;
+    ;
+  --> useArticle_fr  true
+  --> useArticle_en  false
+;

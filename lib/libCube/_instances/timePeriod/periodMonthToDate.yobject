@@ -1,0 +1,7 @@
+LibCube:TimePeriod PERIOD_MTD
+    --> dsl -> Textualization
+        --> language LANG_en
+        --> root "period month to date"
+        --> number SINGULAR
+    ;
+;

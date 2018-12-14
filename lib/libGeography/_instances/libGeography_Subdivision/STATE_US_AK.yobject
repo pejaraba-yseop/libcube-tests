@@ -1,0 +1,55 @@
+LibGeography:Subdivision STATE_US_AK
+  --> iso3166_2    "US-AK"
+  --> postal_code  "AK"
+  --> status       STATE
+  --> label
+    -> MultilingualText
+      --> i18nName_fr
+        -> NlgSubstantive
+          --> root    "Alaska"
+          --> plural  "Alaska"
+          --> gender  MASCULINE
+          --> number  SINGULAR
+        ;
+      --> i18nName_en
+        -> NlgSubstantive
+          --> root    "Alaska"
+          --> plural  "Alaska"
+          --> gender  INANIMATE
+          --> number  SINGULAR
+        ;
+      --> i18nName_es
+        -> NlgSubstantive
+          --> root    "Alaska"
+          --> plural  "Alaska"
+          --> gender  FEMININE
+          --> number  SINGULAR
+        ;
+      --> i18nName_de
+        -> NlgSubstantive
+          --> root    "Alaska"
+          --> plural  "Alaska"
+          --> gender  NEUTRAL
+          --> number  SINGULAR
+        ;
+      --> i18nName_ja
+        -> NlgSubstantive
+          --> root    " アラスカ州"
+          --> plural  " アラスカ州"
+          --> gender  INANIMATE
+          --> number  SINGULAR
+        ;
+    ;
+  --> demonym
+    -> MultilingualText
+      --> i18nName_en  "Alaskan"
+    ;
+  --> adjective
+    -> MultilingualText
+      --> i18nName_en
+        -> NlgAdjective
+          --> root      "Alaskan"
+        ;
+    ;
+  --> useArticle_en  false
+;

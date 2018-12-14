@@ -1,0 +1,47 @@
+LibGeography:Subdivision STATE_MX_GUA
+  --> iso3166_2    "MX-GUA"
+  --> postal_code  "GJ"
+  --> status       STATE
+  --> label
+    -> MultilingualText
+      --> i18nName_fr
+        -> NlgSubstantive
+          --> root    "État de Mexico"
+          --> plural  "État de Mexico"
+          --> number  SINGULAR
+        ;
+      --> i18nName_en
+        -> NlgSubstantive
+          --> root    "México"
+          --> plural  "México"
+          --> gender  INANIMATE
+          --> number  SINGULAR
+        ;
+      --> i18nName_es
+        -> NlgSubstantive
+          --> root    "México"
+          --> plural  "México"
+          --> number  SINGULAR
+        ;
+      --> i18nName_de
+        -> NlgSubstantive
+          --> root    "México"
+          --> plural  "México"
+          --> gender  NEUTRAL
+          --> number  SINGULAR
+        ;
+      --> i18nName_ja
+        -> NlgSubstantive
+          --> root    "メヒコ州"
+          --> plural  "メヒコ州"
+          --> gender  INANIMATE
+          --> number  SINGULAR
+        ;
+    ;
+  --> demonym
+    -> MultilingualText
+    ;
+  --> adjective
+    -> MultilingualText
+    ;
+;

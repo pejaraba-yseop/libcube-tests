@@ -1,0 +1,76 @@
+LibGeography:Country C_JEY
+  --> iso3166_1_numeric_code  "832"
+  --> iso3166_1_alpha_2       "JE"
+  --> iso3166_1_alpha_3       "JEY"
+  --> label
+    -> MultilingualText
+      --> i18nName_fr
+        -> NlgSubstantive
+          --> root    "Jersey"
+          --> plural  "Jersey"
+          --> gender  FEMININE
+          --> number  SINGULAR
+        ;
+      --> i18nName_en
+        -> NlgSubstantive
+          --> root    "Jersey"
+          --> plural  "Jersey"
+          --> gender  INANIMATE
+          --> number  SINGULAR
+        ;
+      --> i18nName_es
+        -> NlgSubstantive
+          --> root    "Jersey"
+          --> plural  "Jersey"
+          --> gender  FEMININE
+          --> number  SINGULAR
+        ;
+      --> i18nName_de
+        -> NlgSubstantive
+          --> root    "Jersey"
+          --> plural  "Jersey"
+          --> gender  NEUTRAL
+          --> number  SINGULAR
+        ;
+      --> i18nName_ja
+        -> NlgSubstantive
+          --> root    "ジャージー"
+          --> plural  "ジャージー"
+          --> gender  INANIMATE
+          --> number  SINGULAR
+        ;
+    ;
+  --> demonym
+    -> MultilingualText
+      --> i18nName_fr
+        -> NlgGenderAgreeableSubstantive
+          --> masculine "Jersiais"
+          --> feminine  "Jersiaise"
+        ;
+      --> i18nName_en  "of Jersey"
+      --> i18nName_es  "de Jersey"
+      --> i18nName_de  "von Jersey"
+    ;
+  --> adjective
+    -> MultilingualText
+      --> i18nName_fr
+        -> NlgAdjective
+          --> root      "jersiais"
+          --> feminine  "jersiaise"
+        ;
+      --> i18nName_en
+        -> NlgAdjective
+          --> root      "Jersey"
+        ;
+      --> i18nName_es
+        -> NlgAdjective
+          --> root      "de Jersey"
+        ;
+      --> i18nName_de
+        -> NlgAdjective
+          --> root      "von Jersey"
+        ;
+    ;
+  --> useArticle_fr  false
+  --> useArticle_en  false
+;

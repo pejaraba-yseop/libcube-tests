@@ -1,0 +1,52 @@
+LibGeography:Region UN_REG_OCEANIA_MELANESIA
+  --> label
+    -> MultilingualText
+      --> i18nName_fr
+        -> NlgSubstantive
+          --> root    "Mélanésie"
+          --> plural  "Mélanésie"
+          --> gender  FEMININE
+          --> number  SINGULAR
+        ;
+      --> i18nName_en
+        -> NlgSubstantive
+          --> root    "Melanesia"
+          --> plural  "Melanesia"
+          --> gender  INANIMATE
+          --> number  SINGULAR
+        ;
+      --> i18nName_es
+        -> NlgSubstantive
+          --> root    "Melanesia"
+          --> plural  "Melanesia"
+          --> gender  FEMININE
+          --> number  SINGULAR
+        ;
+      --> i18nName_de
+        -> NlgSubstantive
+          --> root    "Melanesien"
+          --> plural  "Melanesien"
+          --> gender  NEUTRAL
+          --> number  SINGULAR
+        ;
+      --> i18nName_ja
+        -> NlgSubstantive
+          --> root    "メラネシア "
+          --> plural  "メラネシア "
+          --> gender  INANIMATE
+          --> number  SINGULAR
+        ;
+    ;
+  --> demonym
+    -> MultilingualText
+      --> i18nName_en  "Melanesian"
+    ;
+  --> adjective
+    -> MultilingualText
+      --> i18nName_en
+        -> NlgAdjective
+          --> root      "Melanesian"
+        ;
+    ;
+  --> useArticle_en  false
+;

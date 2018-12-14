@@ -1,0 +1,142 @@
+interface LibCube:NonIndicatorMembersJointure extends LibCube:Jointure
+ 
+    classProperties
+    --> dsl -> Textualization
+        --> language LANG_en
+        --> root "Kpi Cube Jointure"
+        --> number SINGULAR
+    ;
+    --> trackInstances true
+    --> dynamicInstances  true
+;
+
+implementation LibCube:NonIndicatorMembersJointure override {
+   getJointureResult function
+   init function
+   checkJointureDimensions function
+}
+;
+
+function LibCube:NonIndicatorMembersJointure::getJointureResult(LibCube:Fact theFact) 
+--> local Boolean allConditionsSatisfied, Boolean dimOK, HashSet members, LibCube:Member memberInCommon, LibCube:NonIndicatorMembersId nonIndicatorMembersId, Boolean foundSameId
+--> action {
+  
+  members = new(HashSet);
+  members.clear() // needed?
+  /* check dimension conditions:
+     First it checks if it accepts any members of the dimension, then if it accepts a multivalued member and finally it checks if it accepts a collection 
+ */
+  allConditionsSatisfied = true;
+  foreach(_dimensionCondition, dimensionConditions) {
+    dimOK = false;    
+    if(intersection(_dimensionCondition.dimension>>members, theFact>> members).isEmpty() == false){
+        dimOK = true;
+        memberInCommon =  intersection(_dimensionCondition.dimension>>members, theFact>> members).get(_FIRST);
+        //TODO: check by setItselfAsValue or if dimensino == DIMENSION_INDICATOR?
+        if(_dimensionCondition.setItselfAsValue == true){
+          members.add(memberInCommon);
+        }
+        
+    }
+    else{
+      if(_dimensionCondition.acceptsEmpty == true && theFact.getDimension(_dimensionCondition.dimension) == null){
+        dimOK = true;
+      }
+    }
+    
+    if(dimOK == false) {
+      allConditionsSatisfied = false;
+      break;
+    } 
+  } 
+  // end check dimension conditions
+
+  foundSameId = false;
+  foreach(_nonIndicatorMembersId, as(?nonIndicatorMembersId, ?nonIndicatorMembersId.nonIndicatorMembers != null)){
+       if(_nonIndicatorMembersId.equalMembers(members) == true){
+          theFact.newOAVTriplet(attribute, _nonIndicatorMembersId);
+          foundSameId = true;
+          break;
+       }
+  }
+
+  if (allConditionsSatisfied == true && foundSameId == false) {
+    nonIndicatorMembersId = new(LibCube:NonIndicatorMembersId);
+    nonIndicatorMembersId.nonIndicatorMembers = members;
+    // TODO: nonIndicatorMembersId = LibCube:NonIndicatorMembersId..newId(members) ? ref: https://docs.yseop.com/wiki/Yseop.lang.Date#newDate 
+    theFact.newOAVTriplet(attribute, nonIndicatorMembersId);
+  }
+
+}
+;
+
+
+function LibCube:NonIndicatorMembersJointure::init()
+--> local LibCube:JointureDimensionCondition currentCondition
+--> action {
+   this.attribute = LibCube:Fact::nonIndicatorMembersId;
+   this.dimensionConditions = new(List);
+   foreach(_dimension, LibCube:Dimension){
+     currentCondition = new(LibCube:JointureDimensionCondition);
+     currentCondition.dimension = _dimension;
+     currentCondition.acceptsAnyMembers = true;
+     if(_dimension != DIMENSION_INDICATOR){
+       currentCondition.setItselfAsValue = true;
+       currentCondition.acceptsEmpty = true;
+     }
+     this.dimensionConditions.add(currentCondition);
+   }
+   checkJointureDimensions();
+}
+;
+
+/* Validation steps for this special jointure creationg */
+function LibCube:NonIndicatorMembersJointure::checkJointureDimensions()
+--> local LibCube:JointureDimensionCondition newDimensionCondition, HashMap hashMapByDimension
+--> action {
+
+  if(this.attribute != LibCube:Fact::nonIndicatorMembersId){
+    logWarning("The attribute of a non kpi members id jointure must be LibCube:Fact::nonKpiMembersId");
+  }
+  //check jointure dimensions
+  if (dimensionConditions != null) {
+    hashMapByDimension =  dimensionConditions.groupItems (_KEY: LibCube:JointureDimensionCondition::dimension, 
+                                                                    _OCCURRENCES_COUNT, 
+                                                                    _FREQUENCY_ORDER, 
+                                                                    _DESCENDANT);
+
+    foreach(_dimension, LibCube:Dimension) {
+        switch {
+          case(hashMapByDimension[_dimension] == null && _dimension.isOptional == false): {
+            if(_dimension.defaultMember != null) {                  
+              //add newDimensionCondition with defaultMember to jointure
+              newDimensionCondition = new (LibCube:JointureDimensionCondition);
+              newDimensionCondition.dimension = _dimension;
+              newDimensionCondition.members = _dimension.defaultMember;
+              dimensionConditions.add(newDimensionCondition);
+            } else {                    
+              logWarning("missing dimension :", _dimension, " for jointure :", this)
+            }
+          }
+          case(hashMapByDimension[_dimension] > 1): {
+            logWarning("too many dimensionConditions for dimension :", _dimension, " for jointure :", this)
+          }
+        }
+      }    
+    free(hashMapByDimension);
+    foreach(_dimensionCondition, dimensionConditions){
+      if(_dimensionCondition.acceptsAnyMembers == false){
+         logWarning("All dimension conditions of a non kpi members id jointure must accept any members");
+      }
+
+      if(_dimensionCondition.dimension == DIMENSION_INDICATOR && _dimensionCondition.setItselfAsValue == true){
+        logWarning("The dimension condition of DIMENSION_KPI in a non kpi members id jointure should not set itself as value");
+      }
+
+      if(_dimensionCondition.dimension != DIMENSION_INDICATOR && _dimensionCondition.setItselfAsValue != true){
+        logWarning("The dimension condition of a non kpi dimension in a non kpi members id jointure should set itself as value");
+      }
+    }  
+  } // end check jointure dimensions          
+}
+;

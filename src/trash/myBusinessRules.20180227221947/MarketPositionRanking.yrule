@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<yseop-yml:ymlRule xmlns:yseop-yml="http://www.yseop.com/yml/storage" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" domainModelVersion="3" identifier="9918be43-89f3-4ffc-a319-10faef9e759e">
+    <yseop-yml:content>getGeneralData().sortedMarketPositionList.add(?marketPositionItem);</yseop-yml:content>
+    <yseop-yml:content>?marketPositionItem in MarketPositionItem</yseop-yml:content>
+    <yseop-yml:name>MarketPositionRanking</yseop-yml:name>
+    <yseop-yml:properties identifier="abda4fab-277d-4892-b2be-2a539adec8b5">
+        <yseop-yml:property identifier="abda4fab-277d-4892-b2be-2a539adec8b5|dsl" type="YML_PROPERTY" name="dsl">"Add Market Position to List"</yseop-yml:property>
+        <yseop-yml:property identifier="abda4fab-277d-4892-b2be-2a539adec8b5|disabled" type="GENERATION_PROPERTY" name="disabled">true</yseop-yml:property>
+    </yseop-yml:properties>
+</yseop-yml:ymlRule>

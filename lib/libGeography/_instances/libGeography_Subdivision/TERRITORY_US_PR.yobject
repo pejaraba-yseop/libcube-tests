@@ -1,0 +1,55 @@
+LibGeography:Subdivision TERRITORY_US_PR
+  --> iso3166_2    "US-PR"
+  --> postal_code  "PR"
+  --> status       TERRITORY
+  --> label
+    -> MultilingualText
+      --> i18nName_fr
+        -> NlgSubstantive
+          --> root    "Porto Rico"
+          --> plural  "Porto Rico"
+          --> gender  MASCULINE
+          --> number  SINGULAR
+        ;
+      --> i18nName_en
+        -> NlgSubstantive
+          --> root    " Puerto Rico"
+          --> plural  " Puerto Rico"
+          --> gender  INANIMATE
+          --> number  SINGULAR
+        ;
+      --> i18nName_es
+        -> NlgSubstantive
+          --> root    "Puerto Rico"
+          --> plural  "Puerto Rico"
+          --> gender  MASCULINE
+          --> number  SINGULAR
+        ;
+      --> i18nName_de
+        -> NlgSubstantive
+          --> root    "Puerto Rico"
+          --> plural  "Puerto Rico"
+          --> gender  NEUTRAL
+          --> number  SINGULAR
+        ;
+      --> i18nName_ja
+        -> NlgSubstantive
+          --> root    "プエルトリコ"
+          --> plural  "プエルトリコ"
+          --> gender  INANIMATE
+          --> number  SINGULAR
+        ;
+    ;
+  --> demonym
+    -> MultilingualText
+      --> i18nName_en  "Puerto Rican"
+    ;
+  --> adjective
+    -> MultilingualText
+      --> i18nName_en
+        -> NlgAdjective
+          --> root      "Puerto Rican"
+        ;
+    ;
+  --> useArticle_en  false
+;

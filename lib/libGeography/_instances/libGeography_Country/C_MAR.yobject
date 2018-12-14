@@ -1,0 +1,80 @@
+LibGeography:Country C_MAR
+  --> iso3166_1_numeric_code  "504"
+  --> iso3166_1_alpha_2       "MA"
+  --> iso3166_1_alpha_3       "MAR"
+  --> label
+    -> MultilingualText
+      --> i18nName_fr
+        -> NlgSubstantive
+          --> root    "Maroc"
+          --> plural  "Maroc"
+          --> gender  MASCULINE
+          --> number  SINGULAR
+        ;
+      --> i18nName_en
+        -> NlgSubstantive
+          --> root    "Morocco"
+          --> plural  "Morocco"
+          --> gender  INANIMATE
+          --> number  SINGULAR
+        ;
+      --> i18nName_es
+        -> NlgSubstantive
+          --> root    "Marruecos"
+          --> plural  "Marruecos"
+          --> gender  MASCULINE
+          --> number  SINGULAR
+        ;
+      --> i18nName_de
+        -> NlgSubstantive
+          --> root    "Marokko"
+          --> plural  "Marokko"
+          --> gender  NEUTRAL
+          --> number  SINGULAR
+        ;
+      --> i18nName_ja
+        -> NlgSubstantive
+          --> root    "モロッコ"
+          --> plural  "モロッコ"
+          --> gender  INANIMATE
+          --> number  SINGULAR
+        ;
+    ;
+  --> demonym
+    -> MultilingualText
+      --> i18nName_fr
+        -> NlgGenderAgreeableSubstantive
+          --> masculine "Marocain"
+          --> feminine  "Marocaine"
+        ;
+      --> i18nName_en  "Moroccan"
+      --> i18nName_es  "marroquí"
+      --> i18nName_de
+        -> NlgGenderAgreeableSubstantive
+          --> masculine "Marokkaner"
+          --> feminine  "Marokkanerin"
+        ;
+    ;
+  --> adjective
+    -> MultilingualText
+      --> i18nName_fr
+        -> NlgAdjective
+          --> root      "marocain"
+          --> feminine  "marocaine"
+        ;
+      --> i18nName_en
+        -> NlgAdjective
+          --> root      "Moroccan"
+        ;
+      --> i18nName_es
+        -> NlgAdjective
+          --> root      "marroquí"
+        ;
+      --> i18nName_de
+        -> NlgAdjective
+          --> root      "marokkanisch"
+        ;
+    ;
+  --> useArticle_fr  true
+  --> useArticle_en  false
+;

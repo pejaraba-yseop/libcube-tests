@@ -1,0 +1,7 @@
+LibCube:TimePeriod PERIOD_WEEK
+    --> dsl -> Textualization
+        --> language LANG_en
+        --> root "period week"
+        --> number SINGULAR
+    ;
+;

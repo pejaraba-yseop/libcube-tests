@@ -1,0 +1,47 @@
+LibGeography:Subdivision STATE_MX_TAB
+  --> iso3166_2    "MX-TAB"
+  --> postal_code  "TA"
+  --> status       STATE
+  --> label
+    -> MultilingualText
+      --> i18nName_fr
+        -> NlgSubstantive
+          --> root    "Tabasco"
+          --> plural  "Tabasco"
+          --> number  SINGULAR
+        ;
+      --> i18nName_en
+        -> NlgSubstantive
+          --> root    "Tabasco"
+          --> plural  "Tabasco"
+          --> gender  INANIMATE
+          --> number  SINGULAR
+        ;
+      --> i18nName_es
+        -> NlgSubstantive
+          --> root    "Tabasco"
+          --> plural  "Tabasco"
+          --> number  SINGULAR
+        ;
+      --> i18nName_de
+        -> NlgSubstantive
+          --> root    "Tabasco"
+          --> plural  "Tabasco"
+          --> gender  NEUTRAL
+          --> number  SINGULAR
+        ;
+      --> i18nName_ja
+        -> NlgSubstantive
+          --> root    "タバスコ州"
+          --> plural  "タバスコ州"
+          --> gender  INANIMATE
+          --> number  SINGULAR
+        ;
+    ;
+  --> demonym
+    -> MultilingualText
+    ;
+  --> adjective
+    -> MultilingualText
+    ;
+;

@@ -1,0 +1,80 @@
+LibGeography:Country C_IRL
+  --> iso3166_1_numeric_code  "372"
+  --> iso3166_1_alpha_2       "IE"
+  --> iso3166_1_alpha_3       "IRL"
+  --> label
+    -> MultilingualText
+      --> i18nName_fr
+        -> NlgSubstantive
+          --> root    "Irlande"
+          --> plural  "Irlande"
+          --> gender  FEMININE
+          --> number  SINGULAR
+        ;
+      --> i18nName_en
+        -> NlgSubstantive
+          --> root    "Ireland"
+          --> plural  "Ireland"
+          --> gender  INANIMATE
+          --> number  SINGULAR
+        ;
+      --> i18nName_es
+        -> NlgSubstantive
+          --> root    "Irlanda"
+          --> plural  "Irlanda"
+          --> gender  FEMININE
+          --> number  SINGULAR
+        ;
+      --> i18nName_de
+        -> NlgSubstantive
+          --> root    "Irland"
+          --> plural  "Irland"
+          --> gender  NEUTRAL
+          --> number  SINGULAR
+        ;
+      --> i18nName_ja
+        -> NlgSubstantive
+          --> root    "アイルランド"
+          --> plural  "アイルランド"
+          --> gender  INANIMATE
+          --> number  SINGULAR
+        ;
+    ;
+  --> demonym
+    -> MultilingualText
+      --> i18nName_fr
+        -> NlgGenderAgreeableSubstantive
+          --> masculine "Irlandais"
+          --> feminine  "Iirlandaise"
+        ;
+      --> i18nName_en  "Irishman; Irishwoman"
+      --> i18nName_es  "irlandés"
+      --> i18nName_de
+        -> NlgGenderAgreeableSubstantive
+          --> masculine "Ire"
+          --> feminine  "Irin"
+        ;
+    ;
+  --> adjective
+    -> MultilingualText
+      --> i18nName_fr
+        -> NlgAdjective
+          --> root      "irlandais"
+          --> feminine  "irlandaise"
+        ;
+      --> i18nName_en
+        -> NlgAdjective
+          --> root      "Irish"
+        ;
+      --> i18nName_es
+        -> NlgAdjective
+          --> root      "irlandés"
+        ;
+      --> i18nName_de
+        -> NlgAdjective
+          --> root      "irisch"
+        ;
+    ;
+  --> useArticle_fr  true
+  --> useArticle_en  false
+;

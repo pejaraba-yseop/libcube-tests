@@ -1,0 +1,80 @@
+LibGeography:Country C_COG
+  --> iso3166_1_numeric_code  "178"
+  --> iso3166_1_alpha_2       "CG"
+  --> iso3166_1_alpha_3       "COG"
+  --> label
+    -> MultilingualText
+      --> i18nName_fr
+        -> NlgSubstantive
+          --> root    "République du Congo"
+          --> plural  "République du Congo"
+          --> gender  FEMININE
+          --> number  SINGULAR
+        ;
+      --> i18nName_en
+        -> NlgSubstantive
+          --> root    "Congo"
+          --> plural  "Congo"
+          --> gender  INANIMATE
+          --> number  SINGULAR
+        ;
+      --> i18nName_es
+        -> NlgSubstantive
+          --> root    "Congo"
+          --> plural  "Congo"
+          --> gender  FEMININE
+          --> number  SINGULAR
+        ;
+      --> i18nName_de
+        -> NlgSubstantive
+          --> root    "Kongo"
+          --> plural  "Kongo"
+          --> gender  NEUTRAL
+          --> number  SINGULAR
+        ;
+      --> i18nName_ja
+        -> NlgSubstantive
+          --> root    "コンゴ"
+          --> plural  "コンゴ"
+          --> gender  INANIMATE
+          --> number  SINGULAR
+        ;
+    ;
+  --> demonym
+    -> MultilingualText
+      --> i18nName_fr
+        -> NlgGenderAgreeableSubstantive
+          --> masculine "Congolais"
+          --> feminine  "Congolaise"
+        ;
+      --> i18nName_en  "Congolese"
+      --> i18nName_es  "congoleño"
+      --> i18nName_de
+        -> NlgGenderAgreeableSubstantive
+          --> masculine "Kongolese"
+          --> feminine  "Kongolesin"
+        ;
+    ;
+  --> adjective
+    -> MultilingualText
+      --> i18nName_fr
+        -> NlgAdjective
+          --> root      "congolais"
+          --> feminine  "congolaise"
+        ;
+      --> i18nName_en
+        -> NlgAdjective
+          --> root      "Congolese"
+        ;
+      --> i18nName_es
+        -> NlgAdjective
+          --> root      "congoleño"
+        ;
+      --> i18nName_de
+        -> NlgAdjective
+          --> root      "kongolesisch"
+        ;
+    ;
+  --> useArticle_fr  true
+  --> useArticle_en  false
+;

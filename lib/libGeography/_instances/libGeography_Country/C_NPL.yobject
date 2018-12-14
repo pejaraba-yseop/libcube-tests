@@ -1,0 +1,80 @@
+LibGeography:Country C_NPL
+  --> iso3166_1_numeric_code  "524"
+  --> iso3166_1_alpha_2       "NP"
+  --> iso3166_1_alpha_3       "NPL"
+  --> label
+    -> MultilingualText
+      --> i18nName_fr
+        -> NlgSubstantive
+          --> root    "Népal"
+          --> plural  "Népal"
+          --> gender  MASCULINE
+          --> number  SINGULAR
+        ;
+      --> i18nName_en
+        -> NlgSubstantive
+          --> root    "Nepal"
+          --> plural  "Nepal"
+          --> gender  INANIMATE
+          --> number  SINGULAR
+        ;
+      --> i18nName_es
+        -> NlgSubstantive
+          --> root    "Nepal"
+          --> plural  "Nepal"
+          --> gender  MASCULINE
+          --> number  SINGULAR
+        ;
+      --> i18nName_de
+        -> NlgSubstantive
+          --> root    "Nepal"
+          --> plural  "Nepal"
+          --> gender  NEUTRAL
+          --> number  SINGULAR
+        ;
+      --> i18nName_ja
+        -> NlgSubstantive
+          --> root    "ネパール"
+          --> plural  "ネパール"
+          --> gender  INANIMATE
+          --> number  SINGULAR
+        ;
+    ;
+  --> demonym
+    -> MultilingualText
+      --> i18nName_fr
+        -> NlgGenderAgreeableSubstantive
+          --> masculine "Népalais"
+          --> feminine  "Népalaise"
+        ;
+      --> i18nName_en  "Nepalese"
+      --> i18nName_es  "nepalés"
+      --> i18nName_de
+        -> NlgGenderAgreeableSubstantive
+          --> masculine "Nepalese"
+          --> feminine  "Nepalesin"
+        ;
+    ;
+  --> adjective
+    -> MultilingualText
+      --> i18nName_fr
+        -> NlgAdjective
+          --> root      "népalais"
+          --> feminine  "népalaise"
+        ;
+      --> i18nName_en
+        -> NlgAdjective
+          --> root      "Nepalese"
+        ;
+      --> i18nName_es
+        -> NlgAdjective
+          --> root      "nepalés"
+        ;
+      --> i18nName_de
+        -> NlgAdjective
+          --> root      "nepalesisch"
+        ;
+    ;
+  --> useArticle_fr  true
+  --> useArticle_en  false
+;

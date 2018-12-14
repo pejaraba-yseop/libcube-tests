@@ -1,0 +1,71 @@
+LibGeography:Country C_CXR
+  --> iso3166_1_numeric_code  "162"
+  --> iso3166_1_alpha_2       "CX"
+  --> iso3166_1_alpha_3       "CXR"
+  --> label
+    -> MultilingualText
+      --> i18nName_fr
+        -> NlgSubstantive
+          --> root    "Île Christmas"
+          --> plural  "Île Christmas"
+          --> gender  FEMININE
+          --> number  PLURAL
+        ;
+      --> i18nName_en
+        -> NlgSubstantive
+          --> root    "Christmas Island"
+          --> plural  "Christmas Island"
+          --> gender  INANIMATE
+          --> number  PLURAL
+        ;
+      --> i18nName_es
+        -> NlgSubstantive
+          --> root    "Isla Christmas"
+          --> plural  "Isla Christmas"
+          --> gender  FEMININE
+          --> number  PLURAL
+        ;
+      --> i18nName_de
+        -> NlgSubstantive
+          --> root    "Weihnachtsinsel"
+          --> plural  "Weihnachtsinsel"
+          --> gender  NEUTRAL
+          --> number  PLURAL
+        ;
+      --> i18nName_ja
+        -> NlgSubstantive
+          --> root    "クリスマス島"
+          --> plural  "クリスマス島"
+          --> gender  INANIMATE
+          --> number  PLURAL
+        ;
+    ;
+  --> demonym
+    -> MultilingualText
+      --> i18nName_fr  "de l’Île Christmas"
+      --> i18nName_en  "Christmas Islander"
+      --> i18nName_es  "de la Isla Christmas"
+      --> i18nName_de  "der Weihnachtsinsel"
+    ;
+  --> adjective
+    -> MultilingualText
+      --> i18nName_fr
+        -> NlgAdjective
+          --> root      "de l’Île Christmas"
+        ;
+      --> i18nName_en
+        -> NlgAdjective
+          --> root      "of Christmas Island"
+        ;
+      --> i18nName_es
+        -> NlgAdjective
+          --> root      "de la Isla Christmas"
+        ;
+      --> i18nName_de
+        -> NlgAdjective
+          --> root      "der Weihnachtsinsel"
+        ;
+    ;
+  --> useArticle_fr  true
+  --> useArticle_en  true
+;

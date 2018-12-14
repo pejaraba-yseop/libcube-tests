@@ -1,0 +1,80 @@
+LibGeography:Country C_ISL
+  --> iso3166_1_numeric_code  "352"
+  --> iso3166_1_alpha_2       "IS"
+  --> iso3166_1_alpha_3       "ISL"
+  --> label
+    -> MultilingualText
+      --> i18nName_fr
+        -> NlgSubstantive
+          --> root    "Islande"
+          --> plural  "Islande"
+          --> gender  FEMININE
+          --> number  SINGULAR
+        ;
+      --> i18nName_en
+        -> NlgSubstantive
+          --> root    "Iceland"
+          --> plural  "Iceland"
+          --> gender  INANIMATE
+          --> number  SINGULAR
+        ;
+      --> i18nName_es
+        -> NlgSubstantive
+          --> root    "Islandia"
+          --> plural  "Islandia"
+          --> gender  FEMININE
+          --> number  SINGULAR
+        ;
+      --> i18nName_de
+        -> NlgSubstantive
+          --> root    "Island"
+          --> plural  "Island"
+          --> gender  NEUTRAL
+          --> number  SINGULAR
+        ;
+      --> i18nName_ja
+        -> NlgSubstantive
+          --> root    "アイスランド"
+          --> plural  "アイスランド"
+          --> gender  INANIMATE
+          --> number  SINGULAR
+        ;
+    ;
+  --> demonym
+    -> MultilingualText
+      --> i18nName_fr
+        -> NlgGenderAgreeableSubstantive
+          --> masculine "Islandais"
+          --> feminine  "Islandaise"
+        ;
+      --> i18nName_en  "Icelander"
+      --> i18nName_es  "islandés"
+      --> i18nName_de
+        -> NlgGenderAgreeableSubstantive
+          --> masculine "Isländer"
+          --> feminine  "Isländerin"
+        ;
+    ;
+  --> adjective
+    -> MultilingualText
+      --> i18nName_fr
+        -> NlgAdjective
+          --> root      "islandais"
+          --> feminine  "islandaise"
+        ;
+      --> i18nName_en
+        -> NlgAdjective
+          --> root      "Icelandic"
+        ;
+      --> i18nName_es
+        -> NlgAdjective
+          --> root      "islandés"
+        ;
+      --> i18nName_de
+        -> NlgAdjective
+          --> root      "isländisch"
+        ;
+    ;
+  --> useArticle_fr  true
+  --> useArticle_en  false
+;

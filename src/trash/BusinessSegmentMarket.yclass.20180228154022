@@ -1,0 +1,28 @@
+interface BusinessSegmentMarket
+    /*field countryNameBusinessSegment
+        --> domains Text
+        --> xmlMapping XmlMappingProperty_NO_SAVE
+        --> dsl -> Textualization
+            --> language LANG_en
+            --> root "countryName_businessSegment"
+            --> number SINGULAR
+        ;*/
+    /*field countryBusinessSegmentList
+        --> domainsLevel2 BusinessSegment
+        --> domains Collection
+        --> xmlMapping XmlMappingProperty_NO_SAVE
+        --> dsl -> Textualization
+            --> language LANG_en
+            --> root "countryBusinessSegmentList"
+            --> number SINGULAR
+        ;*/
+    classProperties
+    --> dsl -> Textualization
+        --> language LANG_en
+        --> root "BusinessSegmentMarket"
+        --> number SINGULAR
+    ;
+;
+
+implementation BusinessSegmentMarket
+;

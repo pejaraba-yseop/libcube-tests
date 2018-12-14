@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<yseop-yml:ymlTextFunction xmlns:yseop-yml="http://www.yseop.com/yml/storage" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" domainModelVersion="3" identifier="515717e4-db00-43b9-bd44-6d749e27c3c5">
+    <yseop-yml:textGranule domainModelVersion="3" identifier="24d7527a-3f06-4e72-8d43-d2bc518c668a">
+        <yseop-yml:granuleI18nContents>
+            <yseop-yml:granuleUnilingueContent locale="en">
+                <yseop-yml:granuleContent>
+                    <yseop-yml:text>
+\if(variation > 0)
+    increased
+\else
+
+    \if(variation &lt; 0)
+        decreased
+    \else
+        remained stable
+    \endIf
+
+\endIf
+
+</yseop-yml:text>
+                    <yseop-yml:inline-assemblies/>
+                    <yseop-yml:inline-dslFunctionCalls/>
+                </yseop-yml:granuleContent>
+            </yseop-yml:granuleUnilingueContent>
+            <yseop-yml:granuleUnilingueContent locale="es">
+                <yseop-yml:granuleContent>
+                    <yseop-yml:text/>
+                    <yseop-yml:inline-assemblies/>
+                    <yseop-yml:inline-dslFunctionCalls/>
+                </yseop-yml:granuleContent>
+            </yseop-yml:granuleUnilingueContent>
+            <yseop-yml:granuleUnilingueContent locale="fr">
+                <yseop-yml:granuleContent>
+                    <yseop-yml:text/>
+                    <yseop-yml:inline-assemblies/>
+                    <yseop-yml:inline-dslFunctionCalls/>
+                </yseop-yml:granuleContent>
+            </yseop-yml:granuleUnilingueContent>
+        </yseop-yml:granuleI18nContents>
+        <yseop-yml:dslCondition/>
+        <yseop-yml:name/>
+        <yseop-yml:creationDate>2018-05-09T05:05:20.734Z</yseop-yml:creationDate>
+        <yseop-yml:properties identifier="27b7caac-1715-48cf-a181-daa5f9c7915f">
+            <yseop-yml:property identifier="27b7caac-1715-48cf-a181-daa5f9c7915f|condition" type="YML_PROPERTY" name="condition"></yseop-yml:property>
+        </yseop-yml:properties>
+    </yseop-yml:textGranule>
+    <yseop-yml:localVariables/>
+    <yseop-yml:advancedContent/>
+    <yseop-yml:ymlParameters>Number variation
+    --> dsl -> Textualization
+        --> language LANG_en
+        --> root "variation"
+        --> number SINGULAR
+    ;
+</yseop-yml:ymlParameters>
+    <yseop-yml:name/>
+    <yseop-yml:properties identifier="9e266c07-fc4f-44cb-8df3-5a6e7d129cb4">
+        <yseop-yml:property identifier="9e266c07-fc4f-44cb-8df3-5a6e7d129cb4|dsl" type="YML_PROPERTY" name="dsl">"variation description"</yseop-yml:property>
+    </yseop-yml:properties>
+</yseop-yml:ymlTextFunction>

@@ -1,0 +1,50 @@
+LibGeography:Subdivision TERRITORY_CA_YT
+  --> iso3166_2    "CA-YT"
+  --> postal_code  "YT"
+  --> status       TERRITORY
+  --> label
+    -> MultilingualText
+      --> i18nName_fr
+        -> NlgSubstantive
+          --> root    "Yukon"
+          --> plural  "Yukon"
+          --> gender  MASCULINE
+          --> number  SINGULAR
+        ;
+      --> i18nName_en
+        -> NlgSubstantive
+          --> root    "Yukon"
+          --> plural  "Yukon"
+          --> gender  INANIMATE
+          --> number  SINGULAR
+        ;
+      --> i18nName_es
+        -> NlgSubstantive
+          --> root    "Yukón"
+          --> plural  "Yukón"
+          --> gender  MASCULINE
+          --> number  SINGULAR
+        ;
+      --> i18nName_de
+        -> NlgSubstantive
+          --> root    "Yukon"
+          --> plural  "Yukon"
+          --> gender  NEUTRAL
+          --> number  SINGULAR
+        ;
+      --> i18nName_ja
+        -> NlgSubstantive
+          --> root    "ユーコン準州"
+          --> plural  "ユーコン準州"
+          --> gender  INANIMATE
+          --> number  SINGULAR
+        ;
+    ;
+  --> demonym
+    -> MultilingualText
+    ;
+  --> adjective
+    -> MultilingualText
+    ;
+  --> useArticle_en  true
+;

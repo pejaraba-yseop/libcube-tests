@@ -1,0 +1,32 @@
+
+interface LibCube:QueryFragment
+
+    field mdxString
+        --> domains String
+        --> xmlMapping XmlMappingProperty_NO_SAVE
+        --> dsl -> Textualization
+            --> language LANG_en
+            --> root "mdxString"
+            --> number SINGULAR
+        ;
+
+    field fragmentType
+        --> domains Symbol
+        --> xmlMapping XmlMappingProperty_NO_SAVE
+        --> dsl -> Textualization
+            --> language LANG_en
+            --> root "type"
+            --> number SINGULAR
+        ;
+
+    classProperties
+    --> dsl -> Textualization
+        --> language LANG_en
+        --> root "QueryFragment"
+        --> number SINGULAR
+    ;	
+;
+
+implementation LibCube:QueryFragment
+   
+;

@@ -1,0 +1,50 @@
+LibGeography:Subdivision TERRITORY_CA_NU
+  --> iso3166_2    "CA-NU"
+  --> postal_code  "NU"
+  --> status       TERRITORY
+  --> label
+    -> MultilingualText
+      --> i18nName_fr
+        -> NlgSubstantive
+          --> root    "Nunavut"
+          --> plural  "Nunavut"
+          --> gender  MASCULINE
+          --> number  SINGULAR
+        ;
+      --> i18nName_en
+        -> NlgSubstantive
+          --> root    "Nunavut"
+          --> plural  "Nunavut"
+          --> gender  INANIMATE
+          --> number  SINGULAR
+        ;
+      --> i18nName_es
+        -> NlgSubstantive
+          --> root    "Nunavut"
+          --> plural  "Nunavut"
+          --> gender  MASCULINE
+          --> number  SINGULAR
+        ;
+      --> i18nName_de
+        -> NlgSubstantive
+          --> root    "Nunavut"
+          --> plural  "Nunavut"
+          --> gender  NEUTRAL
+          --> number  SINGULAR
+        ;
+      --> i18nName_ja
+        -> NlgSubstantive
+          --> root    "ヌナブト準州"
+          --> plural  "ヌナブト準州"
+          --> gender  INANIMATE
+          --> number  SINGULAR
+        ;
+    ;
+  --> demonym
+    -> MultilingualText
+    ;
+  --> adjective
+    -> MultilingualText
+    ;
+  --> useArticle_en  false
+;

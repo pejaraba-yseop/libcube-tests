@@ -1,0 +1,80 @@
+LibGeography:Country C_ZAF
+  --> iso3166_1_numeric_code  "710"
+  --> iso3166_1_alpha_2       "ZA"
+  --> iso3166_1_alpha_3       "ZAF"
+  --> label
+    -> MultilingualText
+      --> i18nName_fr
+        -> NlgSubstantive
+          --> root    "Afrique du Sud"
+          --> plural  "Afrique du Sud"
+          --> gender  FEMININE
+          --> number  SINGULAR
+        ;
+      --> i18nName_en
+        -> NlgSubstantive
+          --> root    "South Africa"
+          --> plural  "South Africa"
+          --> gender  INANIMATE
+          --> number  SINGULAR
+        ;
+      --> i18nName_es
+        -> NlgSubstantive
+          --> root    "Sudáfrica"
+          --> plural  "Sudáfrica"
+          --> gender  FEMININE
+          --> number  SINGULAR
+        ;
+      --> i18nName_de
+        -> NlgSubstantive
+          --> root    "Südafrika"
+          --> plural  "Südafrika"
+          --> gender  NEUTRAL
+          --> number  SINGULAR
+        ;
+      --> i18nName_ja
+        -> NlgSubstantive
+          --> root    "南アフリカ共和国"
+          --> plural  "南アフリカ共和国"
+          --> gender  INANIMATE
+          --> number  SINGULAR
+        ;
+    ;
+  --> demonym
+    -> MultilingualText
+      --> i18nName_fr
+        -> NlgGenderAgreeableSubstantive
+          --> masculine "Sud-Africain"
+          --> feminine  "Sud-Africaine"
+        ;
+      --> i18nName_en  "South African"
+      --> i18nName_es  "sudafricano"
+      --> i18nName_de
+        -> NlgGenderAgreeableSubstantive
+          --> masculine "Südafrikaner"
+          --> feminine  "Südafrikanerin"
+        ;
+    ;
+  --> adjective
+    -> MultilingualText
+      --> i18nName_fr
+        -> NlgAdjective
+          --> root      "sud-africain"
+          --> feminine  "sud-africaine"
+        ;
+      --> i18nName_en
+        -> NlgAdjective
+          --> root      "South African"
+        ;
+      --> i18nName_es
+        -> NlgAdjective
+          --> root      "sudafricano"
+        ;
+      --> i18nName_de
+        -> NlgAdjective
+          --> root      "südafrikanisch"
+        ;
+    ;
+  --> useArticle_fr  true
+  --> useArticle_en  false
+;

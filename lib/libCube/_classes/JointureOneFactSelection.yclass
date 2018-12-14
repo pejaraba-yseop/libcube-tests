@@ -1,0 +1,41 @@
+interface LibCube:JointureOneFactSelection extends LibCube:JointureFactsSelection
+
+    field selectedFact
+        --> domains LibCube:Fact
+        --> documentation "The fact collected by the Jointure"
+        --> xmlMapping XmlMappingProperty_SAVE
+        --> dsl -> Textualization
+            --> language LANG_en
+            --> root "jointured facts"
+            --> number PLURAL
+        ;
+    classProperties
+    --> dsl -> Textualization
+        --> language LANG_en
+        --> root "Jointure One Fact Selection"
+        --> number SINGULAR
+    ;
+;
+
+implementation LibCube:JointureOneFactSelection override {
+  populateSelection function
+}
+;
+
+function LibCube:JointureOneFactSelection::populateSelection()
+--> local Collection theSelectedFacts
+--> action {  
+	theSelectedFacts = as(?fact, ?att = jointure.attribute, ?fact.?att != null)
+
+	foreach(_fact, theSelectedFacts) {
+		selectedFacts := _fact;
+
+	}
+
+	if(theSelectedFacts.size() == 1) {
+		selectedFact = theSelectedFacts.get(_FIRST);
+	} else {
+	  logWarning("abnormal number of facts :", theSelectedFacts.size(), " for jointure :", jointure.attribute)
+	} 
+}
+;

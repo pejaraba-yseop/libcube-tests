@@ -1,0 +1,58 @@
+interface LibCube:JointureOneLevelDrilldownSelection extends LibCube:JointureFactsSelection
+
+    field parentFact
+        --> domains LibCube:Fact
+        --> documentation "The parent fact who's children were collected by the jointure"
+        --> xmlMapping XmlMappingProperty_SAVE
+        --> dsl -> Textualization
+            --> language LANG_en
+            --> root "jointured facts"
+            --> number PLURAL
+        ;
+    
+    field dimension
+        --> domains LibCube:Dimension
+        --> documentation "The dimension in which the parent and children members are in"
+        --> xmlMapping XmlMappingProperty_SAVE
+        --> dsl -> Textualization
+            --> language LANG_en
+            --> root "dimension"
+            --> number PLURAL
+        ;
+
+    classProperties
+    --> dsl -> Textualization
+        --> language LANG_en
+        --> root "Jointure One Level Drilldown Selection"
+        --> number SINGULAR
+    ;
+;
+
+implementation LibCube:JointureOneLevelDrilldownSelection override {
+  populateSelection function
+}
+;
+
+function LibCube:JointureOneLevelDrilldownSelection::populateSelection()
+--> local Collection theSelectedFacts, LibCube:Member selectedMember
+--> action {
+    if(parentFact != null){
+        selectedMember = parentFact.getDimension(dimension); 
+	    theSelectedFacts = as(?fact,
+                        ?fact.factMeasures != null, 
+                        //?att = jointure.attribute,
+                        ?fact.getAttributeValue(jointure.attribute) == selectedMember,
+                        //?fact.?att == selectedMember,
+                        intersection(parentFact>>members, ?fact>>members).size() == parentFact>>members.size() - 1).toList() // finds all facts with same dimensions except one
+                        
+
+        foreach(_fact, theSelectedFacts) {
+            selectedFacts := _fact;
+
+        }
+    }
+    
+
+	
+}
+;

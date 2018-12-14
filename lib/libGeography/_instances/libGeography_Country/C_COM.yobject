@@ -1,0 +1,80 @@
+LibGeography:Country C_COM
+  --> iso3166_1_numeric_code  "174"
+  --> iso3166_1_alpha_2       "KM"
+  --> iso3166_1_alpha_3       "COM"
+  --> label
+    -> MultilingualText
+      --> i18nName_fr
+        -> NlgSubstantive
+          --> root    "Comores"
+          --> plural  "Comores"
+          --> gender  FEMININE
+          --> number  PLURAL
+        ;
+      --> i18nName_en
+        -> NlgSubstantive
+          --> root    "Comoros"
+          --> plural  "Comoros"
+          --> gender  INANIMATE
+          --> number  PLURAL
+        ;
+      --> i18nName_es
+        -> NlgSubstantive
+          --> root    "Comoras"
+          --> plural  "Comoras"
+          --> gender  FEMININE
+          --> number  PLURAL
+        ;
+      --> i18nName_de
+        -> NlgSubstantive
+          --> root    "Komoren"
+          --> plural  "Komoren"
+          --> gender  NEUTRAL
+          --> number  PLURAL
+        ;
+      --> i18nName_ja
+        -> NlgSubstantive
+          --> root    "コモロ"
+          --> plural  "コモロ"
+          --> gender  INANIMATE
+          --> number  PLURAL
+        ;
+    ;
+  --> demonym
+    -> MultilingualText
+      --> i18nName_fr
+        -> NlgGenderAgreeableSubstantive
+          --> masculine "Comorien"
+          --> feminine  "Comorienne"
+        ;
+      --> i18nName_en  "Comorian"
+      --> i18nName_es  "comorense"
+      --> i18nName_de
+        -> NlgGenderAgreeableSubstantive
+          --> masculine "Komorer"
+          --> feminine  "Komorerin"
+        ;
+    ;
+  --> adjective
+    -> MultilingualText
+      --> i18nName_fr
+        -> NlgAdjective
+          --> root      "comorien"
+          --> feminine  "comorienne"
+        ;
+      --> i18nName_en
+        -> NlgAdjective
+          --> root      "Comorian"
+        ;
+      --> i18nName_es
+        -> NlgAdjective
+          --> root      "comorense"
+        ;
+      --> i18nName_de
+        -> NlgAdjective
+          --> root      "komorisch"
+        ;
+    ;
+  --> useArticle_fr  true
+  --> useArticle_en  true
+;

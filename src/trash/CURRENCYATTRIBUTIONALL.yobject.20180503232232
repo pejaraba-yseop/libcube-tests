@@ -1,0 +1,8 @@
+
+CurrencyAttribution CURRENCY_ATTRIBUTION_ALL
+    --> dsl -> Textualization
+        --> language LANG_en
+        --> root "All Currencies Attributions"
+        --> number SINGULAR
+    ;
+;

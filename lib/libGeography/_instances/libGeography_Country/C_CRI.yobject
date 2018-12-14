@@ -1,0 +1,80 @@
+LibGeography:Country C_CRI
+  --> iso3166_1_numeric_code  "188"
+  --> iso3166_1_alpha_2       "CR"
+  --> iso3166_1_alpha_3       "CRI"
+  --> label
+    -> MultilingualText
+      --> i18nName_fr
+        -> NlgSubstantive
+          --> root    "Costa Rica"
+          --> plural  "Costa Rica"
+          --> gender  MASCULINE
+          --> number  SINGULAR
+        ;
+      --> i18nName_en
+        -> NlgSubstantive
+          --> root    "Costa Rica"
+          --> plural  "Costa Rica"
+          --> gender  INANIMATE
+          --> number  SINGULAR
+        ;
+      --> i18nName_es
+        -> NlgSubstantive
+          --> root    "Costa Rica"
+          --> plural  "Costa Rica"
+          --> gender  MASCULINE
+          --> number  SINGULAR
+        ;
+      --> i18nName_de
+        -> NlgSubstantive
+          --> root    "Costa Rica"
+          --> plural  "Costa Rica"
+          --> gender  NEUTRAL
+          --> number  SINGULAR
+        ;
+      --> i18nName_ja
+        -> NlgSubstantive
+          --> root    "コスタリカ"
+          --> plural  "コスタリカ"
+          --> gender  INANIMATE
+          --> number  SINGULAR
+        ;
+    ;
+  --> demonym
+    -> MultilingualText
+      --> i18nName_fr
+        -> NlgGenderAgreeableSubstantive
+          --> masculine "Costaricien"
+          --> feminine  "Costaricienne"
+        ;
+      --> i18nName_en  "Costa Rican"
+      --> i18nName_es  "costarricense"
+      --> i18nName_de
+        -> NlgGenderAgreeableSubstantive
+          --> masculine "Costa-Ricaner"
+          --> feminine  "Costa-Ricanerin"
+        ;
+    ;
+  --> adjective
+    -> MultilingualText
+      --> i18nName_fr
+        -> NlgAdjective
+          --> root      "costaricien"
+          --> feminine  "costaricienne"
+        ;
+      --> i18nName_en
+        -> NlgAdjective
+          --> root      "Costa Rican"
+        ;
+      --> i18nName_es
+        -> NlgAdjective
+          --> root      "costarricense"
+        ;
+      --> i18nName_de
+        -> NlgAdjective
+          --> root      "costa-ricanisch"
+        ;
+    ;
+  --> useArticle_fr  true
+  --> useArticle_en  false
+;

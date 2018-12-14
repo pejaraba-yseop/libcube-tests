@@ -1,0 +1,80 @@
+LibGeography:Country C_TUN
+  --> iso3166_1_numeric_code  "788"
+  --> iso3166_1_alpha_2       "TN"
+  --> iso3166_1_alpha_3       "TUN"
+  --> label
+    -> MultilingualText
+      --> i18nName_fr
+        -> NlgSubstantive
+          --> root    "Tunisie"
+          --> plural  "Tunisie"
+          --> gender  FEMININE
+          --> number  SINGULAR
+        ;
+      --> i18nName_en
+        -> NlgSubstantive
+          --> root    "Tunisia"
+          --> plural  "Tunisia"
+          --> gender  INANIMATE
+          --> number  SINGULAR
+        ;
+      --> i18nName_es
+        -> NlgSubstantive
+          --> root    "Túnez"
+          --> plural  "Túnez"
+          --> gender  MASCULINE
+          --> number  SINGULAR
+        ;
+      --> i18nName_de
+        -> NlgSubstantive
+          --> root    "Tunesien"
+          --> plural  "Tunesien"
+          --> gender  NEUTRAL
+          --> number  SINGULAR
+        ;
+      --> i18nName_ja
+        -> NlgSubstantive
+          --> root    "チュニジア"
+          --> plural  "チュニジア"
+          --> gender  INANIMATE
+          --> number  SINGULAR
+        ;
+    ;
+  --> demonym
+    -> MultilingualText
+      --> i18nName_fr
+        -> NlgGenderAgreeableSubstantive
+          --> masculine "Tunisien"
+          --> feminine  "Tunisienne"
+        ;
+      --> i18nName_en  "Tunisian"
+      --> i18nName_es  "tunecino"
+      --> i18nName_de
+        -> NlgGenderAgreeableSubstantive
+          --> masculine "Tunesier"
+          --> feminine  "Tunesierin"
+        ;
+    ;
+  --> adjective
+    -> MultilingualText
+      --> i18nName_fr
+        -> NlgAdjective
+          --> root      "tunisien"
+          --> feminine  "tunisienne"
+        ;
+      --> i18nName_en
+        -> NlgAdjective
+          --> root      "Tunisian"
+        ;
+      --> i18nName_es
+        -> NlgAdjective
+          --> root      "tunecino"
+        ;
+      --> i18nName_de
+        -> NlgAdjective
+          --> root      "tunesisch"
+        ;
+    ;
+  --> useArticle_fr  true
+  --> useArticle_en  false
+;

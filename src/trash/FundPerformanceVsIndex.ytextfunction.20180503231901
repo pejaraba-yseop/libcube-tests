@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<yseop-yml:ymlTextFunction xmlns:yseop-yml="http://www.yseop.com/yml/storage" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" domainModelVersion="3" identifier="044ad5d7-1a1f-444a-8954-6c6909beffc3">
+    <yseop-yml:textGranule domainModelVersion="3" identifier="7b5d4f32-f24d-4946-ad54-92f938103aa0">
+        <yseop-yml:granuleI18nContents>
+            <yseop-yml:granuleUnilingueContent locale="en">
+                <yseop-yml:granuleContent>
+                    <yseop-yml:text>
+\switch(theGeneralData.fundPerformance)
+
+    \case(FUND_PERFORMANCE_OUTPERFORMED)
+        outperformed the index
+
+    \case(FUND_PERFORMANCE_UNDERPERFORMED)
+        underperformed the index
+
+    \noDefault
+\endSwitch
+
+</yseop-yml:text>
+                    <yseop-yml:inline-assemblies/>
+                    <yseop-yml:inline-dslFunctionCalls/>
+                </yseop-yml:granuleContent>
+            </yseop-yml:granuleUnilingueContent>
+            <yseop-yml:granuleUnilingueContent locale="es">
+                <yseop-yml:granuleContent>
+                    <yseop-yml:text/>
+                    <yseop-yml:inline-assemblies/>
+                    <yseop-yml:inline-dslFunctionCalls/>
+                </yseop-yml:granuleContent>
+            </yseop-yml:granuleUnilingueContent>
+            <yseop-yml:granuleUnilingueContent locale="fr">
+                <yseop-yml:granuleContent>
+                    <yseop-yml:text/>
+                    <yseop-yml:inline-assemblies/>
+                    <yseop-yml:inline-dslFunctionCalls/>
+                </yseop-yml:granuleContent>
+            </yseop-yml:granuleUnilingueContent>
+        </yseop-yml:granuleI18nContents>
+        <yseop-yml:dslCondition/>
+        <yseop-yml:name/>
+        <yseop-yml:creationDate>2018-04-25T21:58:40.671Z</yseop-yml:creationDate>
+        <yseop-yml:properties identifier="d17f76d6-e76b-48da-bbfc-8686ec87feac">
+            <yseop-yml:property identifier="d17f76d6-e76b-48da-bbfc-8686ec87feac|condition" type="YML_PROPERTY" name="condition"></yseop-yml:property>
+        </yseop-yml:properties>
+    </yseop-yml:textGranule>
+    <yseop-yml:localVariables/>
+    <yseop-yml:advancedContent/>
+    <yseop-yml:ymlParameters/>
+    <yseop-yml:name/>
+    <yseop-yml:properties identifier="4acfb444-8f6e-474b-a1c6-48950531cabd">
+        <yseop-yml:property identifier="4acfb444-8f6e-474b-a1c6-48950531cabd|dsl" type="YML_PROPERTY" name="dsl">"Fund Performance vs Index"</yseop-yml:property>
+    </yseop-yml:properties>
+</yseop-yml:ymlTextFunction>

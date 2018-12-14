@@ -1,0 +1,71 @@
+LibGeography:Country C_KNA
+  --> iso3166_1_numeric_code  "659"
+  --> iso3166_1_alpha_2       "KN"
+  --> iso3166_1_alpha_3       "KNA"
+  --> label
+    -> MultilingualText
+      --> i18nName_fr
+        -> NlgSubstantive
+          --> root    "Saint-Christophe-et-Niévès"
+          --> plural  "Saint-Christophe-et-Niévès"
+          --> gender  MASCULINE
+          --> number  SINGULAR
+        ;
+      --> i18nName_en
+        -> NlgSubstantive
+          --> root    "Saint Kitts and Nevis"
+          --> plural  "Saint Kitts and Nevis"
+          --> gender  INANIMATE
+          --> number  SINGULAR
+        ;
+      --> i18nName_es
+        -> NlgSubstantive
+          --> root    "San Cristóbal y Nieves"
+          --> plural  "San Cristóbal y Nieves"
+          --> gender  MASCULINE
+          --> number  SINGULAR
+        ;
+      --> i18nName_de
+        -> NlgSubstantive
+          --> root    "St. Kitts und Nevis"
+          --> plural  "St. Kitts und Nevis"
+          --> gender  NEUTRAL
+          --> number  SINGULAR
+        ;
+      --> i18nName_ja
+        -> NlgSubstantive
+          --> root    "セントクリストファー・ネイビス"
+          --> plural  "セントクリストファー・ネイビス"
+          --> gender  INANIMATE
+          --> number  SINGULAR
+        ;
+    ;
+  --> demonym
+    -> MultilingualText
+      --> i18nName_fr  "de Saint-Christophe-"
+      --> i18nName_en  "Kittsian; Nevisian"
+      --> i18nName_es  "sancristobaleño"
+      --> i18nName_de  "von St. Kitts und Nevis"
+    ;
+  --> adjective
+    -> MultilingualText
+      --> i18nName_fr
+        -> NlgAdjective
+          --> root      "de Saint-Christophe-"
+        ;
+      --> i18nName_en
+        -> NlgAdjective
+          --> root      "of Saint Kitts and Nevis"
+        ;
+      --> i18nName_es
+        -> NlgAdjective
+          --> root      "sancristobaleño"
+        ;
+      --> i18nName_de
+        -> NlgAdjective
+          --> root      "von St. Kitts und Nevis"
+        ;
+    ;
+  --> useArticle_fr  false
+  --> useArticle_en  false
+;

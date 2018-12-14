@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<yseop-yml:ymlRule xmlns:yseop-yml="http://www.yseop.com/yml/storage" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" domainModelVersion="3" identifier="20e65910-fbf7-4478-ae13-f4e364007c5e">
+    <yseop-yml:content>logInfo("Calling pending request");
+
+// The workaround is to clone the factsRequest object
+cube.factsRequestsManager.callPendingRequest(factsService);
+cube.factsRequestsManager.numberOfTentatives = cube.factsRequestsManager.numberOfTentatives +1;
+// TODO: refactor this flag
+//theGeneralData.webServiceStatus=false;</yseop-yml:content>
+    <yseop-yml:content>cube.factsRequestsManager.havePendingSelections() == true</yseop-yml:content>
+    <yseop-yml:name>callService</yseop-yml:name>
+    <yseop-yml:creationDate>2018-07-11T16:31:33.229Z</yseop-yml:creationDate>
+    <yseop-yml:properties identifier="dfed9a69-32fe-4895-a7d1-c2bed9041ce9"/>
+</yseop-yml:ymlRule>

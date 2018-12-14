@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<yseop-yml:ymlTextFunction xmlns:yseop-yml="http://www.yseop.com/yml/storage" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" domainModelVersion="3" identifier="9e8ba99f-cd82-41e8-9f30-18bb69e4a769">
+    <yseop-yml:textGranule domainModelVersion="3" identifier="6861d450-80d0-4d1a-a3bf-36d01a4ca6e1">
+        <yseop-yml:granuleI18nContents>
+            <yseop-yml:granuleUnilingueContent locale="en">
+                <yseop-yml:granuleContent>
+                    <yseop-yml:text>
+\beginSynonym
+
+    \choice 
+        weighed on
+
+    \choice 
+        hindered
+
+    \choice 
+        inhibited
+
+\endSynonym
+</yseop-yml:text>
+                    <yseop-yml:inline-assemblies/>
+                    <yseop-yml:inline-dslFunctionCalls/>
+                </yseop-yml:granuleContent>
+            </yseop-yml:granuleUnilingueContent>
+            <yseop-yml:granuleUnilingueContent locale="es">
+                <yseop-yml:granuleContent>
+                    <yseop-yml:text/>
+                    <yseop-yml:inline-assemblies/>
+                    <yseop-yml:inline-dslFunctionCalls/>
+                </yseop-yml:granuleContent>
+            </yseop-yml:granuleUnilingueContent>
+            <yseop-yml:granuleUnilingueContent locale="fr">
+                <yseop-yml:granuleContent>
+                    <yseop-yml:text/>
+                    <yseop-yml:inline-assemblies/>
+                    <yseop-yml:inline-dslFunctionCalls/>
+                </yseop-yml:granuleContent>
+            </yseop-yml:granuleUnilingueContent>
+        </yseop-yml:granuleI18nContents>
+        <yseop-yml:dslCondition/>
+        <yseop-yml:name/>
+        <yseop-yml:creationDate>2018-04-30T19:03:17.634Z</yseop-yml:creationDate>
+        <yseop-yml:properties identifier="b09f7877-c660-4897-aeb9-6def8e7274d2">
+            <yseop-yml:property identifier="b09f7877-c660-4897-aeb9-6def8e7274d2|condition" type="YML_PROPERTY" name="condition"></yseop-yml:property>
+        </yseop-yml:properties>
+    </yseop-yml:textGranule>
+    <yseop-yml:localVariables/>
+    <yseop-yml:advancedContent/>
+    <yseop-yml:ymlParameters/>
+    <yseop-yml:name>WeighedOnSynonym</yseop-yml:name>
+    <yseop-yml:properties identifier="0b428b1e-20e0-4ca6-a002-946dcf16334f">
+        <yseop-yml:property identifier="0b428b1e-20e0-4ca6-a002-946dcf16334f|dsl" type="YML_PROPERTY" name="dsl">"Weighed on Synonym"</yseop-yml:property>
+    </yseop-yml:properties>
+</yseop-yml:ymlTextFunction>

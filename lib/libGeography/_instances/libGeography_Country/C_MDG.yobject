@@ -1,0 +1,80 @@
+LibGeography:Country C_MDG
+  --> iso3166_1_numeric_code  "450"
+  --> iso3166_1_alpha_2       "MG"
+  --> iso3166_1_alpha_3       "MDG"
+  --> label
+    -> MultilingualText
+      --> i18nName_fr
+        -> NlgSubstantive
+          --> root    "Madagascar"
+          --> plural  "Madagascar"
+          --> gender  FEMININE
+          --> number  SINGULAR
+        ;
+      --> i18nName_en
+        -> NlgSubstantive
+          --> root    "Madagascar"
+          --> plural  "Madagascar"
+          --> gender  INANIMATE
+          --> number  SINGULAR
+        ;
+      --> i18nName_es
+        -> NlgSubstantive
+          --> root    "Madagascar"
+          --> plural  "Madagascar"
+          --> gender  FEMININE
+          --> number  SINGULAR
+        ;
+      --> i18nName_de
+        -> NlgSubstantive
+          --> root    "Madagaskar"
+          --> plural  "Madagaskar"
+          --> gender  NEUTRAL
+          --> number  SINGULAR
+        ;
+      --> i18nName_ja
+        -> NlgSubstantive
+          --> root    "マダガスカル"
+          --> plural  "マダガスカル"
+          --> gender  INANIMATE
+          --> number  SINGULAR
+        ;
+    ;
+  --> demonym
+    -> MultilingualText
+      --> i18nName_fr
+        -> NlgGenderAgreeableSubstantive
+          --> masculine "Malgache"
+          --> feminine  "Malgache"
+        ;
+      --> i18nName_en  "Malagasy"
+      --> i18nName_es  "malgache"
+      --> i18nName_de
+        -> NlgGenderAgreeableSubstantive
+          --> masculine "Madagasse"
+          --> feminine  "Madagassin"
+        ;
+    ;
+  --> adjective
+    -> MultilingualText
+      --> i18nName_fr
+        -> NlgAdjective
+          --> root      "malgache"
+          --> feminine  "malgache"
+        ;
+      --> i18nName_en
+        -> NlgAdjective
+          --> root      "Malagasy"
+        ;
+      --> i18nName_es
+        -> NlgAdjective
+          --> root      "malgache"
+        ;
+      --> i18nName_de
+        -> NlgAdjective
+          --> root      "madagassisch"
+        ;
+    ;
+  --> useArticle_fr  false
+  --> useArticle_en  false
+;

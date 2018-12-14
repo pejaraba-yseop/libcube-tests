@@ -1,0 +1,76 @@
+LibGeography:Country C_GUF
+  --> iso3166_1_numeric_code  "254"
+  --> iso3166_1_alpha_2       "GF"
+  --> iso3166_1_alpha_3       "GUF"
+  --> label
+    -> MultilingualText
+      --> i18nName_fr
+        -> NlgSubstantive
+          --> root    "Guyane"
+          --> plural  "Guyane"
+          --> gender  FEMININE
+          --> number  SINGULAR
+        ;
+      --> i18nName_en
+        -> NlgSubstantive
+          --> root    "French Guiana"
+          --> plural  "French Guiana"
+          --> gender  INANIMATE
+          --> number  SINGULAR
+        ;
+      --> i18nName_es
+        -> NlgSubstantive
+          --> root    "Guayana Francesa"
+          --> plural  "Guayana Francesa"
+          --> gender  FEMININE
+          --> number  SINGULAR
+        ;
+      --> i18nName_de
+        -> NlgSubstantive
+          --> root    "Französisch-Guayana"
+          --> plural  "Französisch-Guayana"
+          --> gender  NEUTRAL
+          --> number  SINGULAR
+        ;
+      --> i18nName_ja
+        -> NlgSubstantive
+          --> root    "フランス領ギアナ"
+          --> plural  "フランス領ギアナ"
+          --> gender  INANIMATE
+          --> number  SINGULAR
+        ;
+    ;
+  --> demonym
+    -> MultilingualText
+      --> i18nName_fr
+        -> NlgGenderAgreeableSubstantive
+          --> masculine "Guyanais"
+          --> feminine  "Guyanaise"
+        ;
+      --> i18nName_en  "Guianese"
+      --> i18nName_es  "guayanés"
+      --> i18nName_de  "von Französisch-Guayana"
+    ;
+  --> adjective
+    -> MultilingualText
+      --> i18nName_fr
+        -> NlgAdjective
+          --> root      "guyanais"
+          --> feminine  "guyanaise"
+        ;
+      --> i18nName_en
+        -> NlgAdjective
+          --> root      "Guianese"
+        ;
+      --> i18nName_es
+        -> NlgAdjective
+          --> root      "guayanés"
+        ;
+      --> i18nName_de
+        -> NlgAdjective
+          --> root      "von Französisch-Guayana"
+        ;
+    ;
+  --> useArticle_fr  true
+  --> useArticle_en  false
+;

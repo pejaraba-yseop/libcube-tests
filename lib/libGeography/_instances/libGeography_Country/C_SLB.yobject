@@ -1,0 +1,80 @@
+LibGeography:Country C_SLB
+  --> iso3166_1_numeric_code  "090"
+  --> iso3166_1_alpha_2       "SB"
+  --> iso3166_1_alpha_3       "SLB"
+  --> label
+    -> MultilingualText
+      --> i18nName_fr
+        -> NlgSubstantive
+          --> root    "Salomon"
+          --> plural  "Salomon"
+          --> gender  FEMININE
+          --> number  PLURAL
+        ;
+      --> i18nName_en
+        -> NlgSubstantive
+          --> root    "Solomon Islands"
+          --> plural  "Solomon Islands"
+          --> gender  INANIMATE
+          --> number  PLURAL
+        ;
+      --> i18nName_es
+        -> NlgSubstantive
+          --> root    "Islas Salomón"
+          --> plural  "Islas Salomón"
+          --> gender  FEMININE
+          --> number  PLURAL
+        ;
+      --> i18nName_de
+        -> NlgSubstantive
+          --> root    "Salomonen"
+          --> plural  "Salomonen"
+          --> gender  NEUTRAL
+          --> number  PLURAL
+        ;
+      --> i18nName_ja
+        -> NlgSubstantive
+          --> root    "ソロモン諸島"
+          --> plural  "ソロモン諸島"
+          --> gender  INANIMATE
+          --> number  PLURAL
+        ;
+    ;
+  --> demonym
+    -> MultilingualText
+      --> i18nName_fr
+        -> NlgGenderAgreeableSubstantive
+          --> masculine "Salomonais"
+          --> feminine  "Salomonaise"
+        ;
+      --> i18nName_en  "Solomon Islander"
+      --> i18nName_es  "salomonense"
+      --> i18nName_de
+        -> NlgGenderAgreeableSubstantive
+          --> masculine "Salomoner"
+          --> feminine  "Salomonerin"
+        ;
+    ;
+  --> adjective
+    -> MultilingualText
+      --> i18nName_fr
+        -> NlgAdjective
+          --> root      "salomonais"
+          --> feminine  "salomonaise"
+        ;
+      --> i18nName_en
+        -> NlgAdjective
+          --> root      "of the Solomon Islands"
+        ;
+      --> i18nName_es
+        -> NlgAdjective
+          --> root      "salomonense"
+        ;
+      --> i18nName_de
+        -> NlgAdjective
+          --> root      "salomonisch"
+        ;
+    ;
+  --> useArticle_fr  true
+  --> useArticle_en  true
+;

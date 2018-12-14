@@ -1,0 +1,71 @@
+LibGeography:Country C_COD
+  --> iso3166_1_numeric_code  "180"
+  --> iso3166_1_alpha_2       "CD"
+  --> iso3166_1_alpha_3       "COD"
+  --> label
+    -> MultilingualText
+      --> i18nName_fr
+        -> NlgSubstantive
+          --> root    "République démocratique du Congo"
+          --> plural  "République démocratique du Congo"
+          --> gender  FEMININE
+          --> number  SINGULAR
+        ;
+      --> i18nName_en
+        -> NlgSubstantive
+          --> root    "Democratic Republic of the Congo"
+          --> plural  "Democratic Republic of the Congo"
+          --> gender  INANIMATE
+          --> number  SINGULAR
+        ;
+      --> i18nName_es
+        -> NlgSubstantive
+          --> root    "República Democrática del Congo"
+          --> plural  "República Democrática del Congo"
+          --> gender  FEMININE
+          --> number  SINGULAR
+        ;
+      --> i18nName_de
+        -> NlgSubstantive
+          --> root    "Demokratische Republik Kongo"
+          --> plural  "Demokratische Republik Kongo"
+          --> gender  NEUTRAL
+          --> number  SINGULAR
+        ;
+      --> i18nName_ja
+        -> NlgSubstantive
+          --> root    "コンゴ民主共和国"
+          --> plural  "コンゴ民主共和国"
+          --> gender  INANIMATE
+          --> number  SINGULAR
+        ;
+    ;
+  --> demonym
+    -> MultilingualText
+      --> i18nName_fr  "de la République démocratique du Congo "
+      --> i18nName_en  "of the Democratic Republic of the Congo"
+      --> i18nName_es  "congoleño"
+      --> i18nName_de  "der Demokratischen Republik Kongo (CD1)"
+    ;
+  --> adjective
+    -> MultilingualText
+      --> i18nName_fr
+        -> NlgAdjective
+          --> root      "de la République démocratique du Congo"
+        ;
+      --> i18nName_en
+        -> NlgAdjective
+          --> root      "of the Democratic Republic of the Congo"
+        ;
+      --> i18nName_es
+        -> NlgAdjective
+          --> root      "congoleño"
+        ;
+      --> i18nName_de
+        -> NlgAdjective
+          --> root      "der Demokratischen Republik Kongo"
+        ;
+    ;
+  --> useArticle_fr  true
+  --> useArticle_en  true
+;

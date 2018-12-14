@@ -1,0 +1,8 @@
+
+LibCube:Measure MEASURE_SELECTED_GROSS_REVENUE
+    --> dsl -> Textualization
+        --> language LANG_en
+        --> root "Selected Gross Revenue"
+        --> number SINGULAR
+    ;
+;

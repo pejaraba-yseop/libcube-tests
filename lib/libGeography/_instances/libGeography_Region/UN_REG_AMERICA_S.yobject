@@ -1,0 +1,38 @@
+LibGeography:Region UN_REG_AMERICA_S
+  --> label
+    -> MultilingualText
+      --> i18nName_en
+        -> NlgSubstantive
+          --> root    "Southern America"
+          --> plural  "Southern America"
+          --> gender  INANIMATE
+          --> number  SINGULAR
+        ;
+      --> i18nName_de
+        -> NlgSubstantive
+          --> root    "Südamerika"
+          --> plural  "Südamerika"
+          --> gender  NEUTRAL
+          --> number  SINGULAR
+        ;
+      --> i18nName_ja
+        -> NlgSubstantive
+          --> root    "南アメリカ"
+          --> plural  "南アメリカ"
+          --> gender  INANIMATE
+          --> number  SINGULAR
+        ;
+    ;
+  --> demonym
+    -> MultilingualText
+      --> i18nName_en  "Southern American"
+    ;
+  --> adjective
+    -> MultilingualText
+      --> i18nName_en
+        -> NlgAdjective
+          --> root      "Southern American"
+        ;
+    ;
+  --> useArticle_en  false
+;

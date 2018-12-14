@@ -1,0 +1,80 @@
+LibGeography:Country C_TJK
+  --> iso3166_1_numeric_code  "762"
+  --> iso3166_1_alpha_2       "TJ"
+  --> iso3166_1_alpha_3       "TJK"
+  --> label
+    -> MultilingualText
+      --> i18nName_fr
+        -> NlgSubstantive
+          --> root    "Tadjikistan"
+          --> plural  "Tadjikistan"
+          --> gender  MASCULINE
+          --> number  SINGULAR
+        ;
+      --> i18nName_en
+        -> NlgSubstantive
+          --> root    "Tajikistan"
+          --> plural  "Tajikistan"
+          --> gender  INANIMATE
+          --> number  SINGULAR
+        ;
+      --> i18nName_es
+        -> NlgSubstantive
+          --> root    "Tayikistán"
+          --> plural  "Tayikistán"
+          --> gender  FEMININE
+          --> number  SINGULAR
+        ;
+      --> i18nName_de
+        -> NlgSubstantive
+          --> root    "Tadschikistan"
+          --> plural  "Tadschikistan"
+          --> gender  NEUTRAL
+          --> number  SINGULAR
+        ;
+      --> i18nName_ja
+        -> NlgSubstantive
+          --> root    "タジキスタン"
+          --> plural  "タジキスタン"
+          --> gender  INANIMATE
+          --> number  SINGULAR
+        ;
+    ;
+  --> demonym
+    -> MultilingualText
+      --> i18nName_fr
+        -> NlgGenderAgreeableSubstantive
+          --> masculine "Tadjik"
+          --> feminine  "Tadjike"
+        ;
+      --> i18nName_en  "Tajik"
+      --> i18nName_es  "tayiko"
+      --> i18nName_de
+        -> NlgGenderAgreeableSubstantive
+          --> masculine "Tadschike"
+          --> feminine  "Tadschikin"
+        ;
+    ;
+  --> adjective
+    -> MultilingualText
+      --> i18nName_fr
+        -> NlgAdjective
+          --> root      "tadjik"
+          --> feminine  "tadjike"
+        ;
+      --> i18nName_en
+        -> NlgAdjective
+          --> root      "Tajik"
+        ;
+      --> i18nName_es
+        -> NlgAdjective
+          --> root      "tayiko"
+        ;
+      --> i18nName_de
+        -> NlgAdjective
+          --> root      "tadschikisch"
+        ;
+    ;
+  --> useArticle_fr  true
+  --> useArticle_en  false
+;

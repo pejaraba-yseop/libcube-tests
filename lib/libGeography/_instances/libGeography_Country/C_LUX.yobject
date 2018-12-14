@@ -1,0 +1,80 @@
+LibGeography:Country C_LUX
+  --> iso3166_1_numeric_code  "442"
+  --> iso3166_1_alpha_2       "LU"
+  --> iso3166_1_alpha_3       "LUX"
+  --> label
+    -> MultilingualText
+      --> i18nName_fr
+        -> NlgSubstantive
+          --> root    "Luxembourg"
+          --> plural  "Luxembourg"
+          --> gender  MASCULINE
+          --> number  SINGULAR
+        ;
+      --> i18nName_en
+        -> NlgSubstantive
+          --> root    "Luxembourg"
+          --> plural  "Luxembourg"
+          --> gender  INANIMATE
+          --> number  SINGULAR
+        ;
+      --> i18nName_es
+        -> NlgSubstantive
+          --> root    "Luxemburgo"
+          --> plural  "Luxemburgo"
+          --> gender  MASCULINE
+          --> number  SINGULAR
+        ;
+      --> i18nName_de
+        -> NlgSubstantive
+          --> root    "Luxemburg"
+          --> plural  "Luxemburg"
+          --> gender  NEUTRAL
+          --> number  SINGULAR
+        ;
+      --> i18nName_ja
+        -> NlgSubstantive
+          --> root    "ルクセンブルク"
+          --> plural  "ルクセンブルク"
+          --> gender  INANIMATE
+          --> number  SINGULAR
+        ;
+    ;
+  --> demonym
+    -> MultilingualText
+      --> i18nName_fr
+        -> NlgGenderAgreeableSubstantive
+          --> masculine "Luxembourgeois"
+          --> feminine  "Luxembourgeoise"
+        ;
+      --> i18nName_en  "Luxembourger"
+      --> i18nName_es  "luxemburgués"
+      --> i18nName_de
+        -> NlgGenderAgreeableSubstantive
+          --> masculine "Luxemburger"
+          --> feminine  "Luxemburgerin"
+        ;
+    ;
+  --> adjective
+    -> MultilingualText
+      --> i18nName_fr
+        -> NlgAdjective
+          --> root      "luxembourgeois"
+          --> feminine  "luxembourgeoise"
+        ;
+      --> i18nName_en
+        -> NlgAdjective
+          --> root      "Luxembourgish"
+        ;
+      --> i18nName_es
+        -> NlgAdjective
+          --> root      "luxemburgués"
+        ;
+      --> i18nName_de
+        -> NlgAdjective
+          --> root      "luxemburgisch"
+        ;
+    ;
+  --> useArticle_fr  true
+  --> useArticle_en  false
+;

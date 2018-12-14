@@ -1,0 +1,507 @@
+interface LibCube:PositiveNegativeFactsSorter extends LibCube:FactsSorter
+
+    field positiveSortedFacts
+        --> domainsLevel2 LibCube:Fact
+        --> domains OrderedSet
+        --> documentation "The POSITIVE sorted facts"
+        --> xmlMapping XmlMappingProperty_SAVE
+        --> dsl -> Textualization
+            --> language LANG_en
+            --> root "sorted facts"
+            --> number PLURAL
+    ;
+
+    field negativeSortedFacts
+        --> domainsLevel2 LibCube:Fact
+        --> domains OrderedSet
+        --> documentation "The POSITIVE sorted facts"
+        --> xmlMapping XmlMappingProperty_SAVE
+        --> dsl -> Textualization
+            --> language LANG_en
+            --> root "sorted facts"
+            --> number PLURAL
+    ;
+
+    field isPositiveAscendant
+        --> domains Boolean
+        --> defaultValue false
+        --> documentation "Is ordering ascendant in positive facts?"
+        --> dsl -> Textualization
+            --> language LANG_en
+            --> root "is positive ascendant?"
+            --> number SINGULAR
+    ;
+
+    field isNegativeAscendant
+        --> domains Boolean
+        --> defaultValue false
+        --> documentation "Is ordering ascendant in negative facts?"
+        --> dsl -> Textualization
+            --> language LANG_en
+            --> root "is negative ascendant?"
+            --> number SINGULAR
+    ;
+    
+    method getTopNPositiveFacts(Number numberOfFacts)
+    --> domainsLevel2 LibCube:Fact
+    --> domains OrderedSet
+    --> dsl -> Textualization
+        --> language LANG_en
+        --> root "top n positive facts"
+        --> number SINGULAR
+    ;
+
+    method getTopNNegativeFacts(Number numberOfFacts)
+    --> domainsLevel2 LibCube:Fact
+    --> domains OrderedSet
+    --> dsl -> Textualization
+        --> language LANG_en
+        --> root "top n negative facts"
+        --> number SINGULAR
+    ;
+    
+    method getTopPositiveFact()
+    --> domains LibCube:Fact
+    --> dsl -> Textualization
+        --> language LANG_en
+        --> root "top positive fact"
+        --> number SINGULAR
+    ;
+
+    method getTopNegativeFact()
+    --> domains LibCube:Fact
+    --> dsl -> Textualization
+        --> language LANG_en
+        --> root "top negative fact"
+        --> number SINGULAR
+    ;
+    
+    method getPositiveFact(Number position)
+    --> domains LibCube:Fact
+    --> dsl -> Textualization
+        --> language LANG_en
+        --> root "positive fact at Nth Position"
+        --> number SINGULAR
+    ;
+
+    method getNegativeFact(Number position)
+    --> domains LibCube:Fact
+    --> dsl -> Textualization
+        --> language LANG_en
+        --> root "negative fact at Nth Position"
+        --> number SINGULAR
+    ;
+
+    method getPositiveFactsGreaterThan(Number value)
+        --> domainsLevel2 LibCube:Fact
+        --> domains OrderedSet 
+        --> documentation "The positive Facts greater than the value"
+        --> dsl -> Textualization
+            --> language LANG_en
+            --> root "positive facts greater than"
+            --> number SINGULAR
+    ;
+
+    method getNegativeFactsGreaterThan(Number value)
+        --> domainsLevel2 LibCube:Fact
+        --> domains OrderedSet 
+        --> documentation "The negative Facts greater than the value"
+        --> dsl -> Textualization
+            --> language LANG_en
+            --> root "negative facts greater than"
+            --> number SINGULAR
+    ;
+
+    method getPositiveFactsLowerThan(Number value)
+        --> domainsLevel2 LibCube:Fact
+        --> domains OrderedSet 
+        --> documentation "The positive Facts lower than the value"
+        --> dsl -> Textualization
+            --> language LANG_en
+            --> root "positive facts lower than"
+            --> number SINGULAR
+    ;
+
+    method getNegativeFactsLowerThan(Number value)
+        --> domainsLevel2 LibCube:Fact
+        --> domains OrderedSet 
+        --> documentation "The negative Facts lower than the value"
+        --> dsl -> Textualization
+            --> language LANG_en
+            --> root "negative facts lower than"
+            --> number SINGULAR
+    ;
+
+    method getPositiveFactsSumUnderTotalPercentage(Number percentage)
+        --> domainsLevel2 LibCube:Fact
+        --> domains OrderedSet 
+        --> documentation "The positive Facts whose sum of values is under the given percentage of the total"  
+        --> dsl -> Textualization
+            --> language LANG_en
+            --> root "Positive Facts whose sum of values is under the given percentage of the total"
+            --> number SINGULAR
+    ;
+
+    method getNegativeFactsSumUnderTotalPercentage(Number percentage)
+        --> domainsLevel2 LibCube:Fact
+        --> domains OrderedSet 
+        --> documentation "The negative Facts whose sum of values is under the given percentage of the total"  
+        --> dsl -> Textualization
+            --> language LANG_en
+            --> root "Negative Facts whose sum of values is under the given percentage of the total"
+            --> number SINGULAR
+    ;
+
+    method getPositiveRank(LibCube:Member member)
+    --> domains Number
+    --> documentation "Gets the rank of a positive fact that has a given dimension member"
+
+    method getNegativeRank(LibCube:Member member)
+    --> domains Number
+    --> documentation "Gets the rank of a negative fact that has a given dimension member"
+    
+    classProperties
+    --> dsl -> Textualization
+        --> language LANG_en
+        --> root "Positive/Negative Facts Sorter"
+        --> number SINGULAR
+    ;
+;
+
+implementation LibCube:PositiveNegativeFactsSorter override{
+    sortFacts function
+}
+;
+
+Function LibCube:PositiveNegativeFactsSorter::sortFacts()
+--> local Boolean hasAllMeasures, 
+          Boolean hasAttributes, 
+          SortParameter sortParam, 
+          SortParameter positiveSortParam,
+          SortParameter negativeSortParam,
+          LibCube:SortingOptions sortingOptions
+--> action {
+    
+    sortedFacts = new(OrderedSet);
+    positiveSortedFacts = new(OrderedSet);
+    negativeSortedFacts = new(OrderedSet);
+    
+    sortParam = new(SortParameter);
+    sortingOptions = new(LibCube:SortingOptions);
+    
+    sortingOptions.sortType = sortType;
+    sortingOptions.useAbsoluteValue = useAbsoluteValue;
+
+    switch(sortType){
+        case(SORT_TYPE_ONE_MEASURE):{
+            sortingOptions.measure = measure;
+            sortParam.expressionToValuate = LibCube:FactsSorter::oneMeasureComparatorFunc;
+
+            // only sort facts with the measure
+            foreach(_fact, facts){
+                hasAllMeasures = true
+                if(_fact.getMeasure(measure) == null){
+                    logWarning("The following fact does not have the ", measure.label, " measure sorting: ", _fact);
+                    hasAllMeasures = false
+                }   
+                if(hasAllMeasures == true){
+                    sortedFacts.add(_fact);
+                    if(_fact.getMeasure(measure).value > 0){
+                        positiveSortedFacts.add(_fact);
+                    }
+                    if(_fact.getMeasure(measure).value < 0){
+                        negativeSortedFacts.add(_fact);
+                    }
+                }
+            }
+        }
+        case(SORT_TYPE_MULTIPLE_MEASURES):{
+            sortingOptions.measures = measures;
+            sortParam.expressionToValuate = LibCube:FactsSorter::multipleMeasuresComparatorFunc;
+
+            // only sort facts with all the measures
+            foreach(_fact, facts){
+                hasAllMeasures = true;
+                foreach(LibCube:Measure _measure, measures){
+                    if(_fact.getMeasure(_measure)==null){
+                        logWarning("The following fact does not have the ", _measure.label, " measure for sorting: ", _fact);
+                        hasAllMeasures = false;
+                    }
+                }   
+                if(hasAllMeasures == true){
+                    sortedFacts.add(_fact);
+                    if(_fact.getMeasure(measure).value > 0){
+                        positiveSortedFacts.add(_fact);
+                    }
+                    if(_fact.getMeasure(measure).value < 0){
+                        negativeSortedFacts.add(_fact);
+                    }
+                }
+            }
+        }
+        case(SORT_TYPE_COMPARISON_ATTRIBUTE):{
+            sortingOptions.comparisonAttribute = twoFactsComparisonAttribute;
+            sortingOptions.differenceAttribute = twoFactsDifferenceAttribute;
+            sortParam.expressionToValuate = LibCube:FactsSorter::comparisonAttributeComparatorFunc
+
+            foreach(_fact, facts){
+                hasAttributes = true;
+                if(_fact.getAttributeValue(twoFactsComparisonAttribute)==null){
+                    logWarning("The following fact does not have the passed TwoFactsOneMeasureComparison attribute for sorting: ", _fact);
+                    hasAttributes = false;
+                } else {
+                    if(_fact.getAttributeValue(twoFactsComparisonAttribute).getAttributeValue(twoFactsDifferenceAttribute) == null){
+                        logWarning("The following fact does not have the passed TwoFactsOneMeasureComparison difference field attribute for sorting: ", _fact);
+                        hasAttributes = false;
+                    }
+                }
+            
+                if(hasAttributes == true){
+                    sortedFacts.add(_fact);
+                    if(_fact.getMeasure(measure).value > 0){
+                        positiveSortedFacts.add(_fact);
+                    }
+                    if(_fact.getMeasure(measure).value < 0){
+                        negativeSortedFacts.add(_fact);
+                    }
+                }
+            }
+        }
+    }
+    
+    sortingOptions.validateOptions();
+    sortParam.argumentForExpressionToValuate = sortingOptions;
+    sortParam.order = _CALCULATED_RELATIVE_ORDER;
+    sortParam.ascendant = isAscendant;
+    positiveSortParam = sortParam.clone();
+    negativeSortParam = sortParam.clone();
+
+    positiveSortParam.ascendant = isPositiveAscendant;
+    negativeSortParam.ascendant = isNegativeAscendant;
+    
+    if(sortedFacts != null && sortedFacts.isEmpty() == false){
+      sortedFacts.sort(sortParam);
+    }
+
+    if(positiveSortedFacts != null && positiveSortedFacts.isEmpty() == false){
+      positiveSortedFacts.sort(positiveSortParam);
+    }
+
+    if(negativeSortedFacts != null && negativeSortedFacts.isEmpty() == false){
+      negativeSortedFacts.sort(negativeSortParam);
+    }
+}
+;
+
+function genericGetTopNFacts(OrderedSet sortedFacts, Number numberOfFacts)
+--> domains OrderedSet
+--> local OrderedSet topNItems
+--> action {
+    topNItems = new(OrderedSet)
+    foreach(_fact, sortedFacts){
+        if(topNItems.size() < numberOfFacts){
+            topNItems.add(_fact)
+        }
+        else{
+            break;
+        }
+    }
+    return topNItems
+}
+;
+
+Function LibCube:PositiveNegativeFactsSorter::getTopNPositiveFacts(Number numberOfFacts)
+--> action {
+    return genericGetTopNFacts(positiveSortedFacts, numberOfFacts);
+}
+;
+
+Function LibCube:PositiveNegativeFactsSorter::getTopNNegativeFacts(Number numberOfFacts)
+--> action {
+    return genericGetTopNFacts(negativeSortedFacts, numberOfFacts);
+}
+;
+
+Function LibCube:PositiveNegativeFactsSorter::getTopPositiveFact()
+--> action {
+    return positiveSortedFacts.get(_FIRST)
+}
+;
+
+Function LibCube:PositiveNegativeFactsSorter::getTopNegativeFact()
+--> action {
+    return negativeSortedFacts.get(_FIRST)
+}
+;
+
+Function LibCube:PositiveNegativeFactsSorter::getPositiveFact(Number position)
+--> action {
+    return positiveSortedFacts.get(position)
+}
+;
+
+Function LibCube:PositiveNegativeFactsSorter::getNegativeFact(Number position)
+--> action {
+    return negativeSortedFacts.get(position)
+}
+;
+
+Function LibCube:PositiveNegativeFactsSorter::getPositiveFactsGreaterThan(Number value)
+--> local OrderedSet greaterFacts
+--> action {
+    greaterFacts = new(OrderedSet)
+    if(sortType == SORT_TYPE_ONE_MEASURE){
+      foreach(_fact, positiveSortedFacts){
+          if(_fact.getMeasure(measure).value > value){
+              greaterFacts.add(_fact);
+          }
+      }       
+    }
+    if(sortType == SORT_TYPE_MULTIPLE_MEASURES){
+      foreach(_fact, positiveSortedFacts){
+          if(_fact.getMeasure(measures.get(_FIRST)).value > value){
+              greaterFacts.add(_fact);
+          }
+      }       
+    }
+    if(sortType == SORT_TYPE_COMPARISON_ATTRIBUTE){
+      foreach(_fact, positiveSortedFacts){
+          if(_fact.getAttributeValue(twoFactsComparisonAttribute).getAttributeValue(twoFactsDifferenceAttribute) > value){
+              greaterFacts.add(_fact);
+          }
+      }       
+    }
+    
+    return greaterFacts
+}
+;
+
+Function LibCube:PositiveNegativeFactsSorter::getNegativeFactsGreaterThan(Number value)
+--> local OrderedSet greaterFacts
+--> action {
+    greaterFacts = new(OrderedSet)
+    if(sortType == SORT_TYPE_ONE_MEASURE){
+      foreach(_fact, negativeSortedFacts){
+          if(_fact.getMeasure(measure).value > value){
+              greaterFacts.add(_fact);
+          }
+      }       
+    }
+    if(sortType == SORT_TYPE_MULTIPLE_MEASURES){
+      foreach(_fact, negativeSortedFacts){
+          if(_fact.getMeasure(measures.get(_FIRST)).value > value){
+              greaterFacts.add(_fact);
+          }
+      }       
+    }
+    if(sortType == SORT_TYPE_COMPARISON_ATTRIBUTE){
+      foreach(_fact, negativeSortedFacts){
+          if(_fact.getAttributeValue(twoFactsComparisonAttribute).getAttributeValue(twoFactsDifferenceAttribute) > value){
+              greaterFacts.add(_fact);
+          }
+      }       
+    }
+    
+    return greaterFacts
+}
+;
+
+Function LibCube:PositiveNegativeFactsSorter::getPositiveFactsLowerThan(Number value)
+--> local OrderedSet lowerFacts
+--> action {
+    lowerFacts = new(OrderedSet)
+    if(sortType == SORT_TYPE_ONE_MEASURE){
+      foreach(_fact, positiveSortedFacts){
+          if(_fact.getMeasure(measure).value < value){
+              lowerFacts.add(_fact);
+          }
+      }       
+    }
+    if(sortType == SORT_TYPE_MULTIPLE_MEASURES){
+      foreach(_fact, positiveSortedFacts){
+          if(_fact.getMeasure(measures.get(_FIRST)).value < value){
+              lowerFacts.add(_fact);
+          }
+      }       
+    }
+    if(sortType == SORT_TYPE_COMPARISON_ATTRIBUTE){
+      foreach(_fact, positiveSortedFacts){
+          if(_fact.getAttributeValue(twoFactsComparisonAttribute).getAttributeValue(twoFactsDifferenceAttribute) < value){
+              lowerFacts.add(_fact);
+          }
+      }       
+    }
+    return lowerFacts
+}
+;
+
+Function LibCube:PositiveNegativeFactsSorter::getNegativeFactsLowerThan(Number value)
+--> local OrderedSet lowerFacts
+--> action {
+    lowerFacts = new(OrderedSet)
+    if(sortType == SORT_TYPE_ONE_MEASURE){
+      foreach(_fact, negativeSortedFacts){
+          if(_fact.getMeasure(measure).value < value){
+              lowerFacts.add(_fact);
+          }
+      }       
+    }
+    if(sortType == SORT_TYPE_MULTIPLE_MEASURES){
+      foreach(_fact, negativeSortedFacts){
+          if(_fact.getMeasure(measures.get(_FIRST)).value < value){
+              lowerFacts.add(_fact);
+          }
+      }       
+    }
+    if(sortType == SORT_TYPE_COMPARISON_ATTRIBUTE){
+      foreach(_fact, negativeSortedFacts){
+          if(_fact.getAttributeValue(twoFactsComparisonAttribute).getAttributeValue(twoFactsDifferenceAttribute) < value){
+              lowerFacts.add(_fact);
+          }
+      }       
+    }
+    return lowerFacts
+}
+;
+
+Function LibCube:PositiveNegativeFactsSorter::getPositiveFactsSumUnderTotalPercentage(Number percentage)
+--> local OrderedSet factsUnderTotal
+--> action {
+    factsUnderTotal = new(OrderedSet)
+    // TODO 
+    return factsUnderTotal
+}
+;
+
+Function LibCube:PositiveNegativeFactsSorter::getNegativeFactsSumUnderTotalPercentage(Number percentage)
+--> local OrderedSet factsUnderTotal
+--> action {
+    factsUnderTotal = new(OrderedSet)
+    // TODO 
+    return factsUnderTotal
+}
+;
+
+function genericGetRank(OrderedSet sortedFacts, LibCube:Member member)
+--> domains Number
+--> action {
+    foreach(_fact, sortedFacts){
+        if(_fact.getDimension(member.dimension) == member){
+            return sortedFacts.indexOf(_fact);
+        }
+    }
+    return 0;
+}
+;
+
+Function LibCube:PositiveNegativeFactsSorter::getPositiveRank(LibCube:Member member)
+--> action {
+    return genericGetRank(positiveSortedFacts, member);
+}
+;
+
+Function LibCube:PositiveNegativeFactsSorter::getNegativeRank(LibCube:Member member)
+--> action {
+    return genericGetRank(negativeSortedFacts, member);
+}
+;

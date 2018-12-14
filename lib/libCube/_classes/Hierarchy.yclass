@@ -1,0 +1,24 @@
+interface LibCube:Hierarchy extends Tree
+
+    field mdxName
+        --> domains String
+        --> xmlMapping XmlMappingProperty_SAVE
+        --> dsl -> Textualization
+            --> language LANG_en
+            --> root "mdxName"
+            --> number SINGULAR
+        ;
+
+    
+    classProperties
+    --> dsl -> Textualization
+        --> language LANG_en
+        --> root "Cube Hierarchy"
+        --> number SINGULAR
+    ;
+    --> documentation "A typical hierarchy would be the balance lines of a an account. (i.e. Costs could be parent, while freight, cleaning, power, etc. would be children of Costs)"
+;
+
+implementation LibCube:Hierarchy
+;
+

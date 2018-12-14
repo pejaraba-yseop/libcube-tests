@@ -1,0 +1,2262 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<yseop-yml:ymlTextFunction xmlns:yseop-yml="http://www.yseop.com/yml/storage" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" domainModelVersion="3" identifier="57659bca-9998-45ad-9c7c-b7841a375b4e">
+    <yseop-yml:textGranule domainModelVersion="3" identifier="e56b3020-8142-4f06-847e-9b92b7eefd6a">
+        <yseop-yml:granuleI18nContents>
+            <yseop-yml:granuleUnilingueContent locale="en">
+                <yseop-yml:granuleContent>
+                    <yseop-yml:text>
+\if(getGeneralData().insurerRequested != null)
+
+    \foreach(_staticTextItem, StaticTextItem)
+
+        \if(getGeneralData().insurerRequested.stringCompare(_staticTextItem.staticTextCountry, _CASE_INSENSITIVE) == true)
+
+            \if(_staticTextItem.startP1 != null)
+                \value(_staticTextItem.startP1)
+            \endIf
+
+        \endIf
+
+
+    \endForeach
+
+
+    \if(getGeneralData().marketPositionofInsurerePercent >= getGeneralData().marketShareOfInsurerePercent)
+
+        \foreach(_marketPositionItem, MarketPositionItem)
+
+            \if(_marketPositionItem.marketPositionName.stringCompare(getGeneralData().insurerRequested, _CASE_INSENSITIVE) == true)
+                \value(getGeneralData().insurerRequested.replace("s.a.", "", _CASE_INSENSITIVE))
+                ranks
+
+                \beginStyle(styleOrdinal)
+                    \value(_marketPositionItem.marketPositionRank)
+
+                \endStyle
+
+                in the
+                \value(getGeneralData().totalMarket)
+                with a market share of
+                \value(_marketPositionItem.marketPositionPercentDifference, UNIT_PERCENT)
+                based on
+
+                \beginStyle(lowerCaseSegment)
+                    \value(getGeneralData().synonymRangeOne)
+
+                \endStyle
+
+                /*gross premiums */
+                as of
+                \date(getGeneralData().pointInTime, _DATE_DD, _DATE_MONTH, _DATE_YYYY, _DATE_MIDDLE_ENDIAN_CARDINAL)
+                .
+            \endIf
+
+
+        \endForeach
+
+
+        \foreach(_marketShareItem, MarketShareItem)
+
+            \if(_marketShareItem.marketShareName.stringCompare(getGeneralData().insurerRequested, _CASE_INSENSITIVE) == true)
+                In the
+                \value(getGeneralData().subMarket)
+                ,
+                \value(getGeneralData().insurerRequested.replace("s.a.", "", _CASE_INSENSITIVE))
+                ranks
+
+                \beginStyle(styleOrdinal)
+                    \value(_marketShareItem.marketShareItemRank)
+
+                \endStyle
+
+                with a
+
+                \beginStyle(lowerCaseSegment)
+                    \value(getGeneralData().synonymRangeTwo)
+
+                \endStyle
+
+                /*market share */
+                of
+                \value(_marketShareItem.marketSharePercentDifference, UNIT_PERCENT)
+
+                \foreach(k,hashMapByBrand1.getKeys(), #7FB1#)
+
+                    \if(hashMapByBrand1.getKeys().get(4) != null &amp;&amp; k == hashMapByBrand1.getKeys().get(4))
+
+                        \beginSynonym
+                            \choice 
+                                \value(getGeneralData().insurerRequested.replace("s.a.", "", _CASE_INSENSITIVE))
+                            \choice 
+                                The company
+                        \endSynonym
+
+                        also ranks
+                    \endIf
+
+
+                    \if(hashMapByBrand1.getKeys().get(7) != null &amp;&amp; k == hashMapByBrand1.getKeys().get(7))
+                        In addition,
+
+                        \beginSynonym
+                            \choice 
+                                \value(getGeneralData().insurerRequested.replace("s.a.", "", _CASE_INSENSITIVE))
+                            \choice 
+                                the company
+                        \endSynonym
+
+                        also ranks
+                    \endIf
+
+
+                    \beginStyle(styleOrdinal)
+                        \value(k)
+
+                    \endStyle
+
+                    in
+
+                    \foreach(v,hashMapByBrand1.get(k), #3JVU#)
+
+                        \if(v.businessSegmentPercent != 0)
+
+                            \beginStyle(lowerCaseSegment)
+                                \value(v.businessSegmentNameEnglish)
+
+                            \endStyle
+
+                            (
+                            \value(v.businessSegmentPercent, UNIT_PERCENT)
+                            )
+                        \endIf
+
+
+                    \endForeach
+
+
+                \endForeach
+
+                .
+            \endIf
+
+
+        \endForeach
+
+    \else
+
+        \foreach(_marketShareItem, MarketShareItem)
+
+            \if(_marketShareItem.marketShareName.stringCompare(getGeneralData().insurerRequested, _CASE_INSENSITIVE) == true)
+                In the
+                \value(getGeneralData().subMarket)
+                ,
+                \value(getGeneralData().insurerRequested.replace("s.a.", "", _CASE_INSENSITIVE))
+                ranks
+
+                \beginStyle(styleOrdinal)
+                    \value(_marketShareItem.marketShareItemRank)
+
+                \endStyle
+
+                with a
+
+                \beginStyle(lowerCaseSegment)
+                    \value(getGeneralData().synonymRangeTwo)
+
+                \endStyle
+
+                /*market share */
+                of
+                \value(_marketShareItem.marketSharePercentDifference, UNIT_PERCENT)
+
+                \foreach(k,hashMapByBrand1.getKeys(), #86M0#)
+
+                    \if(hashMapByBrand1.getKeys().get(4) != null &amp;&amp; k == hashMapByBrand1.getKeys().get(4))
+
+                        \beginSynonym
+                            \choice 
+                                \value(getGeneralData().insurerRequested.replace("s.a.", "", _CASE_INSENSITIVE))
+                            \choice 
+                                The company
+                        \endSynonym
+
+                        also ranks
+                    \endIf
+
+
+                    \if(hashMapByBrand1.getKeys().get(7) != null &amp;&amp; k == hashMapByBrand1.getKeys().get(7))
+                        In addition,
+
+                        \beginSynonym
+                            \choice 
+                                \value(getGeneralData().insurerRequested.replace("s.a.", "", _CASE_INSENSITIVE))
+                            \choice 
+                                the company
+                        \endSynonym
+
+                        also ranks
+                    \endIf
+
+
+                    \beginStyle(styleOrdinal)
+                        \value(k)
+
+                    \endStyle
+
+                    in
+
+                    \foreach(v,hashMapByBrand1.get(k), #BS9U#)
+
+                        \if(v.businessSegmentPercent != 0)
+
+                            \beginStyle(lowerCaseSegment)
+                                \value(v.businessSegmentNameEnglish)
+
+                            \endStyle
+
+                            (
+                            \value(v.businessSegmentPercent, UNIT_PERCENT)
+                            )
+                        \endIf
+
+
+                    \endForeach
+
+
+                \endForeach
+
+                .
+            \endIf
+
+
+        \endForeach
+
+
+        \foreach(_marketPositionItem, MarketPositionItem)
+
+            \if(_marketPositionItem.marketPositionName.stringCompare(getGeneralData().insurerRequested, _CASE_INSENSITIVE) == true)
+                \value(getGeneralData().insurerRequested.replace("s.a.", "", _CASE_INSENSITIVE))
+                ranks
+
+                \beginStyle(styleOrdinal)
+                    \value(_marketPositionItem.marketPositionRank)
+
+                \endStyle
+
+                in the
+                \value(getGeneralData().totalMarket)
+                with a market share of
+                \value(_marketPositionItem.marketPositionPercentDifference, UNIT_PERCENT)
+                based on
+
+                \beginStyle(lowerCaseSegment)
+                    \value(getGeneralData().synonymRangeOne)
+
+                \endStyle
+
+                /*gross premiums */
+                as of
+                \date(getGeneralData().pointInTime, _DATE_DD, _DATE_MONTH, _DATE_YYYY, _DATE_MIDDLE_ENDIAN_CARDINAL)
+                .
+            \endIf
+
+
+        \endForeach
+
+    \endIf
+
+
+    \foreach(_staticTextItem, StaticTextItem)
+
+        \if(getGeneralData().insurerRequested.stringCompare(_staticTextItem.staticTextCountry, _CASE_INSENSITIVE) == true)
+
+            \if(_staticTextItem.endP1 != null)
+                \value(_staticTextItem.endP1)
+            \endIf
+
+        \endIf
+
+
+    \endForeach
+
+\p
+
+    \foreach(_staticTextItem, StaticTextItem)
+
+        \if(getGeneralData().insurerRequested.stringCompare(_staticTextItem.staticTextCountry, _CASE_INSENSITIVE) == true)
+
+            \if(_staticTextItem.startP2 != null)
+                \value(_staticTextItem.startP2)
+            \endIf
+
+        \endIf
+
+
+    \endForeach
+
+
+    \foreach(_netPremium, NetPremium)
+
+        \if(_netPremium.countryNameNetPremium.stringCompare(getGeneralData().insurerRequested, _CASE_INSENSITIVE) == true)
+
+            \if(_netPremium.countryNetPremiumListGreaterThan10.size() >= 3)
+
+                \foreach(_netPremiumSegments, _netPremium.countryNetPremiumListGreaterThan10, #5XSG#)
+
+                    \if(_netPremiumSegments.netPremiumSegmentPercent > 0.1 &amp;&amp; _netPremiumSegments.netPremiumSegmentPercent &lt;= 1 &amp;&amp; (_netPremiumSegments.netPremiumSegmentPercent != _netPremium.countryNetPremiumListGreaterThan10.get(1).netPremiumSegmentPercent) &amp;&amp; _netPremiumSegments.netPremiumSegmentName != "Grand Total")
+                        \value(_netPremiumSegments.netPremiumSegmentPercent, UNIT_PERCENT)
+                        in
+
+                        \beginStyle(lowerCaseSegment)
+                            \value(_netPremiumSegments.netPremiumSegmentEnglishName)
+
+                        \endStyle
+
+                    \endIf
+
+
+                \endForeach
+
+            \else
+
+                \foreach(_netPremiumSegments, _netPremium.countryNetPremiumList)
+
+                    \if(_netPremiumSegments.netPremiumSegmentPercent > 0.1 &amp;&amp; _netPremiumSegments.netPremiumSegmentPercent &lt;= 1 &amp;&amp; _netPremiumSegments.netPremiumSegmentName != "Grand Total")
+                        The
+
+                        \beginStyle(lowerCaseSegment)
+                            \value(_netPremiumSegments.netPremiumSegmentEnglishName)
+
+                        \endStyle
+
+                        segment represents
+                        \value(_netPremiumSegments.netPremiumSegmentPercent, UNIT_PERCENT)
+                        of total
+
+                        \beginStyle(lowerCaseSegment)
+                            \value(getGeneralData().synonymRangeFour)
+
+                        \endStyle
+
+                        /*net premium */
+                        .
+                    \endIf
+
+
+                \endForeach
+
+            \endIf
+
+        \endIf
+
+
+    \endForeach
+
+
+    \foreach(_expenseRatioItem, getGeneralData().expenseRatioList)
+
+        \if(_expenseRatioItem.expenseRatioCountryName.stringCompare(getGeneralData().insurerRequested, _CASE_INSENSITIVE) == true)
+            \value(getGeneralData().insurerRequested.replace("s.a.", "", _CASE_INSENSITIVE))
+            has an
+
+            \beginStyle(lowerCaseSegment)
+                \value(getGeneralData().synonymRangeFive.replace("%", ""))
+
+            \endStyle
+
+            /*expense ratio */
+            of
+            \value(_expenseRatioItem.expenseRatioPercent, UNIT_PERCENT)
+            annualized as of
+            \date(_expenseRatioItem.expenseRatioDate, _DATE_DD, _DATE_MONTH, _DATE_YYYY, _DATE_MIDDLE_ENDIAN_CARDINAL)
+
+            \if(_expenseRatioItem.expenseRatioPeerListInExpenseRatio.isEmpty() == true)
+\+
+                , which is considered
+
+                \if(_expenseRatioItem.expenseRatioPercent >= 0.40)
+                    high
+                \else
+                    low
+                \endIf
+
+                on a global basis.
+            \else
+                .
+            \endIf
+
+            .
+        \endIf
+
+
+    \endForeach
+
+
+    \foreach(_expenseRatioPeerItem, getGeneralData().expenseRatioPeerList)
+
+        \if(_expenseRatioPeerItem.expenseRatioPeerCountryName.stringCompare(getGeneralData().insurerRequested, _CASE_INSENSITIVE) == true)
+            Though their
+
+            \beginStyle(lowerCaseSegment)
+                \value(getGeneralData().synonymRangeSix.replace("%", ""))
+
+            \endStyle
+
+            /*expense ratio */
+            is
+            \value(_expenseRatioPeerItem.lowHigh)
+            on a global basis, it is
+            \value(_expenseRatioPeerItem.inLineOrNot)
+            with their local peers.
+        \endIf
+
+
+    \endForeach
+
+
+    \foreach(_staticTextItem, StaticTextItem)
+
+        \if(getGeneralData().insurerRequested.stringCompare(_staticTextItem.staticTextCountry, _CASE_INSENSITIVE) == true)
+
+            \if(_staticTextItem.endP2 != null)
+                \value(_staticTextItem.endP2)
+            \endIf
+
+        \endIf
+
+
+    \endForeach
+
+\p
+
+    \foreach(_staticTextItem, StaticTextItem)
+
+        \if(getGeneralData().insurerRequested.stringCompare(_staticTextItem.staticTextCountry, _CASE_INSENSITIVE) == true)
+
+            \if(_staticTextItem.startP3 != null)
+                \value(_staticTextItem.startP3)
+            \endIf
+
+        \endIf
+
+
+    \endForeach
+
+
+    \foreach(_scoreCardItem, getGeneralData().scoreCardList)
+
+        \if(_scoreCardItem.scoreCardCountryName.stringCompare(getGeneralData().insurerRequested, _CASE_INSENSITIVE) == true)
+
+            \if(_scoreCardItem.scoreCardScore == _scoreCardItem.scoreCardAdjusted)
+                Moody's considers
+                \value(getGeneralData().synonymRangeSeven, _OWNER: getGeneralData().insurerRequestedNoSA)
+                /*\value(getGeneralData().insurerRequested.replace("s.a.", "", _CASE_INSENSITIVE)) \+ 's \value(getGeneralData().synonymRangeSeven) */
+                /*market position */
+                as meeting expectations for
+                \value(_scoreCardItem.scoreCardAdjusted)
+\+
+                -
+\+
+                rated insurers, as indicated by its
+                \value(_scoreCardItem.scoreCardScore)
+\+
+                -
+\+
+                level designated by the score card metrics.
+            \else
+                Moody's considers
+                \value(getGeneralData().synonymRangeSeven, _OWNER: getGeneralData().insurerRequestedNoSA)
+                as being more aligned with expectations for
+                \value(_scoreCardItem.scoreCardAdjusted)
+\+
+                -
+\+
+                rated insurers, as opposed to the
+                \value(_scoreCardItem.scoreCardScore)
+\+
+                -
+\+
+                level designated by the score card metrics.
+            \endIf
+
+        \endIf
+
+
+    \endForeach
+
+
+    \foreach(_staticTextItem, StaticTextItem)
+
+        \if(getGeneralData().insurerRequested.stringCompare(_staticTextItem.staticTextCountry, _CASE_INSENSITIVE) == true)
+
+            \if(_staticTextItem.endP3 != null)
+                \value(_staticTextItem.endP3)
+            \endIf
+
+        \endIf
+
+
+    \endForeach
+
+\p
+\endIf
+</yseop-yml:text>
+                    <yseop-yml:inline-assemblies>
+                        <yseop-yml:singleSentenceLinkAssembly name="3JVU" language="en">
+                            <yseop-yml:chooseSeparatorOptions>
+                                <yseop-yml:beforeEachItemCommaSelected>true</yseop-yml:beforeEachItemCommaSelected>
+                                <yseop-yml:beforeEachItemOtherText/>
+                                <yseop-yml:beforeLastItemAndSelected>true</yseop-yml:beforeLastItemAndSelected>
+                                <yseop-yml:beforeLastItemOtherText>, and</yseop-yml:beforeLastItemOtherText>
+                                <yseop-yml:maxCountOfItemsForEachSentenceValue>3</yseop-yml:maxCountOfItemsForEachSentenceValue>
+                                <yseop-yml:endOfSentenceDotSelected>true</yseop-yml:endOfSentenceDotSelected>
+                                <yseop-yml:endOfSentenceQuestionMarkSelected>false</yseop-yml:endOfSentenceQuestionMarkSelected>
+                                <yseop-yml:endOfSentenceOtherSelected>false</yseop-yml:endOfSentenceOtherSelected>
+                                <yseop-yml:switchThresholdValue>4</yseop-yml:switchThresholdValue>
+                            </yseop-yml:chooseSeparatorOptions>
+                            <yseop-yml:beginEndWithOptions>
+                                <yseop-yml:generalBeginWithText/>
+                                <yseop-yml:generalEndWithText/>
+                                <yseop-yml:onlyOneItemBeginWithSameAsGeneralSelected>true</yseop-yml:onlyOneItemBeginWithSameAsGeneralSelected>
+                                <yseop-yml:onlyOneItemBeginWithSpecificText/>
+                                <yseop-yml:onlyOneItemEndWithSameAsGeneralSelected>true</yseop-yml:onlyOneItemEndWithSameAsGeneralSelected>
+                                <yseop-yml:onlyOneItemEndWithSpecificText/>
+                                <yseop-yml:allItemsIdenticalBeginWithSameAsGeneralSelected>true</yseop-yml:allItemsIdenticalBeginWithSameAsGeneralSelected>
+                                <yseop-yml:allItemsIdenticalBeginWithSpecificText/>
+                                <yseop-yml:allItemsIdenticalEndWithSameAsGeneralSelected>true</yseop-yml:allItemsIdenticalEndWithSameAsGeneralSelected>
+                                <yseop-yml:allItemsIdenticalEndWithSpecificText/>
+                                <yseop-yml:noItemGenerateNothingSelected>true</yseop-yml:noItemGenerateNothingSelected>
+                                <yseop-yml:noItemSentenceText/>
+                                <yseop-yml:inGeneralBulletBeginSameAsListSelected>true</yseop-yml:inGeneralBulletBeginSameAsListSelected>
+                                <yseop-yml:inGeneralBulletBeginSpecificSelected>false</yseop-yml:inGeneralBulletBeginSpecificSelected>
+                                <yseop-yml:inGeneralBulletBeginSpecificText/>
+                                <yseop-yml:inGeneralBulletEndSameAsListSelected>true</yseop-yml:inGeneralBulletEndSameAsListSelected>
+                                <yseop-yml:inGeneralBulletEndSpecificSelected>false</yseop-yml:inGeneralBulletEndSpecificSelected>
+                                <yseop-yml:inGeneralBulletEndSpecificText/>
+                            </yseop-yml:beginEndWithOptions>
+                            <yseop-yml:limitSizeOptions>
+                                <yseop-yml:noLimitSelected>true</yseop-yml:noLimitSelected>
+                                <yseop-yml:onlyFirstElementsSelected>true</yseop-yml:onlyFirstElementsSelected>
+                                <yseop-yml:onlyFirstElementsNumberValue>3</yseop-yml:onlyFirstElementsNumberValue>
+                                <yseop-yml:sentenceSizeTypeValue>30</yseop-yml:sentenceSizeTypeValue>
+                                <yseop-yml:limitByTypeValue>words</yseop-yml:limitByTypeValue>
+                                <yseop-yml:limitByTypeNumber>0</yseop-yml:limitByTypeNumber>
+                                <yseop-yml:sentenceEndEtcSelected>true</yseop-yml:sentenceEndEtcSelected>
+                                <yseop-yml:sentenceEndOtherText/>
+                                <yseop-yml:hasWordCharOptions>true</yseop-yml:hasWordCharOptions>
+                            </yseop-yml:limitSizeOptions>
+                        </yseop-yml:singleSentenceLinkAssembly>
+                        <yseop-yml:sentencesGenerationAndAssembly name="7FB1" language="en">
+                            <yseop-yml:chooseSeparatorOptions>
+                                <yseop-yml:beforeEachItemCommaSelected>true</yseop-yml:beforeEachItemCommaSelected>
+                                <yseop-yml:beforeEachItemOtherText/>
+                                <yseop-yml:beforeLastItemAndSelected>false</yseop-yml:beforeLastItemAndSelected>
+                                <yseop-yml:beforeLastItemOtherSelected>true</yseop-yml:beforeLastItemOtherSelected>
+                                <yseop-yml:beforeLastItemOtherText>, and</yseop-yml:beforeLastItemOtherText>
+                                <yseop-yml:hasSentenceParametersSection>true</yseop-yml:hasSentenceParametersSection>
+                                <yseop-yml:maxCountOfItemsForEachSentenceValue>3</yseop-yml:maxCountOfItemsForEachSentenceValue>
+                                <yseop-yml:endOfSentenceDotSelected>true</yseop-yml:endOfSentenceDotSelected>
+                                <yseop-yml:endOfSentenceQuestionMarkSelected>false</yseop-yml:endOfSentenceQuestionMarkSelected>
+                                <yseop-yml:endOfSentenceOtherSelected>false</yseop-yml:endOfSentenceOtherSelected>
+                                <yseop-yml:endOfSentenceOtherText/>
+                                <yseop-yml:switchThresholdValue>4</yseop-yml:switchThresholdValue>
+                            </yseop-yml:chooseSeparatorOptions>
+                            <yseop-yml:sentenceOrParagraphGeneralOptions>
+                                <yseop-yml:eachItemIsAParagraph>false</yseop-yml:eachItemIsAParagraph>
+                            </yseop-yml:sentenceOrParagraphGeneralOptions>
+                            <yseop-yml:linkWordsBetweenItemsOptions>
+                                <yseop-yml:doNotAddLinkWords>true</yseop-yml:doNotAddLinkWords>
+                                <yseop-yml:generalLinkWords xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" yseop-yml:size="5">
+                                    <yseop-yml:entry yseop-yml:key="LANG_DE" xsi:type="xsd:string">Zusätzlich,
+Außerdem,
+Andererseits,
+</yseop-yml:entry>
+                                    <yseop-yml:entry yseop-yml:key="LANG_JA" xsi:type="xsd:string">それに、
+実は、
+そういえば、
+その上に、
+結局、
+一方は
+他方は
+</yseop-yml:entry>
+                                    <yseop-yml:entry yseop-yml:key="LANG_EN" xsi:type="xsd:string">Also,
+Furthermore,
+In addition,
+</yseop-yml:entry>
+                                    <yseop-yml:entry yseop-yml:key="LANG_FR" xsi:type="xsd:string">Par ailleurs,
+De plus,
+En outre,
+D'autre part,
+Également,
+</yseop-yml:entry>
+                                    <yseop-yml:entry yseop-yml:key="LANG_ES" xsi:type="xsd:string">Además,
+Luego,
+Después,
+Por otra parte,
+A continuación,
+</yseop-yml:entry>
+                                </yseop-yml:generalLinkWords>
+                                <yseop-yml:generalLinkWordsRandomStrategy>true</yseop-yml:generalLinkWordsRandomStrategy>
+                                <yseop-yml:generalLinkWordsLinearStrategy>false</yseop-yml:generalLinkWordsLinearStrategy>
+                                <yseop-yml:nextToLastLinkWord xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" yseop-yml:size="5">
+                                    <yseop-yml:entry yseop-yml:key="LANG_DE" xsi:type="xsd:string">Abschließend,</yseop-yml:entry>
+                                    <yseop-yml:entry yseop-yml:key="LANG_JA" xsi:type="xsd:string"></yseop-yml:entry>
+                                    <yseop-yml:entry yseop-yml:key="LANG_EN" xsi:type="xsd:string"></yseop-yml:entry>
+                                    <yseop-yml:entry yseop-yml:key="LANG_FR" xsi:type="xsd:string">Enfin,</yseop-yml:entry>
+                                    <yseop-yml:entry yseop-yml:key="LANG_ES" xsi:type="xsd:string"></yseop-yml:entry>
+                                </yseop-yml:nextToLastLinkWord>
+                                <yseop-yml:lastLinkWord xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" yseop-yml:size="5">
+                                    <yseop-yml:entry yseop-yml:key="LANG_DE" xsi:type="xsd:string">Schließlich,</yseop-yml:entry>
+                                    <yseop-yml:entry yseop-yml:key="LANG_JA" xsi:type="xsd:string">つまり、</yseop-yml:entry>
+                                    <yseop-yml:entry yseop-yml:key="LANG_EN" xsi:type="xsd:string"></yseop-yml:entry>
+                                    <yseop-yml:entry yseop-yml:key="LANG_FR" xsi:type="xsd:string">Pour finir,</yseop-yml:entry>
+                                    <yseop-yml:entry yseop-yml:key="LANG_ES" xsi:type="xsd:string">Por fin,</yseop-yml:entry>
+                                </yseop-yml:lastLinkWord>
+                            </yseop-yml:linkWordsBetweenItemsOptions>
+                            <yseop-yml:beginEndWithOptions>
+                                <yseop-yml:generalBeginWithText>
+\if(hashMapByBrand1.getKeys().get(1) == _marketShareItem.marketShareItemRank)
+    as well as
+\else
+    .
+    \value(getGeneralData().insurerRequested.replace("s.a.", "", _CASE_INSENSITIVE))
+    ranks
+\endIf
+</yseop-yml:generalBeginWithText>
+                                <yseop-yml:generalEndWithText/>
+                                <yseop-yml:onlyOneItemBeginWithSameAsGeneralSelected>true</yseop-yml:onlyOneItemBeginWithSameAsGeneralSelected>
+                                <yseop-yml:onlyOneItemBeginWithSpecificText/>
+                                <yseop-yml:onlyOneItemEndWithSameAsGeneralSelected>true</yseop-yml:onlyOneItemEndWithSameAsGeneralSelected>
+                                <yseop-yml:onlyOneItemEndWithSpecificText/>
+                                <yseop-yml:allItemsIdenticalBeginWithSameAsGeneralSelected>true</yseop-yml:allItemsIdenticalBeginWithSameAsGeneralSelected>
+                                <yseop-yml:allItemsIdenticalBeginWithSpecificText/>
+                                <yseop-yml:allItemsIdenticalEndWithSameAsGeneralSelected>true</yseop-yml:allItemsIdenticalEndWithSameAsGeneralSelected>
+                                <yseop-yml:allItemsIdenticalEndWithSpecificText/>
+                                <yseop-yml:noItemGenerateNothingSelected>true</yseop-yml:noItemGenerateNothingSelected>
+                                <yseop-yml:noItemSentenceText/>
+                                <yseop-yml:inGeneralBulletBeginSameAsListSelected>true</yseop-yml:inGeneralBulletBeginSameAsListSelected>
+                                <yseop-yml:inGeneralBulletBeginSpecificSelected>false</yseop-yml:inGeneralBulletBeginSpecificSelected>
+                                <yseop-yml:inGeneralBulletBeginSpecificText/>
+                                <yseop-yml:inGeneralBulletEndSameAsListSelected>true</yseop-yml:inGeneralBulletEndSameAsListSelected>
+                                <yseop-yml:inGeneralBulletEndSpecificSelected>false</yseop-yml:inGeneralBulletEndSpecificSelected>
+                                <yseop-yml:inGeneralBulletEndSpecificText/>
+                            </yseop-yml:beginEndWithOptions>
+                            <yseop-yml:limitSizeOptions>
+                                <yseop-yml:noLimitSelected>true</yseop-yml:noLimitSelected>
+                                <yseop-yml:onlyFirstElementsSelected>true</yseop-yml:onlyFirstElementsSelected>
+                                <yseop-yml:onlyFirstElementsNumberValue>3</yseop-yml:onlyFirstElementsNumberValue>
+                                <yseop-yml:sentenceSizeTypeValue>30</yseop-yml:sentenceSizeTypeValue>
+                                <yseop-yml:limitByTypeValue>words</yseop-yml:limitByTypeValue>
+                                <yseop-yml:limitByTypeNumber>0</yseop-yml:limitByTypeNumber>
+                                <yseop-yml:sentenceEndOtherSelected>true</yseop-yml:sentenceEndOtherSelected>
+                                <yseop-yml:sentenceEndOtherText/>
+                                <yseop-yml:hasWordCharOptions>true</yseop-yml:hasWordCharOptions>
+                            </yseop-yml:limitSizeOptions>
+                        </yseop-yml:sentencesGenerationAndAssembly>
+                        <yseop-yml:singleSentenceLinkAssembly name="BS9U" language="en">
+                            <yseop-yml:chooseSeparatorOptions>
+                                <yseop-yml:beforeEachItemCommaSelected>true</yseop-yml:beforeEachItemCommaSelected>
+                                <yseop-yml:beforeEachItemOtherText/>
+                                <yseop-yml:beforeLastItemAndSelected>true</yseop-yml:beforeLastItemAndSelected>
+                                <yseop-yml:beforeLastItemOtherText>, and</yseop-yml:beforeLastItemOtherText>
+                                <yseop-yml:maxCountOfItemsForEachSentenceValue>3</yseop-yml:maxCountOfItemsForEachSentenceValue>
+                                <yseop-yml:endOfSentenceDotSelected>true</yseop-yml:endOfSentenceDotSelected>
+                                <yseop-yml:endOfSentenceQuestionMarkSelected>false</yseop-yml:endOfSentenceQuestionMarkSelected>
+                                <yseop-yml:endOfSentenceOtherSelected>false</yseop-yml:endOfSentenceOtherSelected>
+                                <yseop-yml:switchThresholdValue>4</yseop-yml:switchThresholdValue>
+                            </yseop-yml:chooseSeparatorOptions>
+                            <yseop-yml:beginEndWithOptions>
+                                <yseop-yml:generalBeginWithText/>
+                                <yseop-yml:generalEndWithText/>
+                                <yseop-yml:onlyOneItemBeginWithSameAsGeneralSelected>true</yseop-yml:onlyOneItemBeginWithSameAsGeneralSelected>
+                                <yseop-yml:onlyOneItemBeginWithSpecificText/>
+                                <yseop-yml:onlyOneItemEndWithSameAsGeneralSelected>true</yseop-yml:onlyOneItemEndWithSameAsGeneralSelected>
+                                <yseop-yml:onlyOneItemEndWithSpecificText/>
+                                <yseop-yml:allItemsIdenticalBeginWithSameAsGeneralSelected>true</yseop-yml:allItemsIdenticalBeginWithSameAsGeneralSelected>
+                                <yseop-yml:allItemsIdenticalBeginWithSpecificText/>
+                                <yseop-yml:allItemsIdenticalEndWithSameAsGeneralSelected>true</yseop-yml:allItemsIdenticalEndWithSameAsGeneralSelected>
+                                <yseop-yml:allItemsIdenticalEndWithSpecificText/>
+                                <yseop-yml:noItemGenerateNothingSelected>true</yseop-yml:noItemGenerateNothingSelected>
+                                <yseop-yml:noItemSentenceText/>
+                                <yseop-yml:inGeneralBulletBeginSameAsListSelected>true</yseop-yml:inGeneralBulletBeginSameAsListSelected>
+                                <yseop-yml:inGeneralBulletBeginSpecificSelected>false</yseop-yml:inGeneralBulletBeginSpecificSelected>
+                                <yseop-yml:inGeneralBulletBeginSpecificText/>
+                                <yseop-yml:inGeneralBulletEndSameAsListSelected>true</yseop-yml:inGeneralBulletEndSameAsListSelected>
+                                <yseop-yml:inGeneralBulletEndSpecificSelected>false</yseop-yml:inGeneralBulletEndSpecificSelected>
+                                <yseop-yml:inGeneralBulletEndSpecificText/>
+                            </yseop-yml:beginEndWithOptions>
+                            <yseop-yml:limitSizeOptions>
+                                <yseop-yml:noLimitSelected>true</yseop-yml:noLimitSelected>
+                                <yseop-yml:onlyFirstElementsSelected>true</yseop-yml:onlyFirstElementsSelected>
+                                <yseop-yml:onlyFirstElementsNumberValue>3</yseop-yml:onlyFirstElementsNumberValue>
+                                <yseop-yml:sentenceSizeTypeValue>30</yseop-yml:sentenceSizeTypeValue>
+                                <yseop-yml:limitByTypeValue>words</yseop-yml:limitByTypeValue>
+                                <yseop-yml:limitByTypeNumber>0</yseop-yml:limitByTypeNumber>
+                                <yseop-yml:sentenceEndEtcSelected>true</yseop-yml:sentenceEndEtcSelected>
+                                <yseop-yml:sentenceEndOtherText/>
+                                <yseop-yml:hasWordCharOptions>true</yseop-yml:hasWordCharOptions>
+                            </yseop-yml:limitSizeOptions>
+                        </yseop-yml:singleSentenceLinkAssembly>
+                        <yseop-yml:sentencesGenerationAndAssembly name="86M0" language="en">
+                            <yseop-yml:chooseSeparatorOptions>
+                                <yseop-yml:beforeEachItemCommaSelected>true</yseop-yml:beforeEachItemCommaSelected>
+                                <yseop-yml:beforeEachItemOtherText/>
+                                <yseop-yml:beforeLastItemAndSelected>false</yseop-yml:beforeLastItemAndSelected>
+                                <yseop-yml:beforeLastItemOtherSelected>true</yseop-yml:beforeLastItemOtherSelected>
+                                <yseop-yml:beforeLastItemOtherText>, and</yseop-yml:beforeLastItemOtherText>
+                                <yseop-yml:hasSentenceParametersSection>true</yseop-yml:hasSentenceParametersSection>
+                                <yseop-yml:maxCountOfItemsForEachSentenceValue>3</yseop-yml:maxCountOfItemsForEachSentenceValue>
+                                <yseop-yml:endOfSentenceDotSelected>true</yseop-yml:endOfSentenceDotSelected>
+                                <yseop-yml:endOfSentenceQuestionMarkSelected>false</yseop-yml:endOfSentenceQuestionMarkSelected>
+                                <yseop-yml:endOfSentenceOtherSelected>false</yseop-yml:endOfSentenceOtherSelected>
+                                <yseop-yml:endOfSentenceOtherText/>
+                                <yseop-yml:switchThresholdValue>4</yseop-yml:switchThresholdValue>
+                            </yseop-yml:chooseSeparatorOptions>
+                            <yseop-yml:sentenceOrParagraphGeneralOptions>
+                                <yseop-yml:eachItemIsAParagraph>false</yseop-yml:eachItemIsAParagraph>
+                            </yseop-yml:sentenceOrParagraphGeneralOptions>
+                            <yseop-yml:linkWordsBetweenItemsOptions>
+                                <yseop-yml:doNotAddLinkWords>true</yseop-yml:doNotAddLinkWords>
+                                <yseop-yml:generalLinkWords xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" yseop-yml:size="5">
+                                    <yseop-yml:entry yseop-yml:key="LANG_DE" xsi:type="xsd:string">Zusätzlich,
+Außerdem,
+Andererseits,
+</yseop-yml:entry>
+                                    <yseop-yml:entry yseop-yml:key="LANG_JA" xsi:type="xsd:string">それに、
+実は、
+そういえば、
+その上に、
+結局、
+一方は
+他方は
+</yseop-yml:entry>
+                                    <yseop-yml:entry yseop-yml:key="LANG_EN" xsi:type="xsd:string">Also,
+Furthermore,
+In addition,
+</yseop-yml:entry>
+                                    <yseop-yml:entry yseop-yml:key="LANG_FR" xsi:type="xsd:string">Par ailleurs,
+De plus,
+En outre,
+D'autre part,
+Également,
+</yseop-yml:entry>
+                                    <yseop-yml:entry yseop-yml:key="LANG_ES" xsi:type="xsd:string">Además,
+Luego,
+Después,
+Por otra parte,
+A continuación,
+</yseop-yml:entry>
+                                </yseop-yml:generalLinkWords>
+                                <yseop-yml:generalLinkWordsRandomStrategy>true</yseop-yml:generalLinkWordsRandomStrategy>
+                                <yseop-yml:generalLinkWordsLinearStrategy>false</yseop-yml:generalLinkWordsLinearStrategy>
+                                <yseop-yml:nextToLastLinkWord xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" yseop-yml:size="5">
+                                    <yseop-yml:entry yseop-yml:key="LANG_DE" xsi:type="xsd:string">Abschließend,</yseop-yml:entry>
+                                    <yseop-yml:entry yseop-yml:key="LANG_JA" xsi:type="xsd:string"></yseop-yml:entry>
+                                    <yseop-yml:entry yseop-yml:key="LANG_EN" xsi:type="xsd:string"></yseop-yml:entry>
+                                    <yseop-yml:entry yseop-yml:key="LANG_FR" xsi:type="xsd:string">Enfin,</yseop-yml:entry>
+                                    <yseop-yml:entry yseop-yml:key="LANG_ES" xsi:type="xsd:string"></yseop-yml:entry>
+                                </yseop-yml:nextToLastLinkWord>
+                                <yseop-yml:lastLinkWord xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" yseop-yml:size="5">
+                                    <yseop-yml:entry yseop-yml:key="LANG_DE" xsi:type="xsd:string">Schließlich,</yseop-yml:entry>
+                                    <yseop-yml:entry yseop-yml:key="LANG_JA" xsi:type="xsd:string">つまり、</yseop-yml:entry>
+                                    <yseop-yml:entry yseop-yml:key="LANG_EN" xsi:type="xsd:string"></yseop-yml:entry>
+                                    <yseop-yml:entry yseop-yml:key="LANG_FR" xsi:type="xsd:string">Pour finir,</yseop-yml:entry>
+                                    <yseop-yml:entry yseop-yml:key="LANG_ES" xsi:type="xsd:string">Por fin,</yseop-yml:entry>
+                                </yseop-yml:lastLinkWord>
+                            </yseop-yml:linkWordsBetweenItemsOptions>
+                            <yseop-yml:beginEndWithOptions>
+                                <yseop-yml:generalBeginWithText>
+\if(hashMapByBrand1.getKeys().get(1) == _marketShareItem.marketShareItemRank)
+    as well as
+\else
+    .
+    \value(getGeneralData().insurerRequested.replace("s.a.", "", _CASE_INSENSITIVE))
+    ranks
+\endIf
+</yseop-yml:generalBeginWithText>
+                                <yseop-yml:generalEndWithText/>
+                                <yseop-yml:onlyOneItemBeginWithSameAsGeneralSelected>true</yseop-yml:onlyOneItemBeginWithSameAsGeneralSelected>
+                                <yseop-yml:onlyOneItemBeginWithSpecificText/>
+                                <yseop-yml:onlyOneItemEndWithSameAsGeneralSelected>true</yseop-yml:onlyOneItemEndWithSameAsGeneralSelected>
+                                <yseop-yml:onlyOneItemEndWithSpecificText/>
+                                <yseop-yml:allItemsIdenticalBeginWithSameAsGeneralSelected>true</yseop-yml:allItemsIdenticalBeginWithSameAsGeneralSelected>
+                                <yseop-yml:allItemsIdenticalBeginWithSpecificText/>
+                                <yseop-yml:allItemsIdenticalEndWithSameAsGeneralSelected>true</yseop-yml:allItemsIdenticalEndWithSameAsGeneralSelected>
+                                <yseop-yml:allItemsIdenticalEndWithSpecificText/>
+                                <yseop-yml:noItemGenerateNothingSelected>true</yseop-yml:noItemGenerateNothingSelected>
+                                <yseop-yml:noItemSentenceText/>
+                                <yseop-yml:inGeneralBulletBeginSameAsListSelected>true</yseop-yml:inGeneralBulletBeginSameAsListSelected>
+                                <yseop-yml:inGeneralBulletBeginSpecificSelected>false</yseop-yml:inGeneralBulletBeginSpecificSelected>
+                                <yseop-yml:inGeneralBulletBeginSpecificText/>
+                                <yseop-yml:inGeneralBulletEndSameAsListSelected>true</yseop-yml:inGeneralBulletEndSameAsListSelected>
+                                <yseop-yml:inGeneralBulletEndSpecificSelected>false</yseop-yml:inGeneralBulletEndSpecificSelected>
+                                <yseop-yml:inGeneralBulletEndSpecificText/>
+                            </yseop-yml:beginEndWithOptions>
+                            <yseop-yml:limitSizeOptions>
+                                <yseop-yml:noLimitSelected>true</yseop-yml:noLimitSelected>
+                                <yseop-yml:onlyFirstElementsSelected>true</yseop-yml:onlyFirstElementsSelected>
+                                <yseop-yml:onlyFirstElementsNumberValue>4</yseop-yml:onlyFirstElementsNumberValue>
+                                <yseop-yml:sentenceSizeTypeValue>30</yseop-yml:sentenceSizeTypeValue>
+                                <yseop-yml:limitByTypeValue>words</yseop-yml:limitByTypeValue>
+                                <yseop-yml:limitByTypeNumber>0</yseop-yml:limitByTypeNumber>
+                                <yseop-yml:sentenceEndOtherSelected>true</yseop-yml:sentenceEndOtherSelected>
+                                <yseop-yml:sentenceEndOtherText/>
+                                <yseop-yml:hasWordCharOptions>true</yseop-yml:hasWordCharOptions>
+                            </yseop-yml:limitSizeOptions>
+                        </yseop-yml:sentencesGenerationAndAssembly>
+                        <yseop-yml:singleSentenceLinkAssembly name="5XSG" language="en">
+                            <yseop-yml:chooseSeparatorOptions>
+                                <yseop-yml:beforeEachItemCommaSelected>true</yseop-yml:beforeEachItemCommaSelected>
+                                <yseop-yml:beforeEachItemOtherText/>
+                                <yseop-yml:beforeLastItemAndSelected>true</yseop-yml:beforeLastItemAndSelected>
+                                <yseop-yml:beforeLastItemOtherText>, and</yseop-yml:beforeLastItemOtherText>
+                                <yseop-yml:maxCountOfItemsForEachSentenceValue>3</yseop-yml:maxCountOfItemsForEachSentenceValue>
+                                <yseop-yml:endOfSentenceDotSelected>true</yseop-yml:endOfSentenceDotSelected>
+                                <yseop-yml:endOfSentenceQuestionMarkSelected>false</yseop-yml:endOfSentenceQuestionMarkSelected>
+                                <yseop-yml:endOfSentenceOtherSelected>false</yseop-yml:endOfSentenceOtherSelected>
+                                <yseop-yml:switchThresholdValue>4</yseop-yml:switchThresholdValue>
+                            </yseop-yml:chooseSeparatorOptions>
+                            <yseop-yml:beginEndWithOptions>
+                                <yseop-yml:generalBeginWithText>The company reported
+
+\if(_netPremiumSegments.netPremiumSegmentPercent > 0.1 &amp;&amp; _netPremiumSegments.netPremiumSegmentPercent &lt;= 1 &amp;&amp; _netPremiumSegments.netPremiumSegmentName != "Grand Total")
+    \value(_netPremiumSegments.netPremiumSegmentPercent, UNIT_PERCENT)
+    of
+
+    \beginStyle(lowerCaseSegment)
+        \value(getGeneralData().synonymRangeFour)
+
+    \endStyle
+
+    in the
+
+    \beginStyle(lowerCaseSegment)
+        \value(_netPremiumSegments.netPremiumSegmentEnglishName)
+
+    \endStyle
+
+    segment
+\endIf
+
+, as well as</yseop-yml:generalBeginWithText>
+                                <yseop-yml:generalEndWithText>.</yseop-yml:generalEndWithText>
+                                <yseop-yml:onlyOneItemBeginWithSameAsGeneralSelected>true</yseop-yml:onlyOneItemBeginWithSameAsGeneralSelected>
+                                <yseop-yml:onlyOneItemBeginWithSpecificText/>
+                                <yseop-yml:onlyOneItemEndWithSameAsGeneralSelected>true</yseop-yml:onlyOneItemEndWithSameAsGeneralSelected>
+                                <yseop-yml:onlyOneItemEndWithSpecificText/>
+                                <yseop-yml:allItemsIdenticalBeginWithSameAsGeneralSelected>true</yseop-yml:allItemsIdenticalBeginWithSameAsGeneralSelected>
+                                <yseop-yml:allItemsIdenticalBeginWithSpecificText/>
+                                <yseop-yml:allItemsIdenticalEndWithSameAsGeneralSelected>true</yseop-yml:allItemsIdenticalEndWithSameAsGeneralSelected>
+                                <yseop-yml:allItemsIdenticalEndWithSpecificText/>
+                                <yseop-yml:noItemGenerateNothingSelected>true</yseop-yml:noItemGenerateNothingSelected>
+                                <yseop-yml:noItemSentenceText/>
+                                <yseop-yml:inGeneralBulletBeginSameAsListSelected>true</yseop-yml:inGeneralBulletBeginSameAsListSelected>
+                                <yseop-yml:inGeneralBulletBeginSpecificSelected>false</yseop-yml:inGeneralBulletBeginSpecificSelected>
+                                <yseop-yml:inGeneralBulletBeginSpecificText/>
+                                <yseop-yml:inGeneralBulletEndSameAsListSelected>true</yseop-yml:inGeneralBulletEndSameAsListSelected>
+                                <yseop-yml:inGeneralBulletEndSpecificSelected>false</yseop-yml:inGeneralBulletEndSpecificSelected>
+                                <yseop-yml:inGeneralBulletEndSpecificText/>
+                            </yseop-yml:beginEndWithOptions>
+                            <yseop-yml:limitSizeOptions>
+                                <yseop-yml:noLimitSelected>true</yseop-yml:noLimitSelected>
+                                <yseop-yml:onlyFirstElementsSelected>true</yseop-yml:onlyFirstElementsSelected>
+                                <yseop-yml:onlyFirstElementsNumberValue>3</yseop-yml:onlyFirstElementsNumberValue>
+                                <yseop-yml:sentenceSizeTypeValue>30</yseop-yml:sentenceSizeTypeValue>
+                                <yseop-yml:limitByTypeValue>words</yseop-yml:limitByTypeValue>
+                                <yseop-yml:limitByTypeNumber>0</yseop-yml:limitByTypeNumber>
+                                <yseop-yml:sentenceEndEtcSelected>true</yseop-yml:sentenceEndEtcSelected>
+                                <yseop-yml:sentenceEndOtherText/>
+                                <yseop-yml:hasWordCharOptions>true</yseop-yml:hasWordCharOptions>
+                            </yseop-yml:limitSizeOptions>
+                        </yseop-yml:singleSentenceLinkAssembly>
+                        <yseop-yml:singleSentenceLinkAssembly name="en" language="en">
+                            <yseop-yml:chooseSeparatorOptions>
+                                <yseop-yml:beforeEachItemCommaSelected>true</yseop-yml:beforeEachItemCommaSelected>
+                                <yseop-yml:beforeEachItemOtherText/>
+                                <yseop-yml:beforeLastItemAndSelected>true</yseop-yml:beforeLastItemAndSelected>
+                                <yseop-yml:beforeLastItemOtherText/>
+                                <yseop-yml:maxCountOfItemsForEachSentenceValue>3</yseop-yml:maxCountOfItemsForEachSentenceValue>
+                                <yseop-yml:endOfSentenceDotSelected>true</yseop-yml:endOfSentenceDotSelected>
+                                <yseop-yml:endOfSentenceQuestionMarkSelected>false</yseop-yml:endOfSentenceQuestionMarkSelected>
+                                <yseop-yml:endOfSentenceOtherSelected>false</yseop-yml:endOfSentenceOtherSelected>
+                                <yseop-yml:switchThresholdValue>4</yseop-yml:switchThresholdValue>
+                            </yseop-yml:chooseSeparatorOptions>
+                            <yseop-yml:beginEndWithOptions>
+                                <yseop-yml:generalBeginWithText/>
+                                <yseop-yml:generalEndWithText/>
+                                <yseop-yml:onlyOneItemBeginWithSameAsGeneralSelected>true</yseop-yml:onlyOneItemBeginWithSameAsGeneralSelected>
+                                <yseop-yml:onlyOneItemBeginWithSpecificText/>
+                                <yseop-yml:onlyOneItemEndWithSameAsGeneralSelected>true</yseop-yml:onlyOneItemEndWithSameAsGeneralSelected>
+                                <yseop-yml:onlyOneItemEndWithSpecificText/>
+                                <yseop-yml:allItemsIdenticalBeginWithSameAsGeneralSelected>true</yseop-yml:allItemsIdenticalBeginWithSameAsGeneralSelected>
+                                <yseop-yml:allItemsIdenticalBeginWithSpecificText/>
+                                <yseop-yml:allItemsIdenticalEndWithSameAsGeneralSelected>true</yseop-yml:allItemsIdenticalEndWithSameAsGeneralSelected>
+                                <yseop-yml:allItemsIdenticalEndWithSpecificText/>
+                                <yseop-yml:noItemGenerateNothingSelected>true</yseop-yml:noItemGenerateNothingSelected>
+                                <yseop-yml:noItemSentenceText/>
+                                <yseop-yml:inGeneralBulletBeginSameAsListSelected>true</yseop-yml:inGeneralBulletBeginSameAsListSelected>
+                                <yseop-yml:inGeneralBulletBeginSpecificSelected>false</yseop-yml:inGeneralBulletBeginSpecificSelected>
+                                <yseop-yml:inGeneralBulletBeginSpecificText/>
+                                <yseop-yml:inGeneralBulletEndSameAsListSelected>true</yseop-yml:inGeneralBulletEndSameAsListSelected>
+                                <yseop-yml:inGeneralBulletEndSpecificSelected>false</yseop-yml:inGeneralBulletEndSpecificSelected>
+                                <yseop-yml:inGeneralBulletEndSpecificText/>
+                            </yseop-yml:beginEndWithOptions>
+                            <yseop-yml:limitSizeOptions>
+                                <yseop-yml:noLimitSelected>true</yseop-yml:noLimitSelected>
+                                <yseop-yml:onlyFirstElementsSelected>true</yseop-yml:onlyFirstElementsSelected>
+                                <yseop-yml:onlyFirstElementsNumberValue>3</yseop-yml:onlyFirstElementsNumberValue>
+                                <yseop-yml:sentenceSizeTypeValue>30</yseop-yml:sentenceSizeTypeValue>
+                                <yseop-yml:limitByTypeValue>words</yseop-yml:limitByTypeValue>
+                                <yseop-yml:limitByTypeNumber>0</yseop-yml:limitByTypeNumber>
+                                <yseop-yml:sentenceEndEtcSelected>true</yseop-yml:sentenceEndEtcSelected>
+                                <yseop-yml:sentenceEndOtherText/>
+                                <yseop-yml:hasWordCharOptions>true</yseop-yml:hasWordCharOptions>
+                            </yseop-yml:limitSizeOptions>
+                        </yseop-yml:singleSentenceLinkAssembly>
+                    </yseop-yml:inline-assemblies>
+                    <yseop-yml:inline-dslFunctionCalls/>
+                </yseop-yml:granuleContent>
+            </yseop-yml:granuleUnilingueContent>
+            <yseop-yml:granuleUnilingueContent locale="fr">
+                <yseop-yml:granuleContent>
+                    <yseop-yml:text>
+\foreach(_netPremium, NetPremium)
+
+    \if(_netPremium.countryNameNetPremium.stringCompare(getGeneralData().insurerRequested, _CASE_INSENSITIVE) == true)
+
+        \if(_netPremium.countryNetPremiumListGreaterThan10.size() == 2)
+
+            \foreach(_netPremiumSegments, _netPremium.countryNetPremiumList, #153L#)
+
+                \if(_netPremiumSegments.netPremiumSegmentPercent > 0.1 &amp;&amp; _netPremiumSegments.netPremiumSegmentPercent &lt; 1)
+                    el segmento de
+
+                    \beginStyle(lowerCaseSegment)
+                        \value(_netPremiumSegments.netPremiumSegmentName)
+
+                    \endStyle
+
+                    representa
+                    \value(_netPremiumSegments.netPremiumSegmentPercent * 100)
+\+
+                    % de la
+
+                    \beginStyle(lowerCaseSegment)
+                        \value(getGeneralData().synonymRangeFour)
+
+                    \endStyle
+
+                    /*net premium */
+                \endIf
+
+
+            \endForeach
+
+        \else
+
+            \foreach(_netPremiumSegments, _netPremium.countryNetPremiumListGreaterThan10, #1VS6#)
+
+                \if(_netPremiumSegments.netPremiumSegmentPercent > 0.1 &amp;&amp; _netPremiumSegments.netPremiumSegmentPercent &lt; 1 &amp;&amp; (_netPremiumSegments.netPremiumSegmentPercent != _netPremium.countryNetPremiumListGreaterThan10.get(1).netPremiumSegmentPercent))
+                    , mientras que el segmento de
+
+                    \beginStyle(lowerCaseSegment)
+                        \value(_netPremiumSegments.netPremiumSegmentName)
+
+                    \endStyle
+
+                    representa
+                    \value(_netPremiumSegments.netPremiumSegmentPercent * 100)
+\+
+                    % de la
+
+                    \beginStyle(lowerCaseSegment)
+                        \value(getGeneralData().synonymRangeFour)
+
+                    \endStyle
+
+                    /*net premium */
+                \endIf
+
+
+            \endForeach
+
+        \endIf
+
+    \endIf
+
+
+\endForeach
+</yseop-yml:text>
+                    <yseop-yml:inline-assemblies>
+                        <yseop-yml:singleSentenceLinkAssembly name="153L" language="fr">
+                            <yseop-yml:chooseSeparatorOptions>
+                                <yseop-yml:beforeEachItemCommaSelected>true</yseop-yml:beforeEachItemCommaSelected>
+                                <yseop-yml:beforeEachItemOtherText/>
+                                <yseop-yml:beforeLastItemAndSelected>false</yseop-yml:beforeLastItemAndSelected>
+                                <yseop-yml:beforeLastItemOtherSelected>true</yseop-yml:beforeLastItemOtherSelected>
+                                <yseop-yml:beforeLastItemOtherText>, mientras que</yseop-yml:beforeLastItemOtherText>
+                                <yseop-yml:maxCountOfItemsForEachSentenceValue>3</yseop-yml:maxCountOfItemsForEachSentenceValue>
+                                <yseop-yml:endOfSentenceDotSelected>true</yseop-yml:endOfSentenceDotSelected>
+                                <yseop-yml:endOfSentenceQuestionMarkSelected>false</yseop-yml:endOfSentenceQuestionMarkSelected>
+                                <yseop-yml:endOfSentenceOtherSelected>false</yseop-yml:endOfSentenceOtherSelected>
+                                <yseop-yml:switchThresholdValue>4</yseop-yml:switchThresholdValue>
+                            </yseop-yml:chooseSeparatorOptions>
+                            <yseop-yml:beginEndWithOptions>
+                                <yseop-yml:generalBeginWithText/>
+                                <yseop-yml:generalEndWithText>.</yseop-yml:generalEndWithText>
+                                <yseop-yml:onlyOneItemBeginWithSameAsGeneralSelected>true</yseop-yml:onlyOneItemBeginWithSameAsGeneralSelected>
+                                <yseop-yml:onlyOneItemBeginWithSpecificText/>
+                                <yseop-yml:onlyOneItemEndWithSameAsGeneralSelected>true</yseop-yml:onlyOneItemEndWithSameAsGeneralSelected>
+                                <yseop-yml:onlyOneItemEndWithSpecificText/>
+                                <yseop-yml:allItemsIdenticalBeginWithSameAsGeneralSelected>true</yseop-yml:allItemsIdenticalBeginWithSameAsGeneralSelected>
+                                <yseop-yml:allItemsIdenticalBeginWithSpecificText/>
+                                <yseop-yml:allItemsIdenticalEndWithSameAsGeneralSelected>true</yseop-yml:allItemsIdenticalEndWithSameAsGeneralSelected>
+                                <yseop-yml:allItemsIdenticalEndWithSpecificText/>
+                                <yseop-yml:noItemGenerateNothingSelected>true</yseop-yml:noItemGenerateNothingSelected>
+                                <yseop-yml:noItemSentenceText/>
+                                <yseop-yml:inGeneralBulletBeginSameAsListSelected>true</yseop-yml:inGeneralBulletBeginSameAsListSelected>
+                                <yseop-yml:inGeneralBulletBeginSpecificSelected>false</yseop-yml:inGeneralBulletBeginSpecificSelected>
+                                <yseop-yml:inGeneralBulletBeginSpecificText/>
+                                <yseop-yml:inGeneralBulletEndSameAsListSelected>true</yseop-yml:inGeneralBulletEndSameAsListSelected>
+                                <yseop-yml:inGeneralBulletEndSpecificSelected>false</yseop-yml:inGeneralBulletEndSpecificSelected>
+                                <yseop-yml:inGeneralBulletEndSpecificText/>
+                            </yseop-yml:beginEndWithOptions>
+                            <yseop-yml:limitSizeOptions>
+                                <yseop-yml:noLimitSelected>true</yseop-yml:noLimitSelected>
+                                <yseop-yml:onlyFirstElementsSelected>true</yseop-yml:onlyFirstElementsSelected>
+                                <yseop-yml:onlyFirstElementsNumberValue>3</yseop-yml:onlyFirstElementsNumberValue>
+                                <yseop-yml:sentenceSizeTypeValue>30</yseop-yml:sentenceSizeTypeValue>
+                                <yseop-yml:limitByTypeValue>words</yseop-yml:limitByTypeValue>
+                                <yseop-yml:limitByTypeNumber>0</yseop-yml:limitByTypeNumber>
+                                <yseop-yml:sentenceEndEtcSelected>true</yseop-yml:sentenceEndEtcSelected>
+                                <yseop-yml:sentenceEndOtherText/>
+                                <yseop-yml:hasWordCharOptions>true</yseop-yml:hasWordCharOptions>
+                            </yseop-yml:limitSizeOptions>
+                        </yseop-yml:singleSentenceLinkAssembly>
+                        <yseop-yml:singleSentenceLinkAssembly name="1VS6" language="fr">
+                            <yseop-yml:chooseSeparatorOptions>
+                                <yseop-yml:beforeEachItemCommaSelected>true</yseop-yml:beforeEachItemCommaSelected>
+                                <yseop-yml:beforeEachItemOtherText/>
+                                <yseop-yml:beforeLastItemAndSelected>true</yseop-yml:beforeLastItemAndSelected>
+                                <yseop-yml:beforeLastItemOtherText/>
+                                <yseop-yml:maxCountOfItemsForEachSentenceValue>3</yseop-yml:maxCountOfItemsForEachSentenceValue>
+                                <yseop-yml:endOfSentenceDotSelected>true</yseop-yml:endOfSentenceDotSelected>
+                                <yseop-yml:endOfSentenceQuestionMarkSelected>false</yseop-yml:endOfSentenceQuestionMarkSelected>
+                                <yseop-yml:endOfSentenceOtherSelected>false</yseop-yml:endOfSentenceOtherSelected>
+                                <yseop-yml:switchThresholdValue>4</yseop-yml:switchThresholdValue>
+                            </yseop-yml:chooseSeparatorOptions>
+                            <yseop-yml:beginEndWithOptions>
+                                <yseop-yml:generalBeginWithText>
+\if(_netPremiumSegments.netPremiumSegmentPercent > 0.1 &amp;&amp; _netPremiumSegments.netPremiumSegmentPercent &lt; 1)
+    el segmento de
+
+    \beginStyle(lowerCaseSegment)
+        \value(_netPremiumSegments.netPremiumSegmentName)
+
+    \endStyle
+
+    representa
+    \value(_netPremiumSegments.netPremiumSegmentPercent * 100)
+\+
+    % de la
+
+    \beginStyle(lowerCaseSegment)
+        \value(getGeneralData().synonymRangeFour)
+
+    \endStyle
+
+    /*net premium */
+\endIf
+</yseop-yml:generalBeginWithText>
+                                <yseop-yml:generalEndWithText>.</yseop-yml:generalEndWithText>
+                                <yseop-yml:onlyOneItemBeginWithSameAsGeneralSelected>true</yseop-yml:onlyOneItemBeginWithSameAsGeneralSelected>
+                                <yseop-yml:onlyOneItemBeginWithSpecificText/>
+                                <yseop-yml:onlyOneItemEndWithSameAsGeneralSelected>true</yseop-yml:onlyOneItemEndWithSameAsGeneralSelected>
+                                <yseop-yml:onlyOneItemEndWithSpecificText/>
+                                <yseop-yml:allItemsIdenticalBeginWithSameAsGeneralSelected>true</yseop-yml:allItemsIdenticalBeginWithSameAsGeneralSelected>
+                                <yseop-yml:allItemsIdenticalBeginWithSpecificText/>
+                                <yseop-yml:allItemsIdenticalEndWithSameAsGeneralSelected>true</yseop-yml:allItemsIdenticalEndWithSameAsGeneralSelected>
+                                <yseop-yml:allItemsIdenticalEndWithSpecificText/>
+                                <yseop-yml:noItemGenerateNothingSelected>true</yseop-yml:noItemGenerateNothingSelected>
+                                <yseop-yml:noItemSentenceText/>
+                                <yseop-yml:inGeneralBulletBeginSameAsListSelected>true</yseop-yml:inGeneralBulletBeginSameAsListSelected>
+                                <yseop-yml:inGeneralBulletBeginSpecificSelected>false</yseop-yml:inGeneralBulletBeginSpecificSelected>
+                                <yseop-yml:inGeneralBulletBeginSpecificText/>
+                                <yseop-yml:inGeneralBulletEndSameAsListSelected>true</yseop-yml:inGeneralBulletEndSameAsListSelected>
+                                <yseop-yml:inGeneralBulletEndSpecificSelected>false</yseop-yml:inGeneralBulletEndSpecificSelected>
+                                <yseop-yml:inGeneralBulletEndSpecificText/>
+                            </yseop-yml:beginEndWithOptions>
+                            <yseop-yml:limitSizeOptions>
+                                <yseop-yml:noLimitSelected>true</yseop-yml:noLimitSelected>
+                                <yseop-yml:onlyFirstElementsSelected>true</yseop-yml:onlyFirstElementsSelected>
+                                <yseop-yml:onlyFirstElementsNumberValue>3</yseop-yml:onlyFirstElementsNumberValue>
+                                <yseop-yml:sentenceSizeTypeValue>30</yseop-yml:sentenceSizeTypeValue>
+                                <yseop-yml:limitByTypeValue>words</yseop-yml:limitByTypeValue>
+                                <yseop-yml:limitByTypeNumber>0</yseop-yml:limitByTypeNumber>
+                                <yseop-yml:sentenceEndEtcSelected>true</yseop-yml:sentenceEndEtcSelected>
+                                <yseop-yml:sentenceEndOtherText/>
+                                <yseop-yml:hasWordCharOptions>true</yseop-yml:hasWordCharOptions>
+                            </yseop-yml:limitSizeOptions>
+                        </yseop-yml:singleSentenceLinkAssembly>
+                    </yseop-yml:inline-assemblies>
+                    <yseop-yml:inline-dslFunctionCalls/>
+                </yseop-yml:granuleContent>
+            </yseop-yml:granuleUnilingueContent>
+            <yseop-yml:granuleUnilingueContent locale="es">
+                <yseop-yml:granuleContent>
+                    <yseop-yml:text>
+\if(getGeneralData().insurerRequested != null)
+
+    \foreach(_staticTextItem, StaticTextItem)
+
+        \if(getGeneralData().insurerRequested.stringCompare(_staticTextItem.staticTextCountry, _CASE_INSENSITIVE) == true)
+
+            \if(_staticTextItem.startP1 != null)
+                \value(_staticTextItem.startP1)
+            \endIf
+
+        \endIf
+
+
+    \endForeach
+
+
+    \if(getGeneralData().marketPositionofInsurerePercent >= getGeneralData().marketShareOfInsurerePercent)
+
+        \foreach(_marketPositionItem, MarketPositionItem)
+
+            \if(_marketPositionItem.marketPositionName.stringCompare(getGeneralData().insurerRequested, _CASE_INSENSITIVE) == true)
+                \value(getGeneralData().insurerRequested.replace("s.a.", "", _CASE_INSENSITIVE))
+                esta posicionada en el
+
+                \beginStyle(styleOrdinal)
+                    \value(_marketPositionItem.marketPositionRank)
+
+                \endStyle
+
+                lugar en el
+                \value(getGeneralData().totalMarket)
+                con un porcentaje de participación de mercado aproximado del
+                \value(_marketPositionItem.marketPositionPercentDifference * 100)
+\+
+                %, sobre la base de
+
+                \beginStyle(lowerCaseSegment)
+                    \value(getGeneralData().synonymRangeOne)
+
+                \endStyle
+
+                /*gross premiums */
+                al
+                \date(getGeneralData().pointInTime, _DATE_DD, _DATE_MONTH, _DATE_YYYY)
+                .
+            \endIf
+
+
+        \endForeach
+
+
+        \foreach(_marketShareItem, MarketShareItem)
+
+            \if(_marketShareItem.marketShareName.stringCompare(getGeneralData().insurerRequested, _CASE_INSENSITIVE) == true)
+                \value(getGeneralData().insurerRequested.replace("s.a.", "", _CASE_INSENSITIVE))
+                se encuentra posicionada en el
+
+                \beginStyle(styleOrdinal)
+                    \value(_marketShareItem.marketShareItemRank)
+
+                \endStyle
+
+                /*
+\switch(_marketShareItem.marketShareItemRank)
+
+    \case(1)
+        primera
+
+    \case(2)
+        segunda
+
+    \case(3)
+        tercera
+
+    \case(4)
+        cuarta
+
+    \case(5)
+        quinta
+
+    \case(6)
+        sexta
+
+    \case(7)
+        séptima
+
+    \case(8)
+        octava
+
+    \case(9)
+        novena
+
+    \case(10)
+        décima
+\default
+
+\endSwitch
+ */
+                lugar en el
+                \value(getGeneralData().subMarket)
+                con un porcentaje de
+
+                \beginStyle(lowerCaseSegment)
+                    \value(getGeneralData().synonymRangeTwo)
+
+                \endStyle
+
+                /*market share */
+                del
+                \value(_marketShareItem.marketSharePercentDifference * 100)
+\+
+                %, sobre la base de
+
+                \beginStyle(lowerCaseSegment)
+                    \value(getGeneralData().synonymRangeOne)
+
+                \endStyle
+
+                /*gross premiums */
+                al
+                \date(getGeneralData().pointInTime, _DATE_DD, _DATE_MONTH, _DATE_YYYY)
+                .
+
+                \foreach(k,hashMapByBrand1.getKeys(), #3KSO#)
+
+                    \if(hashMapByBrand1.getKeys().get(4) != null &amp;&amp; k == hashMapByBrand1.getKeys().get(4))
+
+                        \beginSynonym
+                            \choice 
+                                \value(getGeneralData().insurerRequested.replace("s.a.", "", _CASE_INSENSITIVE))
+                            \choice 
+                                Además
+                        \endSynonym
+
+                        la compañía esta posicionada
+                    \endIf
+
+
+                    \if(hashMapByBrand1.getKeys().get(7) != null &amp;&amp; k == hashMapByBrand1.getKeys().get(7))
+                        En adición,
+
+                        \beginSynonym
+                            \choice 
+                                \value(getGeneralData().insurerRequested.replace("s.a.", "", _CASE_INSENSITIVE))
+                            \choice 
+                                Además
+                        \endSynonym
+
+                        la compañía esta posicionada
+                    \endIf
+
+\switch(k)
+   \case(1) primera
+   \case(2) segunda
+   \case(3) tercera
+   \case(4) cuarta
+   \case(5) quinta
+   \case(6) sexta
+   \case(7) séptima
+   \case(8) octava
+   \case(9) novena
+   \case(10) décima
+\endSwitch
+                    en el segmento de
+
+                    \foreach(v,hashMapByBrand1.get(k), #RFE7#)
+
+                        \beginStyle(lowerCaseSegment)
+                            \value(v.businessSegmentName)
+
+                        \endStyle
+
+
+                        \if(k == 1)
+                            (con un porcentaje de participacion del
+                            \value(v.businessSegmentPercent * 100)
+\+
+                            % )
+                        \else
+
+                            \if(k == 2)
+                                (con un
+                                \value(v.businessSegmentPercent * 100)
+\+
+                                % )
+                            \else
+                                (
+                                \value(v.businessSegmentPercent * 100)
+\+
+                                % )
+                            \endIf
+
+                        \endIf
+
+
+                    \endForeach
+
+
+                \endForeach
+
+                .
+            \endIf
+
+
+        \endForeach
+
+    \else
+
+        \foreach(_marketShareItem, MarketShareItem)
+
+            \if(_marketShareItem.marketShareName.stringCompare(getGeneralData().insurerRequested, _CASE_INSENSITIVE) == true)
+                \value(getGeneralData().insurerRequested.replace("s.a.", "", _CASE_INSENSITIVE))
+                se encuentra posicionada en el
+
+                \beginStyle(styleOrdinal)
+                    \value(_marketShareItem.marketShareItemRank)
+
+                \endStyle
+
+                lugar en el mercado de
+                \value(getGeneralData().subMarket)
+                con un porcentaje de
+
+                \beginStyle(lowerCaseSegment)
+                    \value(getGeneralData().synonymRangeTwo)
+
+                \endStyle
+
+                /*market share */
+                del
+                \value(_marketShareItem.marketSharePercentDifference * 100)
+\+
+                %, sobre la base de
+
+                \beginStyle(lowerCaseSegment)
+                    \value(getGeneralData().synonymRangeOne)
+
+                \endStyle
+
+                /*gross premiums */
+                al
+                \date(getGeneralData().pointInTime, _DATE_DD, _DATE_MONTH, _DATE_YYYY)
+                .
+
+                \foreach(k,hashMapByBrand1.getKeys(), #OFGF#)
+
+                    \if(hashMapByBrand1.getKeys().get(4) != null &amp;&amp; k == hashMapByBrand1.getKeys().get(4))
+
+                        \beginSynonym
+                            \choice 
+                                \value(getGeneralData().insurerRequested.replace("s.a.", "", _CASE_INSENSITIVE))
+                            \choice 
+                                Además
+                        \endSynonym
+
+                        la compañía esta posicionada
+                    \endIf
+
+
+                    \if(hashMapByBrand1.getKeys().get(7) != null &amp;&amp; k == hashMapByBrand1.getKeys().get(7))
+                        En adición,
+
+                        \beginSynonym
+                            \choice 
+                                \value(getGeneralData().insurerRequested.replace("s.a.", "", _CASE_INSENSITIVE))
+                            \choice 
+                                Además
+                        \endSynonym
+
+                        la compañía esta posicionada
+                    \endIf
+
+\switch(k)
+   \case(1) primera
+   \case(2) segunda
+   \case(3) tercera
+   \case(4) cuarta
+   \case(5) quinta
+   \case(6) sexta
+   \case(7) séptima
+   \case(8) octava
+   \case(9) novena
+   \case(10) décima
+\endSwitch
+                    en el segmento de
+
+                    \foreach(v,hashMapByBrand1.get(k), #DJ12#)
+
+                        \if(v.businessSegmentPercent != 0)
+
+                            \beginStyle(lowerCaseSegment)
+                                \value(v.businessSegmentName)
+
+                            \endStyle
+
+
+                            \if(k == 1)
+                                (con un porcentaje de participacion del
+                                \value(v.businessSegmentPercent * 100)
+\+
+                                % )
+                            \else
+
+                                \if(k == 2)
+                                    (con un
+                                    \value(v.businessSegmentPercent * 100)
+\+
+                                    % )
+                                \else
+                                    (
+                                    \value(v.businessSegmentPercent * 100)
+\+
+                                    % )
+                                \endIf
+
+                            \endIf
+
+                        \endIf
+
+
+                    \endForeach
+
+
+                \endForeach
+
+                .
+            \endIf
+
+
+        \endForeach
+
+
+        \foreach(_marketPositionItem, MarketPositionItem)
+
+            \if(_marketPositionItem.marketPositionName.stringCompare(getGeneralData().insurerRequested, _CASE_INSENSITIVE) == true)
+                \value(getGeneralData().insurerRequested.replace("s.a.", "", _CASE_INSENSITIVE))
+                esta posicionada en el
+
+                \beginStyle(styleOrdinal)
+                    \value(_marketPositionItem.marketPositionRank)
+
+                \endStyle
+
+                lugar en el
+                \value(getGeneralData().totalMarket)
+                con un porcentaje de participación de mercado aproximado del
+                \value(_marketPositionItem.marketPositionPercentDifference * 100)
+\+
+                % sobre la base de
+
+                \beginStyle(lowerCaseSegment)
+                    \value(getGeneralData().synonymRangeOne)
+
+                \endStyle
+
+                /*gross premiums */
+                al
+                \date(getGeneralData().pointInTime, _DATE_DD, _DATE_MONTH, _DATE_YYYY)
+                .
+            \endIf
+
+
+        \endForeach
+
+    \endIf
+
+
+    \foreach(_staticTextItem, StaticTextItem)
+
+        \if(getGeneralData().insurerRequested.stringCompare(_staticTextItem.staticTextCountry, _CASE_INSENSITIVE) == true)
+
+            \if(_staticTextItem.endP1 != null)
+                \value(_staticTextItem.endP1)
+            \endIf
+
+        \endIf
+
+
+    \endForeach
+
+\p
+
+    \foreach(_staticTextItem, StaticTextItem)
+
+        \if(getGeneralData().insurerRequested.stringCompare(_staticTextItem.staticTextCountry, _CASE_INSENSITIVE) == true)
+
+            \if(_staticTextItem.startP2 != null)
+                \value(_staticTextItem.startP2)
+            \endIf
+
+        \endIf
+
+
+    \endForeach
+
+
+    \foreach(_netPremium, NetPremium)
+
+        \if(_netPremium.countryNameNetPremium.stringCompare(getGeneralData().insurerRequested, _CASE_INSENSITIVE) == true)
+
+            \if(_netPremium.countryNetPremiumListGreaterThan10.size() >= 3)
+
+                \foreach(_netPremiumSegments, _netPremium.countryNetPremiumListGreaterThan10, #6DHT#)
+
+                    \if(_netPremiumSegments.netPremiumSegmentPercent > 0.1 &amp;&amp; _netPremiumSegments.netPremiumSegmentPercent &lt;= 1 &amp;&amp; (_netPremiumSegments.netPremiumSegmentPercent != _netPremium.countryNetPremiumListGreaterThan10.get(1).netPremiumSegmentPercent) &amp;&amp; _netPremiumSegments.netPremiumSegmentName != "Grand Total" &amp;&amp; (_netPremiumSegments.netPremiumSegmentPercent == _netPremium.countryNetPremiumListGreaterThan10.get(2).netPremiumSegmentPercent))
+                        el ramo
+
+                        \beginStyle(lowerCaseSegment)
+                            \value(_netPremiumSegments.netPremiumSegmentName)
+                            un
+
+                        \endStyle
+
+                        \value(_netPremiumSegments.netPremiumSegmentPercent, UNIT_PERCENT)
+\+
+                        ,
+                    \endIf
+
+
+                    \if(_netPremiumSegments.netPremiumSegmentPercent > 0.1 &amp;&amp; _netPremiumSegments.netPremiumSegmentPercent &lt;= 1 &amp;&amp; (_netPremiumSegments.netPremiumSegmentPercent != _netPremium.countryNetPremiumListGreaterThan10.get(1).netPremiumSegmentPercent) &amp;&amp; _netPremiumSegments.netPremiumSegmentName != "Grand Total" &amp;&amp; (_netPremiumSegments.netPremiumSegmentPercent != _netPremium.countryNetPremiumListGreaterThan10.get(2).netPremiumSegmentPercent))
+
+                        \beginStyle(lowerCaseSegment)
+                            \value(_netPremiumSegments.netPremiumSegmentName)
+
+                        \endStyle
+
+                        \value(_netPremiumSegments.netPremiumSegmentPercent, UNIT_PERCENT)
+                    \endIf
+
+
+                \endForeach
+
+            \else
+
+                \if(_netPremium.countryNetPremiumListGreaterThan10.size() == 1)
+
+                    \foreach(_netPremiumSegments, _netPremium.countryNetPremiumListGreaterThan10, #250F#)
+
+                        \if(_netPremiumSegments.netPremiumSegmentPercent > 0.1 &amp;&amp; _netPremiumSegments.netPremiumSegmentPercent &lt;= 1 &amp;&amp; _netPremiumSegments.netPremiumSegmentName != "Grand Total")
+                            el segmento de
+
+                            \beginStyle(lowerCaseSegment)
+                                \value(_netPremiumSegments.netPremiumSegmentName)
+
+                            \endStyle
+
+                            representa
+                            \value(_netPremiumSegments.netPremiumSegmentPercent * 100)
+\+
+                            % de la
+
+                            \beginStyle(lowerCaseSegment)
+                                \value(getGeneralData().synonymRangeFour)
+
+                            \endStyle
+
+                            /*net premium */
+                        \endIf
+
+
+                    \endForeach
+
+                \else
+
+                    \foreach(_netPremiumSegments, _netPremium.countryNetPremiumListGreaterThan10, #ZYJ9#)
+
+                        \if(_netPremiumSegments.netPremiumSegmentPercent > 0.1 &amp;&amp; _netPremiumSegments.netPremiumSegmentPercent &lt;= 1 &amp;&amp; _netPremiumSegments.netPremiumSegmentName != "Grand Total" &amp;&amp; (_netPremiumSegments.netPremiumSegmentPercent != _netPremium.countryNetPremiumListGreaterThan10.get(1).netPremiumSegmentPercent))
+                            , mientras que el segmento de
+
+                            \beginStyle(lowerCaseSegment)
+                                \value(_netPremiumSegments.netPremiumSegmentName)
+
+                            \endStyle
+
+                            representa
+                            \value(_netPremiumSegments.netPremiumSegmentPercent * 100)
+\+
+                            % de la
+
+                            \beginStyle(lowerCaseSegment)
+                                \value(getGeneralData().synonymRangeFour)
+
+                            \endStyle
+
+                            /*net premium */
+                        \endIf
+
+
+                    \endForeach
+
+                \endIf
+
+            \endIf
+
+        \endIf
+
+
+    \endForeach
+
+
+    \foreach(_expenseRatioItem, getGeneralData().expenseRatioList)
+
+        \if(_expenseRatioItem.expenseRatioCountryName.stringCompare(getGeneralData().insurerRequested, _CASE_INSENSITIVE) == true)
+            \value(getGeneralData().insurerRequested.replace("s.a.", "", _CASE_INSENSITIVE))
+            tiene un
+
+            \beginStyle(lowerCaseSegment)
+                \value(getGeneralData().synonymRangeFive.replace("%", ""))
+
+            \endStyle
+
+            /*expense ratio */
+            de
+            \value(_expenseRatioItem.expenseRatioPercent * 100)
+\+
+            % anualizado al
+            \date(_expenseRatioItem.expenseRatioDate, _DATE_DD, _DATE_MONTH, _DATE_YYYY, _DATE_MIDDLE_ENDIAN_CARDINAL)
+
+            \if(_expenseRatioItem.expenseRatioPeerListInExpenseRatio.isEmpty() == true)
+\+
+                , que es considerado
+
+                \if(_expenseRatioItem.expenseRatioPercent >= 0.40)
+                    alto
+                \else
+                    bajo
+                \endIf
+
+                en términos globales.
+            \else
+
+            \endIf
+
+        \endIf
+
+
+    \endForeach
+
+
+    \foreach(_expenseRatioPeerItem, getGeneralData().expenseRatioPeerList)
+
+        \if(_expenseRatioPeerItem.expenseRatioPeerCountryName.stringCompare(getGeneralData().insurerRequested, _CASE_INSENSITIVE) == true)
+            , el cual si bien es
+            \value(_expenseRatioPeerItem.lowHigh)
+            medido en un contexto global, se encuentra
+
+            \switch(_expenseRatioPeerItem.inLineOrNot)
+
+                \case(IN_LINE)
+                    \value(_expenseRatioPeerItem.inLineOrNot)
+                    con el promedio de la compañías de seguros generales en
+                    \value(getGeneralData().country)
+
+                \case(NOT_IN_LINE)
+                    que
+                    \value(_expenseRatioPeerItem.inLineOrNot)
+                    con el promedio de la compañías de seguros generales en
+                    \value(getGeneralData().country)
+
+                \noDefault
+            \endSwitch
+
+            .
+        \endIf
+
+
+    \endForeach
+
+
+    \foreach(_staticTextItem, StaticTextItem)
+
+        \if(getGeneralData().insurerRequested.stringCompare(_staticTextItem.staticTextCountry, _CASE_INSENSITIVE) == true)
+
+            \if(_staticTextItem.endP2 != null)
+                \value(_staticTextItem.endP2)
+            \endIf
+
+        \endIf
+
+
+    \endForeach
+
+\p
+
+    \foreach(_staticTextItem, StaticTextItem)
+
+        \if(getGeneralData().insurerRequested.stringCompare(_staticTextItem.staticTextCountry, _CASE_INSENSITIVE) == true)
+
+            \if(_staticTextItem.startP3 != null)
+                \value(_staticTextItem.startP3)
+            \endIf
+
+        \endIf
+
+
+    \endForeach
+
+
+    \foreach(_scoreCardItem, getGeneralData().scoreCardList)
+
+        \if(_scoreCardItem.scoreCardCountryName.stringCompare(getGeneralData().insurerRequested, _CASE_INSENSITIVE) == true)
+
+            \if(_scoreCardItem.scoreCardScore == _scoreCardItem.scoreCardAdjusted)
+                Considerando tanto la posición de la aseguradora en el
+                \value(getGeneralData().totalMarket)
+\+
+                , como la relativamente pequeña escala de dicho mercado en el contexto más amplio regional e internacional, hemos ajustado la calificación de este factor a
+                \value(_scoreCardItem.scoreCardAdjusted)
+                en línea con la categoría indicada por la métrica global.
+            \else
+                Considerando tanto la posición de la aseguradora en el
+                \value(getGeneralData().totalMarket)
+\+
+                , como la relativamente pequeña escala de dicho mercado en el contexto más amplio regional e internacional, hemos ajustado la calificación de este factor a
+                \value(_scoreCardItem.scoreCardAdjusted)
+                desde
+                \value(_scoreCardItem.scoreCardScore)
+\+
+                , que surge del indicador sin ajustar de la planilla de calificación de fortaleza financiera.
+            \endIf
+
+        \endIf
+
+
+    \endForeach
+
+
+    \foreach(_staticTextItem, StaticTextItem)
+
+        \if(getGeneralData().insurerRequested.stringCompare(_staticTextItem.staticTextCountry, _CASE_INSENSITIVE) == true)
+
+            \if(_staticTextItem.endP3 != null)
+                \value(_staticTextItem.endP3)
+            \endIf
+
+        \endIf
+
+
+    \endForeach
+
+\p
+\endIf
+</yseop-yml:text>
+                    <yseop-yml:inline-assemblies>
+                        <yseop-yml:singleSentenceLinkAssembly name="RFE7" language="es">
+                            <yseop-yml:chooseSeparatorOptions>
+                                <yseop-yml:beforeEachItemCommaSelected>true</yseop-yml:beforeEachItemCommaSelected>
+                                <yseop-yml:beforeEachItemOtherText/>
+                                <yseop-yml:beforeLastItemAndSelected>false</yseop-yml:beforeLastItemAndSelected>
+                                <yseop-yml:beforeLastItemOtherSelected>true</yseop-yml:beforeLastItemOtherSelected>
+                                <yseop-yml:beforeLastItemOtherText>,</yseop-yml:beforeLastItemOtherText>
+                                <yseop-yml:maxCountOfItemsForEachSentenceValue>3</yseop-yml:maxCountOfItemsForEachSentenceValue>
+                                <yseop-yml:endOfSentenceDotSelected>true</yseop-yml:endOfSentenceDotSelected>
+                                <yseop-yml:endOfSentenceQuestionMarkSelected>false</yseop-yml:endOfSentenceQuestionMarkSelected>
+                                <yseop-yml:endOfSentenceOtherSelected>false</yseop-yml:endOfSentenceOtherSelected>
+                                <yseop-yml:switchThresholdValue>4</yseop-yml:switchThresholdValue>
+                            </yseop-yml:chooseSeparatorOptions>
+                            <yseop-yml:beginEndWithOptions>
+                                <yseop-yml:generalBeginWithText/>
+                                <yseop-yml:generalEndWithText/>
+                                <yseop-yml:onlyOneItemBeginWithSameAsGeneralSelected>true</yseop-yml:onlyOneItemBeginWithSameAsGeneralSelected>
+                                <yseop-yml:onlyOneItemBeginWithSpecificText/>
+                                <yseop-yml:onlyOneItemEndWithSameAsGeneralSelected>true</yseop-yml:onlyOneItemEndWithSameAsGeneralSelected>
+                                <yseop-yml:onlyOneItemEndWithSpecificText/>
+                                <yseop-yml:allItemsIdenticalBeginWithSameAsGeneralSelected>true</yseop-yml:allItemsIdenticalBeginWithSameAsGeneralSelected>
+                                <yseop-yml:allItemsIdenticalBeginWithSpecificText/>
+                                <yseop-yml:allItemsIdenticalEndWithSameAsGeneralSelected>true</yseop-yml:allItemsIdenticalEndWithSameAsGeneralSelected>
+                                <yseop-yml:allItemsIdenticalEndWithSpecificText/>
+                                <yseop-yml:noItemGenerateNothingSelected>true</yseop-yml:noItemGenerateNothingSelected>
+                                <yseop-yml:noItemSentenceText/>
+                                <yseop-yml:inGeneralBulletBeginSameAsListSelected>true</yseop-yml:inGeneralBulletBeginSameAsListSelected>
+                                <yseop-yml:inGeneralBulletBeginSpecificSelected>false</yseop-yml:inGeneralBulletBeginSpecificSelected>
+                                <yseop-yml:inGeneralBulletBeginSpecificText/>
+                                <yseop-yml:inGeneralBulletEndSameAsListSelected>true</yseop-yml:inGeneralBulletEndSameAsListSelected>
+                                <yseop-yml:inGeneralBulletEndSpecificSelected>false</yseop-yml:inGeneralBulletEndSpecificSelected>
+                                <yseop-yml:inGeneralBulletEndSpecificText/>
+                            </yseop-yml:beginEndWithOptions>
+                            <yseop-yml:limitSizeOptions>
+                                <yseop-yml:noLimitSelected>true</yseop-yml:noLimitSelected>
+                                <yseop-yml:onlyFirstElementsSelected>true</yseop-yml:onlyFirstElementsSelected>
+                                <yseop-yml:onlyFirstElementsNumberValue>3</yseop-yml:onlyFirstElementsNumberValue>
+                                <yseop-yml:sentenceSizeTypeValue>30</yseop-yml:sentenceSizeTypeValue>
+                                <yseop-yml:limitByTypeValue>words</yseop-yml:limitByTypeValue>
+                                <yseop-yml:limitByTypeNumber>0</yseop-yml:limitByTypeNumber>
+                                <yseop-yml:sentenceEndEtcSelected>true</yseop-yml:sentenceEndEtcSelected>
+                                <yseop-yml:sentenceEndOtherText/>
+                                <yseop-yml:hasWordCharOptions>true</yseop-yml:hasWordCharOptions>
+                            </yseop-yml:limitSizeOptions>
+                        </yseop-yml:singleSentenceLinkAssembly>
+                        <yseop-yml:sentencesGenerationAndAssembly name="3KSO" language="es">
+                            <yseop-yml:chooseSeparatorOptions>
+                                <yseop-yml:beforeEachItemCommaSelected>true</yseop-yml:beforeEachItemCommaSelected>
+                                <yseop-yml:beforeEachItemOtherText/>
+                                <yseop-yml:beforeLastItemAndSelected>false</yseop-yml:beforeLastItemAndSelected>
+                                <yseop-yml:beforeLastItemOtherSelected>true</yseop-yml:beforeLastItemOtherSelected>
+                                <yseop-yml:beforeLastItemOtherText>, y</yseop-yml:beforeLastItemOtherText>
+                                <yseop-yml:hasSentenceParametersSection>true</yseop-yml:hasSentenceParametersSection>
+                                <yseop-yml:maxCountOfItemsForEachSentenceValue>3</yseop-yml:maxCountOfItemsForEachSentenceValue>
+                                <yseop-yml:endOfSentenceDotSelected>true</yseop-yml:endOfSentenceDotSelected>
+                                <yseop-yml:endOfSentenceQuestionMarkSelected>false</yseop-yml:endOfSentenceQuestionMarkSelected>
+                                <yseop-yml:endOfSentenceOtherSelected>false</yseop-yml:endOfSentenceOtherSelected>
+                                <yseop-yml:endOfSentenceOtherText/>
+                                <yseop-yml:switchThresholdValue>4</yseop-yml:switchThresholdValue>
+                            </yseop-yml:chooseSeparatorOptions>
+                            <yseop-yml:sentenceOrParagraphGeneralOptions>
+                                <yseop-yml:eachItemIsAParagraph>false</yseop-yml:eachItemIsAParagraph>
+                            </yseop-yml:sentenceOrParagraphGeneralOptions>
+                            <yseop-yml:linkWordsBetweenItemsOptions>
+                                <yseop-yml:doNotAddLinkWords>true</yseop-yml:doNotAddLinkWords>
+                                <yseop-yml:generalLinkWords xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" yseop-yml:size="5">
+                                    <yseop-yml:entry yseop-yml:key="LANG_DE" xsi:type="xsd:string">Zusätzlich,
+Außerdem,
+Andererseits,
+</yseop-yml:entry>
+                                    <yseop-yml:entry yseop-yml:key="LANG_JA" xsi:type="xsd:string">それに、
+実は、
+そういえば、
+その上に、
+結局、
+一方は
+他方は
+</yseop-yml:entry>
+                                    <yseop-yml:entry yseop-yml:key="LANG_EN" xsi:type="xsd:string">Also,
+Furthermore,
+In addition,
+</yseop-yml:entry>
+                                    <yseop-yml:entry yseop-yml:key="LANG_FR" xsi:type="xsd:string">Par ailleurs,
+De plus,
+En outre,
+D'autre part,
+Également,
+</yseop-yml:entry>
+                                    <yseop-yml:entry yseop-yml:key="LANG_ES" xsi:type="xsd:string">Además,
+Luego,
+Después,
+Por otra parte,
+A continuación,
+</yseop-yml:entry>
+                                </yseop-yml:generalLinkWords>
+                                <yseop-yml:generalLinkWordsRandomStrategy>true</yseop-yml:generalLinkWordsRandomStrategy>
+                                <yseop-yml:generalLinkWordsLinearStrategy>false</yseop-yml:generalLinkWordsLinearStrategy>
+                                <yseop-yml:nextToLastLinkWord xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" yseop-yml:size="5">
+                                    <yseop-yml:entry yseop-yml:key="LANG_DE" xsi:type="xsd:string">Abschließend,</yseop-yml:entry>
+                                    <yseop-yml:entry yseop-yml:key="LANG_JA" xsi:type="xsd:string"></yseop-yml:entry>
+                                    <yseop-yml:entry yseop-yml:key="LANG_EN" xsi:type="xsd:string"></yseop-yml:entry>
+                                    <yseop-yml:entry yseop-yml:key="LANG_FR" xsi:type="xsd:string">Enfin,</yseop-yml:entry>
+                                    <yseop-yml:entry yseop-yml:key="LANG_ES" xsi:type="xsd:string"></yseop-yml:entry>
+                                </yseop-yml:nextToLastLinkWord>
+                                <yseop-yml:lastLinkWord xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" yseop-yml:size="5">
+                                    <yseop-yml:entry yseop-yml:key="LANG_DE" xsi:type="xsd:string">Schließlich,</yseop-yml:entry>
+                                    <yseop-yml:entry yseop-yml:key="LANG_JA" xsi:type="xsd:string">つまり、</yseop-yml:entry>
+                                    <yseop-yml:entry yseop-yml:key="LANG_EN" xsi:type="xsd:string"></yseop-yml:entry>
+                                    <yseop-yml:entry yseop-yml:key="LANG_FR" xsi:type="xsd:string">Pour finir,</yseop-yml:entry>
+                                    <yseop-yml:entry yseop-yml:key="LANG_ES" xsi:type="xsd:string">Por fin,</yseop-yml:entry>
+                                </yseop-yml:lastLinkWord>
+                            </yseop-yml:linkWordsBetweenItemsOptions>
+                            <yseop-yml:beginEndWithOptions>
+                                <yseop-yml:generalBeginWithText>
+\if(hashMapByBrand1.getKeys().get(1) == _marketShareItem.marketShareItemRank)
+    además de
+\else
+    . Además,
+    \value(getGeneralData().insurerRequested.replace("s.a.", "", _CASE_INSENSITIVE))
+    esta posicionada
+\endIf
+</yseop-yml:generalBeginWithText>
+                                <yseop-yml:generalEndWithText/>
+                                <yseop-yml:onlyOneItemBeginWithSameAsGeneralSelected>true</yseop-yml:onlyOneItemBeginWithSameAsGeneralSelected>
+                                <yseop-yml:onlyOneItemBeginWithSpecificText/>
+                                <yseop-yml:onlyOneItemEndWithSameAsGeneralSelected>true</yseop-yml:onlyOneItemEndWithSameAsGeneralSelected>
+                                <yseop-yml:onlyOneItemEndWithSpecificText/>
+                                <yseop-yml:allItemsIdenticalBeginWithSameAsGeneralSelected>true</yseop-yml:allItemsIdenticalBeginWithSameAsGeneralSelected>
+                                <yseop-yml:allItemsIdenticalBeginWithSpecificText/>
+                                <yseop-yml:allItemsIdenticalEndWithSameAsGeneralSelected>true</yseop-yml:allItemsIdenticalEndWithSameAsGeneralSelected>
+                                <yseop-yml:allItemsIdenticalEndWithSpecificText/>
+                                <yseop-yml:noItemGenerateNothingSelected>true</yseop-yml:noItemGenerateNothingSelected>
+                                <yseop-yml:noItemSentenceText/>
+                                <yseop-yml:inGeneralBulletBeginSameAsListSelected>true</yseop-yml:inGeneralBulletBeginSameAsListSelected>
+                                <yseop-yml:inGeneralBulletBeginSpecificSelected>false</yseop-yml:inGeneralBulletBeginSpecificSelected>
+                                <yseop-yml:inGeneralBulletBeginSpecificText/>
+                                <yseop-yml:inGeneralBulletEndSameAsListSelected>true</yseop-yml:inGeneralBulletEndSameAsListSelected>
+                                <yseop-yml:inGeneralBulletEndSpecificSelected>false</yseop-yml:inGeneralBulletEndSpecificSelected>
+                                <yseop-yml:inGeneralBulletEndSpecificText/>
+                            </yseop-yml:beginEndWithOptions>
+                            <yseop-yml:limitSizeOptions>
+                                <yseop-yml:noLimitSelected>true</yseop-yml:noLimitSelected>
+                                <yseop-yml:onlyFirstElementsSelected>true</yseop-yml:onlyFirstElementsSelected>
+                                <yseop-yml:onlyFirstElementsNumberValue>3</yseop-yml:onlyFirstElementsNumberValue>
+                                <yseop-yml:sentenceSizeTypeValue>30</yseop-yml:sentenceSizeTypeValue>
+                                <yseop-yml:limitByTypeValue>words</yseop-yml:limitByTypeValue>
+                                <yseop-yml:limitByTypeNumber>0</yseop-yml:limitByTypeNumber>
+                                <yseop-yml:sentenceEndEtcSelected>true</yseop-yml:sentenceEndEtcSelected>
+                                <yseop-yml:sentenceEndOtherText/>
+                                <yseop-yml:hasWordCharOptions>true</yseop-yml:hasWordCharOptions>
+                            </yseop-yml:limitSizeOptions>
+                        </yseop-yml:sentencesGenerationAndAssembly>
+                        <yseop-yml:singleSentenceLinkAssembly name="DJ12" language="es">
+                            <yseop-yml:chooseSeparatorOptions>
+                                <yseop-yml:beforeEachItemCommaSelected>true</yseop-yml:beforeEachItemCommaSelected>
+                                <yseop-yml:beforeEachItemOtherText/>
+                                <yseop-yml:beforeLastItemAndSelected>false</yseop-yml:beforeLastItemAndSelected>
+                                <yseop-yml:beforeLastItemOtherSelected>true</yseop-yml:beforeLastItemOtherSelected>
+                                <yseop-yml:beforeLastItemOtherText>,</yseop-yml:beforeLastItemOtherText>
+                                <yseop-yml:maxCountOfItemsForEachSentenceValue>3</yseop-yml:maxCountOfItemsForEachSentenceValue>
+                                <yseop-yml:endOfSentenceDotSelected>true</yseop-yml:endOfSentenceDotSelected>
+                                <yseop-yml:endOfSentenceQuestionMarkSelected>false</yseop-yml:endOfSentenceQuestionMarkSelected>
+                                <yseop-yml:endOfSentenceOtherSelected>false</yseop-yml:endOfSentenceOtherSelected>
+                                <yseop-yml:switchThresholdValue>4</yseop-yml:switchThresholdValue>
+                            </yseop-yml:chooseSeparatorOptions>
+                            <yseop-yml:beginEndWithOptions>
+                                <yseop-yml:generalBeginWithText/>
+                                <yseop-yml:generalEndWithText/>
+                                <yseop-yml:onlyOneItemBeginWithSameAsGeneralSelected>true</yseop-yml:onlyOneItemBeginWithSameAsGeneralSelected>
+                                <yseop-yml:onlyOneItemBeginWithSpecificText/>
+                                <yseop-yml:onlyOneItemEndWithSameAsGeneralSelected>true</yseop-yml:onlyOneItemEndWithSameAsGeneralSelected>
+                                <yseop-yml:onlyOneItemEndWithSpecificText/>
+                                <yseop-yml:allItemsIdenticalBeginWithSameAsGeneralSelected>true</yseop-yml:allItemsIdenticalBeginWithSameAsGeneralSelected>
+                                <yseop-yml:allItemsIdenticalBeginWithSpecificText/>
+                                <yseop-yml:allItemsIdenticalEndWithSameAsGeneralSelected>true</yseop-yml:allItemsIdenticalEndWithSameAsGeneralSelected>
+                                <yseop-yml:allItemsIdenticalEndWithSpecificText/>
+                                <yseop-yml:noItemGenerateNothingSelected>true</yseop-yml:noItemGenerateNothingSelected>
+                                <yseop-yml:noItemSentenceText/>
+                                <yseop-yml:inGeneralBulletBeginSameAsListSelected>true</yseop-yml:inGeneralBulletBeginSameAsListSelected>
+                                <yseop-yml:inGeneralBulletBeginSpecificSelected>false</yseop-yml:inGeneralBulletBeginSpecificSelected>
+                                <yseop-yml:inGeneralBulletBeginSpecificText/>
+                                <yseop-yml:inGeneralBulletEndSameAsListSelected>true</yseop-yml:inGeneralBulletEndSameAsListSelected>
+                                <yseop-yml:inGeneralBulletEndSpecificSelected>false</yseop-yml:inGeneralBulletEndSpecificSelected>
+                                <yseop-yml:inGeneralBulletEndSpecificText/>
+                            </yseop-yml:beginEndWithOptions>
+                            <yseop-yml:limitSizeOptions>
+                                <yseop-yml:noLimitSelected>true</yseop-yml:noLimitSelected>
+                                <yseop-yml:onlyFirstElementsSelected>true</yseop-yml:onlyFirstElementsSelected>
+                                <yseop-yml:onlyFirstElementsNumberValue>3</yseop-yml:onlyFirstElementsNumberValue>
+                                <yseop-yml:sentenceSizeTypeValue>30</yseop-yml:sentenceSizeTypeValue>
+                                <yseop-yml:limitByTypeValue>words</yseop-yml:limitByTypeValue>
+                                <yseop-yml:limitByTypeNumber>0</yseop-yml:limitByTypeNumber>
+                                <yseop-yml:sentenceEndEtcSelected>true</yseop-yml:sentenceEndEtcSelected>
+                                <yseop-yml:sentenceEndOtherText/>
+                                <yseop-yml:hasWordCharOptions>true</yseop-yml:hasWordCharOptions>
+                            </yseop-yml:limitSizeOptions>
+                        </yseop-yml:singleSentenceLinkAssembly>
+                        <yseop-yml:sentencesGenerationAndAssembly name="OFGF" language="es">
+                            <yseop-yml:chooseSeparatorOptions>
+                                <yseop-yml:beforeEachItemCommaSelected>true</yseop-yml:beforeEachItemCommaSelected>
+                                <yseop-yml:beforeEachItemOtherText/>
+                                <yseop-yml:beforeLastItemAndSelected>false</yseop-yml:beforeLastItemAndSelected>
+                                <yseop-yml:beforeLastItemOtherSelected>true</yseop-yml:beforeLastItemOtherSelected>
+                                <yseop-yml:beforeLastItemOtherText>, y</yseop-yml:beforeLastItemOtherText>
+                                <yseop-yml:hasSentenceParametersSection>true</yseop-yml:hasSentenceParametersSection>
+                                <yseop-yml:maxCountOfItemsForEachSentenceValue>3</yseop-yml:maxCountOfItemsForEachSentenceValue>
+                                <yseop-yml:endOfSentenceDotSelected>true</yseop-yml:endOfSentenceDotSelected>
+                                <yseop-yml:endOfSentenceQuestionMarkSelected>false</yseop-yml:endOfSentenceQuestionMarkSelected>
+                                <yseop-yml:endOfSentenceOtherSelected>false</yseop-yml:endOfSentenceOtherSelected>
+                                <yseop-yml:endOfSentenceOtherText/>
+                                <yseop-yml:switchThresholdValue>4</yseop-yml:switchThresholdValue>
+                            </yseop-yml:chooseSeparatorOptions>
+                            <yseop-yml:sentenceOrParagraphGeneralOptions>
+                                <yseop-yml:eachItemIsAParagraph>false</yseop-yml:eachItemIsAParagraph>
+                            </yseop-yml:sentenceOrParagraphGeneralOptions>
+                            <yseop-yml:linkWordsBetweenItemsOptions>
+                                <yseop-yml:doNotAddLinkWords>true</yseop-yml:doNotAddLinkWords>
+                                <yseop-yml:generalLinkWords xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" yseop-yml:size="5">
+                                    <yseop-yml:entry yseop-yml:key="LANG_DE" xsi:type="xsd:string">Zusätzlich,
+Außerdem,
+Andererseits,
+</yseop-yml:entry>
+                                    <yseop-yml:entry yseop-yml:key="LANG_JA" xsi:type="xsd:string">それに、
+実は、
+そういえば、
+その上に、
+結局、
+一方は
+他方は
+</yseop-yml:entry>
+                                    <yseop-yml:entry yseop-yml:key="LANG_EN" xsi:type="xsd:string">What's more,
+Also,
+Furthermore,
+Moreover,
+Besides,
+As well,
+In addition,
+</yseop-yml:entry>
+                                    <yseop-yml:entry yseop-yml:key="LANG_FR" xsi:type="xsd:string">Par ailleurs,
+De plus,
+En outre,
+D'autre part,
+Également,
+</yseop-yml:entry>
+                                    <yseop-yml:entry yseop-yml:key="LANG_ES" xsi:type="xsd:string">Además,
+Luego,
+Después,
+Por otra parte,
+A continuación,
+</yseop-yml:entry>
+                                </yseop-yml:generalLinkWords>
+                                <yseop-yml:generalLinkWordsRandomStrategy>true</yseop-yml:generalLinkWordsRandomStrategy>
+                                <yseop-yml:generalLinkWordsLinearStrategy>false</yseop-yml:generalLinkWordsLinearStrategy>
+                                <yseop-yml:nextToLastLinkWord xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" yseop-yml:size="5">
+                                    <yseop-yml:entry yseop-yml:key="LANG_DE" xsi:type="xsd:string">Abschließend,</yseop-yml:entry>
+                                    <yseop-yml:entry yseop-yml:key="LANG_JA" xsi:type="xsd:string"></yseop-yml:entry>
+                                    <yseop-yml:entry yseop-yml:key="LANG_EN" xsi:type="xsd:string"></yseop-yml:entry>
+                                    <yseop-yml:entry yseop-yml:key="LANG_FR" xsi:type="xsd:string">Enfin,</yseop-yml:entry>
+                                    <yseop-yml:entry yseop-yml:key="LANG_ES" xsi:type="xsd:string"></yseop-yml:entry>
+                                </yseop-yml:nextToLastLinkWord>
+                                <yseop-yml:lastLinkWord xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" yseop-yml:size="5">
+                                    <yseop-yml:entry yseop-yml:key="LANG_DE" xsi:type="xsd:string">Schließlich,</yseop-yml:entry>
+                                    <yseop-yml:entry yseop-yml:key="LANG_JA" xsi:type="xsd:string">つまり、</yseop-yml:entry>
+                                    <yseop-yml:entry yseop-yml:key="LANG_EN" xsi:type="xsd:string">Lastly,</yseop-yml:entry>
+                                    <yseop-yml:entry yseop-yml:key="LANG_FR" xsi:type="xsd:string">Pour finir,</yseop-yml:entry>
+                                    <yseop-yml:entry yseop-yml:key="LANG_ES" xsi:type="xsd:string">Por fin,</yseop-yml:entry>
+                                </yseop-yml:lastLinkWord>
+                            </yseop-yml:linkWordsBetweenItemsOptions>
+                            <yseop-yml:beginEndWithOptions>
+                                <yseop-yml:generalBeginWithText>
+\if(hashMapByBrand1.getKeys().get(1) == _marketShareItem.marketShareItemRank)
+    además de
+\else
+    .
+    \value(getGeneralData().insurerRequested.replace("s.a.", "", _CASE_INSENSITIVE))
+    esta posicionada
+\endIf
+</yseop-yml:generalBeginWithText>
+                                <yseop-yml:generalEndWithText/>
+                                <yseop-yml:onlyOneItemBeginWithSameAsGeneralSelected>true</yseop-yml:onlyOneItemBeginWithSameAsGeneralSelected>
+                                <yseop-yml:onlyOneItemBeginWithSpecificText/>
+                                <yseop-yml:onlyOneItemEndWithSameAsGeneralSelected>true</yseop-yml:onlyOneItemEndWithSameAsGeneralSelected>
+                                <yseop-yml:onlyOneItemEndWithSpecificText/>
+                                <yseop-yml:allItemsIdenticalBeginWithSameAsGeneralSelected>true</yseop-yml:allItemsIdenticalBeginWithSameAsGeneralSelected>
+                                <yseop-yml:allItemsIdenticalBeginWithSpecificText/>
+                                <yseop-yml:allItemsIdenticalEndWithSameAsGeneralSelected>true</yseop-yml:allItemsIdenticalEndWithSameAsGeneralSelected>
+                                <yseop-yml:allItemsIdenticalEndWithSpecificText/>
+                                <yseop-yml:noItemGenerateNothingSelected>true</yseop-yml:noItemGenerateNothingSelected>
+                                <yseop-yml:noItemSentenceText/>
+                                <yseop-yml:inGeneralBulletBeginSameAsListSelected>true</yseop-yml:inGeneralBulletBeginSameAsListSelected>
+                                <yseop-yml:inGeneralBulletBeginSpecificSelected>false</yseop-yml:inGeneralBulletBeginSpecificSelected>
+                                <yseop-yml:inGeneralBulletBeginSpecificText/>
+                                <yseop-yml:inGeneralBulletEndSameAsListSelected>true</yseop-yml:inGeneralBulletEndSameAsListSelected>
+                                <yseop-yml:inGeneralBulletEndSpecificSelected>false</yseop-yml:inGeneralBulletEndSpecificSelected>
+                                <yseop-yml:inGeneralBulletEndSpecificText/>
+                            </yseop-yml:beginEndWithOptions>
+                            <yseop-yml:limitSizeOptions>
+                                <yseop-yml:noLimitSelected>true</yseop-yml:noLimitSelected>
+                                <yseop-yml:onlyFirstElementsSelected>true</yseop-yml:onlyFirstElementsSelected>
+                                <yseop-yml:onlyFirstElementsNumberValue>3</yseop-yml:onlyFirstElementsNumberValue>
+                                <yseop-yml:sentenceSizeTypeValue>90</yseop-yml:sentenceSizeTypeValue>
+                                <yseop-yml:limitByTypeValue>words</yseop-yml:limitByTypeValue>
+                                <yseop-yml:limitByTypeNumber>0</yseop-yml:limitByTypeNumber>
+                                <yseop-yml:sentenceEndEtcSelected>true</yseop-yml:sentenceEndEtcSelected>
+                                <yseop-yml:sentenceEndOtherText/>
+                                <yseop-yml:hasWordCharOptions>true</yseop-yml:hasWordCharOptions>
+                            </yseop-yml:limitSizeOptions>
+                        </yseop-yml:sentencesGenerationAndAssembly>
+                        <yseop-yml:singleSentenceLinkAssembly name="6DHT" language="es">
+                            <yseop-yml:chooseSeparatorOptions>
+                                <yseop-yml:beforeEachItemCommaSelected>true</yseop-yml:beforeEachItemCommaSelected>
+                                <yseop-yml:beforeEachItemOtherText/>
+                                <yseop-yml:beforeLastItemAndSelected>true</yseop-yml:beforeLastItemAndSelected>
+                                <yseop-yml:beforeLastItemOtherText>, and</yseop-yml:beforeLastItemOtherText>
+                                <yseop-yml:maxCountOfItemsForEachSentenceValue>3</yseop-yml:maxCountOfItemsForEachSentenceValue>
+                                <yseop-yml:endOfSentenceDotSelected>true</yseop-yml:endOfSentenceDotSelected>
+                                <yseop-yml:endOfSentenceQuestionMarkSelected>false</yseop-yml:endOfSentenceQuestionMarkSelected>
+                                <yseop-yml:endOfSentenceOtherSelected>false</yseop-yml:endOfSentenceOtherSelected>
+                                <yseop-yml:switchThresholdValue>4</yseop-yml:switchThresholdValue>
+                            </yseop-yml:chooseSeparatorOptions>
+                            <yseop-yml:beginEndWithOptions>
+                                <yseop-yml:generalBeginWithText>El ramo
+
+\beginStyle(lowerCaseSegment)
+    \value(_netPremiumSegments.netPremiumSegmentName)
+
+\endStyle
+
+representó
+\value(_netPremiumSegments.netPremiumSegmentPercent, UNIT_PERCENT)
+
+\if(_netPremiumSegments.netPremiumSegmentPercent > 0.1 &amp;&amp; _netPremiumSegments.netPremiumSegmentPercent &lt;= 1 &amp;&amp; _netPremiumSegments.netPremiumSegmentName != "Grand Total")
+    del total de
+    \value(getGeneralData().synonymRangeFour)
+\+
+    ,
+\endIf
+</yseop-yml:generalBeginWithText>
+                                <yseop-yml:generalEndWithText>.</yseop-yml:generalEndWithText>
+                                <yseop-yml:onlyOneItemBeginWithSameAsGeneralSelected>true</yseop-yml:onlyOneItemBeginWithSameAsGeneralSelected>
+                                <yseop-yml:onlyOneItemBeginWithSpecificText/>
+                                <yseop-yml:onlyOneItemEndWithSameAsGeneralSelected>true</yseop-yml:onlyOneItemEndWithSameAsGeneralSelected>
+                                <yseop-yml:onlyOneItemEndWithSpecificText/>
+                                <yseop-yml:allItemsIdenticalBeginWithSameAsGeneralSelected>true</yseop-yml:allItemsIdenticalBeginWithSameAsGeneralSelected>
+                                <yseop-yml:allItemsIdenticalBeginWithSpecificText/>
+                                <yseop-yml:allItemsIdenticalEndWithSameAsGeneralSelected>true</yseop-yml:allItemsIdenticalEndWithSameAsGeneralSelected>
+                                <yseop-yml:allItemsIdenticalEndWithSpecificText/>
+                                <yseop-yml:noItemGenerateNothingSelected>true</yseop-yml:noItemGenerateNothingSelected>
+                                <yseop-yml:noItemSentenceText/>
+                                <yseop-yml:inGeneralBulletBeginSameAsListSelected>true</yseop-yml:inGeneralBulletBeginSameAsListSelected>
+                                <yseop-yml:inGeneralBulletBeginSpecificSelected>false</yseop-yml:inGeneralBulletBeginSpecificSelected>
+                                <yseop-yml:inGeneralBulletBeginSpecificText/>
+                                <yseop-yml:inGeneralBulletEndSameAsListSelected>true</yseop-yml:inGeneralBulletEndSameAsListSelected>
+                                <yseop-yml:inGeneralBulletEndSpecificSelected>false</yseop-yml:inGeneralBulletEndSpecificSelected>
+                                <yseop-yml:inGeneralBulletEndSpecificText/>
+                            </yseop-yml:beginEndWithOptions>
+                            <yseop-yml:limitSizeOptions>
+                                <yseop-yml:noLimitSelected>true</yseop-yml:noLimitSelected>
+                                <yseop-yml:onlyFirstElementsSelected>true</yseop-yml:onlyFirstElementsSelected>
+                                <yseop-yml:onlyFirstElementsNumberValue>3</yseop-yml:onlyFirstElementsNumberValue>
+                                <yseop-yml:sentenceSizeTypeValue>30</yseop-yml:sentenceSizeTypeValue>
+                                <yseop-yml:limitByTypeValue>words</yseop-yml:limitByTypeValue>
+                                <yseop-yml:limitByTypeNumber>0</yseop-yml:limitByTypeNumber>
+                                <yseop-yml:sentenceEndEtcSelected>true</yseop-yml:sentenceEndEtcSelected>
+                                <yseop-yml:sentenceEndOtherText/>
+                                <yseop-yml:hasWordCharOptions>true</yseop-yml:hasWordCharOptions>
+                            </yseop-yml:limitSizeOptions>
+                        </yseop-yml:singleSentenceLinkAssembly>
+                        <yseop-yml:singleSentenceLinkAssembly name="250F" language="es">
+                            <yseop-yml:chooseSeparatorOptions>
+                                <yseop-yml:beforeEachItemCommaSelected>true</yseop-yml:beforeEachItemCommaSelected>
+                                <yseop-yml:beforeEachItemOtherText/>
+                                <yseop-yml:beforeLastItemAndSelected>false</yseop-yml:beforeLastItemAndSelected>
+                                <yseop-yml:beforeLastItemOtherSelected>true</yseop-yml:beforeLastItemOtherSelected>
+                                <yseop-yml:beforeLastItemOtherText>, mientras que</yseop-yml:beforeLastItemOtherText>
+                                <yseop-yml:maxCountOfItemsForEachSentenceValue>3</yseop-yml:maxCountOfItemsForEachSentenceValue>
+                                <yseop-yml:endOfSentenceDotSelected>true</yseop-yml:endOfSentenceDotSelected>
+                                <yseop-yml:endOfSentenceQuestionMarkSelected>false</yseop-yml:endOfSentenceQuestionMarkSelected>
+                                <yseop-yml:endOfSentenceOtherSelected>false</yseop-yml:endOfSentenceOtherSelected>
+                                <yseop-yml:switchThresholdValue>4</yseop-yml:switchThresholdValue>
+                            </yseop-yml:chooseSeparatorOptions>
+                            <yseop-yml:beginEndWithOptions>
+                                <yseop-yml:generalBeginWithText/>
+                                <yseop-yml:generalEndWithText>.</yseop-yml:generalEndWithText>
+                                <yseop-yml:onlyOneItemBeginWithSameAsGeneralSelected>true</yseop-yml:onlyOneItemBeginWithSameAsGeneralSelected>
+                                <yseop-yml:onlyOneItemBeginWithSpecificText/>
+                                <yseop-yml:onlyOneItemEndWithSameAsGeneralSelected>true</yseop-yml:onlyOneItemEndWithSameAsGeneralSelected>
+                                <yseop-yml:onlyOneItemEndWithSpecificText/>
+                                <yseop-yml:allItemsIdenticalBeginWithSameAsGeneralSelected>true</yseop-yml:allItemsIdenticalBeginWithSameAsGeneralSelected>
+                                <yseop-yml:allItemsIdenticalBeginWithSpecificText/>
+                                <yseop-yml:allItemsIdenticalEndWithSameAsGeneralSelected>true</yseop-yml:allItemsIdenticalEndWithSameAsGeneralSelected>
+                                <yseop-yml:allItemsIdenticalEndWithSpecificText/>
+                                <yseop-yml:noItemGenerateNothingSelected>true</yseop-yml:noItemGenerateNothingSelected>
+                                <yseop-yml:noItemSentenceText/>
+                                <yseop-yml:inGeneralBulletBeginSameAsListSelected>true</yseop-yml:inGeneralBulletBeginSameAsListSelected>
+                                <yseop-yml:inGeneralBulletBeginSpecificSelected>false</yseop-yml:inGeneralBulletBeginSpecificSelected>
+                                <yseop-yml:inGeneralBulletBeginSpecificText/>
+                                <yseop-yml:inGeneralBulletEndSameAsListSelected>true</yseop-yml:inGeneralBulletEndSameAsListSelected>
+                                <yseop-yml:inGeneralBulletEndSpecificSelected>false</yseop-yml:inGeneralBulletEndSpecificSelected>
+                                <yseop-yml:inGeneralBulletEndSpecificText/>
+                            </yseop-yml:beginEndWithOptions>
+                            <yseop-yml:limitSizeOptions>
+                                <yseop-yml:noLimitSelected>true</yseop-yml:noLimitSelected>
+                                <yseop-yml:onlyFirstElementsSelected>true</yseop-yml:onlyFirstElementsSelected>
+                                <yseop-yml:onlyFirstElementsNumberValue>3</yseop-yml:onlyFirstElementsNumberValue>
+                                <yseop-yml:sentenceSizeTypeValue>30</yseop-yml:sentenceSizeTypeValue>
+                                <yseop-yml:limitByTypeValue>words</yseop-yml:limitByTypeValue>
+                                <yseop-yml:limitByTypeNumber>0</yseop-yml:limitByTypeNumber>
+                                <yseop-yml:sentenceEndEtcSelected>true</yseop-yml:sentenceEndEtcSelected>
+                                <yseop-yml:sentenceEndOtherText/>
+                                <yseop-yml:hasWordCharOptions>true</yseop-yml:hasWordCharOptions>
+                            </yseop-yml:limitSizeOptions>
+                        </yseop-yml:singleSentenceLinkAssembly>
+                        <yseop-yml:singleSentenceLinkAssembly name="ZYJ9" language="es">
+                            <yseop-yml:chooseSeparatorOptions>
+                                <yseop-yml:beforeEachItemCommaSelected>true</yseop-yml:beforeEachItemCommaSelected>
+                                <yseop-yml:beforeEachItemOtherText/>
+                                <yseop-yml:beforeLastItemAndSelected>true</yseop-yml:beforeLastItemAndSelected>
+                                <yseop-yml:beforeLastItemOtherText/>
+                                <yseop-yml:maxCountOfItemsForEachSentenceValue>3</yseop-yml:maxCountOfItemsForEachSentenceValue>
+                                <yseop-yml:endOfSentenceDotSelected>true</yseop-yml:endOfSentenceDotSelected>
+                                <yseop-yml:endOfSentenceQuestionMarkSelected>false</yseop-yml:endOfSentenceQuestionMarkSelected>
+                                <yseop-yml:endOfSentenceOtherSelected>false</yseop-yml:endOfSentenceOtherSelected>
+                                <yseop-yml:switchThresholdValue>4</yseop-yml:switchThresholdValue>
+                            </yseop-yml:chooseSeparatorOptions>
+                            <yseop-yml:beginEndWithOptions>
+                                <yseop-yml:generalBeginWithText>
+\if(_netPremiumSegments.netPremiumSegmentPercent > 0.1 &amp;&amp; _netPremiumSegments.netPremiumSegmentPercent &lt;= 1 &amp;&amp; _netPremiumSegments.netPremiumSegmentName != "Grand Total")
+    el segmento de
+
+    \beginStyle(lowerCaseSegment)
+        \value(_netPremiumSegments.netPremiumSegmentName)
+
+    \endStyle
+
+    representa
+    \value(_netPremiumSegments.netPremiumSegmentPercent * 100)
+\+
+    % de la
+
+    \beginStyle(lowerCaseSegment)
+        \value(getGeneralData().synonymRangeFour)
+
+    \endStyle
+
+    /*net premium */
+\endIf
+</yseop-yml:generalBeginWithText>
+                                <yseop-yml:generalEndWithText>.</yseop-yml:generalEndWithText>
+                                <yseop-yml:onlyOneItemBeginWithSameAsGeneralSelected>true</yseop-yml:onlyOneItemBeginWithSameAsGeneralSelected>
+                                <yseop-yml:onlyOneItemBeginWithSpecificText/>
+                                <yseop-yml:onlyOneItemEndWithSameAsGeneralSelected>true</yseop-yml:onlyOneItemEndWithSameAsGeneralSelected>
+                                <yseop-yml:onlyOneItemEndWithSpecificText/>
+                                <yseop-yml:allItemsIdenticalBeginWithSameAsGeneralSelected>true</yseop-yml:allItemsIdenticalBeginWithSameAsGeneralSelected>
+                                <yseop-yml:allItemsIdenticalBeginWithSpecificText/>
+                                <yseop-yml:allItemsIdenticalEndWithSameAsGeneralSelected>true</yseop-yml:allItemsIdenticalEndWithSameAsGeneralSelected>
+                                <yseop-yml:allItemsIdenticalEndWithSpecificText/>
+                                <yseop-yml:noItemGenerateNothingSelected>true</yseop-yml:noItemGenerateNothingSelected>
+                                <yseop-yml:noItemSentenceText/>
+                                <yseop-yml:inGeneralBulletBeginSameAsListSelected>true</yseop-yml:inGeneralBulletBeginSameAsListSelected>
+                                <yseop-yml:inGeneralBulletBeginSpecificSelected>false</yseop-yml:inGeneralBulletBeginSpecificSelected>
+                                <yseop-yml:inGeneralBulletBeginSpecificText/>
+                                <yseop-yml:inGeneralBulletEndSameAsListSelected>true</yseop-yml:inGeneralBulletEndSameAsListSelected>
+                                <yseop-yml:inGeneralBulletEndSpecificSelected>false</yseop-yml:inGeneralBulletEndSpecificSelected>
+                                <yseop-yml:inGeneralBulletEndSpecificText/>
+                            </yseop-yml:beginEndWithOptions>
+                            <yseop-yml:limitSizeOptions>
+                                <yseop-yml:noLimitSelected>true</yseop-yml:noLimitSelected>
+                                <yseop-yml:onlyFirstElementsSelected>true</yseop-yml:onlyFirstElementsSelected>
+                                <yseop-yml:onlyFirstElementsNumberValue>3</yseop-yml:onlyFirstElementsNumberValue>
+                                <yseop-yml:sentenceSizeTypeValue>30</yseop-yml:sentenceSizeTypeValue>
+                                <yseop-yml:limitByTypeValue>words</yseop-yml:limitByTypeValue>
+                                <yseop-yml:limitByTypeNumber>0</yseop-yml:limitByTypeNumber>
+                                <yseop-yml:sentenceEndEtcSelected>true</yseop-yml:sentenceEndEtcSelected>
+                                <yseop-yml:sentenceEndOtherText/>
+                                <yseop-yml:hasWordCharOptions>true</yseop-yml:hasWordCharOptions>
+                            </yseop-yml:limitSizeOptions>
+                        </yseop-yml:singleSentenceLinkAssembly>
+                    </yseop-yml:inline-assemblies>
+                    <yseop-yml:inline-dslFunctionCalls/>
+                </yseop-yml:granuleContent>
+            </yseop-yml:granuleUnilingueContent>
+        </yseop-yml:granuleI18nContents>
+        <yseop-yml:dslCondition/>
+        <yseop-yml:name/>
+        <yseop-yml:creationDate>2012-10-04T21:06:47.281Z</yseop-yml:creationDate>
+        <yseop-yml:properties identifier="048fcf5f-6a90-4edd-a538-7ee3468790fd">
+            <yseop-yml:property identifier="048fcf5f-6a90-4edd-a538-7ee3468790fd|condition" type="YML_PROPERTY" name="condition"></yseop-yml:property>
+        </yseop-yml:properties>
+    </yseop-yml:textGranule>
+    <yseop-yml:localVariables/>
+    <yseop-yml:advancedContent>--> local HashMap hashMapByBrand1
+--> action {
+    
+    hashMapByBrand1 = new(HashMap)
+    if(getGeneralData().businessSegmentOrderedList != null){
+    hashMapByBrand1 = getGeneralData().businessSegmentOrderedList.groupItems(_KEY: BusinessSegment::businessSegmentRanking, _ASCENDANT)
+    
+    }
+   this.text.write();
+           }</yseop-yml:advancedContent>
+    <yseop-yml:functionParameters>
+        <yseop-yml:parameters/>
+    </yseop-yml:functionParameters>
+    <yseop-yml:ymlParameters/>
+    <yseop-yml:name>finalDocument</yseop-yml:name>
+    <yseop-yml:creationDate>2012-10-04T21:06:47.076Z</yseop-yml:creationDate>
+    <yseop-yml:properties identifier="9becc28f-c601-4ee4-a988-1d1d619b6f81">
+        <yseop-yml:property identifier="9becc28f-c601-4ee4-a988-1d1d619b6f81|dsl" type="YML_PROPERTY" name="dsl">"old Moodys result"</yseop-yml:property>
+    </yseop-yml:properties>
+</yseop-yml:ymlTextFunction>

@@ -1,0 +1,67 @@
+LibGeography:Country C_UMI
+  --> iso3166_1_numeric_code  "581"
+  --> iso3166_1_alpha_2       "UM"
+  --> iso3166_1_alpha_3       "UMI"
+  --> label
+    -> MultilingualText
+      --> i18nName_fr
+        -> NlgSubstantive
+          --> root    "Îles mineures éloignées des États-Unis"
+          --> plural  "Îles mineures éloignées des États-Unis"
+          --> gender  FEMININE
+          --> number  PLURAL
+        ;
+      --> i18nName_en
+        -> NlgSubstantive
+          --> root    "United States Minor Outlying Islands"
+          --> plural  "United States Minor Outlying Islands"
+          --> gender  INANIMATE
+          --> number  PLURAL
+        ;
+      --> i18nName_es
+        -> NlgSubstantive
+          --> root    "Islas menores alejadas de los Estados Unidos"
+          --> plural  "Islas menores alejadas de los Estados Unidos"
+          --> gender  MASCULINE
+          --> number  PLURAL
+        ;
+      --> i18nName_de
+        -> NlgSubstantive
+          --> root    "Kleinere Amerikanische Überseeinseln"
+          --> plural  "Kleinere Amerikanische Überseeinseln"
+          --> gender  NEUTRAL
+          --> number  PLURAL
+        ;
+      --> i18nName_ja
+        -> NlgSubstantive
+          --> root    "アメリカ合衆国外諸島"
+          --> plural  "アメリカ合衆国外諸島"
+          --> gender  INANIMATE
+          --> number  PLURAL
+        ;
+    ;
+  --> demonym
+    -> MultilingualText
+    ;
+  --> adjective
+    -> MultilingualText
+      --> i18nName_fr
+        -> NlgAdjective
+          --> root      "des Îles mineures éloignées des États-Unis"
+        ;
+      --> i18nName_en
+        -> NlgAdjective
+          --> root      "of the United States Minor Outlying Islands"
+        ;
+      --> i18nName_es
+        -> NlgAdjective
+          --> root      "de las Islas menores alejadas de los Estados Unidos"
+        ;
+      --> i18nName_de
+        -> NlgAdjective
+          --> root      "der Kleineren Amerikanischen Überseeinseln"
+        ;
+    ;
+  --> useArticle_fr  true
+  --> useArticle_en  true
+;

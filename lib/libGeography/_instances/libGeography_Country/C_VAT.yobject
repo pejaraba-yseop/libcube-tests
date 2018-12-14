@@ -1,0 +1,77 @@
+LibGeography:Country C_VAT
+  --> iso3166_1_numeric_code  "336"
+  --> iso3166_1_alpha_2       "VA"
+  --> iso3166_1_alpha_3       "VAT"
+  --> label
+    -> MultilingualText
+      --> i18nName_fr
+        -> NlgSubstantive
+          --> root    "Vatican"
+          --> plural  "Vatican"
+          --> gender  MASCULINE
+          --> number  SINGULAR
+        ;
+      --> i18nName_en
+        -> NlgSubstantive
+          --> root    "Vatican City "
+          --> plural  "Vatican City "
+          --> gender  INANIMATE
+          --> number  SINGULAR
+        ;
+      --> i18nName_es
+        -> NlgSubstantive
+          --> root    "Santa Sede"
+          --> plural  "Santa Sede"
+          --> gender  MASCULINE
+          --> number  SINGULAR
+        ;
+      --> i18nName_de
+        -> NlgSubstantive
+          --> root    "Vatikanstadt"
+          --> plural  "Vatikanstadt"
+          --> gender  NEUTRAL
+          --> number  SINGULAR
+        ;
+      --> i18nName_ja
+        -> NlgSubstantive
+          --> root    "バチカン市国"
+          --> plural  "バチカン市国"
+          --> gender  INANIMATE
+          --> number  SINGULAR
+        ;
+    ;
+  --> demonym
+    -> MultilingualText
+      --> i18nName_fr  "du Saint-Siège"
+      --> i18nName_en
+        -> NlgGenderAgreeableSubstantive
+          --> masculine "of the Holy See"
+          --> feminine  "of the Vatican"
+        ;
+      --> i18nName_es  "de la Santa Sede"
+      --> i18nName_de  "der Vatikanstadt"
+    ;
+  --> adjective
+    -> MultilingualText
+      --> i18nName_fr
+        -> NlgAdjective
+          --> root      "du Saint-Siège"
+          --> feminine  "de l’État de la"
+        ;
+      --> i18nName_en
+        -> NlgAdjective
+          --> root      "of the Holy See"
+          --> feminine  "of the Vatican"
+        ;
+      --> i18nName_es
+        -> NlgAdjective
+          --> root      "de la Santa Sede"
+        ;
+      --> i18nName_de
+        -> NlgAdjective
+          --> root      "vatikanisch"
+        ;
+    ;
+  --> useArticle_fr  true
+  --> useArticle_en  false
+;

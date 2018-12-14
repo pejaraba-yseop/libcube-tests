@@ -1,0 +1,80 @@
+LibGeography:Country C_GEO
+  --> iso3166_1_numeric_code  "268"
+  --> iso3166_1_alpha_2       "GE"
+  --> iso3166_1_alpha_3       "GEO"
+  --> label
+    -> MultilingualText
+      --> i18nName_fr
+        -> NlgSubstantive
+          --> root    "Géorgie"
+          --> plural  "Géorgie"
+          --> gender  FEMININE
+          --> number  SINGULAR
+        ;
+      --> i18nName_en
+        -> NlgSubstantive
+          --> root    "Georgia"
+          --> plural  "Georgia"
+          --> gender  INANIMATE
+          --> number  SINGULAR
+        ;
+      --> i18nName_es
+        -> NlgSubstantive
+          --> root    "Georgia"
+          --> plural  "Georgia"
+          --> gender  FEMININE
+          --> number  SINGULAR
+        ;
+      --> i18nName_de
+        -> NlgSubstantive
+          --> root    "Georgien"
+          --> plural  "Georgien"
+          --> gender  NEUTRAL
+          --> number  SINGULAR
+        ;
+      --> i18nName_ja
+        -> NlgSubstantive
+          --> root    "ジョージア州"
+          --> plural  "ジョージア州"
+          --> gender  INANIMATE
+          --> number  SINGULAR
+        ;
+    ;
+  --> demonym
+    -> MultilingualText
+      --> i18nName_fr
+        -> NlgGenderAgreeableSubstantive
+          --> masculine "Géorgien"
+          --> feminine  "Géorgienne"
+        ;
+      --> i18nName_en  "Georgian"
+      --> i18nName_es  "georgiano"
+      --> i18nName_de
+        -> NlgGenderAgreeableSubstantive
+          --> masculine "Georgier"
+          --> feminine  "Georgierin"
+        ;
+    ;
+  --> adjective
+    -> MultilingualText
+      --> i18nName_fr
+        -> NlgAdjective
+          --> root      "géorgien"
+          --> feminine  "géorgienne"
+        ;
+      --> i18nName_en
+        -> NlgAdjective
+          --> root      "Georgian"
+        ;
+      --> i18nName_es
+        -> NlgAdjective
+          --> root      "georgiano"
+        ;
+      --> i18nName_de
+        -> NlgAdjective
+          --> root      "georgisch"
+        ;
+    ;
+  --> useArticle_fr  true
+  --> useArticle_en  false
+;

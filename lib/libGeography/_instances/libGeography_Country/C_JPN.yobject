@@ -1,0 +1,80 @@
+LibGeography:Country C_JPN
+  --> iso3166_1_numeric_code  "392"
+  --> iso3166_1_alpha_2       "JP"
+  --> iso3166_1_alpha_3       "JPN"
+  --> label
+    -> MultilingualText
+      --> i18nName_fr
+        -> NlgSubstantive
+          --> root    "Japon"
+          --> plural  "Japon"
+          --> gender  MASCULINE
+          --> number  SINGULAR
+        ;
+      --> i18nName_en
+        -> NlgSubstantive
+          --> root    "Japan"
+          --> plural  "Japan"
+          --> gender  INANIMATE
+          --> number  SINGULAR
+        ;
+      --> i18nName_es
+        -> NlgSubstantive
+          --> root    "Japón"
+          --> plural  "Japón"
+          --> gender  MASCULINE
+          --> number  SINGULAR
+        ;
+      --> i18nName_de
+        -> NlgSubstantive
+          --> root    "Japan"
+          --> plural  "Japan"
+          --> gender  NEUTRAL
+          --> number  SINGULAR
+        ;
+      --> i18nName_ja
+        -> NlgSubstantive
+          --> root    "日本"
+          --> plural  "日本"
+          --> gender  INANIMATE
+          --> number  SINGULAR
+        ;
+    ;
+  --> demonym
+    -> MultilingualText
+      --> i18nName_fr
+        -> NlgGenderAgreeableSubstantive
+          --> masculine "Japonais"
+          --> feminine  "Japonaise"
+        ;
+      --> i18nName_en  "Japanese"
+      --> i18nName_es  "japonés"
+      --> i18nName_de
+        -> NlgGenderAgreeableSubstantive
+          --> masculine "Japaner"
+          --> feminine  "Japanerin"
+        ;
+    ;
+  --> adjective
+    -> MultilingualText
+      --> i18nName_fr
+        -> NlgAdjective
+          --> root      "japonais"
+          --> feminine  "japonaise"
+        ;
+      --> i18nName_en
+        -> NlgAdjective
+          --> root      "Japanese"
+        ;
+      --> i18nName_es
+        -> NlgAdjective
+          --> root      "japonés"
+        ;
+      --> i18nName_de
+        -> NlgAdjective
+          --> root      "japanisch"
+        ;
+    ;
+  --> useArticle_fr  true
+  --> useArticle_en  false
+;

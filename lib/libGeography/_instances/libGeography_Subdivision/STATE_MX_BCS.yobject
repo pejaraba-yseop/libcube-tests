@@ -1,0 +1,47 @@
+LibGeography:Subdivision STATE_MX_BCS
+  --> iso3166_2    "MX-BCS"
+  --> postal_code  "BS"
+  --> status       STATE
+  --> label
+    -> MultilingualText
+      --> i18nName_fr
+        -> NlgSubstantive
+          --> root    "Basse-Californie-du-Sud"
+          --> plural  "Basse-Californie-du-Sud"
+          --> number  SINGULAR
+        ;
+      --> i18nName_en
+        -> NlgSubstantive
+          --> root    "Baja California Sur"
+          --> plural  "Baja California Sur"
+          --> gender  INANIMATE
+          --> number  SINGULAR
+        ;
+      --> i18nName_es
+        -> NlgSubstantive
+          --> root    "Baja California Sur"
+          --> plural  "Baja California Sur"
+          --> number  SINGULAR
+        ;
+      --> i18nName_de
+        -> NlgSubstantive
+          --> root    "Baja California Sur"
+          --> plural  "Baja California Sur"
+          --> gender  NEUTRAL
+          --> number  SINGULAR
+        ;
+      --> i18nName_ja
+        -> NlgSubstantive
+          --> root    "バハ・カリフォルニア・スル州"
+          --> plural  "バハ・カリフォルニア・スル州"
+          --> gender  INANIMATE
+          --> number  SINGULAR
+        ;
+    ;
+  --> demonym
+    -> MultilingualText
+    ;
+  --> adjective
+    -> MultilingualText
+    ;
+;

@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<yseop-yml:ymlRule xmlns:yseop-yml="http://www.yseop.com/yml/storage" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" domainModelVersion="3" identifier="5ea89de3-99d6-4840-9f5f-8e1eab6d31bb">
+    <yseop-yml:content>?businessSegment.businessSegmentNameEnglish = "aviation";</yseop-yml:content>
+    <yseop-yml:content>?businessSegment in BusinessSegment
+?businessSegment.businessSegmentName == "Aeronavegación"</yseop-yml:content>
+    <yseop-yml:name>AeronavegacionToEnglish</yseop-yml:name>
+    <yseop-yml:properties identifier="ceb6d599-1d9c-40a0-a55c-f0eaf172373d">
+        <yseop-yml:property identifier="ceb6d599-1d9c-40a0-a55c-f0eaf172373d|dsl" type="YML_PROPERTY" name="dsl">"Aeronavegacion to English"</yseop-yml:property>
+        <yseop-yml:property identifier="ceb6d599-1d9c-40a0-a55c-f0eaf172373d|disabled" type="GENERATION_PROPERTY" name="disabled">true</yseop-yml:property>
+    </yseop-yml:properties>
+</yseop-yml:ymlRule>

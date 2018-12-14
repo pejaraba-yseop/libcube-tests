@@ -1,0 +1,26 @@
+LibGeography:Region US_REG_GREAT_LAKES
+  --> label
+    -> MultilingualText
+      --> i18nName_en
+        -> NlgSubstantive
+          --> root    "Great Lakes"
+          --> plural  "Great Lakes"
+          --> gender  INANIMATE
+          --> number  SINGULAR
+        ;
+      --> i18nName_ja
+        -> NlgSubstantive
+          --> root    "五大湖"
+          --> plural  "五大湖"
+          --> gender  INANIMATE
+          --> number  SINGULAR
+        ;
+    ;
+  --> demonym
+    -> MultilingualText
+    ;
+  --> adjective
+    -> MultilingualText
+    ;
+  --> useArticle_en  true
+;

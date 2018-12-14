@@ -1,0 +1,178 @@
+interface LibCube:Dimension
+    field members
+        --> domains LibCube:Member
+        --> documentation "All the different members of a dimension (i.e. all the levels of a hierarchy)"
+        --> xmlMapping XmlMappingProperty_SAVE
+        --> multivalued true
+        --> dsl -> Textualization
+            --> language LANG_en
+            --> root "members"
+            --> number PLURAL
+        ;
+    field defaultMember
+        --> domains LibCube:Member
+        --> documentation "The default member in case the dimension is not defined for a fact"
+        --> xmlMapping XmlMappingProperty_SAVE
+        --> dsl -> Textualization
+            --> language LANG_en
+            --> root "default member"
+            --> number SINGULAR
+        ;
+    field isOptional
+        --> domains Boolean
+        --> documentation "Defines if the dimension may not appear strictly in every fact"
+        --> defaultValue false
+        --> xmlMapping XmlMappingProperty_SAVE
+        --> dsl -> Textualization
+            --> language LANG_en
+            --> root "is optional"
+            --> number SINGULAR
+        ;           
+    field hierarchies
+        --> domains LibCube:Hierarchy
+        --> documentation "The hierarchy of the dimension. A typical hierarchy would be the balance lines of a an account."
+        --> xmlMapping XmlMappingProperty_NO_SAVE
+        --> multivalued true
+        --> dsl -> Textualization
+            --> language LANG_en
+            --> root "hierarchies"
+            --> number PLURAL
+        ;
+    field hierarchyMembersAccesors
+        --> domains LibCube:HierarchyMembersAccesor
+        --> documentation "The hierarchy accessors of the dimension."
+        --> xmlMapping XmlMappingProperty_NO_SAVE
+        --> multivalued true
+        --> dsl -> Textualization
+            --> language LANG_en
+            --> root "hierarchies"
+            --> number PLURAL
+        ;        
+    field defaultHierarchy
+        --> domains LibCube:Hierarchy
+        --> xmlMapping XmlMappingProperty_NO_SAVE
+        --> dsl -> Textualization
+            --> language LANG_en
+            --> root "default hierarchy"
+            --> number SINGULAR
+        ;
+
+    field mdxName
+        --> domains String
+        --> xmlMapping XmlMappingProperty_SAVE
+        --> dsl -> Textualization
+            --> language LANG_en
+            --> root "mdxName"
+            --> number SINGULAR
+        ;
+   field className
+        --> domains String
+        --> xmlMapping XmlMappingProperty_SAVE
+        --> dsl -> Textualization
+            --> language LANG_en
+            --> root "className"
+            --> number SINGULAR
+        ;
+    
+    field mdxFullName
+        --> domains String
+        --> xmlMapping XmlMappingProperty_SAVE
+        --> dsl -> Textualization
+            --> language LANG_en
+            --> root "mdxFullName"
+            --> number SINGULAR
+        ;
+
+    method processDimension()
+    --> domains Void
+
+    method getElemFullMdxName(LibCube:HierarchyElement elem, LibCube:Hierarchy hierarchy)
+        --> domains String
+
+
+    method getHierarchyAccessor(LibCube:Hierarchy hierarchy)
+        --> domains LibCube:HierarchyMembersAccesor
+
+    classProperties
+    --> dsl -> Textualization
+        --> language LANG_en
+        --> root "Cube Dimension"
+        --> number SINGULAR
+    ;
+    --> trackInstances true
+    --> dynamicInstances  true 	
+;
+
+implementation LibCube:Dimension
+;
+
+function LibCube:Dimension::processDimension() 
+--> local LibCube:HierarchyMembersAccesor theAccessor
+--> action {
+  foreach(_hierarchy , this>>hierarchies) {   
+    theAccessor = new(LibCube:HierarchyMembersAccesor)
+    theAccessor.hierarchyIdentifier = _hierarchy.identifier
+    theAccessor.hierarchy = _hierarchy;
+    
+    foreach(_node , _hierarchy) {   
+      this.members := LibCube:Hierarchy(_node).value;
+
+      if (LibCube:Hierarchy(_node).depth() > 1) {
+        LibCube:HierarchyElement(_node.value).parent = _node.getParentNode().value;
+		if (LibCube:Hierarchy(_node).depth() > 2) {
+			LibCube:HierarchyElement(_node.value).grandparent = _node.getParentNode().getParentNode().value;
+		}
+      } else {
+        theAccessor.rootMember = LibCube:Hierarchy(_node).value
+      }
+
+      if(_node.isALeaf() == true) {               
+        LibCube:HierarchyElement(_node.value).isLeaf = true
+        theAccessor.leafMembers.add(_node.value)
+      } 
+
+      if(theAccessor.membersByLevel.containsKey(_node.depth()) == false){
+        theAccessor.membersByLevel.put(_node.depth(), new(List))
+      }
+
+      theAccessor.membersByLevel.get(_node.depth()).add(_node.value)
+    }
+    hierarchyMembersAccesors := theAccessor
+  }
+  
+  //Loop through the members and add dimension to members
+  foreach(_member , this>>members) {   
+    _member.dimension = this;
+  }  
+}
+;
+
+function LibCube:Dimension::getElemFullMdxName(LibCube:HierarchyElement elem, LibCube:Hierarchy hierarchy)
+--> local String fullMdxName, LibCube:HierarchyElement currentElem
+--> action {
+    currentElem = elem;
+    while(currentElem != null){
+        if(fullMdxName == null){
+            fullMdxName = concat("[",currentElem.mdxName,"]");
+        }
+        else{
+            fullMdxName = concat("[",currentElem.mdxName,"]", ".", fullMdxName);
+        }
+        currentElem = currentElem.parent;
+    }
+    
+    fullMdxName = concat("[", this.mdxName, ".", hierarchy.mdxName, "].", fullMdxName);
+    return fullMdxName;
+}
+;
+
+
+function LibCube:Dimension::getHierarchyAccessor(LibCube:Hierarchy hierarchy)
+--> action {
+    foreach(_accessor, hierarchyMembersAccesors){
+        if(_accessor.hierarchy == hierarchy){
+            return _accessor;
+        }
+    }
+}
+;

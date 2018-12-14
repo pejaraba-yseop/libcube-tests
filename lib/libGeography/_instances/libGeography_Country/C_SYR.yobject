@@ -1,0 +1,80 @@
+LibGeography:Country C_SYR
+  --> iso3166_1_numeric_code  "760"
+  --> iso3166_1_alpha_2       "SY"
+  --> iso3166_1_alpha_3       "SYR"
+  --> label
+    -> MultilingualText
+      --> i18nName_fr
+        -> NlgSubstantive
+          --> root    "Syrie"
+          --> plural  "Syrie"
+          --> gender  FEMININE
+          --> number  SINGULAR
+        ;
+      --> i18nName_en
+        -> NlgSubstantive
+          --> root    "Syrian Arab Republic"
+          --> plural  "Syrian Arab Republic"
+          --> gender  INANIMATE
+          --> number  SINGULAR
+        ;
+      --> i18nName_es
+        -> NlgSubstantive
+          --> root    "Siria"
+          --> plural  "Siria"
+          --> gender  MASCULINE
+          --> number  SINGULAR
+        ;
+      --> i18nName_de
+        -> NlgSubstantive
+          --> root    "Syrien"
+          --> plural  "Syrien"
+          --> gender  NEUTRAL
+          --> number  SINGULAR
+        ;
+      --> i18nName_ja
+        -> NlgSubstantive
+          --> root    "シリアアラブ共和国"
+          --> plural  "シリアアラブ共和国"
+          --> gender  INANIMATE
+          --> number  SINGULAR
+        ;
+    ;
+  --> demonym
+    -> MultilingualText
+      --> i18nName_fr
+        -> NlgGenderAgreeableSubstantive
+          --> masculine "Syrien"
+          --> feminine  "Syrienne"
+        ;
+      --> i18nName_en  "Syrian"
+      --> i18nName_es  "sirio"
+      --> i18nName_de
+        -> NlgGenderAgreeableSubstantive
+          --> masculine "Syrer"
+          --> feminine  "Syrerin"
+        ;
+    ;
+  --> adjective
+    -> MultilingualText
+      --> i18nName_fr
+        -> NlgAdjective
+          --> root      "syrien"
+          --> feminine  "syrienne"
+        ;
+      --> i18nName_en
+        -> NlgAdjective
+          --> root      "Syrian"
+        ;
+      --> i18nName_es
+        -> NlgAdjective
+          --> root      "sirio"
+        ;
+      --> i18nName_de
+        -> NlgAdjective
+          --> root      "syrisch"
+        ;
+    ;
+  --> useArticle_fr  true
+  --> useArticle_en  false
+;

@@ -1,0 +1,55 @@
+LibGeography:Subdivision STATE_US_MI
+  --> iso3166_2    "US-MI"
+  --> postal_code  "MI"
+  --> status       STATE
+  --> label
+    -> MultilingualText
+      --> i18nName_fr
+        -> NlgSubstantive
+          --> root    "Michigan"
+          --> plural  "Michigan"
+          --> gender  MASCULINE
+          --> number  SINGULAR
+        ;
+      --> i18nName_en
+        -> NlgSubstantive
+          --> root    "Michigan"
+          --> plural  "Michigan"
+          --> gender  INANIMATE
+          --> number  SINGULAR
+        ;
+      --> i18nName_es
+        -> NlgSubstantive
+          --> root    "Míchigan​"
+          --> plural  "Míchigan​"
+          --> gender  MASCULINE
+          --> number  SINGULAR
+        ;
+      --> i18nName_de
+        -> NlgSubstantive
+          --> root    "Michigan"
+          --> plural  "Michigan"
+          --> gender  NEUTRAL
+          --> number  SINGULAR
+        ;
+      --> i18nName_ja
+        -> NlgSubstantive
+          --> root    " ミシガン州"
+          --> plural  " ミシガン州"
+          --> gender  INANIMATE
+          --> number  SINGULAR
+        ;
+    ;
+  --> demonym
+    -> MultilingualText
+      --> i18nName_en  "Michiganian"
+    ;
+  --> adjective
+    -> MultilingualText
+      --> i18nName_en
+        -> NlgAdjective
+          --> root      "Michiganian"
+        ;
+    ;
+  --> useArticle_en  false
+;

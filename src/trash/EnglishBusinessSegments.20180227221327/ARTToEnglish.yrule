@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<yseop-yml:ymlRule xmlns:yseop-yml="http://www.yseop.com/yml/storage" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" domainModelVersion="3" identifier="5c12df3f-04b1-4dfb-af39-01578ee7d55b">
+    <yseop-yml:content>?businessSegment.businessSegmentNameEnglish = "workers compensation";</yseop-yml:content>
+    <yseop-yml:content>?businessSegment in BusinessSegment
+?businessSegment.businessSegmentName == "ART"</yseop-yml:content>
+    <yseop-yml:name>ARTToEnglish</yseop-yml:name>
+    <yseop-yml:properties identifier="ceb6d599-1d9c-40a0-a55c-f0eaf172373d">
+        <yseop-yml:property identifier="ceb6d599-1d9c-40a0-a55c-f0eaf172373d|dsl" type="YML_PROPERTY" name="dsl">"ART to English"</yseop-yml:property>
+        <yseop-yml:property identifier="ceb6d599-1d9c-40a0-a55c-f0eaf172373d|disabled" type="GENERATION_PROPERTY" name="disabled">true</yseop-yml:property>
+    </yseop-yml:properties>
+</yseop-yml:ymlRule>

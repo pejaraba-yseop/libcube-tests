@@ -1,0 +1,80 @@
+LibGeography:Country C_DNK
+  --> iso3166_1_numeric_code  "208"
+  --> iso3166_1_alpha_2       "DK"
+  --> iso3166_1_alpha_3       "DNK"
+  --> label
+    -> MultilingualText
+      --> i18nName_fr
+        -> NlgSubstantive
+          --> root    "Danemark"
+          --> plural  "Danemark"
+          --> gender  MASCULINE
+          --> number  SINGULAR
+        ;
+      --> i18nName_en
+        -> NlgSubstantive
+          --> root    "Denmark"
+          --> plural  "Denmark"
+          --> gender  INANIMATE
+          --> number  SINGULAR
+        ;
+      --> i18nName_es
+        -> NlgSubstantive
+          --> root    "Dinamarca"
+          --> plural  "Dinamarca"
+          --> gender  MASCULINE
+          --> number  SINGULAR
+        ;
+      --> i18nName_de
+        -> NlgSubstantive
+          --> root    "Dänemark"
+          --> plural  "Dänemark"
+          --> gender  NEUTRAL
+          --> number  SINGULAR
+        ;
+      --> i18nName_ja
+        -> NlgSubstantive
+          --> root    "デンマーク"
+          --> plural  "デンマーク"
+          --> gender  INANIMATE
+          --> number  SINGULAR
+        ;
+    ;
+  --> demonym
+    -> MultilingualText
+      --> i18nName_fr
+        -> NlgGenderAgreeableSubstantive
+          --> masculine "Danois"
+          --> feminine  "Danoise"
+        ;
+      --> i18nName_en  "Dane"
+      --> i18nName_es  "danés"
+      --> i18nName_de
+        -> NlgGenderAgreeableSubstantive
+          --> masculine "Däne"
+          --> feminine  "Dänin"
+        ;
+    ;
+  --> adjective
+    -> MultilingualText
+      --> i18nName_fr
+        -> NlgAdjective
+          --> root      "danois"
+          --> feminine  "danoise"
+        ;
+      --> i18nName_en
+        -> NlgAdjective
+          --> root      "Danish"
+        ;
+      --> i18nName_es
+        -> NlgAdjective
+          --> root      "danés"
+        ;
+      --> i18nName_de
+        -> NlgAdjective
+          --> root      "dänisch"
+        ;
+    ;
+  --> useArticle_fr  true
+  --> useArticle_en  false
+;

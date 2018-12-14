@@ -1,0 +1,80 @@
+LibGeography:Country C_SWE
+  --> iso3166_1_numeric_code  "752"
+  --> iso3166_1_alpha_2       "SE"
+  --> iso3166_1_alpha_3       "SWE"
+  --> label
+    -> MultilingualText
+      --> i18nName_fr
+        -> NlgSubstantive
+          --> root    "Suède"
+          --> plural  "Suède"
+          --> gender  FEMININE
+          --> number  SINGULAR
+        ;
+      --> i18nName_en
+        -> NlgSubstantive
+          --> root    "Sweden"
+          --> plural  "Sweden"
+          --> gender  INANIMATE
+          --> number  SINGULAR
+        ;
+      --> i18nName_es
+        -> NlgSubstantive
+          --> root    "Suecia"
+          --> plural  "Suecia"
+          --> gender  MASCULINE
+          --> number  SINGULAR
+        ;
+      --> i18nName_de
+        -> NlgSubstantive
+          --> root    "Schweden"
+          --> plural  "Schweden"
+          --> gender  NEUTRAL
+          --> number  SINGULAR
+        ;
+      --> i18nName_ja
+        -> NlgSubstantive
+          --> root    "スウェーデン"
+          --> plural  "スウェーデン"
+          --> gender  INANIMATE
+          --> number  SINGULAR
+        ;
+    ;
+  --> demonym
+    -> MultilingualText
+      --> i18nName_fr
+        -> NlgGenderAgreeableSubstantive
+          --> masculine "Suédois"
+          --> feminine  "Suédoise"
+        ;
+      --> i18nName_en  "Swede"
+      --> i18nName_es  "sueco"
+      --> i18nName_de
+        -> NlgGenderAgreeableSubstantive
+          --> masculine "Schwede"
+          --> feminine  "Schwedin"
+        ;
+    ;
+  --> adjective
+    -> MultilingualText
+      --> i18nName_fr
+        -> NlgAdjective
+          --> root      "suédois"
+          --> feminine  "suédoise"
+        ;
+      --> i18nName_en
+        -> NlgAdjective
+          --> root      "Swedish"
+        ;
+      --> i18nName_es
+        -> NlgAdjective
+          --> root      "sueco"
+        ;
+      --> i18nName_de
+        -> NlgAdjective
+          --> root      "schwedisch"
+        ;
+    ;
+  --> useArticle_fr  true
+  --> useArticle_en  false
+;

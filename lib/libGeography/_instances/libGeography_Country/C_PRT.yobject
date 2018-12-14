@@ -1,0 +1,80 @@
+LibGeography:Country C_PRT
+  --> iso3166_1_numeric_code  "620"
+  --> iso3166_1_alpha_2       "PT"
+  --> iso3166_1_alpha_3       "PRT"
+  --> label
+    -> MultilingualText
+      --> i18nName_fr
+        -> NlgSubstantive
+          --> root    "Portugal"
+          --> plural  "Portugal"
+          --> gender  MASCULINE
+          --> number  SINGULAR
+        ;
+      --> i18nName_en
+        -> NlgSubstantive
+          --> root    "Portugal"
+          --> plural  "Portugal"
+          --> gender  INANIMATE
+          --> number  SINGULAR
+        ;
+      --> i18nName_es
+        -> NlgSubstantive
+          --> root    "Portugal"
+          --> plural  "Portugal"
+          --> gender  FEMININE
+          --> number  SINGULAR
+        ;
+      --> i18nName_de
+        -> NlgSubstantive
+          --> root    "Portugal"
+          --> plural  "Portugal"
+          --> gender  NEUTRAL
+          --> number  SINGULAR
+        ;
+      --> i18nName_ja
+        -> NlgSubstantive
+          --> root    "ポルトガル"
+          --> plural  "ポルトガル"
+          --> gender  INANIMATE
+          --> number  SINGULAR
+        ;
+    ;
+  --> demonym
+    -> MultilingualText
+      --> i18nName_fr
+        -> NlgGenderAgreeableSubstantive
+          --> masculine "Portugais"
+          --> feminine  "Portugaise"
+        ;
+      --> i18nName_en  "Portuguese"
+      --> i18nName_es  "portugués"
+      --> i18nName_de
+        -> NlgGenderAgreeableSubstantive
+          --> masculine "Portugiese"
+          --> feminine  "Portugiesin"
+        ;
+    ;
+  --> adjective
+    -> MultilingualText
+      --> i18nName_fr
+        -> NlgAdjective
+          --> root      "portugais"
+          --> feminine  "portugaise"
+        ;
+      --> i18nName_en
+        -> NlgAdjective
+          --> root      "Portuguese"
+        ;
+      --> i18nName_es
+        -> NlgAdjective
+          --> root      "portugués"
+        ;
+      --> i18nName_de
+        -> NlgAdjective
+          --> root      "portugiesisch"
+        ;
+    ;
+  --> useArticle_fr  true
+  --> useArticle_en  false
+;

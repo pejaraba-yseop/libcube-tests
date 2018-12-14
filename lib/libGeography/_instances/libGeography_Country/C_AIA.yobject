@@ -1,0 +1,75 @@
+LibGeography:Country C_AIA
+  --> iso3166_1_numeric_code  "660"
+  --> iso3166_1_alpha_2       "AI"
+  --> iso3166_1_alpha_3       "AIA"
+  --> label
+    -> MultilingualText
+      --> i18nName_fr
+        -> NlgSubstantive
+          --> root    "Anguilla"
+          --> plural  "Anguilla"
+          --> gender  FEMININE
+          --> number  SINGULAR
+        ;
+      --> i18nName_en
+        -> NlgSubstantive
+          --> root    "Anguilla"
+          --> plural  "Anguilla"
+          --> gender  INANIMATE
+          --> number  SINGULAR
+        ;
+      --> i18nName_es
+        -> NlgSubstantive
+          --> root    "Anguila"
+          --> plural  "Anguila"
+          --> gender  FEMININE
+          --> number  SINGULAR
+        ;
+      --> i18nName_de
+        -> NlgSubstantive
+          --> root    "Anguilla"
+          --> plural  "Anguilla"
+          --> gender  NEUTRAL
+          --> number  SINGULAR
+        ;
+      --> i18nName_ja
+        -> NlgSubstantive
+          --> root    "アンギラ"
+          --> plural  "アンギラ"
+          --> gender  INANIMATE
+          --> number  SINGULAR
+        ;
+    ;
+  --> demonym
+    -> MultilingualText
+      --> i18nName_fr  "d’Anguilla"
+      --> i18nName_en  "Anguillan"
+      --> i18nName_es  "anguilense"
+      --> i18nName_de
+        -> NlgGenderAgreeableSubstantive
+          --> masculine "Anguillaner"
+          --> feminine  "Anguillanerin"
+        ;
+    ;
+  --> adjective
+    -> MultilingualText
+      --> i18nName_fr
+        -> NlgAdjective
+          --> root      "d’Anguilla"
+        ;
+      --> i18nName_en
+        -> NlgAdjective
+          --> root      "Anguillan"
+        ;
+      --> i18nName_es
+        -> NlgAdjective
+          --> root      "anguilense"
+        ;
+      --> i18nName_de
+        -> NlgAdjective
+          --> root      "anguillanisch"
+        ;
+    ;
+  --> useArticle_fr  false
+  --> useArticle_en  false
+;

@@ -1,0 +1,52 @@
+LibGeography:Region UN_REG_EUROPE_E
+  --> label
+    -> MultilingualText
+      --> i18nName_fr
+        -> NlgSubstantive
+          --> root    "Europe de l'Est"
+          --> plural  "Europe de l'Est"
+          --> gender  FEMININE
+          --> number  SINGULAR
+        ;
+      --> i18nName_en
+        -> NlgSubstantive
+          --> root    "Eastern Europe"
+          --> plural  "Eastern Europe"
+          --> gender  INANIMATE
+          --> number  SINGULAR
+        ;
+      --> i18nName_es
+        -> NlgSubstantive
+          --> root    "Europa del este"
+          --> plural  "Europa del este"
+          --> gender  FEMININE
+          --> number  SINGULAR
+        ;
+      --> i18nName_de
+        -> NlgSubstantive
+          --> root    "Östliches Europa"
+          --> plural  "Östliches Europa"
+          --> gender  NEUTRAL
+          --> number  SINGULAR
+        ;
+      --> i18nName_ja
+        -> NlgSubstantive
+          --> root    "東ヨーロッパ "
+          --> plural  "東ヨーロッパ "
+          --> gender  INANIMATE
+          --> number  SINGULAR
+        ;
+    ;
+  --> demonym
+    -> MultilingualText
+      --> i18nName_en  "Eastern European"
+    ;
+  --> adjective
+    -> MultilingualText
+      --> i18nName_en
+        -> NlgAdjective
+          --> root      "Eastern European"
+        ;
+    ;
+  --> useArticle_en  false
+;

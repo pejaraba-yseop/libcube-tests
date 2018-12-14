@@ -1,0 +1,80 @@
+LibGeography:Country C_GRL
+  --> iso3166_1_numeric_code  "304"
+  --> iso3166_1_alpha_2       "GL"
+  --> iso3166_1_alpha_3       "GRL"
+  --> label
+    -> MultilingualText
+      --> i18nName_fr
+        -> NlgSubstantive
+          --> root    "Groenland"
+          --> plural  "Groenland"
+          --> gender  MASCULINE
+          --> number  SINGULAR
+        ;
+      --> i18nName_en
+        -> NlgSubstantive
+          --> root    "Greenland"
+          --> plural  "Greenland"
+          --> gender  INANIMATE
+          --> number  SINGULAR
+        ;
+      --> i18nName_es
+        -> NlgSubstantive
+          --> root    "Groenlandia"
+          --> plural  "Groenlandia"
+          --> gender  MASCULINE
+          --> number  SINGULAR
+        ;
+      --> i18nName_de
+        -> NlgSubstantive
+          --> root    "Grönland"
+          --> plural  "Grönland"
+          --> gender  NEUTRAL
+          --> number  SINGULAR
+        ;
+      --> i18nName_ja
+        -> NlgSubstantive
+          --> root    "グリーンランド"
+          --> plural  "グリーンランド"
+          --> gender  INANIMATE
+          --> number  SINGULAR
+        ;
+    ;
+  --> demonym
+    -> MultilingualText
+      --> i18nName_fr
+        -> NlgGenderAgreeableSubstantive
+          --> masculine "Groenlandais"
+          --> feminine  "Groenlandaise"
+        ;
+      --> i18nName_en  "Greenlander"
+      --> i18nName_es  "groenlandés"
+      --> i18nName_de
+        -> NlgGenderAgreeableSubstantive
+          --> masculine "Grönländer"
+          --> feminine  "Grönländerin"
+        ;
+    ;
+  --> adjective
+    -> MultilingualText
+      --> i18nName_fr
+        -> NlgAdjective
+          --> root      "groenlandais"
+          --> feminine  "groenlandaise"
+        ;
+      --> i18nName_en
+        -> NlgAdjective
+          --> root      "Greenlandic"
+        ;
+      --> i18nName_es
+        -> NlgAdjective
+          --> root      "groenlandés"
+        ;
+      --> i18nName_de
+        -> NlgAdjective
+          --> root      "grönländisch"
+        ;
+    ;
+  --> useArticle_fr  true
+  --> useArticle_en  false
+;

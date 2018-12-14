@@ -1,0 +1,99 @@
+interface LibCube:Measure
+    field label
+        --> domains Text
+        --> documentation "the label for the Measure The label of the member (i.e. what the member is called).  This field is the default text written by the toStringInStream function"
+        --> xmlMapping XmlMappingProperty_NO_SAVE
+        --> dsl -> Textualization
+            --> language LANG_en
+            --> root "label"
+            --> number SINGULAR
+        ;
+    field measureInfo
+        --> domains LibCube:MeasureInfo
+        --> xmlMapping XmlMappingProperty_NO_SAVE
+        --> dsl -> Textualization
+            --> language LANG_en
+            --> root "measure info"
+            --> number SINGULAR
+            --> hasDeterminer false
+        ;
+
+    field mdxName
+        --> domains String
+        --> xmlMapping XmlMappingProperty_SAVE
+        --> dsl -> Textualization
+            --> language LANG_en
+            --> root "mdxName"
+            --> number SINGULAR
+        ;
+    
+    field mdxFullName
+        --> domains String
+        --> xmlMapping XmlMappingProperty_SAVE
+        --> dsl -> Textualization
+            --> language LANG_en
+            --> root "mdxFullName"
+            --> number SINGULAR
+        ;
+
+    field includeInJointureConditions
+        --> domains Boolean
+        --> defaultValue true
+        --> xmlMapping XmlMappingProperty_SAVE
+        --> dsl -> Textualization
+            --> language LANG_en
+            --> root "includeInJointureConditions"
+            --> number SINGULAR
+        ;
+
+
+    method getMdxFullName()
+        --> domains String
+        
+    classProperties
+    --> dsl -> Textualization
+        --> language LANG_en
+        --> root "Cube Measure"
+        --> number SINGULAR
+    ;
+;
+
+implementation LibCube:Measure override {
+  toStringInStream function
+}
+;
+
+function LibCube:Measure::toStringInStream({[_KEY]: Symbol mode {__nullable},} args)
+static {
+   NlgRepresentant    REPRESENTANT_THE_MEASURE
+       --> referential \(
+                          \setTextGranuleGender(MASCULINE) 
+                          \value(label) 
+                       \)
+       --> anaphor \(
+                      \setTextGranuleGender(MASCULINE) 
+                      \value(label) 
+                   \)
+   ;
+}
+--> action
+    {
+        REPRESENTANT_THE_MEASURE.write (_REFERENT: this, args);
+    } 
+;   
+
+function LibCube:Measure::getMdxFullName()
+--> action
+    {    
+        if(mdxFullName == null && mdxName == null){
+            logWarning("Can't get MdxFullName from Measure, ", this.identifier, " because no mdx name was defined");
+            return null;
+        }
+        if(mdxFullName != null){
+            return mdxFullName;
+        }
+        else if(mdxName != null){
+            return concat("[Measures].[", mdxName, "]");
+        }
+    } 
+;   

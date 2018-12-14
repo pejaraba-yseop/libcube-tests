@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<yseop-yml:ymlRule xmlns:yseop-yml="http://www.yseop.com/yml/storage" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" domainModelVersion="3" identifier="c1876c1c-91cb-4c67-85c0-9a326cb4fede">
+    <yseop-yml:content>?netPremiumSegments.netPremiumSegmentEnglishName = "Other P&amp;C";</yseop-yml:content>
+    <yseop-yml:content>?netPremiumSegments in NetPremiumSegments
+?netPremiumSegments.netPremiumSegmentName == "Otros Riesgos"</yseop-yml:content>
+    <yseop-yml:name>OtrosRiesgos</yseop-yml:name>
+    <yseop-yml:properties identifier="528af4ae-096c-4bd9-9052-43fc7f007024">
+        <yseop-yml:property identifier="528af4ae-096c-4bd9-9052-43fc7f007024|dsl" type="YML_PROPERTY" name="dsl">"Otros Riesgos"</yseop-yml:property>
+        <yseop-yml:property identifier="528af4ae-096c-4bd9-9052-43fc7f007024|disabled" type="GENERATION_PROPERTY" name="disabled">true</yseop-yml:property>
+    </yseop-yml:properties>
+</yseop-yml:ymlRule>

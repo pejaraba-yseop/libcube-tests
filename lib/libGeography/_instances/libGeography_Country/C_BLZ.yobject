@@ -1,0 +1,80 @@
+LibGeography:Country C_BLZ
+  --> iso3166_1_numeric_code  "084"
+  --> iso3166_1_alpha_2       "BZ"
+  --> iso3166_1_alpha_3       "BLZ"
+  --> label
+    -> MultilingualText
+      --> i18nName_fr
+        -> NlgSubstantive
+          --> root    "Belize"
+          --> plural  "Belize"
+          --> gender  MASCULINE
+          --> number  SINGULAR
+        ;
+      --> i18nName_en
+        -> NlgSubstantive
+          --> root    "Belize"
+          --> plural  "Belize"
+          --> gender  INANIMATE
+          --> number  SINGULAR
+        ;
+      --> i18nName_es
+        -> NlgSubstantive
+          --> root    "Belice"
+          --> plural  "Belice"
+          --> gender  MASCULINE
+          --> number  SINGULAR
+        ;
+      --> i18nName_de
+        -> NlgSubstantive
+          --> root    "Belize"
+          --> plural  "Belize"
+          --> gender  NEUTRAL
+          --> number  SINGULAR
+        ;
+      --> i18nName_ja
+        -> NlgSubstantive
+          --> root    "ベリーズ"
+          --> plural  "ベリーズ"
+          --> gender  INANIMATE
+          --> number  SINGULAR
+        ;
+    ;
+  --> demonym
+    -> MultilingualText
+      --> i18nName_fr
+        -> NlgGenderAgreeableSubstantive
+          --> masculine "Bélizien"
+          --> feminine  "Bélizienne"
+        ;
+      --> i18nName_en  "Belizean"
+      --> i18nName_es  "beliceño"
+      --> i18nName_de
+        -> NlgGenderAgreeableSubstantive
+          --> masculine "Belizer"
+          --> feminine  "Belizerin"
+        ;
+    ;
+  --> adjective
+    -> MultilingualText
+      --> i18nName_fr
+        -> NlgAdjective
+          --> root      "bélizien"
+          --> feminine  "bélizienne"
+        ;
+      --> i18nName_en
+        -> NlgAdjective
+          --> root      "Belizean"
+        ;
+      --> i18nName_es
+        -> NlgAdjective
+          --> root      "beliceño"
+        ;
+      --> i18nName_de
+        -> NlgAdjective
+          --> root      "belizisch"
+        ;
+    ;
+  --> useArticle_fr  true
+  --> useArticle_en  false
+;

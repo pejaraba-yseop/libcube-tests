@@ -1,0 +1,80 @@
+LibGeography:Country C_BHR
+  --> iso3166_1_numeric_code  "048"
+  --> iso3166_1_alpha_2       "BH"
+  --> iso3166_1_alpha_3       "BHR"
+  --> label
+    -> MultilingualText
+      --> i18nName_fr
+        -> NlgSubstantive
+          --> root    "Bahreïn"
+          --> plural  "Bahreïn"
+          --> gender  MASCULINE
+          --> number  SINGULAR
+        ;
+      --> i18nName_en
+        -> NlgSubstantive
+          --> root    "Bahrain"
+          --> plural  "Bahrain"
+          --> gender  INANIMATE
+          --> number  SINGULAR
+        ;
+      --> i18nName_es
+        -> NlgSubstantive
+          --> root    "Baréin"
+          --> plural  "Baréin"
+          --> gender  MASCULINE
+          --> number  SINGULAR
+        ;
+      --> i18nName_de
+        -> NlgSubstantive
+          --> root    "Bahrain"
+          --> plural  "Bahrain"
+          --> gender  NEUTRAL
+          --> number  SINGULAR
+        ;
+      --> i18nName_ja
+        -> NlgSubstantive
+          --> root    "バーレーン"
+          --> plural  "バーレーン"
+          --> gender  INANIMATE
+          --> number  SINGULAR
+        ;
+    ;
+  --> demonym
+    -> MultilingualText
+      --> i18nName_fr
+        -> NlgGenderAgreeableSubstantive
+          --> masculine "Bahreïnien"
+          --> feminine  "Bahreïnienne"
+        ;
+      --> i18nName_en  "Bahraini"
+      --> i18nName_es  "bareiní"
+      --> i18nName_de
+        -> NlgGenderAgreeableSubstantive
+          --> masculine "Bahrainer"
+          --> feminine  "Bahrainerin"
+        ;
+    ;
+  --> adjective
+    -> MultilingualText
+      --> i18nName_fr
+        -> NlgAdjective
+          --> root      "bahreïnien"
+          --> feminine  "bahreïnienne"
+        ;
+      --> i18nName_en
+        -> NlgAdjective
+          --> root      "Bahraini"
+        ;
+      --> i18nName_es
+        -> NlgAdjective
+          --> root      "bareiní"
+        ;
+      --> i18nName_de
+        -> NlgAdjective
+          --> root      "bahrainisch"
+        ;
+    ;
+  --> useArticle_fr  true
+  --> useArticle_en  false
+;

@@ -1,0 +1,80 @@
+LibGeography:Country C_QAT
+  --> iso3166_1_numeric_code  "634"
+  --> iso3166_1_alpha_2       "QA"
+  --> iso3166_1_alpha_3       "QAT"
+  --> label
+    -> MultilingualText
+      --> i18nName_fr
+        -> NlgSubstantive
+          --> root    "Qatar"
+          --> plural  "Qatar"
+          --> gender  MASCULINE
+          --> number  SINGULAR
+        ;
+      --> i18nName_en
+        -> NlgSubstantive
+          --> root    "Qatar"
+          --> plural  "Qatar"
+          --> gender  INANIMATE
+          --> number  SINGULAR
+        ;
+      --> i18nName_es
+        -> NlgSubstantive
+          --> root    "Qatar"
+          --> plural  "Qatar"
+          --> gender  MASCULINE
+          --> number  SINGULAR
+        ;
+      --> i18nName_de
+        -> NlgSubstantive
+          --> root    "Katar"
+          --> plural  "Katar"
+          --> gender  NEUTRAL
+          --> number  SINGULAR
+        ;
+      --> i18nName_ja
+        -> NlgSubstantive
+          --> root    "カタール"
+          --> plural  "カタール"
+          --> gender  INANIMATE
+          --> number  SINGULAR
+        ;
+    ;
+  --> demonym
+    -> MultilingualText
+      --> i18nName_fr
+        -> NlgGenderAgreeableSubstantive
+          --> masculine "Qatarien"
+          --> feminine  "Qatarienne"
+        ;
+      --> i18nName_en  "Qatari"
+      --> i18nName_es  "catarí"
+      --> i18nName_de
+        -> NlgGenderAgreeableSubstantive
+          --> masculine "Katarer"
+          --> feminine  "Katarerin"
+        ;
+    ;
+  --> adjective
+    -> MultilingualText
+      --> i18nName_fr
+        -> NlgAdjective
+          --> root      "qatarien"
+          --> feminine  "qatarienne"
+        ;
+      --> i18nName_en
+        -> NlgAdjective
+          --> root      "Qatari"
+        ;
+      --> i18nName_es
+        -> NlgAdjective
+          --> root      "catarí"
+        ;
+      --> i18nName_de
+        -> NlgAdjective
+          --> root      "katarisch"
+        ;
+    ;
+  --> useArticle_fr  true
+  --> useArticle_en  false
+;

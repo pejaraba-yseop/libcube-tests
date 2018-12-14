@@ -1,0 +1,248 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<yseop-yml:ymlTextFunction xmlns:yseop-yml="http://www.yseop.com/yml/storage" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" domainModelVersion="3" identifier="7304c2b6-c7f8-4bed-8a54-ee1bd0722d4e">
+    <yseop-yml:textGranule domainModelVersion="3" identifier="ff6cef71-0b80-4c02-8c9e-7c7ae1897b85">
+        <yseop-yml:granuleI18nContents>
+            <yseop-yml:granuleUnilingueContent locale="en">
+                <yseop-yml:granuleContent>
+                    <yseop-yml:text>
+\beginStyle(BOLD_STYLE)
+    Credit positioning
+    \_texts:Options:ReturnsStatus(theGeneralData.creditPositioningStatus)
+\endStyle
+
+\endOfLine
+
+\foreach(Fact:_Fact, theGeneralData.top2SectorsDriverFacts, #0XQJ#)
+    The fund's
+    \_texts:Options:WeightStatus(Fact:_Fact.weightStatus)
+    \_texts:WordSynonyms:PositionSynonym()
+    in
+    \value(Fact:_Fact.getDimension(DIMENSION_SECTOR).label)
+    securities
+
+    \if(TEXT_LIST_EXECUTION_CONTEXT.currentItemIndex == 1)
+        was the most significant contributor to performance at the sector level. Specifically securities
+    \endIf
+
+    such as
+
+    \foreach(_issuerFact, Fact:_Fact.topDriverIssuersFacts, #VOX5#)
+        \value(_issuerFact.getDimension(DIMENSION_ISSUER).label)
+
+    \endForeach
+
+
+    \if(TEXT_LIST_EXECUTION_CONTEXT.currentItemIndex > 1)
+        also
+    \endIf
+
+
+    \switch(theGeneralData.creditPositioningStatus)
+
+        \case(RETURN_STATUS_WEIGHED)
+            \_texts:WordSynonyms:AddedLosses()
+
+        \case(RETURN_STATUS_CONTRIBUTED)
+            \_texts:WordSynonyms:AddedValueSynonym()
+
+        \noDefault
+    \endSwitch
+
+    .
+
+\endForeach
+
+\_texts:WordSynonyms:ConverselySynonym()
+,the bias towards
+\value(theGeneralData.bottomIssuerFact.getDimension(DIMENSION_ISSUER).label)
+,
+
+\switch(theGeneralData.creditPositioningStatus)
+
+    \case(RETURN_STATUS_WEIGHED)
+        was a key driver to performance at the issuer level
+
+    \case(RETURN_STATUS_CONTRIBUTED)
+        was a key detractor from performance at the issuer level
+
+    \noDefault
+\endSwitch
+
+.
+\p</yseop-yml:text>
+                    <yseop-yml:inline-assemblies>
+                        <yseop-yml:singleSentenceLinkAssembly name="VOX5" language="en">
+                            <yseop-yml:chooseSeparatorOptions>
+                                <yseop-yml:beforeEachItemCommaSelected>true</yseop-yml:beforeEachItemCommaSelected>
+                                <yseop-yml:beforeEachItemOtherText/>
+                                <yseop-yml:beforeLastItemAndSelected>true</yseop-yml:beforeLastItemAndSelected>
+                                <yseop-yml:beforeLastItemOtherText/>
+                                <yseop-yml:maxCountOfItemsForEachSentenceValue>3</yseop-yml:maxCountOfItemsForEachSentenceValue>
+                                <yseop-yml:endOfSentenceDotSelected>true</yseop-yml:endOfSentenceDotSelected>
+                                <yseop-yml:endOfSentenceQuestionMarkSelected>false</yseop-yml:endOfSentenceQuestionMarkSelected>
+                                <yseop-yml:endOfSentenceOtherSelected>false</yseop-yml:endOfSentenceOtherSelected>
+                                <yseop-yml:switchThresholdValue>4</yseop-yml:switchThresholdValue>
+                            </yseop-yml:chooseSeparatorOptions>
+                            <yseop-yml:beginEndWithOptions>
+                                <yseop-yml:generalBeginWithText/>
+                                <yseop-yml:generalEndWithText/>
+                                <yseop-yml:onlyOneItemBeginWithSameAsGeneralSelected>true</yseop-yml:onlyOneItemBeginWithSameAsGeneralSelected>
+                                <yseop-yml:onlyOneItemBeginWithSpecificText/>
+                                <yseop-yml:onlyOneItemEndWithSameAsGeneralSelected>true</yseop-yml:onlyOneItemEndWithSameAsGeneralSelected>
+                                <yseop-yml:onlyOneItemEndWithSpecificText/>
+                                <yseop-yml:allItemsIdenticalBeginWithSameAsGeneralSelected>true</yseop-yml:allItemsIdenticalBeginWithSameAsGeneralSelected>
+                                <yseop-yml:allItemsIdenticalBeginWithSpecificText/>
+                                <yseop-yml:allItemsIdenticalEndWithSameAsGeneralSelected>true</yseop-yml:allItemsIdenticalEndWithSameAsGeneralSelected>
+                                <yseop-yml:allItemsIdenticalEndWithSpecificText/>
+                                <yseop-yml:noItemGenerateNothingSelected>true</yseop-yml:noItemGenerateNothingSelected>
+                                <yseop-yml:noItemSentenceText/>
+                                <yseop-yml:inGeneralBulletBeginSameAsListSelected>true</yseop-yml:inGeneralBulletBeginSameAsListSelected>
+                                <yseop-yml:inGeneralBulletBeginSpecificSelected>false</yseop-yml:inGeneralBulletBeginSpecificSelected>
+                                <yseop-yml:inGeneralBulletBeginSpecificText/>
+                                <yseop-yml:inGeneralBulletEndSameAsListSelected>true</yseop-yml:inGeneralBulletEndSameAsListSelected>
+                                <yseop-yml:inGeneralBulletEndSpecificSelected>false</yseop-yml:inGeneralBulletEndSpecificSelected>
+                                <yseop-yml:inGeneralBulletEndSpecificText/>
+                            </yseop-yml:beginEndWithOptions>
+                            <yseop-yml:limitSizeOptions>
+                                <yseop-yml:noLimitSelected>true</yseop-yml:noLimitSelected>
+                                <yseop-yml:onlyFirstElementsSelected>true</yseop-yml:onlyFirstElementsSelected>
+                                <yseop-yml:onlyFirstElementsNumberValue>3</yseop-yml:onlyFirstElementsNumberValue>
+                                <yseop-yml:sentenceSizeTypeValue>30</yseop-yml:sentenceSizeTypeValue>
+                                <yseop-yml:limitByTypeValue>words</yseop-yml:limitByTypeValue>
+                                <yseop-yml:limitByTypeNumber>0</yseop-yml:limitByTypeNumber>
+                                <yseop-yml:sentenceEndEtcSelected>true</yseop-yml:sentenceEndEtcSelected>
+                                <yseop-yml:sentenceEndOtherText/>
+                                <yseop-yml:hasWordCharOptions>true</yseop-yml:hasWordCharOptions>
+                            </yseop-yml:limitSizeOptions>
+                        </yseop-yml:singleSentenceLinkAssembly>
+                        <yseop-yml:sentenceOrParagraphLinkAssembly name="0XQJ" language="en">
+                            <yseop-yml:sentenceOrParagraphGeneralOptions>
+                                <yseop-yml:eachItemIsAParagraph>false</yseop-yml:eachItemIsAParagraph>
+                            </yseop-yml:sentenceOrParagraphGeneralOptions>
+                            <yseop-yml:linkWordsBetweenItemsOptions>
+                                <yseop-yml:doNotAddLinkWords>true</yseop-yml:doNotAddLinkWords>
+                                <yseop-yml:generalLinkWords xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" yseop-yml:size="6">
+                                    <yseop-yml:entry yseop-yml:key="LANG_DE" xsi:type="xsd:string">Zusätzlich,
+Außerdem,
+Andererseits,
+</yseop-yml:entry>
+                                    <yseop-yml:entry yseop-yml:key="LANG_JA" xsi:type="xsd:string">それに、
+実は、
+そういえば、
+その上に、
+結局、
+一方は
+他方は
+</yseop-yml:entry>
+                                    <yseop-yml:entry yseop-yml:key="LANG_EN" xsi:type="xsd:string">What's more,
+Also,
+Furthermore,
+Moreover,
+Besides,
+As well,
+In addition,
+</yseop-yml:entry>
+                                    <yseop-yml:entry yseop-yml:key="LANG_FR" xsi:type="xsd:string">Par ailleurs,
+De plus,
+En outre,
+D'autre part,
+Également,
+</yseop-yml:entry>
+                                    <yseop-yml:entry yseop-yml:key="LANG_ES" xsi:type="xsd:string">Además,
+Luego,
+Después,
+Por otra parte,
+A continuación,
+</yseop-yml:entry>
+                                    <yseop-yml:entry yseop-yml:key="LANG_NL" xsi:type="xsd:string">Bovendien,
+Overigens,
+Daarnaast,
+Verder,
+Anderzijds,
+</yseop-yml:entry>
+                                </yseop-yml:generalLinkWords>
+                                <yseop-yml:generalLinkWordsRandomStrategy>true</yseop-yml:generalLinkWordsRandomStrategy>
+                                <yseop-yml:generalLinkWordsLinearStrategy>false</yseop-yml:generalLinkWordsLinearStrategy>
+                                <yseop-yml:nextToLastLinkWord xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" yseop-yml:size="6">
+                                    <yseop-yml:entry yseop-yml:key="LANG_DE" xsi:type="xsd:string">Abschließend,</yseop-yml:entry>
+                                    <yseop-yml:entry yseop-yml:key="LANG_JA" xsi:type="xsd:string"></yseop-yml:entry>
+                                    <yseop-yml:entry yseop-yml:key="LANG_EN" xsi:type="xsd:string"></yseop-yml:entry>
+                                    <yseop-yml:entry yseop-yml:key="LANG_FR" xsi:type="xsd:string">Enfin,</yseop-yml:entry>
+                                    <yseop-yml:entry yseop-yml:key="LANG_ES" xsi:type="xsd:string"></yseop-yml:entry>
+                                    <yseop-yml:entry yseop-yml:key="LANG_NL" xsi:type="xsd:string">Eindelijk,</yseop-yml:entry>
+                                </yseop-yml:nextToLastLinkWord>
+                                <yseop-yml:lastLinkWord xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" yseop-yml:size="6">
+                                    <yseop-yml:entry yseop-yml:key="LANG_DE" xsi:type="xsd:string">Schließlich,</yseop-yml:entry>
+                                    <yseop-yml:entry yseop-yml:key="LANG_JA" xsi:type="xsd:string">つまり、</yseop-yml:entry>
+                                    <yseop-yml:entry yseop-yml:key="LANG_EN" xsi:type="xsd:string">Lastly,</yseop-yml:entry>
+                                    <yseop-yml:entry yseop-yml:key="LANG_FR" xsi:type="xsd:string">Pour finir,</yseop-yml:entry>
+                                    <yseop-yml:entry yseop-yml:key="LANG_ES" xsi:type="xsd:string">Por fin,</yseop-yml:entry>
+                                    <yseop-yml:entry yseop-yml:key="LANG_NL" xsi:type="xsd:string">Tenslotte,</yseop-yml:entry>
+                                </yseop-yml:lastLinkWord>
+                            </yseop-yml:linkWordsBetweenItemsOptions>
+                            <yseop-yml:beginEndWithOptions>
+                                <yseop-yml:generalBeginWithText/>
+                                <yseop-yml:generalEndWithText/>
+                                <yseop-yml:onlyOneItemBeginWithSameAsGeneralSelected>true</yseop-yml:onlyOneItemBeginWithSameAsGeneralSelected>
+                                <yseop-yml:onlyOneItemBeginWithSpecificText/>
+                                <yseop-yml:onlyOneItemEndWithSameAsGeneralSelected>true</yseop-yml:onlyOneItemEndWithSameAsGeneralSelected>
+                                <yseop-yml:onlyOneItemEndWithSpecificText/>
+                                <yseop-yml:allItemsIdenticalBeginWithSameAsGeneralSelected>true</yseop-yml:allItemsIdenticalBeginWithSameAsGeneralSelected>
+                                <yseop-yml:allItemsIdenticalBeginWithSpecificText/>
+                                <yseop-yml:allItemsIdenticalEndWithSameAsGeneralSelected>true</yseop-yml:allItemsIdenticalEndWithSameAsGeneralSelected>
+                                <yseop-yml:allItemsIdenticalEndWithSpecificText/>
+                                <yseop-yml:noItemGenerateNothingSelected>true</yseop-yml:noItemGenerateNothingSelected>
+                                <yseop-yml:noItemSentenceText/>
+                                <yseop-yml:inGeneralBulletBeginSameAsListSelected>true</yseop-yml:inGeneralBulletBeginSameAsListSelected>
+                                <yseop-yml:inGeneralBulletBeginSpecificSelected>false</yseop-yml:inGeneralBulletBeginSpecificSelected>
+                                <yseop-yml:inGeneralBulletBeginSpecificText/>
+                                <yseop-yml:inGeneralBulletEndSameAsListSelected>true</yseop-yml:inGeneralBulletEndSameAsListSelected>
+                                <yseop-yml:inGeneralBulletEndSpecificSelected>false</yseop-yml:inGeneralBulletEndSpecificSelected>
+                                <yseop-yml:inGeneralBulletEndSpecificText/>
+                            </yseop-yml:beginEndWithOptions>
+                            <yseop-yml:limitSizeOptions>
+                                <yseop-yml:noLimitSelected>true</yseop-yml:noLimitSelected>
+                                <yseop-yml:onlyFirstElementsSelected>true</yseop-yml:onlyFirstElementsSelected>
+                                <yseop-yml:onlyFirstElementsNumberValue>3</yseop-yml:onlyFirstElementsNumberValue>
+                                <yseop-yml:sentenceSizeTypeValue>90</yseop-yml:sentenceSizeTypeValue>
+                                <yseop-yml:limitByTypeValue>words</yseop-yml:limitByTypeValue>
+                                <yseop-yml:limitByTypeNumber>0</yseop-yml:limitByTypeNumber>
+                                <yseop-yml:sentenceEndEtcSelected>true</yseop-yml:sentenceEndEtcSelected>
+                                <yseop-yml:sentenceEndOtherText/>
+                                <yseop-yml:hasWordCharOptions>true</yseop-yml:hasWordCharOptions>
+                            </yseop-yml:limitSizeOptions>
+                        </yseop-yml:sentenceOrParagraphLinkAssembly>
+                    </yseop-yml:inline-assemblies>
+                    <yseop-yml:inline-dslFunctionCalls/>
+                </yseop-yml:granuleContent>
+            </yseop-yml:granuleUnilingueContent>
+            <yseop-yml:granuleUnilingueContent locale="es">
+                <yseop-yml:granuleContent>
+                    <yseop-yml:text/>
+                    <yseop-yml:inline-assemblies/>
+                    <yseop-yml:inline-dslFunctionCalls/>
+                </yseop-yml:granuleContent>
+            </yseop-yml:granuleUnilingueContent>
+            <yseop-yml:granuleUnilingueContent locale="fr">
+                <yseop-yml:granuleContent>
+                    <yseop-yml:text/>
+                    <yseop-yml:inline-assemblies/>
+                    <yseop-yml:inline-dslFunctionCalls/>
+                </yseop-yml:granuleContent>
+            </yseop-yml:granuleUnilingueContent>
+        </yseop-yml:granuleI18nContents>
+        <yseop-yml:dslCondition/>
+        <yseop-yml:name/>
+        <yseop-yml:creationDate>2018-04-20T15:33:00.912Z</yseop-yml:creationDate>
+        <yseop-yml:properties identifier="71ad49cb-bcbe-41f4-a190-c44a67d73a5f">
+            <yseop-yml:property identifier="71ad49cb-bcbe-41f4-a190-c44a67d73a5f|condition" type="YML_PROPERTY" name="condition"></yseop-yml:property>
+        </yseop-yml:properties>
+    </yseop-yml:textGranule>
+    <yseop-yml:localVariables/>
+    <yseop-yml:advancedContent/>
+    <yseop-yml:ymlParameters/>
+    <yseop-yml:name>SectorsAndIssuersContributions</yseop-yml:name>
+    <yseop-yml:properties identifier="19e35c32-8da0-4ac0-99d9-e2cad3cf80fb">
+        <yseop-yml:property identifier="19e35c32-8da0-4ac0-99d9-e2cad3cf80fb|dsl" type="YML_PROPERTY" name="dsl">"Sectors and Issuers Contributions"</yseop-yml:property>
+    </yseop-yml:properties>
+</yseop-yml:ymlTextFunction>

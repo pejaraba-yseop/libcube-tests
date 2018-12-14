@@ -1,0 +1,80 @@
+LibGeography:Country C_BGR
+  --> iso3166_1_numeric_code  "100"
+  --> iso3166_1_alpha_2       "BG"
+  --> iso3166_1_alpha_3       "BGR"
+  --> label
+    -> MultilingualText
+      --> i18nName_fr
+        -> NlgSubstantive
+          --> root    "Bulgarie"
+          --> plural  "Bulgarie"
+          --> gender  FEMININE
+          --> number  SINGULAR
+        ;
+      --> i18nName_en
+        -> NlgSubstantive
+          --> root    "Bulgaria"
+          --> plural  "Bulgaria"
+          --> gender  INANIMATE
+          --> number  SINGULAR
+        ;
+      --> i18nName_es
+        -> NlgSubstantive
+          --> root    "Bulgaria"
+          --> plural  "Bulgaria"
+          --> gender  FEMININE
+          --> number  SINGULAR
+        ;
+      --> i18nName_de
+        -> NlgSubstantive
+          --> root    "Bulgarien"
+          --> plural  "Bulgarien"
+          --> gender  NEUTRAL
+          --> number  SINGULAR
+        ;
+      --> i18nName_ja
+        -> NlgSubstantive
+          --> root    "ブルガリア"
+          --> plural  "ブルガリア"
+          --> gender  INANIMATE
+          --> number  SINGULAR
+        ;
+    ;
+  --> demonym
+    -> MultilingualText
+      --> i18nName_fr
+        -> NlgGenderAgreeableSubstantive
+          --> masculine "Bulgare"
+          --> feminine  "Bulgare"
+        ;
+      --> i18nName_en  "Bulgarian"
+      --> i18nName_es  "búlgaro"
+      --> i18nName_de
+        -> NlgGenderAgreeableSubstantive
+          --> masculine "Bulgare"
+          --> feminine  "Bulgarin"
+        ;
+    ;
+  --> adjective
+    -> MultilingualText
+      --> i18nName_fr
+        -> NlgAdjective
+          --> root      "bulgare"
+          --> feminine  "bulgare"
+        ;
+      --> i18nName_en
+        -> NlgAdjective
+          --> root      "Bulgarian"
+        ;
+      --> i18nName_es
+        -> NlgAdjective
+          --> root      "búlgaro"
+        ;
+      --> i18nName_de
+        -> NlgAdjective
+          --> root      "bulgarisch"
+        ;
+    ;
+  --> useArticle_fr  true
+  --> useArticle_en  false
+;

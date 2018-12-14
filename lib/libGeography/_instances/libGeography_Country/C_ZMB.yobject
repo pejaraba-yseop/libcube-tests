@@ -1,0 +1,80 @@
+LibGeography:Country C_ZMB
+  --> iso3166_1_numeric_code  "894"
+  --> iso3166_1_alpha_2       "ZM"
+  --> iso3166_1_alpha_3       "ZMB"
+  --> label
+    -> MultilingualText
+      --> i18nName_fr
+        -> NlgSubstantive
+          --> root    "Zambie"
+          --> plural  "Zambie"
+          --> gender  FEMININE
+          --> number  SINGULAR
+        ;
+      --> i18nName_en
+        -> NlgSubstantive
+          --> root    "Zambia"
+          --> plural  "Zambia"
+          --> gender  INANIMATE
+          --> number  SINGULAR
+        ;
+      --> i18nName_es
+        -> NlgSubstantive
+          --> root    "Zambia"
+          --> plural  "Zambia"
+          --> gender  FEMININE
+          --> number  SINGULAR
+        ;
+      --> i18nName_de
+        -> NlgSubstantive
+          --> root    "Sambia"
+          --> plural  "Sambia"
+          --> gender  NEUTRAL
+          --> number  SINGULAR
+        ;
+      --> i18nName_ja
+        -> NlgSubstantive
+          --> root    "ザンビア"
+          --> plural  "ザンビア"
+          --> gender  INANIMATE
+          --> number  SINGULAR
+        ;
+    ;
+  --> demonym
+    -> MultilingualText
+      --> i18nName_fr
+        -> NlgGenderAgreeableSubstantive
+          --> masculine "Zambien"
+          --> feminine  "Zambienne"
+        ;
+      --> i18nName_en  "Zambian"
+      --> i18nName_es  "zambiano"
+      --> i18nName_de
+        -> NlgGenderAgreeableSubstantive
+          --> masculine "Sambier"
+          --> feminine  "Sambierin"
+        ;
+    ;
+  --> adjective
+    -> MultilingualText
+      --> i18nName_fr
+        -> NlgAdjective
+          --> root      "zambien"
+          --> feminine  "zambienne"
+        ;
+      --> i18nName_en
+        -> NlgAdjective
+          --> root      "Zambian"
+        ;
+      --> i18nName_es
+        -> NlgAdjective
+          --> root      "zambiano"
+        ;
+      --> i18nName_de
+        -> NlgAdjective
+          --> root      "sambisch"
+        ;
+    ;
+  --> useArticle_fr  true
+  --> useArticle_en  false
+;

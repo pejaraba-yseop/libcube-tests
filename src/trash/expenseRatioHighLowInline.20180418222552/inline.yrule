@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<yseop-yml:ymlRule xmlns:yseop-yml="http://www.yseop.com/yml/storage" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" domainModelVersion="3" identifier="a68a6988-6218-4811-93a0-6ac23c7c9ec8">
+    <yseop-yml:content>CURRENT_COMPANY_ALL_SEGMENTS_FACT_SELECTION.selectedFact.expensesRatioInLine = EXPENSE_RATIO_IN_LINE;</yseop-yml:content>
+    <yseop-yml:content>CURRENT_COMPANY_ALL_SEGMENTS_FACT_SELECTION.selectedFact.expensesRatio &lt;= getGeneralData().peerExpenseRatioTwoStandardDeviatonOfAverageHigh &amp;&amp; CURRENT_COMPANY_ALL_SEGMENTS_FACT_SELECTION.selectedFact.expensesRatio >= getGeneralData().peerExpenseRatioTwoStandardDeviationOfAverageLow</yseop-yml:content>
+    <yseop-yml:name>inline</yseop-yml:name>
+    <yseop-yml:properties identifier="1d40da27-463c-483d-8c6d-2d5ec6436bf0">
+        <yseop-yml:property identifier="1d40da27-463c-483d-8c6d-2d5ec6436bf0|dsl" type="YML_PROPERTY" name="dsl">"inline"</yseop-yml:property>
+        <yseop-yml:property identifier="1d40da27-463c-483d-8c6d-2d5ec6436bf0|disabled" type="GENERATION_PROPERTY" name="disabled">false</yseop-yml:property>
+    </yseop-yml:properties>
+</yseop-yml:ymlRule>

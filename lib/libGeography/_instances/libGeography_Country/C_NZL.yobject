@@ -1,0 +1,80 @@
+LibGeography:Country C_NZL
+  --> iso3166_1_numeric_code  "554"
+  --> iso3166_1_alpha_2       "NZ"
+  --> iso3166_1_alpha_3       "NZL"
+  --> label
+    -> MultilingualText
+      --> i18nName_fr
+        -> NlgSubstantive
+          --> root    "Nouvelle-Zélande"
+          --> plural  "Nouvelle-Zélande"
+          --> gender  FEMININE
+          --> number  SINGULAR
+        ;
+      --> i18nName_en
+        -> NlgSubstantive
+          --> root    "New Zealand"
+          --> plural  "New Zealand"
+          --> gender  INANIMATE
+          --> number  SINGULAR
+        ;
+      --> i18nName_es
+        -> NlgSubstantive
+          --> root    "Nueva Zelanda"
+          --> plural  "Nueva Zelanda"
+          --> gender  FEMININE
+          --> number  SINGULAR
+        ;
+      --> i18nName_de
+        -> NlgSubstantive
+          --> root    "Neuseeland"
+          --> plural  "Neuseeland"
+          --> gender  NEUTRAL
+          --> number  SINGULAR
+        ;
+      --> i18nName_ja
+        -> NlgSubstantive
+          --> root    "ニュージーランド"
+          --> plural  "ニュージーランド"
+          --> gender  INANIMATE
+          --> number  SINGULAR
+        ;
+    ;
+  --> demonym
+    -> MultilingualText
+      --> i18nName_fr
+        -> NlgGenderAgreeableSubstantive
+          --> masculine "Néo-Zélandais"
+          --> feminine  "Néo-Zélandaise"
+        ;
+      --> i18nName_en  "New Zealander"
+      --> i18nName_es  "neozelandés"
+      --> i18nName_de
+        -> NlgGenderAgreeableSubstantive
+          --> masculine "Neuseeländer"
+          --> feminine  "Neuseeländerin"
+        ;
+    ;
+  --> adjective
+    -> MultilingualText
+      --> i18nName_fr
+        -> NlgAdjective
+          --> root      "néo-zélandais"
+          --> feminine  "néo-zélandaise"
+        ;
+      --> i18nName_en
+        -> NlgAdjective
+          --> root      "of New Zealand"
+        ;
+      --> i18nName_es
+        -> NlgAdjective
+          --> root      "neozelandés"
+        ;
+      --> i18nName_de
+        -> NlgAdjective
+          --> root      "neuseeländisch"
+        ;
+    ;
+  --> useArticle_fr  true
+  --> useArticle_en  false
+;

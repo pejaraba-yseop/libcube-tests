@@ -1,0 +1,76 @@
+LibGeography:Country C_RUS
+  --> iso3166_1_numeric_code  "643"
+  --> iso3166_1_alpha_2       "RU"
+  --> iso3166_1_alpha_3       "RUS"
+  --> label
+    -> MultilingualText
+      --> i18nName_fr
+        -> NlgSubstantive
+          --> root    "Russie"
+          --> plural  "Russie"
+          --> gender  FEMININE
+          --> number  SINGULAR
+        ;
+      --> i18nName_en
+        -> NlgSubstantive
+          --> root    "Russia"
+          --> plural  "Russia"
+          --> gender  INANIMATE
+          --> number  SINGULAR
+        ;
+      --> i18nName_es
+        -> NlgSubstantive
+          --> root    "Rusia"
+          --> plural  "Rusia"
+          --> gender  FEMININE
+          --> number  SINGULAR
+        ;
+      --> i18nName_de
+        -> NlgSubstantive
+          --> root    "Russland"
+          --> plural  "Russland"
+          --> gender  NEUTRAL
+          --> number  SINGULAR
+        ;
+      --> i18nName_ja
+        -> NlgSubstantive
+          --> root    "ロシア"
+          --> plural  "ロシア"
+          --> gender  INANIMATE
+          --> number  SINGULAR
+        ;
+    ;
+  --> demonym
+    -> MultilingualText
+      --> i18nName_fr
+        -> NlgGenderAgreeableSubstantive
+          --> masculine "Russe"
+          --> feminine  "Russe"
+        ;
+      --> i18nName_en  "Russian"
+      --> i18nName_es  "ruso"
+      --> i18nName_de  "der Russischen Föderation"
+    ;
+  --> adjective
+    -> MultilingualText
+      --> i18nName_fr
+        -> NlgAdjective
+          --> root      "russe"
+          --> feminine  "russe"
+        ;
+      --> i18nName_en
+        -> NlgAdjective
+          --> root      "Russian"
+        ;
+      --> i18nName_es
+        -> NlgAdjective
+          --> root      "ruso"
+        ;
+      --> i18nName_de
+        -> NlgAdjective
+          --> root      "russisch"
+        ;
+    ;
+  --> useArticle_fr  true
+  --> useArticle_en  false
+;

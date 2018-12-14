@@ -1,0 +1,80 @@
+LibGeography:Country C_CHL
+  --> iso3166_1_numeric_code  "152"
+  --> iso3166_1_alpha_2       "CL"
+  --> iso3166_1_alpha_3       "CHL"
+  --> label
+    -> MultilingualText
+      --> i18nName_fr
+        -> NlgSubstantive
+          --> root    "Chili"
+          --> plural  "Chili"
+          --> gender  MASCULINE
+          --> number  SINGULAR
+        ;
+      --> i18nName_en
+        -> NlgSubstantive
+          --> root    "Chile"
+          --> plural  "Chile"
+          --> gender  INANIMATE
+          --> number  SINGULAR
+        ;
+      --> i18nName_es
+        -> NlgSubstantive
+          --> root    "Chile"
+          --> plural  "Chile"
+          --> gender  MASCULINE
+          --> number  SINGULAR
+        ;
+      --> i18nName_de
+        -> NlgSubstantive
+          --> root    "Chile"
+          --> plural  "Chile"
+          --> gender  NEUTRAL
+          --> number  SINGULAR
+        ;
+      --> i18nName_ja
+        -> NlgSubstantive
+          --> root    "チリ"
+          --> plural  "チリ"
+          --> gender  INANIMATE
+          --> number  SINGULAR
+        ;
+    ;
+  --> demonym
+    -> MultilingualText
+      --> i18nName_fr
+        -> NlgGenderAgreeableSubstantive
+          --> masculine "Chilien"
+          --> feminine  "Chilienne"
+        ;
+      --> i18nName_en  "Chilean"
+      --> i18nName_es  "chileno"
+      --> i18nName_de
+        -> NlgGenderAgreeableSubstantive
+          --> masculine "Chilene"
+          --> feminine  "Chilenin"
+        ;
+    ;
+  --> adjective
+    -> MultilingualText
+      --> i18nName_fr
+        -> NlgAdjective
+          --> root      "chilien"
+          --> feminine  "chilienne"
+        ;
+      --> i18nName_en
+        -> NlgAdjective
+          --> root      "Chilean"
+        ;
+      --> i18nName_es
+        -> NlgAdjective
+          --> root      "chileno"
+        ;
+      --> i18nName_de
+        -> NlgAdjective
+          --> root      "chilenisch"
+        ;
+    ;
+  --> useArticle_fr  true
+  --> useArticle_en  false
+;

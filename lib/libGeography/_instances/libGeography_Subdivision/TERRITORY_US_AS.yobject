@@ -1,0 +1,50 @@
+LibGeography:Subdivision TERRITORY_US_AS
+  --> iso3166_2    "US-AS"
+  --> postal_code  "AS"
+  --> status       TERRITORY
+  --> label
+    -> MultilingualText
+      --> i18nName_fr
+        -> NlgSubstantive
+          --> root    "Samoa américaines"
+          --> plural  "Samoa américaines"
+          --> gender  FEMININE
+          --> number  PLURAL
+        ;
+      --> i18nName_en
+        -> NlgSubstantive
+          --> root    " American Samoa"
+          --> plural  " American Samoa"
+          --> gender  INANIMATE
+          --> number  SINGULAR
+        ;
+      --> i18nName_es
+        -> NlgSubstantive
+          --> root    "Samoa Americana"
+          --> plural  "Samoa Americana"
+          --> gender  FEMININE
+          --> number  SINGULAR
+        ;
+      --> i18nName_de
+        -> NlgSubstantive
+          --> root    "Amerikanisch-Samoa"
+          --> plural  "Amerikanisch-Samoa"
+          --> gender  NEUTRAL
+          --> number  SINGULAR
+        ;
+      --> i18nName_ja
+        -> NlgSubstantive
+          --> root    "アメリカ領サモア"
+          --> plural  "アメリカ領サモア"
+          --> gender  INANIMATE
+          --> number  SINGULAR
+        ;
+    ;
+  --> demonym
+    -> MultilingualText
+    ;
+  --> adjective
+    -> MultilingualText
+    ;
+  --> useArticle_en  false
+;

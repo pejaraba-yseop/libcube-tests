@@ -1,0 +1,84 @@
+LibGeography:Country C_NLD
+  --> iso3166_1_numeric_code  "528"
+  --> iso3166_1_alpha_2       "NL"
+  --> iso3166_1_alpha_3       "NLD"
+  --> label
+    -> MultilingualText
+      --> i18nName_fr
+        -> NlgSubstantive
+          --> root    "Pays-Bas"
+          --> plural  "Pays-Bas"
+          --> gender  MASCULINE
+          --> number  PLURAL
+        ;
+      --> i18nName_en
+        -> NlgSubstantive
+          --> root    "Netherlands"
+          --> plural  "Netherlands"
+          --> gender  INANIMATE
+          --> number  SINGULAR
+        ;
+      --> i18nName_es
+        -> NlgSubstantive
+          --> root    "Países Bajos"
+          --> plural  "Países Bajos"
+          --> gender  MASCULINE
+          --> number  SINGULAR
+        ;
+      --> i18nName_de
+        -> NlgSubstantive
+          --> root    "Niederlande"
+          --> plural  "Niederlande"
+          --> gender  NEUTRAL
+          --> number  SINGULAR
+        ;
+      --> i18nName_ja
+        -> NlgSubstantive
+          --> root    "オランダ"
+          --> plural  "オランダ"
+          --> gender  INANIMATE
+          --> number  SINGULAR
+        ;
+    ;
+  --> demonym
+    -> MultilingualText
+      --> i18nName_fr
+        -> NlgGenderAgreeableSubstantive
+          --> masculine "Néerlandais"
+          --> feminine  "Néerlandaise "
+        ;
+      --> i18nName_en
+        -> NlgGenderAgreeableSubstantive
+          --> masculine "Dutchman"
+          --> feminine  " Dutchwoman"
+        ;
+      --> i18nName_es  "neerlandés"
+      --> i18nName_de
+        -> NlgGenderAgreeableSubstantive
+          --> masculine "Niederländer"
+          --> feminine  "Niederländerin"
+        ;
+    ;
+  --> adjective
+    -> MultilingualText
+      --> i18nName_fr
+        -> NlgAdjective
+          --> root      "néerlandais"
+          --> feminine  "néerlandaise"
+        ;
+      --> i18nName_en
+        -> NlgAdjective
+          --> root      "Netherlands; Dutch"
+        ;
+      --> i18nName_es
+        -> NlgAdjective
+          --> root      "neerlandés"
+        ;
+      --> i18nName_de
+        -> NlgAdjective
+          --> root      "niederländisch"
+        ;
+    ;
+  --> useArticle_fr  true
+  --> useArticle_en  true
+;

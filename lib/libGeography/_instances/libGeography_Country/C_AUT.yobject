@@ -1,0 +1,80 @@
+LibGeography:Country C_AUT
+  --> iso3166_1_numeric_code  "040"
+  --> iso3166_1_alpha_2       "AT"
+  --> iso3166_1_alpha_3       "AUT"
+  --> label
+    -> MultilingualText
+      --> i18nName_fr
+        -> NlgSubstantive
+          --> root    "Autriche"
+          --> plural  "Autriche"
+          --> gender  FEMININE
+          --> number  SINGULAR
+        ;
+      --> i18nName_en
+        -> NlgSubstantive
+          --> root    "Austria"
+          --> plural  "Austria"
+          --> gender  INANIMATE
+          --> number  SINGULAR
+        ;
+      --> i18nName_es
+        -> NlgSubstantive
+          --> root    "Austria"
+          --> plural  "Austria"
+          --> gender  FEMININE
+          --> number  SINGULAR
+        ;
+      --> i18nName_de
+        -> NlgSubstantive
+          --> root    "Österreich"
+          --> plural  "Österreich"
+          --> gender  NEUTRAL
+          --> number  SINGULAR
+        ;
+      --> i18nName_ja
+        -> NlgSubstantive
+          --> root    "オーストリア"
+          --> plural  "オーストリア"
+          --> gender  INANIMATE
+          --> number  SINGULAR
+        ;
+    ;
+  --> demonym
+    -> MultilingualText
+      --> i18nName_fr
+        -> NlgGenderAgreeableSubstantive
+          --> masculine "Autrichien"
+          --> feminine  "Autrichienne"
+        ;
+      --> i18nName_en  "Austrian"
+      --> i18nName_es  "austriaco"
+      --> i18nName_de
+        -> NlgGenderAgreeableSubstantive
+          --> masculine "Österreicher"
+          --> feminine  "Österreicherin"
+        ;
+    ;
+  --> adjective
+    -> MultilingualText
+      --> i18nName_fr
+        -> NlgAdjective
+          --> root      "autrichien"
+          --> feminine  "autrichienne"
+        ;
+      --> i18nName_en
+        -> NlgAdjective
+          --> root      "Austrian"
+        ;
+      --> i18nName_es
+        -> NlgAdjective
+          --> root      "austriaco"
+        ;
+      --> i18nName_de
+        -> NlgAdjective
+          --> root      "österreichisch"
+        ;
+    ;
+  --> useArticle_fr  true
+  --> useArticle_en  false
+;

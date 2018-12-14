@@ -1,0 +1,21 @@
+
+interface Store extends LibCube:HierarchyElement
+    field city
+        --> domains City
+        --> xmlMapping XmlMappingProperty_NO_SAVE
+        --> dsl -> Textualization
+            --> language LANG_en
+            --> root "City"
+            --> number SINGULAR
+        ;
+    classProperties
+    --> dsl -> Textualization
+        --> language LANG_en
+        --> root "Store"
+        --> number SINGULAR
+    ;
+;
+
+implementation Store
+;
+

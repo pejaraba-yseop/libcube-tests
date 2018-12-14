@@ -1,0 +1,50 @@
+LibGeography:Subdivision TERRITORY_CA_NT
+  --> iso3166_2    "CA-NT"
+  --> postal_code  "NT"
+  --> status       TERRITORY
+  --> label
+    -> MultilingualText
+      --> i18nName_fr
+        -> NlgSubstantive
+          --> root    "Territoires du Nord-Ouest"
+          --> plural  "Territoires du Nord-Ouest"
+          --> gender  MASCULINE
+          --> number  PLURAL
+        ;
+      --> i18nName_en
+        -> NlgSubstantive
+          --> root    "Northwest Territories"
+          --> plural  "Northwest Territories"
+          --> gender  INANIMATE
+          --> number  PLURAL
+        ;
+      --> i18nName_es
+        -> NlgSubstantive
+          --> root    "Territorios del Noroeste"
+          --> plural  "Territorios del Noroeste"
+          --> gender  MASCULINE
+          --> number  PLURAL
+        ;
+      --> i18nName_de
+        -> NlgSubstantive
+          --> root    "Nordwest-Territorien"
+          --> plural  "Nordwest-Territorien"
+          --> gender  NEUTRAL
+          --> number  PLURAL
+        ;
+      --> i18nName_ja
+        -> NlgSubstantive
+          --> root    "北西準州"
+          --> plural  "北西準州"
+          --> gender  INANIMATE
+          --> number  PLURAL
+        ;
+    ;
+  --> demonym
+    -> MultilingualText
+    ;
+  --> adjective
+    -> MultilingualText
+    ;
+  --> useArticle_en  true
+;

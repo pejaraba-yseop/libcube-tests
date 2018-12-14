@@ -1,0 +1,26 @@
+LibGeography:Region US_REG_PLAINS
+  --> label
+    -> MultilingualText
+      --> i18nName_en
+        -> NlgSubstantive
+          --> root    "Plains"
+          --> plural  "Plains"
+          --> gender  INANIMATE
+          --> number  SINGULAR
+        ;
+      --> i18nName_ja
+        -> NlgSubstantive
+          --> root    "平原"
+          --> plural  "平原"
+          --> gender  INANIMATE
+          --> number  SINGULAR
+        ;
+    ;
+  --> demonym
+    -> MultilingualText
+    ;
+  --> adjective
+    -> MultilingualText
+    ;
+  --> useArticle_en  true
+;

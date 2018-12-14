@@ -1,0 +1,75 @@
+LibGeography:Country C_TLS
+  --> iso3166_1_numeric_code  "626"
+  --> iso3166_1_alpha_2       "TL"
+  --> iso3166_1_alpha_3       "TLS"
+  --> label
+    -> MultilingualText
+      --> i18nName_fr
+        -> NlgSubstantive
+          --> root    "Timor oriental"
+          --> plural  "Timor oriental"
+          --> gender  MASCULINE
+          --> number  SINGULAR
+        ;
+      --> i18nName_en
+        -> NlgSubstantive
+          --> root    "Timor-Leste"
+          --> plural  "Timor-Leste"
+          --> gender  INANIMATE
+          --> number  SINGULAR
+        ;
+      --> i18nName_es
+        -> NlgSubstantive
+          --> root    "Timor Oriental"
+          --> plural  "Timor Oriental"
+          --> gender  FEMININE
+          --> number  SINGULAR
+        ;
+      --> i18nName_de
+        -> NlgSubstantive
+          --> root    "Timor-Leste"
+          --> plural  "Timor-Leste"
+          --> gender  NEUTRAL
+          --> number  SINGULAR
+        ;
+      --> i18nName_ja
+        -> NlgSubstantive
+          --> root    "東ティモール"
+          --> plural  "東ティモール"
+          --> gender  INANIMATE
+          --> number  SINGULAR
+        ;
+    ;
+  --> demonym
+    -> MultilingualText
+      --> i18nName_fr  "Est-Timorais"
+      --> i18nName_en  "East Timorese"
+      --> i18nName_es  "timorense"
+      --> i18nName_de
+        -> NlgGenderAgreeableSubstantive
+          --> masculine "Timorer"
+          --> feminine  "Timorerin"
+        ;
+    ;
+  --> adjective
+    -> MultilingualText
+      --> i18nName_fr
+        -> NlgAdjective
+          --> root      "est-timorais"
+        ;
+      --> i18nName_en
+        -> NlgAdjective
+          --> root      "East Timorese"
+        ;
+      --> i18nName_es
+        -> NlgAdjective
+          --> root      "timorense"
+        ;
+      --> i18nName_de
+        -> NlgAdjective
+          --> root      "timorisch"
+        ;
+    ;
+  --> useArticle_fr  true
+  --> useArticle_en  false
+;

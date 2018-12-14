@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<yseop-yml:ymlRule xmlns:yseop-yml="http://www.yseop.com/yml/storage" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" domainModelVersion="3" identifier="1e4ef349-8e8e-4488-8fa1-d209a87b3ce5">
+    <yseop-yml:content>getGeneralData().averagePeerList = getGeneralData().averageOfExpenseRatioPeerList();</yseop-yml:content>
+    <yseop-yml:content/>
+    <yseop-yml:name>average</yseop-yml:name>
+    <yseop-yml:properties identifier="9f6e1489-03c0-4064-9174-54761d491e63">
+        <yseop-yml:property identifier="9f6e1489-03c0-4064-9174-54761d491e63|dsl" type="YML_PROPERTY" name="dsl">"average "</yseop-yml:property>
+        <yseop-yml:property identifier="9f6e1489-03c0-4064-9174-54761d491e63|disabled" type="GENERATION_PROPERTY" name="disabled">true</yseop-yml:property>
+    </yseop-yml:properties>
+</yseop-yml:ymlRule>

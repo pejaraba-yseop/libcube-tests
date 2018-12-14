@@ -1,0 +1,4 @@
+Style areaLabelStyle
+    --> interpretSentenceEnd false
+    --> insertSpaceAfterPoint true
+;

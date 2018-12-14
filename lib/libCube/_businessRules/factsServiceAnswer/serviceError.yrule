@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<yseop-yml:ymlRule xmlns:yseop-yml="http://www.yseop.com/yml/storage" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" domainModelVersion="3" identifier="0fc8c8f3-de7a-4e7b-b53e-c15d65b887fa">
+    <yseop-yml:content>logWarning("Error calling webservice during the request of a factsSelection");
+cube.factsRequestsManager.lastRequestStatus = factsService.runStatusCode;
+
+</yseop-yml:content>
+    <yseop-yml:content>factsService.runStatusCode != _SUCCESS
+factsService.runStatusCode != null</yseop-yml:content>
+    <yseop-yml:name>serviceError</yseop-yml:name>
+    <yseop-yml:creationDate>2018-07-11T19:13:14.75Z</yseop-yml:creationDate>
+    <yseop-yml:properties identifier="f754cf35-1c82-431c-87ba-fc27eabb8991"/>
+</yseop-yml:ymlRule>

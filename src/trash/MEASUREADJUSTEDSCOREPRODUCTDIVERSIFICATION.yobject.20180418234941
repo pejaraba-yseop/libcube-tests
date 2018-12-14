@@ -1,0 +1,8 @@
+
+LibCube:Measure MEASURE_ADJUSTED_SCORE_PRODUCT_DIVERSIFICATION
+    --> dsl -> Textualization
+        --> language LANG_en
+        --> root "Adjusted Product Diversification Score"
+        --> number SINGULAR
+    ;
+;

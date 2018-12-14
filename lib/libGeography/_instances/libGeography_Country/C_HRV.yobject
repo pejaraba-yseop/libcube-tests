@@ -1,0 +1,80 @@
+LibGeography:Country C_HRV
+  --> iso3166_1_numeric_code  "191"
+  --> iso3166_1_alpha_2       "HR"
+  --> iso3166_1_alpha_3       "HRV"
+  --> label
+    -> MultilingualText
+      --> i18nName_fr
+        -> NlgSubstantive
+          --> root    "Croatie"
+          --> plural  "Croatie"
+          --> gender  FEMININE
+          --> number  SINGULAR
+        ;
+      --> i18nName_en
+        -> NlgSubstantive
+          --> root    "Croatia"
+          --> plural  "Croatia"
+          --> gender  INANIMATE
+          --> number  SINGULAR
+        ;
+      --> i18nName_es
+        -> NlgSubstantive
+          --> root    "Croacia"
+          --> plural  "Croacia"
+          --> gender  FEMININE
+          --> number  SINGULAR
+        ;
+      --> i18nName_de
+        -> NlgSubstantive
+          --> root    "Kroatien"
+          --> plural  "Kroatien"
+          --> gender  NEUTRAL
+          --> number  SINGULAR
+        ;
+      --> i18nName_ja
+        -> NlgSubstantive
+          --> root    "クロアチア"
+          --> plural  "クロアチア"
+          --> gender  INANIMATE
+          --> number  SINGULAR
+        ;
+    ;
+  --> demonym
+    -> MultilingualText
+      --> i18nName_fr
+        -> NlgGenderAgreeableSubstantive
+          --> masculine "Croate"
+          --> feminine  "Croate"
+        ;
+      --> i18nName_en  "Croat"
+      --> i18nName_es  "croata"
+      --> i18nName_de
+        -> NlgGenderAgreeableSubstantive
+          --> masculine "Kroate"
+          --> feminine  "Kroatin"
+        ;
+    ;
+  --> adjective
+    -> MultilingualText
+      --> i18nName_fr
+        -> NlgAdjective
+          --> root      "croate"
+          --> feminine  "croate"
+        ;
+      --> i18nName_en
+        -> NlgAdjective
+          --> root      "Croatian"
+        ;
+      --> i18nName_es
+        -> NlgAdjective
+          --> root      "croata"
+        ;
+      --> i18nName_de
+        -> NlgAdjective
+          --> root      "kroatisch"
+        ;
+    ;
+  --> useArticle_fr  true
+  --> useArticle_en  false
+;

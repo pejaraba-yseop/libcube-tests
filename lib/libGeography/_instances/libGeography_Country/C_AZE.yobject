@@ -1,0 +1,80 @@
+LibGeography:Country C_AZE
+  --> iso3166_1_numeric_code  "031"
+  --> iso3166_1_alpha_2       "AZ"
+  --> iso3166_1_alpha_3       "AZE"
+  --> label
+    -> MultilingualText
+      --> i18nName_fr
+        -> NlgSubstantive
+          --> root    "Azerbaïdjan"
+          --> plural  "Azerbaïdjan"
+          --> gender  MASCULINE
+          --> number  SINGULAR
+        ;
+      --> i18nName_en
+        -> NlgSubstantive
+          --> root    "Azerbaijan"
+          --> plural  "Azerbaijan"
+          --> gender  INANIMATE
+          --> number  SINGULAR
+        ;
+      --> i18nName_es
+        -> NlgSubstantive
+          --> root    "Azerbaiyán"
+          --> plural  "Azerbaiyán"
+          --> gender  MASCULINE
+          --> number  SINGULAR
+        ;
+      --> i18nName_de
+        -> NlgSubstantive
+          --> root    "Aserbaidschan"
+          --> plural  "Aserbaidschan"
+          --> gender  NEUTRAL
+          --> number  SINGULAR
+        ;
+      --> i18nName_ja
+        -> NlgSubstantive
+          --> root    "アゼルバイジャン"
+          --> plural  "アゼルバイジャン"
+          --> gender  INANIMATE
+          --> number  SINGULAR
+        ;
+    ;
+  --> demonym
+    -> MultilingualText
+      --> i18nName_fr
+        -> NlgGenderAgreeableSubstantive
+          --> masculine "Azerbaïdjanais"
+          --> feminine  "Azerbaïdjanaise"
+        ;
+      --> i18nName_en  "Azerbaijani"
+      --> i18nName_es  "azerbaiyano"
+      --> i18nName_de
+        -> NlgGenderAgreeableSubstantive
+          --> masculine "Aserbaidschaner"
+          --> feminine  "Aserbaidschanerin"
+        ;
+    ;
+  --> adjective
+    -> MultilingualText
+      --> i18nName_fr
+        -> NlgAdjective
+          --> root      "azerbaïdjanais"
+          --> feminine  "azerbaïdjanaise"
+        ;
+      --> i18nName_en
+        -> NlgAdjective
+          --> root      "Azerbaijani"
+        ;
+      --> i18nName_es
+        -> NlgAdjective
+          --> root      "azerbaiyano"
+        ;
+      --> i18nName_de
+        -> NlgAdjective
+          --> root      "aserbaidschanisch"
+        ;
+    ;
+  --> useArticle_fr  true
+  --> useArticle_en  false
+;

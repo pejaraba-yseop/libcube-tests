@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<yseop-yml:ymlRuleset xmlns:yseop-yml="http://www.yseop.com/yml/storage" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" domainModelVersion="3" identifier="2961ac04-0e76-4b53-a808-be3d0174f56b">
+    <yseop-yml:ymlParameters/>
+    <yseop-yml:localVariables/>
+    <yseop-yml:advancedContent/>
+    <yseop-yml:rules>
+        <yseop-yml:rule>fe2e57fc-b29f-46a3-9ff7-f8915cce7b0d</yseop-yml:rule>
+        <yseop-yml:rule>685abe5a-4649-4a41-b9c5-97517074b9fc</yseop-yml:rule>
+        <yseop-yml:rule>48e93a84-b018-408c-8c10-8266e3ff3cbc</yseop-yml:rule>
+        <yseop-yml:rule>a40dd1e2-1ada-456b-ae72-6ac9732b23fe</yseop-yml:rule>
+        <yseop-yml:rule>696e6c45-c52d-4c96-ab71-488d7e73a462</yseop-yml:rule>
+        <yseop-yml:rule>c4bd3981-ff1c-49c9-aad0-27ce67903477</yseop-yml:rule>
+        <yseop-yml:rule>f663832c-f63e-406e-93ec-b6cfde545281</yseop-yml:rule>
+        <yseop-yml:rule>3d25778a-6026-49c4-a076-134de4106362</yseop-yml:rule>
+        <yseop-yml:rule>3e3c5c31-3511-4d85-a28d-fb1668470928</yseop-yml:rule>
+        <yseop-yml:rule>bcc5bfaa-be2b-486c-9e6b-e52865d80504</yseop-yml:rule>
+    </yseop-yml:rules>
+    <yseop-yml:name>businessSegmentRankingWords</yseop-yml:name>
+    <yseop-yml:properties identifier="84ceccf8-f5f3-47d5-ace3-815cba785e99">
+        <yseop-yml:property identifier="84ceccf8-f5f3-47d5-ace3-815cba785e99|dsl" type="YML_PROPERTY" name="dsl">"businessSegmentRankingWords"</yseop-yml:property>
+    </yseop-yml:properties>
+</yseop-yml:ymlRuleset>

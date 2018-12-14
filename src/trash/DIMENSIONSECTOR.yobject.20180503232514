@@ -1,0 +1,8 @@
+
+LibCube:Dimension DIMENSION_SECTOR
+    --> dsl -> Textualization
+        --> language LANG_en
+        --> root "Sector Dimension"
+        --> number SINGULAR
+    ;
+;

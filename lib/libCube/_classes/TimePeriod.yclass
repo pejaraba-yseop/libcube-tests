@@ -1,0 +1,12 @@
+interface LibCube:TimePeriod
+    classProperties
+    --> dsl -> Textualization
+        --> language LANG_en
+        --> root "Cube Time Period"
+        --> number SINGULAR
+    ;
+    --> documentation "The default possible values are: PERIOD_DAY, PERIOD_WEEK, PERIOD_WTD, PERIOD_MONTH, PERIOD_MTD, PERIOD_YEAR, PERIOD_YTD, PERIOD_QUARTER, PERIOD_QTD, PERIOD_FISCAL_YEAR, PERIOD_FYTD."
+;
+
+implementation LibCube:TimePeriod
+;

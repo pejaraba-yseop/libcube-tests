@@ -1,0 +1,75 @@
+LibGeography:Country C_ATG
+  --> iso3166_1_numeric_code  "028"
+  --> iso3166_1_alpha_2       "AG"
+  --> iso3166_1_alpha_3       "ATG"
+  --> label
+    -> MultilingualText
+      --> i18nName_fr
+        -> NlgSubstantive
+          --> root    "Antigua-et-Barbuda"
+          --> plural  "Antigua-et-Barbuda"
+          --> gender  MASCULINE
+          --> number  SINGULAR
+        ;
+      --> i18nName_en
+        -> NlgSubstantive
+          --> root    "Antigua and Barbuda"
+          --> plural  "Antigua and Barbuda"
+          --> gender  INANIMATE
+          --> number  SINGULAR
+        ;
+      --> i18nName_es
+        -> NlgSubstantive
+          --> root    "Antigua y Barbuda"
+          --> plural  "Antigua y Barbuda"
+          --> gender  MASCULINE
+          --> number  SINGULAR
+        ;
+      --> i18nName_de
+        -> NlgSubstantive
+          --> root    "Antigua und Barbuda"
+          --> plural  "Antigua und Barbuda"
+          --> gender  NEUTRAL
+          --> number  SINGULAR
+        ;
+      --> i18nName_ja
+        -> NlgSubstantive
+          --> root    "アンティグアバーブーダ"
+          --> plural  "アンティグアバーブーダ"
+          --> gender  INANIMATE
+          --> number  SINGULAR
+        ;
+    ;
+  --> demonym
+    -> MultilingualText
+      --> i18nName_fr  "d’Antigua-et-Barbuda"
+      --> i18nName_en  "of Antigua and Barbuda"
+      --> i18nName_es  "antiguano"
+      --> i18nName_de
+        -> NlgGenderAgreeableSubstantive
+          --> masculine "Antiguaner"
+          --> feminine  "Antiguanerin"
+        ;
+    ;
+  --> adjective
+    -> MultilingualText
+      --> i18nName_fr
+        -> NlgAdjective
+          --> root      "d’Antigua-et-Barbuda"
+        ;
+      --> i18nName_en
+        -> NlgAdjective
+          --> root      "of Antigua and Barbuda"
+        ;
+      --> i18nName_es
+        -> NlgAdjective
+          --> root      "antiguano"
+        ;
+      --> i18nName_de
+        -> NlgAdjective
+          --> root      "antiguanisch"
+        ;
+    ;
+  --> useArticle_fr  false
+  --> useArticle_en  false
+;

@@ -1,0 +1,37 @@
+interface NetPremium
+    field countryNameNetPremium
+        --> domains Text
+        --> xmlMapping XmlMappingProperty_NO_SAVE
+        --> dsl -> Textualization
+            --> language LANG_en
+            --> root "countryNameNetPremium"
+            --> number SINGULAR
+        ;
+    field countryNetPremiumList
+        --> domainsLevel2 NetPremiumSegments
+        --> domains Collection
+        --> xmlMapping XmlMappingProperty_NO_SAVE
+        --> dsl -> Textualization
+            --> language LANG_en
+            --> root "countryNetPremiumList "
+            --> number SINGULAR
+        ;
+    field countryNetPremiumListGreaterThan10
+        --> domainsLevel2 NetPremiumSegments
+        --> domains OrderedSet
+        --> xmlMapping XmlMappingProperty_NO_SAVE
+        --> dsl -> Textualization
+            --> language LANG_en
+            --> root "countryNetPremiumListGreaterThan10"
+            --> number SINGULAR
+        ;
+    classProperties
+    --> dsl -> Textualization
+        --> language LANG_en
+        --> root "NetPremium"
+        --> number SINGULAR
+    ;
+;
+
+implementation NetPremium
+;

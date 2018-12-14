@@ -1,0 +1,8 @@
+
+Measure MEASURE_CREDIT
+    --> dsl -> Textualization
+        --> language LANG_en
+        --> root "Credit Measure"
+        --> number SINGULAR
+    ;
+;

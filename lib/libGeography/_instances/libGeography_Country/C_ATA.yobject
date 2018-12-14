@@ -1,0 +1,67 @@
+LibGeography:Country C_ATA
+  --> iso3166_1_numeric_code  "010"
+  --> iso3166_1_alpha_2       "AQ"
+  --> iso3166_1_alpha_3       "ATA"
+  --> label
+    -> MultilingualText
+      --> i18nName_fr
+        -> NlgSubstantive
+          --> root    "Antarctique"
+          --> plural  "Antarctique"
+          --> gender  MASCULINE
+          --> number  SINGULAR
+        ;
+      --> i18nName_en
+        -> NlgSubstantive
+          --> root    "Antarctica"
+          --> plural  "Antarctica"
+          --> gender  INANIMATE
+          --> number  SINGULAR
+        ;
+      --> i18nName_es
+        -> NlgSubstantive
+          --> root    "Antártida"
+          --> plural  "Antártida"
+          --> gender  MASCULINE
+          --> number  SINGULAR
+        ;
+      --> i18nName_de
+        -> NlgSubstantive
+          --> root    "Antarktis"
+          --> plural  "Antarktis"
+          --> gender  NEUTRAL
+          --> number  SINGULAR
+        ;
+      --> i18nName_ja
+        -> NlgSubstantive
+          --> root    "南極大陸"
+          --> plural  "南極大陸"
+          --> gender  INANIMATE
+          --> number  SINGULAR
+        ;
+    ;
+  --> demonym
+    -> MultilingualText
+    ;
+  --> adjective
+    -> MultilingualText
+      --> i18nName_fr
+        -> NlgAdjective
+          --> root      "antarctique"
+        ;
+      --> i18nName_en
+        -> NlgAdjective
+          --> root      "Antarctic"
+        ;
+      --> i18nName_es
+        -> NlgAdjective
+          --> root      "antártico"
+        ;
+      --> i18nName_de
+        -> NlgAdjective
+          --> root      "antarktisch"
+        ;
+    ;
+  --> useArticle_fr  true
+  --> useArticle_en  false
+;

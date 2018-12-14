@@ -1,0 +1,80 @@
+LibGeography:Country C_KWT
+  --> iso3166_1_numeric_code  "414"
+  --> iso3166_1_alpha_2       "KW"
+  --> iso3166_1_alpha_3       "KWT"
+  --> label
+    -> MultilingualText
+      --> i18nName_fr
+        -> NlgSubstantive
+          --> root    "Koweït"
+          --> plural  "Koweït"
+          --> gender  MASCULINE
+          --> number  SINGULAR
+        ;
+      --> i18nName_en
+        -> NlgSubstantive
+          --> root    "Kuwait"
+          --> plural  "Kuwait"
+          --> gender  INANIMATE
+          --> number  SINGULAR
+        ;
+      --> i18nName_es
+        -> NlgSubstantive
+          --> root    "Kuwait"
+          --> plural  "Kuwait"
+          --> gender  MASCULINE
+          --> number  SINGULAR
+        ;
+      --> i18nName_de
+        -> NlgSubstantive
+          --> root    "Kuwait"
+          --> plural  "Kuwait"
+          --> gender  NEUTRAL
+          --> number  SINGULAR
+        ;
+      --> i18nName_ja
+        -> NlgSubstantive
+          --> root    "クウェート"
+          --> plural  "クウェート"
+          --> gender  INANIMATE
+          --> number  SINGULAR
+        ;
+    ;
+  --> demonym
+    -> MultilingualText
+      --> i18nName_fr
+        -> NlgGenderAgreeableSubstantive
+          --> masculine "Koweïtien"
+          --> feminine  "Koweïtienne"
+        ;
+      --> i18nName_en  "Kuwaiti"
+      --> i18nName_es  "kuwaití"
+      --> i18nName_de
+        -> NlgGenderAgreeableSubstantive
+          --> masculine "Kuwaiter"
+          --> feminine  "Kuwaiterin"
+        ;
+    ;
+  --> adjective
+    -> MultilingualText
+      --> i18nName_fr
+        -> NlgAdjective
+          --> root      "koweïtien"
+          --> feminine  "koweïtienne"
+        ;
+      --> i18nName_en
+        -> NlgAdjective
+          --> root      "Kuwaiti"
+        ;
+      --> i18nName_es
+        -> NlgAdjective
+          --> root      "kuwaití"
+        ;
+      --> i18nName_de
+        -> NlgAdjective
+          --> root      "kuwaitisch"
+        ;
+    ;
+  --> useArticle_fr  true
+  --> useArticle_en  false
+;

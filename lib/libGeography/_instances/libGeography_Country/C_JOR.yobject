@@ -1,0 +1,80 @@
+LibGeography:Country C_JOR
+  --> iso3166_1_numeric_code  "400"
+  --> iso3166_1_alpha_2       "JO"
+  --> iso3166_1_alpha_3       "JOR"
+  --> label
+    -> MultilingualText
+      --> i18nName_fr
+        -> NlgSubstantive
+          --> root    "Jordanie"
+          --> plural  "Jordanie"
+          --> gender  FEMININE
+          --> number  SINGULAR
+        ;
+      --> i18nName_en
+        -> NlgSubstantive
+          --> root    "Jordan"
+          --> plural  "Jordan"
+          --> gender  INANIMATE
+          --> number  SINGULAR
+        ;
+      --> i18nName_es
+        -> NlgSubstantive
+          --> root    "Jordania"
+          --> plural  "Jordania"
+          --> gender  FEMININE
+          --> number  SINGULAR
+        ;
+      --> i18nName_de
+        -> NlgSubstantive
+          --> root    "Jordanien"
+          --> plural  "Jordanien"
+          --> gender  NEUTRAL
+          --> number  SINGULAR
+        ;
+      --> i18nName_ja
+        -> NlgSubstantive
+          --> root    "ヨルダン"
+          --> plural  "ヨルダン"
+          --> gender  INANIMATE
+          --> number  SINGULAR
+        ;
+    ;
+  --> demonym
+    -> MultilingualText
+      --> i18nName_fr
+        -> NlgGenderAgreeableSubstantive
+          --> masculine "Jordanien"
+          --> feminine  "Jordanienne"
+        ;
+      --> i18nName_en  "Jordanian"
+      --> i18nName_es  "jordano"
+      --> i18nName_de
+        -> NlgGenderAgreeableSubstantive
+          --> masculine "Jordanier"
+          --> feminine  "Jordanierin"
+        ;
+    ;
+  --> adjective
+    -> MultilingualText
+      --> i18nName_fr
+        -> NlgAdjective
+          --> root      "jordanien"
+          --> feminine  "jordanienne"
+        ;
+      --> i18nName_en
+        -> NlgAdjective
+          --> root      "Jordanian"
+        ;
+      --> i18nName_es
+        -> NlgAdjective
+          --> root      "jordano"
+        ;
+      --> i18nName_de
+        -> NlgAdjective
+          --> root      "jordanisch"
+        ;
+    ;
+  --> useArticle_fr  true
+  --> useArticle_en  false
+;

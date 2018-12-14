@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<yseop-yml:ymlTextFunction xmlns:yseop-yml="http://www.yseop.com/yml/storage" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" domainModelVersion="3" identifier="a7b0f739-8d52-4440-882d-48a508268fb6">
+    <yseop-yml:textGranule domainModelVersion="3" identifier="b14f3e46-9344-450d-b68b-080bda56be8c">
+        <yseop-yml:granuleI18nContents>
+            <yseop-yml:granuleUnilingueContent locale="en">
+                <yseop-yml:granuleContent>
+                    <yseop-yml:text>
+\beginStyle(BOLD_STYLE)
+    Credit positioning
+    \_texts:Options:ReturnsStatus(theGeneralData.creditPositioningStatus)
+\endStyle
+
+\endOfLine
+
+\foreach(Fact:_Fact, theGeneralData.top2SectorsDriverFacts, #0XQJ#)
+    The fund's
+    \_texts:Options:WeightStatus(Fact:_Fact.weightStatus)
+    position in
+    \value(Fact:_Fact.getDimension(DIMENSION_SECTOR).label)
+    securities
+
+    \if(TEXT_LIST_EXECUTION_CONTEXT.currentItemIndex == 1)
+        was the most significant contributor to performance at the sector level. Specifically securities
+    \endIf
+
+    such as
+
+    \foreach(_issuerFact, Fact:_Fact.topDriverIssuersFacts, #VOX5#)
+        \value(_issuerFact.getDimension(DIMENSION_ISSUER).label)
+
+    \endForeach
+
+    .
+
+\endForeach
+
+\_texts:WordSynonyms:ConverselySynonym()
+,the bias towards
+\value(theGeneralData.bottomIssuerFact.getDimension(DIMENSION_ISSUER).label)
+,
+
+\switch(theGeneralData.creditPositioningStatus)
+
+    \case(RETURN_STATUS_WEIGHED)
+        was a key driver to performance at the issuer level
+
+    \case(RETURN_STATUS_CONTRIBUTED)
+        was a key detractor from performance at the issuer level
+
+    \noDefault
+\endSwitch
+
+.
+\p</yseop-yml:text>
+                    <yseop-yml:inline-assemblies/>
+                    <yseop-yml:inline-dslFunctionCalls/>
+                </yseop-yml:granuleContent>
+            </yseop-yml:granuleUnilingueContent>
+            <yseop-yml:granuleUnilingueContent locale="es">
+                <yseop-yml:granuleContent>
+                    <yseop-yml:text/>
+                    <yseop-yml:inline-assemblies/>
+                    <yseop-yml:inline-dslFunctionCalls/>
+                </yseop-yml:granuleContent>
+            </yseop-yml:granuleUnilingueContent>
+            <yseop-yml:granuleUnilingueContent locale="fr">
+                <yseop-yml:granuleContent>
+                    <yseop-yml:text/>
+                    <yseop-yml:inline-assemblies/>
+                    <yseop-yml:inline-dslFunctionCalls/>
+                </yseop-yml:granuleContent>
+            </yseop-yml:granuleUnilingueContent>
+        </yseop-yml:granuleI18nContents>
+        <yseop-yml:dslCondition/>
+        <yseop-yml:name/>
+        <yseop-yml:creationDate>2018-04-30T17:02:26.92Z</yseop-yml:creationDate>
+        <yseop-yml:properties identifier="b26266b1-3a78-4b62-978d-fbf9d479e147">
+            <yseop-yml:property identifier="b26266b1-3a78-4b62-978d-fbf9d479e147|condition" type="YML_PROPERTY" name="condition"></yseop-yml:property>
+        </yseop-yml:properties>
+    </yseop-yml:textGranule>
+    <yseop-yml:localVariables/>
+    <yseop-yml:advancedContent/>
+    <yseop-yml:ymlParameters/>
+    <yseop-yml:name>transitionsTest</yseop-yml:name>
+    <yseop-yml:properties identifier="036dc122-625b-45fa-bea4-b393c709e916">
+        <yseop-yml:property identifier="036dc122-625b-45fa-bea4-b393c709e916|dsl" type="YML_PROPERTY" name="dsl">"transitions test"</yseop-yml:property>
+    </yseop-yml:properties>
+</yseop-yml:ymlTextFunction>

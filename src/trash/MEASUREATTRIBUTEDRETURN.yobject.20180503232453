@@ -1,0 +1,8 @@
+
+Measure MEASURE_ATTRIBUTED_RETURN
+    --> dsl -> Textualization
+        --> language LANG_en
+        --> root "Attributed Return Measure"
+        --> number SINGULAR
+    ;
+;

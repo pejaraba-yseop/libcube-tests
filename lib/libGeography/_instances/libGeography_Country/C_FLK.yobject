@@ -1,0 +1,75 @@
+LibGeography:Country C_FLK
+  --> iso3166_1_numeric_code  "238"
+  --> iso3166_1_alpha_2       "FK"
+  --> iso3166_1_alpha_3       "FLK"
+  --> label
+    -> MultilingualText
+      --> i18nName_fr
+        -> NlgSubstantive
+          --> root    "Malouines"
+          --> plural  "Malouines"
+          --> gender  FEMININE
+          --> number  PLURAL
+        ;
+      --> i18nName_en
+        -> NlgSubstantive
+          --> root    "Falkland Islands"
+          --> plural  "Falkland Islands"
+          --> gender  INANIMATE
+          --> number  PLURAL
+        ;
+      --> i18nName_es
+        -> NlgSubstantive
+          --> root    "Islas Malvinas"
+          --> plural  "Islas Malvinas"
+          --> gender  FEMININE
+          --> number  PLURAL
+        ;
+      --> i18nName_de
+        -> NlgSubstantive
+          --> root    "Falklandinseln"
+          --> plural  "Falklandinseln"
+          --> gender  NEUTRAL
+          --> number  PLURAL
+        ;
+      --> i18nName_ja
+        -> NlgSubstantive
+          --> root    "フォークランド諸島"
+          --> plural  "フォークランド諸島"
+          --> gender  INANIMATE
+          --> number  PLURAL
+        ;
+    ;
+  --> demonym
+    -> MultilingualText
+      --> i18nName_fr  "des Îles Falkland"
+      --> i18nName_en  "Falkland Islander"
+      --> i18nName_es  "malvinense"
+      --> i18nName_de
+        -> NlgGenderAgreeableSubstantive
+          --> masculine "Falkländer"
+          --> feminine  "Falkländerin"
+        ;
+    ;
+  --> adjective
+    -> MultilingualText
+      --> i18nName_fr
+        -> NlgAdjective
+          --> root      "des Îles Falkland"
+        ;
+      --> i18nName_en
+        -> NlgAdjective
+          --> root      "of the Falkland Islands"
+        ;
+      --> i18nName_es
+        -> NlgAdjective
+          --> root      "malvinense"
+        ;
+      --> i18nName_de
+        -> NlgAdjective
+          --> root      "falkländisch"
+        ;
+    ;
+  --> useArticle_fr  true
+  --> useArticle_en  true
+;

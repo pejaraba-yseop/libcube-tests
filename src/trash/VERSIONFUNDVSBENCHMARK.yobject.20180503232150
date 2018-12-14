@@ -1,0 +1,8 @@
+
+Version VERSION_FUND_VS_BENCHMARK
+    --> dsl -> Textualization
+        --> language LANG_en
+        --> root "Fund vs Benchmark Version"
+        --> number SINGULAR
+    ;
+;

@@ -1,0 +1,67 @@
+LibGeography:Country C_SGS
+  --> iso3166_1_numeric_code  "239"
+  --> iso3166_1_alpha_2       "GS"
+  --> iso3166_1_alpha_3       "SGS"
+  --> label
+    -> MultilingualText
+      --> i18nName_fr
+        -> NlgSubstantive
+          --> root    "Géorgie du Sud-et-les Îles Sandwich du Sud"
+          --> plural  "Géorgie du Sud-et-les Îles Sandwich du Sud"
+          --> gender  MASCULINE
+          --> number  PLURAL
+        ;
+      --> i18nName_en
+        -> NlgSubstantive
+          --> root    "South Georgia and the South Sandwich Islands"
+          --> plural  "South Georgia and the South Sandwich Islands"
+          --> gender  INANIMATE
+          --> number  PLURAL
+        ;
+      --> i18nName_es
+        -> NlgSubstantive
+          --> root    "Georgia del Sur e Islas Sandwich del Sur"
+          --> plural  "Georgia del Sur e Islas Sandwich del Sur"
+          --> gender  MASCULINE
+          --> number  PLURAL
+        ;
+      --> i18nName_de
+        -> NlgSubstantive
+          --> root    "Südgeorgien und Südliche Sandwichinseln"
+          --> plural  "Südgeorgien und Südliche Sandwichinseln"
+          --> gender  NEUTRAL
+          --> number  PLURAL
+        ;
+      --> i18nName_ja
+        -> NlgSubstantive
+          --> root    "サウスジョージア州とサウス・サンドイッチ諸島"
+          --> plural  "サウスジョージア州とサウス・サンドイッチ諸島"
+          --> gender  INANIMATE
+          --> number  PLURAL
+        ;
+    ;
+  --> demonym
+    -> MultilingualText
+    ;
+  --> adjective
+    -> MultilingualText
+      --> i18nName_fr
+        -> NlgAdjective
+          --> root      "des Îles Géorgie du Sud et Sandwich du Sud"
+        ;
+      --> i18nName_en
+        -> NlgAdjective
+          --> root      "of South Georgia and the South Sandwich Islands"
+        ;
+      --> i18nName_es
+        -> NlgAdjective
+          --> root      "de Georgia del Sur e Islas Sandwich del Sur"
+        ;
+      --> i18nName_de
+        -> NlgAdjective
+          --> root      "Südgeorgiensund der Südlichen Sandwichinseln"
+        ;
+    ;
+  --> useArticle_fr  true
+  --> useArticle_en  true
+;

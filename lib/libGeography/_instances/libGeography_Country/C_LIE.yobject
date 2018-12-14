@@ -1,0 +1,80 @@
+LibGeography:Country C_LIE
+  --> iso3166_1_numeric_code  "438"
+  --> iso3166_1_alpha_2       "LI"
+  --> iso3166_1_alpha_3       "LIE"
+  --> label
+    -> MultilingualText
+      --> i18nName_fr
+        -> NlgSubstantive
+          --> root    "Liechtenstein"
+          --> plural  "Liechtenstein"
+          --> gender  MASCULINE
+          --> number  SINGULAR
+        ;
+      --> i18nName_en
+        -> NlgSubstantive
+          --> root    "Liechtenstein"
+          --> plural  "Liechtenstein"
+          --> gender  INANIMATE
+          --> number  SINGULAR
+        ;
+      --> i18nName_es
+        -> NlgSubstantive
+          --> root    "Liechtenstein"
+          --> plural  "Liechtenstein"
+          --> gender  MASCULINE
+          --> number  SINGULAR
+        ;
+      --> i18nName_de
+        -> NlgSubstantive
+          --> root    "Liechtenstein"
+          --> plural  "Liechtenstein"
+          --> gender  NEUTRAL
+          --> number  SINGULAR
+        ;
+      --> i18nName_ja
+        -> NlgSubstantive
+          --> root    "リヒテンシュタイン"
+          --> plural  "リヒテンシュタイン"
+          --> gender  INANIMATE
+          --> number  SINGULAR
+        ;
+    ;
+  --> demonym
+    -> MultilingualText
+      --> i18nName_fr
+        -> NlgGenderAgreeableSubstantive
+          --> masculine "Liechtensteinois"
+          --> feminine  "Liechtensteinoise"
+        ;
+      --> i18nName_en  "Liechtensteiner"
+      --> i18nName_es  "liechtensteiniano"
+      --> i18nName_de
+        -> NlgGenderAgreeableSubstantive
+          --> masculine "Liechtensteiner"
+          --> feminine  "Liechtensteinerin"
+        ;
+    ;
+  --> adjective
+    -> MultilingualText
+      --> i18nName_fr
+        -> NlgAdjective
+          --> root      "liechtensteinois"
+          --> feminine  "liechtensteinoise"
+        ;
+      --> i18nName_en
+        -> NlgAdjective
+          --> root      "of Liechtenstein"
+        ;
+      --> i18nName_es
+        -> NlgAdjective
+          --> root      "liechtensteiniano"
+        ;
+      --> i18nName_de
+        -> NlgAdjective
+          --> root      "liechtensteinisch"
+        ;
+    ;
+  --> useArticle_fr  true
+  --> useArticle_en  false
+;

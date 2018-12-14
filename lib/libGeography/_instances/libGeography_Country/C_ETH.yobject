@@ -1,0 +1,80 @@
+LibGeography:Country C_ETH
+  --> iso3166_1_numeric_code  "231"
+  --> iso3166_1_alpha_2       "ET"
+  --> iso3166_1_alpha_3       "ETH"
+  --> label
+    -> MultilingualText
+      --> i18nName_fr
+        -> NlgSubstantive
+          --> root    "Éthiopie"
+          --> plural  "Éthiopie"
+          --> gender  FEMININE
+          --> number  SINGULAR
+        ;
+      --> i18nName_en
+        -> NlgSubstantive
+          --> root    "Ethiopia"
+          --> plural  "Ethiopia"
+          --> gender  INANIMATE
+          --> number  SINGULAR
+        ;
+      --> i18nName_es
+        -> NlgSubstantive
+          --> root    "Etiopía"
+          --> plural  "Etiopía"
+          --> gender  FEMININE
+          --> number  SINGULAR
+        ;
+      --> i18nName_de
+        -> NlgSubstantive
+          --> root    "Äthiopien"
+          --> plural  "Äthiopien"
+          --> gender  NEUTRAL
+          --> number  SINGULAR
+        ;
+      --> i18nName_ja
+        -> NlgSubstantive
+          --> root    "エチオピア"
+          --> plural  "エチオピア"
+          --> gender  INANIMATE
+          --> number  SINGULAR
+        ;
+    ;
+  --> demonym
+    -> MultilingualText
+      --> i18nName_fr
+        -> NlgGenderAgreeableSubstantive
+          --> masculine "Éthiopien"
+          --> feminine  "Éthiopienne"
+        ;
+      --> i18nName_en  "Ethiopian"
+      --> i18nName_es  "etíope"
+      --> i18nName_de
+        -> NlgGenderAgreeableSubstantive
+          --> masculine "Äthiopier"
+          --> feminine  "Äthiopierin"
+        ;
+    ;
+  --> adjective
+    -> MultilingualText
+      --> i18nName_fr
+        -> NlgAdjective
+          --> root      "éthiopien"
+          --> feminine  "éthiopienne"
+        ;
+      --> i18nName_en
+        -> NlgAdjective
+          --> root      "Ethiopian"
+        ;
+      --> i18nName_es
+        -> NlgAdjective
+          --> root      "etíope"
+        ;
+      --> i18nName_de
+        -> NlgAdjective
+          --> root      "äthiopisch"
+        ;
+    ;
+  --> useArticle_fr  true
+  --> useArticle_en  false
+;

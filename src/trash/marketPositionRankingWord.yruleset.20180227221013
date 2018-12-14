@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<yseop-yml:ymlRuleset xmlns:yseop-yml="http://www.yseop.com/yml/storage" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" domainModelVersion="3" identifier="40e967ef-ab7f-4e2f-9db3-f707b04f28de">
+    <yseop-yml:ymlParameters/>
+    <yseop-yml:localVariables/>
+    <yseop-yml:advancedContent/>
+    <yseop-yml:rules>
+        <yseop-yml:rule>e05dd502-3ac3-485a-9e1a-cbcfa5d22220</yseop-yml:rule>
+        <yseop-yml:rule>972fbc18-ddda-45c3-bc0c-958ef6d35004</yseop-yml:rule>
+        <yseop-yml:rule>6ff08cb9-2916-4d62-8c39-cba1d44b9869</yseop-yml:rule>
+    </yseop-yml:rules>
+    <yseop-yml:name>marketPositionRankingWord</yseop-yml:name>
+    <yseop-yml:properties identifier="4512be92-69f7-4a29-bc49-659ff07cbec0">
+        <yseop-yml:property identifier="4512be92-69f7-4a29-bc49-659ff07cbec0|dsl" type="YML_PROPERTY" name="dsl">"market position ranking word"</yseop-yml:property>
+    </yseop-yml:properties>
+</yseop-yml:ymlRuleset>

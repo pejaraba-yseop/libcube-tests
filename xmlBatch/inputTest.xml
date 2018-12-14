@@ -1,0 +1,2195 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<y:input xmlns:y='http://www.yseop.com/engine/3'>
+    <y:data>
+<y:instance yid="theGeneralData">
+            <language yid="LANG_en"/>
+            <cube yclass="LibCube:Cube">
+                <generateMdxQueries>true</generateMdxQueries>
+                <mdxName>DELOITTE</mdxName>
+                <dimensions yid="DIMENSION_TIME">
+                    <mdxName>DIM_TIME</mdxName>
+                    <members yid="TIME_YEAR_2017" yclass="LibCube:TimeMember">
+                        <period yid="PERIOD_YEAR"/>
+                        <date>1/1/2017</date>
+                        <mdxName>2017</mdxName>
+                    </members>
+                    <members yid="TIME_YEAR_2018" yclass="LibCube:TimeMember">
+                        <period yid="PERIOD_YEAR"/>
+                        <date>1/1/2018</date>
+                        <mdxName>2018</mdxName>
+                    </members>
+                </dimensions>
+                <dimensions yid="DIMENSION_CITY">
+                    <mdxName>DIM_CITY</mdxName>
+                    <hierarchies yid="HIERARCHY_CITYS" yclass="LibCube:Hierarchy">
+                        <mdxName>Cities</mdxName>
+                        <value yid="CITY_ALL" yclass="City">
+                            <label>All Citys</label>
+                            <mdxName>All Cities</mdxName>
+                        </value>
+                        <child yclass="LibCube:Hierarchy">
+                            <value yid="CITY_NEW_YORK" yclass="City">
+                                <label>New York</label>
+                                <mdxName>New York</mdxName>
+                            </value>
+                        </child>
+                        <child yclass="LibCube:Hierarchy">
+                            <value yid="CITY_BOGOTA" yclass="City">
+                                <label>Bogota</label>
+                                <mdxName>Bogota</mdxName>
+                            </value>
+                        </child>
+                        <child yclass="LibCube:Hierarchy">
+                            <value yid="CITY_PARIS" yclass="City">
+                                <label>Paris</label>
+                                <mdxName>Paris</mdxName>
+                            </value>
+                        </child>
+                        <child yclass="LibCube:Hierarchy">
+                            <value yid="CITY_DALLAS" yclass="City">
+                                <label>Dallas</label>
+                                <mdxName>Dallas</mdxName>
+                            </value>
+                        </child>
+                        <child yclass="LibCube:Hierarchy">
+                            <value yid="CITY_LYON" yclass="City">
+                                <label>Lyon</label>
+                                <mdxFullName>[DIM_CITY.Cities].[All Cities].[Lyon]</mdxFullName>
+                            </value>
+                        </child>
+                    </hierarchies>
+                </dimensions>
+                <dimensions yid="DIMENSION_PRODUCT">
+                    <mdxName>DIM_PRODUCT</mdxName>
+                    <hierarchies yid="HIERARCHY_PRODUCT" yclass="LibCube:Hierarchy">
+                        <mdxName>Products</mdxName>
+                        <value yid="PRODUCT_ALL" yclass="Product">
+                            <label>All</label>
+                            <mdxName>All Products</mdxName>
+                        </value>
+                        <child yclass="LibCube:Hierarchy">
+                            <value yid="PRODUCT_PROCESSED_CHEESE" yclass="Product">
+                                <label>Processed Cheese</label>
+                                <mdxName>Processed Cheese</mdxName>
+                            </value>
+                            <child yclass="LibCube:Hierarchy">
+                                <value yid="PRODUCT_PROVOLONE" yclass="Product">
+                                    <label>Provolone</label>
+                                    <mdxName>Provolone</mdxName>
+                                </value>
+                            </child>
+                            <child yclass="LibCube:Hierarchy">
+                                <value yid="PRODUCT_AMERICAN" yclass="Product">
+                                    <label>American</label>
+                                    <mdxName>American</mdxName>
+                                </value>
+                            </child>
+                        </child>
+                        <child yclass="LibCube:Hierarchy">
+                            <value yid="PRODUCT_SEMI_HARD_CHEESE" yclass="Product">
+                                <label>Semi Hard Cheese</label>
+                            </value>
+                            <child yclass="LibCube:Hierarchy">
+                                <value yid="PRODUCT_CHEDDAR" yclass="Product">
+                                    <label>Cheddar</label>
+                                    <mdxName>Cheddar</mdxName>
+                                </value>
+                            </child>
+                        </child>
+                        <child yclass="LibCube:Hierarchy">
+                            <value yid="PRODUCT_MEDIUM_HARD_CHEESE" yclass="Product">
+                                <label>Medium Hard Cheese</label>
+                                <mdxName>Medium Hard Cheese</mdxName>
+                            </value>
+                            <child yclass="LibCube:Hierarchy">
+                                <value yid="PRODUCT_SWISS" yclass="Product">
+                                    <label>Swiss</label>
+                                    <mdxName>Swiss</mdxName>
+                                </value>
+                            </child>
+                        </child>
+                        <child yclass="LibCube:Hierarchy">
+                            <value yid="PRODUCT_FRESH_CHEESE" yclass="Product">
+                                <label>Fresh Cheese</label>
+                                <mdxName>Fresh Cheese</mdxName>
+                            </value>
+                            <child yclass="LibCube:Hierarchy">
+                                <value yid="PRODUCT_MOZZARELLA" yclass="Product">
+                                    <label>Mozzarella</label>
+                                    <mdxName>Mozzarella</mdxName>
+                                </value>
+                            </child>
+                            <child yclass="LibCube:Hierarchy">
+                                <value yid="PRODUCT_COTTAGE" yclass="Product">
+                                    <label>Cottage</label>
+                                    <mdxName>Cottage</mdxName>
+                                </value>
+                            </child>
+                            <child yclass="LibCube:Hierarchy">
+                                <value yid="PRODUCT_COSTEÑO" yclass="Product">
+                                    <label>Costeño</label>
+                                    <mdxName>Costeño</mdxName>
+                                </value>
+                            </child>
+                            <child yclass="LibCube:Hierarchy">
+                                <value yid="PRODUCT_BUFFALO" yclass="Product">
+                                    <label>Buffalo</label>
+                                    <mdxName>Buffalo</mdxName>
+                                </value>
+                            </child>
+                        </child>
+                    </hierarchies>
+                </dimensions>
+                <dimensions yid="DIMENSION_STORE">
+                    <mdxName>DIM_STORE</mdxName>
+                    <hierarchies yid="HIERARCHY_STORES" yclass="LibCube:Hierarchy">
+                        <mdxName>Stores</mdxName>
+                        <value yid="STORE_ALL" yclass="Store">
+                            <label>All Stores</label>
+                            <mdxName>All Stores</mdxName>
+                        </value>
+                        <child yclass="LibCube:Hierarchy">
+                            <value yid="STORE_CHEESE_FOR_ALL" yclass="Store">
+                                <label>Cheese For All</label>
+                                <city yid="CITY_NEW_YORK"/>
+                            </value>
+                        </child>
+                        <child yclass="LibCube:Hierarchy">
+                            <value yid="STORE_QUESERIA_COLOMBIANA" yclass="Store">
+                                <label>Quesería Colombiana</label>
+                                <city yid="CITY_BOGOTA"/>
+                            </value>
+                        </child>
+                        <child yclass="LibCube:Hierarchy">
+                            <value yid="STORE_CAPITAL_CHEESE_STORE" yclass="Store">
+                                <label>Capital Cheese Store</label>
+                                <city yid="CITY_PARIS"/>
+                            </value>
+                        </child>
+                        <child yclass="LibCube:Hierarchy">
+                            <value yid="STORE_UNCLE_BOBS_CHEESE_FACTORY" yclass="Store">
+                                <label>Uncle Bob's Cheese Factory</label>
+                                <city yid="CITY_DALLAS"/>
+                            </value>
+                        </child>
+                        <child yclass="LibCube:Hierarchy">
+                            <value yid="STORE_LYON_CHEESE_STORE" yclass="Store">
+                                <label>Lyon Cheese Store</label>
+                                <city yid="CITY_LYON"/>
+                            </value>
+                        </child>
+                        <child yclass="LibCube:Hierarchy">
+                            <value yid="STORE_QUESERIA_COSTEÑA" yclass="Store">
+                                <label>Quesería Costeña</label>
+                                <city yid="CITY_BOGOTA"/>
+                            </value>
+                        </child>
+                        <child yclass="LibCube:Hierarchy">
+                            <value yid="STORE_AMERICAN_SPECIAL_CHEESES" yclass="Store">
+                                <label>American Special Cheeses</label>
+                                <city yid="CITY_NEW_YORK"/>
+                            </value>
+                        </child>
+                        <child yclass="LibCube:Hierarchy">
+                            <value yid="STORE_DELUXE_CHEESE_STORE" yclass="Store">
+                                <label>Deluxe Cheese Store</label>
+                                <city yid="CITY_PARIS"/>
+                            </value>
+                        </child>
+                    </hierarchies>
+                </dimensions>
+                <facts yclass="Fact">
+                    <members yid="TIME_YEAR_2017"/>
+                    <members yid="CITY_ALL"/>
+                    <members yid="STORE_ALL"/>
+                    <members yid="PRODUCT_ALL"/>
+                    <factMeasures yclass="LibCube:FactMeasure">
+                        <measure yid="MEASURE_SOLD_UNITS"/>
+                        <value>23374</value>
+                    </factMeasures>
+                    <factMeasures yclass="LibCube:FactMeasure">
+                        <measure yid="MEASURE_SALE_VALUE"/>
+                        <value>221484</value>
+                    </factMeasures>
+                </facts>
+                <facts yclass="Fact">
+                    <members yid="TIME_YEAR_2018"/>
+                    <members yid="CITY_ALL"/>
+                    <members yid="STORE_ALL"/>
+                    <members yid="PRODUCT_ALL"/>
+                    <factMeasures yclass="LibCube:FactMeasure">
+                        <measure yid="MEASURE_SOLD_UNITS"/>
+                        <value>23876</value>
+                    </factMeasures>
+                    <factMeasures yclass="LibCube:FactMeasure">
+                        <measure yid="MEASURE_SALE_VALUE"/>
+                        <value>225034</value>
+                    </factMeasures>
+                </facts>
+                <facts yclass="Fact">
+                    <members yid="TIME_YEAR_2017"/>
+                    <members yid="CITY_ALL"/>
+                    <members yid="STORE_ALL"/>
+                    <members yid="PRODUCT_AMERICAN"/>
+                    <factMeasures yclass="LibCube:FactMeasure">
+                        <measure yid="MEASURE_SOLD_UNITS"/>
+                        <value>1793</value>
+                    </factMeasures>
+                    <factMeasures yclass="LibCube:FactMeasure">
+                        <measure yid="MEASURE_SALE_VALUE"/>
+                        <value>16210</value>
+                    </factMeasures>
+                </facts>
+                <facts yclass="Fact">
+                    <members yid="TIME_YEAR_2018"/>
+                    <members yid="CITY_ALL"/>
+                    <members yid="STORE_ALL"/>
+                    <members yid="PRODUCT_AMERICAN"/>
+                    <factMeasures yclass="LibCube:FactMeasure">
+                        <measure yid="MEASURE_SOLD_UNITS"/>
+                        <value>1505</value>
+                    </factMeasures>
+                    <factMeasures yclass="LibCube:FactMeasure">
+                        <measure yid="MEASURE_SALE_VALUE"/>
+                        <value>20060</value>
+                    </factMeasures>
+                </facts>
+                <facts yclass="Fact">
+                    <members yid="TIME_YEAR_2017"/>
+                    <members yid="CITY_ALL"/>
+                    <members yid="STORE_ALL"/>
+                    <members yid="PRODUCT_BUFFALO"/>
+                    <factMeasures yclass="LibCube:FactMeasure">
+                        <measure yid="MEASURE_SOLD_UNITS"/>
+                        <value>321</value>
+                    </factMeasures>
+                    <factMeasures yclass="LibCube:FactMeasure">
+                        <measure yid="MEASURE_SALE_VALUE"/>
+                        <value>7062</value>
+                    </factMeasures>
+                </facts>
+                <facts yclass="Fact">
+                    <members yid="TIME_YEAR_2018"/>
+                    <members yid="CITY_ALL"/>
+                    <members yid="STORE_ALL"/>
+                    <members yid="PRODUCT_BUFFALO"/>
+                    <factMeasures yclass="LibCube:FactMeasure">
+                        <measure yid="MEASURE_SOLD_UNITS"/>
+                        <value>175</value>
+                    </factMeasures>
+                    <factMeasures yclass="LibCube:FactMeasure">
+                        <measure yid="MEASURE_SALE_VALUE"/>
+                        <value>7062</value>
+                    </factMeasures>
+                </facts>
+                <facts yclass="Fact">
+                    <members yid="TIME_YEAR_2017"/>
+                    <members yid="CITY_ALL"/>
+                    <members yid="STORE_ALL"/>
+                    <members yid="PRODUCT_CHEDDAR"/>
+                    <factMeasures yclass="LibCube:FactMeasure">
+                        <measure yid="MEASURE_SOLD_UNITS"/>
+                        <value>611</value>
+                    </factMeasures>
+                    <factMeasures yclass="LibCube:FactMeasure">
+                        <measure yid="MEASURE_SALE_VALUE"/>
+                        <value>4172</value>
+                    </factMeasures>
+                </facts>
+                <facts yclass="Fact">
+                    <members yid="TIME_YEAR_2018"/>
+                    <members yid="CITY_ALL"/>
+                    <members yid="STORE_ALL"/>
+                    <members yid="PRODUCT_CHEDDAR"/>
+                    <factMeasures yclass="LibCube:FactMeasure">
+                        <measure yid="MEASURE_SOLD_UNITS"/>
+                        <value>745</value>
+                    </factMeasures>
+                    <factMeasures yclass="LibCube:FactMeasure">
+                        <measure yid="MEASURE_SALE_VALUE"/>
+                        <value>4172</value>
+                    </factMeasures>
+                </facts>
+                <facts yclass="Fact">
+                    <members yid="TIME_YEAR_2017"/>
+                    <members yid="CITY_ALL"/>
+                    <members yid="STORE_ALL"/>
+                    <members yid="PRODUCT_COSTEÑO"/>
+                    <factMeasures yclass="LibCube:FactMeasure">
+                        <measure yid="MEASURE_SOLD_UNITS"/>
+                        <value>2405</value>
+                    </factMeasures>
+                    <factMeasures yclass="LibCube:FactMeasure">
+                        <measure yid="MEASURE_SALE_VALUE"/>
+                        <value>18040</value>
+                    </factMeasures>
+                </facts>
+                <facts yclass="Fact">
+                    <members yid="TIME_YEAR_2018"/>
+                    <members yid="CITY_ALL"/>
+                    <members yid="STORE_ALL"/>
+                    <members yid="PRODUCT_COSTEÑO"/>
+                    <factMeasures yclass="LibCube:FactMeasure">
+                        <measure yid="MEASURE_SOLD_UNITS"/>
+                        <value>2309</value>
+                    </factMeasures>
+                    <factMeasures yclass="LibCube:FactMeasure">
+                        <measure yid="MEASURE_SALE_VALUE"/>
+                        <value>18040</value>
+                    </factMeasures>
+                </facts>
+                <facts yclass="Fact">
+                    <members yid="TIME_YEAR_2017"/>
+                    <members yid="CITY_ALL"/>
+                    <members yid="STORE_ALL"/>
+                    <members yid="PRODUCT_COTTAGE"/>
+                    <factMeasures yclass="LibCube:FactMeasure">
+                        <measure yid="MEASURE_SOLD_UNITS"/>
+                        <value>1290</value>
+                    </factMeasures>
+                    <factMeasures yclass="LibCube:FactMeasure">
+                        <measure yid="MEASURE_SALE_VALUE"/>
+                        <value>8580</value>
+                    </factMeasures>
+                </facts>
+                <facts yclass="Fact">
+                    <members yid="TIME_YEAR_2018"/>
+                    <members yid="CITY_ALL"/>
+                    <members yid="STORE_ALL"/>
+                    <members yid="PRODUCT_COTTAGE"/>
+                    <factMeasures yclass="LibCube:FactMeasure">
+                        <measure yid="MEASURE_SOLD_UNITS"/>
+                        <value>1035</value>
+                    </factMeasures>
+                    <factMeasures yclass="LibCube:FactMeasure">
+                        <measure yid="MEASURE_SALE_VALUE"/>
+                        <value>8580</value>
+                    </factMeasures>
+                </facts>
+                <facts yclass="Fact">
+                    <members yid="TIME_YEAR_2017"/>
+                    <members yid="CITY_ALL"/>
+                    <members yid="STORE_ALL"/>
+                    <members yid="PRODUCT_FRESH_CHEESE"/>
+                    <factMeasures yclass="LibCube:FactMeasure">
+                        <measure yid="MEASURE_SOLD_UNITS"/>
+                        <value>5967</value>
+                    </factMeasures>
+                    <factMeasures yclass="LibCube:FactMeasure">
+                        <measure yid="MEASURE_SALE_VALUE"/>
+                        <value>48447</value>
+                    </factMeasures>
+                </facts>
+                <facts yclass="Fact">
+                    <members yid="TIME_YEAR_2018"/>
+                    <members yid="CITY_ALL"/>
+                    <members yid="STORE_ALL"/>
+                    <members yid="PRODUCT_FRESH_CHEESE"/>
+                    <factMeasures yclass="LibCube:FactMeasure">
+                        <measure yid="MEASURE_SOLD_UNITS"/>
+                        <value>5573</value>
+                    </factMeasures>
+                    <factMeasures yclass="LibCube:FactMeasure">
+                        <measure yid="MEASURE_SALE_VALUE"/>
+                        <value>48447</value>
+                    </factMeasures>
+                </facts>
+                <facts yclass="Fact">
+                    <members yid="TIME_YEAR_2017"/>
+                    <members yid="CITY_ALL"/>
+                    <members yid="STORE_ALL"/>
+                    <members yid="PRODUCT_MEDIUM_HARD_CHEESE"/>
+                    <factMeasures yclass="LibCube:FactMeasure">
+                        <measure yid="MEASURE_SOLD_UNITS"/>
+                        <value>1668</value>
+                    </factMeasures>
+                    <factMeasures yclass="LibCube:FactMeasure">
+                        <measure yid="MEASURE_SALE_VALUE"/>
+                        <value>26931</value>
+                    </factMeasures>
+                </facts>
+                <facts yclass="Fact">
+                    <members yid="TIME_YEAR_2018"/>
+                    <members yid="CITY_ALL"/>
+                    <members yid="STORE_ALL"/>
+                    <members yid="PRODUCT_MEDIUM_HARD_CHEESE"/>
+                    <factMeasures yclass="LibCube:FactMeasure">
+                        <measure yid="MEASURE_SOLD_UNITS"/>
+                        <value>2095</value>
+                    </factMeasures>
+                    <factMeasures yclass="LibCube:FactMeasure">
+                        <measure yid="MEASURE_SALE_VALUE"/>
+                        <value>26931</value>
+                    </factMeasures>
+                </facts>
+                <facts yclass="Fact">
+                    <members yid="TIME_YEAR_2017"/>
+                    <members yid="CITY_ALL"/>
+                    <members yid="STORE_ALL"/>
+                    <members yid="PRODUCT_MOZZARELLA"/>
+                    <factMeasures yclass="LibCube:FactMeasure">
+                        <measure yid="MEASURE_SOLD_UNITS"/>
+                        <value>1951</value>
+                    </factMeasures>
+                    <factMeasures yclass="LibCube:FactMeasure">
+                        <measure yid="MEASURE_SALE_VALUE"/>
+                        <value>14765</value>
+                    </factMeasures>
+                </facts>
+                <facts yclass="Fact">
+                    <members yid="TIME_YEAR_2018"/>
+                    <members yid="CITY_ALL"/>
+                    <members yid="STORE_ALL"/>
+                    <members yid="PRODUCT_MOZZARELLA"/>
+                    <factMeasures yclass="LibCube:FactMeasure">
+                        <measure yid="MEASURE_SOLD_UNITS"/>
+                        <value>2054</value>
+                    </factMeasures>
+                    <factMeasures yclass="LibCube:FactMeasure">
+                        <measure yid="MEASURE_SALE_VALUE"/>
+                        <value>14765</value>
+                    </factMeasures>
+                </facts>
+                <facts yclass="Fact">
+                    <members yid="TIME_YEAR_2017"/>
+                    <members yid="CITY_ALL"/>
+                    <members yid="STORE_ALL"/>
+                    <members yid="PRODUCT_PROCESSED_CHEESE"/>
+                    <factMeasures yclass="LibCube:FactMeasure">
+                        <measure yid="MEASURE_SOLD_UNITS"/>
+                        <value>3441</value>
+                    </factMeasures>
+                    <factMeasures yclass="LibCube:FactMeasure">
+                        <measure yid="MEASURE_SALE_VALUE"/>
+                        <value>31042</value>
+                    </factMeasures>
+                </facts>
+                <facts yclass="Fact">
+                    <members yid="TIME_YEAR_2018"/>
+                    <members yid="CITY_ALL"/>
+                    <members yid="STORE_ALL"/>
+                    <members yid="PRODUCT_PROCESSED_CHEESE"/>
+                    <factMeasures yclass="LibCube:FactMeasure">
+                        <measure yid="MEASURE_SOLD_UNITS"/>
+                        <value>3525</value>
+                    </factMeasures>
+                    <factMeasures yclass="LibCube:FactMeasure">
+                        <measure yid="MEASURE_SALE_VALUE"/>
+                        <value>31042</value>
+                    </factMeasures>
+                </facts>
+                <facts yclass="Fact">
+                    <members yid="TIME_YEAR_2017"/>
+                    <members yid="CITY_ALL"/>
+                    <members yid="STORE_ALL"/>
+                    <members yid="PRODUCT_PROVOLONE"/>
+                    <factMeasures yclass="LibCube:FactMeasure">
+                        <measure yid="MEASURE_SOLD_UNITS"/>
+                        <value>1648</value>
+                    </factMeasures>
+                    <factMeasures yclass="LibCube:FactMeasure">
+                        <measure yid="MEASURE_SALE_VALUE"/>
+                        <value>14832</value>
+                    </factMeasures>
+                </facts>
+                <facts yclass="Fact">
+                    <members yid="TIME_YEAR_2018"/>
+                    <members yid="CITY_ALL"/>
+                    <members yid="STORE_ALL"/>
+                    <members yid="PRODUCT_PROVOLONE"/>
+                    <factMeasures yclass="LibCube:FactMeasure">
+                        <measure yid="MEASURE_SOLD_UNITS"/>
+                        <value>2020</value>
+                    </factMeasures>
+                    <factMeasures yclass="LibCube:FactMeasure">
+                        <measure yid="MEASURE_SALE_VALUE"/>
+                        <value>14832</value>
+                    </factMeasures>
+                </facts>
+                <facts yclass="Fact">
+                    <members yid="TIME_YEAR_2017"/>
+                    <members yid="CITY_ALL"/>
+                    <members yid="STORE_ALL"/>
+                    <members yid="PRODUCT_SEMI_HARD_CHEESE"/>
+                    <factMeasures yclass="LibCube:FactMeasure">
+                        <measure yid="MEASURE_SOLD_UNITS"/>
+                        <value>611</value>
+                    </factMeasures>
+                    <factMeasures yclass="LibCube:FactMeasure">
+                        <measure yid="MEASURE_SALE_VALUE"/>
+                        <value>4172</value>
+                    </factMeasures>
+                </facts>
+                <facts yclass="Fact">
+                    <members yid="TIME_YEAR_2018"/>
+                    <members yid="CITY_ALL"/>
+                    <members yid="STORE_ALL"/>
+                    <members yid="PRODUCT_SEMI_HARD_CHEESE"/>
+                    <factMeasures yclass="LibCube:FactMeasure">
+                        <measure yid="MEASURE_SOLD_UNITS"/>
+                        <value>745</value>
+                    </factMeasures>
+                    <factMeasures yclass="LibCube:FactMeasure">
+                        <measure yid="MEASURE_SALE_VALUE"/>
+                        <value>4172</value>
+                    </factMeasures>
+                </facts>
+                <facts yclass="Fact">
+                    <members yid="TIME_YEAR_2017"/>
+                    <members yid="CITY_ALL"/>
+                    <members yid="STORE_ALL"/>
+                    <members yid="PRODUCT_SWISS"/>
+                    <factMeasures yclass="LibCube:FactMeasure">
+                        <measure yid="MEASURE_SOLD_UNITS"/>
+                        <value>1668</value>
+                    </factMeasures>
+                    <factMeasures yclass="LibCube:FactMeasure">
+                        <measure yid="MEASURE_SALE_VALUE"/>
+                        <value>26931</value>
+                    </factMeasures>
+                </facts>
+                <facts yclass="Fact">
+                    <members yid="TIME_YEAR_2018"/>
+                    <members yid="CITY_ALL"/>
+                    <members yid="STORE_ALL"/>
+                    <members yid="PRODUCT_SWISS"/>
+                    <factMeasures yclass="LibCube:FactMeasure">
+                        <measure yid="MEASURE_SOLD_UNITS"/>
+                        <value>2095</value>
+                    </factMeasures>
+                    <factMeasures yclass="LibCube:FactMeasure">
+                        <measure yid="MEASURE_SALE_VALUE"/>
+                        <value>26931</value>
+                    </factMeasures>
+                </facts>
+                <facts yclass="Fact">
+                    <members yid="TIME_YEAR_2017"/>
+                    <members yid="CITY_BOGOTA"/>
+                    <members yid="STORE_QUESERIA_COLOMBIANA"/>
+                    <members yid="PRODUCT_ALL"/>
+                    <factMeasures yclass="LibCube:FactMeasure">
+                        <measure yid="MEASURE_SOLD_UNITS"/>
+                        <value>1670</value>
+                    </factMeasures>
+                    <factMeasures yclass="LibCube:FactMeasure">
+                        <measure yid="MEASURE_SALE_VALUE"/>
+                        <value>10540</value>
+                    </factMeasures>
+                </facts>
+                <facts yclass="Fact">
+                    <members yid="TIME_YEAR_2017"/>
+                    <members yid="CITY_BOGOTA"/>
+                    <members yid="STORE_QUESERIA_COSTEÑA"/>
+                    <members yid="PRODUCT_ALL"/>
+                    <factMeasures yclass="LibCube:FactMeasure">
+                        <measure yid="MEASURE_SOLD_UNITS"/>
+                        <value>1726</value>
+                    </factMeasures>
+                    <factMeasures yclass="LibCube:FactMeasure">
+                        <measure yid="MEASURE_SALE_VALUE"/>
+                        <value>11335</value>
+                    </factMeasures>
+                </facts>
+                <facts yclass="Fact">
+                    <members yid="TIME_YEAR_2018"/>
+                    <members yid="CITY_BOGOTA"/>
+                    <members yid="STORE_QUESERIA_COLOMBIANA"/>
+                    <members yid="PRODUCT_ALL"/>
+                    <factMeasures yclass="LibCube:FactMeasure">
+                        <measure yid="MEASURE_SOLD_UNITS"/>
+                        <value>1532</value>
+                    </factMeasures>
+                    <factMeasures yclass="LibCube:FactMeasure">
+                        <measure yid="MEASURE_SALE_VALUE"/>
+                        <value>10540</value>
+                    </factMeasures>
+                </facts>
+                <facts yclass="Fact">
+                    <members yid="TIME_YEAR_2018"/>
+                    <members yid="CITY_BOGOTA"/>
+                    <members yid="STORE_QUESERIA_COSTEÑA"/>
+                    <members yid="PRODUCT_ALL"/>
+                    <factMeasures yclass="LibCube:FactMeasure">
+                        <measure yid="MEASURE_SOLD_UNITS"/>
+                        <value>1948</value>
+                    </factMeasures>
+                    <factMeasures yclass="LibCube:FactMeasure">
+                        <measure yid="MEASURE_SALE_VALUE"/>
+                        <value>11335</value>
+                    </factMeasures>
+                </facts>
+                <facts yclass="Fact">
+                    <members yid="TIME_YEAR_2017"/>
+                    <members yid="CITY_BOGOTA"/>
+                    <members yid="STORE_ALL"/>
+                    <members yid="PRODUCT_ALL"/>
+                    <factMeasures yclass="LibCube:FactMeasure">
+                        <measure yid="MEASURE_SOLD_UNITS"/>
+                        <value>6792</value>
+                    </factMeasures>
+                    <factMeasures yclass="LibCube:FactMeasure">
+                        <measure yid="MEASURE_SALE_VALUE"/>
+                        <value>43750</value>
+                    </factMeasures>
+                </facts>
+                <facts yclass="Fact">
+                    <members yid="TIME_YEAR_2018"/>
+                    <members yid="CITY_BOGOTA"/>
+                    <members yid="STORE_ALL"/>
+                    <members yid="PRODUCT_ALL"/>
+                    <factMeasures yclass="LibCube:FactMeasure">
+                        <measure yid="MEASURE_SOLD_UNITS"/>
+                        <value>6960</value>
+                    </factMeasures>
+                    <factMeasures yclass="LibCube:FactMeasure">
+                        <measure yid="MEASURE_SALE_VALUE"/>
+                        <value>43750</value>
+                    </factMeasures>
+                </facts>
+                <facts yclass="Fact">
+                    <members yid="TIME_YEAR_2017"/>
+                    <members yid="CITY_BOGOTA"/>
+                    <members yid="STORE_QUESERIA_COLOMBIANA"/>
+                    <members yid="PRODUCT_AMERICAN"/>
+                    <factMeasures yclass="LibCube:FactMeasure">
+                        <measure yid="MEASURE_SOLD_UNITS"/>
+                        <value>430</value>
+                    </factMeasures>
+                    <factMeasures yclass="LibCube:FactMeasure">
+                        <measure yid="MEASURE_SALE_VALUE"/>
+                        <value>2580</value>
+                    </factMeasures>
+                </facts>
+                <facts yclass="Fact">
+                    <members yid="TIME_YEAR_2018"/>
+                    <members yid="CITY_BOGOTA"/>
+                    <members yid="STORE_QUESERIA_COLOMBIANA"/>
+                    <members yid="PRODUCT_AMERICAN"/>
+                    <factMeasures yclass="LibCube:FactMeasure">
+                        <measure yid="MEASURE_SOLD_UNITS"/>
+                        <value>395</value>
+                    </factMeasures>
+                    <factMeasures yclass="LibCube:FactMeasure">
+                        <measure yid="MEASURE_SALE_VALUE"/>
+                        <value>2580</value>
+                    </factMeasures>
+                </facts>
+                <facts yclass="Fact">
+                    <members yid="TIME_YEAR_2017"/>
+                    <members yid="CITY_BOGOTA"/>
+                    <members yid="STORE_QUESERIA_COSTEÑA"/>
+                    <members yid="PRODUCT_CHEDDAR"/>
+                    <factMeasures yclass="LibCube:FactMeasure">
+                        <measure yid="MEASURE_SOLD_UNITS"/>
+                        <value>105</value>
+                    </factMeasures>
+                    <factMeasures yclass="LibCube:FactMeasure">
+                        <measure yid="MEASURE_SALE_VALUE"/>
+                        <value>630</value>
+                    </factMeasures>
+                </facts>
+                <facts yclass="Fact">
+                    <members yid="TIME_YEAR_2018"/>
+                    <members yid="CITY_BOGOTA"/>
+                    <members yid="STORE_QUESERIA_COSTEÑA"/>
+                    <members yid="PRODUCT_CHEDDAR"/>
+                    <factMeasures yclass="LibCube:FactMeasure">
+                        <measure yid="MEASURE_SOLD_UNITS"/>
+                        <value>154</value>
+                    </factMeasures>
+                    <factMeasures yclass="LibCube:FactMeasure">
+                        <measure yid="MEASURE_SALE_VALUE"/>
+                        <value>630</value>
+                    </factMeasures>
+                </facts>
+                <facts yclass="Fact">
+                    <members yid="TIME_YEAR_2017"/>
+                    <members yid="CITY_BOGOTA"/>
+                    <members yid="STORE_QUESERIA_COLOMBIANA"/>
+                    <members yid="PRODUCT_COSTEÑO"/>
+                    <factMeasures yclass="LibCube:FactMeasure">
+                        <measure yid="MEASURE_SOLD_UNITS"/>
+                        <value>720</value>
+                    </factMeasures>
+                    <factMeasures yclass="LibCube:FactMeasure">
+                        <measure yid="MEASURE_SALE_VALUE"/>
+                        <value>4320</value>
+                    </factMeasures>
+                </facts>
+                <facts yclass="Fact">
+                    <members yid="TIME_YEAR_2017"/>
+                    <members yid="CITY_BOGOTA"/>
+                    <members yid="STORE_QUESERIA_COSTEÑA"/>
+                    <members yid="PRODUCT_COSTEÑO"/>
+                    <factMeasures yclass="LibCube:FactMeasure">
+                        <measure yid="MEASURE_SOLD_UNITS"/>
+                        <value>1300</value>
+                    </factMeasures>
+                    <factMeasures yclass="LibCube:FactMeasure">
+                        <measure yid="MEASURE_SALE_VALUE"/>
+                        <value>9100</value>
+                    </factMeasures>
+                </facts>
+                <facts yclass="Fact">
+                    <members yid="TIME_YEAR_2018"/>
+                    <members yid="CITY_BOGOTA"/>
+                    <members yid="STORE_QUESERIA_COLOMBIANA"/>
+                    <members yid="PRODUCT_COSTEÑO"/>
+                    <factMeasures yclass="LibCube:FactMeasure">
+                        <measure yid="MEASURE_SOLD_UNITS"/>
+                        <value>601</value>
+                    </factMeasures>
+                    <factMeasures yclass="LibCube:FactMeasure">
+                        <measure yid="MEASURE_SALE_VALUE"/>
+                        <value>4320</value>
+                    </factMeasures>
+                </facts>
+                <facts yclass="Fact">
+                    <members yid="TIME_YEAR_2018"/>
+                    <members yid="CITY_BOGOTA"/>
+                    <members yid="STORE_QUESERIA_COSTEÑA"/>
+                    <members yid="PRODUCT_COSTEÑO"/>
+                    <factMeasures yclass="LibCube:FactMeasure">
+                        <measure yid="MEASURE_SOLD_UNITS"/>
+                        <value>1369</value>
+                    </factMeasures>
+                    <factMeasures yclass="LibCube:FactMeasure">
+                        <measure yid="MEASURE_SALE_VALUE"/>
+                        <value>9100</value>
+                    </factMeasures>
+                </facts>
+                <facts yclass="Fact">
+                    <members yid="TIME_YEAR_2017"/>
+                    <members yid="CITY_BOGOTA"/>
+                    <members yid="STORE_QUESERIA_COLOMBIANA"/>
+                    <members yid="PRODUCT_FRESH_CHEESE"/>
+                    <factMeasures yclass="LibCube:FactMeasure">
+                        <measure yid="MEASURE_SOLD_UNITS"/>
+                        <value>1240</value>
+                    </factMeasures>
+                    <factMeasures yclass="LibCube:FactMeasure">
+                        <measure yid="MEASURE_SALE_VALUE"/>
+                        <value>7960</value>
+                    </factMeasures>
+                </facts>
+                <facts yclass="Fact">
+                    <members yid="TIME_YEAR_2017"/>
+                    <members yid="CITY_BOGOTA"/>
+                    <members yid="STORE_QUESERIA_COSTEÑA"/>
+                    <members yid="PRODUCT_FRESH_CHEESE"/>
+                    <factMeasures yclass="LibCube:FactMeasure">
+                        <measure yid="MEASURE_SOLD_UNITS"/>
+                        <value>1621</value>
+                    </factMeasures>
+                    <factMeasures yclass="LibCube:FactMeasure">
+                        <measure yid="MEASURE_SALE_VALUE"/>
+                        <value>10705</value>
+                    </factMeasures>
+                </facts>
+                <facts yclass="Fact">
+                    <members yid="TIME_YEAR_2018"/>
+                    <members yid="CITY_BOGOTA"/>
+                    <members yid="STORE_QUESERIA_COLOMBIANA"/>
+                    <members yid="PRODUCT_FRESH_CHEESE"/>
+                    <factMeasures yclass="LibCube:FactMeasure">
+                        <measure yid="MEASURE_SOLD_UNITS"/>
+                        <value>1137</value>
+                    </factMeasures>
+                    <factMeasures yclass="LibCube:FactMeasure">
+                        <measure yid="MEASURE_SALE_VALUE"/>
+                        <value>7960</value>
+                    </factMeasures>
+                </facts>
+                <facts yclass="Fact">
+                    <members yid="TIME_YEAR_2018"/>
+                    <members yid="CITY_BOGOTA"/>
+                    <members yid="STORE_QUESERIA_COSTEÑA"/>
+                    <members yid="PRODUCT_FRESH_CHEESE"/>
+                    <factMeasures yclass="LibCube:FactMeasure">
+                        <measure yid="MEASURE_SOLD_UNITS"/>
+                        <value>1794</value>
+                    </factMeasures>
+                    <factMeasures yclass="LibCube:FactMeasure">
+                        <measure yid="MEASURE_SALE_VALUE"/>
+                        <value>10705</value>
+                    </factMeasures>
+                </facts>
+                <facts yclass="Fact">
+                    <members yid="TIME_YEAR_2017"/>
+                    <members yid="CITY_BOGOTA"/>
+                    <members yid="STORE_QUESERIA_COLOMBIANA"/>
+                    <members yid="PRODUCT_MOZZARELLA"/>
+                    <factMeasures yclass="LibCube:FactMeasure">
+                        <measure yid="MEASURE_SOLD_UNITS"/>
+                        <value>520</value>
+                    </factMeasures>
+                    <factMeasures yclass="LibCube:FactMeasure">
+                        <measure yid="MEASURE_SALE_VALUE"/>
+                        <value>3640</value>
+                    </factMeasures>
+                </facts>
+                <facts yclass="Fact">
+                    <members yid="TIME_YEAR_2017"/>
+                    <members yid="CITY_BOGOTA"/>
+                    <members yid="STORE_QUESERIA_COSTEÑA"/>
+                    <members yid="PRODUCT_MOZZARELLA"/>
+                    <factMeasures yclass="LibCube:FactMeasure">
+                        <measure yid="MEASURE_SOLD_UNITS"/>
+                        <value>321</value>
+                    </factMeasures>
+                    <factMeasures yclass="LibCube:FactMeasure">
+                        <measure yid="MEASURE_SALE_VALUE"/>
+                        <value>1605</value>
+                    </factMeasures>
+                </facts>
+                <facts yclass="Fact">
+                    <members yid="TIME_YEAR_2018"/>
+                    <members yid="CITY_BOGOTA"/>
+                    <members yid="STORE_QUESERIA_COLOMBIANA"/>
+                    <members yid="PRODUCT_MOZZARELLA"/>
+                    <factMeasures yclass="LibCube:FactMeasure">
+                        <measure yid="MEASURE_SOLD_UNITS"/>
+                        <value>536</value>
+                    </factMeasures>
+                    <factMeasures yclass="LibCube:FactMeasure">
+                        <measure yid="MEASURE_SALE_VALUE"/>
+                        <value>3640</value>
+                    </factMeasures>
+                </facts>
+                <facts yclass="Fact">
+                    <members yid="TIME_YEAR_2018"/>
+                    <members yid="CITY_BOGOTA"/>
+                    <members yid="STORE_QUESERIA_COSTEÑA"/>
+                    <members yid="PRODUCT_MOZZARELLA"/>
+                    <factMeasures yclass="LibCube:FactMeasure">
+                        <measure yid="MEASURE_SOLD_UNITS"/>
+                        <value>425</value>
+                    </factMeasures>
+                    <factMeasures yclass="LibCube:FactMeasure">
+                        <measure yid="MEASURE_SALE_VALUE"/>
+                        <value>1605</value>
+                    </factMeasures>
+                </facts>
+                <facts yclass="Fact">
+                    <members yid="TIME_YEAR_2017"/>
+                    <members yid="CITY_BOGOTA"/>
+                    <members yid="STORE_QUESERIA_COLOMBIANA"/>
+                    <members yid="PRODUCT_PROCESSED_CHEESE"/>
+                    <factMeasures yclass="LibCube:FactMeasure">
+                        <measure yid="MEASURE_SOLD_UNITS"/>
+                        <value>430</value>
+                    </factMeasures>
+                    <factMeasures yclass="LibCube:FactMeasure">
+                        <measure yid="MEASURE_SALE_VALUE"/>
+                        <value>2580</value>
+                    </factMeasures>
+                </facts>
+                <facts yclass="Fact">
+                    <members yid="TIME_YEAR_2018"/>
+                    <members yid="CITY_BOGOTA"/>
+                    <members yid="STORE_QUESERIA_COLOMBIANA"/>
+                    <members yid="PRODUCT_PROCESSED_CHEESE"/>
+                    <factMeasures yclass="LibCube:FactMeasure">
+                        <measure yid="MEASURE_SOLD_UNITS"/>
+                        <value>395</value>
+                    </factMeasures>
+                    <factMeasures yclass="LibCube:FactMeasure">
+                        <measure yid="MEASURE_SALE_VALUE"/>
+                        <value>2580</value>
+                    </factMeasures>
+                </facts>
+                <facts yclass="Fact">
+                    <members yid="TIME_YEAR_2017"/>
+                    <members yid="CITY_BOGOTA"/>
+                    <members yid="STORE_QUESERIA_COSTEÑA"/>
+                    <members yid="PRODUCT_SEMI_HARD_CHEESE"/>
+                    <factMeasures yclass="LibCube:FactMeasure">
+                        <measure yid="MEASURE_SOLD_UNITS"/>
+                        <value>105</value>
+                    </factMeasures>
+                    <factMeasures yclass="LibCube:FactMeasure">
+                        <measure yid="MEASURE_SALE_VALUE"/>
+                        <value>630</value>
+                    </factMeasures>
+                </facts>
+                <facts yclass="Fact">
+                    <members yid="TIME_YEAR_2018"/>
+                    <members yid="CITY_BOGOTA"/>
+                    <members yid="STORE_QUESERIA_COSTEÑA"/>
+                    <members yid="PRODUCT_SEMI_HARD_CHEESE"/>
+                    <factMeasures yclass="LibCube:FactMeasure">
+                        <measure yid="MEASURE_SOLD_UNITS"/>
+                        <value>154</value>
+                    </factMeasures>
+                    <factMeasures yclass="LibCube:FactMeasure">
+                        <measure yid="MEASURE_SALE_VALUE"/>
+                        <value>630</value>
+                    </factMeasures>
+                </facts>
+                <facts yclass="Fact">
+                    <members yid="TIME_YEAR_2017"/>
+                    <members yid="CITY_DALLAS"/>
+                    <members yid="STORE_UNCLE_BOBS_CHEESE_FACTORY"/>
+                    <members yid="PRODUCT_ALL"/>
+                    <factMeasures yclass="LibCube:FactMeasure">
+                        <measure yid="MEASURE_SOLD_UNITS"/>
+                        <value>1625</value>
+                    </factMeasures>
+                    <factMeasures yclass="LibCube:FactMeasure">
+                        <measure yid="MEASURE_SALE_VALUE"/>
+                        <value>14010</value>
+                    </factMeasures>
+                </facts>
+                <facts yclass="Fact">
+                    <members yid="TIME_YEAR_2018"/>
+                    <members yid="CITY_DALLAS"/>
+                    <members yid="STORE_UNCLE_BOBS_CHEESE_FACTORY"/>
+                    <members yid="PRODUCT_ALL"/>
+                    <factMeasures yclass="LibCube:FactMeasure">
+                        <measure yid="MEASURE_SOLD_UNITS"/>
+                        <value>1525</value>
+                    </factMeasures>
+                    <factMeasures yclass="LibCube:FactMeasure">
+                        <measure yid="MEASURE_SALE_VALUE"/>
+                        <value>14010</value>
+                    </factMeasures>
+                </facts>
+                <facts yclass="Fact">
+                    <members yid="TIME_YEAR_2017"/>
+                    <members yid="CITY_DALLAS"/>
+                    <members yid="STORE_ALL"/>
+                    <members yid="PRODUCT_ALL"/>
+                    <factMeasures yclass="LibCube:FactMeasure">
+                        <measure yid="MEASURE_SOLD_UNITS"/>
+                        <value>3250</value>
+                    </factMeasures>
+                    <factMeasures yclass="LibCube:FactMeasure">
+                        <measure yid="MEASURE_SALE_VALUE"/>
+                        <value>28020</value>
+                    </factMeasures>
+                </facts>
+                <facts yclass="Fact">
+                    <members yid="TIME_YEAR_2018"/>
+                    <members yid="CITY_DALLAS"/>
+                    <members yid="STORE_ALL"/>
+                    <members yid="PRODUCT_ALL"/>
+                    <factMeasures yclass="LibCube:FactMeasure">
+                        <measure yid="MEASURE_SOLD_UNITS"/>
+                        <value>3050</value>
+                    </factMeasures>
+                    <factMeasures yclass="LibCube:FactMeasure">
+                        <measure yid="MEASURE_SALE_VALUE"/>
+                        <value>31870</value>
+                    </factMeasures>
+                </facts>
+                <facts yclass="Fact">
+                    <members yid="TIME_YEAR_2017"/>
+                    <members yid="CITY_DALLAS"/>
+                    <members yid="STORE_UNCLE_BOBS_CHEESE_FACTORY"/>
+                    <members yid="PRODUCT_AMERICAN"/>
+                    <factMeasures yclass="LibCube:FactMeasure">
+                        <measure yid="MEASURE_SOLD_UNITS"/>
+                        <value>615</value>
+                    </factMeasures>
+                    <factMeasures yclass="LibCube:FactMeasure">
+                        <measure yid="MEASURE_SALE_VALUE"/>
+                        <value>6150</value>
+                    </factMeasures>
+                </facts>
+                <facts yclass="Fact">
+                    <members yid="TIME_YEAR_2018"/>
+                    <members yid="CITY_DALLAS"/>
+                    <members yid="STORE_UNCLE_BOBS_CHEESE_FACTORY"/>
+                    <members yid="PRODUCT_AMERICAN"/>
+                    <factMeasures yclass="LibCube:FactMeasure">
+                        <measure yid="MEASURE_SOLD_UNITS"/>
+                        <value>400</value>
+                    </factMeasures>
+                    <factMeasures yclass="LibCube:FactMeasure">
+                        <measure yid="MEASURE_SALE_VALUE"/>
+                        <value>10000</value>
+                    </factMeasures>
+                </facts>
+                <facts yclass="Fact">
+                    <members yid="TIME_YEAR_2017"/>
+                    <members yid="CITY_DALLAS"/>
+                    <members yid="STORE_UNCLE_BOBS_CHEESE_FACTORY"/>
+                    <members yid="PRODUCT_CHEDDAR"/>
+                    <factMeasures yclass="LibCube:FactMeasure">
+                        <measure yid="MEASURE_SOLD_UNITS"/>
+                        <value>220</value>
+                    </factMeasures>
+                    <factMeasures yclass="LibCube:FactMeasure">
+                        <measure yid="MEASURE_SALE_VALUE"/>
+                        <value>1540</value>
+                    </factMeasures>
+                </facts>
+                <facts yclass="Fact">
+                    <members yid="TIME_YEAR_2018"/>
+                    <members yid="CITY_DALLAS"/>
+                    <members yid="STORE_UNCLE_BOBS_CHEESE_FACTORY"/>
+                    <members yid="PRODUCT_CHEDDAR"/>
+                    <factMeasures yclass="LibCube:FactMeasure">
+                        <measure yid="MEASURE_SOLD_UNITS"/>
+                        <value>417</value>
+                    </factMeasures>
+                    <factMeasures yclass="LibCube:FactMeasure">
+                        <measure yid="MEASURE_SALE_VALUE"/>
+                        <value>1540</value>
+                    </factMeasures>
+                </facts>
+                <facts yclass="Fact">
+                    <members yid="TIME_YEAR_2017"/>
+                    <members yid="CITY_DALLAS"/>
+                    <members yid="STORE_UNCLE_BOBS_CHEESE_FACTORY"/>
+                    <members yid="PRODUCT_FRESH_CHEESE"/>
+                    <factMeasures yclass="LibCube:FactMeasure">
+                        <measure yid="MEASURE_SOLD_UNITS"/>
+                        <value>790</value>
+                    </factMeasures>
+                    <factMeasures yclass="LibCube:FactMeasure">
+                        <measure yid="MEASURE_SALE_VALUE"/>
+                        <value>6320</value>
+                    </factMeasures>
+                </facts>
+                <facts yclass="Fact">
+                    <members yid="TIME_YEAR_2018"/>
+                    <members yid="CITY_DALLAS"/>
+                    <members yid="STORE_UNCLE_BOBS_CHEESE_FACTORY"/>
+                    <members yid="PRODUCT_FRESH_CHEESE"/>
+                    <factMeasures yclass="LibCube:FactMeasure">
+                        <measure yid="MEASURE_SOLD_UNITS"/>
+                        <value>708</value>
+                    </factMeasures>
+                    <factMeasures yclass="LibCube:FactMeasure">
+                        <measure yid="MEASURE_SALE_VALUE"/>
+                        <value>6320</value>
+                    </factMeasures>
+                </facts>
+                <facts yclass="Fact">
+                    <members yid="TIME_YEAR_2017"/>
+                    <members yid="CITY_DALLAS"/>
+                    <members yid="STORE_UNCLE_BOBS_CHEESE_FACTORY"/>
+                    <members yid="PRODUCT_MOZZARELLA"/>
+                    <factMeasures yclass="LibCube:FactMeasure">
+                        <measure yid="MEASURE_SOLD_UNITS"/>
+                        <value>790</value>
+                    </factMeasures>
+                    <factMeasures yclass="LibCube:FactMeasure">
+                        <measure yid="MEASURE_SALE_VALUE"/>
+                        <value>6320</value>
+                    </factMeasures>
+                </facts>
+                <facts yclass="Fact">
+                    <members yid="TIME_YEAR_2018"/>
+                    <members yid="CITY_DALLAS"/>
+                    <members yid="STORE_UNCLE_BOBS_CHEESE_FACTORY"/>
+                    <members yid="PRODUCT_MOZZARELLA"/>
+                    <factMeasures yclass="LibCube:FactMeasure">
+                        <measure yid="MEASURE_SOLD_UNITS"/>
+                        <value>708</value>
+                    </factMeasures>
+                    <factMeasures yclass="LibCube:FactMeasure">
+                        <measure yid="MEASURE_SALE_VALUE"/>
+                        <value>6320</value>
+                    </factMeasures>
+                </facts>
+                <facts yclass="Fact">
+                    <members yid="TIME_YEAR_2017"/>
+                    <members yid="CITY_DALLAS"/>
+                    <members yid="STORE_UNCLE_BOBS_CHEESE_FACTORY"/>
+                    <members yid="PRODUCT_PROCESSED_CHEESE"/>
+                    <factMeasures yclass="LibCube:FactMeasure">
+                        <measure yid="MEASURE_SOLD_UNITS"/>
+                        <value>615</value>
+                    </factMeasures>
+                    <factMeasures yclass="LibCube:FactMeasure">
+                        <measure yid="MEASURE_SALE_VALUE"/>
+                        <value>6150</value>
+                    </factMeasures>
+                </facts>
+                <facts yclass="Fact">
+                    <members yid="TIME_YEAR_2018"/>
+                    <members yid="CITY_DALLAS"/>
+                    <members yid="STORE_UNCLE_BOBS_CHEESE_FACTORY"/>
+                    <members yid="PRODUCT_PROCESSED_CHEESE"/>
+                    <factMeasures yclass="LibCube:FactMeasure">
+                        <measure yid="MEASURE_SOLD_UNITS"/>
+                        <value>400</value>
+                    </factMeasures>
+                    <factMeasures yclass="LibCube:FactMeasure">
+                        <measure yid="MEASURE_SALE_VALUE"/>
+                        <value>6150</value>
+                    </factMeasures>
+                </facts>
+                <facts yclass="Fact">
+                    <members yid="TIME_YEAR_2017"/>
+                    <members yid="CITY_DALLAS"/>
+                    <members yid="STORE_UNCLE_BOBS_CHEESE_FACTORY"/>
+                    <members yid="PRODUCT_SEMI_HARD_CHEESE"/>
+                    <factMeasures yclass="LibCube:FactMeasure">
+                        <measure yid="MEASURE_SOLD_UNITS"/>
+                        <value>220</value>
+                    </factMeasures>
+                    <factMeasures yclass="LibCube:FactMeasure">
+                        <measure yid="MEASURE_SALE_VALUE"/>
+                        <value>1540</value>
+                    </factMeasures>
+                </facts>
+                <facts yclass="Fact">
+                    <members yid="TIME_YEAR_2018"/>
+                    <members yid="CITY_DALLAS"/>
+                    <members yid="STORE_UNCLE_BOBS_CHEESE_FACTORY"/>
+                    <members yid="PRODUCT_SEMI_HARD_CHEESE"/>
+                    <factMeasures yclass="LibCube:FactMeasure">
+                        <measure yid="MEASURE_SOLD_UNITS"/>
+                        <value>417</value>
+                    </factMeasures>
+                    <factMeasures yclass="LibCube:FactMeasure">
+                        <measure yid="MEASURE_SALE_VALUE"/>
+                        <value>1540</value>
+                    </factMeasures>
+                </facts>
+                <facts yclass="Fact">
+                    <members yid="TIME_YEAR_2017"/>
+                    <members yid="CITY_LYON"/>
+                    <members yid="STORE_LYON_CHEESE_STORE"/>
+                    <members yid="PRODUCT_ALL"/>
+                    <factMeasures yclass="LibCube:FactMeasure">
+                        <measure yid="MEASURE_SOLD_UNITS"/>
+                        <value>1089</value>
+                    </factMeasures>
+                    <factMeasures yclass="LibCube:FactMeasure">
+                        <measure yid="MEASURE_SALE_VALUE"/>
+                        <value>10993</value>
+                    </factMeasures>
+                </facts>
+                <facts yclass="Fact">
+                    <members yid="TIME_YEAR_2018"/>
+                    <members yid="CITY_LYON"/>
+                    <members yid="STORE_LYON_CHEESE_STORE"/>
+                    <members yid="PRODUCT_ALL"/>
+                    <factMeasures yclass="LibCube:FactMeasure">
+                        <measure yid="MEASURE_SOLD_UNITS"/>
+                        <value>1029</value>
+                    </factMeasures>
+                    <factMeasures yclass="LibCube:FactMeasure">
+                        <measure yid="MEASURE_SALE_VALUE"/>
+                        <value>10993</value>
+                    </factMeasures>
+                </facts>
+                <facts yclass="Fact">
+                    <members yid="TIME_YEAR_2017"/>
+                    <members yid="CITY_LYON"/>
+                    <members yid="STORE_ALL"/>
+                    <members yid="PRODUCT_ALL"/>
+                    <factMeasures yclass="LibCube:FactMeasure">
+                        <measure yid="MEASURE_SOLD_UNITS"/>
+                        <value>2178</value>
+                    </factMeasures>
+                    <factMeasures yclass="LibCube:FactMeasure">
+                        <measure yid="MEASURE_SALE_VALUE"/>
+                        <value>21986</value>
+                    </factMeasures>
+                </facts>
+                <facts yclass="Fact">
+                    <members yid="TIME_YEAR_2018"/>
+                    <members yid="CITY_LYON"/>
+                    <members yid="STORE_ALL"/>
+                    <members yid="PRODUCT_ALL"/>
+                    <factMeasures yclass="LibCube:FactMeasure">
+                        <measure yid="MEASURE_SOLD_UNITS"/>
+                        <value>2058</value>
+                    </factMeasures>
+                    <factMeasures yclass="LibCube:FactMeasure">
+                        <measure yid="MEASURE_SALE_VALUE"/>
+                        <value>21986</value>
+                    </factMeasures>
+                </facts>
+                <facts yclass="Fact">
+                    <members yid="TIME_YEAR_2017"/>
+                    <members yid="CITY_LYON"/>
+                    <members yid="STORE_LYON_CHEESE_STORE"/>
+                    <members yid="PRODUCT_CHEDDAR"/>
+                    <factMeasures yclass="LibCube:FactMeasure">
+                        <measure yid="MEASURE_SOLD_UNITS"/>
+                        <value>286</value>
+                    </factMeasures>
+                    <factMeasures yclass="LibCube:FactMeasure">
+                        <measure yid="MEASURE_SALE_VALUE"/>
+                        <value>2002</value>
+                    </factMeasures>
+                </facts>
+                <facts yclass="Fact">
+                    <members yid="TIME_YEAR_2018"/>
+                    <members yid="CITY_LYON"/>
+                    <members yid="STORE_LYON_CHEESE_STORE"/>
+                    <members yid="PRODUCT_CHEDDAR"/>
+                    <factMeasures yclass="LibCube:FactMeasure">
+                        <measure yid="MEASURE_SOLD_UNITS"/>
+                        <value>174</value>
+                    </factMeasures>
+                    <factMeasures yclass="LibCube:FactMeasure">
+                        <measure yid="MEASURE_SALE_VALUE"/>
+                        <value>2002</value>
+                    </factMeasures>
+                </facts>
+                <facts yclass="Fact">
+                    <members yid="TIME_YEAR_2017"/>
+                    <members yid="CITY_LYON"/>
+                    <members yid="STORE_LYON_CHEESE_STORE"/>
+                    <members yid="PRODUCT_MEDIUM_HARD_CHEESE"/>
+                    <factMeasures yclass="LibCube:FactMeasure">
+                        <measure yid="MEASURE_SOLD_UNITS"/>
+                        <value>441</value>
+                    </factMeasures>
+                    <factMeasures yclass="LibCube:FactMeasure">
+                        <measure yid="MEASURE_SALE_VALUE"/>
+                        <value>5733</value>
+                    </factMeasures>
+                </facts>
+                <facts yclass="Fact">
+                    <members yid="TIME_YEAR_2018"/>
+                    <members yid="CITY_LYON"/>
+                    <members yid="STORE_LYON_CHEESE_STORE"/>
+                    <members yid="PRODUCT_MEDIUM_HARD_CHEESE"/>
+                    <factMeasures yclass="LibCube:FactMeasure">
+                        <measure yid="MEASURE_SOLD_UNITS"/>
+                        <value>532</value>
+                    </factMeasures>
+                    <factMeasures yclass="LibCube:FactMeasure">
+                        <measure yid="MEASURE_SALE_VALUE"/>
+                        <value>5733</value>
+                    </factMeasures>
+                </facts>
+                <facts yclass="Fact">
+                    <members yid="TIME_YEAR_2017"/>
+                    <members yid="CITY_LYON"/>
+                    <members yid="STORE_LYON_CHEESE_STORE"/>
+                    <members yid="PRODUCT_PROCESSED_CHEESE"/>
+                    <factMeasures yclass="LibCube:FactMeasure">
+                        <measure yid="MEASURE_SOLD_UNITS"/>
+                        <value>362</value>
+                    </factMeasures>
+                    <factMeasures yclass="LibCube:FactMeasure">
+                        <measure yid="MEASURE_SALE_VALUE"/>
+                        <value>3258</value>
+                    </factMeasures>
+                </facts>
+                <facts yclass="Fact">
+                    <members yid="TIME_YEAR_2018"/>
+                    <members yid="CITY_LYON"/>
+                    <members yid="STORE_LYON_CHEESE_STORE"/>
+                    <members yid="PRODUCT_PROCESSED_CHEESE"/>
+                    <factMeasures yclass="LibCube:FactMeasure">
+                        <measure yid="MEASURE_SOLD_UNITS"/>
+                        <value>323</value>
+                    </factMeasures>
+                    <factMeasures yclass="LibCube:FactMeasure">
+                        <measure yid="MEASURE_SALE_VALUE"/>
+                        <value>3258</value>
+                    </factMeasures>
+                </facts>
+                <facts yclass="Fact">
+                    <members yid="TIME_YEAR_2017"/>
+                    <members yid="CITY_LYON"/>
+                    <members yid="STORE_LYON_CHEESE_STORE"/>
+                    <members yid="PRODUCT_PROVOLONE"/>
+                    <factMeasures yclass="LibCube:FactMeasure">
+                        <measure yid="MEASURE_SOLD_UNITS"/>
+                        <value>362</value>
+                    </factMeasures>
+                    <factMeasures yclass="LibCube:FactMeasure">
+                        <measure yid="MEASURE_SALE_VALUE"/>
+                        <value>3258</value>
+                    </factMeasures>
+                </facts>
+                <facts yclass="Fact">
+                    <members yid="TIME_YEAR_2018"/>
+                    <members yid="CITY_LYON"/>
+                    <members yid="STORE_LYON_CHEESE_STORE"/>
+                    <members yid="PRODUCT_PROVOLONE"/>
+                    <factMeasures yclass="LibCube:FactMeasure">
+                        <measure yid="MEASURE_SOLD_UNITS"/>
+                        <value>323</value>
+                    </factMeasures>
+                    <factMeasures yclass="LibCube:FactMeasure">
+                        <measure yid="MEASURE_SALE_VALUE"/>
+                        <value>3258</value>
+                    </factMeasures>
+                </facts>
+                <facts yclass="Fact">
+                    <members yid="TIME_YEAR_2017"/>
+                    <members yid="CITY_LYON"/>
+                    <members yid="STORE_LYON_CHEESE_STORE"/>
+                    <members yid="PRODUCT_SEMI_HARD_CHEESE"/>
+                    <factMeasures yclass="LibCube:FactMeasure">
+                        <measure yid="MEASURE_SOLD_UNITS"/>
+                        <value>286</value>
+                    </factMeasures>
+                    <factMeasures yclass="LibCube:FactMeasure">
+                        <measure yid="MEASURE_SALE_VALUE"/>
+                        <value>2002</value>
+                    </factMeasures>
+                </facts>
+                <facts yclass="Fact">
+                    <members yid="TIME_YEAR_2018"/>
+                    <members yid="CITY_LYON"/>
+                    <members yid="STORE_LYON_CHEESE_STORE"/>
+                    <members yid="PRODUCT_SEMI_HARD_CHEESE"/>
+                    <factMeasures yclass="LibCube:FactMeasure">
+                        <measure yid="MEASURE_SOLD_UNITS"/>
+                        <value>174</value>
+                    </factMeasures>
+                    <factMeasures yclass="LibCube:FactMeasure">
+                        <measure yid="MEASURE_SALE_VALUE"/>
+                        <value>2002</value>
+                    </factMeasures>
+                </facts>
+                <facts yclass="Fact">
+                    <members yid="TIME_YEAR_2017"/>
+                    <members yid="CITY_LYON"/>
+                    <members yid="STORE_LYON_CHEESE_STORE"/>
+                    <members yid="PRODUCT_SWISS"/>
+                    <factMeasures yclass="LibCube:FactMeasure">
+                        <measure yid="MEASURE_SOLD_UNITS"/>
+                        <value>441</value>
+                    </factMeasures>
+                    <factMeasures yclass="LibCube:FactMeasure">
+                        <measure yid="MEASURE_SALE_VALUE"/>
+                        <value>5733</value>
+                    </factMeasures>
+                </facts>
+                <facts yclass="Fact">
+                    <members yid="TIME_YEAR_2018"/>
+                    <members yid="CITY_LYON"/>
+                    <members yid="STORE_LYON_CHEESE_STORE"/>
+                    <members yid="PRODUCT_SWISS"/>
+                    <factMeasures yclass="LibCube:FactMeasure">
+                        <measure yid="MEASURE_SOLD_UNITS"/>
+                        <value>532</value>
+                    </factMeasures>
+                    <factMeasures yclass="LibCube:FactMeasure">
+                        <measure yid="MEASURE_SALE_VALUE"/>
+                        <value>5733</value>
+                    </factMeasures>
+                </facts>
+                <facts yclass="Fact">
+                    <members yid="TIME_YEAR_2017"/>
+                    <members yid="CITY_NEW_YORK"/>
+                    <members yid="STORE_AMERICAN_SPECIAL_CHEESES"/>
+                    <members yid="PRODUCT_ALL"/>
+                    <factMeasures yclass="LibCube:FactMeasure">
+                        <measure yid="MEASURE_SOLD_UNITS"/>
+                        <value>1194</value>
+                    </factMeasures>
+                    <factMeasures yclass="LibCube:FactMeasure">
+                        <measure yid="MEASURE_SALE_VALUE"/>
+                        <value>16798</value>
+                    </factMeasures>
+                </facts>
+                <facts yclass="Fact">
+                    <members yid="TIME_YEAR_2017"/>
+                    <members yid="CITY_NEW_YORK"/>
+                    <members yid="STORE_CHEESE_FOR_ALL"/>
+                    <members yid="PRODUCT_ALL"/>
+                    <factMeasures yclass="LibCube:FactMeasure">
+                        <measure yid="MEASURE_SOLD_UNITS"/>
+                        <value>1050</value>
+                    </factMeasures>
+                    <factMeasures yclass="LibCube:FactMeasure">
+                        <measure yid="MEASURE_SALE_VALUE"/>
+                        <value>10220</value>
+                    </factMeasures>
+                </facts>
+                <facts yclass="Fact">
+                    <members yid="TIME_YEAR_2018"/>
+                    <members yid="CITY_NEW_YORK"/>
+                    <members yid="STORE_AMERICAN_SPECIAL_CHEESES"/>
+                    <members yid="PRODUCT_ALL"/>
+                    <factMeasures yclass="LibCube:FactMeasure">
+                        <measure yid="MEASURE_SOLD_UNITS"/>
+                        <value>1191</value>
+                    </factMeasures>
+                    <factMeasures yclass="LibCube:FactMeasure">
+                        <measure yid="MEASURE_SALE_VALUE"/>
+                        <value>225034</value>
+                    </factMeasures>
+                </facts>
+                <facts yclass="Fact">
+                    <members yid="TIME_YEAR_2018"/>
+                    <members yid="CITY_NEW_YORK"/>
+                    <members yid="STORE_CHEESE_FOR_ALL"/>
+                    <members yid="PRODUCT_ALL"/>
+                    <factMeasures yclass="LibCube:FactMeasure">
+                        <measure yid="MEASURE_SOLD_UNITS"/>
+                        <value>1145</value>
+                    </factMeasures>
+                    <factMeasures yclass="LibCube:FactMeasure">
+                        <measure yid="MEASURE_SALE_VALUE"/>
+                        <value>10220</value>
+                    </factMeasures>
+                </facts>
+                <facts yclass="Fact">
+                    <members yid="TIME_YEAR_2017"/>
+                    <members yid="CITY_NEW_YORK"/>
+                    <members yid="STORE_ALL"/>
+                    <members yid="PRODUCT_ALL"/>
+                    <factMeasures yclass="LibCube:FactMeasure">
+                        <measure yid="MEASURE_SOLD_UNITS"/>
+                        <value>4488</value>
+                    </factMeasures>
+                    <factMeasures yclass="LibCube:FactMeasure">
+                        <measure yid="MEASURE_SALE_VALUE"/>
+                        <value>54036</value>
+                    </factMeasures>
+                </facts>
+                <facts yclass="Fact">
+                    <members yid="TIME_YEAR_2018"/>
+                    <members yid="CITY_NEW_YORK"/>
+                    <members yid="STORE_ALL"/>
+                    <members yid="PRODUCT_ALL"/>
+                    <factMeasures yclass="LibCube:FactMeasure">
+                        <measure yid="MEASURE_SOLD_UNITS"/>
+                        <value>4672</value>
+                    </factMeasures>
+                    <factMeasures yclass="LibCube:FactMeasure">
+                        <measure yid="MEASURE_SALE_VALUE"/>
+                        <value>54036</value>
+                    </factMeasures>
+                </facts>
+                <facts yclass="Fact">
+                    <members yid="TIME_YEAR_2017"/>
+                    <members yid="CITY_NEW_YORK"/>
+                    <members yid="STORE_CHEESE_FOR_ALL"/>
+                    <members yid="PRODUCT_AMERICAN"/>
+                    <factMeasures yclass="LibCube:FactMeasure">
+                        <measure yid="MEASURE_SOLD_UNITS"/>
+                        <value>450</value>
+                    </factMeasures>
+                    <factMeasures yclass="LibCube:FactMeasure">
+                        <measure yid="MEASURE_SALE_VALUE"/>
+                        <value>4800</value>
+                    </factMeasures>
+                </facts>
+                <facts yclass="Fact">
+                    <members yid="TIME_YEAR_2017"/>
+                    <members yid="CITY_NEW_YORK"/>
+                    <members yid="STORE_AMERICAN_SPECIAL_CHEESES"/>
+                    <members yid="PRODUCT_AMERICAN"/>
+                    <factMeasures yclass="LibCube:FactMeasure">
+                        <measure yid="MEASURE_SOLD_UNITS"/>
+                        <value>298</value>
+                    </factMeasures>
+                    <factMeasures yclass="LibCube:FactMeasure">
+                        <measure yid="MEASURE_SALE_VALUE"/>
+                        <value>2980</value>
+                    </factMeasures>
+                </facts>
+                <facts yclass="Fact">
+                    <members yid="TIME_YEAR_2018"/>
+                    <members yid="CITY_NEW_YORK"/>
+                    <members yid="STORE_CHEESE_FOR_ALL"/>
+                    <members yid="PRODUCT_AMERICAN"/>
+                    <factMeasures yclass="LibCube:FactMeasure">
+                        <measure yid="MEASURE_SOLD_UNITS"/>
+                        <value>465</value>
+                    </factMeasures>
+                    <factMeasures yclass="LibCube:FactMeasure">
+                        <measure yid="MEASURE_SALE_VALUE"/>
+                        <value>4500</value>
+                    </factMeasures>
+                </facts>
+                <facts yclass="Fact">
+                    <members yid="TIME_YEAR_2018"/>
+                    <members yid="CITY_NEW_YORK"/>
+                    <members yid="STORE_AMERICAN_SPECIAL_CHEESES"/>
+                    <members yid="PRODUCT_AMERICAN"/>
+                    <factMeasures yclass="LibCube:FactMeasure">
+                        <measure yid="MEASURE_SOLD_UNITS"/>
+                        <value>245</value>
+                    </factMeasures>
+                    <factMeasures yclass="LibCube:FactMeasure">
+                        <measure yid="MEASURE_SALE_VALUE"/>
+                        <value>2980</value>
+                    </factMeasures>
+                </facts>
+                <facts yclass="Fact">
+                    <members yid="TIME_YEAR_2017"/>
+                    <members yid="CITY_NEW_YORK"/>
+                    <members yid="STORE_AMERICAN_SPECIAL_CHEESES"/>
+                    <members yid="PRODUCT_COSTEÑO"/>
+                    <factMeasures yclass="LibCube:FactMeasure">
+                        <measure yid="MEASURE_SOLD_UNITS"/>
+                        <value>385</value>
+                    </factMeasures>
+                    <factMeasures yclass="LibCube:FactMeasure">
+                        <measure yid="MEASURE_SALE_VALUE"/>
+                        <value>4620</value>
+                    </factMeasures>
+                </facts>
+                <facts yclass="Fact">
+                    <members yid="TIME_YEAR_2018"/>
+                    <members yid="CITY_NEW_YORK"/>
+                    <members yid="STORE_AMERICAN_SPECIAL_CHEESES"/>
+                    <members yid="PRODUCT_COSTEÑO"/>
+                    <factMeasures yclass="LibCube:FactMeasure">
+                        <measure yid="MEASURE_SOLD_UNITS"/>
+                        <value>339</value>
+                    </factMeasures>
+                    <factMeasures yclass="LibCube:FactMeasure">
+                        <measure yid="MEASURE_SALE_VALUE"/>
+                        <value>4620</value>
+                    </factMeasures>
+                </facts>
+                <facts yclass="Fact">
+                    <members yid="TIME_YEAR_2017"/>
+                    <members yid="CITY_NEW_YORK"/>
+                    <members yid="STORE_CHEESE_FOR_ALL"/>
+                    <members yid="PRODUCT_COTTAGE"/>
+                    <factMeasures yclass="LibCube:FactMeasure">
+                        <measure yid="MEASURE_SOLD_UNITS"/>
+                        <value>280</value>
+                    </factMeasures>
+                    <factMeasures yclass="LibCube:FactMeasure">
+                        <measure yid="MEASURE_SALE_VALUE"/>
+                        <value>2520</value>
+                    </factMeasures>
+                </facts>
+                <facts yclass="Fact">
+                    <members yid="TIME_YEAR_2018"/>
+                    <members yid="CITY_NEW_YORK"/>
+                    <members yid="STORE_CHEESE_FOR_ALL"/>
+                    <members yid="PRODUCT_COTTAGE"/>
+                    <factMeasures yclass="LibCube:FactMeasure">
+                        <measure yid="MEASURE_SOLD_UNITS"/>
+                        <value>295</value>
+                    </factMeasures>
+                    <factMeasures yclass="LibCube:FactMeasure">
+                        <measure yid="MEASURE_SALE_VALUE"/>
+                        <value>2520</value>
+                    </factMeasures>
+                </facts>
+                <facts yclass="Fact">
+                    <members yid="TIME_YEAR_2017"/>
+                    <members yid="CITY_NEW_YORK"/>
+                    <members yid="STORE_AMERICAN_SPECIAL_CHEESES"/>
+                    <members yid="PRODUCT_FRESH_CHEESE"/>
+                    <factMeasures yclass="LibCube:FactMeasure">
+                        <measure yid="MEASURE_SOLD_UNITS"/>
+                        <value>385</value>
+                    </factMeasures>
+                    <factMeasures yclass="LibCube:FactMeasure">
+                        <measure yid="MEASURE_SALE_VALUE"/>
+                        <value>4620</value>
+                    </factMeasures>
+                </facts>
+                <facts yclass="Fact">
+                    <members yid="TIME_YEAR_2017"/>
+                    <members yid="CITY_NEW_YORK"/>
+                    <members yid="STORE_CHEESE_FOR_ALL"/>
+                    <members yid="PRODUCT_FRESH_CHEESE"/>
+                    <factMeasures yclass="LibCube:FactMeasure">
+                        <measure yid="MEASURE_SOLD_UNITS"/>
+                        <value>600</value>
+                    </factMeasures>
+                    <factMeasures yclass="LibCube:FactMeasure">
+                        <measure yid="MEASURE_SALE_VALUE"/>
+                        <value>5720</value>
+                    </factMeasures>
+                </facts>
+                <facts yclass="Fact">
+                    <members yid="TIME_YEAR_2018"/>
+                    <members yid="CITY_NEW_YORK"/>
+                    <members yid="STORE_AMERICAN_SPECIAL_CHEESES"/>
+                    <members yid="PRODUCT_FRESH_CHEESE"/>
+                    <factMeasures yclass="LibCube:FactMeasure">
+                        <measure yid="MEASURE_SOLD_UNITS"/>
+                        <value>339</value>
+                    </factMeasures>
+                    <factMeasures yclass="LibCube:FactMeasure">
+                        <measure yid="MEASURE_SALE_VALUE"/>
+                        <value>4620</value>
+                    </factMeasures>
+                </facts>
+                <facts yclass="Fact">
+                    <members yid="TIME_YEAR_2018"/>
+                    <members yid="CITY_NEW_YORK"/>
+                    <members yid="STORE_CHEESE_FOR_ALL"/>
+                    <members yid="PRODUCT_FRESH_CHEESE"/>
+                    <factMeasures yclass="LibCube:FactMeasure">
+                        <measure yid="MEASURE_SOLD_UNITS"/>
+                        <value>680</value>
+                    </factMeasures>
+                    <factMeasures yclass="LibCube:FactMeasure">
+                        <measure yid="MEASURE_SALE_VALUE"/>
+                        <value>5720</value>
+                    </factMeasures>
+                </facts>
+                <facts yclass="Fact">
+                    <members yid="TIME_YEAR_2017"/>
+                    <members yid="CITY_NEW_YORK"/>
+                    <members yid="STORE_AMERICAN_SPECIAL_CHEESES"/>
+                    <members yid="PRODUCT_MEDIUM_HARD_CHEESE"/>
+                    <factMeasures yclass="LibCube:FactMeasure">
+                        <measure yid="MEASURE_SOLD_UNITS"/>
+                        <value>511</value>
+                    </factMeasures>
+                    <factMeasures yclass="LibCube:FactMeasure">
+                        <measure yid="MEASURE_SALE_VALUE"/>
+                        <value>9198</value>
+                    </factMeasures>
+                </facts>
+                <facts yclass="Fact">
+                    <members yid="TIME_YEAR_2018"/>
+                    <members yid="CITY_NEW_YORK"/>
+                    <members yid="STORE_AMERICAN_SPECIAL_CHEESES"/>
+                    <members yid="PRODUCT_MEDIUM_HARD_CHEESE"/>
+                    <factMeasures yclass="LibCube:FactMeasure">
+                        <measure yid="MEASURE_SOLD_UNITS"/>
+                        <value>607</value>
+                    </factMeasures>
+                    <factMeasures yclass="LibCube:FactMeasure">
+                        <measure yid="MEASURE_SALE_VALUE"/>
+                        <value>9198</value>
+                    </factMeasures>
+                </facts>
+                <facts yclass="Fact">
+                    <members yid="TIME_YEAR_2017"/>
+                    <members yid="CITY_NEW_YORK"/>
+                    <members yid="STORE_CHEESE_FOR_ALL"/>
+                    <members yid="PRODUCT_MOZZARELLA"/>
+                    <factMeasures yclass="LibCube:FactMeasure">
+                        <measure yid="MEASURE_SOLD_UNITS"/>
+                        <value>320</value>
+                    </factMeasures>
+                    <factMeasures yclass="LibCube:FactMeasure">
+                        <measure yid="MEASURE_SALE_VALUE"/>
+                        <value>3200</value>
+                    </factMeasures>
+                </facts>
+                <facts yclass="Fact">
+                    <members yid="TIME_YEAR_2018"/>
+                    <members yid="CITY_NEW_YORK"/>
+                    <members yid="STORE_CHEESE_FOR_ALL"/>
+                    <members yid="PRODUCT_MOZZARELLA"/>
+                    <factMeasures yclass="LibCube:FactMeasure">
+                        <measure yid="MEASURE_SOLD_UNITS"/>
+                        <value>385</value>
+                    </factMeasures>
+                    <factMeasures yclass="LibCube:FactMeasure">
+                        <measure yid="MEASURE_SALE_VALUE"/>
+                        <value>3200</value>
+                    </factMeasures>
+                </facts>
+                <facts yclass="Fact">
+                    <members yid="TIME_YEAR_2017"/>
+                    <members yid="CITY_NEW_YORK"/>
+                    <members yid="STORE_AMERICAN_SPECIAL_CHEESES"/>
+                    <members yid="PRODUCT_PROCESSED_CHEESE"/>
+                    <factMeasures yclass="LibCube:FactMeasure">
+                        <measure yid="MEASURE_SOLD_UNITS"/>
+                        <value>298</value>
+                    </factMeasures>
+                    <factMeasures yclass="LibCube:FactMeasure">
+                        <measure yid="MEASURE_SALE_VALUE"/>
+                        <value>2980</value>
+                    </factMeasures>
+                </facts>
+                <facts yclass="Fact">
+                    <members yid="TIME_YEAR_2017"/>
+                    <members yid="CITY_NEW_YORK"/>
+                    <members yid="STORE_CHEESE_FOR_ALL"/>
+                    <members yid="PRODUCT_PROCESSED_CHEESE"/>
+                    <factMeasures yclass="LibCube:FactMeasure">
+                        <measure yid="MEASURE_SOLD_UNITS"/>
+                        <value>450</value>
+                    </factMeasures>
+                    <factMeasures yclass="LibCube:FactMeasure">
+                        <measure yid="MEASURE_SALE_VALUE"/>
+                        <value>4500</value>
+                    </factMeasures>
+                </facts>
+                <facts yclass="Fact">
+                    <members yid="TIME_YEAR_2018"/>
+                    <members yid="CITY_NEW_YORK"/>
+                    <members yid="STORE_AMERICAN_SPECIAL_CHEESES"/>
+                    <members yid="PRODUCT_PROCESSED_CHEESE"/>
+                    <factMeasures yclass="LibCube:FactMeasure">
+                        <measure yid="MEASURE_SOLD_UNITS"/>
+                        <value>245</value>
+                    </factMeasures>
+                    <factMeasures yclass="LibCube:FactMeasure">
+                        <measure yid="MEASURE_SALE_VALUE"/>
+                        <value>2980</value>
+                    </factMeasures>
+                </facts>
+                <facts yclass="Fact">
+                    <members yid="TIME_YEAR_2018"/>
+                    <members yid="CITY_NEW_YORK"/>
+                    <members yid="STORE_CHEESE_FOR_ALL"/>
+                    <members yid="PRODUCT_PROCESSED_CHEESE"/>
+                    <factMeasures yclass="LibCube:FactMeasure">
+                        <measure yid="MEASURE_SOLD_UNITS"/>
+                        <value>465</value>
+                    </factMeasures>
+                    <factMeasures yclass="LibCube:FactMeasure">
+                        <measure yid="MEASURE_SALE_VALUE"/>
+                        <value>4500</value>
+                    </factMeasures>
+                </facts>
+                <facts yclass="Fact">
+                    <members yid="TIME_YEAR_2017"/>
+                    <members yid="CITY_NEW_YORK"/>
+                    <members yid="STORE_AMERICAN_SPECIAL_CHEESES"/>
+                    <members yid="PRODUCT_SWISS"/>
+                    <factMeasures yclass="LibCube:FactMeasure">
+                        <measure yid="MEASURE_SOLD_UNITS"/>
+                        <value>511</value>
+                    </factMeasures>
+                    <factMeasures yclass="LibCube:FactMeasure">
+                        <measure yid="MEASURE_SALE_VALUE"/>
+                        <value>9198</value>
+                    </factMeasures>
+                </facts>
+                <facts yclass="Fact">
+                    <members yid="TIME_YEAR_2018"/>
+                    <members yid="CITY_NEW_YORK"/>
+                    <members yid="STORE_AMERICAN_SPECIAL_CHEESES"/>
+                    <members yid="PRODUCT_SWISS"/>
+                    <factMeasures yclass="LibCube:FactMeasure">
+                        <measure yid="MEASURE_SOLD_UNITS"/>
+                        <value>607</value>
+                    </factMeasures>
+                    <factMeasures yclass="LibCube:FactMeasure">
+                        <measure yid="MEASURE_SALE_VALUE"/>
+                        <value>9198</value>
+                    </factMeasures>
+                </facts>
+                <facts yclass="Fact">
+                    <members yid="TIME_YEAR_2017"/>
+                    <members yid="CITY_PARIS"/>
+                    <members yid="STORE_CAPITAL_CHEESE_STORE"/>
+                    <members yid="PRODUCT_ALL"/>
+                    <factMeasures yclass="LibCube:FactMeasure">
+                        <measure yid="MEASURE_SOLD_UNITS"/>
+                        <value>2045</value>
+                    </factMeasures>
+                    <factMeasures yclass="LibCube:FactMeasure">
+                        <measure yid="MEASURE_SALE_VALUE"/>
+                        <value>16245</value>
+                    </factMeasures>
+                </facts>
+                <facts yclass="Fact">
+                    <members yid="TIME_YEAR_2017"/>
+                    <members yid="CITY_PARIS"/>
+                    <members yid="STORE_DELUXE_CHEESE_STORE"/>
+                    <members yid="PRODUCT_ALL"/>
+                    <factMeasures yclass="LibCube:FactMeasure">
+                        <measure yid="MEASURE_SOLD_UNITS"/>
+                        <value>1288</value>
+                    </factMeasures>
+                    <factMeasures yclass="LibCube:FactMeasure">
+                        <measure yid="MEASURE_SALE_VALUE"/>
+                        <value>20451</value>
+                    </factMeasures>
+                </facts>
+                <facts yclass="Fact">
+                    <members yid="TIME_YEAR_2018"/>
+                    <members yid="CITY_PARIS"/>
+                    <members yid="STORE_CAPITAL_CHEESE_STORE"/>
+                    <members yid="PRODUCT_ALL"/>
+                    <factMeasures yclass="LibCube:FactMeasure">
+                        <measure yid="MEASURE_SOLD_UNITS"/>
+                        <value>1895</value>
+                    </factMeasures>
+                    <factMeasures yclass="LibCube:FactMeasure">
+                        <measure yid="MEASURE_SALE_VALUE"/>
+                        <value>16245</value>
+                    </factMeasures>
+                </facts>
+                <facts yclass="Fact">
+                    <members yid="TIME_YEAR_2018"/>
+                    <members yid="CITY_PARIS"/>
+                    <members yid="STORE_DELUXE_CHEESE_STORE"/>
+                    <members yid="PRODUCT_ALL"/>
+                    <factMeasures yclass="LibCube:FactMeasure">
+                        <measure yid="MEASURE_SOLD_UNITS"/>
+                        <value>1673</value>
+                    </factMeasures>
+                    <factMeasures yclass="LibCube:FactMeasure">
+                        <measure yid="MEASURE_SALE_VALUE"/>
+                        <value>20451</value>
+                    </factMeasures>
+                </facts>
+                <facts yclass="Fact">
+                    <members yid="TIME_YEAR_2017"/>
+                    <members yid="CITY_PARIS"/>
+                    <members yid="STORE_ALL"/>
+                    <members yid="PRODUCT_ALL"/>
+                    <factMeasures yclass="LibCube:FactMeasure">
+                        <measure yid="MEASURE_SOLD_UNITS"/>
+                        <value>6666</value>
+                    </factMeasures>
+                    <factMeasures yclass="LibCube:FactMeasure">
+                        <measure yid="MEASURE_SALE_VALUE"/>
+                        <value>73392</value>
+                    </factMeasures>
+                </facts>
+                <facts yclass="Fact">
+                    <members yid="TIME_YEAR_2018"/>
+                    <members yid="CITY_PARIS"/>
+                    <members yid="STORE_ALL"/>
+                    <members yid="PRODUCT_ALL"/>
+                    <factMeasures yclass="LibCube:FactMeasure">
+                        <measure yid="MEASURE_SOLD_UNITS"/>
+                        <value>7136</value>
+                    </factMeasures>
+                    <factMeasures yclass="LibCube:FactMeasure">
+                        <measure yid="MEASURE_SALE_VALUE"/>
+                        <value>73392</value>
+                    </factMeasures>
+                </facts>
+                <facts yclass="Fact">
+                    <members yid="TIME_YEAR_2017"/>
+                    <members yid="CITY_PARIS"/>
+                    <members yid="STORE_DELUXE_CHEESE_STORE"/>
+                    <members yid="PRODUCT_BUFFALO"/>
+                    <factMeasures yclass="LibCube:FactMeasure">
+                        <measure yid="MEASURE_SOLD_UNITS"/>
+                        <value>321</value>
+                    </factMeasures>
+                    <factMeasures yclass="LibCube:FactMeasure">
+                        <measure yid="MEASURE_SALE_VALUE"/>
+                        <value>7062</value>
+                    </factMeasures>
+                </facts>
+                <facts yclass="Fact">
+                    <members yid="TIME_YEAR_2018"/>
+                    <members yid="CITY_PARIS"/>
+                    <members yid="STORE_DELUXE_CHEESE_STORE"/>
+                    <members yid="PRODUCT_BUFFALO"/>
+                    <factMeasures yclass="LibCube:FactMeasure">
+                        <measure yid="MEASURE_SOLD_UNITS"/>
+                        <value>175</value>
+                    </factMeasures>
+                    <factMeasures yclass="LibCube:FactMeasure">
+                        <measure yid="MEASURE_SALE_VALUE"/>
+                        <value>7062</value>
+                    </factMeasures>
+                </facts>
+                <facts yclass="Fact">
+                    <members yid="TIME_YEAR_2017"/>
+                    <members yid="CITY_PARIS"/>
+                    <members yid="STORE_CAPITAL_CHEESE_STORE"/>
+                    <members yid="PRODUCT_COTTAGE"/>
+                    <factMeasures yclass="LibCube:FactMeasure">
+                        <measure yid="MEASURE_SOLD_UNITS"/>
+                        <value>1010</value>
+                    </factMeasures>
+                    <factMeasures yclass="LibCube:FactMeasure">
+                        <measure yid="MEASURE_SALE_VALUE"/>
+                        <value>6060</value>
+                    </factMeasures>
+                </facts>
+                <facts yclass="Fact">
+                    <members yid="TIME_YEAR_2018"/>
+                    <members yid="CITY_PARIS"/>
+                    <members yid="STORE_CAPITAL_CHEESE_STORE"/>
+                    <members yid="PRODUCT_COTTAGE"/>
+                    <factMeasures yclass="LibCube:FactMeasure">
+                        <measure yid="MEASURE_SOLD_UNITS"/>
+                        <value>740</value>
+                    </factMeasures>
+                    <factMeasures yclass="LibCube:FactMeasure">
+                        <measure yid="MEASURE_SALE_VALUE"/>
+                        <value>6060</value>
+                    </factMeasures>
+                </facts>
+                <facts yclass="Fact">
+                    <members yid="TIME_YEAR_2017"/>
+                    <members yid="CITY_PARIS"/>
+                    <members yid="STORE_CAPITAL_CHEESE_STORE"/>
+                    <members yid="PRODUCT_FRESH_CHEESE"/>
+                    <factMeasures yclass="LibCube:FactMeasure">
+                        <measure yid="MEASURE_SOLD_UNITS"/>
+                        <value>1010</value>
+                    </factMeasures>
+                    <factMeasures yclass="LibCube:FactMeasure">
+                        <measure yid="MEASURE_SALE_VALUE"/>
+                        <value>6060</value>
+                    </factMeasures>
+                </facts>
+                <facts yclass="Fact">
+                    <members yid="TIME_YEAR_2017"/>
+                    <members yid="CITY_PARIS"/>
+                    <members yid="STORE_DELUXE_CHEESE_STORE"/>
+                    <members yid="PRODUCT_FRESH_CHEESE"/>
+                    <factMeasures yclass="LibCube:FactMeasure">
+                        <measure yid="MEASURE_SOLD_UNITS"/>
+                        <value>321</value>
+                    </factMeasures>
+                    <factMeasures yclass="LibCube:FactMeasure">
+                        <measure yid="MEASURE_SALE_VALUE"/>
+                        <value>7062</value>
+                    </factMeasures>
+                </facts>
+                <facts yclass="Fact">
+                    <members yid="TIME_YEAR_2018"/>
+                    <members yid="CITY_PARIS"/>
+                    <members yid="STORE_CAPITAL_CHEESE_STORE"/>
+                    <members yid="PRODUCT_FRESH_CHEESE"/>
+                    <factMeasures yclass="LibCube:FactMeasure">
+                        <measure yid="MEASURE_SOLD_UNITS"/>
+                        <value>740</value>
+                    </factMeasures>
+                    <factMeasures yclass="LibCube:FactMeasure">
+                        <measure yid="MEASURE_SALE_VALUE"/>
+                        <value>6060</value>
+                    </factMeasures>
+                </facts>
+                <facts yclass="Fact">
+                    <members yid="TIME_YEAR_2018"/>
+                    <members yid="CITY_PARIS"/>
+                    <members yid="STORE_DELUXE_CHEESE_STORE"/>
+                    <members yid="PRODUCT_FRESH_CHEESE"/>
+                    <factMeasures yclass="LibCube:FactMeasure">
+                        <measure yid="MEASURE_SOLD_UNITS"/>
+                        <value>175</value>
+                    </factMeasures>
+                    <factMeasures yclass="LibCube:FactMeasure">
+                        <measure yid="MEASURE_SALE_VALUE"/>
+                        <value>7062</value>
+                    </factMeasures>
+                </facts>
+                <facts yclass="Fact">
+                    <members yid="TIME_YEAR_2017"/>
+                    <members yid="CITY_PARIS"/>
+                    <members yid="STORE_CAPITAL_CHEESE_STORE"/>
+                    <members yid="PRODUCT_MEDIUM_HARD_CHEESE"/>
+                    <factMeasures yclass="LibCube:FactMeasure">
+                        <measure yid="MEASURE_SOLD_UNITS"/>
+                        <value>290</value>
+                    </factMeasures>
+                    <factMeasures yclass="LibCube:FactMeasure">
+                        <measure yid="MEASURE_SALE_VALUE"/>
+                        <value>3480</value>
+                    </factMeasures>
+                </facts>
+                <facts yclass="Fact">
+                    <members yid="TIME_YEAR_2017"/>
+                    <members yid="CITY_PARIS"/>
+                    <members yid="STORE_DELUXE_CHEESE_STORE"/>
+                    <members yid="PRODUCT_MEDIUM_HARD_CHEESE"/>
+                    <factMeasures yclass="LibCube:FactMeasure">
+                        <measure yid="MEASURE_SOLD_UNITS"/>
+                        <value>426</value>
+                    </factMeasures>
+                    <factMeasures yclass="LibCube:FactMeasure">
+                        <measure yid="MEASURE_SALE_VALUE"/>
+                        <value>8520</value>
+                    </factMeasures>
+                </facts>
+                <facts yclass="Fact">
+                    <members yid="TIME_YEAR_2018"/>
+                    <members yid="CITY_PARIS"/>
+                    <members yid="STORE_CAPITAL_CHEESE_STORE"/>
+                    <members yid="PRODUCT_MEDIUM_HARD_CHEESE"/>
+                    <factMeasures yclass="LibCube:FactMeasure">
+                        <measure yid="MEASURE_SOLD_UNITS"/>
+                        <value>299</value>
+                    </factMeasures>
+                    <factMeasures yclass="LibCube:FactMeasure">
+                        <measure yid="MEASURE_SALE_VALUE"/>
+                        <value>3480</value>
+                    </factMeasures>
+                </facts>
+                <facts yclass="Fact">
+                    <members yid="TIME_YEAR_2018"/>
+                    <members yid="CITY_PARIS"/>
+                    <members yid="STORE_DELUXE_CHEESE_STORE"/>
+                    <members yid="PRODUCT_MEDIUM_HARD_CHEESE"/>
+                    <factMeasures yclass="LibCube:FactMeasure">
+                        <measure yid="MEASURE_SOLD_UNITS"/>
+                        <value>657</value>
+                    </factMeasures>
+                    <factMeasures yclass="LibCube:FactMeasure">
+                        <measure yid="MEASURE_SALE_VALUE"/>
+                        <value>8520</value>
+                    </factMeasures>
+                </facts>
+                <facts yclass="Fact">
+                    <members yid="TIME_YEAR_2017"/>
+                    <members yid="CITY_PARIS"/>
+                    <members yid="STORE_CAPITAL_CHEESE_STORE"/>
+                    <members yid="PRODUCT_PROCESSED_CHEESE"/>
+                    <factMeasures yclass="LibCube:FactMeasure">
+                        <measure yid="MEASURE_SOLD_UNITS"/>
+                        <value>745</value>
+                    </factMeasures>
+                    <factMeasures yclass="LibCube:FactMeasure">
+                        <measure yid="MEASURE_SALE_VALUE"/>
+                        <value>6705</value>
+                    </factMeasures>
+                </facts>
+                <facts yclass="Fact">
+                    <members yid="TIME_YEAR_2017"/>
+                    <members yid="CITY_PARIS"/>
+                    <members yid="STORE_DELUXE_CHEESE_STORE"/>
+                    <members yid="PRODUCT_PROCESSED_CHEESE"/>
+                    <factMeasures yclass="LibCube:FactMeasure">
+                        <measure yid="MEASURE_SOLD_UNITS"/>
+                        <value>541</value>
+                    </factMeasures>
+                    <factMeasures yclass="LibCube:FactMeasure">
+                        <measure yid="MEASURE_SALE_VALUE"/>
+                        <value>4869</value>
+                    </factMeasures>
+                </facts>
+                <facts yclass="Fact">
+                    <members yid="TIME_YEAR_2018"/>
+                    <members yid="CITY_PARIS"/>
+                    <members yid="STORE_CAPITAL_CHEESE_STORE"/>
+                    <members yid="PRODUCT_PROCESSED_CHEESE"/>
+                    <factMeasures yclass="LibCube:FactMeasure">
+                        <measure yid="MEASURE_SOLD_UNITS"/>
+                        <value>856</value>
+                    </factMeasures>
+                    <factMeasures yclass="LibCube:FactMeasure">
+                        <measure yid="MEASURE_SALE_VALUE"/>
+                        <value>6705</value>
+                    </factMeasures>
+                </facts>
+                <facts yclass="Fact">
+                    <members yid="TIME_YEAR_2018"/>
+                    <members yid="CITY_PARIS"/>
+                    <members yid="STORE_DELUXE_CHEESE_STORE"/>
+                    <members yid="PRODUCT_PROCESSED_CHEESE"/>
+                    <factMeasures yclass="LibCube:FactMeasure">
+                        <measure yid="MEASURE_SOLD_UNITS"/>
+                        <value>841</value>
+                    </factMeasures>
+                    <factMeasures yclass="LibCube:FactMeasure">
+                        <measure yid="MEASURE_SALE_VALUE"/>
+                        <value>4869</value>
+                    </factMeasures>
+                </facts>
+                <facts yclass="Fact">
+                    <members yid="TIME_YEAR_2017"/>
+                    <members yid="CITY_PARIS"/>
+                    <members yid="STORE_CAPITAL_CHEESE_STORE"/>
+                    <members yid="PRODUCT_PROVOLONE"/>
+                    <factMeasures yclass="LibCube:FactMeasure">
+                        <measure yid="MEASURE_SOLD_UNITS"/>
+                        <value>745</value>
+                    </factMeasures>
+                    <factMeasures yclass="LibCube:FactMeasure">
+                        <measure yid="MEASURE_SALE_VALUE"/>
+                        <value>6705</value>
+                    </factMeasures>
+                </facts>
+                <facts yclass="Fact">
+                    <members yid="TIME_YEAR_2017"/>
+                    <members yid="CITY_PARIS"/>
+                    <members yid="STORE_DELUXE_CHEESE_STORE"/>
+                    <members yid="PRODUCT_PROVOLONE"/>
+                    <factMeasures yclass="LibCube:FactMeasure">
+                        <measure yid="MEASURE_SOLD_UNITS"/>
+                        <value>541</value>
+                    </factMeasures>
+                    <factMeasures yclass="LibCube:FactMeasure">
+                        <measure yid="MEASURE_SALE_VALUE"/>
+                        <value>4869</value>
+                    </factMeasures>
+                </facts>
+                <facts yclass="Fact">
+                    <members yid="TIME_YEAR_2018"/>
+                    <members yid="CITY_PARIS"/>
+                    <members yid="STORE_CAPITAL_CHEESE_STORE"/>
+                    <members yid="PRODUCT_PROVOLONE"/>
+                    <factMeasures yclass="LibCube:FactMeasure">
+                        <measure yid="MEASURE_SOLD_UNITS"/>
+                        <value>856</value>
+                    </factMeasures>
+                    <factMeasures yclass="LibCube:FactMeasure">
+                        <measure yid="MEASURE_SALE_VALUE"/>
+                        <value>6705</value>
+                    </factMeasures>
+                </facts>
+                <facts yclass="Fact">
+                    <members yid="TIME_YEAR_2018"/>
+                    <members yid="CITY_PARIS"/>
+                    <members yid="STORE_DELUXE_CHEESE_STORE"/>
+                    <members yid="PRODUCT_PROVOLONE"/>
+                    <factMeasures yclass="LibCube:FactMeasure">
+                        <measure yid="MEASURE_SOLD_UNITS"/>
+                        <value>841</value>
+                    </factMeasures>
+                    <factMeasures yclass="LibCube:FactMeasure">
+                        <measure yid="MEASURE_SALE_VALUE"/>
+                        <value>4869</value>
+                    </factMeasures>
+                </facts>
+                <facts yclass="Fact">
+                    <members yid="TIME_YEAR_2017"/>
+                    <members yid="CITY_PARIS"/>
+                    <members yid="STORE_CAPITAL_CHEESE_STORE"/>
+                    <members yid="PRODUCT_SWISS"/>
+                    <factMeasures yclass="LibCube:FactMeasure">
+                        <measure yid="MEASURE_SOLD_UNITS"/>
+                        <value>290</value>
+                    </factMeasures>
+                    <factMeasures yclass="LibCube:FactMeasure">
+                        <measure yid="MEASURE_SALE_VALUE"/>
+                        <value>3480</value>
+                    </factMeasures>
+                </facts>
+                <facts yclass="Fact">
+                    <members yid="TIME_YEAR_2017"/>
+                    <members yid="CITY_PARIS"/>
+                    <members yid="STORE_DELUXE_CHEESE_STORE"/>
+                    <members yid="PRODUCT_SWISS"/>
+                    <factMeasures yclass="LibCube:FactMeasure">
+                        <measure yid="MEASURE_SOLD_UNITS"/>
+                        <value>426</value>
+                    </factMeasures>
+                    <factMeasures yclass="LibCube:FactMeasure">
+                        <measure yid="MEASURE_SALE_VALUE"/>
+                        <value>8520</value>
+                    </factMeasures>
+                </facts>
+                <facts yclass="Fact">
+                    <members yid="TIME_YEAR_2018"/>
+                    <members yid="CITY_PARIS"/>
+                    <members yid="STORE_CAPITAL_CHEESE_STORE"/>
+                    <members yid="PRODUCT_SWISS"/>
+                    <factMeasures yclass="LibCube:FactMeasure">
+                        <measure yid="MEASURE_SOLD_UNITS"/>
+                        <value>299</value>
+                    </factMeasures>
+                    <factMeasures yclass="LibCube:FactMeasure">
+                        <measure yid="MEASURE_SALE_VALUE"/>
+                        <value>3480</value>
+                    </factMeasures>
+                </facts>
+                <facts yclass="Fact">
+                    <members yid="TIME_YEAR_2018"/>
+                    <members yid="CITY_PARIS"/>
+                    <members yid="STORE_DELUXE_CHEESE_STORE"/>
+                    <members yid="PRODUCT_SWISS"/>
+                    <factMeasures yclass="LibCube:FactMeasure">
+                        <measure yid="MEASURE_SOLD_UNITS"/>
+                        <value>657</value>
+                    </factMeasures>
+                    <factMeasures yclass="LibCube:FactMeasure">
+                        <measure yid="MEASURE_SALE_VALUE"/>
+                        <value>8520</value>
+                    </factMeasures>
+                </facts>
+            </cube>
+            <currentPeriod yid="TIME_YEAR_2018"/>
+            <previousPeriod yid="TIME_YEAR_2017"/>
+        </y:instance>
+
+</y:data>
+	</y:input>

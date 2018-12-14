@@ -1,0 +1,80 @@
+LibGeography:Country C_GUY
+  --> iso3166_1_numeric_code  "328"
+  --> iso3166_1_alpha_2       "GY"
+  --> iso3166_1_alpha_3       "GUY"
+  --> label
+    -> MultilingualText
+      --> i18nName_fr
+        -> NlgSubstantive
+          --> root    "Guyana"
+          --> plural  "Guyana"
+          --> gender  MASCULINE
+          --> number  SINGULAR
+        ;
+      --> i18nName_en
+        -> NlgSubstantive
+          --> root    "Guyana"
+          --> plural  "Guyana"
+          --> gender  INANIMATE
+          --> number  SINGULAR
+        ;
+      --> i18nName_es
+        -> NlgSubstantive
+          --> root    "Guyana"
+          --> plural  "Guyana"
+          --> gender  MASCULINE
+          --> number  SINGULAR
+        ;
+      --> i18nName_de
+        -> NlgSubstantive
+          --> root    "Guyana"
+          --> plural  "Guyana"
+          --> gender  NEUTRAL
+          --> number  SINGULAR
+        ;
+      --> i18nName_ja
+        -> NlgSubstantive
+          --> root    "ガイアナ"
+          --> plural  "ガイアナ"
+          --> gender  INANIMATE
+          --> number  SINGULAR
+        ;
+    ;
+  --> demonym
+    -> MultilingualText
+      --> i18nName_fr
+        -> NlgGenderAgreeableSubstantive
+          --> masculine "Guyanien"
+          --> feminine  "Guyanienne"
+        ;
+      --> i18nName_en  "Guyanese"
+      --> i18nName_es  "guyanés"
+      --> i18nName_de
+        -> NlgGenderAgreeableSubstantive
+          --> masculine "Guyaner"
+          --> feminine  "Guyanerin"
+        ;
+    ;
+  --> adjective
+    -> MultilingualText
+      --> i18nName_fr
+        -> NlgAdjective
+          --> root      "guyanien"
+          --> feminine  "guyanienne"
+        ;
+      --> i18nName_en
+        -> NlgAdjective
+          --> root      "Guyanese"
+        ;
+      --> i18nName_es
+        -> NlgAdjective
+          --> root      "guyanés"
+        ;
+      --> i18nName_de
+        -> NlgAdjective
+          --> root      "guyanisch"
+        ;
+    ;
+  --> useArticle_fr  true
+  --> useArticle_en  false
+;

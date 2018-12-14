@@ -1,0 +1,13 @@
+interface LibGeography:Region extends LibGeography:Area                  
+
+
+    classProperties
+    --> dsl -> Textualization
+        --> language LANG_en
+        --> root "Region"
+        --> number SINGULAR
+    ;
+;
+
+implementation LibGeography:Region
+;

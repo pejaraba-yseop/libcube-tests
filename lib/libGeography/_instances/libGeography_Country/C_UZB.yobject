@@ -1,0 +1,80 @@
+LibGeography:Country C_UZB
+  --> iso3166_1_numeric_code  "860"
+  --> iso3166_1_alpha_2       "UZ"
+  --> iso3166_1_alpha_3       "UZB"
+  --> label
+    -> MultilingualText
+      --> i18nName_fr
+        -> NlgSubstantive
+          --> root    "Ouzbékistan"
+          --> plural  "Ouzbékistan"
+          --> gender  MASCULINE
+          --> number  SINGULAR
+        ;
+      --> i18nName_en
+        -> NlgSubstantive
+          --> root    "Uzbekistan"
+          --> plural  "Uzbekistan"
+          --> gender  INANIMATE
+          --> number  SINGULAR
+        ;
+      --> i18nName_es
+        -> NlgSubstantive
+          --> root    "Uzbekistán"
+          --> plural  "Uzbekistán"
+          --> gender  MASCULINE
+          --> number  SINGULAR
+        ;
+      --> i18nName_de
+        -> NlgSubstantive
+          --> root    "Usbekistan"
+          --> plural  "Usbekistan"
+          --> gender  NEUTRAL
+          --> number  SINGULAR
+        ;
+      --> i18nName_ja
+        -> NlgSubstantive
+          --> root    "ウズベキスタン"
+          --> plural  "ウズベキスタン"
+          --> gender  INANIMATE
+          --> number  SINGULAR
+        ;
+    ;
+  --> demonym
+    -> MultilingualText
+      --> i18nName_fr
+        -> NlgGenderAgreeableSubstantive
+          --> masculine "Ouzbek"
+          --> feminine  "Ouzbèke"
+        ;
+      --> i18nName_en  "Uzbek"
+      --> i18nName_es  "uzbeko"
+      --> i18nName_de
+        -> NlgGenderAgreeableSubstantive
+          --> masculine "Usbeke"
+          --> feminine  "Usbekin"
+        ;
+    ;
+  --> adjective
+    -> MultilingualText
+      --> i18nName_fr
+        -> NlgAdjective
+          --> root      "ouzbek"
+          --> feminine  "ouzbèke"
+        ;
+      --> i18nName_en
+        -> NlgAdjective
+          --> root      "Uzbek"
+        ;
+      --> i18nName_es
+        -> NlgAdjective
+          --> root      "uzbeko"
+        ;
+      --> i18nName_de
+        -> NlgAdjective
+          --> root      "usbekisch"
+        ;
+    ;
+  --> useArticle_fr  true
+  --> useArticle_en  false
+;

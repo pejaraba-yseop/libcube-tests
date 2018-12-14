@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<yseop-yml:ymlRule xmlns:yseop-yml="http://www.yseop.com/yml/storage" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" domainModelVersion="3" identifier="39f36f46-24ca-476d-9cb5-83898d4a0add">
+    <yseop-yml:content>getGeneralData().marketShareOfInsurerePercent = ?marketShareItem.marketSharePercentDifference;</yseop-yml:content>
+    <yseop-yml:content>?marketShareItem in MarketShareItem
+?marketShareItem.marketShareName.stringCompare(getGeneralData().insurerRequested, _CASE_INSENSITIVE) == true</yseop-yml:content>
+    <yseop-yml:name>addToGlobalMarketShare</yseop-yml:name>
+    <yseop-yml:properties identifier="9bc30320-3ad8-4c6b-889a-f14841b7e27d">
+        <yseop-yml:property identifier="9bc30320-3ad8-4c6b-889a-f14841b7e27d|dsl" type="YML_PROPERTY" name="dsl">"add to global market share "</yseop-yml:property>
+        <yseop-yml:property identifier="9bc30320-3ad8-4c6b-889a-f14841b7e27d|disabled" type="GENERATION_PROPERTY" name="disabled">true</yseop-yml:property>
+    </yseop-yml:properties>
+</yseop-yml:ymlRule>

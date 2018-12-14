@@ -1,0 +1,80 @@
+LibGeography:Country C_SEN
+  --> iso3166_1_numeric_code  "686"
+  --> iso3166_1_alpha_2       "SN"
+  --> iso3166_1_alpha_3       "SEN"
+  --> label
+    -> MultilingualText
+      --> i18nName_fr
+        -> NlgSubstantive
+          --> root    "Sénégal"
+          --> plural  "Sénégal"
+          --> gender  MASCULINE
+          --> number  SINGULAR
+        ;
+      --> i18nName_en
+        -> NlgSubstantive
+          --> root    "Senegal"
+          --> plural  "Senegal"
+          --> gender  INANIMATE
+          --> number  SINGULAR
+        ;
+      --> i18nName_es
+        -> NlgSubstantive
+          --> root    "Senegal"
+          --> plural  "Senegal"
+          --> gender  MASCULINE
+          --> number  SINGULAR
+        ;
+      --> i18nName_de
+        -> NlgSubstantive
+          --> root    "Senegal"
+          --> plural  "Senegal"
+          --> gender  NEUTRAL
+          --> number  SINGULAR
+        ;
+      --> i18nName_ja
+        -> NlgSubstantive
+          --> root    "セネガル"
+          --> plural  "セネガル"
+          --> gender  INANIMATE
+          --> number  SINGULAR
+        ;
+    ;
+  --> demonym
+    -> MultilingualText
+      --> i18nName_fr
+        -> NlgGenderAgreeableSubstantive
+          --> masculine "Sénégalais"
+          --> feminine  "Sénégalaise"
+        ;
+      --> i18nName_en  "Senegalese"
+      --> i18nName_es  "senegalés"
+      --> i18nName_de
+        -> NlgGenderAgreeableSubstantive
+          --> masculine "Senegalese"
+          --> feminine  "Senegalesin"
+        ;
+    ;
+  --> adjective
+    -> MultilingualText
+      --> i18nName_fr
+        -> NlgAdjective
+          --> root      "sénégalais"
+          --> feminine  "sénégalaise"
+        ;
+      --> i18nName_en
+        -> NlgAdjective
+          --> root      "Senegalese"
+        ;
+      --> i18nName_es
+        -> NlgAdjective
+          --> root      "senegalés"
+        ;
+      --> i18nName_de
+        -> NlgAdjective
+          --> root      "senegalesisch"
+        ;
+    ;
+  --> useArticle_fr  true
+  --> useArticle_en  false
+;

@@ -1,0 +1,47 @@
+LibGeography:Subdivision STATE_MX_JAL
+  --> iso3166_2    "MX-JAL"
+  --> postal_code  "JA"
+  --> status       STATE
+  --> label
+    -> MultilingualText
+      --> i18nName_fr
+        -> NlgSubstantive
+          --> root    "Hidalgo"
+          --> plural  "Hidalgo"
+          --> number  SINGULAR
+        ;
+      --> i18nName_en
+        -> NlgSubstantive
+          --> root    "Hidalgo"
+          --> plural  "Hidalgo"
+          --> gender  INANIMATE
+          --> number  SINGULAR
+        ;
+      --> i18nName_es
+        -> NlgSubstantive
+          --> root    "Hidalgo"
+          --> plural  "Hidalgo"
+          --> number  SINGULAR
+        ;
+      --> i18nName_de
+        -> NlgSubstantive
+          --> root    "Hidalgo"
+          --> plural  "Hidalgo"
+          --> gender  NEUTRAL
+          --> number  SINGULAR
+        ;
+      --> i18nName_ja
+        -> NlgSubstantive
+          --> root    "イダルゴ州"
+          --> plural  "イダルゴ州"
+          --> gender  INANIMATE
+          --> number  SINGULAR
+        ;
+    ;
+  --> demonym
+    -> MultilingualText
+    ;
+  --> adjective
+    -> MultilingualText
+    ;
+;

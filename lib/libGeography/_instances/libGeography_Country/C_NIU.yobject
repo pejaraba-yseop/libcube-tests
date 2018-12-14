@@ -1,0 +1,80 @@
+LibGeography:Country C_NIU
+  --> iso3166_1_numeric_code  "570"
+  --> iso3166_1_alpha_2       "NU"
+  --> iso3166_1_alpha_3       "NIU"
+  --> label
+    -> MultilingualText
+      --> i18nName_fr
+        -> NlgSubstantive
+          --> root    "Nioué"
+          --> plural  "Nioué"
+          --> gender  FEMININE
+          --> number  SINGULAR
+        ;
+      --> i18nName_en
+        -> NlgSubstantive
+          --> root    "Niue"
+          --> plural  "Niue"
+          --> gender  INANIMATE
+          --> number  SINGULAR
+        ;
+      --> i18nName_es
+        -> NlgSubstantive
+          --> root    "Niue"
+          --> plural  "Niue"
+          --> gender  FEMININE
+          --> number  SINGULAR
+        ;
+      --> i18nName_de
+        -> NlgSubstantive
+          --> root    "Niue"
+          --> plural  "Niue"
+          --> gender  NEUTRAL
+          --> number  SINGULAR
+        ;
+      --> i18nName_ja
+        -> NlgSubstantive
+          --> root    "ニウエ"
+          --> plural  "ニウエ"
+          --> gender  INANIMATE
+          --> number  SINGULAR
+        ;
+    ;
+  --> demonym
+    -> MultilingualText
+      --> i18nName_fr
+        -> NlgGenderAgreeableSubstantive
+          --> masculine "Niuéan"
+          --> feminine  "Niuéane"
+        ;
+      --> i18nName_en  "Niuean"
+      --> i18nName_es  "niueño"
+      --> i18nName_de
+        -> NlgGenderAgreeableSubstantive
+          --> masculine "Niueaner"
+          --> feminine  "Niueanerin"
+        ;
+    ;
+  --> adjective
+    -> MultilingualText
+      --> i18nName_fr
+        -> NlgAdjective
+          --> root      "niuéan"
+          --> feminine  "niuéane"
+        ;
+      --> i18nName_en
+        -> NlgAdjective
+          --> root      "Niuean"
+        ;
+      --> i18nName_es
+        -> NlgAdjective
+          --> root      "niueño"
+        ;
+      --> i18nName_de
+        -> NlgAdjective
+          --> root      "niueanisch"
+        ;
+    ;
+  --> useArticle_fr  true
+  --> useArticle_en  false
+;

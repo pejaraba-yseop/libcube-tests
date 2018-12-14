@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<yseop-yml:constList xmlns:yseop-yml="http://www.yseop.com/yml/storage" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" domainModelVersion="3" identifier="7ec1107d-db67-4f5a-838f-02746826f8b3">
+    <yseop-yml:constListElements>
+        <yseop-yml:constListElement>
+            <yseop-yml:name>Q1</yseop-yml:name>
+            <yseop-yml:localeValues>
+                <yseop-yml:localeValue locale="en">
+                    <yseop-yml:value>Q1</yseop-yml:value>
+                </yseop-yml:localeValue>
+                <yseop-yml:localeValue locale="fr">
+                    <yseop-yml:value/>
+                </yseop-yml:localeValue>
+            </yseop-yml:localeValues>
+        </yseop-yml:constListElement>
+        <yseop-yml:constListElement>
+            <yseop-yml:name>Q2</yseop-yml:name>
+            <yseop-yml:localeValues>
+                <yseop-yml:localeValue locale="en">
+                    <yseop-yml:value>Q2</yseop-yml:value>
+                </yseop-yml:localeValue>
+                <yseop-yml:localeValue locale="fr">
+                    <yseop-yml:value/>
+                </yseop-yml:localeValue>
+            </yseop-yml:localeValues>
+        </yseop-yml:constListElement>
+        <yseop-yml:constListElement>
+            <yseop-yml:name>Q3</yseop-yml:name>
+            <yseop-yml:localeValues>
+                <yseop-yml:localeValue locale="en">
+                    <yseop-yml:value>Q3</yseop-yml:value>
+                </yseop-yml:localeValue>
+                <yseop-yml:localeValue locale="fr">
+                    <yseop-yml:value/>
+                </yseop-yml:localeValue>
+            </yseop-yml:localeValues>
+        </yseop-yml:constListElement>
+        <yseop-yml:constListElement>
+            <yseop-yml:name>Q4</yseop-yml:name>
+            <yseop-yml:localeValues>
+                <yseop-yml:localeValue locale="en">
+                    <yseop-yml:value>Q4</yseop-yml:value>
+                </yseop-yml:localeValue>
+                <yseop-yml:localeValue locale="fr">
+                    <yseop-yml:value/>
+                </yseop-yml:localeValue>
+            </yseop-yml:localeValues>
+        </yseop-yml:constListElement>
+    </yseop-yml:constListElements>
+    <yseop-yml:name>quarter</yseop-yml:name>
+    <yseop-yml:creationDate>2018-04-20T14:16:09.308Z</yseop-yml:creationDate>
+    <yseop-yml:properties identifier="2c2f3611-ab9c-4a93-847c-56316af2f590"/>
+</yseop-yml:constList>

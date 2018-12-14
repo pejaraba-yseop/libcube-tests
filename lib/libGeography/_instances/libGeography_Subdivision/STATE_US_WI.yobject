@@ -1,0 +1,55 @@
+LibGeography:Subdivision STATE_US_WI
+  --> iso3166_2    "US-WI"
+  --> postal_code  "WI"
+  --> status       STATE
+  --> label
+    -> MultilingualText
+      --> i18nName_fr
+        -> NlgSubstantive
+          --> root    "Wisconsin"
+          --> plural  "Wisconsin"
+          --> gender  MASCULINE
+          --> number  SINGULAR
+        ;
+      --> i18nName_en
+        -> NlgSubstantive
+          --> root    "Wisconsin"
+          --> plural  "Wisconsin"
+          --> gender  INANIMATE
+          --> number  SINGULAR
+        ;
+      --> i18nName_es
+        -> NlgSubstantive
+          --> root    "Wisconsin"
+          --> plural  "Wisconsin"
+          --> gender  MASCULINE
+          --> number  SINGULAR
+        ;
+      --> i18nName_de
+        -> NlgSubstantive
+          --> root    "Wisconsin"
+          --> plural  "Wisconsin"
+          --> gender  NEUTRAL
+          --> number  SINGULAR
+        ;
+      --> i18nName_ja
+        -> NlgSubstantive
+          --> root    " ウィスコンシン州"
+          --> plural  " ウィスコンシン州"
+          --> gender  INANIMATE
+          --> number  SINGULAR
+        ;
+    ;
+  --> demonym
+    -> MultilingualText
+      --> i18nName_en  "Wisconsinite"
+    ;
+  --> adjective
+    -> MultilingualText
+      --> i18nName_en
+        -> NlgAdjective
+          --> root      "Wisconsinite"
+        ;
+    ;
+  --> useArticle_en  false
+;

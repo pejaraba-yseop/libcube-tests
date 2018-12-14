@@ -1,0 +1,80 @@
+LibGeography:Country C_IND
+  --> iso3166_1_numeric_code  "356"
+  --> iso3166_1_alpha_2       "IN"
+  --> iso3166_1_alpha_3       "IND"
+  --> label
+    -> MultilingualText
+      --> i18nName_fr
+        -> NlgSubstantive
+          --> root    "Inde"
+          --> plural  "Inde"
+          --> gender  FEMININE
+          --> number  SINGULAR
+        ;
+      --> i18nName_en
+        -> NlgSubstantive
+          --> root    "India"
+          --> plural  "India"
+          --> gender  INANIMATE
+          --> number  SINGULAR
+        ;
+      --> i18nName_es
+        -> NlgSubstantive
+          --> root    "India"
+          --> plural  "India"
+          --> gender  FEMININE
+          --> number  SINGULAR
+        ;
+      --> i18nName_de
+        -> NlgSubstantive
+          --> root    "Indien"
+          --> plural  "Indien"
+          --> gender  NEUTRAL
+          --> number  SINGULAR
+        ;
+      --> i18nName_ja
+        -> NlgSubstantive
+          --> root    "インド"
+          --> plural  "インド"
+          --> gender  INANIMATE
+          --> number  SINGULAR
+        ;
+    ;
+  --> demonym
+    -> MultilingualText
+      --> i18nName_fr
+        -> NlgGenderAgreeableSubstantive
+          --> masculine "Indien"
+          --> feminine  "Indienne"
+        ;
+      --> i18nName_en  "Indian"
+      --> i18nName_es  "indio"
+      --> i18nName_de
+        -> NlgGenderAgreeableSubstantive
+          --> masculine "Inder"
+          --> feminine  "Inderin"
+        ;
+    ;
+  --> adjective
+    -> MultilingualText
+      --> i18nName_fr
+        -> NlgAdjective
+          --> root      "indien"
+          --> feminine  "indienne"
+        ;
+      --> i18nName_en
+        -> NlgAdjective
+          --> root      "Indian"
+        ;
+      --> i18nName_es
+        -> NlgAdjective
+          --> root      "indio"
+        ;
+      --> i18nName_de
+        -> NlgAdjective
+          --> root      "indisch"
+        ;
+    ;
+  --> useArticle_fr  true
+  --> useArticle_en  false
+;

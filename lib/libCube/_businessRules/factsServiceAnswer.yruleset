@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<yseop-yml:ymlRuleset xmlns:yseop-yml="http://www.yseop.com/yml/storage" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" domainModelVersion="3" identifier="9de5ad05-7349-4432-a6b1-1dfba92b0d80">
+    <yseop-yml:parameters/>
+    <yseop-yml:ymlParameters>WebService factsService
+LibCube:Cube cube</yseop-yml:ymlParameters>
+    <yseop-yml:localVariables/>
+    <yseop-yml:advancedContent/>
+    <yseop-yml:rules>
+        <yseop-yml:rule>0fc8c8f3-de7a-4e7b-b53e-c15d65b887fa</yseop-yml:rule>
+        <yseop-yml:rule>58af1ea0-5ebf-4761-8a74-b3e45e1f0584</yseop-yml:rule>
+    </yseop-yml:rules>
+    <yseop-yml:name>factsServiceAnswer</yseop-yml:name>
+    <yseop-yml:creationDate>2018-07-16T16:59:37.205Z</yseop-yml:creationDate>
+    <yseop-yml:properties identifier="1eddc99d-bfa0-4178-9e1d-3bd041859310"/>
+</yseop-yml:ymlRuleset>

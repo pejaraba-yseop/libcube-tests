@@ -1,0 +1,8 @@
+
+Product PRODUCT_ALL
+    --> dsl -> Textualization
+        --> language LANG_en
+        --> root "ALL Products"
+        --> number SINGULAR
+    ;
+;

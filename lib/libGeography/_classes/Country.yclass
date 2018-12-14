@@ -1,0 +1,45 @@
+interface LibGeography:Country extends LibGeography:Area
+
+
+  classProperties
+  --> dsl -> Textualization
+      --> language LANG_en
+      --> root "Country"
+      --> number SINGULAR
+  ;
+  
+;
+
+
+implementation LibGeography:Country
+;
+
+
+
+function getLanguageField ()
+--> domains PredicateAttribute
+--> action {
+  //forall (?chp.relatedLanguage == TEXT_EXECUTION_CONTEXT.kBBaseLanguage)
+  forall (?chp.Attribute::implementLanguage == TEXT_EXECUTION_CONTEXT.kBBaseLanguage)
+  {
+    return ?chp;
+  }
+  return null;
+};
+
+@if (engine_version_compatible ("5.5.0.BETA06") == false)
+function myGetAttribute (Text label, PredicateAttribute chp)
+--> action {
+
+  forall (?x.chp == ?subst,
+      ?subst.isInstanceOf(NlgSubstantive) == true,
+      ?subst.NlgSubstantive::root == label
+      
+      ){
+    return ?x;
+  }
+  return null;
+};
+@endif
+
+

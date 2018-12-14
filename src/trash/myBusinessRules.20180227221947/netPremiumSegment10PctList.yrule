@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<yseop-yml:ymlRule xmlns:yseop-yml="http://www.yseop.com/yml/storage" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" domainModelVersion="3" identifier="0475f583-5baa-4699-a343-bfa796e27e52">
+    <yseop-yml:content>?netPremium.countryNetPremiumListGreaterThan10.add(?netPremiumSegments);</yseop-yml:content>
+    <yseop-yml:content>?netPremium in NetPremium
+
+?netPremiumSegments in ?netPremium.countryNetPremiumList
+?netPremiumSegments.netPremiumSegmentPercent > 0.10 &amp;&amp; ?netPremiumSegments.netPremiumSegmentPercent &lt;= 1 &amp;&amp; ?netPremiumSegments.netPremiumSegmentName != "Grand Total"</yseop-yml:content>
+    <yseop-yml:name>netPremiumSegment10PctList</yseop-yml:name>
+    <yseop-yml:properties identifier="a7514cc6-de82-4ae3-b6d6-50118336e8be">
+        <yseop-yml:property identifier="a7514cc6-de82-4ae3-b6d6-50118336e8be|dsl" type="YML_PROPERTY" name="dsl">"net premium segment > 10 pct list"</yseop-yml:property>
+        <yseop-yml:property identifier="a7514cc6-de82-4ae3-b6d6-50118336e8be|disabled" type="GENERATION_PROPERTY" name="disabled">true</yseop-yml:property>
+    </yseop-yml:properties>
+</yseop-yml:ymlRule>

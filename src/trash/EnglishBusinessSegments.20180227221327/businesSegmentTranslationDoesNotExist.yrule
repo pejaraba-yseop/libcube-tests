@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<yseop-yml:ymlRule xmlns:yseop-yml="http://www.yseop.com/yml/storage" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" domainModelVersion="3" identifier="4e3abd80-b816-4d04-9c05-6d3615f4f5aa">
+    <yseop-yml:content>?businessSegment.businessSegmentNameEnglish = ?businessSegment.businessSegmentName;</yseop-yml:content>
+    <yseop-yml:content>?businessSegment in BusinessSegment
+?businessSegment.businessSegmentNameEnglish == null</yseop-yml:content>
+    <yseop-yml:name>businesSegmentTranslationDoesNotExist</yseop-yml:name>
+    <yseop-yml:properties identifier="6b322c0e-66a8-4add-bd4c-e4940549ef1f">
+        <yseop-yml:property identifier="6b322c0e-66a8-4add-bd4c-e4940549ef1f|dsl" type="YML_PROPERTY" name="dsl">"busines segment translation does not exist"</yseop-yml:property>
+        <yseop-yml:property identifier="6b322c0e-66a8-4add-bd4c-e4940549ef1f|disabled" type="GENERATION_PROPERTY" name="disabled">true</yseop-yml:property>
+    </yseop-yml:properties>
+</yseop-yml:ymlRule>

@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<yseop-yml:constList xmlns:yseop-yml="http://www.yseop.com/yml/storage" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" domainModelVersion="3" identifier="45bb9255-b9a3-4471-a9cb-8f1c15bcad22">
+    <yseop-yml:constListElements>
+        <yseop-yml:constListElement>
+            <yseop-yml:name>FUND_PERFORMANCE_OUTPERFORMED</yseop-yml:name>
+            <yseop-yml:localeValues>
+                <yseop-yml:localeValue locale="en">
+                    <yseop-yml:value>Outperformed</yseop-yml:value>
+                </yseop-yml:localeValue>
+                <yseop-yml:localeValue locale="es">
+                    <yseop-yml:value/>
+                </yseop-yml:localeValue>
+                <yseop-yml:localeValue locale="fr">
+                    <yseop-yml:value/>
+                </yseop-yml:localeValue>
+            </yseop-yml:localeValues>
+        </yseop-yml:constListElement>
+        <yseop-yml:constListElement>
+            <yseop-yml:name>FUND_PERFORMANCE_UNDERPERFORMED</yseop-yml:name>
+            <yseop-yml:localeValues>
+                <yseop-yml:localeValue locale="en">
+                    <yseop-yml:value>Underperformed</yseop-yml:value>
+                </yseop-yml:localeValue>
+                <yseop-yml:localeValue locale="es">
+                    <yseop-yml:value/>
+                </yseop-yml:localeValue>
+                <yseop-yml:localeValue locale="fr">
+                    <yseop-yml:value/>
+                </yseop-yml:localeValue>
+            </yseop-yml:localeValues>
+        </yseop-yml:constListElement>
+    </yseop-yml:constListElements>
+    <yseop-yml:name/>
+    <yseop-yml:properties identifier="6b23abf8-0e4c-4551-983c-fc2543c87e00">
+        <yseop-yml:property identifier="6b23abf8-0e4c-4551-983c-fc2543c87e00|dsl" type="YML_PROPERTY" name="dsl">"Fund Performance"</yseop-yml:property>
+    </yseop-yml:properties>
+</yseop-yml:constList>

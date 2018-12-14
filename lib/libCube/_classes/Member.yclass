@@ -1,0 +1,176 @@
+interface LibCube:Member extends LibCube:PrintableValuesObject
+    field dimension
+        --> domains LibCube:Dimension
+        --> documentation "The dimension to which the Member belongs"
+        --> xmlMapping XmlMappingProperty_SAVE
+        --> dsl -> Textualization
+            --> language LANG_en
+            --> root "dimension"
+            --> number SINGULAR
+        ;
+    field label
+        --> domains Text
+        --> documentation "The label of the member (i.e. what the member is called).  This field is the default text written by the toStringInStream function"
+        --> xmlMapping XmlMappingProperty_SAVE
+        --> dsl -> Textualization
+            --> language LANG_en
+            --> root "label"
+            --> number SINGULAR
+        ;	
+    field toStringInStreamObject
+        --> domains Object
+        --> documentation "The toStringInStreamObject of the member (i.e. how the member should be written).  This field is the default text written by the toStringInStream function"
+        --> xmlMapping XmlMappingProperty_SAVE
+        --> dsl -> Textualization
+            --> language LANG_en
+            --> root "label"
+            --> number SINGULAR
+        ;
+
+    field mdxName
+        --> domains String
+        --> xmlMapping XmlMappingProperty_SAVE
+        --> dsl -> Textualization
+            --> language LANG_en
+            --> root "mdxName"
+            --> number SINGULAR
+        ;
+    
+    field mdxFullName
+        --> domains String
+        --> xmlMapping XmlMappingProperty_SAVE
+        --> dsl -> Textualization
+            --> language LANG_en
+            --> root "mdxFullName"
+            --> number SINGULAR
+        ;
+
+    method getMdxFullName
+    args {
+			LibCube:Hierarchy    		hierarchy
+			--> nullable			    true
+	}
+    --> domains String	        
+	
+    classProperties
+    --> dsl -> Textualization
+        --> language LANG_en
+        --> root "Cube Member"
+        --> number SINGULAR
+    ;
+    --> trackInstances true
+    --> dynamicInstances  true 	
+;
+
+implementation LibCube:Member override {
+  toStringInStream function
+  printValues function
+  compareSameClass         
+}
+  @if (exists_object(Class::areXmlInstancesMergeable) == true)
+    --> areXmlInstancesMergeable	true
+  @endif
+
+  @if (exists_object(Class::mayModifyClassOfSimilarInstances) == true)
+    --> mayModifyClassOfSimilarInstances	true
+  @endif         
+;
+
+function LibCube:Member::toStringInStream({[_KEY]: Symbol mode {__nullable},} args)
+static {
+   NlgRepresentant    REPRESENTANT_THE_MEMBER
+       --> referential \(
+                          \setTextGranuleGender(MASCULINE) 
+                          \value(label) 
+                       \)
+       --> anaphor \(
+                      \setTextGranuleGender(MASCULINE) 
+                      \value(label) 
+                   \)
+   ;
+}
+--> action
+    {
+        if(this.toStringInStreamObject == null){
+            REPRESENTANT_THE_MEMBER.write (_REFERENT: this, args);
+        }else{
+
+            \(
+            \value(this.toStringInStreamObject, args)
+            \).write()
+           
+        }
+        
+    } 
+;
+
+function LibCube:Member::compareSameClass (LibCube:Member ob)
+--> action {
+
+  if(this.mdxName != null && ob.mdxName != null && this.mdxName == ob.mdxName){
+    return 0;
+  }
+
+} 
+;
+
+function LibCube:Member::getMdxFullName
+args {
+        LibCube:Hierarchy    		hierarchy
+        --> nullable			    true
+}
+--> action {
+    if(mdxFullName != null){
+        return mdxFullName;
+    }
+
+    if(mdxName == null){
+        logWarning("Can't get full mdx name of the member: ", this.identifier, " since the mdxName is null");
+        return null;
+    }
+
+    if(dimension.mdxName == null){
+        logWarning("MdxName of the dimension: ", dimension.identifier, "is null");
+        return null;
+    }
+    
+    else{
+        if(dimension == DIMENSION_TIME){
+        	
+            //return concat("[", dimension.mdxName, ".DATE].[", mdxName, "]");
+            return concat("[", dimension.mdxName, "].", mdxName, "");
+            
+            //return mdxName;
+        }
+        else{
+            if(hierarchy == null){
+            	
+                //return concat("[", dimension.mdxName, "].[", mdxName , "]");
+                return concat("[", dimension.mdxName, "].", mdxName , "");
+            }
+            else{
+                if(hierarchy.mdxName == null){
+                    logWarning("MdxName of the hierarchy: ", hierarchy.identifier, "is null");
+                    return null;
+                }
+                else{
+                
+                   // return concat("[", dimension.mdxName, ".", hierarchy.mdxName , "].[", mdxName , "]" );
+                   return concat("[", dimension.mdxName, ".", hierarchy.mdxName , "].", mdxName , "" );
+                }
+            }
+        }
+        
+    }
+}
+;
+textMethod LibCube:Member::printValues()
+--> text 
+\( 
+    \if(label != null)
+        Label: \value(label) Dimension: \value(dimension.identifier)
+    \else
+        Id: \value(identifier) Dimension: \value(dimension.identifier)
+    \endIf
+\)
+;

@@ -1,0 +1,52 @@
+LibGeography:Region UN_REG_EUROPE_W
+  --> label
+    -> MultilingualText
+      --> i18nName_fr
+        -> NlgSubstantive
+          --> root    "Europe de l'Ouest"
+          --> plural  "Europe de l'Ouest"
+          --> gender  FEMININE
+          --> number  SINGULAR
+        ;
+      --> i18nName_en
+        -> NlgSubstantive
+          --> root    "Western Europe"
+          --> plural  "Western Europe"
+          --> gender  INANIMATE
+          --> number  SINGULAR
+        ;
+      --> i18nName_es
+        -> NlgSubstantive
+          --> root    "Europa Occidental"
+          --> plural  "Europa Occidental"
+          --> gender  FEMININE
+          --> number  SINGULAR
+        ;
+      --> i18nName_de
+        -> NlgSubstantive
+          --> root    "Westliches Europa"
+          --> plural  "Westliches Europa"
+          --> gender  NEUTRAL
+          --> number  SINGULAR
+        ;
+      --> i18nName_ja
+        -> NlgSubstantive
+          --> root    "西ヨーロッパ "
+          --> plural  "西ヨーロッパ "
+          --> gender  INANIMATE
+          --> number  SINGULAR
+        ;
+    ;
+  --> demonym
+    -> MultilingualText
+      --> i18nName_en  "Western Europeran"
+    ;
+  --> adjective
+    -> MultilingualText
+      --> i18nName_en
+        -> NlgAdjective
+          --> root      "Western Europeran"
+        ;
+    ;
+  --> useArticle_en  false
+;

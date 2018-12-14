@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<yseop-yml:ymlRuleset xmlns:yseop-yml="http://www.yseop.com/yml/storage" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" domainModelVersion="3" identifier="f79912fb-b97e-49d2-8cf5-d0fdde3c005c">
+    <yseop-yml:ymlParameters/>
+    <yseop-yml:localVariables/>
+    <yseop-yml:advancedContent/>
+    <yseop-yml:rules>
+        <yseop-yml:rule>654e6a3b-2f1a-4734-b903-879a05d536fb</yseop-yml:rule>
+        <yseop-yml:rule>a195233e-9685-40a1-8837-0f32bef009b4</yseop-yml:rule>
+        <yseop-yml:rule>5c89715f-74ce-4ba6-af6a-30f0474e6750</yseop-yml:rule>
+        <yseop-yml:rule>a7e0fc0b-ca64-4e6b-b85c-65b8d7a9ca7a</yseop-yml:rule>
+        <yseop-yml:rule>a077f019-57d8-474e-a4d5-72c318015930</yseop-yml:rule>
+        <yseop-yml:rule>a985b8c4-d3c9-40ba-820c-2e260ead60ac</yseop-yml:rule>
+        <yseop-yml:rule>b04c69f2-2cf6-4cfd-8dd6-7b0f25a9887b</yseop-yml:rule>
+        <yseop-yml:rule>3606c205-8011-4942-88bf-52145428c7f6</yseop-yml:rule>
+        <yseop-yml:rule>4410d8f5-dbe8-4be6-b045-d277ba687529</yseop-yml:rule>
+        <yseop-yml:rule>7c682cc5-6beb-4a31-a215-fd6cbdd0ece1</yseop-yml:rule>
+        <yseop-yml:rule>f103a729-8374-4e36-b240-19803b7dffe1</yseop-yml:rule>
+    </yseop-yml:rules>
+    <yseop-yml:name>myBusinessRules</yseop-yml:name>
+    <yseop-yml:properties identifier="bbc01195-7bdb-4205-ba98-dc332bc3947b">
+        <yseop-yml:property identifier="bbc01195-7bdb-4205-ba98-dc332bc3947b|dsl" type="YML_PROPERTY" name="dsl">"my business rules"</yseop-yml:property>
+    </yseop-yml:properties>
+</yseop-yml:ymlRuleset>

@@ -1,0 +1,80 @@
+LibGeography:Country C_SMR
+  --> iso3166_1_numeric_code  "674"
+  --> iso3166_1_alpha_2       "SM"
+  --> iso3166_1_alpha_3       "SMR"
+  --> label
+    -> MultilingualText
+      --> i18nName_fr
+        -> NlgSubstantive
+          --> root    "Saint-Marin"
+          --> plural  "Saint-Marin"
+          --> gender  MASCULINE
+          --> number  SINGULAR
+        ;
+      --> i18nName_en
+        -> NlgSubstantive
+          --> root    "San Marino"
+          --> plural  "San Marino"
+          --> gender  INANIMATE
+          --> number  SINGULAR
+        ;
+      --> i18nName_es
+        -> NlgSubstantive
+          --> root    "San Marino"
+          --> plural  "San Marino"
+          --> gender  FEMININE
+          --> number  SINGULAR
+        ;
+      --> i18nName_de
+        -> NlgSubstantive
+          --> root    "San Marino"
+          --> plural  "San Marino"
+          --> gender  NEUTRAL
+          --> number  SINGULAR
+        ;
+      --> i18nName_ja
+        -> NlgSubstantive
+          --> root    "サンマリノ"
+          --> plural  "サンマリノ"
+          --> gender  INANIMATE
+          --> number  SINGULAR
+        ;
+    ;
+  --> demonym
+    -> MultilingualText
+      --> i18nName_fr
+        -> NlgGenderAgreeableSubstantive
+          --> masculine "Saint-Marinais"
+          --> feminine  "Saint-Marinaise"
+        ;
+      --> i18nName_en  "San Marinese"
+      --> i18nName_es  "sanmarinense"
+      --> i18nName_de
+        -> NlgGenderAgreeableSubstantive
+          --> masculine "San-Marinese"
+          --> feminine  "San-Marinesin"
+        ;
+    ;
+  --> adjective
+    -> MultilingualText
+      --> i18nName_fr
+        -> NlgAdjective
+          --> root      "saint-marinais"
+          --> feminine  "saint-marinaise"
+        ;
+      --> i18nName_en
+        -> NlgAdjective
+          --> root      "of San Marino"
+        ;
+      --> i18nName_es
+        -> NlgAdjective
+          --> root      "sanmarinense"
+        ;
+      --> i18nName_de
+        -> NlgAdjective
+          --> root      "san-marinesisch"
+        ;
+    ;
+  --> useArticle_fr  false
+  --> useArticle_en  false
+;

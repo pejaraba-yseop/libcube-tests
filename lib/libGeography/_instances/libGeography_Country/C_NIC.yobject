@@ -1,0 +1,80 @@
+LibGeography:Country C_NIC
+  --> iso3166_1_numeric_code  "558"
+  --> iso3166_1_alpha_2       "NI"
+  --> iso3166_1_alpha_3       "NIC"
+  --> label
+    -> MultilingualText
+      --> i18nName_fr
+        -> NlgSubstantive
+          --> root    "Nicaragua"
+          --> plural  "Nicaragua"
+          --> gender  MASCULINE
+          --> number  SINGULAR
+        ;
+      --> i18nName_en
+        -> NlgSubstantive
+          --> root    "Nicaragua"
+          --> plural  "Nicaragua"
+          --> gender  INANIMATE
+          --> number  SINGULAR
+        ;
+      --> i18nName_es
+        -> NlgSubstantive
+          --> root    "Nicaragua"
+          --> plural  "Nicaragua"
+          --> gender  MASCULINE
+          --> number  SINGULAR
+        ;
+      --> i18nName_de
+        -> NlgSubstantive
+          --> root    "Nicaragua"
+          --> plural  "Nicaragua"
+          --> gender  NEUTRAL
+          --> number  SINGULAR
+        ;
+      --> i18nName_ja
+        -> NlgSubstantive
+          --> root    "ニカラグア"
+          --> plural  "ニカラグア"
+          --> gender  INANIMATE
+          --> number  SINGULAR
+        ;
+    ;
+  --> demonym
+    -> MultilingualText
+      --> i18nName_fr
+        -> NlgGenderAgreeableSubstantive
+          --> masculine "Nicaraguayen"
+          --> feminine  "Nicaraguayenne"
+        ;
+      --> i18nName_en  "Nicaraguan"
+      --> i18nName_es  "nicaragüense"
+      --> i18nName_de
+        -> NlgGenderAgreeableSubstantive
+          --> masculine "Nicaraguaner"
+          --> feminine  "Nicaraguanerin"
+        ;
+    ;
+  --> adjective
+    -> MultilingualText
+      --> i18nName_fr
+        -> NlgAdjective
+          --> root      "nicaraguayen"
+          --> feminine  "nicaraguayenne"
+        ;
+      --> i18nName_en
+        -> NlgAdjective
+          --> root      "Nicaraguan"
+        ;
+      --> i18nName_es
+        -> NlgAdjective
+          --> root      "nicaragüense"
+        ;
+      --> i18nName_de
+        -> NlgAdjective
+          --> root      "nicaraguanisch"
+        ;
+    ;
+  --> useArticle_fr  true
+  --> useArticle_en  false
+;

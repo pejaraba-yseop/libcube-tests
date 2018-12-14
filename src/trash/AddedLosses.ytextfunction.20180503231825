@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<yseop-yml:ymlTextFunction xmlns:yseop-yml="http://www.yseop.com/yml/storage" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" domainModelVersion="3" identifier="7a8fc8db-14f9-48f6-ba43-2c852a884a1b">
+    <yseop-yml:textGranule domainModelVersion="3" identifier="21480448-4d87-46d8-88f8-49dfbdf7b85d">
+        <yseop-yml:granuleI18nContents>
+            <yseop-yml:granuleUnilingueContent locale="en">
+                <yseop-yml:granuleContent>
+                    <yseop-yml:text>
+\beginSynonym
+
+    \choice 
+        added losses
+
+    \choice 
+        hindered performance
+
+    \choice 
+        subtracted value
+
+\endSynonym
+
+</yseop-yml:text>
+                    <yseop-yml:inline-assemblies/>
+                    <yseop-yml:inline-dslFunctionCalls/>
+                </yseop-yml:granuleContent>
+            </yseop-yml:granuleUnilingueContent>
+            <yseop-yml:granuleUnilingueContent locale="es">
+                <yseop-yml:granuleContent>
+                    <yseop-yml:text/>
+                    <yseop-yml:inline-assemblies/>
+                    <yseop-yml:inline-dslFunctionCalls/>
+                </yseop-yml:granuleContent>
+            </yseop-yml:granuleUnilingueContent>
+            <yseop-yml:granuleUnilingueContent locale="fr">
+                <yseop-yml:granuleContent>
+                    <yseop-yml:text/>
+                    <yseop-yml:inline-assemblies/>
+                    <yseop-yml:inline-dslFunctionCalls/>
+                </yseop-yml:granuleContent>
+            </yseop-yml:granuleUnilingueContent>
+        </yseop-yml:granuleI18nContents>
+        <yseop-yml:dslCondition/>
+        <yseop-yml:name/>
+        <yseop-yml:creationDate>2018-04-30T16:59:27.256Z</yseop-yml:creationDate>
+        <yseop-yml:properties identifier="5bc6349a-6eeb-4484-b67a-bbefbce6c746">
+            <yseop-yml:property identifier="5bc6349a-6eeb-4484-b67a-bbefbce6c746|condition" type="YML_PROPERTY" name="condition"></yseop-yml:property>
+        </yseop-yml:properties>
+    </yseop-yml:textGranule>
+    <yseop-yml:localVariables/>
+    <yseop-yml:advancedContent/>
+    <yseop-yml:ymlParameters/>
+    <yseop-yml:name/>
+    <yseop-yml:properties identifier="c4469855-1b83-4946-b29a-4255c0bcaaac">
+        <yseop-yml:property identifier="c4469855-1b83-4946-b29a-4255c0bcaaac|dsl" type="YML_PROPERTY" name="dsl">"Added Losses"</yseop-yml:property>
+    </yseop-yml:properties>
+</yseop-yml:ymlTextFunction>

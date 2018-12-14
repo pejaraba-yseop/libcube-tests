@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<yseop-yml:ymlRule xmlns:yseop-yml="http://www.yseop.com/yml/storage" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" domainModelVersion="3" identifier="c000638f-d1f9-4207-9c7c-16277d33d7ee">
+    <yseop-yml:content>?expenseRatioPeerItem.lowHigh = HIGH;</yseop-yml:content>
+    <yseop-yml:content>?expenseRatioPeerItem in getGeneralData().expenseRatioPeerList
+?expenseRatioPeerItem.expenseRatioPeerPercent >= 0.4</yseop-yml:content>
+    <yseop-yml:name>highOrLow</yseop-yml:name>
+    <yseop-yml:properties identifier="11f0e822-5784-45db-9515-f85f1e40b0aa">
+        <yseop-yml:property identifier="11f0e822-5784-45db-9515-f85f1e40b0aa|dsl" type="YML_PROPERTY" name="dsl">"high rule"</yseop-yml:property>
+        <yseop-yml:property identifier="11f0e822-5784-45db-9515-f85f1e40b0aa|disabled" type="GENERATION_PROPERTY" name="disabled">true</yseop-yml:property>
+    </yseop-yml:properties>
+</yseop-yml:ymlRule>

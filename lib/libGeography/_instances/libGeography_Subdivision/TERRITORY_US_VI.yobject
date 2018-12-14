@@ -1,0 +1,50 @@
+LibGeography:Subdivision TERRITORY_US_VI
+  --> iso3166_2    "US-VI"
+  --> postal_code  "VI"
+  --> status       TERRITORY
+  --> label
+    -> MultilingualText
+      --> i18nName_fr
+        -> NlgSubstantive
+          --> root    "Îles Vierges des États-Unis"
+          --> plural  "Îles Vierges des États-Unis"
+          --> gender  FEMININE
+          --> number  PLURAL
+        ;
+      --> i18nName_en
+        -> NlgSubstantive
+          --> root    " U.S. Virgin Islands"
+          --> plural  " U.S. Virgin Islands"
+          --> gender  INANIMATE
+          --> number  PLURAL
+        ;
+      --> i18nName_es
+        -> NlgSubstantive
+          --> root    "Islas Vírgenes de los Estados Unidos"
+          --> plural  "Islas Vírgenes de los Estados Unidos"
+          --> gender  MASCULINE
+          --> number  PLURAL
+        ;
+      --> i18nName_de
+        -> NlgSubstantive
+          --> root    "Amerikanische Jungferninseln"
+          --> plural  "Amerikanische Jungferninseln"
+          --> gender  NEUTRAL
+          --> number  PLURAL
+        ;
+      --> i18nName_ja
+        -> NlgSubstantive
+          --> root    "アメリカ領ヴァージン諸島"
+          --> plural  "アメリカ領ヴァージン諸島"
+          --> gender  INANIMATE
+          --> number  PLURAL
+        ;
+    ;
+  --> demonym
+    -> MultilingualText
+    ;
+  --> adjective
+    -> MultilingualText
+    ;
+  --> useArticle_en  true
+;

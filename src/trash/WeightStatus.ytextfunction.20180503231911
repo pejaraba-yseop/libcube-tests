@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<yseop-yml:ymlTextFunction xmlns:yseop-yml="http://www.yseop.com/yml/storage" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" domainModelVersion="3" identifier="cd17e9bf-d955-4ee7-adfb-261009b3403e">
+    <yseop-yml:textGranule domainModelVersion="3" identifier="ba34ddea-1595-4074-a89e-110aa2f16ac3">
+        <yseop-yml:granuleI18nContents>
+            <yseop-yml:granuleUnilingueContent locale="en">
+                <yseop-yml:granuleContent>
+                    <yseop-yml:text>
+\switch(weightStatus)
+
+    \case(WEIGHT_STATUS_OVERWEIGHT)
+        overweight
+
+    \case(WEIGHT_STATUS_UNDERWEIGHT)
+        underweight
+
+    \case(WEIGHT_STATUS_UNWEIGHTED)
+        unweighted
+
+    \noDefault
+\endSwitch
+</yseop-yml:text>
+                    <yseop-yml:inline-assemblies/>
+                    <yseop-yml:inline-dslFunctionCalls/>
+                </yseop-yml:granuleContent>
+            </yseop-yml:granuleUnilingueContent>
+            <yseop-yml:granuleUnilingueContent locale="es">
+                <yseop-yml:granuleContent>
+                    <yseop-yml:text/>
+                    <yseop-yml:inline-assemblies/>
+                    <yseop-yml:inline-dslFunctionCalls/>
+                </yseop-yml:granuleContent>
+            </yseop-yml:granuleUnilingueContent>
+            <yseop-yml:granuleUnilingueContent locale="fr">
+                <yseop-yml:granuleContent>
+                    <yseop-yml:text/>
+                    <yseop-yml:inline-assemblies/>
+                    <yseop-yml:inline-dslFunctionCalls/>
+                </yseop-yml:granuleContent>
+            </yseop-yml:granuleUnilingueContent>
+        </yseop-yml:granuleI18nContents>
+        <yseop-yml:dslCondition/>
+        <yseop-yml:name/>
+        <yseop-yml:creationDate>2018-04-24T20:25:34.182Z</yseop-yml:creationDate>
+        <yseop-yml:properties identifier="9e1bf21e-d1de-448c-aa31-05d2ae3bfa10">
+            <yseop-yml:property identifier="9e1bf21e-d1de-448c-aa31-05d2ae3bfa10|condition" type="YML_PROPERTY" name="condition"></yseop-yml:property>
+        </yseop-yml:properties>
+    </yseop-yml:textGranule>
+    <yseop-yml:localVariables/>
+    <yseop-yml:advancedContent/>
+    <yseop-yml:ymlParameters>_constLists:WEIGHT_STATUS weightStatus
+    --> dsl -> Textualization
+        --> language LANG_en
+        --> root "weight status"
+        --> number SINGULAR
+    ;
+</yseop-yml:ymlParameters>
+    <yseop-yml:name>WeightStatus</yseop-yml:name>
+    <yseop-yml:properties identifier="2d0d4fcb-f943-4152-a8b6-1a27e6a3459f">
+        <yseop-yml:property identifier="2d0d4fcb-f943-4152-a8b6-1a27e6a3459f|dsl" type="YML_PROPERTY" name="dsl">"Weight Status"</yseop-yml:property>
+    </yseop-yml:properties>
+</yseop-yml:ymlTextFunction>

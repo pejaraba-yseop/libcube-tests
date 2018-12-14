@@ -1,0 +1,16 @@
+interface LibCube:PrintableValuesObject
+    
+    textMethod printValues()
+    
+    classProperties
+    --> abstract true
+    --> dsl -> Textualization
+        --> language LANG_en
+        --> root "printable values object"
+        --> number SINGULAR
+    ;
+    
+;
+
+implementation LibCube:PrintableValuesObject
+;

@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<yseop-yml:ymlRule xmlns:yseop-yml="http://www.yseop.com/yml/storage" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" domainModelVersion="3" identifier="bc3cd843-9731-46e0-a73c-262a60828a36">
+    <yseop-yml:content>theGeneralData.fundMovement = FUND_MOVEMENT_STABLE;</yseop-yml:content>
+    <yseop-yml:content>theGeneralData.fundPerformanceFact != null &amp;&amp; theGeneralData.fundPerformanceFact.getMeasure(MEASURE_PERFORMANCE).value == 0</yseop-yml:content>
+    <yseop-yml:name>SetFundRemainedStable</yseop-yml:name>
+    <yseop-yml:properties identifier="31d017dc-6f4f-4078-ac97-ef828cb0e403">
+        <yseop-yml:property identifier="31d017dc-6f4f-4078-ac97-ef828cb0e403|dsl" type="YML_PROPERTY" name="dsl">"Set Fund Remained Stable"</yseop-yml:property>
+        <yseop-yml:property identifier="31d017dc-6f4f-4078-ac97-ef828cb0e403|disabled" type="GENERATION_PROPERTY" name="disabled">false</yseop-yml:property>
+    </yseop-yml:properties>
+</yseop-yml:ymlRule>

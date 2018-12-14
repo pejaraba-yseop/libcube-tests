@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<yseop-yml:ymlRule xmlns:yseop-yml="http://www.yseop.com/yml/storage" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" domainModelVersion="3" identifier="adf35fee-7cc5-45ec-b62c-caca4dc37544">
+    <yseop-yml:content>getGeneralData().index18List.add(?businessSegment);</yseop-yml:content>
+    <yseop-yml:content>?businessSegment in BusinessSegment
+?businessSegment.businessSegmentIndex == 18</yseop-yml:content>
+    <yseop-yml:name>businessSegmentIndex18</yseop-yml:name>
+    <yseop-yml:properties identifier="8f9a1029-7512-4749-a16c-ca5df0651a20">
+        <yseop-yml:property identifier="8f9a1029-7512-4749-a16c-ca5df0651a20|dsl" type="YML_PROPERTY" name="dsl">"business segment index 18"</yseop-yml:property>
+        <yseop-yml:property identifier="8f9a1029-7512-4749-a16c-ca5df0651a20|disabled" type="GENERATION_PROPERTY" name="disabled">true</yseop-yml:property>
+    </yseop-yml:properties>
+</yseop-yml:ymlRule>

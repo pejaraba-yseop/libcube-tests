@@ -1,0 +1,216 @@
+interface LibCube:Jointure
+    field attribute
+        --> domains PredicateAttribute
+        --> xmlMapping XmlMappingProperty_SAVE
+        --> dsl -> Textualization
+            --> language LANG_en
+            --> root "attribute"
+            --> number SINGULAR
+        ;
+    field dimensionConditions
+		--> domains List
+        --> domainsLevel2 LibCube:JointureDimensionCondition
+        --> xmlMapping XmlMappingProperty_SAVE
+        --> dsl -> Textualization
+            --> language LANG_en
+            --> root "dimension conditions"
+            --> number PLURAL
+        ;
+	field measureConditions
+		--> domains List
+        --> domainsLevel2 LibCube:JointureMeasureCondition
+        --> xmlMapping XmlMappingProperty_SAVE
+        --> dsl -> Textualization
+            --> language LANG_en
+            --> root "measure conditions"
+            --> number PLURAL
+        ;
+        
+    field attributeType
+       --> domains Object
+       --> xmlMapping XmlMappingProperty_SAVE
+       --> dsl -> Textualization
+            --> language LANG_en
+            --> root "jointure attribute type"
+            --> number SINGULAR
+        ;
+          
+ 
+    method checkJointureDimensions()
+    --> domains Void
+
+    method getJointureResult(LibCube:Fact theFact)
+    --> domains Object
+
+    method init()
+    --> domains Void
+
+    classProperties
+    --> dsl -> Textualization
+        --> language LANG_en
+        --> root "Cube Jointure"
+        --> number SINGULAR
+    ;
+;
+
+implementation LibCube:Jointure
+;
+
+function LibCube:Jointure::checkJointureDimensions()
+--> local LibCube:JointureDimensionCondition newDimensionCondition, HashMap hashMapByDimension
+--> action {
+  //check jointure dimensions
+  if (dimensionConditions != null) {
+    hashMapByDimension =  dimensionConditions.groupItems (_KEY: LibCube:JointureDimensionCondition::dimension, 
+                                                                    _OCCURRENCES_COUNT, 
+                                                                    _FREQUENCY_ORDER, 
+                                                                    _DESCENDANT);
+
+    if(this == JOINTURE_TIME || this == JOINTURE_CURRENT_TIME) {
+      //do nothing
+    } else {
+      foreach(_dimension, LibCube:Dimension) {
+        switch {
+          case(hashMapByDimension[_dimension] == null && _dimension.isOptional == false): {
+            if(_dimension.defaultMember != null) {                  
+              //add newDimensionCondition with defaultMember to jointure
+              newDimensionCondition = new (LibCube:JointureDimensionCondition);
+              newDimensionCondition.dimension = _dimension;
+              newDimensionCondition.members = _dimension.defaultMember;
+              dimensionConditions.add(newDimensionCondition);
+            } else {                    
+              logWarning("missing dimension :", _dimension, " for jointure :", this)
+            }
+          }
+          case(hashMapByDimension[_dimension] > 1): {
+            logWarning("too many dimensionConditions for dimension :", _dimension, " for jointure :", this)
+          }
+        }
+      }          
+    }
+    free(hashMapByDimension);  
+  } // end check jointure dimensions          
+}
+;
+
+function LibCube:Jointure::getJointureResult(LibCube:Fact theFact) 
+--> local Boolean allConditionsSatisfied, Boolean dimOK, Boolean measOK, Object val, List attributes, LibCube:Member memberInCommon
+--> action {
+  attributes = new(List);
+  attributes.clear()
+  /* check dimension conditions:
+     First it checks if it accepts any members of the dimension, then if it accepts a multivalued member and finally it checks if it accepts a collection 
+ */
+  allConditionsSatisfied = true
+  foreach(_dimensionCondition, dimensionConditions) {
+	_dimensionCondition.init();
+    dimOK = false
+    if(_dimensionCondition.acceptsAnyMembers == true){
+      if(intersection(_dimensionCondition.dimension>>members, theFact>> members).isEmpty() == false){
+        dimOK = true;
+        memberInCommon =  intersection(_dimensionCondition.dimension>>members, theFact>> members).get(_FIRST);
+          if (_dimensionCondition.setItselfAsValue == true) {
+              attributes.add(memberInCommon)             
+          } else {                           
+            if (_dimensionCondition.OAV_value != null) {
+              attributes.add(memberInCommon.getAttributeValue(_dimensionCondition.OAV_value))
+            }
+          } 
+      }
+      else{
+        if(_dimensionCondition.acceptsEmpty == true && theFact.getDimension(_dimensionCondition.dimension) == null){
+          dimOK = true;
+        }
+      }
+
+      
+    }
+    else{
+      // we check first if the facts corresponds to a member
+      if (_dimensionCondition.members != null) {
+        foreach(_member, _dimensionCondition>>members) {
+          if (theFact.members.contains(_member) == true ) {
+            dimOK = true;
+            if (_dimensionCondition.setItselfAsValue == true) {
+                attributes.add(_member)             
+            } else {                           
+              if (_dimensionCondition.OAV_value != null) {
+                attributes.add(_member.getAttributeValue(_dimensionCondition.OAV_value))
+              }
+            }                                              
+            break
+          } 
+        }
+      } else { // we check alternatively if the facts corresponds to a member of the collection
+        foreach(_member, _dimensionCondition.membersCollection) {
+          if (theFact.members.contains(_member) == true ) {
+            dimOK = true;
+            if (_dimensionCondition.setItselfAsValue == true) {
+                attributes.add(_member)             
+            } else {                           
+              if (_dimensionCondition.OAV_value != null) {
+                  attributes.add(_member.getAttributeValue(_dimensionCondition.OAV_value))                              
+              }
+            }                                                        
+            break
+          } 
+        }                 
+      }
+    }
+    
+    if (dimOK == false) {
+      allConditionsSatisfied = false;
+      break
+    } 
+  } // end check dimension conditions
+
+  // check measure conditions
+  foreach(_measureCondition, measureConditions) {
+    if(_measureCondition.conditionSatisfied(theFact) == false) {
+      allConditionsSatisfied = false;
+      break  
+    } else {
+      if (_measureCondition.useFactMeasureAsValue == true) {          
+        attributes.add(_measureCondition.factMeasure)
+      }
+    }
+  } // end check measure conditions
+
+  if (allConditionsSatisfied == true) {
+    switch(attributes.size()) {
+      case (0): val = true;
+      case (1): val = attributes.get(_FIRST);
+      default : {
+        val = "";
+        foreach(_att, attributes) {
+          if (_att.belongToClasses(String) == String) { 
+            val = concat(val, _att)
+          } else {
+            val = concat(val, _att.identifier)
+          } 
+        }
+      }          
+    }
+    theFact.newOAVTriplet(attribute, val)
+  }
+
+  free(attributes);
+}
+;
+
+
+function LibCube:Jointure::init()
+--> action {
+   if(this.attribute == null){
+     this.attribute = LibCube:Fact.newAttribute();
+     if(this.attributeType == null){
+       this.attribute.domains = Boolean;
+     }
+     else{
+       this.attribute.domains = this.attributeType;
+     }
+     
+   }
+   checkJointureDimensions();
+   
+};

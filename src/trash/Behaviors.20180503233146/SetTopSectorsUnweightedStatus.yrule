@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<yseop-yml:ymlRule xmlns:yseop-yml="http://www.yseop.com/yml/storage" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" domainModelVersion="3" identifier="26389f9f-c345-4e9f-9161-98694d0c9dc8">
+    <yseop-yml:content>?fact.weightStatus = WEIGHT_STATUS_UNWEIGHTED;</yseop-yml:content>
+    <yseop-yml:content>?fact in theGeneralData.top2SectorsDriverFacts
+?fact.weightFact.getMeasure(MEASURE_PERFORMANCE).value == 0</yseop-yml:content>
+    <yseop-yml:name>SetTopSectorsUnweightedStatus</yseop-yml:name>
+    <yseop-yml:properties identifier="31d017dc-6f4f-4078-ac97-ef828cb0e403">
+        <yseop-yml:property identifier="31d017dc-6f4f-4078-ac97-ef828cb0e403|dsl" type="YML_PROPERTY" name="dsl">"Set Top Sectors Unweighted Status"</yseop-yml:property>
+        <yseop-yml:property identifier="31d017dc-6f4f-4078-ac97-ef828cb0e403|disabled" type="GENERATION_PROPERTY" name="disabled">false</yseop-yml:property>
+    </yseop-yml:properties>
+</yseop-yml:ymlRule>

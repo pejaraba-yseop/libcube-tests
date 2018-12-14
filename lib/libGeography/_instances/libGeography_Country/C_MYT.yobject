@@ -1,0 +1,80 @@
+LibGeography:Country C_MYT
+  --> iso3166_1_numeric_code  "175"
+  --> iso3166_1_alpha_2       "YT"
+  --> iso3166_1_alpha_3       "MYT"
+  --> label
+    -> MultilingualText
+      --> i18nName_fr
+        -> NlgSubstantive
+          --> root    "Mayotte"
+          --> plural  "Mayotte"
+          --> gender  FEMININE
+          --> number  SINGULAR
+        ;
+      --> i18nName_en
+        -> NlgSubstantive
+          --> root    "Mayotte"
+          --> plural  "Mayotte"
+          --> gender  INANIMATE
+          --> number  SINGULAR
+        ;
+      --> i18nName_es
+        -> NlgSubstantive
+          --> root    "Mayotte"
+          --> plural  "Mayotte"
+          --> gender  FEMININE
+          --> number  SINGULAR
+        ;
+      --> i18nName_de
+        -> NlgSubstantive
+          --> root    "Mayotte"
+          --> plural  "Mayotte"
+          --> gender  NEUTRAL
+          --> number  SINGULAR
+        ;
+      --> i18nName_ja
+        -> NlgSubstantive
+          --> root    "マヨット"
+          --> plural  "マヨット"
+          --> gender  INANIMATE
+          --> number  SINGULAR
+        ;
+    ;
+  --> demonym
+    -> MultilingualText
+      --> i18nName_fr
+        -> NlgGenderAgreeableSubstantive
+          --> masculine "Mahorais"
+          --> feminine  "Mahoraise"
+        ;
+      --> i18nName_en  "Mahorais"
+      --> i18nName_es  "mayotense"
+      --> i18nName_de
+        -> NlgGenderAgreeableSubstantive
+          --> masculine "Mahorer"
+          --> feminine  "Mahorerin"
+        ;
+    ;
+  --> adjective
+    -> MultilingualText
+      --> i18nName_fr
+        -> NlgAdjective
+          --> root      "mahorais"
+          --> feminine  "mahoraise"
+        ;
+      --> i18nName_en
+        -> NlgAdjective
+          --> root      "Mahoran"
+        ;
+      --> i18nName_es
+        -> NlgAdjective
+          --> root      "mayotense"
+        ;
+      --> i18nName_de
+        -> NlgAdjective
+          --> root      "mahorisch"
+        ;
+    ;
+  --> useArticle_fr  false
+  --> useArticle_en  false
+;

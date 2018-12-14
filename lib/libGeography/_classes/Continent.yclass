@@ -1,0 +1,13 @@
+interface LibGeography:Continent extends LibGeography:Area         
+
+           
+    classProperties
+    --> dsl -> Textualization
+        --> language LANG_en
+        --> root "Continent"
+        --> number SINGULAR
+    ;
+;
+
+implementation LibGeography:Continent
+;

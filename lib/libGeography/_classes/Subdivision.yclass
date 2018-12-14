@@ -1,0 +1,13 @@
+interface LibGeography:Subdivision extends LibGeography:Area
+
+  classProperties
+  --> dsl -> Textualization
+      --> language LANG_en
+      --> root "State/Province/Territory/etc."
+      --> number SINGULAR
+  ;
+  
+;
+
+implementation LibGeography:Subdivision
+;

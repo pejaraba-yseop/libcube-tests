@@ -1,0 +1,50 @@
+LibGeography:Subdivision PROVINCE_CA_SK
+  --> iso3166_2    "CA-SK"
+  --> postal_code  "SK"
+  --> status       PROVINCE
+  --> label
+    -> MultilingualText
+      --> i18nName_fr
+        -> NlgSubstantive
+          --> root    "Saskatchewan"
+          --> plural  "Saskatchewan"
+          --> gender  FEMININE
+          --> number  SINGULAR
+        ;
+      --> i18nName_en
+        -> NlgSubstantive
+          --> root    "Saskatchewan"
+          --> plural  "Saskatchewan"
+          --> gender  INANIMATE
+          --> number  SINGULAR
+        ;
+      --> i18nName_es
+        -> NlgSubstantive
+          --> root    "Saskatchewan"
+          --> plural  "Saskatchewan"
+          --> gender  MASCULINE
+          --> number  SINGULAR
+        ;
+      --> i18nName_de
+        -> NlgSubstantive
+          --> root    "Saskatchewan"
+          --> plural  "Saskatchewan"
+          --> gender  NEUTRAL
+          --> number  SINGULAR
+        ;
+      --> i18nName_ja
+        -> NlgSubstantive
+          --> root    "サスカチュワン州"
+          --> plural  "サスカチュワン州"
+          --> gender  INANIMATE
+          --> number  SINGULAR
+        ;
+    ;
+  --> demonym
+    -> MultilingualText
+    ;
+  --> adjective
+    -> MultilingualText
+    ;
+  --> useArticle_en  false
+;

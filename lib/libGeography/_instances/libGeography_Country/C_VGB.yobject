@@ -1,0 +1,71 @@
+LibGeography:Country C_VGB
+  --> iso3166_1_numeric_code  "092"
+  --> iso3166_1_alpha_2       "VG"
+  --> iso3166_1_alpha_3       "VGB"
+  --> label
+    -> MultilingualText
+      --> i18nName_fr
+        -> NlgSubstantive
+          --> root    "Îles Vierges britanniques"
+          --> plural  "Îles Vierges britanniques"
+          --> gender  FEMININE
+          --> number  PLURAL
+        ;
+      --> i18nName_en
+        -> NlgSubstantive
+          --> root    "British Virgin Islands"
+          --> plural  "British Virgin Islands"
+          --> gender  INANIMATE
+          --> number  PLURAL
+        ;
+      --> i18nName_es
+        -> NlgSubstantive
+          --> root    "Islas Vírgenes Británicas"
+          --> plural  "Islas Vírgenes Británicas"
+          --> gender  FEMININE
+          --> number  PLURAL
+        ;
+      --> i18nName_de
+        -> NlgSubstantive
+          --> root    "Britische Jungferninseln"
+          --> plural  "Britische Jungferninseln"
+          --> gender  NEUTRAL
+          --> number  PLURAL
+        ;
+      --> i18nName_ja
+        -> NlgSubstantive
+          --> root    "イギリス領バージン諸島"
+          --> plural  "イギリス領バージン諸島"
+          --> gender  INANIMATE
+          --> number  PLURAL
+        ;
+    ;
+  --> demonym
+    -> MultilingualText
+      --> i18nName_fr  "des Îles Vierges britanniques"
+      --> i18nName_en  "British Virgin Islander;"
+      --> i18nName_es  "de las Islas Vírgenes Británicas"
+      --> i18nName_de  "der Britischen Jungferninseln"
+    ;
+  --> adjective
+    -> MultilingualText
+      --> i18nName_fr
+        -> NlgAdjective
+          --> root      "des Îles Vierges britanniques"
+        ;
+      --> i18nName_en
+        -> NlgAdjective
+          --> root      "of the British Virgin Islands"
+        ;
+      --> i18nName_es
+        -> NlgAdjective
+          --> root      "de las Islas Vírgenes Británicas"
+        ;
+      --> i18nName_de
+        -> NlgAdjective
+          --> root      "der Britischen Jungferninseln"
+        ;
+    ;
+  --> useArticle_fr  true
+  --> useArticle_en  true
+;

@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<yseop-yml:ymlRule xmlns:yseop-yml="http://www.yseop.com/yml/storage" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" domainModelVersion="3" identifier="c19a8f93-f09c-4e8c-a168-b6976dd93d9d">
+    <yseop-yml:content>?businessSegment.businessSegmentRankingWord = "first";</yseop-yml:content>
+    <yseop-yml:content>?businessSegment in BusinessSegment
+?businessSegment.businessSegmentRanking == 1</yseop-yml:content>
+    <yseop-yml:name>Rank1</yseop-yml:name>
+    <yseop-yml:properties identifier="83910cd3-198f-4a9b-a502-c1cbe3198f2c">
+        <yseop-yml:property identifier="83910cd3-198f-4a9b-a502-c1cbe3198f2c|dsl" type="YML_PROPERTY" name="dsl">"Rank 1"</yseop-yml:property>
+        <yseop-yml:property identifier="83910cd3-198f-4a9b-a502-c1cbe3198f2c|disabled" type="GENERATION_PROPERTY" name="disabled">true</yseop-yml:property>
+    </yseop-yml:properties>
+</yseop-yml:ymlRule>

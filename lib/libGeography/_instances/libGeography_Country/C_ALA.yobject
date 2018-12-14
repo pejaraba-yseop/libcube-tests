@@ -1,0 +1,80 @@
+LibGeography:Country C_ALA
+  --> iso3166_1_numeric_code  "248"
+  --> iso3166_1_alpha_2       "AX"
+  --> iso3166_1_alpha_3       "ALA"
+  --> label
+    -> MultilingualText
+      --> i18nName_fr
+        -> NlgSubstantive
+          --> root    "Îles Åland"
+          --> plural  "Îles Åland"
+          --> gender  FEMININE
+          --> number  PLURAL
+        ;
+      --> i18nName_en
+        -> NlgSubstantive
+          --> root    "Åland Islands"
+          --> plural  "Åland Islands"
+          --> gender  INANIMATE
+          --> number  PLURAL
+        ;
+      --> i18nName_es
+        -> NlgSubstantive
+          --> root    "Åland"
+          --> plural  "Åland"
+          --> gender  FEMININE
+          --> number  PLURAL
+        ;
+      --> i18nName_de
+        -> NlgSubstantive
+          --> root    "Ålandinseln"
+          --> plural  "Ålandinseln"
+          --> gender  NEUTRAL
+          --> number  PLURAL
+        ;
+      --> i18nName_ja
+        -> NlgSubstantive
+          --> root    "オーランド諸島"
+          --> plural  "オーランド諸島"
+          --> gender  INANIMATE
+          --> number  PLURAL
+        ;
+    ;
+  --> demonym
+    -> MultilingualText
+      --> i18nName_fr
+        -> NlgGenderAgreeableSubstantive
+          --> masculine "Ålandais"
+          --> feminine  "Ålandaise"
+        ;
+      --> i18nName_en  "Åland Islander"
+      --> i18nName_es  "ålandés"
+      --> i18nName_de
+        -> NlgGenderAgreeableSubstantive
+          --> masculine "Åländer"
+          --> feminine  "Åländerin"
+        ;
+    ;
+  --> adjective
+    -> MultilingualText
+      --> i18nName_fr
+        -> NlgAdjective
+          --> root      "ålandais"
+          --> feminine  "ålandaise"
+        ;
+      --> i18nName_en
+        -> NlgAdjective
+          --> root      "of the Åland Islands"
+        ;
+      --> i18nName_es
+        -> NlgAdjective
+          --> root      "ålandés"
+        ;
+      --> i18nName_de
+        -> NlgAdjective
+          --> root      "åländisch"
+        ;
+    ;
+  --> useArticle_fr  true
+  --> useArticle_en  true
+;

@@ -1,0 +1,80 @@
+LibGeography:Country C_BHS
+  --> iso3166_1_numeric_code  "044"
+  --> iso3166_1_alpha_2       "BS"
+  --> iso3166_1_alpha_3       "BHS"
+  --> label
+    -> MultilingualText
+      --> i18nName_fr
+        -> NlgSubstantive
+          --> root    "Bahamas"
+          --> plural  "Bahamas"
+          --> gender  FEMININE
+          --> number  PLURAL
+        ;
+      --> i18nName_en
+        -> NlgSubstantive
+          --> root    "Bahamas"
+          --> plural  "Bahamas"
+          --> gender  INANIMATE
+          --> number  PLURAL
+        ;
+      --> i18nName_es
+        -> NlgSubstantive
+          --> root    "Bahamas"
+          --> plural  "Bahamas"
+          --> gender  FEMININE
+          --> number  PLURAL
+        ;
+      --> i18nName_de
+        -> NlgSubstantive
+          --> root    "Bahamas"
+          --> plural  "Bahamas"
+          --> gender  NEUTRAL
+          --> number  PLURAL
+        ;
+      --> i18nName_ja
+        -> NlgSubstantive
+          --> root    "バハマ議会"
+          --> plural  "バハマ議会"
+          --> gender  INANIMATE
+          --> number  PLURAL
+        ;
+    ;
+  --> demonym
+    -> MultilingualText
+      --> i18nName_fr
+        -> NlgGenderAgreeableSubstantive
+          --> masculine "Bahamien"
+          --> feminine  "Bahamienne"
+        ;
+      --> i18nName_en  "Bahamian"
+      --> i18nName_es  "bahameño"
+      --> i18nName_de
+        -> NlgGenderAgreeableSubstantive
+          --> masculine "Bahamaer"
+          --> feminine  "Bahamaerin"
+        ;
+    ;
+  --> adjective
+    -> MultilingualText
+      --> i18nName_fr
+        -> NlgAdjective
+          --> root      "bahamien"
+          --> feminine  "bahamienne"
+        ;
+      --> i18nName_en
+        -> NlgAdjective
+          --> root      "Bahamian"
+        ;
+      --> i18nName_es
+        -> NlgAdjective
+          --> root      "bahameño"
+        ;
+      --> i18nName_de
+        -> NlgAdjective
+          --> root      "bahamaisch"
+        ;
+    ;
+  --> useArticle_fr  true
+  --> useArticle_en  true
+;

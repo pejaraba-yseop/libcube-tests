@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<yseop-yml:ymlRuleset xmlns:yseop-yml="http://www.yseop.com/yml/storage" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" domainModelVersion="3" identifier="905c7c9b-293a-4ba5-bb97-6b217aec35eb">
+    <yseop-yml:rules>
+        <yseop-yml:rule>21382458-48c1-409d-8bcf-6f959eadc178</yseop-yml:rule>
+        <yseop-yml:rule>b708b27b-7368-4e5f-845b-cfd4407d51ec</yseop-yml:rule>
+        <yseop-yml:rule>bc3cd843-9731-46e0-a73c-262a60828a36</yseop-yml:rule>
+        <yseop-yml:rule>ad53cb55-d9b2-4172-98e8-94291f9725fd</yseop-yml:rule>
+        <yseop-yml:rule>10c5cb2e-d952-4a26-9b10-41af3ea73ebf</yseop-yml:rule>
+        <yseop-yml:rule>26389f9f-c345-4e9f-9161-98694d0c9dc8</yseop-yml:rule>
+        <yseop-yml:rule>143de539-502d-4e14-aab4-bd617e5c936f</yseop-yml:rule>
+        <yseop-yml:rule>b295c379-a178-4431-bb3d-2a819a15795b</yseop-yml:rule>
+        <yseop-yml:rule>3200a475-4646-44b9-9bf1-163fd64dd85e</yseop-yml:rule>
+        <yseop-yml:rule>dcec2a8f-a0a3-4aed-876a-eb30070a692e</yseop-yml:rule>
+        <yseop-yml:rule>b1271382-9f61-44f6-ae69-666f9bc83496</yseop-yml:rule>
+        <yseop-yml:rule>1f373855-c359-4b9a-9901-eb0ac1dba702</yseop-yml:rule>
+    </yseop-yml:rules>
+    <yseop-yml:name>Behaviors</yseop-yml:name>
+    <yseop-yml:properties identifier="0384c7bc-e8c3-449e-b858-ba9022261dd5">
+        <yseop-yml:property identifier="0384c7bc-e8c3-449e-b858-ba9022261dd5|dsl" type="YML_PROPERTY" name="dsl">"Behaviors"</yseop-yml:property>
+    </yseop-yml:properties>
+</yseop-yml:ymlRuleset>

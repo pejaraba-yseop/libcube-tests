@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<yseop-yml:ymlRule xmlns:yseop-yml="http://www.yseop.com/yml/storage" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" domainModelVersion="3" identifier="b1271382-9f61-44f6-ae69-666f9bc83496">
+    <yseop-yml:content>theGeneralData.fundPerformance = FUND_PERFORMANCE_OUTPERFORMED;</yseop-yml:content>
+    <yseop-yml:content>theGeneralData.fundPerformanceFact != null &amp;&amp; theGeneralData.fundPerformanceFact.getMeasure(MEASURE_PERFORMANCE).value > 0</yseop-yml:content>
+    <yseop-yml:name>SetFundOutperformed</yseop-yml:name>
+    <yseop-yml:properties identifier="5a5afade-e6f9-4bf1-924e-9924cb7d0f82">
+        <yseop-yml:property identifier="5a5afade-e6f9-4bf1-924e-9924cb7d0f82|dsl" type="YML_PROPERTY" name="dsl">"Set Fund Outperformed"</yseop-yml:property>
+        <yseop-yml:property identifier="5a5afade-e6f9-4bf1-924e-9924cb7d0f82|disabled" type="GENERATION_PROPERTY" name="disabled">false</yseop-yml:property>
+    </yseop-yml:properties>
+</yseop-yml:ymlRule>

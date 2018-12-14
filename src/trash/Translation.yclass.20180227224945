@@ -1,0 +1,27 @@
+interface Translation
+    field foreignWord
+        --> domains Text
+        --> xmlMapping XmlMappingProperty_NO_SAVE
+        --> dsl -> Textualization
+            --> language LANG_en
+            --> root "ForeignWord"
+            --> number SINGULAR
+        ;
+    field englishWord
+        --> domains Text
+        --> xmlMapping XmlMappingProperty_NO_SAVE
+        --> dsl -> Textualization
+            --> language LANG_en
+            --> root "EnglishWord"
+            --> number SINGULAR
+        ;
+    classProperties
+    --> dsl -> Textualization
+        --> language LANG_en
+        --> root "Translation"
+        --> number SINGULAR
+    ;
+;
+
+implementation Translation
+;

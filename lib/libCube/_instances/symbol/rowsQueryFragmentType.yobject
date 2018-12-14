@@ -1,0 +1,7 @@
+Symbol QUERY_FRAGMENT_TYPE_ROWS
+    --> dsl -> Textualization
+        --> language LANG_en
+        --> root "Rows Query Fragment Type"
+        --> number SINGULAR
+    ;
+;

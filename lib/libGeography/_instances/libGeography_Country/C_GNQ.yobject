@@ -1,0 +1,80 @@
+LibGeography:Country C_GNQ
+  --> iso3166_1_numeric_code  "226"
+  --> iso3166_1_alpha_2       "GQ"
+  --> iso3166_1_alpha_3       "GNQ"
+  --> label
+    -> MultilingualText
+      --> i18nName_fr
+        -> NlgSubstantive
+          --> root    "Guinée équatoriale"
+          --> plural  "Guinée équatoriale"
+          --> gender  FEMININE
+          --> number  SINGULAR
+        ;
+      --> i18nName_en
+        -> NlgSubstantive
+          --> root    "Equatorial Guinea"
+          --> plural  "Equatorial Guinea"
+          --> gender  INANIMATE
+          --> number  SINGULAR
+        ;
+      --> i18nName_es
+        -> NlgSubstantive
+          --> root    "Guinea Ecuatorial"
+          --> plural  "Guinea Ecuatorial"
+          --> gender  FEMININE
+          --> number  SINGULAR
+        ;
+      --> i18nName_de
+        -> NlgSubstantive
+          --> root    "Äquatorialguinea"
+          --> plural  "Äquatorialguinea"
+          --> gender  NEUTRAL
+          --> number  SINGULAR
+        ;
+      --> i18nName_ja
+        -> NlgSubstantive
+          --> root    "赤道ギニア"
+          --> plural  "赤道ギニア"
+          --> gender  INANIMATE
+          --> number  SINGULAR
+        ;
+    ;
+  --> demonym
+    -> MultilingualText
+      --> i18nName_fr
+        -> NlgGenderAgreeableSubstantive
+          --> masculine "Équato-Guinéen"
+          --> feminine  "Équato-Guinéenne"
+        ;
+      --> i18nName_en  "Equatorial Guinean"
+      --> i18nName_es  "ecuatoguineano"
+      --> i18nName_de
+        -> NlgGenderAgreeableSubstantive
+          --> masculine "Äquatorialguineer"
+          --> feminine  "Äquatorialguineerin"
+        ;
+    ;
+  --> adjective
+    -> MultilingualText
+      --> i18nName_fr
+        -> NlgAdjective
+          --> root      "équato-guinéen"
+          --> feminine  "équato-guinéenne"
+        ;
+      --> i18nName_en
+        -> NlgAdjective
+          --> root      "of Equatorial Guinea"
+        ;
+      --> i18nName_es
+        -> NlgAdjective
+          --> root      "ecuatoguineano"
+        ;
+      --> i18nName_de
+        -> NlgAdjective
+          --> root      "äquatorialguineisch"
+        ;
+    ;
+  --> useArticle_fr  true
+  --> useArticle_en  false
+;

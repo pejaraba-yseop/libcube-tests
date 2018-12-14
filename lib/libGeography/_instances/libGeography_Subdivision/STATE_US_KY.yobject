@@ -1,0 +1,55 @@
+LibGeography:Subdivision STATE_US_KY
+  --> iso3166_2    "US-KY"
+  --> postal_code  "KY"
+  --> status       STATE
+  --> label
+    -> MultilingualText
+      --> i18nName_fr
+        -> NlgSubstantive
+          --> root    "Kentucky"
+          --> plural  "Kentucky"
+          --> gender  MASCULINE
+          --> number  SINGULAR
+        ;
+      --> i18nName_en
+        -> NlgSubstantive
+          --> root    "Kentucky"
+          --> plural  "Kentucky"
+          --> gender  INANIMATE
+          --> number  SINGULAR
+        ;
+      --> i18nName_es
+        -> NlgSubstantive
+          --> root    "Kentucky"
+          --> plural  "Kentucky"
+          --> gender  MASCULINE
+          --> number  SINGULAR
+        ;
+      --> i18nName_de
+        -> NlgSubstantive
+          --> root    "Kentucky"
+          --> plural  "Kentucky"
+          --> gender  NEUTRAL
+          --> number  SINGULAR
+        ;
+      --> i18nName_ja
+        -> NlgSubstantive
+          --> root    " ケンタッキー州"
+          --> plural  " ケンタッキー州"
+          --> gender  INANIMATE
+          --> number  SINGULAR
+        ;
+    ;
+  --> demonym
+    -> MultilingualText
+      --> i18nName_en  "Kentuckian"
+    ;
+  --> adjective
+    -> MultilingualText
+      --> i18nName_en
+        -> NlgAdjective
+          --> root      "Kentuckian"
+        ;
+    ;
+  --> useArticle_en  false
+;

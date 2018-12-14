@@ -1,0 +1,8 @@
+Variable DIMENSION_TIME_CURRENT_MEMBER
+    --> domains LibCube:TimeMember
+    --> dsl -> Textualization
+        --> language LANG_en
+        --> root "dimension time - current member"
+        --> number SINGULAR
+    ;
+;

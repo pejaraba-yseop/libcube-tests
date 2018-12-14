@@ -1,0 +1,80 @@
+LibGeography:Country C_MKD
+  --> iso3166_1_numeric_code  "807"
+  --> iso3166_1_alpha_2       "MK"
+  --> iso3166_1_alpha_3       "MKD"
+  --> label
+    -> MultilingualText
+      --> i18nName_fr
+        -> NlgSubstantive
+          --> root    "Macédoine"
+          --> plural  "Macédoine"
+          --> gender  FEMININE
+          --> number  SINGULAR
+        ;
+      --> i18nName_en
+        -> NlgSubstantive
+          --> root    "Macedonia"
+          --> plural  "Macedonia"
+          --> gender  INANIMATE
+          --> number  SINGULAR
+        ;
+      --> i18nName_es
+        -> NlgSubstantive
+          --> root    "Macedonia"
+          --> plural  "Macedonia"
+          --> gender  FEMININE
+          --> number  SINGULAR
+        ;
+      --> i18nName_de
+        -> NlgSubstantive
+          --> root    "Mazedonien"
+          --> plural  "Mazedonien"
+          --> gender  NEUTRAL
+          --> number  SINGULAR
+        ;
+      --> i18nName_ja
+        -> NlgSubstantive
+          --> root    "ケドニア共和国"
+          --> plural  "ケドニア共和国"
+          --> gender  INANIMATE
+          --> number  SINGULAR
+        ;
+    ;
+  --> demonym
+    -> MultilingualText
+      --> i18nName_fr
+        -> NlgGenderAgreeableSubstantive
+          --> masculine "Macédonien"
+          --> feminine  "Macédonienne"
+        ;
+      --> i18nName_en  "Macedonian"
+      --> i18nName_es  "macedónio"
+      --> i18nName_de
+        -> NlgGenderAgreeableSubstantive
+          --> masculine "Mazedonier"
+          --> feminine  "Mazedonierin"
+        ;
+    ;
+  --> adjective
+    -> MultilingualText
+      --> i18nName_fr
+        -> NlgAdjective
+          --> root      "macédonien"
+          --> feminine  "macédonienne"
+        ;
+      --> i18nName_en
+        -> NlgAdjective
+          --> root      "Macedonian"
+        ;
+      --> i18nName_es
+        -> NlgAdjective
+          --> root      "macedónio"
+        ;
+      --> i18nName_de
+        -> NlgAdjective
+          --> root      "mazedonisch"
+        ;
+    ;
+  --> useArticle_fr  false
+  --> useArticle_en  false
+;

@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<yseop-yml:ymlRule xmlns:yseop-yml="http://www.yseop.com/yml/storage" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" domainModelVersion="3" identifier="893f41ed-bc42-4540-b6b4-6396165b2faa">
+    <yseop-yml:content>calculateMentionedBusinessSegmentCurrentCompanyRevenue();</yseop-yml:content>
+    <yseop-yml:content>theGeneralData.mentionedBusinessSegmentOrderedSet.isEmpty() == false</yseop-yml:content>
+    <yseop-yml:name>calculateMentionedBusinessSegmentCurrentCompanyRevenue</yseop-yml:name>
+    <yseop-yml:properties identifier="99ad2ed3-6cd1-4f8a-9bb2-928b986b9dff">
+        <yseop-yml:property identifier="99ad2ed3-6cd1-4f8a-9bb2-928b986b9dff|dsl" type="YML_PROPERTY" name="dsl">"calculate mentionedBusinessSegmentCurrentCompanyRevenue"</yseop-yml:property>
+        <yseop-yml:property identifier="99ad2ed3-6cd1-4f8a-9bb2-928b986b9dff|disabled" type="GENERATION_PROPERTY" name="disabled">false</yseop-yml:property>
+    </yseop-yml:properties>
+</yseop-yml:ymlRule>

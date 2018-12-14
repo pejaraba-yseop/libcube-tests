@@ -1,0 +1,71 @@
+LibGeography:Country C_HKG
+  --> iso3166_1_numeric_code  "344"
+  --> iso3166_1_alpha_2       "HK"
+  --> iso3166_1_alpha_3       "HKG"
+  --> label
+    -> MultilingualText
+      --> i18nName_fr
+        -> NlgSubstantive
+          --> root    "Hong Kong"
+          --> plural  "Hong Kong"
+          --> gender  FEMININE
+          --> number  SINGULAR
+        ;
+      --> i18nName_en
+        -> NlgSubstantive
+          --> root    "Hong Kong"
+          --> plural  "Hong Kong"
+          --> gender  INANIMATE
+          --> number  SINGULAR
+        ;
+      --> i18nName_es
+        -> NlgSubstantive
+          --> root    "Hong Kong"
+          --> plural  "Hong Kong"
+          --> gender  FEMININE
+          --> number  SINGULAR
+        ;
+      --> i18nName_de
+        -> NlgSubstantive
+          --> root    "Hongkong"
+          --> plural  "Hongkong"
+          --> gender  NEUTRAL
+          --> number  SINGULAR
+        ;
+      --> i18nName_ja
+        -> NlgSubstantive
+          --> root    "香港"
+          --> plural  "香港"
+          --> gender  INANIMATE
+          --> number  SINGULAR
+        ;
+    ;
+  --> demonym
+    -> MultilingualText
+      --> i18nName_fr  "de Hong Kong"
+      --> i18nName_en  "Hong Kong Chinese"
+      --> i18nName_es  "hongkonés"
+      --> i18nName_de  "von Hongkong"
+    ;
+  --> adjective
+    -> MultilingualText
+      --> i18nName_fr
+        -> NlgAdjective
+          --> root      "de Hong Kong"
+        ;
+      --> i18nName_en
+        -> NlgAdjective
+          --> root      "Hong Kong Chinese"
+        ;
+      --> i18nName_es
+        -> NlgAdjective
+          --> root      "hongkonés"
+        ;
+      --> i18nName_de
+        -> NlgAdjective
+          --> root      "von Hongkong"
+        ;
+    ;
+  --> useArticle_fr  false
+  --> useArticle_en  false
+;

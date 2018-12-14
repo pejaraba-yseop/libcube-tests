@@ -1,0 +1,80 @@
+LibGeography:Country C_TUV
+  --> iso3166_1_numeric_code  "798"
+  --> iso3166_1_alpha_2       "TV"
+  --> iso3166_1_alpha_3       "TUV"
+  --> label
+    -> MultilingualText
+      --> i18nName_fr
+        -> NlgSubstantive
+          --> root    "Tuvalu"
+          --> plural  "Tuvalu"
+          --> gender  FEMININE
+          --> number  PLURAL
+        ;
+      --> i18nName_en
+        -> NlgSubstantive
+          --> root    "Tuvalu"
+          --> plural  "Tuvalu"
+          --> gender  INANIMATE
+          --> number  PLURAL
+        ;
+      --> i18nName_es
+        -> NlgSubstantive
+          --> root    "Tuvalu"
+          --> plural  "Tuvalu"
+          --> gender  FEMININE
+          --> number  PLURAL
+        ;
+      --> i18nName_de
+        -> NlgSubstantive
+          --> root    "Tuvalu"
+          --> plural  "Tuvalu"
+          --> gender  NEUTRAL
+          --> number  PLURAL
+        ;
+      --> i18nName_ja
+        -> NlgSubstantive
+          --> root    "ツバル"
+          --> plural  "ツバル"
+          --> gender  INANIMATE
+          --> number  PLURAL
+        ;
+    ;
+  --> demonym
+    -> MultilingualText
+      --> i18nName_fr
+        -> NlgGenderAgreeableSubstantive
+          --> masculine "Tuvaluan"
+          --> feminine  "Tuvaluane"
+        ;
+      --> i18nName_en  "Tuvaluan"
+      --> i18nName_es  "tuvaluano"
+      --> i18nName_de
+        -> NlgGenderAgreeableSubstantive
+          --> masculine "Tuvaluer"
+          --> feminine  "Tuvaluerin"
+        ;
+    ;
+  --> adjective
+    -> MultilingualText
+      --> i18nName_fr
+        -> NlgAdjective
+          --> root      "tuvaluan"
+          --> feminine  "tuvaluane"
+        ;
+      --> i18nName_en
+        -> NlgAdjective
+          --> root      "Tuvaluan"
+        ;
+      --> i18nName_es
+        -> NlgAdjective
+          --> root      "tuvaluano"
+        ;
+      --> i18nName_de
+        -> NlgAdjective
+          --> root      "tuvaluisch"
+        ;
+    ;
+  --> useArticle_fr  true
+  --> useArticle_en  false
+;

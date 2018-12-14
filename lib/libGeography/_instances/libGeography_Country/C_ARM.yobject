@@ -1,0 +1,80 @@
+LibGeography:Country C_ARM
+  --> iso3166_1_numeric_code  "051"
+  --> iso3166_1_alpha_2       "AM"
+  --> iso3166_1_alpha_3       "ARM"
+  --> label
+    -> MultilingualText
+      --> i18nName_fr
+        -> NlgSubstantive
+          --> root    "Arménie"
+          --> plural  "Arménie"
+          --> gender  FEMININE
+          --> number  SINGULAR
+        ;
+      --> i18nName_en
+        -> NlgSubstantive
+          --> root    "Armenia"
+          --> plural  "Armenia"
+          --> gender  INANIMATE
+          --> number  SINGULAR
+        ;
+      --> i18nName_es
+        -> NlgSubstantive
+          --> root    "Armenia"
+          --> plural  "Armenia"
+          --> gender  FEMININE
+          --> number  SINGULAR
+        ;
+      --> i18nName_de
+        -> NlgSubstantive
+          --> root    "Armenien"
+          --> plural  "Armenien"
+          --> gender  NEUTRAL
+          --> number  SINGULAR
+        ;
+      --> i18nName_ja
+        -> NlgSubstantive
+          --> root    "アルメニア"
+          --> plural  "アルメニア"
+          --> gender  INANIMATE
+          --> number  SINGULAR
+        ;
+    ;
+  --> demonym
+    -> MultilingualText
+      --> i18nName_fr
+        -> NlgGenderAgreeableSubstantive
+          --> masculine "Arménien"
+          --> feminine  "Arménienne"
+        ;
+      --> i18nName_en  "Armenian"
+      --> i18nName_es  "armenio"
+      --> i18nName_de
+        -> NlgGenderAgreeableSubstantive
+          --> masculine "Armenier"
+          --> feminine  "Armenierin"
+        ;
+    ;
+  --> adjective
+    -> MultilingualText
+      --> i18nName_fr
+        -> NlgAdjective
+          --> root      "arménien"
+          --> feminine  "arménienne"
+        ;
+      --> i18nName_en
+        -> NlgAdjective
+          --> root      "Armenian"
+        ;
+      --> i18nName_es
+        -> NlgAdjective
+          --> root      "armenio"
+        ;
+      --> i18nName_de
+        -> NlgAdjective
+          --> root      "armenisch"
+        ;
+    ;
+  --> useArticle_fr  true
+  --> useArticle_en  false
+;

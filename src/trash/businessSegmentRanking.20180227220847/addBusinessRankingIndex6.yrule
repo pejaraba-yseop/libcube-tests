@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<yseop-yml:ymlRule xmlns:yseop-yml="http://www.yseop.com/yml/storage" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" domainModelVersion="3" identifier="5158be15-3fae-4e1f-b93c-d8a2fee4607f">
+    <yseop-yml:content>?businessSegment.businessSegmentRanking = getGeneralData().index6List.indexOf(?businessSegment);</yseop-yml:content>
+    <yseop-yml:content>?businessSegment in getGeneralData().index6List</yseop-yml:content>
+    <yseop-yml:name>addBusinessRankingIndex6</yseop-yml:name>
+    <yseop-yml:properties identifier="a05f44b3-5b0d-4034-86c8-c43cc6993903">
+        <yseop-yml:property identifier="a05f44b3-5b0d-4034-86c8-c43cc6993903|dsl" type="YML_PROPERTY" name="dsl">"add business ranking - index 6"</yseop-yml:property>
+        <yseop-yml:property identifier="a05f44b3-5b0d-4034-86c8-c43cc6993903|disabled" type="GENERATION_PROPERTY" name="disabled">true</yseop-yml:property>
+    </yseop-yml:properties>
+</yseop-yml:ymlRule>

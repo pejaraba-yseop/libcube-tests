@@ -1,0 +1,80 @@
+LibGeography:Country C_MLT
+  --> iso3166_1_numeric_code  "470"
+  --> iso3166_1_alpha_2       "MT"
+  --> iso3166_1_alpha_3       "MLT"
+  --> label
+    -> MultilingualText
+      --> i18nName_fr
+        -> NlgSubstantive
+          --> root    "Malte"
+          --> plural  "Malte"
+          --> gender  FEMININE
+          --> number  SINGULAR
+        ;
+      --> i18nName_en
+        -> NlgSubstantive
+          --> root    "Malta"
+          --> plural  "Malta"
+          --> gender  INANIMATE
+          --> number  SINGULAR
+        ;
+      --> i18nName_es
+        -> NlgSubstantive
+          --> root    "Malta"
+          --> plural  "Malta"
+          --> gender  FEMININE
+          --> number  SINGULAR
+        ;
+      --> i18nName_de
+        -> NlgSubstantive
+          --> root    "Malta"
+          --> plural  "Malta"
+          --> gender  NEUTRAL
+          --> number  SINGULAR
+        ;
+      --> i18nName_ja
+        -> NlgSubstantive
+          --> root    "マルタ"
+          --> plural  "マルタ"
+          --> gender  INANIMATE
+          --> number  SINGULAR
+        ;
+    ;
+  --> demonym
+    -> MultilingualText
+      --> i18nName_fr
+        -> NlgGenderAgreeableSubstantive
+          --> masculine "Maltais"
+          --> feminine  "Maltaise"
+        ;
+      --> i18nName_en  "Maltese"
+      --> i18nName_es  "maltés"
+      --> i18nName_de
+        -> NlgGenderAgreeableSubstantive
+          --> masculine "Malteser"
+          --> feminine  "Malteserin"
+        ;
+    ;
+  --> adjective
+    -> MultilingualText
+      --> i18nName_fr
+        -> NlgAdjective
+          --> root      "maltais"
+          --> feminine  "maltaise"
+        ;
+      --> i18nName_en
+        -> NlgAdjective
+          --> root      "Maltese"
+        ;
+      --> i18nName_es
+        -> NlgAdjective
+          --> root      "maltés"
+        ;
+      --> i18nName_de
+        -> NlgAdjective
+          --> root      "maltesisch"
+        ;
+    ;
+  --> useArticle_fr  false
+  --> useArticle_en  false
+;

@@ -1,0 +1,8 @@
+
+LibCube:Dimension DIMENSION_CITY
+    --> dsl -> Textualization
+        --> language LANG_en
+        --> root "City Dimension"
+        --> number SINGULAR
+    ;
+;

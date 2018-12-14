@@ -1,0 +1,80 @@
+LibGeography:Country C_AND
+  --> iso3166_1_numeric_code  "020"
+  --> iso3166_1_alpha_2       "AD"
+  --> iso3166_1_alpha_3       "AND"
+  --> label
+    -> MultilingualText
+      --> i18nName_fr
+        -> NlgSubstantive
+          --> root    "Andorre"
+          --> plural  "Andorre"
+          --> gender  FEMININE
+          --> number  SINGULAR
+        ;
+      --> i18nName_en
+        -> NlgSubstantive
+          --> root    "Andorra"
+          --> plural  "Andorra"
+          --> gender  INANIMATE
+          --> number  SINGULAR
+        ;
+      --> i18nName_es
+        -> NlgSubstantive
+          --> root    "Andorra"
+          --> plural  "Andorra"
+          --> gender  FEMININE
+          --> number  SINGULAR
+        ;
+      --> i18nName_de
+        -> NlgSubstantive
+          --> root    "Andorra"
+          --> plural  "Andorra"
+          --> gender  NEUTRAL
+          --> number  SINGULAR
+        ;
+      --> i18nName_ja
+        -> NlgSubstantive
+          --> root    "アンドラ"
+          --> plural  "アンドラ"
+          --> gender  INANIMATE
+          --> number  SINGULAR
+        ;
+    ;
+  --> demonym
+    -> MultilingualText
+      --> i18nName_fr
+        -> NlgGenderAgreeableSubstantive
+          --> masculine "Andorran"
+          --> feminine  "Andorrane"
+        ;
+      --> i18nName_en  "Andorran"
+      --> i18nName_es  "andorrano"
+      --> i18nName_de
+        -> NlgGenderAgreeableSubstantive
+          --> masculine "Andorraner"
+          --> feminine  "Andorranerin"
+        ;
+    ;
+  --> adjective
+    -> MultilingualText
+      --> i18nName_fr
+        -> NlgAdjective
+          --> root      "andorran"
+          --> feminine  "andorrane"
+        ;
+      --> i18nName_en
+        -> NlgAdjective
+          --> root      "Andorran"
+        ;
+      --> i18nName_es
+        -> NlgAdjective
+          --> root      "andorrano"
+        ;
+      --> i18nName_de
+        -> NlgAdjective
+          --> root      "andorranisch"
+        ;
+    ;
+  --> useArticle_fr  false
+  --> useArticle_en  false
+;

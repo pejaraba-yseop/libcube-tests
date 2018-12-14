@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<yseop-yml:ymlRule xmlns:yseop-yml="http://www.yseop.com/yml/storage" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" domainModelVersion="3" identifier="79874527-3dee-4807-ac0b-a9f28cc3081f">
+    <yseop-yml:content>?businessSegment.businessSegmentNameEnglish = "group annuities";</yseop-yml:content>
+    <yseop-yml:content>?businessSegment in BusinessSegment
+?businessSegment.businessSegmentName == "Retiro Colectivo"</yseop-yml:content>
+    <yseop-yml:name>RetiroColectivoToEnglish</yseop-yml:name>
+    <yseop-yml:properties identifier="ceb6d599-1d9c-40a0-a55c-f0eaf172373d">
+        <yseop-yml:property identifier="ceb6d599-1d9c-40a0-a55c-f0eaf172373d|dsl" type="YML_PROPERTY" name="dsl">"Retiro Colectivo to English"</yseop-yml:property>
+        <yseop-yml:property identifier="ceb6d599-1d9c-40a0-a55c-f0eaf172373d|disabled" type="GENERATION_PROPERTY" name="disabled">true</yseop-yml:property>
+    </yseop-yml:properties>
+</yseop-yml:ymlRule>

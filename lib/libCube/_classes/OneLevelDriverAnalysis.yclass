@@ -1,0 +1,203 @@
+interface LibCube:OneLevelDriverAnalysis
+    field fact
+        --> domains LibCube:Fact
+        --> documentation "The 'parent' fact which which seeks a driving fact"
+        --> xmlMapping XmlMappingProperty_NO_SAVE
+        --> dsl -> Textualization
+            --> language LANG_en
+            --> root "fact"
+            --> number PLURAL
+        ;
+    field hierarchyAttribute
+        --> domains PredicateAttribute
+        --> xmlMapping XmlMappingProperty_NO_SAVE
+        --> dsl -> Textualization
+            --> language LANG_en
+            --> root "hierarchy predicate attribute"
+            --> number SINGULAR
+        ;  
+    field findHierarchyChildren
+        --> domains Boolean
+        --> xmlMapping XmlMappingProperty_NO_SAVE
+        --> dsl -> Textualization
+            --> language LANG_en
+            --> root "find hierarchy children?"
+            --> number SINGULAR
+        ;                        
+    field sortAttribute
+        --> domains PredicateAttribute        
+        --> xmlMapping XmlMappingProperty_NO_SAVE
+        --> dsl -> Textualization
+            --> language LANG_en
+            --> root "sort predicate attribute"
+            --> number SINGULAR
+        ;   
+    field threshold
+        --> domains Number
+        --> defaultValue 0
+        --> xmlMapping XmlMappingProperty_NO_SAVE
+        --> dsl -> Textualization
+            --> language LANG_en
+            --> root "threshold"
+            --> number SINGULAR
+        ;                  
+    field separatePositiveNegative
+        --> domains Boolean
+        --> xmlMapping XmlMappingProperty_NO_SAVE
+        --> dsl -> Textualization
+            --> language LANG_en
+            --> root "separate positive and negative facts?"
+            --> number SINGULAR
+        ;                    
+    field drivingFact
+        --> domains LibCube:Fact
+        --> documentation "The fact which is driving the 'parent' fact"
+        --> xmlMapping XmlMappingProperty_SAVE
+        --> dsl -> Textualization
+            --> language LANG_en
+            --> root "driving fact"
+            --> number PLURAL
+        ;
+    field sortedFacts
+        --> domains List
+        --> domainsLevel2 LibCube:Fact
+        --> documentation "The list of facts sorted with the SorParamter (in case top X are needed)"
+        --> xmlMapping XmlMappingProperty_NO_SAVE
+        --> dsl -> Textualization
+            --> language LANG_en
+            --> root "sorted facts"
+            --> number PLURAL
+        ;         
+    field positiveSortedSelectedFacts
+        --> domains List
+        --> domainsLevel2 LibCube:Fact
+        --> xmlMapping XmlMappingProperty_NO_SAVE
+        --> dsl -> Textualization
+            --> language LANG_en
+            --> root "positive sorted facts"
+            --> number PLURAL
+        ; 
+    field negativeSortedSelectedFacts
+        --> domains List
+        --> domainsLevel2 LibCube:Fact        
+        --> xmlMapping XmlMappingProperty_NO_SAVE
+        --> dsl -> Textualization
+            --> language LANG_en
+            --> root "negative sorted facts"
+            --> number PLURAL
+        ;                   
+
+    method compute()
+    --> domains Void
+
+    method collectFacts()
+    --> domains Void 
+
+    method sortFacts()
+    --> domains Void          
+
+    method attrSort(LibCube:Fact c1, LibCube:Fact c2, PredicateAttribute theAttr)
+    --> domains Number   
+
+    method attrSortAbs(LibCube:Fact c1, LibCube:Fact c2, PredicateAttribute theAttr)
+    --> domains Number       
+
+    classProperties
+    --> dsl -> Textualization
+        --> language LANG_en
+        --> root "One Fact One Measure One Hierarchy One Level Drill Down Analysis"
+        --> number SINGULAR
+    ;
+;
+
+implementation LibCube:OneLevelDriverAnalysis
+;
+
+function LibCube:OneLevelDriverAnalysis::attrSort(LibCube:Fact c1, LibCube:Fact c2, PredicateAttribute theAttr)
+--> domains Number
+--> return c1.sortField.theAttr - c2.sortField.theAttr
+;
+
+function LibCube:OneLevelDriverAnalysis::attrSortAbs(LibCube:Fact c1, LibCube:Fact c2, PredicateAttribute theAttr)
+--> domains Number
+--> return abs(c1.sortField.theAttr) - abs(c2.sortField.theAttr)
+;
+
+function LibCube:OneLevelDriverAnalysis::compute()
+--> action {   
+  this.collectFacts() 
+  this.sortFacts()    
+}
+;
+
+function LibCube:OneLevelDriverAnalysis::collectFacts()
+--> local SortParameter theParam, PredicateAttribute theAttr
+--> action {   
+  sortedFacts = new(List)
+  
+  if(findHierarchyChildren == true) {
+    sortedFacts = as(?fact, 
+                     ?fact.factMeasures != null,  // instantiate 
+                     ?fact.timeMember == fact.timeMember, // find all facts with same time member (field created automatically with a Jointure)
+                     ?fact.sortField != null, // find only facts with a sort field (should be made with Jointure) which should eliminate all facts with sort value of 0
+                     ?sortAtt = sortAttribute, // instantiate sort attribute
+                     abs(?fact.sortField.?sortAtt) > threshold, // find facts above/below threshold (assumes symmetric, also eliminates 0 values)
+                     ?heiAtt = hierarchyAttribute, // instantiate hierarchy attribute
+                     ?fact.?heiAtt != null, // eliminates facts without hierarchy attribute
+                     LibCube:HierarchyElement(?fact.?heiAtt).parent == fact.?heiAtt, // finds children facts                                     
+                     intersection(fact>>members, ?fact>>members).size() == fact>>members.size() - 1).toList() // finds all facts with same dimensions except one    
+  } else {
+    sortedFacts = as(?fact,                      
+                     ?fact.factMeasures != null, // instantiate 
+                     ?fact.timeMember == fact.timeMember, // find all facts with same time member (field created automatically with a Jointure)
+                     ?fact.sortField != null, // find only facts with a sort field (should be made with Jointure) which should eliminate all facts with sort value of 0
+                     ?sortAtt = sortAttribute, // instantiate sort attribute
+                     abs(?fact.sortField.?sortAtt) > threshold, // find facts above/below threshold (assumes symmetric, also eliminates 0 values)
+                     ?heiAtt = hierarchyAttribute, // instantiate hierarchy attribute
+                     ?fact.?heiAtt != null, // eliminates facts without hierarchy attribute
+                     ?fact.?heiAtt == fact.?heiAtt, // finds all facts with same hierarchy dimension 
+                     intersection(fact>>members, ?fact>>members).size() == fact>>members.size() - 1).toList() // finds all facts with same dimensions except one    
+  }  
+  
+  if(separatePositiveNegative == true) {
+    theAttr = sortAttribute    
+    positiveSortedSelectedFacts = new(List)
+    negativeSortedSelectedFacts = new(List)
+    
+    positiveSortedSelectedFacts = applyCollection(sortedFacts, 
+                                                  __where currentElement.sortField.theAttr > threshold).toList()
+
+    negativeSortedSelectedFacts = applyCollection(sortedFacts, 
+                                                  __where currentElement.sortField.theAttr < -threshold).toList()    
+  }  
+}
+;
+
+
+function LibCube:OneLevelDriverAnalysis::sortFacts()
+--> local SortParameter theParam
+--> action {
+  if(sortedFacts.isEmpty() == false) {
+    theParam = new(SortParameter)
+    theParam.argumentForExpressionToValuate = sortAttribute
+    theParam.expressionToValuate = LibCube:OneLevelDriverAnalysis::attrSort
+    theParam.order = _CALCULATED_RELATIVE_ORDER
+    theParam.ascendant = false
+
+    sortedFacts.sort(theParam)
+    drivingFact = new(LibCube:Fact)
+    drivingFact = sortedFacts.get(_FIRST)  
+
+    if(separatePositiveNegative == true) {      
+      theParam = new(SortParameter)
+      theParam.argumentForExpressionToValuate = sortAttribute
+      theParam.expressionToValuate = LibCube:OneLevelDriverAnalysis::attrSortAbs
+      theParam.order = _CALCULATED_RELATIVE_ORDER
+      theParam.ascendant = false
+      
+      positiveSortedSelectedFacts.sort(theParam)
+      negativeSortedSelectedFacts.sort(theParam)
+    }  
+  }
+}
+;

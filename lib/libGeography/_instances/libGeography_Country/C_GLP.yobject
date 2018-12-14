@@ -1,0 +1,76 @@
+LibGeography:Country C_GLP
+  --> iso3166_1_numeric_code  "312"
+  --> iso3166_1_alpha_2       "GP"
+  --> iso3166_1_alpha_3       "GLP"
+  --> label
+    -> MultilingualText
+      --> i18nName_fr
+        -> NlgSubstantive
+          --> root    "Guadeloupe"
+          --> plural  "Guadeloupe"
+          --> gender  FEMININE
+          --> number  SINGULAR
+        ;
+      --> i18nName_en
+        -> NlgSubstantive
+          --> root    "Guadeloupe"
+          --> plural  "Guadeloupe"
+          --> gender  INANIMATE
+          --> number  SINGULAR
+        ;
+      --> i18nName_es
+        -> NlgSubstantive
+          --> root    "Guadalupe"
+          --> plural  "Guadalupe"
+          --> gender  FEMININE
+          --> number  SINGULAR
+        ;
+      --> i18nName_de
+        -> NlgSubstantive
+          --> root    "Guadeloupe"
+          --> plural  "Guadeloupe"
+          --> gender  NEUTRAL
+          --> number  SINGULAR
+        ;
+      --> i18nName_ja
+        -> NlgSubstantive
+          --> root    "グアドループ"
+          --> plural  "グアドループ"
+          --> gender  INANIMATE
+          --> number  SINGULAR
+        ;
+    ;
+  --> demonym
+    -> MultilingualText
+      --> i18nName_fr
+        -> NlgGenderAgreeableSubstantive
+          --> masculine "Guadeloupéen"
+          --> feminine  "Guadeloupéenne"
+        ;
+      --> i18nName_en  "Guadeloupean"
+      --> i18nName_es  "guadalupeño"
+      --> i18nName_de  "von Guadeloupe"
+    ;
+  --> adjective
+    -> MultilingualText
+      --> i18nName_fr
+        -> NlgAdjective
+          --> root      "guadeloupéen"
+          --> feminine  "guadeloupéenne"
+        ;
+      --> i18nName_en
+        -> NlgAdjective
+          --> root      "Guadeloupean"
+        ;
+      --> i18nName_es
+        -> NlgAdjective
+          --> root      "guadalupeño"
+        ;
+      --> i18nName_de
+        -> NlgAdjective
+          --> root      "von Guadeloupe"
+        ;
+    ;
+  --> useArticle_fr  true
+  --> useArticle_en  false
+;

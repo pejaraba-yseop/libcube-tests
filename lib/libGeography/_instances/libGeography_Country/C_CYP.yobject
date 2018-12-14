@@ -1,0 +1,80 @@
+LibGeography:Country C_CYP
+  --> iso3166_1_numeric_code  "196"
+  --> iso3166_1_alpha_2       "CY"
+  --> iso3166_1_alpha_3       "CYP"
+  --> label
+    -> MultilingualText
+      --> i18nName_fr
+        -> NlgSubstantive
+          --> root    "Chypre"
+          --> plural  "Chypre"
+          --> gender  FEMININE
+          --> number  SINGULAR
+        ;
+      --> i18nName_en
+        -> NlgSubstantive
+          --> root    "Cyprus"
+          --> plural  "Cyprus"
+          --> gender  INANIMATE
+          --> number  SINGULAR
+        ;
+      --> i18nName_es
+        -> NlgSubstantive
+          --> root    "Chipre"
+          --> plural  "Chipre"
+          --> gender  FEMININE
+          --> number  SINGULAR
+        ;
+      --> i18nName_de
+        -> NlgSubstantive
+          --> root    "Zypern"
+          --> plural  "Zypern"
+          --> gender  NEUTRAL
+          --> number  SINGULAR
+        ;
+      --> i18nName_ja
+        -> NlgSubstantive
+          --> root    "キプロス"
+          --> plural  "キプロス"
+          --> gender  INANIMATE
+          --> number  SINGULAR
+        ;
+    ;
+  --> demonym
+    -> MultilingualText
+      --> i18nName_fr
+        -> NlgGenderAgreeableSubstantive
+          --> masculine "Chypriote"
+          --> feminine  "Chypriote "
+        ;
+      --> i18nName_en  "Cypriot"
+      --> i18nName_es  "chipriota"
+      --> i18nName_de
+        -> NlgGenderAgreeableSubstantive
+          --> masculine "Zyprer"
+          --> feminine  "Zyprerin"
+        ;
+    ;
+  --> adjective
+    -> MultilingualText
+      --> i18nName_fr
+        -> NlgAdjective
+          --> root      "chypriote"
+          --> feminine  "chypriote"
+        ;
+      --> i18nName_en
+        -> NlgAdjective
+          --> root      "Cypriot"
+        ;
+      --> i18nName_es
+        -> NlgAdjective
+          --> root      "chipriota"
+        ;
+      --> i18nName_de
+        -> NlgAdjective
+          --> root      "zyprisch"
+        ;
+    ;
+  --> useArticle_fr  false
+  --> useArticle_en  false
+;

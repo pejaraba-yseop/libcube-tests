@@ -1,0 +1,37 @@
+
+interface ExpenseRatioPeerItem
+    field expenseRatioPeerCountryName
+        --> domains Text
+        --> xmlMapping XmlMappingProperty_NO_SAVE
+        --> dsl -> Textualization
+            --> language LANG_en
+            --> root "expenseRatioPeerCountryName"
+            --> number SINGULAR
+        ;
+    field expenseRatioPeerPercent
+        --> domains Number
+        --> xmlMapping XmlMappingProperty_NO_SAVE
+        --> dsl -> Textualization
+            --> language LANG_en
+            --> root "expenseRatioPeerPercent"
+            --> number SINGULAR
+        ;
+    field expenseRatioPeerDate
+        --> domains Date
+        --> xmlMapping XmlMappingProperty_NO_SAVE
+        --> dsl -> Textualization
+            --> language LANG_en
+            --> root "expenseRatioPeerDate"
+            --> number SINGULAR
+        ;
+    classProperties
+    --> dsl -> Textualization
+        --> language LANG_en
+        --> root "ExpenseRatioPeerItem"
+        --> number SINGULAR
+    ;
+;
+
+implementation ExpenseRatioPeerItem
+;
+

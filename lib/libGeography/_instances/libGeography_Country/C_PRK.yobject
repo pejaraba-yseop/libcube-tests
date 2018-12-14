@@ -1,0 +1,76 @@
+LibGeography:Country C_PRK
+  --> iso3166_1_numeric_code  "408"
+  --> iso3166_1_alpha_2       "KP"
+  --> iso3166_1_alpha_3       "PRK"
+  --> label
+    -> MultilingualText
+      --> i18nName_fr
+        -> NlgSubstantive
+          --> root    "Corée du Nord"
+          --> plural  "Corée du Nord"
+          --> gender  FEMININE
+          --> number  SINGULAR
+        ;
+      --> i18nName_en
+        -> NlgSubstantive
+          --> root    "North Korea"
+          --> plural  "North Korea"
+          --> gender  INANIMATE
+          --> number  SINGULAR
+        ;
+      --> i18nName_es
+        -> NlgSubstantive
+          --> root    "Corea del Norte"
+          --> plural  "Corea del Norte"
+          --> gender  FEMININE
+          --> number  SINGULAR
+        ;
+      --> i18nName_de
+        -> NlgSubstantive
+          --> root    "Nordkorea"
+          --> plural  "Nordkorea"
+          --> gender  NEUTRAL
+          --> number  SINGULAR
+        ;
+      --> i18nName_ja
+        -> NlgSubstantive
+          --> root    "北朝鮮"
+          --> plural  "北朝鮮"
+          --> gender  INANIMATE
+          --> number  SINGULAR
+        ;
+    ;
+  --> demonym
+    -> MultilingualText
+      --> i18nName_fr
+        -> NlgGenderAgreeableSubstantive
+          --> masculine "Nord-Coréen"
+          --> feminine  "Nord-Coréenne"
+        ;
+      --> i18nName_en  "North Korean"
+      --> i18nName_es  "de la República Popular Democrática de Corea"
+      --> i18nName_de  "der Demokratischen Volksrepublik Korea"
+    ;
+  --> adjective
+    -> MultilingualText
+      --> i18nName_fr
+        -> NlgAdjective
+          --> root      "nord-coréen"
+          --> feminine  "nord-coréenne"
+        ;
+      --> i18nName_en
+        -> NlgAdjective
+          --> root      "North Korean"
+        ;
+      --> i18nName_es
+        -> NlgAdjective
+          --> root      "de la República Popular Democrática de Corea"
+        ;
+      --> i18nName_de
+        -> NlgAdjective
+          --> root      "der Demokratischen Volksrepublik Korea"
+        ;
+    ;
+  --> useArticle_fr  true
+  --> useArticle_en  true
+;

@@ -1,0 +1,80 @@
+LibGeography:Country C_EGY
+  --> iso3166_1_numeric_code  "818"
+  --> iso3166_1_alpha_2       "EG"
+  --> iso3166_1_alpha_3       "EGY"
+  --> label
+    -> MultilingualText
+      --> i18nName_fr
+        -> NlgSubstantive
+          --> root    "Égypte"
+          --> plural  "Égypte"
+          --> gender  FEMININE
+          --> number  SINGULAR
+        ;
+      --> i18nName_en
+        -> NlgSubstantive
+          --> root    "Egypt"
+          --> plural  "Egypt"
+          --> gender  INANIMATE
+          --> number  SINGULAR
+        ;
+      --> i18nName_es
+        -> NlgSubstantive
+          --> root    "Egipto"
+          --> plural  "Egipto"
+          --> gender  FEMININE
+          --> number  SINGULAR
+        ;
+      --> i18nName_de
+        -> NlgSubstantive
+          --> root    "Ägypten"
+          --> plural  "Ägypten"
+          --> gender  NEUTRAL
+          --> number  SINGULAR
+        ;
+      --> i18nName_ja
+        -> NlgSubstantive
+          --> root    "エジプト"
+          --> plural  "エジプト"
+          --> gender  INANIMATE
+          --> number  SINGULAR
+        ;
+    ;
+  --> demonym
+    -> MultilingualText
+      --> i18nName_fr
+        -> NlgGenderAgreeableSubstantive
+          --> masculine "Égyptien"
+          --> feminine  "Égyptienne"
+        ;
+      --> i18nName_en  "Egyptian"
+      --> i18nName_es  "egipcio"
+      --> i18nName_de
+        -> NlgGenderAgreeableSubstantive
+          --> masculine "Ägypter"
+          --> feminine  "Ägypterin"
+        ;
+    ;
+  --> adjective
+    -> MultilingualText
+      --> i18nName_fr
+        -> NlgAdjective
+          --> root      "égyptien"
+          --> feminine  "égyptienne"
+        ;
+      --> i18nName_en
+        -> NlgAdjective
+          --> root      "Egyptian"
+        ;
+      --> i18nName_es
+        -> NlgAdjective
+          --> root      "egipcio"
+        ;
+      --> i18nName_de
+        -> NlgAdjective
+          --> root      "ägyptisch"
+        ;
+    ;
+  --> useArticle_fr  true
+  --> useArticle_en  false
+;

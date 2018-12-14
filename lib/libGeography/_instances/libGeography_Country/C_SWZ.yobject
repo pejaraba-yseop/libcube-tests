@@ -1,0 +1,76 @@
+LibGeography:Country C_SWZ
+  --> iso3166_1_numeric_code  "748"
+  --> iso3166_1_alpha_2       "SZ"
+  --> iso3166_1_alpha_3       "SWZ"
+  --> label
+    -> MultilingualText
+      --> i18nName_fr
+        -> NlgSubstantive
+          --> root    "Swaziland"
+          --> plural  "Swaziland"
+          --> gender  MASCULINE
+          --> number  SINGULAR
+        ;
+      --> i18nName_en
+        -> NlgSubstantive
+          --> root    "Swaziland"
+          --> plural  "Swaziland"
+          --> gender  INANIMATE
+          --> number  SINGULAR
+        ;
+      --> i18nName_es
+        -> NlgSubstantive
+          --> root    "Suazilandia"
+          --> plural  "Suazilandia"
+          --> gender  FEMININE
+          --> number  SINGULAR
+        ;
+      --> i18nName_de
+        -> NlgSubstantive
+          --> root    "Swasiland"
+          --> plural  "Swasiland"
+          --> gender  NEUTRAL
+          --> number  SINGULAR
+        ;
+      --> i18nName_ja
+        -> NlgSubstantive
+          --> root    "スワジランド"
+          --> plural  "スワジランド"
+          --> gender  INANIMATE
+          --> number  SINGULAR
+        ;
+    ;
+  --> demonym
+    -> MultilingualText
+      --> i18nName_fr
+        -> NlgGenderAgreeableSubstantive
+          --> masculine "Swazi"
+          --> feminine  "Swazie"
+        ;
+      --> i18nName_en  "Swazi"
+      --> i18nName_es  "suazi"
+      --> i18nName_de  "Swasi"
+    ;
+  --> adjective
+    -> MultilingualText
+      --> i18nName_fr
+        -> NlgAdjective
+          --> root      "swazi"
+          --> feminine  "swazie"
+        ;
+      --> i18nName_en
+        -> NlgAdjective
+          --> root      "Swazi"
+        ;
+      --> i18nName_es
+        -> NlgAdjective
+          --> root      "suazi"
+        ;
+      --> i18nName_de
+        -> NlgAdjective
+          --> root      "swasiländisch"
+        ;
+    ;
+  --> useArticle_fr  true
+  --> useArticle_en  false
+;

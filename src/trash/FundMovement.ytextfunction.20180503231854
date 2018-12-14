@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<yseop-yml:ymlTextFunction xmlns:yseop-yml="http://www.yseop.com/yml/storage" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" domainModelVersion="3" identifier="5f1abd61-5f22-4b74-b057-93aa5886c784">
+    <yseop-yml:textGranule domainModelVersion="3" identifier="b70f2f76-aa89-43bb-b4f4-aa193173668f">
+        <yseop-yml:granuleI18nContents>
+            <yseop-yml:granuleUnilingueContent locale="en">
+                <yseop-yml:granuleContent>
+                    <yseop-yml:text>
+\switch(theGeneralData.fundMovement)
+
+    \case(FUND_MOVEMENT_ADVANCED)
+        advanced
+
+    \case(FUND_MOVEMENT_REGRESSED)
+        regressed
+
+    \case(FUND_MOVEMENT_STABLE)
+        remained stable
+
+    \noDefault
+\endSwitch
+
+</yseop-yml:text>
+                    <yseop-yml:inline-assemblies/>
+                    <yseop-yml:inline-dslFunctionCalls/>
+                </yseop-yml:granuleContent>
+            </yseop-yml:granuleUnilingueContent>
+            <yseop-yml:granuleUnilingueContent locale="es">
+                <yseop-yml:granuleContent>
+                    <yseop-yml:text/>
+                    <yseop-yml:inline-assemblies/>
+                    <yseop-yml:inline-dslFunctionCalls/>
+                </yseop-yml:granuleContent>
+            </yseop-yml:granuleUnilingueContent>
+            <yseop-yml:granuleUnilingueContent locale="fr">
+                <yseop-yml:granuleContent>
+                    <yseop-yml:text/>
+                    <yseop-yml:inline-assemblies/>
+                    <yseop-yml:inline-dslFunctionCalls/>
+                </yseop-yml:granuleContent>
+            </yseop-yml:granuleUnilingueContent>
+        </yseop-yml:granuleI18nContents>
+        <yseop-yml:dslCondition/>
+        <yseop-yml:name/>
+        <yseop-yml:creationDate>2018-04-19T17:06:32.201Z</yseop-yml:creationDate>
+        <yseop-yml:properties identifier="125113bd-e5d9-4fa3-ab46-6b69c4cb6630">
+            <yseop-yml:property identifier="125113bd-e5d9-4fa3-ab46-6b69c4cb6630|condition" type="YML_PROPERTY" name="condition"></yseop-yml:property>
+        </yseop-yml:properties>
+    </yseop-yml:textGranule>
+    <yseop-yml:localVariables/>
+    <yseop-yml:advancedContent/>
+    <yseop-yml:ymlParameters/>
+    <yseop-yml:name/>
+    <yseop-yml:properties identifier="7f28b20c-0291-40af-9d65-359c08f9372f">
+        <yseop-yml:property identifier="7f28b20c-0291-40af-9d65-359c08f9372f|dsl" type="YML_PROPERTY" name="dsl">"Fund Movement"</yseop-yml:property>
+    </yseop-yml:properties>
+</yseop-yml:ymlTextFunction>

@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<yseop-yml:ymlTextFunction xmlns:yseop-yml="http://www.yseop.com/yml/storage" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" domainModelVersion="3" identifier="e04a3cc8-e7ea-4e90-adb4-d1aae4557892">
+    <yseop-yml:textGranule domainModelVersion="3" identifier="a93f933f-0be4-490b-af98-9642b077d5c0">
+        <yseop-yml:granuleI18nContents>
+            <yseop-yml:granuleUnilingueContent locale="en">
+                <yseop-yml:granuleContent>
+                    <yseop-yml:text>
+\beginSynonym
+
+    \choice 
+        advance
+
+    \choice 
+        growth
+
+\endSynonym
+
+</yseop-yml:text>
+                    <yseop-yml:inline-assemblies/>
+                    <yseop-yml:inline-dslFunctionCalls/>
+                </yseop-yml:granuleContent>
+            </yseop-yml:granuleUnilingueContent>
+            <yseop-yml:granuleUnilingueContent locale="es">
+                <yseop-yml:granuleContent>
+                    <yseop-yml:text/>
+                    <yseop-yml:inline-assemblies/>
+                    <yseop-yml:inline-dslFunctionCalls/>
+                </yseop-yml:granuleContent>
+            </yseop-yml:granuleUnilingueContent>
+            <yseop-yml:granuleUnilingueContent locale="fr">
+                <yseop-yml:granuleContent>
+                    <yseop-yml:text/>
+                    <yseop-yml:inline-assemblies/>
+                    <yseop-yml:inline-dslFunctionCalls/>
+                </yseop-yml:granuleContent>
+            </yseop-yml:granuleUnilingueContent>
+        </yseop-yml:granuleI18nContents>
+        <yseop-yml:dslCondition/>
+        <yseop-yml:name/>
+        <yseop-yml:creationDate>2018-04-30T15:13:32.674Z</yseop-yml:creationDate>
+        <yseop-yml:properties identifier="0ad369f3-62a5-4a13-a818-74d45bb83efd">
+            <yseop-yml:property identifier="0ad369f3-62a5-4a13-a818-74d45bb83efd|condition" type="YML_PROPERTY" name="condition"></yseop-yml:property>
+        </yseop-yml:properties>
+    </yseop-yml:textGranule>
+    <yseop-yml:localVariables/>
+    <yseop-yml:advancedContent/>
+    <yseop-yml:ymlParameters/>
+    <yseop-yml:name/>
+    <yseop-yml:properties identifier="69be5684-2504-421a-81bc-9657136b9c5f">
+        <yseop-yml:property identifier="69be5684-2504-421a-81bc-9657136b9c5f|dsl" type="YML_PROPERTY" name="dsl">"Advance Synonym"</yseop-yml:property>
+    </yseop-yml:properties>
+</yseop-yml:ymlTextFunction>

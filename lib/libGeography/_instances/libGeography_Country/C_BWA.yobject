@@ -1,0 +1,80 @@
+LibGeography:Country C_BWA
+  --> iso3166_1_numeric_code  "072"
+  --> iso3166_1_alpha_2       "BW"
+  --> iso3166_1_alpha_3       "BWA"
+  --> label
+    -> MultilingualText
+      --> i18nName_fr
+        -> NlgSubstantive
+          --> root    "Botswana"
+          --> plural  "Botswana"
+          --> gender  MASCULINE
+          --> number  SINGULAR
+        ;
+      --> i18nName_en
+        -> NlgSubstantive
+          --> root    "Botswana"
+          --> plural  "Botswana"
+          --> gender  INANIMATE
+          --> number  SINGULAR
+        ;
+      --> i18nName_es
+        -> NlgSubstantive
+          --> root    "Botsuana"
+          --> plural  "Botsuana"
+          --> gender  MASCULINE
+          --> number  SINGULAR
+        ;
+      --> i18nName_de
+        -> NlgSubstantive
+          --> root    "Botsuana"
+          --> plural  "Botsuana"
+          --> gender  NEUTRAL
+          --> number  SINGULAR
+        ;
+      --> i18nName_ja
+        -> NlgSubstantive
+          --> root    "ボツワナ"
+          --> plural  "ボツワナ"
+          --> gender  INANIMATE
+          --> number  SINGULAR
+        ;
+    ;
+  --> demonym
+    -> MultilingualText
+      --> i18nName_fr
+        -> NlgGenderAgreeableSubstantive
+          --> masculine "Botswanais"
+          --> feminine  "Botswanaise"
+        ;
+      --> i18nName_en  "Botswanan"
+      --> i18nName_es  "botsuano"
+      --> i18nName_de
+        -> NlgGenderAgreeableSubstantive
+          --> masculine "Botsuaner"
+          --> feminine  "Botsuanerin"
+        ;
+    ;
+  --> adjective
+    -> MultilingualText
+      --> i18nName_fr
+        -> NlgAdjective
+          --> root      "botswanais"
+          --> feminine  "botswanaise"
+        ;
+      --> i18nName_en
+        -> NlgAdjective
+          --> root      "Botswanan"
+        ;
+      --> i18nName_es
+        -> NlgAdjective
+          --> root      "botsuano"
+        ;
+      --> i18nName_de
+        -> NlgAdjective
+          --> root      "botsuanisch"
+        ;
+    ;
+  --> useArticle_fr  true
+  --> useArticle_en  false
+;

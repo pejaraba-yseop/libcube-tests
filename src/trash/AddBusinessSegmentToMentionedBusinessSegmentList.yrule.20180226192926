@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<yseop-yml:ymlRule xmlns:yseop-yml="http://www.yseop.com/yml/storage" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" domainModelVersion="3" identifier="72d0f4e8-42ed-42f3-ac91-f2fabc333e73">
+    <yseop-yml:content>getGeneralData().businessSegmentOrderedList.add(?businessSegment);</yseop-yml:content>
+    <yseop-yml:content>?businessSegmentMarket in BusinessSegmentMarket
+
+?businessSegment in ?businessSegmentMarket.countryBusinessSegmentList
+?businessSegmentMarket.countryNameBusinessSegment.stringCompare(getGeneralData().insurerRequested, _CASE_INSENSITIVE) == true &amp;&amp; (?businessSegment.businessSegmentPercent != null &amp;&amp; (?businessSegment.businessSegmentPercent > 0.1 || ?businessSegment.businessSegmentRanking &lt; 10))</yseop-yml:content>
+    <yseop-yml:name>AddBuisnessSegmentToList</yseop-yml:name>
+    <yseop-yml:properties identifier="be5633b7-7be9-419f-9583-2373b0ad2f8e">
+        <yseop-yml:property identifier="be5633b7-7be9-419f-9583-2373b0ad2f8e|dsl" type="YML_PROPERTY" name="dsl">"Add Business Segment to Mentioned Business Segment List"</yseop-yml:property>
+        <yseop-yml:property identifier="be5633b7-7be9-419f-9583-2373b0ad2f8e|disabled" type="GENERATION_PROPERTY" name="disabled">false</yseop-yml:property>
+    </yseop-yml:properties>
+</yseop-yml:ymlRule>

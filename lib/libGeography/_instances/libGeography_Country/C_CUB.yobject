@@ -1,0 +1,80 @@
+LibGeography:Country C_CUB
+  --> iso3166_1_numeric_code  "192"
+  --> iso3166_1_alpha_2       "CU"
+  --> iso3166_1_alpha_3       "CUB"
+  --> label
+    -> MultilingualText
+      --> i18nName_fr
+        -> NlgSubstantive
+          --> root    "Cuba"
+          --> plural  "Cuba"
+          --> gender  MASCULINE
+          --> number  SINGULAR
+        ;
+      --> i18nName_en
+        -> NlgSubstantive
+          --> root    "Cuba"
+          --> plural  "Cuba"
+          --> gender  INANIMATE
+          --> number  SINGULAR
+        ;
+      --> i18nName_es
+        -> NlgSubstantive
+          --> root    "Cuba"
+          --> plural  "Cuba"
+          --> gender  MASCULINE
+          --> number  SINGULAR
+        ;
+      --> i18nName_de
+        -> NlgSubstantive
+          --> root    "Kuba"
+          --> plural  "Kuba"
+          --> gender  NEUTRAL
+          --> number  SINGULAR
+        ;
+      --> i18nName_ja
+        -> NlgSubstantive
+          --> root    "キューバ"
+          --> plural  "キューバ"
+          --> gender  INANIMATE
+          --> number  SINGULAR
+        ;
+    ;
+  --> demonym
+    -> MultilingualText
+      --> i18nName_fr
+        -> NlgGenderAgreeableSubstantive
+          --> masculine "Cubain"
+          --> feminine  "Cubaine"
+        ;
+      --> i18nName_en  "Cuban"
+      --> i18nName_es  "cubano"
+      --> i18nName_de
+        -> NlgGenderAgreeableSubstantive
+          --> masculine "Kubaner"
+          --> feminine  "Kubanerin"
+        ;
+    ;
+  --> adjective
+    -> MultilingualText
+      --> i18nName_fr
+        -> NlgAdjective
+          --> root      "cubain"
+          --> feminine  "cubaine"
+        ;
+      --> i18nName_en
+        -> NlgAdjective
+          --> root      "Cuban"
+        ;
+      --> i18nName_es
+        -> NlgAdjective
+          --> root      "cubano"
+        ;
+      --> i18nName_de
+        -> NlgAdjective
+          --> root      "kubanisch"
+        ;
+    ;
+  --> useArticle_fr  false
+  --> useArticle_en  false
+;

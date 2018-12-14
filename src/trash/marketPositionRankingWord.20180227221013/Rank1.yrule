@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<yseop-yml:ymlRule xmlns:yseop-yml="http://www.yseop.com/yml/storage" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" domainModelVersion="3" identifier="d4db6307-c185-4406-84dc-cf0e1f54036a">
+    <yseop-yml:content>?marketPositionItem.marketPositionRankWord = "first";</yseop-yml:content>
+    <yseop-yml:content>?marketPositionItem in MarketPositionItem
+?marketPositionItem.marketPositionRank == 1</yseop-yml:content>
+    <yseop-yml:name>Rank1</yseop-yml:name>
+    <yseop-yml:properties identifier="9a68b96b-72c9-48c6-aa25-13212751cc8b">
+        <yseop-yml:property identifier="9a68b96b-72c9-48c6-aa25-13212751cc8b|dsl" type="YML_PROPERTY" name="dsl">"Market Position Rank 1"</yseop-yml:property>
+        <yseop-yml:property identifier="9a68b96b-72c9-48c6-aa25-13212751cc8b|disabled" type="GENERATION_PROPERTY" name="disabled">true</yseop-yml:property>
+    </yseop-yml:properties>
+</yseop-yml:ymlRule>

@@ -1,0 +1,80 @@
+LibGeography:Country C_GAB
+  --> iso3166_1_numeric_code  "266"
+  --> iso3166_1_alpha_2       "GA"
+  --> iso3166_1_alpha_3       "GAB"
+  --> label
+    -> MultilingualText
+      --> i18nName_fr
+        -> NlgSubstantive
+          --> root    "Gabon"
+          --> plural  "Gabon"
+          --> gender  MASCULINE
+          --> number  SINGULAR
+        ;
+      --> i18nName_en
+        -> NlgSubstantive
+          --> root    "Gabon"
+          --> plural  "Gabon"
+          --> gender  INANIMATE
+          --> number  SINGULAR
+        ;
+      --> i18nName_es
+        -> NlgSubstantive
+          --> root    "Gabón"
+          --> plural  "Gabón"
+          --> gender  MASCULINE
+          --> number  SINGULAR
+        ;
+      --> i18nName_de
+        -> NlgSubstantive
+          --> root    "Gabun"
+          --> plural  "Gabun"
+          --> gender  NEUTRAL
+          --> number  SINGULAR
+        ;
+      --> i18nName_ja
+        -> NlgSubstantive
+          --> root    "ガボン"
+          --> plural  "ガボン"
+          --> gender  INANIMATE
+          --> number  SINGULAR
+        ;
+    ;
+  --> demonym
+    -> MultilingualText
+      --> i18nName_fr
+        -> NlgGenderAgreeableSubstantive
+          --> masculine "Gabonais"
+          --> feminine  "Gabonaise"
+        ;
+      --> i18nName_en  "Gabonese"
+      --> i18nName_es  "gabonés"
+      --> i18nName_de
+        -> NlgGenderAgreeableSubstantive
+          --> masculine "Gabuner"
+          --> feminine  "Gabunerin"
+        ;
+    ;
+  --> adjective
+    -> MultilingualText
+      --> i18nName_fr
+        -> NlgAdjective
+          --> root      "gabonais"
+          --> feminine  "gabonaise"
+        ;
+      --> i18nName_en
+        -> NlgAdjective
+          --> root      "Gabonese"
+        ;
+      --> i18nName_es
+        -> NlgAdjective
+          --> root      "gabonés"
+        ;
+      --> i18nName_de
+        -> NlgAdjective
+          --> root      "gabunisch"
+        ;
+    ;
+  --> useArticle_fr  true
+  --> useArticle_en  false
+;

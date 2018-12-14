@@ -1,0 +1,80 @@
+LibGeography:Country C_EST
+  --> iso3166_1_numeric_code  "233"
+  --> iso3166_1_alpha_2       "EE"
+  --> iso3166_1_alpha_3       "EST"
+  --> label
+    -> MultilingualText
+      --> i18nName_fr
+        -> NlgSubstantive
+          --> root    "Estonie"
+          --> plural  "Estonie"
+          --> gender  FEMININE
+          --> number  SINGULAR
+        ;
+      --> i18nName_en
+        -> NlgSubstantive
+          --> root    "Estonia"
+          --> plural  "Estonia"
+          --> gender  INANIMATE
+          --> number  SINGULAR
+        ;
+      --> i18nName_es
+        -> NlgSubstantive
+          --> root    "Estonia"
+          --> plural  "Estonia"
+          --> gender  FEMININE
+          --> number  SINGULAR
+        ;
+      --> i18nName_de
+        -> NlgSubstantive
+          --> root    "Estland"
+          --> plural  "Estland"
+          --> gender  NEUTRAL
+          --> number  SINGULAR
+        ;
+      --> i18nName_ja
+        -> NlgSubstantive
+          --> root    "エストニア"
+          --> plural  "エストニア"
+          --> gender  INANIMATE
+          --> number  SINGULAR
+        ;
+    ;
+  --> demonym
+    -> MultilingualText
+      --> i18nName_fr
+        -> NlgGenderAgreeableSubstantive
+          --> masculine "Estonien"
+          --> feminine  "Estonienne"
+        ;
+      --> i18nName_en  "Estonian"
+      --> i18nName_es  "estonio"
+      --> i18nName_de
+        -> NlgGenderAgreeableSubstantive
+          --> masculine "Este"
+          --> feminine  "Estin"
+        ;
+    ;
+  --> adjective
+    -> MultilingualText
+      --> i18nName_fr
+        -> NlgAdjective
+          --> root      "estonien"
+          --> feminine  "estonienne"
+        ;
+      --> i18nName_en
+        -> NlgAdjective
+          --> root      "Estonian"
+        ;
+      --> i18nName_es
+        -> NlgAdjective
+          --> root      "estonio"
+        ;
+      --> i18nName_de
+        -> NlgAdjective
+          --> root      "estnisch"
+        ;
+    ;
+  --> useArticle_fr  true
+  --> useArticle_en  false
+;

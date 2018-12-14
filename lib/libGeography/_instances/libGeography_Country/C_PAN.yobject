@@ -1,0 +1,80 @@
+LibGeography:Country C_PAN
+  --> iso3166_1_numeric_code  "591"
+  --> iso3166_1_alpha_2       "PA"
+  --> iso3166_1_alpha_3       "PAN"
+  --> label
+    -> MultilingualText
+      --> i18nName_fr
+        -> NlgSubstantive
+          --> root    "Panama"
+          --> plural  "Panama"
+          --> gender  MASCULINE
+          --> number  SINGULAR
+        ;
+      --> i18nName_en
+        -> NlgSubstantive
+          --> root    "Panama"
+          --> plural  "Panama"
+          --> gender  INANIMATE
+          --> number  SINGULAR
+        ;
+      --> i18nName_es
+        -> NlgSubstantive
+          --> root    "Panamá"
+          --> plural  "Panamá"
+          --> gender  MASCULINE
+          --> number  SINGULAR
+        ;
+      --> i18nName_de
+        -> NlgSubstantive
+          --> root    "Panama"
+          --> plural  "Panama"
+          --> gender  NEUTRAL
+          --> number  SINGULAR
+        ;
+      --> i18nName_ja
+        -> NlgSubstantive
+          --> root    "パナマ"
+          --> plural  "パナマ"
+          --> gender  INANIMATE
+          --> number  SINGULAR
+        ;
+    ;
+  --> demonym
+    -> MultilingualText
+      --> i18nName_fr
+        -> NlgGenderAgreeableSubstantive
+          --> masculine "Panaméen"
+          --> feminine  "Panaméenne"
+        ;
+      --> i18nName_en  "Panamanian"
+      --> i18nName_es  "panameño"
+      --> i18nName_de
+        -> NlgGenderAgreeableSubstantive
+          --> masculine "Panamaer"
+          --> feminine  "Panamaerin"
+        ;
+    ;
+  --> adjective
+    -> MultilingualText
+      --> i18nName_fr
+        -> NlgAdjective
+          --> root      "panaméen"
+          --> feminine  "panaméenne"
+        ;
+      --> i18nName_en
+        -> NlgAdjective
+          --> root      "Panamanian"
+        ;
+      --> i18nName_es
+        -> NlgAdjective
+          --> root      "panameño"
+        ;
+      --> i18nName_de
+        -> NlgAdjective
+          --> root      "panamaisch"
+        ;
+    ;
+  --> useArticle_fr  true
+  --> useArticle_en  false
+;

@@ -1,0 +1,80 @@
+LibGeography:Country C_IRN
+  --> iso3166_1_numeric_code  "364"
+  --> iso3166_1_alpha_2       "IR"
+  --> iso3166_1_alpha_3       "IRN"
+  --> label
+    -> MultilingualText
+      --> i18nName_fr
+        -> NlgSubstantive
+          --> root    "Iran"
+          --> plural  "Iran"
+          --> gender  MASCULINE
+          --> number  SINGULAR
+        ;
+      --> i18nName_en
+        -> NlgSubstantive
+          --> root    "Iran"
+          --> plural  "Iran"
+          --> gender  INANIMATE
+          --> number  SINGULAR
+        ;
+      --> i18nName_es
+        -> NlgSubstantive
+          --> root    "Irán"
+          --> plural  "Irán"
+          --> gender  MASCULINE
+          --> number  SINGULAR
+        ;
+      --> i18nName_de
+        -> NlgSubstantive
+          --> root    "Iran"
+          --> plural  "Iran"
+          --> gender  NEUTRAL
+          --> number  SINGULAR
+        ;
+      --> i18nName_ja
+        -> NlgSubstantive
+          --> root    "イラン"
+          --> plural  "イラン"
+          --> gender  INANIMATE
+          --> number  SINGULAR
+        ;
+    ;
+  --> demonym
+    -> MultilingualText
+      --> i18nName_fr
+        -> NlgGenderAgreeableSubstantive
+          --> masculine "Iranien"
+          --> feminine  "Iranienne"
+        ;
+      --> i18nName_en  "Iranian"
+      --> i18nName_es  "iraní"
+      --> i18nName_de
+        -> NlgGenderAgreeableSubstantive
+          --> masculine "Iraner"
+          --> feminine  "Iranerin"
+        ;
+    ;
+  --> adjective
+    -> MultilingualText
+      --> i18nName_fr
+        -> NlgAdjective
+          --> root      "iranien"
+          --> feminine  "iranienne"
+        ;
+      --> i18nName_en
+        -> NlgAdjective
+          --> root      "Iranian"
+        ;
+      --> i18nName_es
+        -> NlgAdjective
+          --> root      "iraní"
+        ;
+      --> i18nName_de
+        -> NlgAdjective
+          --> root      "iranisch"
+        ;
+    ;
+  --> useArticle_fr  true
+  --> useArticle_en  false
+;

@@ -1,0 +1,15 @@
+{
+  "displayName_en" : "LibCube Basic Example",
+  "displayName_fr" : "LibCube Basic Example",
+  "description_fr" : "LibCube Basic Example",
+  "description_en" : "LibCube Basic Example",
+  "name" : "LibCubeBasicExample",
+  "date" : "2018-05-14",
+  "creator" : "tomcat",
+  "version" : "1.0.0",
+  "engineVersionCompatible" : "7.0.0",
+  "dependencies" : [ ],
+  "simpleCustomSections" : [ ],
+  "complexCustomSections" : [ ],
+  "instanceEditorClasses" : [ ]
+}

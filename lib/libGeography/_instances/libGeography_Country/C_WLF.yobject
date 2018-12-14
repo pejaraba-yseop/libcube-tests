@@ -1,0 +1,71 @@
+LibGeography:Country C_WLF
+  --> iso3166_1_numeric_code  "876"
+  --> iso3166_1_alpha_2       "WF"
+  --> iso3166_1_alpha_3       "WLF"
+  --> label
+    -> MultilingualText
+      --> i18nName_fr
+        -> NlgSubstantive
+          --> root    "Wallis-et-Futuna"
+          --> plural  "Wallis-et-Futuna"
+          --> gender  FEMININE
+          --> number  PLURAL
+        ;
+      --> i18nName_en
+        -> NlgSubstantive
+          --> root    "Wallis and Futuna"
+          --> plural  "Wallis and Futuna"
+          --> gender  INANIMATE
+          --> number  PLURAL
+        ;
+      --> i18nName_es
+        -> NlgSubstantive
+          --> root    "Wallis y Futuna"
+          --> plural  "Wallis y Futuna"
+          --> gender  FEMININE
+          --> number  PLURAL
+        ;
+      --> i18nName_de
+        -> NlgSubstantive
+          --> root    "Wallis und Futuna"
+          --> plural  "Wallis und Futuna"
+          --> gender  NEUTRAL
+          --> number  PLURAL
+        ;
+      --> i18nName_ja
+        -> NlgSubstantive
+          --> root    "ウォリスとフツナ"
+          --> plural  "ウォリスとフツナ"
+          --> gender  INANIMATE
+          --> number  PLURAL
+        ;
+    ;
+  --> demonym
+    -> MultilingualText
+      --> i18nName_fr  "de Wallis-et-Futuna"
+      --> i18nName_en  "Wallisian; Futunan; Wallis and Futuna Islander"
+      --> i18nName_es  "de Wallis y Futuna"
+      --> i18nName_de  "von Wallis und Futuna"
+    ;
+  --> adjective
+    -> MultilingualText
+      --> i18nName_fr
+        -> NlgAdjective
+          --> root      "de Wallis-et-Futuna"
+        ;
+      --> i18nName_en
+        -> NlgAdjective
+          --> root      "of the Wallis and Futuna Islands"
+        ;
+      --> i18nName_es
+        -> NlgAdjective
+          --> root      "de Wallis y Futuna"
+        ;
+      --> i18nName_de
+        -> NlgAdjective
+          --> root      "von Wallis und Futuna"
+        ;
+    ;
+  --> useArticle_fr  false
+  --> useArticle_en  false
+;

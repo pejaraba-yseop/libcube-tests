@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<yseop-yml:ymlRule xmlns:yseop-yml="http://www.yseop.com/yml/storage" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" domainModelVersion="3" identifier="7d13172b-0308-4d20-9455-bc4a7f6a7e48">
+    <yseop-yml:content>getGeneralData().standardDeviationPeerList = getGeneralData().stdDeviationExpenseRatioPeerList();</yseop-yml:content>
+    <yseop-yml:content/>
+    <yseop-yml:name>standardDeviationOfPeerList</yseop-yml:name>
+    <yseop-yml:properties identifier="46110bd0-5744-45f2-a90e-54dc01a15d4a">
+        <yseop-yml:property identifier="46110bd0-5744-45f2-a90e-54dc01a15d4a|dsl" type="YML_PROPERTY" name="dsl">"standard deviation of peer list"</yseop-yml:property>
+        <yseop-yml:property identifier="46110bd0-5744-45f2-a90e-54dc01a15d4a|disabled" type="GENERATION_PROPERTY" name="disabled">true</yseop-yml:property>
+    </yseop-yml:properties>
+</yseop-yml:ymlRule>

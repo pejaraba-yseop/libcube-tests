@@ -1,0 +1,80 @@
+LibGeography:Country C_DZA
+  --> iso3166_1_numeric_code  "012"
+  --> iso3166_1_alpha_2       "DZ"
+  --> iso3166_1_alpha_3       "DZA"
+  --> label
+    -> MultilingualText
+      --> i18nName_fr
+        -> NlgSubstantive
+          --> root    "Algérie"
+          --> plural  "Algérie"
+          --> gender  FEMININE
+          --> number  SINGULAR
+        ;
+      --> i18nName_en
+        -> NlgSubstantive
+          --> root    "Algeria"
+          --> plural  "Algeria"
+          --> gender  INANIMATE
+          --> number  SINGULAR
+        ;
+      --> i18nName_es
+        -> NlgSubstantive
+          --> root    "Argelia"
+          --> plural  "Argelia"
+          --> gender  FEMININE
+          --> number  SINGULAR
+        ;
+      --> i18nName_de
+        -> NlgSubstantive
+          --> root    "Algerien"
+          --> plural  "Algerien"
+          --> gender  NEUTRAL
+          --> number  SINGULAR
+        ;
+      --> i18nName_ja
+        -> NlgSubstantive
+          --> root    "アルジェリア"
+          --> plural  "アルジェリア"
+          --> gender  INANIMATE
+          --> number  SINGULAR
+        ;
+    ;
+  --> demonym
+    -> MultilingualText
+      --> i18nName_fr
+        -> NlgGenderAgreeableSubstantive
+          --> masculine "Algérien"
+          --> feminine  "Algérienne"
+        ;
+      --> i18nName_en  "Algerian"
+      --> i18nName_es  "argelino"
+      --> i18nName_de
+        -> NlgGenderAgreeableSubstantive
+          --> masculine "Algerier"
+          --> feminine  "Algerierin"
+        ;
+    ;
+  --> adjective
+    -> MultilingualText
+      --> i18nName_fr
+        -> NlgAdjective
+          --> root      "algérien"
+          --> feminine  "algérienne"
+        ;
+      --> i18nName_en
+        -> NlgAdjective
+          --> root      "Algerian"
+        ;
+      --> i18nName_es
+        -> NlgAdjective
+          --> root      "argelino"
+        ;
+      --> i18nName_de
+        -> NlgAdjective
+          --> root      "algerisch"
+        ;
+    ;
+  --> useArticle_fr  true
+  --> useArticle_en  false
+;

@@ -1,0 +1,80 @@
+LibGeography:Country C_URY
+  --> iso3166_1_numeric_code  "858"
+  --> iso3166_1_alpha_2       "UY"
+  --> iso3166_1_alpha_3       "URY"
+  --> label
+    -> MultilingualText
+      --> i18nName_fr
+        -> NlgSubstantive
+          --> root    "Uruguay"
+          --> plural  "Uruguay"
+          --> gender  MASCULINE
+          --> number  SINGULAR
+        ;
+      --> i18nName_en
+        -> NlgSubstantive
+          --> root    "Uruguay"
+          --> plural  "Uruguay"
+          --> gender  INANIMATE
+          --> number  SINGULAR
+        ;
+      --> i18nName_es
+        -> NlgSubstantive
+          --> root    "Uruguay"
+          --> plural  "Uruguay"
+          --> gender  MASCULINE
+          --> number  SINGULAR
+        ;
+      --> i18nName_de
+        -> NlgSubstantive
+          --> root    "Uruguay"
+          --> plural  "Uruguay"
+          --> gender  NEUTRAL
+          --> number  SINGULAR
+        ;
+      --> i18nName_ja
+        -> NlgSubstantive
+          --> root    "ウルグアイ"
+          --> plural  "ウルグアイ"
+          --> gender  INANIMATE
+          --> number  SINGULAR
+        ;
+    ;
+  --> demonym
+    -> MultilingualText
+      --> i18nName_fr
+        -> NlgGenderAgreeableSubstantive
+          --> masculine "Uruguayen"
+          --> feminine  "Uruguayenne"
+        ;
+      --> i18nName_en  "Uruguayan"
+      --> i18nName_es  "uruguayo"
+      --> i18nName_de
+        -> NlgGenderAgreeableSubstantive
+          --> masculine "Uruguayer"
+          --> feminine  "Uruguayerin"
+        ;
+    ;
+  --> adjective
+    -> MultilingualText
+      --> i18nName_fr
+        -> NlgAdjective
+          --> root      "uruguayen"
+          --> feminine  "uruguayenne"
+        ;
+      --> i18nName_en
+        -> NlgAdjective
+          --> root      "Uruguayan"
+        ;
+      --> i18nName_es
+        -> NlgAdjective
+          --> root      "uruguayo"
+        ;
+      --> i18nName_de
+        -> NlgAdjective
+          --> root      "uruguayisch"
+        ;
+    ;
+  --> useArticle_fr  true
+  --> useArticle_en  false
+;

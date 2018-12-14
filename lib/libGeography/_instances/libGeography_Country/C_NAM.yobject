@@ -1,0 +1,80 @@
+LibGeography:Country C_NAM
+  --> iso3166_1_numeric_code  "516"
+  --> iso3166_1_alpha_2       "NA"
+  --> iso3166_1_alpha_3       "NAM"
+  --> label
+    -> MultilingualText
+      --> i18nName_fr
+        -> NlgSubstantive
+          --> root    "Namibie"
+          --> plural  "Namibie"
+          --> gender  FEMININE
+          --> number  SINGULAR
+        ;
+      --> i18nName_en
+        -> NlgSubstantive
+          --> root    "Namibia"
+          --> plural  "Namibia"
+          --> gender  INANIMATE
+          --> number  SINGULAR
+        ;
+      --> i18nName_es
+        -> NlgSubstantive
+          --> root    "Namibia"
+          --> plural  "Namibia"
+          --> gender  FEMININE
+          --> number  SINGULAR
+        ;
+      --> i18nName_de
+        -> NlgSubstantive
+          --> root    "Namibia"
+          --> plural  "Namibia"
+          --> gender  NEUTRAL
+          --> number  SINGULAR
+        ;
+      --> i18nName_ja
+        -> NlgSubstantive
+          --> root    "ナミビア"
+          --> plural  "ナミビア"
+          --> gender  INANIMATE
+          --> number  SINGULAR
+        ;
+    ;
+  --> demonym
+    -> MultilingualText
+      --> i18nName_fr
+        -> NlgGenderAgreeableSubstantive
+          --> masculine "Namibien"
+          --> feminine  "Namibienne"
+        ;
+      --> i18nName_en  "Namibian"
+      --> i18nName_es  "namibio"
+      --> i18nName_de
+        -> NlgGenderAgreeableSubstantive
+          --> masculine "Namibier"
+          --> feminine  "Namibierin"
+        ;
+    ;
+  --> adjective
+    -> MultilingualText
+      --> i18nName_fr
+        -> NlgAdjective
+          --> root      "namibien"
+          --> feminine  "namibienne"
+        ;
+      --> i18nName_en
+        -> NlgAdjective
+          --> root      "Namibian"
+        ;
+      --> i18nName_es
+        -> NlgAdjective
+          --> root      "namibio"
+        ;
+      --> i18nName_de
+        -> NlgAdjective
+          --> root      "namibisch"
+        ;
+    ;
+  --> useArticle_fr  true
+  --> useArticle_en  false
+;

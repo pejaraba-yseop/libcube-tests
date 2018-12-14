@@ -1,0 +1,66 @@
+LibGeography:Country C_CPT
+  --> iso3166_1_numeric_code  "---"
+  --> iso3166_1_alpha_2       "CP"
+  --> iso3166_1_alpha_3       "CPT"
+  --> label
+    -> MultilingualText
+      --> i18nName_fr
+        -> NlgSubstantive
+          --> root    "l’Île Clipperton"
+          --> plural  "l’Île Clipperton"
+          --> gender  FEMININE
+          --> number  SINGULAR
+        ;
+      --> i18nName_en
+        -> NlgSubstantive
+          --> root    "Clipperton"
+          --> plural  "Clipperton"
+          --> gender  INANIMATE
+          --> number  SINGULAR
+        ;
+      --> i18nName_es
+        -> NlgSubstantive
+          --> root    "Isla Clipperton"
+          --> plural  "Isla Clipperton"
+          --> gender  FEMININE
+          --> number  SINGULAR
+        ;
+      --> i18nName_de
+        -> NlgSubstantive
+          --> root    "Clipperton"
+          --> plural  "Clipperton"
+          --> gender  NEUTRAL
+          --> number  SINGULAR
+        ;
+      --> i18nName_ja
+        -> NlgSubstantive
+          --> root    "クリッパートン"
+          --> plural  "クリッパートン"
+          --> gender  INANIMATE
+          --> number  SINGULAR
+        ;
+    ;
+  --> demonym
+    -> MultilingualText
+    ;
+  --> adjective
+    -> MultilingualText
+      --> i18nName_fr
+        -> NlgAdjective
+          --> root      "de Clipperton"
+        ;
+      --> i18nName_en
+        -> NlgAdjective
+          --> root      "of Clipperton Island"
+        ;
+      --> i18nName_es
+        -> NlgAdjective
+          --> root      "de la Isla Clipperton"
+        ;
+      --> i18nName_de
+        -> NlgAdjective
+          --> root      "von Clipperton"
+        ;
+    ;
+  --> useArticle_en  false
+;

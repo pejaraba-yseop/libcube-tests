@@ -1,0 +1,76 @@
+LibGeography:Country C_SPM
+  --> iso3166_1_numeric_code  "666"
+  --> iso3166_1_alpha_2       "PM"
+  --> iso3166_1_alpha_3       "SPM"
+  --> label
+    -> MultilingualText
+      --> i18nName_fr
+        -> NlgSubstantive
+          --> root    "Saint-Pierre-et-Miquelon"
+          --> plural  "Saint-Pierre-et-Miquelon"
+          --> gender  MASCULINE
+          --> number  SINGULAR
+        ;
+      --> i18nName_en
+        -> NlgSubstantive
+          --> root    "Saint Pierre and Miquelon"
+          --> plural  "Saint Pierre and Miquelon"
+          --> gender  INANIMATE
+          --> number  SINGULAR
+        ;
+      --> i18nName_es
+        -> NlgSubstantive
+          --> root    "San Pedro y Miquelón"
+          --> plural  "San Pedro y Miquelón"
+          --> gender  MASCULINE
+          --> number  SINGULAR
+        ;
+      --> i18nName_de
+        -> NlgSubstantive
+          --> root    "St. Pierre und Miquelon"
+          --> plural  "St. Pierre und Miquelon"
+          --> gender  NEUTRAL
+          --> number  SINGULAR
+        ;
+      --> i18nName_ja
+        -> NlgSubstantive
+          --> root    "サンピエール島・ミクロン島"
+          --> plural  "サンピエール島・ミクロン島"
+          --> gender  INANIMATE
+          --> number  SINGULAR
+        ;
+    ;
+  --> demonym
+    -> MultilingualText
+      --> i18nName_fr
+        -> NlgGenderAgreeableSubstantive
+          --> masculine "Saint-Pierrais et Miquelonnais"
+          --> feminine  "Saint-Pierrais et Miquelonnaise"
+        ;
+      --> i18nName_en  "St-Pierrais; Miquelonnais"
+      --> i18nName_es  "de San Pedro y Miquelón"
+      --> i18nName_de  "von St. Pierre und Miquelon"
+    ;
+  --> adjective
+    -> MultilingualText
+      --> i18nName_fr
+        -> NlgAdjective
+          --> root      "saint-pierrais et miquelonnais"
+          --> feminine  "saint-pierrais et miquelonnaise"
+        ;
+      --> i18nName_en
+        -> NlgAdjective
+          --> root      "of Saint Pierre and Miquelon"
+        ;
+      --> i18nName_es
+        -> NlgAdjective
+          --> root      "de San Pedro y Miquelón"
+        ;
+      --> i18nName_de
+        -> NlgAdjective
+          --> root      "von St. Pierre und Miquelon"
+        ;
+    ;
+  --> useArticle_fr  false
+  --> useArticle_en  false
+;

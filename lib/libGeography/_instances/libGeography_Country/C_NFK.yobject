@@ -1,0 +1,71 @@
+LibGeography:Country C_NFK
+  --> iso3166_1_numeric_code  "574"
+  --> iso3166_1_alpha_2       "NF"
+  --> iso3166_1_alpha_3       "NFK"
+  --> label
+    -> MultilingualText
+      --> i18nName_fr
+        -> NlgSubstantive
+          --> root    "Île Norfolk"
+          --> plural  "Île Norfolk"
+          --> gender  FEMININE
+          --> number  SINGULAR
+        ;
+      --> i18nName_en
+        -> NlgSubstantive
+          --> root    "Norfolk Island"
+          --> plural  "Norfolk Island"
+          --> gender  INANIMATE
+          --> number  SINGULAR
+        ;
+      --> i18nName_es
+        -> NlgSubstantive
+          --> root    "Isla Norfolk"
+          --> plural  "Isla Norfolk"
+          --> gender  FEMININE
+          --> number  SINGULAR
+        ;
+      --> i18nName_de
+        -> NlgSubstantive
+          --> root    "Norfolkinsel"
+          --> plural  "Norfolkinsel"
+          --> gender  NEUTRAL
+          --> number  SINGULAR
+        ;
+      --> i18nName_ja
+        -> NlgSubstantive
+          --> root    "ノーフォーク島"
+          --> plural  "ノーフォーク島"
+          --> gender  INANIMATE
+          --> number  SINGULAR
+        ;
+    ;
+  --> demonym
+    -> MultilingualText
+      --> i18nName_fr  "de l’Île Norfolk"
+      --> i18nName_en  "Norfolk Islander"
+      --> i18nName_es  "de la Isla Norfolk"
+      --> i18nName_de  "der Norfolkinsel"
+    ;
+  --> adjective
+    -> MultilingualText
+      --> i18nName_fr
+        -> NlgAdjective
+          --> root      "de l’Île Norfolk"
+        ;
+      --> i18nName_en
+        -> NlgAdjective
+          --> root      "of Norfolk Island"
+        ;
+      --> i18nName_es
+        -> NlgAdjective
+          --> root      "de la Isla Norfolk"
+        ;
+      --> i18nName_de
+        -> NlgAdjective
+          --> root      "der Norfolkinsel"
+        ;
+    ;
+  --> useArticle_fr  true
+  --> useArticle_en  false
+;

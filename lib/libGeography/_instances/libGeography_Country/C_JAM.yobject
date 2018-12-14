@@ -1,0 +1,80 @@
+LibGeography:Country C_JAM
+  --> iso3166_1_numeric_code  "388"
+  --> iso3166_1_alpha_2       "JM"
+  --> iso3166_1_alpha_3       "JAM"
+  --> label
+    -> MultilingualText
+      --> i18nName_fr
+        -> NlgSubstantive
+          --> root    "Jamaïque"
+          --> plural  "Jamaïque"
+          --> gender  FEMININE
+          --> number  SINGULAR
+        ;
+      --> i18nName_en
+        -> NlgSubstantive
+          --> root    "Jamaica"
+          --> plural  "Jamaica"
+          --> gender  INANIMATE
+          --> number  SINGULAR
+        ;
+      --> i18nName_es
+        -> NlgSubstantive
+          --> root    "Jamaica"
+          --> plural  "Jamaica"
+          --> gender  FEMININE
+          --> number  SINGULAR
+        ;
+      --> i18nName_de
+        -> NlgSubstantive
+          --> root    "Jamaika"
+          --> plural  "Jamaika"
+          --> gender  NEUTRAL
+          --> number  SINGULAR
+        ;
+      --> i18nName_ja
+        -> NlgSubstantive
+          --> root    "ジャマイカ"
+          --> plural  "ジャマイカ"
+          --> gender  INANIMATE
+          --> number  SINGULAR
+        ;
+    ;
+  --> demonym
+    -> MultilingualText
+      --> i18nName_fr
+        -> NlgGenderAgreeableSubstantive
+          --> masculine "Jamaïcain"
+          --> feminine  "Jamaïcaine"
+        ;
+      --> i18nName_en  "Jamaican"
+      --> i18nName_es  "jamaicano"
+      --> i18nName_de
+        -> NlgGenderAgreeableSubstantive
+          --> masculine "Jamaikaner"
+          --> feminine  "Jamaikanerin"
+        ;
+    ;
+  --> adjective
+    -> MultilingualText
+      --> i18nName_fr
+        -> NlgAdjective
+          --> root      "jamaïcain"
+          --> feminine  "jamaïcaine"
+        ;
+      --> i18nName_en
+        -> NlgAdjective
+          --> root      "Jamaican"
+        ;
+      --> i18nName_es
+        -> NlgAdjective
+          --> root      "jamaicano"
+        ;
+      --> i18nName_de
+        -> NlgAdjective
+          --> root      "jamaikanisch"
+        ;
+    ;
+  --> useArticle_fr  true
+  --> useArticle_en  false
+;

@@ -1,0 +1,75 @@
+LibGeography:Country C_BRN
+  --> iso3166_1_numeric_code  "096"
+  --> iso3166_1_alpha_2       "BN"
+  --> iso3166_1_alpha_3       "BRN"
+  --> label
+    -> MultilingualText
+      --> i18nName_fr
+        -> NlgSubstantive
+          --> root    "Brunei"
+          --> plural  "Brunei"
+          --> gender  MASCULINE
+          --> number  SINGULAR
+        ;
+      --> i18nName_en
+        -> NlgSubstantive
+          --> root    "Brunei Darussalam"
+          --> plural  "Brunei Darussalam"
+          --> gender  INANIMATE
+          --> number  SINGULAR
+        ;
+      --> i18nName_es
+        -> NlgSubstantive
+          --> root    "Brunéi"
+          --> plural  "Brunéi"
+          --> gender  MASCULINE
+          --> number  SINGULAR
+        ;
+      --> i18nName_de
+        -> NlgSubstantive
+          --> root    "Brunei"
+          --> plural  "Brunei"
+          --> gender  NEUTRAL
+          --> number  SINGULAR
+        ;
+      --> i18nName_ja
+        -> NlgSubstantive
+          --> root    "ブルネイダルサラーム"
+          --> plural  "ブルネイダルサラーム"
+          --> gender  INANIMATE
+          --> number  SINGULAR
+        ;
+    ;
+  --> demonym
+    -> MultilingualText
+      --> i18nName_fr  "du Brunei"
+      --> i18nName_en  "Bruneian"
+      --> i18nName_es  "bruneano"
+      --> i18nName_de
+        -> NlgGenderAgreeableSubstantive
+          --> masculine "Bruneier"
+          --> feminine  "Bruneierin"
+        ;
+    ;
+  --> adjective
+    -> MultilingualText
+      --> i18nName_fr
+        -> NlgAdjective
+          --> root      "du Brunei"
+        ;
+      --> i18nName_en
+        -> NlgAdjective
+          --> root      "Bruneian"
+        ;
+      --> i18nName_es
+        -> NlgAdjective
+          --> root      "bruneano"
+        ;
+      --> i18nName_de
+        -> NlgAdjective
+          --> root      "bruneiisch"
+        ;
+    ;
+  --> useArticle_fr  true
+  --> useArticle_en  false
+;

@@ -1,0 +1,47 @@
+LibGeography:Subdivision STATE_MX_ZAC
+  --> iso3166_2    "MX-ZAC"
+  --> postal_code  "ZT"
+  --> status       STATE
+  --> label
+    -> MultilingualText
+      --> i18nName_fr
+        -> NlgSubstantive
+          --> root    "Zacatecas"
+          --> plural  "Zacatecas"
+          --> number  SINGULAR
+        ;
+      --> i18nName_en
+        -> NlgSubstantive
+          --> root    "Zacatecas"
+          --> plural  "Zacatecas"
+          --> gender  INANIMATE
+          --> number  SINGULAR
+        ;
+      --> i18nName_es
+        -> NlgSubstantive
+          --> root    "Zacatecas"
+          --> plural  "Zacatecas"
+          --> number  SINGULAR
+        ;
+      --> i18nName_de
+        -> NlgSubstantive
+          --> root    "Zacatecas"
+          --> plural  "Zacatecas"
+          --> gender  NEUTRAL
+          --> number  SINGULAR
+        ;
+      --> i18nName_ja
+        -> NlgSubstantive
+          --> root    "サカテカス州"
+          --> plural  "サカテカス州"
+          --> gender  INANIMATE
+          --> number  SINGULAR
+        ;
+    ;
+  --> demonym
+    -> MultilingualText
+    ;
+  --> adjective
+    -> MultilingualText
+    ;
+;

@@ -1,0 +1,33 @@
+LibGeography:EconomicUnion ECONU_EU
+  --> label
+    -> MultilingualText
+      --> i18nName_en
+        -> NlgSubstantive
+          --> root    "European Union"
+          --> plural  "European Union"
+          --> gender  INANIMATE
+          --> number  SINGULAR
+        ;
+      --> i18nName_de
+        -> NlgSubstantive
+          --> root    "Europäische Union"
+          --> plural  "Europäische Union"
+          --> gender  NEUTRAL
+          --> number  SINGULAR
+        ;
+      --> i18nName_ja
+        -> NlgSubstantive
+          --> root    "欧州連合"
+          --> plural  "欧州連合"
+          --> gender  INANIMATE
+          --> number  SINGULAR
+        ;
+    ;
+  --> demonym
+    -> MultilingualText
+    ;
+  --> adjective
+    -> MultilingualText
+    ;
+  --> useArticle_en  true
+;

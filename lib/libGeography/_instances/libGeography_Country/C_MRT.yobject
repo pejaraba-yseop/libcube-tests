@@ -1,0 +1,80 @@
+LibGeography:Country C_MRT
+  --> iso3166_1_numeric_code  "478"
+  --> iso3166_1_alpha_2       "MR"
+  --> iso3166_1_alpha_3       "MRT"
+  --> label
+    -> MultilingualText
+      --> i18nName_fr
+        -> NlgSubstantive
+          --> root    "Mauritanie"
+          --> plural  "Mauritanie"
+          --> gender  FEMININE
+          --> number  SINGULAR
+        ;
+      --> i18nName_en
+        -> NlgSubstantive
+          --> root    "Mauritania"
+          --> plural  "Mauritania"
+          --> gender  INANIMATE
+          --> number  SINGULAR
+        ;
+      --> i18nName_es
+        -> NlgSubstantive
+          --> root    "Mauritania"
+          --> plural  "Mauritania"
+          --> gender  FEMININE
+          --> number  SINGULAR
+        ;
+      --> i18nName_de
+        -> NlgSubstantive
+          --> root    "Mauretanien"
+          --> plural  "Mauretanien"
+          --> gender  NEUTRAL
+          --> number  SINGULAR
+        ;
+      --> i18nName_ja
+        -> NlgSubstantive
+          --> root    "モーリタニア"
+          --> plural  "モーリタニア"
+          --> gender  INANIMATE
+          --> number  SINGULAR
+        ;
+    ;
+  --> demonym
+    -> MultilingualText
+      --> i18nName_fr
+        -> NlgGenderAgreeableSubstantive
+          --> masculine "Mauritanien"
+          --> feminine  "Mauritanienne"
+        ;
+      --> i18nName_en  "Mauritanian"
+      --> i18nName_es  "mauritano"
+      --> i18nName_de
+        -> NlgGenderAgreeableSubstantive
+          --> masculine "Mauretanier"
+          --> feminine  "Mauretanierin"
+        ;
+    ;
+  --> adjective
+    -> MultilingualText
+      --> i18nName_fr
+        -> NlgAdjective
+          --> root      "mauritanien"
+          --> feminine  "mauritanienne"
+        ;
+      --> i18nName_en
+        -> NlgAdjective
+          --> root      "Mauritanian"
+        ;
+      --> i18nName_es
+        -> NlgAdjective
+          --> root      "mauritano"
+        ;
+      --> i18nName_de
+        -> NlgAdjective
+          --> root      "mauretanisch"
+        ;
+    ;
+  --> useArticle_fr  true
+  --> useArticle_en  false
+;

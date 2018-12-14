@@ -1,0 +1,52 @@
+LibGeography:Region UN_REG_ASIA_SE
+  --> label
+    -> MultilingualText
+      --> i18nName_fr
+        -> NlgSubstantive
+          --> root    "Asie du Sud-Est"
+          --> plural  "Asie du Sud-Est"
+          --> gender  FEMININE
+          --> number  SINGULAR
+        ;
+      --> i18nName_en
+        -> NlgSubstantive
+          --> root    "Southeast Asia"
+          --> plural  "Southeast Asia"
+          --> gender  INANIMATE
+          --> number  SINGULAR
+        ;
+      --> i18nName_es
+        -> NlgSubstantive
+          --> root    "Sudeste Asiático"
+          --> plural  "Sudeste Asiático"
+          --> gender  FEMININE
+          --> number  SINGULAR
+        ;
+      --> i18nName_de
+        -> NlgSubstantive
+          --> root    "Südöstliches Asien"
+          --> plural  "Südöstliches Asien"
+          --> gender  NEUTRAL
+          --> number  SINGULAR
+        ;
+      --> i18nName_ja
+        -> NlgSubstantive
+          --> root    "東南アジア"
+          --> plural  "東南アジア"
+          --> gender  INANIMATE
+          --> number  SINGULAR
+        ;
+    ;
+  --> demonym
+    -> MultilingualText
+      --> i18nName_en  "Southeast Asian"
+    ;
+  --> adjective
+    -> MultilingualText
+      --> i18nName_en
+        -> NlgAdjective
+          --> root      "Southeast Asian"
+        ;
+    ;
+  --> useArticle_en  false
+;

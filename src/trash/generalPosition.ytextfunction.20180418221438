@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<yseop-yml:ymlTextFunction xmlns:yseop-yml="http://www.yseop.com/yml/storage" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" domainModelVersion="3" identifier="ac9d98b0-7a13-4bfa-8d0e-dba1807795bf">
+    <yseop-yml:textGranule domainModelVersion="3" identifier="e35cfdf0-37ac-455e-926d-a03802d3d649">
+        <yseop-yml:granuleI18nContents>
+            <yseop-yml:granuleUnilingueContent locale="en">
+                <yseop-yml:granuleContent>
+                    <yseop-yml:text>/*Caja de Seguros has a leading position (ranked second) in the Argentina insurance market, based on gross premiums as of March 31, 2017, with a market share of approximately 5.8%. */
+
+\beginStyle(nameStyle)
+    \nounPhrase(theGeneralData.currentCompany)
+\endStyle
+
+ranks
+
+\beginStyle(styleOrdinal)
+    \nounPhrase(COMPANY_FACTS_SORTER_BY_GROSS_REVENUE.getRank(theGeneralData.currentCompany))
+\endStyle
+
+in the
+\nounPhrase(theGeneralData.currentCountry.label)
+\nounPhrase(DIMENSION_BUSINESS_SEGMENT.hierarchyMembersAccesors.rootMember)
+with a market share of approximately
+
+\beginStyle(oneDigitStyle)
+    \value(marketShare, UNIT_PERCENT)
+\endStyle
+
+, based on gross premiums as of
+\date(theGeneralData.currentPeriod.date, _DATE_DD, _DATE_MONTH, _DATE_YYYY, _DATE_MIDDLE_ENDIAN_CARDINAL)
+.</yseop-yml:text>
+                    <yseop-yml:inline-assemblies/>
+                    <yseop-yml:inline-dslFunctionCalls/>
+                </yseop-yml:granuleContent>
+            </yseop-yml:granuleUnilingueContent>
+            <yseop-yml:granuleUnilingueContent locale="es">
+                <yseop-yml:granuleContent>
+                    <yseop-yml:text>\p
+
+\beginStyle(nameStyle)
+    \nounPhrase(theGeneralData.currentCompany.label)
+\endStyle
+
+tiene una posición lider (posicionada
+
+\beginStyle(styleOrdinal)
+    \nounPhrase(COMPANY_FACTS_SORTER_BY_GROSS_REVENUE.getRank(theGeneralData.currentCompany))
+\endStyle
+
+) en el
+\nounPhrase(DIMENSION_BUSINESS_SEGMENT.hierarchyMembersAccesors.rootMember.label)
+de
+\nounPhrase(theGeneralData.currentCountry.label)
+, basado en primas brutas a partir
+\date(theGeneralData.currentPeriod.date, _DATE_DD, _DATE_MONTH, _DATE_YYYY, _DATE_MIDDLE_ENDIAN_CARDINAL)
+, con una cuota de mercado de aproximadamente de
+
+\beginStyle(oneDigitStyle)
+    \value(marketShare, UNIT_PERCENT)
+\endStyle
+
+.</yseop-yml:text>
+                    <yseop-yml:inline-assemblies/>
+                    <yseop-yml:inline-dslFunctionCalls/>
+                </yseop-yml:granuleContent>
+            </yseop-yml:granuleUnilingueContent>
+            <yseop-yml:granuleUnilingueContent locale="fr">
+                <yseop-yml:granuleContent>
+                    <yseop-yml:text/>
+                    <yseop-yml:inline-assemblies/>
+                    <yseop-yml:inline-dslFunctionCalls/>
+                </yseop-yml:granuleContent>
+            </yseop-yml:granuleUnilingueContent>
+        </yseop-yml:granuleI18nContents>
+        <yseop-yml:dslCondition/>
+        <yseop-yml:name/>
+        <yseop-yml:creationDate>2018-02-23T22:20:57.895Z</yseop-yml:creationDate>
+        <yseop-yml:properties identifier="22601e94-5c24-413e-87cc-83a3bae8994c">
+            <yseop-yml:property identifier="22601e94-5c24-413e-87cc-83a3bae8994c|condition" type="YML_PROPERTY" name="condition"></yseop-yml:property>
+        </yseop-yml:properties>
+    </yseop-yml:textGranule>
+    <yseop-yml:localVariables>Number marketShare
+    --> dsl -> Textualization
+        --> language LANG_en
+        --> root "marketShare"
+        --> number SINGULAR
+    ;
+</yseop-yml:localVariables>
+    <yseop-yml:advancedContent>--> action {
+
+    marketShare = CURRENT_COMPANY_ALL_SEGMENTS_FACT_SELECTION.selectedFact.getMeasure(MEASURE_GROSS_REVENUE).value/ ROOT_FACT_SELECTION.selectedFact.getMeasure(MEASURE_GROSS_REVENUE).value    
+
+   this.text.write();
+           }</yseop-yml:advancedContent>
+    <yseop-yml:ymlParameters/>
+    <yseop-yml:name>generalPosition</yseop-yml:name>
+    <yseop-yml:properties identifier="79a6e751-4476-4418-ac46-31dfa92cde5d">
+        <yseop-yml:property identifier="79a6e751-4476-4418-ac46-31dfa92cde5d|dsl" type="YML_PROPERTY" name="dsl">"general position"</yseop-yml:property>
+    </yseop-yml:properties>
+</yseop-yml:ymlTextFunction>

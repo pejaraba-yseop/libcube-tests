@@ -1,0 +1,80 @@
+LibGeography:Country C_SLV
+  --> iso3166_1_numeric_code  "222"
+  --> iso3166_1_alpha_2       "SV"
+  --> iso3166_1_alpha_3       "SLV"
+  --> label
+    -> MultilingualText
+      --> i18nName_fr
+        -> NlgSubstantive
+          --> root    "Salvador"
+          --> plural  "Salvador"
+          --> gender  MASCULINE
+          --> number  SINGULAR
+        ;
+      --> i18nName_en
+        -> NlgSubstantive
+          --> root    "El Salvador"
+          --> plural  "El Salvador"
+          --> gender  INANIMATE
+          --> number  SINGULAR
+        ;
+      --> i18nName_es
+        -> NlgSubstantive
+          --> root    "El Salvador"
+          --> plural  "El Salvador"
+          --> gender  FEMININE
+          --> number  SINGULAR
+        ;
+      --> i18nName_de
+        -> NlgSubstantive
+          --> root    "El Salvador"
+          --> plural  "El Salvador"
+          --> gender  NEUTRAL
+          --> number  SINGULAR
+        ;
+      --> i18nName_ja
+        -> NlgSubstantive
+          --> root    "エルサルバドル"
+          --> plural  "エルサルバドル"
+          --> gender  INANIMATE
+          --> number  SINGULAR
+        ;
+    ;
+  --> demonym
+    -> MultilingualText
+      --> i18nName_fr
+        -> NlgGenderAgreeableSubstantive
+          --> masculine "Salvadorien"
+          --> feminine  "Salvadorienne"
+        ;
+      --> i18nName_en  "Salvadorian; Salvadoran"
+      --> i18nName_es  "salvadoreño"
+      --> i18nName_de
+        -> NlgGenderAgreeableSubstantive
+          --> masculine "Salvadorianer"
+          --> feminine  "Salvadorianerin"
+        ;
+    ;
+  --> adjective
+    -> MultilingualText
+      --> i18nName_fr
+        -> NlgAdjective
+          --> root      "salvadorien"
+          --> feminine  "salvadorienne"
+        ;
+      --> i18nName_en
+        -> NlgAdjective
+          --> root      "Salvadorian; Salvadoran"
+        ;
+      --> i18nName_es
+        -> NlgAdjective
+          --> root      "salvadoreño"
+        ;
+      --> i18nName_de
+        -> NlgAdjective
+          --> root      "salvadorianisch"
+        ;
+    ;
+  --> useArticle_fr  true
+  --> useArticle_en  false
+;

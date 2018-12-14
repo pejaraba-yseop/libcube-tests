@@ -1,0 +1,80 @@
+LibGeography:Country C_CZE
+  --> iso3166_1_numeric_code  "203"
+  --> iso3166_1_alpha_2       "CZ"
+  --> iso3166_1_alpha_3       "CZE"
+  --> label
+    -> MultilingualText
+      --> i18nName_fr
+        -> NlgSubstantive
+          --> root    "République tchèque"
+          --> plural  "République tchèque"
+          --> gender  FEMININE
+          --> number  SINGULAR
+        ;
+      --> i18nName_en
+        -> NlgSubstantive
+          --> root    "Czech Republic"
+          --> plural  "Czech Republic"
+          --> gender  INANIMATE
+          --> number  SINGULAR
+        ;
+      --> i18nName_es
+        -> NlgSubstantive
+          --> root    "Chequia"
+          --> plural  "Chequia"
+          --> gender  FEMININE
+          --> number  SINGULAR
+        ;
+      --> i18nName_de
+        -> NlgSubstantive
+          --> root    "Tschechische Republik"
+          --> plural  "Tschechische Republik"
+          --> gender  NEUTRAL
+          --> number  SINGULAR
+        ;
+      --> i18nName_ja
+        -> NlgSubstantive
+          --> root    "チェコ共和国"
+          --> plural  "チェコ共和国"
+          --> gender  INANIMATE
+          --> number  SINGULAR
+        ;
+    ;
+  --> demonym
+    -> MultilingualText
+      --> i18nName_fr
+        -> NlgGenderAgreeableSubstantive
+          --> masculine "Tchèque"
+          --> feminine  "Tchèque"
+        ;
+      --> i18nName_en  "Czech"
+      --> i18nName_es  "checo"
+      --> i18nName_de
+        -> NlgGenderAgreeableSubstantive
+          --> masculine "Tscheche"
+          --> feminine  "Tschechin"
+        ;
+    ;
+  --> adjective
+    -> MultilingualText
+      --> i18nName_fr
+        -> NlgAdjective
+          --> root      "tchèque"
+          --> feminine  "tchèque"
+        ;
+      --> i18nName_en
+        -> NlgAdjective
+          --> root      "Czech"
+        ;
+      --> i18nName_es
+        -> NlgAdjective
+          --> root      "checo"
+        ;
+      --> i18nName_de
+        -> NlgAdjective
+          --> root      "tschechisch"
+        ;
+    ;
+  --> useArticle_fr  true
+  --> useArticle_en  false
+;

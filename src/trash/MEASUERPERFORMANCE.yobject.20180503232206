@@ -1,0 +1,8 @@
+
+LibCube:Measure MEASURE_PERFORMANCE
+    --> dsl -> Textualization
+        --> language LANG_en
+        --> root "Performance Measure"
+        --> number SINGULAR
+    ;
+;

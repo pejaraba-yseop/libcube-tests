@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<yseop-yml:ymlTextFunction xmlns:yseop-yml="http://www.yseop.com/yml/storage" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" domainModelVersion="3" identifier="c8cfad29-88c1-49fb-b844-9783e1cc0ec4">
+    <yseop-yml:textGranule domainModelVersion="3" identifier="447597f0-d379-44ff-a1a2-d1b6a31544ab">
+        <yseop-yml:granuleI18nContents>
+            <yseop-yml:granuleUnilingueContent locale="en">
+                <yseop-yml:granuleContent>
+                    <yseop-yml:text>
+\beginSynonym
+    \choice 
+        Additionally
+    \choice 
+        Furthermore
+    \choice 
+        Also
+\endSynonym
+</yseop-yml:text>
+                    <yseop-yml:inline-assemblies/>
+                    <yseop-yml:inline-dslFunctionCalls/>
+                </yseop-yml:granuleContent>
+            </yseop-yml:granuleUnilingueContent>
+            <yseop-yml:granuleUnilingueContent locale="fr">
+                <yseop-yml:granuleContent>
+                    <yseop-yml:text/>
+                    <yseop-yml:inline-assemblies/>
+                    <yseop-yml:inline-dslFunctionCalls/>
+                </yseop-yml:granuleContent>
+            </yseop-yml:granuleUnilingueContent>
+            <yseop-yml:granuleUnilingueContent locale="es">
+                <yseop-yml:granuleContent>
+                    <yseop-yml:text>
+\beginSynonym
+    \choice 
+        Adicionalmente
+    \choice 
+        Ademas
+    \choice 
+        Tambien
+\endSynonym
+</yseop-yml:text>
+                    <yseop-yml:inline-assemblies/>
+                    <yseop-yml:inline-dslFunctionCalls/>
+                </yseop-yml:granuleContent>
+            </yseop-yml:granuleUnilingueContent>
+        </yseop-yml:granuleI18nContents>
+        <yseop-yml:dslCondition/>
+        <yseop-yml:name/>
+        <yseop-yml:creationDate>2017-10-31T13:51:12.305Z</yseop-yml:creationDate>
+        <yseop-yml:properties identifier="3f1b20bc-ea1b-4fc6-b6e4-e3c19536427e">
+            <yseop-yml:property identifier="3f1b20bc-ea1b-4fc6-b6e4-e3c19536427e|condition" type="YML_PROPERTY" name="condition"></yseop-yml:property>
+        </yseop-yml:properties>
+    </yseop-yml:textGranule>
+    <yseop-yml:localVariables/>
+    <yseop-yml:advancedContent/>
+    <yseop-yml:ymlParameters/>
+    <yseop-yml:name>transition</yseop-yml:name>
+    <yseop-yml:properties identifier="3bf5aa8d-5bb3-4efd-b0b6-8c1aa5b5fd3b">
+        <yseop-yml:property identifier="3bf5aa8d-5bb3-4efd-b0b6-8c1aa5b5fd3b|dsl" type="YML_PROPERTY" name="dsl">"transition addionally"</yseop-yml:property>
+    </yseop-yml:properties>
+</yseop-yml:ymlTextFunction>

@@ -1,0 +1,187 @@
+interface LibCube:FactsRequestsManager
+    field requestingFactsSelections
+        --> domains OrderedSet
+        --> domainsLevel2 LibCube:JointureFactsSelection
+        --> xmlMapping XmlMappingProperty_SAVE
+        --> dsl -> Textualization
+            --> language LANG_en
+            --> root "requesting Facts Selections"
+            --> number SINGULAR
+        ;
+    field numberOfTentatives
+        --> domains Integer
+        --> defaultValue 0
+        --> xmlMapping XmlMappingProperty_SAVE
+        --> dsl -> Textualization
+            --> language LANG_en
+            --> root "number of tentatives"
+            --> number SINGULAR
+        ;
+   field drillDownSpecification
+        --> domains Integer
+        --> defaultValue 1
+        --> xmlMapping XmlMappingProperty_SAVE
+        --> dsl -> Textualization
+            --> language LANG_en
+            --> root "number of drill downs"
+            --> number SINGULAR
+        ;
+
+    field lastRequestStatus
+        --> domains Object
+        --> xmlMapping XmlMappingProperty_SAVE
+        --> dsl -> Textualization
+            --> language LANG_en
+            --> root "last Request Status"
+            --> number SINGULAR
+        ;
+
+    method init()
+        --> domains Void
+        --> dsl -> Textualization
+            --> language LANG_en
+            --> root "initialize"
+            --> number PLURAL
+        ;
+
+    method havePendingSelections()
+        --> domains Boolean
+        --> dsl -> Textualization
+            --> language LANG_en
+            --> root "are Selections Satisfied"
+            --> number PLURAL
+        ;
+
+    method callPendingRequest(WebService factsService)
+        --> domains Void
+        --> dsl -> Textualization
+            --> language LANG_en
+            --> root "callPendingRequest"
+            --> number PLURAL
+        ;
+   method addFactsSelection()
+        --> domains Void
+        --> dsl -> Textualization
+            --> language LANG_en
+            --> root "addFactsSelection"
+            --> number PLURAL
+        ;
+    method getPendingFactSelection()
+        --> domains LibCube:JointureFactsSelection
+        --> dsl -> Textualization
+            --> language LANG_en
+            --> root "callPendingRequest"
+            --> number PLURAL
+        ;
+
+    method removePendingFactSelection()
+        --> domains Void
+        --> dsl -> Textualization
+            --> language LANG_en
+            --> root "removePendingFactSelection"
+            --> number PLURAL
+        ;
+        
+    method prepareSelection(LibCube:JointureFactsSelection selection)
+        --> domains Void
+        --> dsl -> Textualization
+            --> language LANG_en
+            --> root "removePendingFactSelection"
+            --> number PLURAL
+        ;
+
+    method isLastRequestOk()
+        --> domains Boolean
+        --> dsl -> Textualization
+            --> language LANG_en
+            --> root "is Last Request Ok"
+            --> number SINGULAR
+        ;
+    
+
+    classProperties
+    --> dsl -> Textualization
+        --> language LANG_en
+        --> root "Facts Request"
+        --> number SINGULAR
+    ;
+;
+
+implementation LibCube:FactsRequestsManager
+;
+
+function LibCube:FactsRequestsManager::init()
+--> action {
+	this.requestingFactsSelections = new(OrderedSet);
+    foreach(_selection, LibCube:JointureFactsSelection) {
+        if(_selection.selectedFacts == null){
+            _selection.prepareFactsRequest();
+            requestingFactsSelections.add(_selection);
+        }
+    }
+    logInfo(requestingFactsSelections.size(), " selections prepared for request");
+}
+;
+
+//function that prepares the selections for drilldown for webservice
+function LibCube:FactsRequestsManager::prepareSelection(LibCube:JointureFactsSelection selection)
+--> action{
+	selection.prepareFactsRequest();
+	this.requestingFactsSelections.add(selection);
+}
+;
+
+function LibCube:FactsRequestsManager::havePendingSelections()
+--> action {
+		
+	if(this.requestingFactsSelections.isEmpty() == true){
+        return false;
+    }
+    else{
+        return true;
+    }
+   
+}
+;
+
+function LibCube:FactsRequestsManager::callPendingRequest(WebService factsService)
+--> local LibCube:FactsRequest request
+--> action {
+	//verify if there is pending selection
+	if(havePendingSelections() == true){
+			request = getPendingFactSelection().factsRequest.clone();
+			//makes the call to the webservice to return the cube
+			factsService.activate(request);
+	}
+	
+}
+;
+
+function LibCube:FactsRequestsManager::getPendingFactSelection()
+--> action {
+
+	return this.requestingFactsSelections.get(_FIRST);
+}
+;
+
+function LibCube:FactsRequestsManager::removePendingFactSelection()
+--> action {
+	this.requestingFactsSelections.remove(getPendingFactSelection());
+}
+;
+
+function LibCube:FactsRequestsManager::addFactsSelection()
+--> action {
+		//this.requestingFactsSelections.add(LibCube:JointureFactsSelection);
+}
+;
+
+function LibCube:FactsRequestsManager::isLastRequestOk()
+--> action {
+	if(this.lastRequestStatus == _SUCCESS){
+        return true;
+    }else{
+        return false;
+    }
+}
+;

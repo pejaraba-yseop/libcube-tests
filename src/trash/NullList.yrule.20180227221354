@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<yseop-yml:ymlRule xmlns:yseop-yml="http://www.yseop.com/yml/storage" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" domainModelVersion="3" identifier="7859ec68-3d52-4b50-8728-52317debcd38">
+    <yseop-yml:content/>
+    <yseop-yml:content/>
+    <yseop-yml:name>NullList</yseop-yml:name>
+    <yseop-yml:properties identifier="0fac03ff-3478-4f20-9d7d-bb002c2b3c04">
+        <yseop-yml:property identifier="0fac03ff-3478-4f20-9d7d-bb002c2b3c04|dsl" type="YML_PROPERTY" name="dsl">"Null list"</yseop-yml:property>
+        <yseop-yml:property identifier="0fac03ff-3478-4f20-9d7d-bb002c2b3c04|disabled" type="GENERATION_PROPERTY" name="disabled">true</yseop-yml:property>
+    </yseop-yml:properties>
+</yseop-yml:ymlRule>

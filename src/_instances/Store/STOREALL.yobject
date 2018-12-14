@@ -1,0 +1,8 @@
+
+Store STORE_ALL
+    --> dsl -> Textualization
+        --> language LANG_en
+        --> root "All Stores"
+        --> number SINGULAR
+    ;
+;

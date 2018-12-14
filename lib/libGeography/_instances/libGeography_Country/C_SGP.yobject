@@ -1,0 +1,80 @@
+LibGeography:Country C_SGP
+  --> iso3166_1_numeric_code  "702"
+  --> iso3166_1_alpha_2       "SG"
+  --> iso3166_1_alpha_3       "SGP"
+  --> label
+    -> MultilingualText
+      --> i18nName_fr
+        -> NlgSubstantive
+          --> root    "Singapour"
+          --> plural  "Singapour"
+          --> gender  MASCULINE
+          --> number  SINGULAR
+        ;
+      --> i18nName_en
+        -> NlgSubstantive
+          --> root    "Singapore"
+          --> plural  "Singapore"
+          --> gender  INANIMATE
+          --> number  SINGULAR
+        ;
+      --> i18nName_es
+        -> NlgSubstantive
+          --> root    "Singapur"
+          --> plural  "Singapur"
+          --> gender  FEMININE
+          --> number  SINGULAR
+        ;
+      --> i18nName_de
+        -> NlgSubstantive
+          --> root    "Singapur"
+          --> plural  "Singapur"
+          --> gender  NEUTRAL
+          --> number  SINGULAR
+        ;
+      --> i18nName_ja
+        -> NlgSubstantive
+          --> root    "シンガポール"
+          --> plural  "シンガポール"
+          --> gender  INANIMATE
+          --> number  SINGULAR
+        ;
+    ;
+  --> demonym
+    -> MultilingualText
+      --> i18nName_fr
+        -> NlgGenderAgreeableSubstantive
+          --> masculine "Singapourien"
+          --> feminine  "Singapourienne"
+        ;
+      --> i18nName_en  "Singaporean"
+      --> i18nName_es  "singapurense"
+      --> i18nName_de
+        -> NlgGenderAgreeableSubstantive
+          --> masculine "Singapurer"
+          --> feminine  "Singapurerin"
+        ;
+    ;
+  --> adjective
+    -> MultilingualText
+      --> i18nName_fr
+        -> NlgAdjective
+          --> root      "singapourien"
+          --> feminine  "singapourienne"
+        ;
+      --> i18nName_en
+        -> NlgAdjective
+          --> root      "Singaporean"
+        ;
+      --> i18nName_es
+        -> NlgAdjective
+          --> root      "singapurense"
+        ;
+      --> i18nName_de
+        -> NlgAdjective
+          --> root      "singapurisch"
+        ;
+    ;
+  --> useArticle_fr  false
+  --> useArticle_en  false
+;

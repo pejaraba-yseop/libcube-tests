@@ -1,0 +1,80 @@
+LibGeography:Country C_SUR
+  --> iso3166_1_numeric_code  "740"
+  --> iso3166_1_alpha_2       "SR"
+  --> iso3166_1_alpha_3       "SUR"
+  --> label
+    -> MultilingualText
+      --> i18nName_fr
+        -> NlgSubstantive
+          --> root    "Suriname"
+          --> plural  "Suriname"
+          --> gender  MASCULINE
+          --> number  SINGULAR
+        ;
+      --> i18nName_en
+        -> NlgSubstantive
+          --> root    "Suriname"
+          --> plural  "Suriname"
+          --> gender  INANIMATE
+          --> number  SINGULAR
+        ;
+      --> i18nName_es
+        -> NlgSubstantive
+          --> root    "Surinam"
+          --> plural  "Surinam"
+          --> gender  FEMININE
+          --> number  SINGULAR
+        ;
+      --> i18nName_de
+        -> NlgSubstantive
+          --> root    "Suriname"
+          --> plural  "Suriname"
+          --> gender  NEUTRAL
+          --> number  SINGULAR
+        ;
+      --> i18nName_ja
+        -> NlgSubstantive
+          --> root    "スリナム"
+          --> plural  "スリナム"
+          --> gender  INANIMATE
+          --> number  SINGULAR
+        ;
+    ;
+  --> demonym
+    -> MultilingualText
+      --> i18nName_fr
+        -> NlgGenderAgreeableSubstantive
+          --> masculine "Surinamais"
+          --> feminine  "Surinamaise"
+        ;
+      --> i18nName_en  "Surinamer"
+      --> i18nName_es  "surinamés"
+      --> i18nName_de
+        -> NlgGenderAgreeableSubstantive
+          --> masculine "Surinamer"
+          --> feminine  "Surinamerin"
+        ;
+    ;
+  --> adjective
+    -> MultilingualText
+      --> i18nName_fr
+        -> NlgAdjective
+          --> root      "surinamais"
+          --> feminine  "surinamaise"
+        ;
+      --> i18nName_en
+        -> NlgAdjective
+          --> root      "Surinamese"
+        ;
+      --> i18nName_es
+        -> NlgAdjective
+          --> root      "surinamés"
+        ;
+      --> i18nName_de
+        -> NlgAdjective
+          --> root      "surinamisch"
+        ;
+    ;
+  --> useArticle_fr  true
+  --> useArticle_en  false
+;

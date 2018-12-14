@@ -1,0 +1,91 @@
+LibGeography:Country C_MMR
+  --> iso3166_1_numeric_code  "104"
+  --> iso3166_1_alpha_2       "MM"
+  --> iso3166_1_alpha_3       "MMR"
+  --> label
+    -> MultilingualText
+      --> i18nName_fr
+        -> NlgSubstantive
+          --> root    "Birmanie"
+          --> plural  "Birmanie"
+          --> gender  FEMININE
+          --> number  SINGULAR
+        ;
+      --> i18nName_en
+        -> NlgSubstantive
+          --> root    "Myanmar"
+          --> plural  "Myanmar"
+          --> gender  INANIMATE
+          --> number  SINGULAR
+        ;
+      --> i18nName_es
+        -> NlgSubstantive
+          --> root    "Myanmar/Birmania"
+          --> plural  "Myanmar/Birmania"
+          --> gender  FEMININE
+          --> number  SINGULAR
+        ;
+      --> i18nName_de
+        -> NlgSubstantive
+          --> root    "Myanmar/Birma"
+          --> plural  "Myanmar/Birma"
+          --> gender  NEUTRAL
+          --> number  SINGULAR
+        ;
+      --> i18nName_ja
+        -> NlgSubstantive
+          --> root    "ミャンマー"
+          --> plural  "ミャンマー"
+          --> gender  INANIMATE
+          --> number  SINGULAR
+        ;
+    ;
+  --> demonym
+    -> MultilingualText
+      --> i18nName_fr
+        -> NlgGenderAgreeableSubstantive
+          --> masculine "du Myanmar"
+          --> feminine  "de Birmanie"
+        ;
+      --> i18nName_en
+        -> NlgGenderAgreeableSubstantive
+          --> masculine "of Myanmar"
+          --> feminine  "Burma"
+        ;
+      --> i18nName_es
+        -> NlgGenderAgreeableSubstantive
+          --> masculine "de Myanmar"
+          --> feminine  "Birmania"
+        ;
+      --> i18nName_de
+        -> NlgGenderAgreeableSubstantive
+          --> masculine "von Myanmar"
+          --> feminine  "Birma"
+        ;
+    ;
+  --> adjective
+    -> MultilingualText
+      --> i18nName_fr
+        -> NlgAdjective
+          --> root      "du Myanmar"
+          --> feminine  "de Birmanie"
+        ;
+      --> i18nName_en
+        -> NlgAdjective
+          --> root      "of Myanmar"
+          --> feminine  "Burma"
+        ;
+      --> i18nName_es
+        -> NlgAdjective
+          --> root      "de Myanmar"
+          --> feminine  "Birmania"
+        ;
+      --> i18nName_de
+        -> NlgAdjective
+          --> root      "von Myanmar"
+          --> feminine  "Birma"
+        ;
+    ;
+  --> useArticle_fr  true
+  --> useArticle_en  false
+;

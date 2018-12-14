@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<yseop-yml:ymlRule xmlns:yseop-yml="http://www.yseop.com/yml/storage" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" domainModelVersion="3" identifier="ad53cb55-d9b2-4172-98e8-94291f9725fd">
+    <yseop-yml:content>?fact.weightStatus = WEIGHT_STATUS_OVERWEIGHT;</yseop-yml:content>
+    <yseop-yml:content>?fact in theGeneralData.top2SectorsDriverFacts
+?fact.weightFact.getMeasure(MEASURE_PERFORMANCE).value > 0</yseop-yml:content>
+    <yseop-yml:name>SetTopSectorsWeightStatus</yseop-yml:name>
+    <yseop-yml:properties identifier="31d017dc-6f4f-4078-ac97-ef828cb0e403">
+        <yseop-yml:property identifier="31d017dc-6f4f-4078-ac97-ef828cb0e403|dsl" type="YML_PROPERTY" name="dsl">"Set Top Sectors Overweight Status"</yseop-yml:property>
+        <yseop-yml:property identifier="31d017dc-6f4f-4078-ac97-ef828cb0e403|disabled" type="GENERATION_PROPERTY" name="disabled">false</yseop-yml:property>
+    </yseop-yml:properties>
+</yseop-yml:ymlRule>

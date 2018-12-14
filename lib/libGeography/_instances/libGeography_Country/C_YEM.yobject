@@ -1,0 +1,80 @@
+LibGeography:Country C_YEM
+  --> iso3166_1_numeric_code  "887"
+  --> iso3166_1_alpha_2       "YE"
+  --> iso3166_1_alpha_3       "YEM"
+  --> label
+    -> MultilingualText
+      --> i18nName_fr
+        -> NlgSubstantive
+          --> root    "Yémen"
+          --> plural  "Yémen"
+          --> gender  MASCULINE
+          --> number  SINGULAR
+        ;
+      --> i18nName_en
+        -> NlgSubstantive
+          --> root    "Yemen"
+          --> plural  "Yemen"
+          --> gender  INANIMATE
+          --> number  SINGULAR
+        ;
+      --> i18nName_es
+        -> NlgSubstantive
+          --> root    "Yemen"
+          --> plural  "Yemen"
+          --> gender  MASCULINE
+          --> number  SINGULAR
+        ;
+      --> i18nName_de
+        -> NlgSubstantive
+          --> root    "Jemen"
+          --> plural  "Jemen"
+          --> gender  NEUTRAL
+          --> number  SINGULAR
+        ;
+      --> i18nName_ja
+        -> NlgSubstantive
+          --> root    "イエメン"
+          --> plural  "イエメン"
+          --> gender  INANIMATE
+          --> number  SINGULAR
+        ;
+    ;
+  --> demonym
+    -> MultilingualText
+      --> i18nName_fr
+        -> NlgGenderAgreeableSubstantive
+          --> masculine "Yéménite"
+          --> feminine  "Yéménite"
+        ;
+      --> i18nName_en  "Yemenite"
+      --> i18nName_es  "yemení"
+      --> i18nName_de
+        -> NlgGenderAgreeableSubstantive
+          --> masculine "Jemenit"
+          --> feminine  "Jemenitin"
+        ;
+    ;
+  --> adjective
+    -> MultilingualText
+      --> i18nName_fr
+        -> NlgAdjective
+          --> root      "yéménite"
+          --> feminine  "yéménite"
+        ;
+      --> i18nName_en
+        -> NlgAdjective
+          --> root      "Yemeni"
+        ;
+      --> i18nName_es
+        -> NlgAdjective
+          --> root      "yemení"
+        ;
+      --> i18nName_de
+        -> NlgAdjective
+          --> root      "jemenitisch"
+        ;
+    ;
+  --> useArticle_fr  true
+  --> useArticle_en  false
+;

@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<yseop-yml:ymlRule xmlns:yseop-yml="http://www.yseop.com/yml/storage" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" domainModelVersion="3" identifier="76729df0-4ed8-4052-a2e0-c52a831bc405">
+    <yseop-yml:content>getGeneralData().sortedMarketShareList.sort(_DESCENDANT, _RELATIVE_ORDER_OF, MarketShareItem::marketSharePercentDifference);</yseop-yml:content>
+    <yseop-yml:content>getGeneralData().sortedMarketShareList.isEmpty() == false</yseop-yml:content>
+    <yseop-yml:name>SortMarketShareRanking</yseop-yml:name>
+    <yseop-yml:properties identifier="d36afadd-6d29-4510-9ff3-b5b89de78a7c">
+        <yseop-yml:property identifier="d36afadd-6d29-4510-9ff3-b5b89de78a7c|dsl" type="YML_PROPERTY" name="dsl">"Sort Market Share Ranking"</yseop-yml:property>
+        <yseop-yml:property identifier="d36afadd-6d29-4510-9ff3-b5b89de78a7c|disabled" type="GENERATION_PROPERTY" name="disabled">true</yseop-yml:property>
+    </yseop-yml:properties>
+</yseop-yml:ymlRule>

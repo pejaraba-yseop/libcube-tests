@@ -1,0 +1,31 @@
+interface LibCube:MeasureRequestContext
+    field mdxName
+        --> domains Text
+        --> documentation "The MDX name of a measure in an OLAP cube, ex: FINAL_VALUE"
+        --> xmlMapping XmlMappingProperty_SAVE
+        --> dsl -> Textualization
+            --> language LANG_en
+            --> root "MDX name"
+            --> number SINGULAR
+        ;
+
+    field yseopId
+        --> domains Text
+        --> documentation "Yid of the measure, ex: MEASURE_FINAL_VALUE"
+        --> xmlMapping XmlMappingProperty_SAVE
+        --> dsl -> Textualization
+            --> language LANG_en
+            --> root "YseopId"
+            --> number SINGULAR
+        ;
+
+    classProperties
+    --> dsl -> Textualization
+        --> language LANG_en
+        --> root "Measures Request Context"
+        --> number SINGULAR
+    ;
+;
+
+implementation LibCube:MeasureRequestContext
+;

@@ -1,0 +1,80 @@
+LibGeography:Country C_MEX
+  --> iso3166_1_numeric_code  "484"
+  --> iso3166_1_alpha_2       "MX"
+  --> iso3166_1_alpha_3       "MEX"
+  --> label
+    -> MultilingualText
+      --> i18nName_fr
+        -> NlgSubstantive
+          --> root    "Mexique"
+          --> plural  "Mexique"
+          --> gender  MASCULINE
+          --> number  SINGULAR
+        ;
+      --> i18nName_en
+        -> NlgSubstantive
+          --> root    "Mexico"
+          --> plural  "Mexico"
+          --> gender  INANIMATE
+          --> number  SINGULAR
+        ;
+      --> i18nName_es
+        -> NlgSubstantive
+          --> root    "México"
+          --> plural  "México"
+          --> gender  MASCULINE
+          --> number  SINGULAR
+        ;
+      --> i18nName_de
+        -> NlgSubstantive
+          --> root    "Mexiko"
+          --> plural  "Mexiko"
+          --> gender  NEUTRAL
+          --> number  SINGULAR
+        ;
+      --> i18nName_ja
+        -> NlgSubstantive
+          --> root    "メキシコ"
+          --> plural  "メキシコ"
+          --> gender  INANIMATE
+          --> number  SINGULAR
+        ;
+    ;
+  --> demonym
+    -> MultilingualText
+      --> i18nName_fr
+        -> NlgGenderAgreeableSubstantive
+          --> masculine "Mexicain"
+          --> feminine  "Mexicaine"
+        ;
+      --> i18nName_en  "Mexican"
+      --> i18nName_es  "mexicano"
+      --> i18nName_de
+        -> NlgGenderAgreeableSubstantive
+          --> masculine "Mexikaner"
+          --> feminine  "Mexikanerin"
+        ;
+    ;
+  --> adjective
+    -> MultilingualText
+      --> i18nName_fr
+        -> NlgAdjective
+          --> root      "mexicain"
+          --> feminine  "mexicaine"
+        ;
+      --> i18nName_en
+        -> NlgAdjective
+          --> root      "Mexican"
+        ;
+      --> i18nName_es
+        -> NlgAdjective
+          --> root      "mexicano"
+        ;
+      --> i18nName_de
+        -> NlgAdjective
+          --> root      "mexikanisch"
+        ;
+    ;
+  --> useArticle_fr  true
+  --> useArticle_en  false
+;

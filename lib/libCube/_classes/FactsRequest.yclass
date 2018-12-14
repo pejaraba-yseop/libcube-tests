@@ -1,0 +1,32 @@
+interface LibCube:FactsRequest
+    field query
+        --> domains Text
+        --> documentation "The query sent to the cube service"
+        --> xmlMapping XmlMappingProperty_SAVE
+        --> dsl -> Textualization
+            --> language LANG_en
+            --> root "query"
+            --> number SINGULAR
+        ;
+
+    field context
+        --> domains LibCube:RequestContext
+        --> documentation "Request context with extra information needed"
+        --> xmlMapping XmlMappingProperty_SAVE
+        --> dsl -> Textualization
+            --> language LANG_en
+            --> root "query"
+            --> number SINGULAR
+        ;
+    
+
+    classProperties
+    --> dsl -> Textualization
+        --> language LANG_en
+        --> root "Facts Request"
+        --> number SINGULAR
+    ;
+;
+
+implementation LibCube:FactsRequest
+;

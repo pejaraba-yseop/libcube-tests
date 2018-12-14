@@ -1,0 +1,7 @@
+Symbol QUERY_FRAGMENT_TYPE_COLUMNS
+    --> dsl -> Textualization
+        --> language LANG_en
+        --> root "Columns Query Fragment Type"
+        --> number SINGULAR
+    ;
+;

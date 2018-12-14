@@ -1,0 +1,80 @@
+LibGeography:Country C_RWA
+  --> iso3166_1_numeric_code  "646"
+  --> iso3166_1_alpha_2       "RW"
+  --> iso3166_1_alpha_3       "RWA"
+  --> label
+    -> MultilingualText
+      --> i18nName_fr
+        -> NlgSubstantive
+          --> root    "Rwanda"
+          --> plural  "Rwanda"
+          --> gender  MASCULINE
+          --> number  SINGULAR
+        ;
+      --> i18nName_en
+        -> NlgSubstantive
+          --> root    "Rwanda"
+          --> plural  "Rwanda"
+          --> gender  INANIMATE
+          --> number  SINGULAR
+        ;
+      --> i18nName_es
+        -> NlgSubstantive
+          --> root    "Ruanda"
+          --> plural  "Ruanda"
+          --> gender  FEMININE
+          --> number  SINGULAR
+        ;
+      --> i18nName_de
+        -> NlgSubstantive
+          --> root    "Ruanda"
+          --> plural  "Ruanda"
+          --> gender  NEUTRAL
+          --> number  SINGULAR
+        ;
+      --> i18nName_ja
+        -> NlgSubstantive
+          --> root    "ルワンダ"
+          --> plural  "ルワンダ"
+          --> gender  INANIMATE
+          --> number  SINGULAR
+        ;
+    ;
+  --> demonym
+    -> MultilingualText
+      --> i18nName_fr
+        -> NlgGenderAgreeableSubstantive
+          --> masculine "Rwandais"
+          --> feminine  "Rwandaise"
+        ;
+      --> i18nName_en  "Rwandan; Rwandese"
+      --> i18nName_es  "ruandés"
+      --> i18nName_de
+        -> NlgGenderAgreeableSubstantive
+          --> masculine "Ruander"
+          --> feminine  "Ruanderin"
+        ;
+    ;
+  --> adjective
+    -> MultilingualText
+      --> i18nName_fr
+        -> NlgAdjective
+          --> root      "rwandais"
+          --> feminine  "rwandaise"
+        ;
+      --> i18nName_en
+        -> NlgAdjective
+          --> root      "Rwandan; Rwandese"
+        ;
+      --> i18nName_es
+        -> NlgAdjective
+          --> root      "ruandés"
+        ;
+      --> i18nName_de
+        -> NlgAdjective
+          --> root      "ruandisch"
+        ;
+    ;
+  --> useArticle_fr  true
+  --> useArticle_en  false
+;

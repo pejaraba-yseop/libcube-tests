@@ -1,0 +1,76 @@
+LibGeography:Country C_CYM
+  --> iso3166_1_numeric_code  "136"
+  --> iso3166_1_alpha_2       "KY"
+  --> iso3166_1_alpha_3       "CYM"
+  --> label
+    -> MultilingualText
+      --> i18nName_fr
+        -> NlgSubstantive
+          --> root    "Îles Caïmans"
+          --> plural  "Îles Caïmans"
+          --> gender  FEMININE
+          --> number  PLURAL
+        ;
+      --> i18nName_en
+        -> NlgSubstantive
+          --> root    "Cayman Islands"
+          --> plural  "Cayman Islands"
+          --> gender  INANIMATE
+          --> number  PLURAL
+        ;
+      --> i18nName_es
+        -> NlgSubstantive
+          --> root    "Islas Caimán"
+          --> plural  "Islas Caimán"
+          --> gender  FEMININE
+          --> number  PLURAL
+        ;
+      --> i18nName_de
+        -> NlgSubstantive
+          --> root    "Kaimaninseln"
+          --> plural  "Kaimaninseln"
+          --> gender  NEUTRAL
+          --> number  PLURAL
+        ;
+      --> i18nName_ja
+        -> NlgSubstantive
+          --> root    "ケイマン諸島"
+          --> plural  "ケイマン諸島"
+          --> gender  INANIMATE
+          --> number  PLURAL
+        ;
+    ;
+  --> demonym
+    -> MultilingualText
+      --> i18nName_fr
+        -> NlgGenderAgreeableSubstantive
+          --> masculine "Caïmanais"
+          --> feminine  "Caïmanaise"
+        ;
+      --> i18nName_en  "Caymanian"
+      --> i18nName_es  "caimanés"
+      --> i18nName_de  "der Kaimaninseln"
+    ;
+  --> adjective
+    -> MultilingualText
+      --> i18nName_fr
+        -> NlgAdjective
+          --> root      "caïmanais"
+          --> feminine  "caïmanaise"
+        ;
+      --> i18nName_en
+        -> NlgAdjective
+          --> root      "Caymanian"
+        ;
+      --> i18nName_es
+        -> NlgAdjective
+          --> root      "caimanés"
+        ;
+      --> i18nName_de
+        -> NlgAdjective
+          --> root      "der Kaimaninseln"
+        ;
+    ;
+  --> useArticle_fr  true
+  --> useArticle_en  true
+;

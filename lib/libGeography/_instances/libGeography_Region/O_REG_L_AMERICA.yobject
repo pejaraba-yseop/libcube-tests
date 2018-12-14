@@ -1,0 +1,38 @@
+LibGeography:Region O_REG_L_AMERICA
+  --> label
+    -> MultilingualText
+      --> i18nName_en
+        -> NlgSubstantive
+          --> root    "Latin America"
+          --> plural  "Latin America"
+          --> gender  INANIMATE
+          --> number  SINGULAR
+        ;
+      --> i18nName_de
+        -> NlgSubstantive
+          --> root    "Lateinamerika"
+          --> plural  "Lateinamerika"
+          --> gender  NEUTRAL
+          --> number  SINGULAR
+        ;
+      --> i18nName_ja
+        -> NlgSubstantive
+          --> root    "ラテンアメリカ"
+          --> plural  "ラテンアメリカ"
+          --> gender  INANIMATE
+          --> number  SINGULAR
+        ;
+    ;
+  --> demonym
+    -> MultilingualText
+      --> i18nName_en  "Latin American"
+    ;
+  --> adjective
+    -> MultilingualText
+      --> i18nName_en
+        -> NlgAdjective
+          --> root      "Latin American"
+        ;
+    ;
+  --> useArticle_en  false
+;

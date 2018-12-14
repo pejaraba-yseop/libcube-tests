@@ -1,0 +1,43 @@
+interface NetPremiumSegments
+    field netPremiumSegmentName
+        --> domains Text
+        --> xmlMapping XmlMappingProperty_NO_SAVE
+        --> dsl -> Textualization
+            --> language LANG_en
+            --> root "netPremiumSegmentName"
+            --> number SINGULAR
+        ;
+    field netPremiumSegmentPercent
+        --> domains Number
+        --> xmlMapping XmlMappingProperty_NO_SAVE
+        --> dsl -> Textualization
+            --> language LANG_en
+            --> root "netPremiumSegmentPercent"
+            --> number SINGULAR
+        ;
+    field netPremiumSegmentIndex
+        --> domains Number
+        --> xmlMapping XmlMappingProperty_NO_SAVE
+        --> dsl -> Textualization
+            --> language LANG_en
+            --> root "netPremiumSegmentIndex"
+            --> number SINGULAR
+        ;
+    field netPremiumSegmentEnglishName
+        --> domains Text
+        --> xmlMapping XmlMappingProperty_NO_SAVE
+        --> dsl -> Textualization
+            --> language LANG_en
+            --> root "netPremiumSegmentEnglishName"
+            --> number SINGULAR
+        ;
+    classProperties
+    --> dsl -> Textualization
+        --> language LANG_en
+        --> root "NetPremiumSegments"
+        --> number PLURAL
+    ;
+;
+
+implementation NetPremiumSegments
+;

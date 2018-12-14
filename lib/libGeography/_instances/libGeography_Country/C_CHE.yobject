@@ -1,0 +1,80 @@
+LibGeography:Country C_CHE
+  --> iso3166_1_numeric_code  "756"
+  --> iso3166_1_alpha_2       "CH"
+  --> iso3166_1_alpha_3       "CHE"
+  --> label
+    -> MultilingualText
+      --> i18nName_fr
+        -> NlgSubstantive
+          --> root    "Suisse"
+          --> plural  "Suisse"
+          --> gender  FEMININE
+          --> number  SINGULAR
+        ;
+      --> i18nName_en
+        -> NlgSubstantive
+          --> root    "Switzerland"
+          --> plural  "Switzerland"
+          --> gender  INANIMATE
+          --> number  SINGULAR
+        ;
+      --> i18nName_es
+        -> NlgSubstantive
+          --> root    "Suiza"
+          --> plural  "Suiza"
+          --> gender  FEMININE
+          --> number  SINGULAR
+        ;
+      --> i18nName_de
+        -> NlgSubstantive
+          --> root    "Schweiz"
+          --> plural  "Schweiz"
+          --> gender  NEUTRAL
+          --> number  SINGULAR
+        ;
+      --> i18nName_ja
+        -> NlgSubstantive
+          --> root    "スイス"
+          --> plural  "スイス"
+          --> gender  INANIMATE
+          --> number  SINGULAR
+        ;
+    ;
+  --> demonym
+    -> MultilingualText
+      --> i18nName_fr
+        -> NlgGenderAgreeableSubstantive
+          --> masculine "Suisse"
+          --> feminine  "Suissesse "
+        ;
+      --> i18nName_en  "Swiss"
+      --> i18nName_es  "suizo"
+      --> i18nName_de
+        -> NlgGenderAgreeableSubstantive
+          --> masculine "Schweizer"
+          --> feminine  "Schweizerin"
+        ;
+    ;
+  --> adjective
+    -> MultilingualText
+      --> i18nName_fr
+        -> NlgAdjective
+          --> root      "suisse"
+          --> feminine  "suisse"
+        ;
+      --> i18nName_en
+        -> NlgAdjective
+          --> root      "Swiss"
+        ;
+      --> i18nName_es
+        -> NlgAdjective
+          --> root      "suizo"
+        ;
+      --> i18nName_de
+        -> NlgAdjective
+          --> root      "schweizerisch"
+        ;
+    ;
+  --> useArticle_fr  true
+  --> useArticle_en  false
+;

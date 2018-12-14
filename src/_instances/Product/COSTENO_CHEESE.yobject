@@ -1,0 +1,8 @@
+
+Product PRODUCT_COSTEÑO
+    --> dsl -> Textualization
+        --> language LANG_en
+        --> root "Costeño cheese"
+        --> number SINGULAR
+    ;
+;

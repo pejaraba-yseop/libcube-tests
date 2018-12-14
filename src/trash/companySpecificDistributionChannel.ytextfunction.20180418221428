@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<yseop-yml:ymlTextFunction xmlns:yseop-yml="http://www.yseop.com/yml/storage" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" domainModelVersion="3" identifier="85212995-36f0-4f9b-b33a-f9780ae94c03">
+    <yseop-yml:textGranule domainModelVersion="3" identifier="b28a168a-1b11-4f0d-90f9-98732b2e7aae">
+        <yseop-yml:granuleI18nContents>
+            <yseop-yml:granuleUnilingueContent locale="en">
+                <yseop-yml:granuleContent>
+                    <yseop-yml:text>\switch(theGeneralData.currentCompany.identifier)
+
+    \case("COMPANY_0501")
+        \beginStyle(nameStyle)
+             \value(theGeneralData.currentCompany)
+
+        \endStyle
+
+        distributes its products primarily through direct sales channels and through its own branches. The company's business model - which is based on direct sales - permits a tighter control.
+\default
+
+\endSwitch</yseop-yml:text>
+                    <yseop-yml:inline-assemblies/>
+                    <yseop-yml:inline-dslFunctionCalls/>
+                </yseop-yml:granuleContent>
+            </yseop-yml:granuleUnilingueContent>
+            <yseop-yml:granuleUnilingueContent locale="es">
+                <yseop-yml:granuleContent>
+                    <yseop-yml:text/>
+                    <yseop-yml:inline-assemblies/>
+                    <yseop-yml:inline-dslFunctionCalls/>
+                </yseop-yml:granuleContent>
+            </yseop-yml:granuleUnilingueContent>
+            <yseop-yml:granuleUnilingueContent locale="fr">
+                <yseop-yml:granuleContent>
+                    <yseop-yml:text/>
+                    <yseop-yml:inline-assemblies/>
+                    <yseop-yml:inline-dslFunctionCalls/>
+                </yseop-yml:granuleContent>
+            </yseop-yml:granuleUnilingueContent>
+        </yseop-yml:granuleI18nContents>
+        <yseop-yml:dslCondition/>
+        <yseop-yml:name/>
+        <yseop-yml:creationDate>2018-03-02T14:39:02.395Z</yseop-yml:creationDate>
+        <yseop-yml:properties identifier="5aca9ff0-c4b9-463d-9045-308e88b311a5">
+            <yseop-yml:property identifier="5aca9ff0-c4b9-463d-9045-308e88b311a5|condition" type="YML_PROPERTY" name="condition"></yseop-yml:property>
+        </yseop-yml:properties>
+    </yseop-yml:textGranule>
+    <yseop-yml:localVariables/>
+    <yseop-yml:advancedContent/>
+    <yseop-yml:ymlParameters/>
+    <yseop-yml:name>companySpecificDistributionChannel</yseop-yml:name>
+    <yseop-yml:properties identifier="fe34e5f4-ee25-4d1d-a96c-87722ca219a9">
+        <yseop-yml:property identifier="fe34e5f4-ee25-4d1d-a96c-87722ca219a9|dsl" type="YML_PROPERTY" name="dsl">"company specific distribution channel"</yseop-yml:property>
+    </yseop-yml:properties>
+</yseop-yml:ymlTextFunction>

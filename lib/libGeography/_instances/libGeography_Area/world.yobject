@@ -1,0 +1,34 @@
+LibGeography:Area AREA_WORLD
+  --> label
+      -> MultilingualText 
+        --> i18nName_fr 
+          -> NlgSubstantive
+            --> root   "TBT"
+            --> plural "TBT"
+            --> gender FEMININE
+            --> number SINGULAR
+          ;
+        --> i18nName_en 
+          -> NlgSubstantive
+            --> root   "World"
+            --> plural "World"
+            --> gender INANIMATE
+            --> number SINGULAR
+          ;
+		--> i18nName_es 
+          -> NlgSubstantive
+            --> root   "TBT"
+            --> plural "TBT"
+            --> gender FEMININE
+            --> number SINGULAR
+          ;
+      ;
+  --> useArticle_fr true
+  --> useArticle_en true   
+        
+  --> dsl -> Textualization
+      --> language LANG_en
+      --> root "World"
+      --> number SINGULAR
+  ;
+;      

@@ -1,0 +1,8 @@
+LibCube:Measure MEASURE_VALUE
+    --> includeInJointureConditions false
+    --> dsl -> Textualization
+        --> language LANG_en
+        --> root "measure value"
+        --> number SINGULAR
+    ;
+;

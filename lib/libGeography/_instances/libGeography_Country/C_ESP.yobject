@@ -1,0 +1,80 @@
+LibGeography:Country C_ESP
+  --> iso3166_1_numeric_code  "724"
+  --> iso3166_1_alpha_2       "ES"
+  --> iso3166_1_alpha_3       "ESP"
+  --> label
+    -> MultilingualText
+      --> i18nName_fr
+        -> NlgSubstantive
+          --> root    "Espagne"
+          --> plural  "Espagne"
+          --> gender  FEMININE
+          --> number  SINGULAR
+        ;
+      --> i18nName_en
+        -> NlgSubstantive
+          --> root    "Spain"
+          --> plural  "Spain"
+          --> gender  INANIMATE
+          --> number  SINGULAR
+        ;
+      --> i18nName_es
+        -> NlgSubstantive
+          --> root    "España"
+          --> plural  "España"
+          --> gender  FEMININE
+          --> number  SINGULAR
+        ;
+      --> i18nName_de
+        -> NlgSubstantive
+          --> root    "Spanien"
+          --> plural  "Spanien"
+          --> gender  NEUTRAL
+          --> number  SINGULAR
+        ;
+      --> i18nName_ja
+        -> NlgSubstantive
+          --> root    "スペイン"
+          --> plural  "スペイン"
+          --> gender  INANIMATE
+          --> number  SINGULAR
+        ;
+    ;
+  --> demonym
+    -> MultilingualText
+      --> i18nName_fr
+        -> NlgGenderAgreeableSubstantive
+          --> masculine "Espagnol"
+          --> feminine  "Espagnole"
+        ;
+      --> i18nName_en  "Spaniard"
+      --> i18nName_es  "español"
+      --> i18nName_de
+        -> NlgGenderAgreeableSubstantive
+          --> masculine "Spanier"
+          --> feminine  "Spanierin"
+        ;
+    ;
+  --> adjective
+    -> MultilingualText
+      --> i18nName_fr
+        -> NlgAdjective
+          --> root      "espagnol"
+          --> feminine  "espagnole"
+        ;
+      --> i18nName_en
+        -> NlgAdjective
+          --> root      "Spanish"
+        ;
+      --> i18nName_es
+        -> NlgAdjective
+          --> root      "español"
+        ;
+      --> i18nName_de
+        -> NlgAdjective
+          --> root      "spanisch"
+        ;
+    ;
+  --> useArticle_fr  true
+  --> useArticle_en  false
+;

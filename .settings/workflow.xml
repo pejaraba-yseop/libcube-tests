@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<workflow>
+    <archives>
+        <archive>
+            <type>test</type>
+            <name>LatamLibCube-TEST-20180412205325.yma</name>
+            <packages>
+                <package state="_NONE_">
+                    <path>src</path>
+                    <commit>64792a2e7dccabaf6fc8ea6ba1da1a7908464e29</commit>
+                </package>
+            </packages>
+        </archive>
+    </archives>
+</workflow>

@@ -1,0 +1,47 @@
+LibGeography:Subdivision STATE_MX_ROO
+  --> iso3166_2    "MX-ROO"
+  --> postal_code  "QR"
+  --> status       STATE
+  --> label
+    -> MultilingualText
+      --> i18nName_fr
+        -> NlgSubstantive
+          --> root    "Quintana Roo"
+          --> plural  "Quintana Roo"
+          --> number  SINGULAR
+        ;
+      --> i18nName_en
+        -> NlgSubstantive
+          --> root    "Quintana Roo"
+          --> plural  "Quintana Roo"
+          --> gender  INANIMATE
+          --> number  SINGULAR
+        ;
+      --> i18nName_es
+        -> NlgSubstantive
+          --> root    "Quintana Roo"
+          --> plural  "Quintana Roo"
+          --> number  SINGULAR
+        ;
+      --> i18nName_de
+        -> NlgSubstantive
+          --> root    "Quintana Roo"
+          --> plural  "Quintana Roo"
+          --> gender  NEUTRAL
+          --> number  SINGULAR
+        ;
+      --> i18nName_ja
+        -> NlgSubstantive
+          --> root    "キンタナ・ロー州"
+          --> plural  "キンタナ・ロー州"
+          --> gender  INANIMATE
+          --> number  SINGULAR
+        ;
+    ;
+  --> demonym
+    -> MultilingualText
+    ;
+  --> adjective
+    -> MultilingualText
+    ;
+;

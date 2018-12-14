@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<yseop-yml:ymlTextFunction xmlns:yseop-yml="http://www.yseop.com/yml/storage" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" domainModelVersion="3" identifier="f8dfe184-a2e6-4281-b150-8148832424e1">
+    <yseop-yml:textGranule domainModelVersion="3" identifier="f8b2158b-14fe-4f26-ba92-e681fb1d57ff">
+        <yseop-yml:granuleI18nContents>
+            <yseop-yml:granuleUnilingueContent locale="en">
+                <yseop-yml:granuleContent>
+                    <yseop-yml:text>
+\beginStyle(BOLD_STYLE)
+    Cheese Global Sales
+\endStyle
+
+\p
+General sales
+\_texts:Options:variationDescription(theGeneralData.generalSalesVariation)
+in a
+\value(theGeneralData.generalSalesVariation, UNIT_PERCENT)
+,from
+\value(theGeneralData.previousYearGeneralSalesFact.getMeasure(MEASURE_SALE_VALUE).value)
+USD in 2017 to
+\value(theGeneralData.currentYearGeneralSalesFact.getMeasure(MEASURE_SALE_VALUE).value)
+USD in 2018. Total sold units
+\_texts:Options:variationDescription(theGeneralData.totalSoldUnitsVariation)
+in a
+\value(theGeneralData.totalSoldUnitsVariation, UNIT_PERCENT)
+going from
+\value(theGeneralData.previousYearGeneralSalesFact.getMeasure(MEASURE_SOLD_UNITS).value)
+units to
+\value(theGeneralData.currentYearGeneralSalesFact.getMeasure(MEASURE_SOLD_UNITS).value)
+in 2018.</yseop-yml:text>
+                    <yseop-yml:inline-assemblies/>
+                    <yseop-yml:inline-dslFunctionCalls/>
+                </yseop-yml:granuleContent>
+            </yseop-yml:granuleUnilingueContent>
+            <yseop-yml:granuleUnilingueContent locale="es">
+                <yseop-yml:granuleContent>
+                    <yseop-yml:text/>
+                    <yseop-yml:inline-assemblies/>
+                    <yseop-yml:inline-dslFunctionCalls/>
+                </yseop-yml:granuleContent>
+            </yseop-yml:granuleUnilingueContent>
+            <yseop-yml:granuleUnilingueContent locale="fr">
+                <yseop-yml:granuleContent>
+                    <yseop-yml:text/>
+                    <yseop-yml:inline-assemblies/>
+                    <yseop-yml:inline-dslFunctionCalls/>
+                </yseop-yml:granuleContent>
+            </yseop-yml:granuleUnilingueContent>
+        </yseop-yml:granuleI18nContents>
+        <yseop-yml:dslCondition/>
+        <yseop-yml:name/>
+        <yseop-yml:creationDate>2018-05-10T16:47:04.396Z</yseop-yml:creationDate>
+        <yseop-yml:properties identifier="a4c064c8-792c-4a88-b64b-487012497012">
+            <yseop-yml:property identifier="a4c064c8-792c-4a88-b64b-487012497012|condition" type="YML_PROPERTY" name="condition"></yseop-yml:property>
+        </yseop-yml:properties>
+    </yseop-yml:textGranule>
+    <yseop-yml:localVariables/>
+    <yseop-yml:advancedContent/>
+    <yseop-yml:ymlParameters/>
+    <yseop-yml:name>GlobalSalesParagraph</yseop-yml:name>
+    <yseop-yml:properties identifier="2cb7bb8d-c4b0-4f17-82d0-fff0847c2a45">
+        <yseop-yml:property identifier="2cb7bb8d-c4b0-4f17-82d0-fff0847c2a45|dsl" type="YML_PROPERTY" name="dsl">"Global Sales Paragraph"</yseop-yml:property>
+    </yseop-yml:properties>
+</yseop-yml:ymlTextFunction>

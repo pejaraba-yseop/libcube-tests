@@ -1,0 +1,55 @@
+LibGeography:Subdivision STATE_US_OK
+  --> iso3166_2    "US-OK"
+  --> postal_code  "OK"
+  --> status       STATE
+  --> label
+    -> MultilingualText
+      --> i18nName_fr
+        -> NlgSubstantive
+          --> root    "Oklahoma"
+          --> plural  "Oklahoma"
+          --> gender  MASCULINE
+          --> number  SINGULAR
+        ;
+      --> i18nName_en
+        -> NlgSubstantive
+          --> root    "Oklahoma"
+          --> plural  "Oklahoma"
+          --> gender  INANIMATE
+          --> number  SINGULAR
+        ;
+      --> i18nName_es
+        -> NlgSubstantive
+          --> root    "Oklahoma"
+          --> plural  "Oklahoma"
+          --> gender  MASCULINE
+          --> number  SINGULAR
+        ;
+      --> i18nName_de
+        -> NlgSubstantive
+          --> root    "Oklahoma"
+          --> plural  "Oklahoma"
+          --> gender  NEUTRAL
+          --> number  SINGULAR
+        ;
+      --> i18nName_ja
+        -> NlgSubstantive
+          --> root    " オクラホマ州"
+          --> plural  " オクラホマ州"
+          --> gender  INANIMATE
+          --> number  SINGULAR
+        ;
+    ;
+  --> demonym
+    -> MultilingualText
+      --> i18nName_en  "Oklahoman"
+    ;
+  --> adjective
+    -> MultilingualText
+      --> i18nName_en
+        -> NlgAdjective
+          --> root      "Oklahoman"
+        ;
+    ;
+  --> useArticle_en  false
+;

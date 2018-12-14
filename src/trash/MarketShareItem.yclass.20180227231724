@@ -1,0 +1,51 @@
+interface MarketShareItem
+    field marketShareID
+        --> domains Text
+        --> xmlMapping XmlMappingProperty_NO_SAVE
+        --> dsl -> Textualization
+            --> language LANG_en
+            --> root "marketShareID"
+            --> number SINGULAR
+        ;
+    field marketShareName
+        --> domains Text
+        --> xmlMapping XmlMappingProperty_NO_SAVE
+        --> dsl -> Textualization
+            --> language LANG_en
+            --> root "marketShareName"
+            --> number SINGULAR
+        ;
+    field marketShareValueDifference
+        --> domains Number
+        --> xmlMapping XmlMappingProperty_NO_SAVE
+        --> dsl -> Textualization
+            --> language LANG_en
+            --> root "marketShareValueDifference"
+            --> number SINGULAR
+        ;
+    field marketSharePercentDifference
+        --> domains Number
+        --> xmlMapping XmlMappingProperty_NO_SAVE
+        --> dsl -> Textualization
+            --> language LANG_en
+            --> root "marketSharePercentDifference"
+            --> number SINGULAR
+        ;
+    field marketShareItemRank
+        --> domains Integer
+        --> xmlMapping XmlMappingProperty_NO_SAVE
+        --> dsl -> Textualization
+            --> language LANG_en
+            --> root "marketShareItemRank"
+            --> number SINGULAR
+        ;
+    classProperties
+    --> dsl -> Textualization
+        --> language LANG_en
+        --> root "MarketShareItem"
+        --> number SINGULAR
+    ;
+;
+
+implementation MarketShareItem
+;

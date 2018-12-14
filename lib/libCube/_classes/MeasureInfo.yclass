@@ -1,0 +1,23 @@
+interface LibCube:MeasureInfo
+
+    field unitType
+        --> domains libCube:_constLists:unitType
+        --> documentation "the unit type of the measure (i.e. number, dollar, pct, etc.)"
+        --> xmlMapping XmlMappingProperty_SAVE
+        --> dsl -> Textualization
+            --> language LANG_en
+            --> root "unit type"
+            --> number PLURAL
+        ;	
+
+    classProperties
+    --> dsl -> Textualization
+        --> language LANG_en
+        --> root "Cube Measure info"
+        --> number SINGULAR
+        --> hasDeterminer true
+    ;
+;
+
+implementation LibCube:MeasureInfo
+;

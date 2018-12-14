@@ -1,0 +1,38 @@
+LibGeography:Region UN_REG_ASIA_C
+  --> label
+    -> MultilingualText
+      --> i18nName_en
+        -> NlgSubstantive
+          --> root    "Central Asia"
+          --> plural  "Central Asia"
+          --> gender  INANIMATE
+          --> number  SINGULAR
+        ;
+      --> i18nName_de
+        -> NlgSubstantive
+          --> root    "Zentralasien"
+          --> plural  "Zentralasien"
+          --> gender  NEUTRAL
+          --> number  SINGULAR
+        ;
+      --> i18nName_ja
+        -> NlgSubstantive
+          --> root    "中央アジア"
+          --> plural  "中央アジア"
+          --> gender  INANIMATE
+          --> number  SINGULAR
+        ;
+    ;
+  --> demonym
+    -> MultilingualText
+      --> i18nName_en  "Central Asian"
+    ;
+  --> adjective
+    -> MultilingualText
+      --> i18nName_en
+        -> NlgAdjective
+          --> root      "Central Asian"
+        ;
+    ;
+  --> useArticle_en  false
+;

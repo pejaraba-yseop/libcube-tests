@@ -1,0 +1,50 @@
+interface LibCube:HierarchyElement extends LibCube:Member
+    field correlation
+        --> domains libCube:_constLists:correlation
+        --> documentation "The correlation of the Hierarchy Element (i.e. positive/negative is good/bad)"
+        --> xmlMapping XmlMappingProperty_SAVE
+        --> dsl -> Textualization
+            --> language LANG_en
+            --> root "correlation"
+            --> number SINGULAR
+        ;
+    field parent
+        --> domains LibCube:HierarchyElement
+        --> documentation "The parent of the hierarchy element.  Is calculated by the library."
+        --> xmlMapping XmlMappingProperty_SAVE
+        --> dsl -> Textualization
+            --> language LANG_en
+            --> root "parent"
+            --> number SINGULAR
+        ;
+	field isLeaf
+        --> domains Boolean
+        --> xmlMapping XmlMappingProperty_SAVE
+        --> dsl -> Textualization
+            --> language LANG_en
+            --> root "parent"
+            --> number SINGULAR
+        ;        	
+    field grandparent
+        --> domains LibCube:HierarchyElement
+        --> xmlMapping XmlMappingProperty_SAVE
+        --> dsl -> Textualization
+            --> language LANG_en
+            --> root "grandparent"
+            --> number SINGULAR
+        ;
+
+    
+
+    classProperties
+    --> dsl -> Textualization
+        --> language LANG_en
+        --> root "Hierarchy Element"
+        --> number SINGULAR
+    ;
+    --> trackInstances true
+    --> dynamicInstances  true 	
+;
+
+implementation LibCube:HierarchyElement
+;

@@ -1,0 +1,22 @@
+interface LibCube:FactsResponse
+    field facts
+        --> domains Collection
+        --> domainsLevel2 LibCube:Fact
+        --> documentation "Result facts from a query or facts request"
+        --> xmlMapping XmlMappingProperty_SAVE
+        --> dsl -> Textualization
+            --> language LANG_en
+            --> root "facts"
+            --> number SINGULAR
+        ;
+
+    classProperties
+    --> dsl -> Textualization
+        --> language LANG_en
+        --> root "Facts Response"
+        --> number SINGULAR
+    ;
+;
+
+implementation LibCube:FactsResponse
+;

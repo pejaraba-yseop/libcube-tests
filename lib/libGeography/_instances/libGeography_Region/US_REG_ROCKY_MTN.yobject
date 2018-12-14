@@ -1,0 +1,26 @@
+LibGeography:Region US_REG_ROCKY_MTN
+  --> label
+    -> MultilingualText
+      --> i18nName_en
+        -> NlgSubstantive
+          --> root    "Rocky Mountain"
+          --> plural  "Rocky Mountain"
+          --> gender  INANIMATE
+          --> number  SINGULAR
+        ;
+      --> i18nName_ja
+        -> NlgSubstantive
+          --> root    "ロッキー山脈"
+          --> plural  "ロッキー山脈"
+          --> gender  INANIMATE
+          --> number  SINGULAR
+        ;
+    ;
+  --> demonym
+    -> MultilingualText
+    ;
+  --> adjective
+    -> MultilingualText
+    ;
+  --> useArticle_en  true
+;

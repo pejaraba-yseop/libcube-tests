@@ -1,0 +1,7 @@
+LibCube:TimePeriod PERIOD_YEAR
+    --> dsl -> Textualization
+        --> language LANG_en
+        --> root "period year"
+        --> number SINGULAR
+    ;
+;

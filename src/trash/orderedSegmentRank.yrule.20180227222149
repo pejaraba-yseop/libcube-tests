@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<yseop-yml:ymlRule xmlns:yseop-yml="http://www.yseop.com/yml/storage" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" domainModelVersion="3" identifier="735b38c4-2bcf-464d-99d6-6946c92bb8b8">
+    <yseop-yml:content>?businessSegment.orderedSegmentRanking = getGeneralData().businessSegmentOrderedList.indexOf(?businessSegment);</yseop-yml:content>
+    <yseop-yml:content>?businessSegment in getGeneralData().businessSegmentOrderedList</yseop-yml:content>
+    <yseop-yml:name>orderedSegmentRank</yseop-yml:name>
+    <yseop-yml:properties identifier="c449a24b-d9e1-441a-b0de-bb1f9818c4da">
+        <yseop-yml:property identifier="c449a24b-d9e1-441a-b0de-bb1f9818c4da|dsl" type="YML_PROPERTY" name="dsl">"ordered segment rank"</yseop-yml:property>
+        <yseop-yml:property identifier="c449a24b-d9e1-441a-b0de-bb1f9818c4da|disabled" type="GENERATION_PROPERTY" name="disabled">true</yseop-yml:property>
+    </yseop-yml:properties>
+</yseop-yml:ymlRule>

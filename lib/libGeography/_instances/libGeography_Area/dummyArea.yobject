@@ -1,0 +1,7 @@
+LibGeography:Country dummyArea
+  --> dsl -> Textualization
+      --> language LANG_en
+      --> root "dummy area"
+      --> number SINGULAR
+  ;
+;

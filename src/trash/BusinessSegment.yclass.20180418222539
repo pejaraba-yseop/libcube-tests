@@ -1,0 +1,129 @@
+
+interface BusinessSegment extends LibCube:HierarchyElement
+    field allCompanyFact
+        --> domains LibCube:Fact
+        --> xmlMapping XmlMappingProperty_NO_SAVE
+        --> dsl -> Textualization
+            --> language LANG_en
+            --> root "fact for total of companies"
+            --> number SINGULAR
+        ;
+    field companyFactsSorter
+        --> domains LibCube:FactsSorter
+        --> xmlMapping XmlMappingProperty_NO_SAVE
+        --> dsl -> Textualization
+            --> language LANG_en
+            --> root "companyFactsSorter"
+            --> number SINGULAR
+        ;
+    field currentCompanyFact
+        --> domains LibCube:Fact
+        --> xmlMapping XmlMappingProperty_NO_SAVE
+        --> dsl -> Textualization
+            --> language LANG_en
+            --> root "currentCompanyFact"
+            --> number SINGULAR
+        ;
+    field currentCompanyRank
+        --> domains Integer
+        --> xmlMapping XmlMappingProperty_NO_SAVE
+        --> dsl -> Textualization
+            --> language LANG_en
+            --> root "currentCompanyRank"
+            --> number SINGULAR
+        ;
+    field currentCompanyMarketShare
+        --> domains Number
+        --> xmlMapping XmlMappingProperty_NO_SAVE
+        --> dsl -> Textualization
+            --> language LANG_en
+            --> root "currentCompanyMarketShare"
+            --> number SINGULAR
+        ;
+    field segmentShareInCurrentCompanyRevenue
+        --> domains Number
+        --> xmlMapping XmlMappingProperty_NO_SAVE
+        --> dsl -> Textualization
+            --> language LANG_en
+            --> root "segmentShareInCurrentCompanyRevenue"
+            --> number SINGULAR
+        ;
+
+    method calculate()
+    --> domains Void
+    --> dsl -> Textualization
+        --> language LANG_en
+        --> root "calculate"
+        --> number SINGULAR
+    ;        
+        
+    classProperties
+    --> dsl -> Textualization
+        --> language LANG_en
+        --> root "Business Segment"
+        --> number SINGULAR
+    ;
+;
+
+implementation BusinessSegment
+ override {
+  toStringInStream function
+};
+
+
+function BusinessSegment::calculate()
+--> action
+    {
+            //FactSorter
+            this.companyFactsSorter = new(LibCube:FactsSorter);
+            
+            if (DIMENSION_BUSINESS_SEGMENT.hierarchyMembersAccesors.getMembersByLevel(3).contains(this) == true) {
+                 this.allCompanyFact = as(?fact, ?fact.segmentNivel3AllCompany == this).get(_FIRST); 
+                 this.companyFactsSorter.facts =  as(?fact, ?fact.segmentNivel3ByCompany == this, ?fact.getMeasure(MEASURE_NET_REVENUE) != null);
+            }
+            /*
+            if (this == getGeneralData().currentSegment) {
+                 this.allCompanyFact = ROOT_FACT_CURRENT_SEGMENT_SELECTION.selectedFact; 
+                 this.companyFactsSorter.facts =  as(?fact, ?fact.isCurrentSegment == true, ?fact.getMeasure(MEASURE_NET_REVENUE) != null);
+            } */           
+            
+            this.companyFactsSorter.sortType = SORT_TYPE_ONE_MEASURE;
+            this.companyFactsSorter.measure = MEASURE_NET_REVENUE;
+            this.companyFactsSorter.sortFacts();
+            
+            //currentCompanyRank
+            this.currentCompanyRank = this.companyFactsSorter.getRank(theGeneralData.currentCompany);
+           
+           if (this.currentCompanyRank != null) {
+                //currentCompanyFact
+                this.currentCompanyFact =  this.companyFactsSorter.getFact(this.currentCompanyRank);
+    			if (this.currentCompanyFact != null && this.currentCompanyFact.getMeasure(MEASURE_NET_REVENUE) != null) {
+	                //currentCompanyMarketShare
+	                this.currentCompanyMarketShare = this.currentCompanyFact.getMeasure(MEASURE_NET_REVENUE).value/ this.allCompanyFact.getMeasure(MEASURE_NET_REVENUE).value ;
+	                // 
+                this.segmentShareInCurrentCompanyRevenue =  this.currentCompanyFact.getMeasure(MEASURE_NET_REVENUE).value / CURRENT_COMPANY_ALL_SEGMENTS_FACT_SELECTION.selectedFact.getMeasure(MEASURE_NET_REVENUE).value;
+	                
+           		}
+           }
+    } 
+;           
+           
+
+function BusinessSegment::toStringInStream({[_KEY]: Symbol mode {__nullable},} args)
+static {
+   NlgRepresentant    REPRESENTANT_THE_BUSINESS_SEGMENT
+       --> referential \(
+                          \setCurrentReferenceGender(MASCULINE) 
+                          \value(label) 
+                       \)
+       --> anaphor \(
+                      \setCurrentReferenceGender(MASCULINE) 
+                      anaphor segmento 
+                   \)
+   ;
+}
+--> action
+    {
+        REPRESENTANT_THE_BUSINESS_SEGMENT.write (_REFERENT: this, args);
+    } 
+;

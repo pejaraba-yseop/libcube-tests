@@ -1,0 +1,55 @@
+LibGeography:Subdivision STATE_US_WY
+  --> iso3166_2    "US-WY"
+  --> postal_code  "WY"
+  --> status       STATE
+  --> label
+    -> MultilingualText
+      --> i18nName_fr
+        -> NlgSubstantive
+          --> root    "Wyoming"
+          --> plural  "Wyoming"
+          --> gender  MASCULINE
+          --> number  SINGULAR
+        ;
+      --> i18nName_en
+        -> NlgSubstantive
+          --> root    "Wyoming"
+          --> plural  "Wyoming"
+          --> gender  INANIMATE
+          --> number  SINGULAR
+        ;
+      --> i18nName_es
+        -> NlgSubstantive
+          --> root    "Wyoming"
+          --> plural  "Wyoming"
+          --> gender  MASCULINE
+          --> number  SINGULAR
+        ;
+      --> i18nName_de
+        -> NlgSubstantive
+          --> root    "Wyoming"
+          --> plural  "Wyoming"
+          --> gender  NEUTRAL
+          --> number  SINGULAR
+        ;
+      --> i18nName_ja
+        -> NlgSubstantive
+          --> root    " ワイオミング州"
+          --> plural  " ワイオミング州"
+          --> gender  INANIMATE
+          --> number  SINGULAR
+        ;
+    ;
+  --> demonym
+    -> MultilingualText
+      --> i18nName_en  "Wyomingite"
+    ;
+  --> adjective
+    -> MultilingualText
+      --> i18nName_en
+        -> NlgAdjective
+          --> root      "Wyomingite"
+        ;
+    ;
+  --> useArticle_en  false
+;

@@ -1,0 +1,80 @@
+LibGeography:Country C_HND
+  --> iso3166_1_numeric_code  "340"
+  --> iso3166_1_alpha_2       "HN"
+  --> iso3166_1_alpha_3       "HND"
+  --> label
+    -> MultilingualText
+      --> i18nName_fr
+        -> NlgSubstantive
+          --> root    "Honduras"
+          --> plural  "Honduras"
+          --> gender  MASCULINE
+          --> number  SINGULAR
+        ;
+      --> i18nName_en
+        -> NlgSubstantive
+          --> root    "Honduras"
+          --> plural  "Honduras"
+          --> gender  INANIMATE
+          --> number  SINGULAR
+        ;
+      --> i18nName_es
+        -> NlgSubstantive
+          --> root    "Honduras"
+          --> plural  "Honduras"
+          --> gender  MASCULINE
+          --> number  SINGULAR
+        ;
+      --> i18nName_de
+        -> NlgSubstantive
+          --> root    "Honduras"
+          --> plural  "Honduras"
+          --> gender  NEUTRAL
+          --> number  SINGULAR
+        ;
+      --> i18nName_ja
+        -> NlgSubstantive
+          --> root    "ホンジュラス"
+          --> plural  "ホンジュラス"
+          --> gender  INANIMATE
+          --> number  SINGULAR
+        ;
+    ;
+  --> demonym
+    -> MultilingualText
+      --> i18nName_fr
+        -> NlgGenderAgreeableSubstantive
+          --> masculine "Hondurien"
+          --> feminine  "Hondurienne"
+        ;
+      --> i18nName_en  "Honduran"
+      --> i18nName_es  "hondureño"
+      --> i18nName_de
+        -> NlgGenderAgreeableSubstantive
+          --> masculine "Honduraner"
+          --> feminine  "Honduranerin"
+        ;
+    ;
+  --> adjective
+    -> MultilingualText
+      --> i18nName_fr
+        -> NlgAdjective
+          --> root      "hondurien"
+          --> feminine  "hondurienne"
+        ;
+      --> i18nName_en
+        -> NlgAdjective
+          --> root      "Honduran"
+        ;
+      --> i18nName_es
+        -> NlgAdjective
+          --> root      "hondureño"
+        ;
+      --> i18nName_de
+        -> NlgAdjective
+          --> root      "honduranisch"
+        ;
+    ;
+  --> useArticle_fr  true
+  --> useArticle_en  false
+;

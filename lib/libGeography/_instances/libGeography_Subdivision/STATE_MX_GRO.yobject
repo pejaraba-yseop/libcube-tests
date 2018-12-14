@@ -1,0 +1,47 @@
+LibGeography:Subdivision STATE_MX_GRO
+  --> iso3166_2    "MX-GRO"
+  --> postal_code  "GR"
+  --> status       STATE
+  --> label
+    -> MultilingualText
+      --> i18nName_fr
+        -> NlgSubstantive
+          --> root    "Guanajuato"
+          --> plural  "Guanajuato"
+          --> number  SINGULAR
+        ;
+      --> i18nName_en
+        -> NlgSubstantive
+          --> root    "Guanajuato"
+          --> plural  "Guanajuato"
+          --> gender  INANIMATE
+          --> number  SINGULAR
+        ;
+      --> i18nName_es
+        -> NlgSubstantive
+          --> root    "Guanajuato"
+          --> plural  "Guanajuato"
+          --> number  SINGULAR
+        ;
+      --> i18nName_de
+        -> NlgSubstantive
+          --> root    "Guanajuato"
+          --> plural  "Guanajuato"
+          --> gender  NEUTRAL
+          --> number  SINGULAR
+        ;
+      --> i18nName_ja
+        -> NlgSubstantive
+          --> root    "グアナファト州"
+          --> plural  "グアナファト州"
+          --> gender  INANIMATE
+          --> number  SINGULAR
+        ;
+    ;
+  --> demonym
+    -> MultilingualText
+    ;
+  --> adjective
+    -> MultilingualText
+    ;
+;

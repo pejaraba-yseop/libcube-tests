@@ -1,0 +1,13 @@
+
+interface Sector extends LibCube:HierarchyElement
+    classProperties
+    --> dsl -> Textualization
+        --> language LANG_en
+        --> root "Sector"
+        --> number SINGULAR
+    ;
+;
+
+implementation Sector
+;
+

@@ -1,0 +1,80 @@
+LibGeography:Country C_BEL
+  --> iso3166_1_numeric_code  "056"
+  --> iso3166_1_alpha_2       "BE"
+  --> iso3166_1_alpha_3       "BEL"
+  --> label
+    -> MultilingualText
+      --> i18nName_fr
+        -> NlgSubstantive
+          --> root    "Belgique"
+          --> plural  "Belgique"
+          --> gender  FEMININE
+          --> number  SINGULAR
+        ;
+      --> i18nName_en
+        -> NlgSubstantive
+          --> root    "Belgium"
+          --> plural  "Belgium"
+          --> gender  INANIMATE
+          --> number  SINGULAR
+        ;
+      --> i18nName_es
+        -> NlgSubstantive
+          --> root    "Bélgica"
+          --> plural  "Bélgica"
+          --> gender  FEMININE
+          --> number  SINGULAR
+        ;
+      --> i18nName_de
+        -> NlgSubstantive
+          --> root    "Belgien"
+          --> plural  "Belgien"
+          --> gender  NEUTRAL
+          --> number  SINGULAR
+        ;
+      --> i18nName_ja
+        -> NlgSubstantive
+          --> root    "ベルギー"
+          --> plural  "ベルギー"
+          --> gender  INANIMATE
+          --> number  SINGULAR
+        ;
+    ;
+  --> demonym
+    -> MultilingualText
+      --> i18nName_fr
+        -> NlgGenderAgreeableSubstantive
+          --> masculine "Belge"
+          --> feminine  "Belge"
+        ;
+      --> i18nName_en  "Belgian"
+      --> i18nName_es  "belga"
+      --> i18nName_de
+        -> NlgGenderAgreeableSubstantive
+          --> masculine "Belgier"
+          --> feminine  "Belgierin"
+        ;
+    ;
+  --> adjective
+    -> MultilingualText
+      --> i18nName_fr
+        -> NlgAdjective
+          --> root      "belge"
+          --> feminine  "belge"
+        ;
+      --> i18nName_en
+        -> NlgAdjective
+          --> root      "Belgian"
+        ;
+      --> i18nName_es
+        -> NlgAdjective
+          --> root      "belga"
+        ;
+      --> i18nName_de
+        -> NlgAdjective
+          --> root      "belgisch"
+        ;
+    ;
+  --> useArticle_fr  true
+  --> useArticle_en  false
+;

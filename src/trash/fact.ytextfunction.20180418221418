@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<yseop-yml:ymlTextFunction xmlns:yseop-yml="http://www.yseop.com/yml/storage" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" domainModelVersion="3" identifier="5ebd3768-3126-446e-8b7f-c83bea1230cf">
+    <yseop-yml:textGranule domainModelVersion="3" identifier="7dae7c84-c40b-4883-8104-26223e3d12b2">
+        <yseop-yml:granuleI18nContents>
+            <yseop-yml:granuleUnilingueContent locale="en">
+                <yseop-yml:granuleContent>
+                    <yseop-yml:text>/*
+ROOT_FACT_SELECTION isRootFact
+\p
+\nounPhrase(ROOT_FACT_SELECTION.selectedFact.getDimension(DIMENSION_BUSINESS_SEGMENT))
+\p
+CURRENT_COMPANY_ALL_SEGMENTS_FACT_SELECTION
+\nounPhrase(CURRENT_COMPANY_ALL_SEGMENTS_FACT_SELECTION.selectedFact.getDimension(DIMENSION_BUSINESS_SEGMENT))
+\nounPhrase(CURRENT_COMPANY_ALL_SEGMENTS_FACT_SELECTION.selectedFact.getDimension(DIMENSION_COMPANY))
+\p
+ROOT_FACT_DRILL_DOWN_BY_COMPANY_FACT_SELECTION
+\nounPhrase(ROOT_FACT_DRILL_DOWN_BY_COMPANY_FACT_SELECTION>>selectedFacts.size())
+\nounPhrase(ROOT_FACT_DRILL_DOWN_BY_COMPANY_FACT_SELECTION.selectedFacts.size())
+\nounPhrase(as(?fact, ?fact.isSegmentAllFact == true).size())
+\p
+CURRENT_COMPANY_CURRENT_SEGMENT_SELECTION
+\nounPhrase(CURRENT_COMPANY_CURRENT_SEGMENT_SELECTION>>selectedFacts.size())
+\nounPhrase(as(?fact, ?fact.isCurrentCompanyCurrentSegment == true).size())
+\p
+
+\foreach(_businessSegment, BusinessSegment)
+    \nounPhrase(_businessSegment.label)
+
+    \if(_businessSegment.currentCompanyRank != null)
+        \value(_businessSegment.currentCompanyRank)
+        -
+        \value(_businessSegment.currentCompanyMarketShare, UNIT_PERCENT)
+    \endIf
+
+    \endOfLine
+
+\endForeach
+
+\p
+mentioned Segments
+\endOfLine
+
+\foreach(_businessSegment,getGeneralData().mentionedBusinessSegmentByRankInMarketOrderedSet)
+    \nounPhrase(_businessSegment.label)
+
+    \if(_businessSegment.currentCompanyRank != null)
+        \nounPhrase(_businessSegment.currentCompanyRank)
+        -
+        \nounPhrase(_businessSegment.currentCompanyMarketShare, UNIT_PERCENT)
+    \endIf
+
+    \endOfLine
+
+\endForeach
+*/
+</yseop-yml:text>
+                    <yseop-yml:inline-assemblies/>
+                    <yseop-yml:inline-dslFunctionCalls/>
+                </yseop-yml:granuleContent>
+            </yseop-yml:granuleUnilingueContent>
+            <yseop-yml:granuleUnilingueContent locale="es">
+                <yseop-yml:granuleContent>
+                    <yseop-yml:text/>
+                    <yseop-yml:inline-assemblies/>
+                    <yseop-yml:inline-dslFunctionCalls/>
+                </yseop-yml:granuleContent>
+            </yseop-yml:granuleUnilingueContent>
+            <yseop-yml:granuleUnilingueContent locale="fr">
+                <yseop-yml:granuleContent>
+                    <yseop-yml:text/>
+                    <yseop-yml:inline-assemblies/>
+                    <yseop-yml:inline-dslFunctionCalls/>
+                </yseop-yml:granuleContent>
+            </yseop-yml:granuleUnilingueContent>
+        </yseop-yml:granuleI18nContents>
+        <yseop-yml:dslCondition/>
+        <yseop-yml:name/>
+        <yseop-yml:creationDate>2018-02-23T20:31:20.614Z</yseop-yml:creationDate>
+        <yseop-yml:properties identifier="58a3eb17-ebaa-426b-98f6-97768dd267aa">
+            <yseop-yml:property identifier="58a3eb17-ebaa-426b-98f6-97768dd267aa|condition" type="YML_PROPERTY" name="condition"></yseop-yml:property>
+        </yseop-yml:properties>
+    </yseop-yml:textGranule>
+    <yseop-yml:localVariables/>
+    <yseop-yml:advancedContent/>
+    <yseop-yml:ymlParameters/>
+    <yseop-yml:name>fact</yseop-yml:name>
+    <yseop-yml:properties identifier="56aa6321-74a6-4920-b952-9050b94353ed">
+        <yseop-yml:property identifier="56aa6321-74a6-4920-b952-9050b94353ed|dsl" type="YML_PROPERTY" name="dsl">"fact"</yseop-yml:property>
+    </yseop-yml:properties>
+</yseop-yml:ymlTextFunction>

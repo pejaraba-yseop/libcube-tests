@@ -1,0 +1,80 @@
+LibGeography:Country C_LBN
+  --> iso3166_1_numeric_code  "422"
+  --> iso3166_1_alpha_2       "LB"
+  --> iso3166_1_alpha_3       "LBN"
+  --> label
+    -> MultilingualText
+      --> i18nName_fr
+        -> NlgSubstantive
+          --> root    "Liban"
+          --> plural  "Liban"
+          --> gender  MASCULINE
+          --> number  SINGULAR
+        ;
+      --> i18nName_en
+        -> NlgSubstantive
+          --> root    "Lebanon"
+          --> plural  "Lebanon"
+          --> gender  INANIMATE
+          --> number  SINGULAR
+        ;
+      --> i18nName_es
+        -> NlgSubstantive
+          --> root    "Líbano"
+          --> plural  "Líbano"
+          --> gender  MASCULINE
+          --> number  SINGULAR
+        ;
+      --> i18nName_de
+        -> NlgSubstantive
+          --> root    "Libanon"
+          --> plural  "Libanon"
+          --> gender  NEUTRAL
+          --> number  SINGULAR
+        ;
+      --> i18nName_ja
+        -> NlgSubstantive
+          --> root    "レバノン"
+          --> plural  "レバノン"
+          --> gender  INANIMATE
+          --> number  SINGULAR
+        ;
+    ;
+  --> demonym
+    -> MultilingualText
+      --> i18nName_fr
+        -> NlgGenderAgreeableSubstantive
+          --> masculine "Libanais"
+          --> feminine  "Libanaise"
+        ;
+      --> i18nName_en  "Lebanese"
+      --> i18nName_es  "libanés"
+      --> i18nName_de
+        -> NlgGenderAgreeableSubstantive
+          --> masculine "Libanese"
+          --> feminine  "Libanesin"
+        ;
+    ;
+  --> adjective
+    -> MultilingualText
+      --> i18nName_fr
+        -> NlgAdjective
+          --> root      "libanais"
+          --> feminine  "libanaise"
+        ;
+      --> i18nName_en
+        -> NlgAdjective
+          --> root      "Lebanese"
+        ;
+      --> i18nName_es
+        -> NlgAdjective
+          --> root      "libanés"
+        ;
+      --> i18nName_de
+        -> NlgAdjective
+          --> root      "libanesisch"
+        ;
+    ;
+  --> useArticle_fr  true
+  --> useArticle_en  false
+;

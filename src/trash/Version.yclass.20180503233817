@@ -1,0 +1,13 @@
+
+interface Version extends LibCube:HierarchyElement
+    classProperties
+    --> dsl -> Textualization
+        --> language LANG_en
+        --> root "Version"
+        --> number SINGULAR
+    ;
+;
+
+implementation Version
+;
+

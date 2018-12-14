@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<yseop-yml:ymlRule xmlns:yseop-yml="http://www.yseop.com/yml/storage" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" domainModelVersion="3" identifier="3427c801-41ec-4424-95dd-a6ce0296e683">
+    <yseop-yml:content>getGeneralData().marketPositionofInsurerePercent = ?marketPositionItem.marketPositionPercentDifference;</yseop-yml:content>
+    <yseop-yml:content>?marketPositionItem in MarketPositionItem
+?marketPositionItem.marketPositionName.stringCompare(getGeneralData().insurerRequested, _CASE_INSENSITIVE) == true</yseop-yml:content>
+    <yseop-yml:name>addToGlobalMarketPosition</yseop-yml:name>
+    <yseop-yml:properties identifier="f0862cc9-d35b-4517-83fd-a1bc10535dbc">
+        <yseop-yml:property identifier="f0862cc9-d35b-4517-83fd-a1bc10535dbc|dsl" type="YML_PROPERTY" name="dsl">"add to global market position"</yseop-yml:property>
+        <yseop-yml:property identifier="f0862cc9-d35b-4517-83fd-a1bc10535dbc|disabled" type="GENERATION_PROPERTY" name="disabled">true</yseop-yml:property>
+    </yseop-yml:properties>
+</yseop-yml:ymlRule>

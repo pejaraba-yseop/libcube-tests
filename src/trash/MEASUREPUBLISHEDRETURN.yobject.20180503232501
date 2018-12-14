@@ -1,0 +1,8 @@
+
+Measure MEASURE_PUBLISHED_RETURN
+    --> dsl -> Textualization
+        --> language LANG_en
+        --> root "Published Return Measure"
+        --> number SINGULAR
+    ;
+;

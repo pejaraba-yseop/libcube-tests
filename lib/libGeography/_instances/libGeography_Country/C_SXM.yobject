@@ -1,0 +1,71 @@
+LibGeography:Country C_SXM
+  --> iso3166_1_numeric_code  "534"
+  --> iso3166_1_alpha_2       "SX"
+  --> iso3166_1_alpha_3       "SXM"
+  --> label
+    -> MultilingualText
+      --> i18nName_fr
+        -> NlgSubstantive
+          --> root    "Sint Maarten"
+          --> plural  "Sint Maarten"
+          --> gender  MASCULINE
+          --> number  SINGULAR
+        ;
+      --> i18nName_en
+        -> NlgSubstantive
+          --> root    "Sint Maarten"
+          --> plural  "Sint Maarten"
+          --> gender  INANIMATE
+          --> number  SINGULAR
+        ;
+      --> i18nName_es
+        -> NlgSubstantive
+          --> root    "San Martín"
+          --> plural  "San Martín"
+          --> gender  MASCULINE
+          --> number  SINGULAR
+        ;
+      --> i18nName_de
+        -> NlgSubstantive
+          --> root    "Sint Maarten"
+          --> plural  "Sint Maarten"
+          --> gender  NEUTRAL
+          --> number  SINGULAR
+        ;
+      --> i18nName_ja
+        -> NlgSubstantive
+          --> root    "シントマールテン"
+          --> plural  "シントマールテン"
+          --> gender  INANIMATE
+          --> number  SINGULAR
+        ;
+    ;
+  --> demonym
+    -> MultilingualText
+      --> i18nName_fr  "de Sint-Maarten "
+      --> i18nName_en  "Sint Maartener"
+      --> i18nName_es  "de San Martín"
+      --> i18nName_de  "von Sint Maarten"
+    ;
+  --> adjective
+    -> MultilingualText
+      --> i18nName_fr
+        -> NlgAdjective
+          --> root      "de Sint-Maarten"
+        ;
+      --> i18nName_en
+        -> NlgAdjective
+          --> root      "of Sint Maarten"
+        ;
+      --> i18nName_es
+        -> NlgAdjective
+          --> root      "de San Martín"
+        ;
+      --> i18nName_de
+        -> NlgAdjective
+          --> root      "von Sint Maarten"
+        ;
+    ;
+  --> useArticle_fr  false
+  --> useArticle_en  false
+;

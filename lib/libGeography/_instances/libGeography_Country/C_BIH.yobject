@@ -1,0 +1,71 @@
+LibGeography:Country C_BIH
+  --> iso3166_1_numeric_code  "070"
+  --> iso3166_1_alpha_2       "BA"
+  --> iso3166_1_alpha_3       "BIH"
+  --> label
+    -> MultilingualText
+      --> i18nName_fr
+        -> NlgSubstantive
+          --> root    "Bosnie-Herzégovine"
+          --> plural  "Bosnie-Herzégovine"
+          --> gender  FEMININE
+          --> number  SINGULAR
+        ;
+      --> i18nName_en
+        -> NlgSubstantive
+          --> root    "Bosnia and Herzegovina"
+          --> plural  "Bosnia and Herzegovina"
+          --> gender  INANIMATE
+          --> number  SINGULAR
+        ;
+      --> i18nName_es
+        -> NlgSubstantive
+          --> root    "Bosnia y Herzegovina"
+          --> plural  "Bosnia y Herzegovina"
+          --> gender  FEMININE
+          --> number  SINGULAR
+        ;
+      --> i18nName_de
+        -> NlgSubstantive
+          --> root    "Bosnien und Herzegowina"
+          --> plural  "Bosnien und Herzegowina"
+          --> gender  NEUTRAL
+          --> number  SINGULAR
+        ;
+      --> i18nName_ja
+        -> NlgSubstantive
+          --> root    "ボスニア・ヘルツェゴビナ"
+          --> plural  "ボスニア・ヘルツェゴビナ"
+          --> gender  INANIMATE
+          --> number  SINGULAR
+        ;
+    ;
+  --> demonym
+    -> MultilingualText
+      --> i18nName_fr  "de Bosnie-Herzégovine"
+      --> i18nName_en  "of Bosnia and Herzegovina"
+      --> i18nName_es  "bosnioherzegovino"
+      --> i18nName_de  "von Bosnien und Herzegowina"
+    ;
+  --> adjective
+    -> MultilingualText
+      --> i18nName_fr
+        -> NlgAdjective
+          --> root      "de Bosnie-Herzégovine"
+        ;
+      --> i18nName_en
+        -> NlgAdjective
+          --> root      "of Bosnia and Herzegovina"
+        ;
+      --> i18nName_es
+        -> NlgAdjective
+          --> root      "bosnioherzegovino"
+        ;
+      --> i18nName_de
+        -> NlgAdjective
+          --> root      "bosnisch-"
+        ;
+    ;
+  --> useArticle_fr  true
+  --> useArticle_en  false
+;

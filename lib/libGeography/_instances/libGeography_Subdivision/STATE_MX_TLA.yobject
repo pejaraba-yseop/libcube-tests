@@ -1,0 +1,47 @@
+LibGeography:Subdivision STATE_MX_TLA
+  --> iso3166_2    "MX-TLA"
+  --> postal_code  "TL"
+  --> status       STATE
+  --> label
+    -> MultilingualText
+      --> i18nName_fr
+        -> NlgSubstantive
+          --> root    "Tlaxcala"
+          --> plural  "Tlaxcala"
+          --> number  SINGULAR
+        ;
+      --> i18nName_en
+        -> NlgSubstantive
+          --> root    "Tlaxcala"
+          --> plural  "Tlaxcala"
+          --> gender  INANIMATE
+          --> number  SINGULAR
+        ;
+      --> i18nName_es
+        -> NlgSubstantive
+          --> root    "Tlaxcala"
+          --> plural  "Tlaxcala"
+          --> number  SINGULAR
+        ;
+      --> i18nName_de
+        -> NlgSubstantive
+          --> root    "Tlaxcala"
+          --> plural  "Tlaxcala"
+          --> gender  NEUTRAL
+          --> number  SINGULAR
+        ;
+      --> i18nName_ja
+        -> NlgSubstantive
+          --> root    "トラスカラ州"
+          --> plural  "トラスカラ州"
+          --> gender  INANIMATE
+          --> number  SINGULAR
+        ;
+    ;
+  --> demonym
+    -> MultilingualText
+    ;
+  --> adjective
+    -> MultilingualText
+    ;
+;

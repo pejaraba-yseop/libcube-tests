@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<yseop-yml:constList xmlns:yseop-yml="http://www.yseop.com/yml/storage" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" domainModelVersion="3" identifier="9aeb27f6-ce02-432b-94b6-633f3c8ed4c4">
+    <yseop-yml:constListElements>
+        <yseop-yml:constListElement>
+            <yseop-yml:name>EXPENSE_RATIO_IN_LINE</yseop-yml:name>
+            <yseop-yml:localeValues>
+                <yseop-yml:localeValue locale="en">
+                    <yseop-yml:value>in line</yseop-yml:value>
+                </yseop-yml:localeValue>
+                <yseop-yml:localeValue locale="es">
+                    <yseop-yml:value>en línea</yseop-yml:value>
+                </yseop-yml:localeValue>
+                <yseop-yml:localeValue locale="fr">
+                    <yseop-yml:value/>
+                </yseop-yml:localeValue>
+            </yseop-yml:localeValues>
+        </yseop-yml:constListElement>
+        <yseop-yml:constListElement>
+            <yseop-yml:name>EXPENSE_RATIO_NOT_IN_LINE</yseop-yml:name>
+            <yseop-yml:localeValues>
+                <yseop-yml:localeValue locale="en">
+                    <yseop-yml:value>not in line</yseop-yml:value>
+                </yseop-yml:localeValue>
+                <yseop-yml:localeValue locale="es">
+                    <yseop-yml:value>no esta en línea</yseop-yml:value>
+                </yseop-yml:localeValue>
+                <yseop-yml:localeValue locale="fr">
+                    <yseop-yml:value/>
+                </yseop-yml:localeValue>
+            </yseop-yml:localeValues>
+        </yseop-yml:constListElement>
+    </yseop-yml:constListElements>
+    <yseop-yml:name/>
+    <yseop-yml:properties identifier="14fd46f9-502f-46cb-8863-acf57663a1b9">
+        <yseop-yml:property identifier="14fd46f9-502f-46cb-8863-acf57663a1b9|dsl" type="YML_PROPERTY" name="dsl">"expenses ratio inline or not inline"</yseop-yml:property>
+    </yseop-yml:properties>
+</yseop-yml:constList>

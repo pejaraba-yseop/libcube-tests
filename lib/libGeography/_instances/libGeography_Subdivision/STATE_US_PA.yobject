@@ -1,0 +1,55 @@
+LibGeography:Subdivision STATE_US_PA
+  --> iso3166_2    "US-PA"
+  --> postal_code  "PA"
+  --> status       STATE
+  --> label
+    -> MultilingualText
+      --> i18nName_fr
+        -> NlgSubstantive
+          --> root    "Pennsylvanie"
+          --> plural  "Pennsylvanie"
+          --> gender  FEMININE
+          --> number  SINGULAR
+        ;
+      --> i18nName_en
+        -> NlgSubstantive
+          --> root    "Pennsylvania"
+          --> plural  "Pennsylvania"
+          --> gender  INANIMATE
+          --> number  SINGULAR
+        ;
+      --> i18nName_es
+        -> NlgSubstantive
+          --> root    "Pensilvania​"
+          --> plural  "Pensilvania​"
+          --> gender  MASCULINE
+          --> number  SINGULAR
+        ;
+      --> i18nName_de
+        -> NlgSubstantive
+          --> root    "Pennsylvania"
+          --> plural  "Pennsylvania"
+          --> gender  NEUTRAL
+          --> number  SINGULAR
+        ;
+      --> i18nName_ja
+        -> NlgSubstantive
+          --> root    " ペンシルベニア州"
+          --> plural  " ペンシルベニア州"
+          --> gender  INANIMATE
+          --> number  SINGULAR
+        ;
+    ;
+  --> demonym
+    -> MultilingualText
+      --> i18nName_en  "Pennsylvanian"
+    ;
+  --> adjective
+    -> MultilingualText
+      --> i18nName_en
+        -> NlgAdjective
+          --> root      "Pennsylvanian"
+        ;
+    ;
+  --> useArticle_en  false
+;

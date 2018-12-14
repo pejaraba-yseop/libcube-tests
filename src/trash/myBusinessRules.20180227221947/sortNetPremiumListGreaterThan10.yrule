@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<yseop-yml:ymlRule xmlns:yseop-yml="http://www.yseop.com/yml/storage" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" domainModelVersion="3" identifier="1c971576-b1b7-446d-8941-a456b0b1988d">
+    <yseop-yml:content>?netPremium.countryNetPremiumListGreaterThan10.sort(_DESCENDANT, _RELATIVE_ORDER_OF, NetPremiumSegments::netPremiumSegmentPercent);</yseop-yml:content>
+    <yseop-yml:content>?netPremium in NetPremium
+?netPremium.countryNetPremiumListGreaterThan10.isEmpty() == false</yseop-yml:content>
+    <yseop-yml:name>sortNetPremiumListGreaterThan10</yseop-yml:name>
+    <yseop-yml:properties identifier="d11578ff-3737-4da8-9b96-e5e882e81d00">
+        <yseop-yml:property identifier="d11578ff-3737-4da8-9b96-e5e882e81d00|dsl" type="YML_PROPERTY" name="dsl">"sort net premium list greater than 10"</yseop-yml:property>
+        <yseop-yml:property identifier="d11578ff-3737-4da8-9b96-e5e882e81d00|disabled" type="GENERATION_PROPERTY" name="disabled">true</yseop-yml:property>
+    </yseop-yml:properties>
+</yseop-yml:ymlRule>

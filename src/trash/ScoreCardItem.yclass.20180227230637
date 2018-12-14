@@ -1,0 +1,53 @@
+interface ScoreCardItem
+    field scoreCardCountryName
+        --> domains Text
+        --> xmlMapping XmlMappingProperty_NO_SAVE
+        --> dsl -> Textualization
+            --> language LANG_en
+            --> root "scoreCardCountryName"
+            --> number SINGULAR
+        ;
+    field scoreCardScore
+        --> domains Text
+        --> xmlMapping XmlMappingProperty_NO_SAVE
+        --> dsl -> Textualization
+            --> language LANG_en
+            --> root "scoreCardScore"
+            --> number SINGULAR
+        ;
+    field scoreCardAdjusted
+        --> domains Text
+        --> xmlMapping XmlMappingProperty_NO_SAVE
+        --> dsl -> Textualization
+            --> language LANG_en
+            --> root "scoreCardAdjusted"
+            --> number SINGULAR
+            --> hasDeterminer false
+        ;
+    field scoreCardNumberEquivalent
+        --> domains Number
+        --> xmlMapping XmlMappingProperty_NO_SAVE
+        --> dsl -> Textualization
+            --> language LANG_en
+            --> root "scoreCardNumberEquivalent"
+            --> number SINGULAR
+        ;
+    field scoreCardNumberEquivalentAdjusted
+        --> domains Number
+        --> xmlMapping XmlMappingProperty_NO_SAVE
+        --> dsl -> Textualization
+            --> language LANG_en
+            --> root "scoreCardNumberEquivalentAdjusted"
+            --> number SINGULAR
+            --> hasDeterminer false
+        ;
+    classProperties
+    --> dsl -> Textualization
+        --> language LANG_en
+        --> root "ScoreCardItem"
+        --> number SINGULAR
+    ;
+;
+
+implementation ScoreCardItem
+;

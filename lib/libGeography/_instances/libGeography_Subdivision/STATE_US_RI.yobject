@@ -1,0 +1,55 @@
+LibGeography:Subdivision STATE_US_RI
+  --> iso3166_2    "US-RI"
+  --> postal_code  "RI"
+  --> status       STATE
+  --> label
+    -> MultilingualText
+      --> i18nName_fr
+        -> NlgSubstantive
+          --> root    "Rhode Island"
+          --> plural  "Rhode Island"
+          --> gender  MASCULINE
+          --> number  SINGULAR
+        ;
+      --> i18nName_en
+        -> NlgSubstantive
+          --> root    "Rhode Island"
+          --> plural  "Rhode Island"
+          --> gender  INANIMATE
+          --> number  SINGULAR
+        ;
+      --> i18nName_es
+        -> NlgSubstantive
+          --> root    "Rhode Island"
+          --> plural  "Rhode Island"
+          --> gender  MASCULINE
+          --> number  SINGULAR
+        ;
+      --> i18nName_de
+        -> NlgSubstantive
+          --> root    "Rhode Island"
+          --> plural  "Rhode Island"
+          --> gender  NEUTRAL
+          --> number  SINGULAR
+        ;
+      --> i18nName_ja
+        -> NlgSubstantive
+          --> root    " ロードアイランド州"
+          --> plural  " ロードアイランド州"
+          --> gender  INANIMATE
+          --> number  SINGULAR
+        ;
+    ;
+  --> demonym
+    -> MultilingualText
+      --> i18nName_en  "Rhode Islander"
+    ;
+  --> adjective
+    -> MultilingualText
+      --> i18nName_en
+        -> NlgAdjective
+          --> root      "Rhode Islander"
+        ;
+    ;
+  --> useArticle_en  false
+;

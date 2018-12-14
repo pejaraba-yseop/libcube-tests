@@ -1,0 +1,80 @@
+LibGeography:Country C_USA
+  --> iso3166_1_numeric_code  "840"
+  --> iso3166_1_alpha_2       "US"
+  --> iso3166_1_alpha_3       "USA"
+  --> label
+    -> MultilingualText
+      --> i18nName_fr
+        -> NlgSubstantive
+          --> root    "États-Unis"
+          --> plural  "États-Unis"
+          --> gender  MASCULINE
+          --> number  PLURAL
+        ;
+      --> i18nName_en
+        -> NlgSubstantive
+          --> root    "United States"
+          --> plural  "United States"
+          --> gender  INANIMATE
+          --> number  SINGULAR
+        ;
+      --> i18nName_es
+        -> NlgSubstantive
+          --> root    "Estados Unidos"
+          --> plural  "Estados Unidos"
+          --> gender  FEMININE
+          --> number  SINGULAR
+        ;
+      --> i18nName_de
+        -> NlgSubstantive
+          --> root    "Vereinigte Staaten"
+          --> plural  "Vereinigte Staaten"
+          --> gender  NEUTRAL
+          --> number  SINGULAR
+        ;
+      --> i18nName_ja
+        -> NlgSubstantive
+          --> root    "アメリカ合衆国"
+          --> plural  "アメリカ合衆国"
+          --> gender  INANIMATE
+          --> number  SINGULAR
+        ;
+    ;
+  --> demonym
+    -> MultilingualText
+      --> i18nName_fr
+        -> NlgGenderAgreeableSubstantive
+          --> masculine "Américain"
+          --> feminine  "Américaine"
+        ;
+      --> i18nName_en  "American;"
+      --> i18nName_es  "estadounidense"
+      --> i18nName_de
+        -> NlgGenderAgreeableSubstantive
+          --> masculine "Amerikaner"
+          --> feminine  "Amerikanerin"
+        ;
+    ;
+  --> adjective
+    -> MultilingualText
+      --> i18nName_fr
+        -> NlgAdjective
+          --> root      "américain"
+          --> feminine  "américaine"
+        ;
+      --> i18nName_en
+        -> NlgAdjective
+          --> root      "American"
+        ;
+      --> i18nName_es
+        -> NlgAdjective
+          --> root      "estadounidense"
+        ;
+      --> i18nName_de
+        -> NlgAdjective
+          --> root      "amerikanisch"
+        ;
+    ;
+  --> useArticle_fr  true
+  --> useArticle_en  true
+;

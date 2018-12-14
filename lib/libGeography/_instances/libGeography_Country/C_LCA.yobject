@@ -1,0 +1,80 @@
+LibGeography:Country C_LCA
+  --> iso3166_1_numeric_code  "662"
+  --> iso3166_1_alpha_2       "LC"
+  --> iso3166_1_alpha_3       "LCA"
+  --> label
+    -> MultilingualText
+      --> i18nName_fr
+        -> NlgSubstantive
+          --> root    "Sainte-Lucie"
+          --> plural  "Sainte-Lucie"
+          --> gender  FEMININE
+          --> number  SINGULAR
+        ;
+      --> i18nName_en
+        -> NlgSubstantive
+          --> root    "Saint Lucia"
+          --> plural  "Saint Lucia"
+          --> gender  INANIMATE
+          --> number  SINGULAR
+        ;
+      --> i18nName_es
+        -> NlgSubstantive
+          --> root    "Santa Lucía"
+          --> plural  "Santa Lucía"
+          --> gender  FEMININE
+          --> number  SINGULAR
+        ;
+      --> i18nName_de
+        -> NlgSubstantive
+          --> root    "St. Lucia"
+          --> plural  "St. Lucia"
+          --> gender  NEUTRAL
+          --> number  SINGULAR
+        ;
+      --> i18nName_ja
+        -> NlgSubstantive
+          --> root    "セントルシア"
+          --> plural  "セントルシア"
+          --> gender  INANIMATE
+          --> number  SINGULAR
+        ;
+    ;
+  --> demonym
+    -> MultilingualText
+      --> i18nName_fr
+        -> NlgGenderAgreeableSubstantive
+          --> masculine "Saint-Lucien"
+          --> feminine  "Saint-Lucienne"
+        ;
+      --> i18nName_en  "Saint Lucian"
+      --> i18nName_es  "santalucense"
+      --> i18nName_de
+        -> NlgGenderAgreeableSubstantive
+          --> masculine "Lucianer"
+          --> feminine  "Lucianerin"
+        ;
+    ;
+  --> adjective
+    -> MultilingualText
+      --> i18nName_fr
+        -> NlgAdjective
+          --> root      "saint-lucien"
+          --> feminine  "saint-lucienne"
+        ;
+      --> i18nName_en
+        -> NlgAdjective
+          --> root      "Saint Lucian"
+        ;
+      --> i18nName_es
+        -> NlgAdjective
+          --> root      "santalucense"
+        ;
+      --> i18nName_de
+        -> NlgAdjective
+          --> root      "lucianisch"
+        ;
+    ;
+  --> useArticle_fr  false
+  --> useArticle_en  false
+;

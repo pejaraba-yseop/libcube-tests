@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<yseop-yml:ymlRule xmlns:yseop-yml="http://www.yseop.com/yml/storage" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" domainModelVersion="3" identifier="7bb959f8-50fb-4bb7-814c-79a113b97045">
+    <yseop-yml:content>?expenseRatioPeerItem.inLineOrNot = NOT_IN_LINE;</yseop-yml:content>
+    <yseop-yml:content>?expenseRatioPeerItem in getGeneralData().expenseRatioPeerList
+?expenseRatioPeerItem.inLineOrNot == null</yseop-yml:content>
+    <yseop-yml:name>notInAnyStandardDeviation</yseop-yml:name>
+    <yseop-yml:properties identifier="2c5d9797-9f62-4304-9303-3dafdfde0d17">
+        <yseop-yml:property identifier="2c5d9797-9f62-4304-9303-3dafdfde0d17|dsl" type="YML_PROPERTY" name="dsl">"not in any standard deviation"</yseop-yml:property>
+        <yseop-yml:property identifier="2c5d9797-9f62-4304-9303-3dafdfde0d17|disabled" type="GENERATION_PROPERTY" name="disabled">true</yseop-yml:property>
+    </yseop-yml:properties>
+</yseop-yml:ymlRule>

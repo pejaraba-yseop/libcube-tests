@@ -1,0 +1,26 @@
+LibGeography:Region US_REG_TERRITORIES
+  --> label
+    -> MultilingualText
+      --> i18nName_en
+        -> NlgSubstantive
+          --> root    "Territories"
+          --> plural  "Territories"
+          --> gender  INANIMATE
+          --> number  SINGULAR
+        ;
+      --> i18nName_ja
+        -> NlgSubstantive
+          --> root    "地域の領土"
+          --> plural  "地域の領土"
+          --> gender  INANIMATE
+          --> number  SINGULAR
+        ;
+    ;
+  --> demonym
+    -> MultilingualText
+    ;
+  --> adjective
+    -> MultilingualText
+    ;
+  --> useArticle_en  false
+;

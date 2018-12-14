@@ -1,0 +1,80 @@
+LibGeography:Country C_CAN
+  --> iso3166_1_numeric_code  "124"
+  --> iso3166_1_alpha_2       "CA"
+  --> iso3166_1_alpha_3       "CAN"
+  --> label
+    -> MultilingualText
+      --> i18nName_fr
+        -> NlgSubstantive
+          --> root    "Canada"
+          --> plural  "Canada"
+          --> gender  MASCULINE
+          --> number  SINGULAR
+        ;
+      --> i18nName_en
+        -> NlgSubstantive
+          --> root    "Canada"
+          --> plural  "Canada"
+          --> gender  INANIMATE
+          --> number  SINGULAR
+        ;
+      --> i18nName_es
+        -> NlgSubstantive
+          --> root    "Canadá"
+          --> plural  "Canadá"
+          --> gender  MASCULINE
+          --> number  SINGULAR
+        ;
+      --> i18nName_de
+        -> NlgSubstantive
+          --> root    "Kanada"
+          --> plural  "Kanada"
+          --> gender  NEUTRAL
+          --> number  SINGULAR
+        ;
+      --> i18nName_ja
+        -> NlgSubstantive
+          --> root    "カナダ"
+          --> plural  "カナダ"
+          --> gender  INANIMATE
+          --> number  SINGULAR
+        ;
+    ;
+  --> demonym
+    -> MultilingualText
+      --> i18nName_fr
+        -> NlgGenderAgreeableSubstantive
+          --> masculine "Canadien"
+          --> feminine  "Canadienne"
+        ;
+      --> i18nName_en  "Canadian"
+      --> i18nName_es  "canadiense"
+      --> i18nName_de
+        -> NlgGenderAgreeableSubstantive
+          --> masculine "Kanadier"
+          --> feminine  "Kanadierin"
+        ;
+    ;
+  --> adjective
+    -> MultilingualText
+      --> i18nName_fr
+        -> NlgAdjective
+          --> root      "canadien"
+          --> feminine  "canadienne"
+        ;
+      --> i18nName_en
+        -> NlgAdjective
+          --> root      "Canadian"
+        ;
+      --> i18nName_es
+        -> NlgAdjective
+          --> root      "canadiense"
+        ;
+      --> i18nName_de
+        -> NlgAdjective
+          --> root      "kanadisch"
+        ;
+    ;
+  --> useArticle_fr  true
+  --> useArticle_en  false
+;

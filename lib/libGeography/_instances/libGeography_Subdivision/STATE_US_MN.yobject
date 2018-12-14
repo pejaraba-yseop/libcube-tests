@@ -1,0 +1,55 @@
+LibGeography:Subdivision STATE_US_MN
+  --> iso3166_2    "US-MN"
+  --> postal_code  "MN"
+  --> status       STATE
+  --> label
+    -> MultilingualText
+      --> i18nName_fr
+        -> NlgSubstantive
+          --> root    "Minnesota"
+          --> plural  "Minnesota"
+          --> gender  MASCULINE
+          --> number  SINGULAR
+        ;
+      --> i18nName_en
+        -> NlgSubstantive
+          --> root    "Minnesota"
+          --> plural  "Minnesota"
+          --> gender  INANIMATE
+          --> number  SINGULAR
+        ;
+      --> i18nName_es
+        -> NlgSubstantive
+          --> root    "Minnesota"
+          --> plural  "Minnesota"
+          --> gender  FEMININE
+          --> number  SINGULAR
+        ;
+      --> i18nName_de
+        -> NlgSubstantive
+          --> root    "Minnesota"
+          --> plural  "Minnesota"
+          --> gender  NEUTRAL
+          --> number  SINGULAR
+        ;
+      --> i18nName_ja
+        -> NlgSubstantive
+          --> root    " ミネソタ州"
+          --> plural  " ミネソタ州"
+          --> gender  INANIMATE
+          --> number  SINGULAR
+        ;
+    ;
+  --> demonym
+    -> MultilingualText
+      --> i18nName_en  "Minnesotan"
+    ;
+  --> adjective
+    -> MultilingualText
+      --> i18nName_en
+        -> NlgAdjective
+          --> root      "Minnesotan"
+        ;
+    ;
+  --> useArticle_en  false
+;

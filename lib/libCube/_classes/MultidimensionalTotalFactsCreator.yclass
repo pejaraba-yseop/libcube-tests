@@ -1,0 +1,150 @@
+
+interface LibCube:MultidimensionalTotalFactsCreator
+    field facts
+        --> domainsLevel2 LibCube:Fact
+        --> domains Collection
+        --> documentation "The collection of facts that will be processed for the totals calculation."
+        --> xmlMapping XmlMappingProperty_NO_SAVE
+        --> dsl -> Textualization
+            --> language LANG_en
+            --> root "facts"
+            --> number PLURAL
+        ;
+
+    field totalFacts
+        --> domainsLevel2 LibCube:Fact
+        --> domains Collection
+        --> documentation "The resulting facts, created by the class with the calculated cross-tabbed totals"
+        --> xmlMapping XmlMappingProperty_NO_SAVE
+        --> dsl -> Textualization
+            --> language LANG_en
+            --> root "total facts"
+            --> number PLURAL
+        ;
+
+    field measureForTotal
+        --> domains LibCube:Measure
+        --> xmlMapping XmlMappingProperty_NO_SAVE
+        --> documentation "The measure that will be looked in the facts in order to calculate the totals"
+        --> dsl -> Textualization
+            --> language LANG_en
+            --> root "measure for total"
+            --> number SINGULAR
+        ;
+    
+    field totalMeasure
+        --> domains LibCube:Measure
+        --> xmlMapping XmlMappingProperty_NO_SAVE
+        --> documentation "The measure that will be assigned to the resulting facts with the value of the calculated totals."
+        --> dsl -> Textualization
+            --> language LANG_en
+            --> root "total measure"
+            --> number SINGULAR
+        ;
+
+    field dimensions
+        --> domainsLevel2 LibCube:Dimension
+        --> domains Collection
+        --> documentation "The collection of dimensions that will be joined/cross-tabbed"
+        --> xmlMapping XmlMappingProperty_NO_SAVE
+        --> dsl -> Textualization
+            --> language LANG_en
+            --> root "dimensions"
+            --> number PLURAL
+        ;
+
+    method addDimension(LibCube:Dimension dimension)
+     --> domains Void 
+    
+     method calculateTotals()
+     --> domains Void 
+
+    
+    classProperties
+    --> dsl -> Textualization
+        --> language LANG_en
+        --> documentation "This class is used to calculate totals (sums) between multiple dimensions, useful for cross tabbing analysis. This class creates new facts with the totals as facts measures"
+        --> root "Multidimensional Total Facts Creator"
+        --> number SINGULAR
+    ;
+;
+
+implementation LibCube:MultidimensionalTotalFactsCreator
+;
+
+function getExistingMembersByDimension(Collection facts, Collection dimensions)
+--> domains HashMap
+--> local HashMap membersByDimension, HashSet members
+--> action {
+    membersByDimension = new(HashMap);
+	
+    foreach(_dimension, dimensions){
+        members = new(HashSet);
+        foreach(_fact, facts){
+        //    if(members.contains(_fact.getDimension(_dimension)) == false){
+                members.add(_fact.getDimension(_dimension));
+        //    }
+        }
+
+        membersByDimension[_dimension] = members;
+    }
+    return membersByDimension;
+}
+;
+
+
+function getTotalFactByMembers(Collection totalFacts, Collection members)
+--> domains LibCube:Fact
+--> action {
+    foreach(_fact, totalFacts){
+        if(intersection(LibCube:Fact(_fact)>>members, members).size() == members.size()){
+          return _fact;
+        }
+    }
+    return null;
+}
+;
+
+Function LibCube:MultidimensionalTotalFactsCreator::calculateTotals()
+--> local Number sum, Collection currentMembers, LibCube:Fact totalFact, HashMap membersByDimension, LibCube:FactMeasure currentFactMeasure
+--> action {
+    totalFacts = new(List);
+    membersByDimension = getExistingMembersByDimension(facts, dimensions);
+    foreach(_fact, facts){
+        currentMembers = new(HashSet);
+        foreach(_dimension, dimensions){
+            if(membersByDimension[_dimension].contains(_fact.getDimension(_dimension)) == true){
+                currentMembers.add(_fact.getDimension(_dimension));
+            }
+        }
+
+        totalFact = getTotalFactByMembers(totalFacts, currentMembers);
+        if(totalFact != null){
+                totalFact.getMeasure(totalMeasure).value = totalFact.getMeasure(totalMeasure).value +  _fact.getMeasure(measureForTotal).value;
+        }else{
+              totalFact = new(LibCube:Fact)
+              foreach(_member, currentMembers ){
+                totalFact.members := _member;
+              }
+              currentFactMeasure = new(LibCube:FactMeasure);
+              currentFactMeasure.measure = totalMeasure;
+              currentFactMeasure.value = _fact.getMeasure(measureForTotal).value;
+              totalFact.factMeasures := currentFactMeasure;
+              totalFacts.add(totalFact);
+        }
+    }
+    free(membersByDimension);
+}
+;
+
+Function LibCube:MultidimensionalTotalFactsCreator::addDimension(LibCube:Dimension dimension)
+--> action {
+    if(dimensions == null){
+        dimensions = new(HashSet);
+    }
+    dimensions.add(dimension);
+}
+;
+
+
+

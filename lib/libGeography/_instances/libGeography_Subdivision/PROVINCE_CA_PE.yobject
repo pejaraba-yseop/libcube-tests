@@ -1,0 +1,50 @@
+LibGeography:Subdivision PROVINCE_CA_PE
+  --> iso3166_2    "CA-PE"
+  --> postal_code  "PE"
+  --> status       PROVINCE
+  --> label
+    -> MultilingualText
+      --> i18nName_fr
+        -> NlgSubstantive
+          --> root    "Île-du-Prince-Édouard"
+          --> plural  "Île-du-Prince-Édouard"
+          --> gender  FEMININE
+          --> number  SINGULAR
+        ;
+      --> i18nName_en
+        -> NlgSubstantive
+          --> root    "Prince Edward Island"
+          --> plural  "Prince Edward Island"
+          --> gender  INANIMATE
+          --> number  SINGULAR
+        ;
+      --> i18nName_es
+        -> NlgSubstantive
+          --> root    "Isla del Príncipe Eduardo"
+          --> plural  "Isla del Príncipe Eduardo"
+          --> gender  MASCULINE
+          --> number  SINGULAR
+        ;
+      --> i18nName_de
+        -> NlgSubstantive
+          --> root    "Prince Edward Island"
+          --> plural  "Prince Edward Island"
+          --> gender  NEUTRAL
+          --> number  SINGULAR
+        ;
+      --> i18nName_ja
+        -> NlgSubstantive
+          --> root    "プリンスエドワード島州"
+          --> plural  "プリンスエドワード島州"
+          --> gender  INANIMATE
+          --> number  SINGULAR
+        ;
+    ;
+  --> demonym
+    -> MultilingualText
+    ;
+  --> adjective
+    -> MultilingualText
+    ;
+  --> useArticle_en  false
+;

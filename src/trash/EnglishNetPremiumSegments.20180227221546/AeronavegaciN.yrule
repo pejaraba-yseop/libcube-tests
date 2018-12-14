@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<yseop-yml:ymlRule xmlns:yseop-yml="http://www.yseop.com/yml/storage" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" domainModelVersion="3" identifier="f724ebd1-0dee-4af5-bec2-100385fc5cbe">
+    <yseop-yml:content>?netPremiumSegments.netPremiumSegmentEnglishName = "Aviation";</yseop-yml:content>
+    <yseop-yml:content>?netPremiumSegments in NetPremiumSegments
+?netPremiumSegments.netPremiumSegmentName == "Aeronavegación"</yseop-yml:content>
+    <yseop-yml:name>AeronavegaciN</yseop-yml:name>
+    <yseop-yml:properties identifier="528af4ae-096c-4bd9-9052-43fc7f007024">
+        <yseop-yml:property identifier="528af4ae-096c-4bd9-9052-43fc7f007024|dsl" type="YML_PROPERTY" name="dsl">"Aeronavegación"</yseop-yml:property>
+        <yseop-yml:property identifier="528af4ae-096c-4bd9-9052-43fc7f007024|disabled" type="GENERATION_PROPERTY" name="disabled">true</yseop-yml:property>
+    </yseop-yml:properties>
+</yseop-yml:ymlRule>

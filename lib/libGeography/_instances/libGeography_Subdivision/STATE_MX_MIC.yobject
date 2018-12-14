@@ -1,0 +1,47 @@
+LibGeography:Subdivision STATE_MX_MIC
+  --> iso3166_2    "MX-MIC"
+  --> postal_code  "MH"
+  --> status       STATE
+  --> label
+    -> MultilingualText
+      --> i18nName_fr
+        -> NlgSubstantive
+          --> root    "Michoacán"
+          --> plural  "Michoacán"
+          --> number  SINGULAR
+        ;
+      --> i18nName_en
+        -> NlgSubstantive
+          --> root    "Michoacán"
+          --> plural  "Michoacán"
+          --> gender  INANIMATE
+          --> number  SINGULAR
+        ;
+      --> i18nName_es
+        -> NlgSubstantive
+          --> root    "Michoacán"
+          --> plural  "Michoacán"
+          --> number  SINGULAR
+        ;
+      --> i18nName_de
+        -> NlgSubstantive
+          --> root    "Michoacán"
+          --> plural  "Michoacán"
+          --> gender  NEUTRAL
+          --> number  SINGULAR
+        ;
+      --> i18nName_ja
+        -> NlgSubstantive
+          --> root    "ミチョアカン州"
+          --> plural  "ミチョアカン州"
+          --> gender  INANIMATE
+          --> number  SINGULAR
+        ;
+    ;
+  --> demonym
+    -> MultilingualText
+    ;
+  --> adjective
+    -> MultilingualText
+    ;
+;

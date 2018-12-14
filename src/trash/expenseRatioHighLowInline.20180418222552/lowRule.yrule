@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<yseop-yml:ymlRule xmlns:yseop-yml="http://www.yseop.com/yml/storage" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" domainModelVersion="3" identifier="72ce737f-7943-4eb9-9095-22b7880db55a">
+    <yseop-yml:content>CURRENT_COMPANY_ALL_SEGMENTS_FACT_SELECTION.selectedFact.expensesRatioLowHigh = EXPENSE_RATIO_LOW;</yseop-yml:content>
+    <yseop-yml:content>CURRENT_COMPANY_ALL_SEGMENTS_FACT_SELECTION.selectedFact.expensesRatio &lt; 0.4</yseop-yml:content>
+    <yseop-yml:name>lowRule</yseop-yml:name>
+    <yseop-yml:properties identifier="1d40da27-463c-483d-8c6d-2d5ec6436bf0">
+        <yseop-yml:property identifier="1d40da27-463c-483d-8c6d-2d5ec6436bf0|dsl" type="YML_PROPERTY" name="dsl">"low rule"</yseop-yml:property>
+        <yseop-yml:property identifier="1d40da27-463c-483d-8c6d-2d5ec6436bf0|disabled" type="GENERATION_PROPERTY" name="disabled">false</yseop-yml:property>
+    </yseop-yml:properties>
+</yseop-yml:ymlRule>

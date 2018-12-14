@@ -1,0 +1,67 @@
+LibGeography:Country C_ATF
+  --> iso3166_1_numeric_code  "260"
+  --> iso3166_1_alpha_2       "TF"
+  --> iso3166_1_alpha_3       "ATF"
+  --> label
+    -> MultilingualText
+      --> i18nName_fr
+        -> NlgSubstantive
+          --> root    "Terres australes et antarctiques françaises"
+          --> plural  "Terres australes et antarctiques françaises"
+          --> gender  FEMININE
+          --> number  PLURAL
+        ;
+      --> i18nName_en
+        -> NlgSubstantive
+          --> root    "French Southern Territories"
+          --> plural  "French Southern Territories"
+          --> gender  INANIMATE
+          --> number  PLURAL
+        ;
+      --> i18nName_es
+        -> NlgSubstantive
+          --> root    "Territorios Australes Franceses"
+          --> plural  "Territorios Australes Franceses"
+          --> gender  MASCULINE
+          --> number  PLURAL
+        ;
+      --> i18nName_de
+        -> NlgSubstantive
+          --> root    "Französische Süd- und Antarktisgebiete"
+          --> plural  "Französische Süd- und Antarktisgebiete"
+          --> gender  NEUTRAL
+          --> number  PLURAL
+        ;
+      --> i18nName_ja
+        -> NlgSubstantive
+          --> root    "フランス領南方・南極地域"
+          --> plural  "フランス領南方・南極地域"
+          --> gender  INANIMATE
+          --> number  PLURAL
+        ;
+    ;
+  --> demonym
+    -> MultilingualText
+    ;
+  --> adjective
+    -> MultilingualText
+      --> i18nName_fr
+        -> NlgAdjective
+          --> root      "des Terres australes et antarctiques françaises"
+        ;
+      --> i18nName_en
+        -> NlgAdjective
+          --> root      "of the French Southern and Antarctic Lands"
+        ;
+      --> i18nName_es
+        -> NlgAdjective
+          --> root      "de los Territorios Australes Franceses"
+        ;
+      --> i18nName_de
+        -> NlgAdjective
+          --> root      "der Französischen Süd- und Antarktisgebiete"
+        ;
+    ;
+  --> useArticle_fr  true
+  --> useArticle_en  false
+;

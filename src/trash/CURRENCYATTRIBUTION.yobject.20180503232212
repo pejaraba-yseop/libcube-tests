@@ -1,0 +1,8 @@
+
+LibCube:Dimension DIMENSION_CURRENCY_ATTRIBUTION
+    --> dsl -> Textualization
+        --> language LANG_en
+        --> root "Currency Attribution"
+        --> number SINGULAR
+    ;
+;

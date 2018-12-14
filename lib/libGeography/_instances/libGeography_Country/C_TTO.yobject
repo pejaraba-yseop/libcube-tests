@@ -1,0 +1,71 @@
+LibGeography:Country C_TTO
+  --> iso3166_1_numeric_code  "780"
+  --> iso3166_1_alpha_2       "TT"
+  --> iso3166_1_alpha_3       "TTO"
+  --> label
+    -> MultilingualText
+      --> i18nName_fr
+        -> NlgSubstantive
+          --> root    "Trinité-et-Tobago"
+          --> plural  "Trinité-et-Tobago"
+          --> gender  FEMININE
+          --> number  SINGULAR
+        ;
+      --> i18nName_en
+        -> NlgSubstantive
+          --> root    "Trinidad and Tobago"
+          --> plural  "Trinidad and Tobago"
+          --> gender  INANIMATE
+          --> number  SINGULAR
+        ;
+      --> i18nName_es
+        -> NlgSubstantive
+          --> root    "Trinidad y Tobago"
+          --> plural  "Trinidad y Tobago"
+          --> gender  FEMININE
+          --> number  SINGULAR
+        ;
+      --> i18nName_de
+        -> NlgSubstantive
+          --> root    "Trinidad und Tobago"
+          --> plural  "Trinidad und Tobago"
+          --> gender  NEUTRAL
+          --> number  SINGULAR
+        ;
+      --> i18nName_ja
+        -> NlgSubstantive
+          --> root    "トリニダード・トバゴ"
+          --> plural  "トリニダード・トバゴ"
+          --> gender  INANIMATE
+          --> number  SINGULAR
+        ;
+    ;
+  --> demonym
+    -> MultilingualText
+      --> i18nName_fr  "de Trinité-et-Tobago"
+      --> i18nName_en  "Trinidadian; Tobagonian"
+      --> i18nName_es  "trinitense"
+      --> i18nName_de  "von Trinidad und Tobago"
+    ;
+  --> adjective
+    -> MultilingualText
+      --> i18nName_fr
+        -> NlgAdjective
+          --> root      "de Trinité-et-Tobago"
+        ;
+      --> i18nName_en
+        -> NlgAdjective
+          --> root      "of Trinidad and Tobago"
+        ;
+      --> i18nName_es
+        -> NlgAdjective
+          --> root      "trinitense"
+        ;
+      --> i18nName_de
+        -> NlgAdjective
+          --> root      "von Trinidad und Tobago"
+        ;
+    ;
+  --> useArticle_fr  false
+  --> useArticle_en  false
+;

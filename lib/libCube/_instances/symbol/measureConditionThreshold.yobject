@@ -1,0 +1,7 @@
+Symbol MEASURE_CONDITION_THRESHOLD
+    --> dsl -> Textualization
+        --> language LANG_en
+        --> root "measure condition threshold"
+        --> number SINGULAR
+    ;
+;

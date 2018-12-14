@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<yseop-yml:ymlRule xmlns:yseop-yml="http://www.yseop.com/yml/storage" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" domainModelVersion="3" identifier="17425665-7fe2-4acd-a13b-aa10c9efcc65">
+    <yseop-yml:content>getGeneralData().index23List.sort(_DESCENDANT, _RELATIVE_ORDER_OF, BusinessSegment::businessSegmentPercent);</yseop-yml:content>
+    <yseop-yml:content>getGeneralData().index23List.isEmpty() == false</yseop-yml:content>
+    <yseop-yml:name>sortIndex23</yseop-yml:name>
+    <yseop-yml:properties identifier="eaca83a5-17b7-431c-8eeb-cc6b9be9c9d0">
+        <yseop-yml:property identifier="eaca83a5-17b7-431c-8eeb-cc6b9be9c9d0|dsl" type="YML_PROPERTY" name="dsl">"sort index 23"</yseop-yml:property>
+        <yseop-yml:property identifier="eaca83a5-17b7-431c-8eeb-cc6b9be9c9d0|disabled" type="GENERATION_PROPERTY" name="disabled">true</yseop-yml:property>
+    </yseop-yml:properties>
+</yseop-yml:ymlRule>

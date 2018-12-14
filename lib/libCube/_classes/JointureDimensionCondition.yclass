@@ -1,0 +1,166 @@
+interface LibCube:JointureDimensionCondition
+    field dimension
+        --> domains LibCube:Dimension
+        --> xmlMapping XmlMappingProperty_NO_SAVE
+        --> dsl -> Textualization
+            --> language LANG_en
+            --> root "dimension"
+            --> number SINGULAR
+        ;
+
+    field hierarchy
+        --> domains LibCube:Hierarchy
+        --> xmlMapping XmlMappingProperty_NO_SAVE
+        --> dsl -> Textualization
+            --> language LANG_en
+            --> root "hierarchy"
+            --> number SINGULAR
+        ;
+
+    field members
+        --> domains LibCube:Member
+        --> xmlMapping XmlMappingProperty_NO_SAVE
+        --> multivalued true
+        --> defaultValue null
+        --> dsl -> Textualization
+            --> language LANG_en
+            --> root "members"
+            --> number PLURAL
+        ;
+
+    field acceptsAnyMembers
+        --> domains Boolean
+        --> defaultValue false
+        --> documentation "Does the Jointure Condition accepts any member of the dimension? (excluding empty, there must be at least 1 member)"
+        --> xmlMapping XmlMappingProperty_NO_SAVE
+        --> dsl -> Textualization
+            --> language LANG_en
+            --> root "accepts any members?"
+            --> number PLURAL
+        ;
+
+    field acceptsEmpty
+        --> domains Boolean
+        --> defaultValue false
+        --> documentation "Does the Jointure Condition accepts empty member of a dimension?"
+        --> xmlMapping XmlMappingProperty_NO_SAVE
+        --> dsl -> Textualization
+            --> language LANG_en
+            --> root "accepts any empty members?"
+            --> number PLURAL
+        ;
+
+    field setItselfAsValue
+        --> domains Boolean
+        --> xmlMapping XmlMappingProperty_NO_SAVE
+        --> dsl -> Textualization
+            --> language LANG_en
+            --> root "set itself as value"
+            --> number PLURAL
+        ;         
+    field membersCollection
+        --> domainsLevel2 LibCube:Member
+        --> domains Collection
+        --> defaultValue null
+        --> xmlMapping XmlMappingProperty_NO_SAVE
+        --> dsl -> Textualization
+            --> language LANG_en
+            --> root "members collection"
+            --> number PLURAL
+        ; 
+    field OAV_value
+        --> domains Attribute
+        --> xmlMapping XmlMappingProperty_NO_SAVE
+        --> dsl -> Textualization
+            --> language LANG_en
+            --> root "oav value"
+            --> number SINGULAR
+        ;
+
+    field queryFragment
+        --> domains LibCube:QueryFragment
+        --> xmlMapping XmlMappingProperty_NO_SAVE
+        --> dsl -> Textualization
+            --> language LANG_en
+            --> root "Query Fragment"
+            --> number SINGULAR
+        ;
+
+    method init()
+        --> domains Void
+
+    method generateQueryFragment()
+        --> domains Void        
+
+    classProperties
+    --> dsl -> Textualization
+        --> language LANG_en
+        --> root "Cube Jointure Dimension condition"
+        --> number SINGULAR
+    ;
+;
+
+implementation LibCube:JointureDimensionCondition
+;
+
+function LibCube:JointureDimensionCondition::init() 
+--> action{
+    if(members != null && membersCollection != null){
+        logWarning("Can't have both a member and membersCollection in a jointure dimension condition");
+    }
+    if(acceptsAnyMembers == true && (members != null || membersCollection != null)){
+        logWarning("Jointure condition can't accept any members and have a member or membersCollection filter specified");
+    }
+}
+;
+
+function LibCube:JointureDimensionCondition::generateQueryFragment() 
+--> local String queryFragString, Boolean valid, LibCube:Hierarchy theHierarchy
+--> action{
+    valid = true;
+    if(dimension.mdxName == null){
+        logWarning("The mdxName of dimension ", dimension.identifier, " in a jointure dimension condition query fragment should not be null");
+        valid = false;
+    }
+
+    if(hierarchy == null){
+        theHierarchy = dimension>>hierarchies.get(_FIRST);
+    }
+    else{
+        theHierarchy = hierarchy;
+    }
+
+    if(theHierarchy != null && theHierarchy.mdxName == null){
+        logWarning("The mdxName of the hierarchy ", theHierarchy.identifier," must be defined for a dimension condition query fragment.");
+        valid = false;
+    }
+
+    if(valid == true){
+        queryFragment = new(LibCube:QueryFragment);
+
+        if(acceptsAnyMembers == true){
+            queryFragString = concat("[", dimension.mdxName, "].members" );
+        }
+
+        if(members != null){
+            queryFragString = members.getMdxFullName(theHierarchy);  
+        }
+
+        if(membersCollection != null && membersCollection.isEmpty() == false){
+            foreach(_member, membersCollection){
+               if(queryFragString == null){
+                 queryFragString =  _member.getMdxFullName(theHierarchy);    
+                }
+                else{
+                    queryFragString = concat(queryFragString, ",", _member.getMdxFullName(theHierarchy));
+                }
+            }
+            queryFragString = concat("{", queryFragString, "}" );
+        }
+        
+        queryFragment.mdxString = queryFragString;
+        queryFragment.fragmentType = QUERY_FRAGMENT_TYPE_ROWS;
+    }
+    
+}
+;

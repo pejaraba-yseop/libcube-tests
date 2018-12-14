@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<yseop-yml:ymlRuleset xmlns:yseop-yml="http://www.yseop.com/yml/storage" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" domainModelVersion="3" identifier="b98521e5-c1f2-4cf0-bcf6-1503dacfb4b0">
+    <yseop-yml:rules/>
+    <yseop-yml:name>expenseRatioHighLowInline</yseop-yml:name>
+    <yseop-yml:properties identifier="13612e7a-a113-4049-b313-14a04875452b">
+        <yseop-yml:property identifier="13612e7a-a113-4049-b313-14a04875452b|dsl" type="YML_PROPERTY" name="dsl">"expenseRatio high low inline"</yseop-yml:property>
+    </yseop-yml:properties>
+</yseop-yml:ymlRuleset>

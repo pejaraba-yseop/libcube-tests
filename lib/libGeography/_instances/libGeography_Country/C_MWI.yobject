@@ -1,0 +1,80 @@
+LibGeography:Country C_MWI
+  --> iso3166_1_numeric_code  "454"
+  --> iso3166_1_alpha_2       "MW"
+  --> iso3166_1_alpha_3       "MWI"
+  --> label
+    -> MultilingualText
+      --> i18nName_fr
+        -> NlgSubstantive
+          --> root    "Malawi"
+          --> plural  "Malawi"
+          --> gender  MASCULINE
+          --> number  SINGULAR
+        ;
+      --> i18nName_en
+        -> NlgSubstantive
+          --> root    "Malawi"
+          --> plural  "Malawi"
+          --> gender  INANIMATE
+          --> number  SINGULAR
+        ;
+      --> i18nName_es
+        -> NlgSubstantive
+          --> root    "Malaui"
+          --> plural  "Malaui"
+          --> gender  MASCULINE
+          --> number  SINGULAR
+        ;
+      --> i18nName_de
+        -> NlgSubstantive
+          --> root    "Malawi"
+          --> plural  "Malawi"
+          --> gender  NEUTRAL
+          --> number  SINGULAR
+        ;
+      --> i18nName_ja
+        -> NlgSubstantive
+          --> root    "マラウイ"
+          --> plural  "マラウイ"
+          --> gender  INANIMATE
+          --> number  SINGULAR
+        ;
+    ;
+  --> demonym
+    -> MultilingualText
+      --> i18nName_fr
+        -> NlgGenderAgreeableSubstantive
+          --> masculine "Malawien"
+          --> feminine  "Malawienne"
+        ;
+      --> i18nName_en  "Malawian"
+      --> i18nName_es  "malauí"
+      --> i18nName_de
+        -> NlgGenderAgreeableSubstantive
+          --> masculine "Malawier"
+          --> feminine  "Malawierin"
+        ;
+    ;
+  --> adjective
+    -> MultilingualText
+      --> i18nName_fr
+        -> NlgAdjective
+          --> root      "malawien"
+          --> feminine  "malawienne"
+        ;
+      --> i18nName_en
+        -> NlgAdjective
+          --> root      "Malawian"
+        ;
+      --> i18nName_es
+        -> NlgAdjective
+          --> root      "malauí"
+        ;
+      --> i18nName_de
+        -> NlgAdjective
+          --> root      "malawisch"
+        ;
+    ;
+  --> useArticle_fr  true
+  --> useArticle_en  false
+;

@@ -1,0 +1,81 @@
+LibGeography:Country C_GRC
+  --> iso3166_1_numeric_code  "300"
+  --> iso3166_1_alpha_2       "EL"
+  --> iso3166_1_alpha_2       "GR"
+  --> iso3166_1_alpha_3       "GRC"
+  --> label
+    -> MultilingualText
+      --> i18nName_fr
+        -> NlgSubstantive
+          --> root    "Grèce"
+          --> plural  "Grèce"
+          --> gender  FEMININE
+          --> number  SINGULAR
+        ;
+      --> i18nName_en
+        -> NlgSubstantive
+          --> root    "Greece"
+          --> plural  "Greece"
+          --> gender  INANIMATE
+          --> number  SINGULAR
+        ;
+      --> i18nName_es
+        -> NlgSubstantive
+          --> root    "Grecia"
+          --> plural  "Grecia"
+          --> gender  FEMININE
+          --> number  SINGULAR
+        ;
+      --> i18nName_de
+        -> NlgSubstantive
+          --> root    "Griechenland"
+          --> plural  "Griechenland"
+          --> gender  NEUTRAL
+          --> number  SINGULAR
+        ;
+      --> i18nName_ja
+        -> NlgSubstantive
+          --> root    "ギリシャ"
+          --> plural  "ギリシャ"
+          --> gender  INANIMATE
+          --> number  SINGULAR
+        ;
+    ;
+  --> demonym
+    -> MultilingualText
+      --> i18nName_fr
+        -> NlgGenderAgreeableSubstantive
+          --> masculine "Grec"
+          --> feminine  "Grecque"
+        ;
+      --> i18nName_en  "Greek"
+      --> i18nName_es  "griego"
+      --> i18nName_de
+        -> NlgGenderAgreeableSubstantive
+          --> masculine "Grieche"
+          --> feminine  "Griechin"
+        ;
+    ;
+  --> adjective
+    -> MultilingualText
+      --> i18nName_fr
+        -> NlgAdjective
+          --> root      "grec"
+          --> feminine  "grecque"
+        ;
+      --> i18nName_en
+        -> NlgAdjective
+          --> root      "Greek"
+        ;
+      --> i18nName_es
+        -> NlgAdjective
+          --> root      "griego"
+        ;
+      --> i18nName_de
+        -> NlgAdjective
+          --> root      "griechisch"
+        ;
+    ;
+  --> useArticle_fr  true
+  --> useArticle_en  false
+;

@@ -1,0 +1,40 @@
+LibGeography:Region UN_REG_OCEANIA_AUS_NZL
+  --> label
+    -> MultilingualText
+      --> i18nName_fr
+        -> NlgSubstantive
+          --> root    "Australie/Nouvelle-Zélande"
+          --> plural  "Australie/Nouvelle-Zélande"
+          --> gender  FEMININE
+          --> number  SINGULAR
+        ;
+      --> i18nName_en
+        -> NlgSubstantive
+          --> root    "Australia/New Zealand"
+          --> plural  "Australia/New Zealand"
+          --> gender  INANIMATE
+          --> number  SINGULAR
+        ;
+      --> i18nName_de
+        -> NlgSubstantive
+          --> root    "Australien und Neuseeland"
+          --> plural  "Australien und Neuseeland"
+          --> gender  NEUTRAL
+          --> number  PLURAL
+        ;
+      --> i18nName_ja
+        -> NlgSubstantive
+          --> root    "オーストラリア・ニュージーランド "
+          --> plural  "オーストラリア・ニュージーランド "
+          --> gender  INANIMATE
+          --> number  SINGULAR
+        ;
+    ;
+  --> demonym
+    -> MultilingualText
+    ;
+  --> adjective
+    -> MultilingualText
+    ;
+  --> useArticle_en  false
+;

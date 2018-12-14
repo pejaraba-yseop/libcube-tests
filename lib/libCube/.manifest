@@ -1,0 +1,95 @@
+@assertEngineVersionCompatible ("7.1.0.RC02")
+
+@defineLibrary ("libCube", "1.0.0.BETA13")
+
+/*
+1.0.0.BETA13
+Product of a merge between framework reporting and web service demo,  includes web service classes
+and business rules, helper functions for jointure creation, TwoFactsOneMeasure refactoring and
+unit tests
+
+1.0.0.BETA12
+Helper jointures for level and child - parent relation and automatic mdx query generation 
+
+1.0.0.BETA11
+Indicator dimension and members feature bugfixes
+
+1.0.0.BETA10
+Added Indicator Dimension, jointures and util methods
+
+1.0.0.BETA09
+Added dynamic attributes jointures feature and replaced deprecated gender tags
+
+1.0.0.BETA08
+Added manifest.json
+
+1.0.0.BETA07
+Added helper functions to access sorters and comparisons easier
+
+1.0.0.BETA06
+Add toStringInStreamObject for composition with libActors
+
+1.0.0.BETA05 :
+find quarter for TimeMembers
+
+1.0.0.BETA04 :
+revert mod to OneLevelDriverAnalysis
+add "unitType" to measureInfo + correlation to HierarchyElement
+
+1.0.0.BETA03 :
+slight mod to OneLevelDriverAnalysis
+
+1.0.0.BETA02 :
+Added MultidimensionalTotalFactsCreator class
+
+1.0.0.BETA01 :
+Adding ppt introductif
+
+1.0.0.M1-013 : 
+TwoFactsOneMeasure minor fixes and field renaming
+
+1.0.0.M1-012 : 
+FactSorter minor fixes and Addition of PositiveNegativeFactsSorter class
+
+1.0.0.M1-011 : 
+FactSorter v1
+
+1.0.0.M1-010 : 
+Added Jointure Selection Classes and modified Cube.yclass to support them
+
+1.0.0.M1-009 : 
+bug corrsction
+
+1.0.0.M1-008 : 
+track instance true for Members
+--> defaultMember DIMENSION_TIME_CURRENT_MEMBER
+add OneFactAnalysis
+calculate grand parent
+
+1.0.0.M1-007 : 
+- suppress redondant files symbols
+- add isCurrentTime to Fact
+
+1.0.0.M1-006 : 
+- suppress redondant files symbols
+
+
+1.0.0.M1-005 : 
+- OneLevelDriverAnalysis
+- HierarchyAccessor
+
+1.0.0.M1-004 : 
+- LibCubes: suppress ConstList (issue with YBS)
+
+1.0.0.M1-003 : 
+- LibCubes: suppress ConstList (issue with YBS)
+
+1.0.0.M1-002 : 
+- LibCubes: make it compatible with YBS
+
+1.0.0.M1-001 : 
+- LibCubes: first implementation without documentation
+-  YBS 7.0.0.RC01
+- Engine 7.1.0.RC02
+Release date : January 26th, 2018
+*/

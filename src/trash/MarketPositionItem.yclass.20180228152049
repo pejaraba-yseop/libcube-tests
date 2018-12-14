@@ -1,0 +1,59 @@
+interface MarketPositionItem
+    field marketPositionID
+        --> domains Text
+        --> xmlMapping XmlMappingProperty_NO_SAVE
+        --> dsl -> Textualization
+            --> language LANG_en
+            --> root "marketPositionID"
+            --> number SINGULAR
+        ;
+    field marketPositionName
+        --> domains Text
+        --> xmlMapping XmlMappingProperty_NO_SAVE
+        --> dsl -> Textualization
+            --> language LANG_en
+            --> root "marketPositionName"
+            --> number SINGULAR
+        ;
+    field marketPositionValueDifference
+        --> domains Number
+        --> xmlMapping XmlMappingProperty_NO_SAVE
+        --> dsl -> Textualization
+            --> language LANG_en
+            --> root "marketPositionValueDifference"
+            --> number SINGULAR
+        ;
+    field marketPositionPercentDifference
+        --> domains Number
+        --> xmlMapping XmlMappingProperty_NO_SAVE
+        --> dsl -> Textualization
+            --> language LANG_en
+            --> root "marketPositionPercentDifference"
+            --> number SINGULAR
+        ;
+    field marketPositionRank
+        --> domains Integer
+        --> xmlMapping XmlMappingProperty_NO_SAVE
+        --> dsl -> Textualization
+            --> language LANG_en
+            --> root "marketPositionRank"
+            --> number SINGULAR
+        ;
+    field marketPositionRankWord
+        --> domains Text
+        --> xmlMapping XmlMappingProperty_NO_SAVE
+        --> dsl -> Textualization
+            --> language LANG_en
+            --> root "marketPositionRankWord"
+            --> number SINGULAR
+        ;
+    classProperties
+    --> dsl -> Textualization
+        --> language LANG_en
+        --> root "MarketPositionItem"
+        --> number SINGULAR
+    ;
+;
+
+implementation MarketPositionItem
+;

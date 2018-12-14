@@ -1,0 +1,80 @@
+LibGeography:Country C_PHL
+  --> iso3166_1_numeric_code  "608"
+  --> iso3166_1_alpha_2       "PH"
+  --> iso3166_1_alpha_3       "PHL"
+  --> label
+    -> MultilingualText
+      --> i18nName_fr
+        -> NlgSubstantive
+          --> root    "Philippines"
+          --> plural  "Philippines"
+          --> gender  FEMININE
+          --> number  PLURAL
+        ;
+      --> i18nName_en
+        -> NlgSubstantive
+          --> root    "Philippines"
+          --> plural  "Philippines"
+          --> gender  INANIMATE
+          --> number  PLURAL
+        ;
+      --> i18nName_es
+        -> NlgSubstantive
+          --> root    "Filipinas"
+          --> plural  "Filipinas"
+          --> gender  FEMININE
+          --> number  PLURAL
+        ;
+      --> i18nName_de
+        -> NlgSubstantive
+          --> root    "Philippinen"
+          --> plural  "Philippinen"
+          --> gender  NEUTRAL
+          --> number  PLURAL
+        ;
+      --> i18nName_ja
+        -> NlgSubstantive
+          --> root    "フィリピン"
+          --> plural  "フィリピン"
+          --> gender  INANIMATE
+          --> number  PLURAL
+        ;
+    ;
+  --> demonym
+    -> MultilingualText
+      --> i18nName_fr
+        -> NlgGenderAgreeableSubstantive
+          --> masculine "Philippin"
+          --> feminine  "Philippine"
+        ;
+      --> i18nName_en  "Filipino"
+      --> i18nName_es  "filipino"
+      --> i18nName_de
+        -> NlgGenderAgreeableSubstantive
+          --> masculine "Philippiner"
+          --> feminine  "Philippinerin"
+        ;
+    ;
+  --> adjective
+    -> MultilingualText
+      --> i18nName_fr
+        -> NlgAdjective
+          --> root      "philippin"
+          --> feminine  "philippine"
+        ;
+      --> i18nName_en
+        -> NlgAdjective
+          --> root      "Philippine"
+        ;
+      --> i18nName_es
+        -> NlgAdjective
+          --> root      "filipino"
+        ;
+      --> i18nName_de
+        -> NlgAdjective
+          --> root      "philippinisch"
+        ;
+    ;
+  --> useArticle_fr  true
+  --> useArticle_en  true
+;

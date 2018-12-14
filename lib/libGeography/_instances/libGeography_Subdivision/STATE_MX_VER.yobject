@@ -1,0 +1,47 @@
+LibGeography:Subdivision STATE_MX_VER
+  --> iso3166_2    "MX-VER"
+  --> postal_code  "VL"
+  --> status       STATE
+  --> label
+    -> MultilingualText
+      --> i18nName_fr
+        -> NlgSubstantive
+          --> root    "Veracruz"
+          --> plural  "Veracruz"
+          --> number  SINGULAR
+        ;
+      --> i18nName_en
+        -> NlgSubstantive
+          --> root    "Veracruz"
+          --> plural  "Veracruz"
+          --> gender  INANIMATE
+          --> number  SINGULAR
+        ;
+      --> i18nName_es
+        -> NlgSubstantive
+          --> root    "Veracruz"
+          --> plural  "Veracruz"
+          --> number  SINGULAR
+        ;
+      --> i18nName_de
+        -> NlgSubstantive
+          --> root    "Veracruz"
+          --> plural  "Veracruz"
+          --> gender  NEUTRAL
+          --> number  SINGULAR
+        ;
+      --> i18nName_ja
+        -> NlgSubstantive
+          --> root    "ベラクルス州"
+          --> plural  "ベラクルス州"
+          --> gender  INANIMATE
+          --> number  SINGULAR
+        ;
+    ;
+  --> demonym
+    -> MultilingualText
+    ;
+  --> adjective
+    -> MultilingualText
+    ;
+;

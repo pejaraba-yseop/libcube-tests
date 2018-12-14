@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<yseop-yml:ymlRule xmlns:yseop-yml="http://www.yseop.com/yml/storage" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" domainModelVersion="3" identifier="3af7e6c7-2096-45d1-b2ef-eb47a4cebdbe">
+    <yseop-yml:content>?businessSegment.businessSegmentNameEnglish = "public transport";</yseop-yml:content>
+    <yseop-yml:content>?businessSegment in BusinessSegment
+?businessSegment.businessSegmentName == "Transportes Público de Pasajeros"</yseop-yml:content>
+    <yseop-yml:name>TransportesPBlicoDePasajerosToEnglish</yseop-yml:name>
+    <yseop-yml:properties identifier="ceb6d599-1d9c-40a0-a55c-f0eaf172373d">
+        <yseop-yml:property identifier="ceb6d599-1d9c-40a0-a55c-f0eaf172373d|dsl" type="YML_PROPERTY" name="dsl">"Transportes Público de Pasajeros to English"</yseop-yml:property>
+        <yseop-yml:property identifier="ceb6d599-1d9c-40a0-a55c-f0eaf172373d|disabled" type="GENERATION_PROPERTY" name="disabled">true</yseop-yml:property>
+    </yseop-yml:properties>
+</yseop-yml:ymlRule>

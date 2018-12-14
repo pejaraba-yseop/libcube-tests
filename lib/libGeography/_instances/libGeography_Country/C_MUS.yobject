@@ -1,0 +1,80 @@
+LibGeography:Country C_MUS
+  --> iso3166_1_numeric_code  "480"
+  --> iso3166_1_alpha_2       "MU"
+  --> iso3166_1_alpha_3       "MUS"
+  --> label
+    -> MultilingualText
+      --> i18nName_fr
+        -> NlgSubstantive
+          --> root    "Île Maurice"
+          --> plural  "Île Maurice"
+          --> gender  FEMININE
+          --> number  SINGULAR
+        ;
+      --> i18nName_en
+        -> NlgSubstantive
+          --> root    "Mauritius"
+          --> plural  "Mauritius"
+          --> gender  INANIMATE
+          --> number  SINGULAR
+        ;
+      --> i18nName_es
+        -> NlgSubstantive
+          --> root    "Mauricio"
+          --> plural  "Mauricio"
+          --> gender  FEMININE
+          --> number  SINGULAR
+        ;
+      --> i18nName_de
+        -> NlgSubstantive
+          --> root    "Mauritius"
+          --> plural  "Mauritius"
+          --> gender  NEUTRAL
+          --> number  SINGULAR
+        ;
+      --> i18nName_ja
+        -> NlgSubstantive
+          --> root    "モーリシャス"
+          --> plural  "モーリシャス"
+          --> gender  INANIMATE
+          --> number  SINGULAR
+        ;
+    ;
+  --> demonym
+    -> MultilingualText
+      --> i18nName_fr
+        -> NlgGenderAgreeableSubstantive
+          --> masculine "Mauricien"
+          --> feminine  "Mauricienne"
+        ;
+      --> i18nName_en  "Mauritian"
+      --> i18nName_es  "mauriciano"
+      --> i18nName_de
+        -> NlgGenderAgreeableSubstantive
+          --> masculine "Mauritier"
+          --> feminine  "Mauritierin"
+        ;
+    ;
+  --> adjective
+    -> MultilingualText
+      --> i18nName_fr
+        -> NlgAdjective
+          --> root      "mauricien"
+          --> feminine  "mauricienne"
+        ;
+      --> i18nName_en
+        -> NlgAdjective
+          --> root      "Mauritian"
+        ;
+      --> i18nName_es
+        -> NlgAdjective
+          --> root      "mauriciano"
+        ;
+      --> i18nName_de
+        -> NlgAdjective
+          --> root      "mauritisch"
+        ;
+    ;
+  --> useArticle_fr  true
+  --> useArticle_en  false
+;

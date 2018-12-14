@@ -1,0 +1,80 @@
+LibGeography:Country C_CIV
+  --> iso3166_1_numeric_code  "384"
+  --> iso3166_1_alpha_2       "CI"
+  --> iso3166_1_alpha_3       "CIV"
+  --> label
+    -> MultilingualText
+      --> i18nName_fr
+        -> NlgSubstantive
+          --> root    "Côte d'Ivoire"
+          --> plural  "Côte d'Ivoire"
+          --> gender  MASCULINE
+          --> number  SINGULAR
+        ;
+      --> i18nName_en
+        -> NlgSubstantive
+          --> root    "Côte d'Ivoire"
+          --> plural  "Côte d'Ivoire"
+          --> gender  INANIMATE
+          --> number  SINGULAR
+        ;
+      --> i18nName_es
+        -> NlgSubstantive
+          --> root    "Costa de Marfil"
+          --> plural  "Costa de Marfil"
+          --> gender  MASCULINE
+          --> number  SINGULAR
+        ;
+      --> i18nName_de
+        -> NlgSubstantive
+          --> root    "Côte d’Ivoire"
+          --> plural  "Côte d’Ivoire"
+          --> gender  NEUTRAL
+          --> number  SINGULAR
+        ;
+      --> i18nName_ja
+        -> NlgSubstantive
+          --> root    "コートジボワール"
+          --> plural  "コートジボワール"
+          --> gender  INANIMATE
+          --> number  SINGULAR
+        ;
+    ;
+  --> demonym
+    -> MultilingualText
+      --> i18nName_fr
+        -> NlgGenderAgreeableSubstantive
+          --> masculine "Ivoirien"
+          --> feminine  "Ivoirienne"
+        ;
+      --> i18nName_en  "Ivorian"
+      --> i18nName_es  "costamarfileño"
+      --> i18nName_de
+        -> NlgGenderAgreeableSubstantive
+          --> masculine "Ivorer"
+          --> feminine  "Ivorerin"
+        ;
+    ;
+  --> adjective
+    -> MultilingualText
+      --> i18nName_fr
+        -> NlgAdjective
+          --> root      "ivoirien"
+          --> feminine  "ivoirienne"
+        ;
+      --> i18nName_en
+        -> NlgAdjective
+          --> root      "Ivorian"
+        ;
+      --> i18nName_es
+        -> NlgAdjective
+          --> root      "costamarfileño"
+        ;
+      --> i18nName_de
+        -> NlgAdjective
+          --> root      "ivorisch"
+        ;
+    ;
+  --> useArticle_fr  true
+  --> useArticle_en  false
+;

@@ -1,0 +1,55 @@
+LibGeography:Subdivision STATE_US_NC
+  --> iso3166_2    "US-NC"
+  --> postal_code  "NC"
+  --> status       STATE
+  --> label
+    -> MultilingualText
+      --> i18nName_fr
+        -> NlgSubstantive
+          --> root    "Caroline du Nord"
+          --> plural  "Caroline du Nord"
+          --> gender  FEMININE
+          --> number  SINGULAR
+        ;
+      --> i18nName_en
+        -> NlgSubstantive
+          --> root    "North Carolina"
+          --> plural  "North Carolina"
+          --> gender  INANIMATE
+          --> number  SINGULAR
+        ;
+      --> i18nName_es
+        -> NlgSubstantive
+          --> root    "Carolina del Norte"
+          --> plural  "Carolina del Norte"
+          --> gender  MASCULINE
+          --> number  SINGULAR
+        ;
+      --> i18nName_de
+        -> NlgSubstantive
+          --> root    "North Carolina"
+          --> plural  "North Carolina"
+          --> gender  NEUTRAL
+          --> number  SINGULAR
+        ;
+      --> i18nName_ja
+        -> NlgSubstantive
+          --> root    " ノースカロライナ州"
+          --> plural  " ノースカロライナ州"
+          --> gender  INANIMATE
+          --> number  SINGULAR
+        ;
+    ;
+  --> demonym
+    -> MultilingualText
+      --> i18nName_en  "North Carolinian"
+    ;
+  --> adjective
+    -> MultilingualText
+      --> i18nName_en
+        -> NlgAdjective
+          --> root      "North Carolinian"
+        ;
+    ;
+  --> useArticle_en  false
+;

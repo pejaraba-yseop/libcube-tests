@@ -1,0 +1,29 @@
+
+interface Issuer extends LibCube:HierarchyElement
+    field ticker
+        --> domains Text
+        --> xmlMapping XmlMappingProperty_NO_SAVE
+        --> dsl -> Textualization
+            --> language LANG_en
+            --> root "ticker"
+            --> number SINGULAR
+        ;
+    field sectorId
+        --> domains Text
+        --> xmlMapping XmlMappingProperty_NO_SAVE
+        --> dsl -> Textualization
+            --> language LANG_en
+            --> root "sectorId"
+            --> number SINGULAR
+        ;
+    classProperties
+    --> dsl -> Textualization
+        --> language LANG_en
+        --> root "Issuer"
+        --> number SINGULAR
+    ;
+;
+
+implementation Issuer
+;
+

@@ -1,0 +1,80 @@
+LibGeography:Country C_HTI
+  --> iso3166_1_numeric_code  "332"
+  --> iso3166_1_alpha_2       "HT"
+  --> iso3166_1_alpha_3       "HTI"
+  --> label
+    -> MultilingualText
+      --> i18nName_fr
+        -> NlgSubstantive
+          --> root    "Haïti"
+          --> plural  "Haïti"
+          --> gender  MASCULINE
+          --> number  SINGULAR
+        ;
+      --> i18nName_en
+        -> NlgSubstantive
+          --> root    "Haiti"
+          --> plural  "Haiti"
+          --> gender  INANIMATE
+          --> number  SINGULAR
+        ;
+      --> i18nName_es
+        -> NlgSubstantive
+          --> root    "Haití"
+          --> plural  "Haití"
+          --> gender  MASCULINE
+          --> number  SINGULAR
+        ;
+      --> i18nName_de
+        -> NlgSubstantive
+          --> root    "Haiti"
+          --> plural  "Haiti"
+          --> gender  NEUTRAL
+          --> number  SINGULAR
+        ;
+      --> i18nName_ja
+        -> NlgSubstantive
+          --> root    "ハイチ"
+          --> plural  "ハイチ"
+          --> gender  INANIMATE
+          --> number  SINGULAR
+        ;
+    ;
+  --> demonym
+    -> MultilingualText
+      --> i18nName_fr
+        -> NlgGenderAgreeableSubstantive
+          --> masculine "Haïtien"
+          --> feminine  "Haïtienne"
+        ;
+      --> i18nName_en  "Haitian"
+      --> i18nName_es  "haitiano"
+      --> i18nName_de
+        -> NlgGenderAgreeableSubstantive
+          --> masculine "Haitianer"
+          --> feminine  "Haitianerin"
+        ;
+    ;
+  --> adjective
+    -> MultilingualText
+      --> i18nName_fr
+        -> NlgAdjective
+          --> root      "haïtien"
+          --> feminine  "haïtienne"
+        ;
+      --> i18nName_en
+        -> NlgAdjective
+          --> root      "Haitian"
+        ;
+      --> i18nName_es
+        -> NlgAdjective
+          --> root      "haitiano"
+        ;
+      --> i18nName_de
+        -> NlgAdjective
+          --> root      "haitianisch"
+        ;
+    ;
+  --> useArticle_fr  false
+  --> useArticle_en  false
+;

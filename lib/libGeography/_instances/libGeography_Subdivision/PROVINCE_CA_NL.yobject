@@ -1,0 +1,50 @@
+LibGeography:Subdivision PROVINCE_CA_NL
+  --> iso3166_2    "CA-NL"
+  --> postal_code  "NL"
+  --> status       PROVINCE
+  --> label
+    -> MultilingualText
+      --> i18nName_fr
+        -> NlgSubstantive
+          --> root    "Terre-Neuve-et-Labrador"
+          --> plural  "Terre-Neuve-et-Labrador"
+          --> gender  MASCULINE
+          --> number  PLURAL
+        ;
+      --> i18nName_en
+        -> NlgSubstantive
+          --> root    "Newfoundland and Labrador"
+          --> plural  "Newfoundland and Labrador"
+          --> gender  INANIMATE
+          --> number  PLURAL
+        ;
+      --> i18nName_es
+        -> NlgSubstantive
+          --> root    "Terranova y Labrador"
+          --> plural  "Terranova y Labrador"
+          --> gender  MASCULINE
+          --> number  PLURAL
+        ;
+      --> i18nName_de
+        -> NlgSubstantive
+          --> root    "Neufundland und Labrador"
+          --> plural  "Neufundland und Labrador"
+          --> gender  NEUTRAL
+          --> number  PLURAL
+        ;
+      --> i18nName_ja
+        -> NlgSubstantive
+          --> root    "ニューファンドランド・ラブラドール州"
+          --> plural  "ニューファンドランド・ラブラドール州"
+          --> gender  INANIMATE
+          --> number  PLURAL
+        ;
+    ;
+  --> demonym
+    -> MultilingualText
+    ;
+  --> adjective
+    -> MultilingualText
+    ;
+  --> useArticle_en  false
+;

@@ -1,0 +1,55 @@
+LibGeography:Subdivision STATE_US_MS
+  --> iso3166_2    "US-MS"
+  --> postal_code  "MS"
+  --> status       STATE
+  --> label
+    -> MultilingualText
+      --> i18nName_fr
+        -> NlgSubstantive
+          --> root    "Mississippi"
+          --> plural  "Mississippi"
+          --> gender  MASCULINE
+          --> number  SINGULAR
+        ;
+      --> i18nName_en
+        -> NlgSubstantive
+          --> root    "Mississippi"
+          --> plural  "Mississippi"
+          --> gender  INANIMATE
+          --> number  SINGULAR
+        ;
+      --> i18nName_es
+        -> NlgSubstantive
+          --> root    "Misisipi​"
+          --> plural  "Misisipi​"
+          --> gender  MASCULINE
+          --> number  SINGULAR
+        ;
+      --> i18nName_de
+        -> NlgSubstantive
+          --> root    "Mississippi"
+          --> plural  "Mississippi"
+          --> gender  NEUTRAL
+          --> number  SINGULAR
+        ;
+      --> i18nName_ja
+        -> NlgSubstantive
+          --> root    " ミシシッピ州"
+          --> plural  " ミシシッピ州"
+          --> gender  INANIMATE
+          --> number  SINGULAR
+        ;
+    ;
+  --> demonym
+    -> MultilingualText
+      --> i18nName_en  "Mississippian"
+    ;
+  --> adjective
+    -> MultilingualText
+      --> i18nName_en
+        -> NlgAdjective
+          --> root      "Mississippian"
+        ;
+    ;
+  --> useArticle_en  false
+;

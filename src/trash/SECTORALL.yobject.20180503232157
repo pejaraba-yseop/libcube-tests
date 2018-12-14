@@ -1,0 +1,8 @@
+
+Sector SECTOR_ALL
+    --> dsl -> Textualization
+        --> language LANG_en
+        --> root "All Sectors"
+        --> number SINGULAR
+    ;
+;

@@ -1,0 +1,80 @@
+LibGeography:Country C_TCD
+  --> iso3166_1_numeric_code  "148"
+  --> iso3166_1_alpha_2       "TD"
+  --> iso3166_1_alpha_3       "TCD"
+  --> label
+    -> MultilingualText
+      --> i18nName_fr
+        -> NlgSubstantive
+          --> root    "Tchad"
+          --> plural  "Tchad"
+          --> gender  MASCULINE
+          --> number  SINGULAR
+        ;
+      --> i18nName_en
+        -> NlgSubstantive
+          --> root    "Chad"
+          --> plural  "Chad"
+          --> gender  INANIMATE
+          --> number  SINGULAR
+        ;
+      --> i18nName_es
+        -> NlgSubstantive
+          --> root    "Chad"
+          --> plural  "Chad"
+          --> gender  FEMININE
+          --> number  SINGULAR
+        ;
+      --> i18nName_de
+        -> NlgSubstantive
+          --> root    "Tschad"
+          --> plural  "Tschad"
+          --> gender  NEUTRAL
+          --> number  SINGULAR
+        ;
+      --> i18nName_ja
+        -> NlgSubstantive
+          --> root    "チャド"
+          --> plural  "チャド"
+          --> gender  INANIMATE
+          --> number  SINGULAR
+        ;
+    ;
+  --> demonym
+    -> MultilingualText
+      --> i18nName_fr
+        -> NlgGenderAgreeableSubstantive
+          --> masculine "Tchadien"
+          --> feminine  "Tchadienne"
+        ;
+      --> i18nName_en  "Chadian"
+      --> i18nName_es  "chadiano"
+      --> i18nName_de
+        -> NlgGenderAgreeableSubstantive
+          --> masculine "Tschader"
+          --> feminine  "Tschaderin"
+        ;
+    ;
+  --> adjective
+    -> MultilingualText
+      --> i18nName_fr
+        -> NlgAdjective
+          --> root      "tchadien"
+          --> feminine  "tchadienne"
+        ;
+      --> i18nName_en
+        -> NlgAdjective
+          --> root      "Chadian"
+        ;
+      --> i18nName_es
+        -> NlgAdjective
+          --> root      "chadiano"
+        ;
+      --> i18nName_de
+        -> NlgAdjective
+          --> root      "tschadisch"
+        ;
+    ;
+  --> useArticle_fr  true
+  --> useArticle_en  false
+;

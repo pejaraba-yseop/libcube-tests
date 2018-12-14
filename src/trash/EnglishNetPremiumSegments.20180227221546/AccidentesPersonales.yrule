@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<yseop-yml:ymlRule xmlns:yseop-yml="http://www.yseop.com/yml/storage" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" domainModelVersion="3" identifier="1989c0cb-f2dd-4cf4-ac28-2b3ac50194c5">
+    <yseop-yml:content>?netPremiumSegments.netPremiumSegmentEnglishName = "Personal Accidents";</yseop-yml:content>
+    <yseop-yml:content>?netPremiumSegments in NetPremiumSegments
+?netPremiumSegments.netPremiumSegmentName == "Accidentes Personales"</yseop-yml:content>
+    <yseop-yml:name>AccidentesPersonales</yseop-yml:name>
+    <yseop-yml:properties identifier="528af4ae-096c-4bd9-9052-43fc7f007024">
+        <yseop-yml:property identifier="528af4ae-096c-4bd9-9052-43fc7f007024|dsl" type="YML_PROPERTY" name="dsl">"Accidentes Personales"</yseop-yml:property>
+        <yseop-yml:property identifier="528af4ae-096c-4bd9-9052-43fc7f007024|disabled" type="GENERATION_PROPERTY" name="disabled">true</yseop-yml:property>
+    </yseop-yml:properties>
+</yseop-yml:ymlRule>

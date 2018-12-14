@@ -1,0 +1,80 @@
+LibGeography:Country C_PER
+  --> iso3166_1_numeric_code  "604"
+  --> iso3166_1_alpha_2       "PE"
+  --> iso3166_1_alpha_3       "PER"
+  --> label
+    -> MultilingualText
+      --> i18nName_fr
+        -> NlgSubstantive
+          --> root    "Pérou"
+          --> plural  "Pérou"
+          --> gender  MASCULINE
+          --> number  SINGULAR
+        ;
+      --> i18nName_en
+        -> NlgSubstantive
+          --> root    "Peru"
+          --> plural  "Peru"
+          --> gender  INANIMATE
+          --> number  SINGULAR
+        ;
+      --> i18nName_es
+        -> NlgSubstantive
+          --> root    "Perú"
+          --> plural  "Perú"
+          --> gender  MASCULINE
+          --> number  SINGULAR
+        ;
+      --> i18nName_de
+        -> NlgSubstantive
+          --> root    "Peru"
+          --> plural  "Peru"
+          --> gender  NEUTRAL
+          --> number  SINGULAR
+        ;
+      --> i18nName_ja
+        -> NlgSubstantive
+          --> root    "ペルー"
+          --> plural  "ペルー"
+          --> gender  INANIMATE
+          --> number  SINGULAR
+        ;
+    ;
+  --> demonym
+    -> MultilingualText
+      --> i18nName_fr
+        -> NlgGenderAgreeableSubstantive
+          --> masculine "Péruvien"
+          --> feminine  "Péruvienne"
+        ;
+      --> i18nName_en  "Peruvian"
+      --> i18nName_es  "peruano"
+      --> i18nName_de
+        -> NlgGenderAgreeableSubstantive
+          --> masculine "Peruaner"
+          --> feminine  "Peruanerin"
+        ;
+    ;
+  --> adjective
+    -> MultilingualText
+      --> i18nName_fr
+        -> NlgAdjective
+          --> root      "péruvien"
+          --> feminine  "péruvienne"
+        ;
+      --> i18nName_en
+        -> NlgAdjective
+          --> root      "Peruvian"
+        ;
+      --> i18nName_es
+        -> NlgAdjective
+          --> root      "peruano"
+        ;
+      --> i18nName_de
+        -> NlgAdjective
+          --> root      "peruanisch"
+        ;
+    ;
+  --> useArticle_fr  true
+  --> useArticle_en  false
+;

@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<yseop-yml:ymlRuleset xmlns:yseop-yml="http://www.yseop.com/yml/storage" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" domainModelVersion="3" identifier="10cc79a8-fe66-4930-bb2f-136a5e0a505e">
+    <yseop-yml:ymlParameters/>
+    <yseop-yml:localVariables/>
+    <yseop-yml:advancedContent/>
+    <yseop-yml:rules>
+        <yseop-yml:rule>75fbb547-3238-4720-b9ee-7abbf4b45b96</yseop-yml:rule>
+        <yseop-yml:rule>3bb96fee-8b1e-4c53-82dd-6a73066e2d36</yseop-yml:rule>
+        <yseop-yml:rule>45e4b33f-0c81-4d49-8ff8-a0e2c7f0f8e5</yseop-yml:rule>
+        <yseop-yml:rule>bbeef32a-fe08-4f73-8cd7-b9ed1fbc7350</yseop-yml:rule>
+        <yseop-yml:rule>fcd7f8fd-b398-4925-b2e0-687773aef298</yseop-yml:rule>
+        <yseop-yml:rule>e41209a8-fe51-42b9-abc3-f5d3ac323d5f</yseop-yml:rule>
+        <yseop-yml:rule>614f060e-f7b8-4955-b512-3048622335a9</yseop-yml:rule>
+        <yseop-yml:rule>f6e95e8a-d12e-4dc2-b288-aa61cdfcade8</yseop-yml:rule>
+        <yseop-yml:rule>ef851238-a942-40dc-b59f-5a29b57a3b54</yseop-yml:rule>
+        <yseop-yml:rule>ab85c29a-f44c-422a-94da-011b661dfe74</yseop-yml:rule>
+        <yseop-yml:rule>e31f80b4-27fe-477a-b2d1-23db5270b024</yseop-yml:rule>
+        <yseop-yml:rule>f6842a0d-e88d-4b3d-be0d-c1676e309083</yseop-yml:rule>
+        <yseop-yml:rule>60ffc650-1bed-41d3-8406-e615a1f073a7</yseop-yml:rule>
+        <yseop-yml:rule>1be72161-a3ff-4565-a69d-dcc6d203fda4</yseop-yml:rule>
+        <yseop-yml:rule>6197ab52-cc63-44e9-bd5d-72b9f98f2e48</yseop-yml:rule>
+        <yseop-yml:rule>79e0a4dd-bb77-44ae-adb4-c2450b7b13b6</yseop-yml:rule>
+        <yseop-yml:rule>1484ec6f-9782-419d-ab40-1f9bd516cf33</yseop-yml:rule>
+        <yseop-yml:rule>f47254a0-e10c-4510-a3a3-a745dde6d1a3</yseop-yml:rule>
+        <yseop-yml:rule>f4642ad8-916f-4dd7-ba08-c47aa142b0ed</yseop-yml:rule>
+        <yseop-yml:rule>ff729a22-18b0-47e9-8dd2-5a4318fb1247</yseop-yml:rule>
+        <yseop-yml:rule>07e40507-ffe2-4200-bd83-8bd8a7d01642</yseop-yml:rule>
+        <yseop-yml:rule>9484d676-f2dd-4b0d-a546-eaf04786e6b6</yseop-yml:rule>
+        <yseop-yml:rule>5361fe2e-2c91-443f-b137-b4278b4deab5</yseop-yml:rule>
+        <yseop-yml:rule>933c0389-3cb0-4587-8942-b4987556edd4</yseop-yml:rule>
+        <yseop-yml:rule>d06adb11-255d-4f64-8ca8-59b08c6e300d</yseop-yml:rule>
+        <yseop-yml:rule>46060b9a-1c93-4c55-858a-aade3d1479e5</yseop-yml:rule>
+    </yseop-yml:rules>
+    <yseop-yml:name>sortBusinessSegment</yseop-yml:name>
+    <yseop-yml:properties identifier="d6c501a4-627f-4892-ae5f-cf9ae00892f1">
+        <yseop-yml:property identifier="d6c501a4-627f-4892-ae5f-cf9ae00892f1|dsl" type="YML_PROPERTY" name="dsl">"sort business segment"</yseop-yml:property>
+    </yseop-yml:properties>
+</yseop-yml:ymlRuleset>

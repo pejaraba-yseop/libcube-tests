@@ -1,0 +1,80 @@
+LibGeography:Country C_MNG
+  --> iso3166_1_numeric_code  "496"
+  --> iso3166_1_alpha_2       "MN"
+  --> iso3166_1_alpha_3       "MNG"
+  --> label
+    -> MultilingualText
+      --> i18nName_fr
+        -> NlgSubstantive
+          --> root    "Mongolie"
+          --> plural  "Mongolie"
+          --> gender  FEMININE
+          --> number  SINGULAR
+        ;
+      --> i18nName_en
+        -> NlgSubstantive
+          --> root    "Mongolia"
+          --> plural  "Mongolia"
+          --> gender  INANIMATE
+          --> number  SINGULAR
+        ;
+      --> i18nName_es
+        -> NlgSubstantive
+          --> root    "Mongolia"
+          --> plural  "Mongolia"
+          --> gender  FEMININE
+          --> number  SINGULAR
+        ;
+      --> i18nName_de
+        -> NlgSubstantive
+          --> root    "Mongolei"
+          --> plural  "Mongolei"
+          --> gender  NEUTRAL
+          --> number  SINGULAR
+        ;
+      --> i18nName_ja
+        -> NlgSubstantive
+          --> root    "モンゴル"
+          --> plural  "モンゴル"
+          --> gender  INANIMATE
+          --> number  SINGULAR
+        ;
+    ;
+  --> demonym
+    -> MultilingualText
+      --> i18nName_fr
+        -> NlgGenderAgreeableSubstantive
+          --> masculine "Mongol"
+          --> feminine  "Mongole"
+        ;
+      --> i18nName_en  "Mongolian"
+      --> i18nName_es  "mongol"
+      --> i18nName_de
+        -> NlgGenderAgreeableSubstantive
+          --> masculine "Mongole"
+          --> feminine  "Mongolin"
+        ;
+    ;
+  --> adjective
+    -> MultilingualText
+      --> i18nName_fr
+        -> NlgAdjective
+          --> root      "mongol"
+          --> feminine  "mongole"
+        ;
+      --> i18nName_en
+        -> NlgAdjective
+          --> root      "Mongolian"
+        ;
+      --> i18nName_es
+        -> NlgAdjective
+          --> root      "mongol"
+        ;
+      --> i18nName_de
+        -> NlgAdjective
+          --> root      "mongolisch"
+        ;
+    ;
+  --> useArticle_fr  true
+  --> useArticle_en  false
+;

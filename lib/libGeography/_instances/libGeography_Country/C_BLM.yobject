@@ -1,0 +1,76 @@
+LibGeography:Country C_BLM
+  --> iso3166_1_numeric_code  "652"
+  --> iso3166_1_alpha_2       "BL"
+  --> iso3166_1_alpha_3       "BLM"
+  --> label
+    -> MultilingualText
+      --> i18nName_fr
+        -> NlgSubstantive
+          --> root    "Saint-Barthélemy"
+          --> plural  "Saint-Barthélemy"
+          --> gender  MASCULINE
+          --> number  SINGULAR
+        ;
+      --> i18nName_en
+        -> NlgSubstantive
+          --> root    "Saint Barthélemy"
+          --> plural  "Saint Barthélemy"
+          --> gender  INANIMATE
+          --> number  SINGULAR
+        ;
+      --> i18nName_es
+        -> NlgSubstantive
+          --> root    "San Bartolomé"
+          --> plural  "San Bartolomé"
+          --> gender  MASCULINE
+          --> number  SINGULAR
+        ;
+      --> i18nName_de
+        -> NlgSubstantive
+          --> root    "St. Barthélemy"
+          --> plural  "St. Barthélemy"
+          --> gender  NEUTRAL
+          --> number  SINGULAR
+        ;
+      --> i18nName_ja
+        -> NlgSubstantive
+          --> root    "サン・バルテルミー島"
+          --> plural  "サン・バルテルミー島"
+          --> gender  INANIMATE
+          --> number  SINGULAR
+        ;
+    ;
+  --> demonym
+    -> MultilingualText
+      --> i18nName_fr
+        -> NlgGenderAgreeableSubstantive
+          --> masculine "Saint-Barthéleminois"
+          --> feminine  "Saint-Barthéleminoise"
+        ;
+      --> i18nName_en  "of Saint Barthélemy"
+      --> i18nName_es  "de San Bartolomé"
+      --> i18nName_de  "von St. Barthélemy"
+    ;
+  --> adjective
+    -> MultilingualText
+      --> i18nName_fr
+        -> NlgAdjective
+          --> root      "saint-barthéleminois"
+          --> feminine  "  "
+        ;
+      --> i18nName_en
+        -> NlgAdjective
+          --> root      "of Saint Barthélemy"
+        ;
+      --> i18nName_es
+        -> NlgAdjective
+          --> root      "de San Bartolomé"
+        ;
+      --> i18nName_de
+        -> NlgAdjective
+          --> root      "von St. Barthélemy"
+        ;
+    ;
+  --> useArticle_fr  false
+  --> useArticle_en  false
+;

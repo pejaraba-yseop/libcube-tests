@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<yseop-yml:ymlRuleset xmlns:yseop-yml="http://www.yseop.com/yml/storage" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" domainModelVersion="3" identifier="29d6c586-c281-47f4-8241-b56dd9d67950">
+    <yseop-yml:rules>
+        <yseop-yml:rule>e52fa926-422c-416b-92b3-12e7b10a938e</yseop-yml:rule>
+        <yseop-yml:rule>f6f27187-9c6b-41d1-95d4-096d6a2e7b2c</yseop-yml:rule>
+    </yseop-yml:rules>
+    <yseop-yml:name>calculatingStandardDeviations</yseop-yml:name>
+    <yseop-yml:properties identifier="92779fca-f2a8-461d-999a-b50b3c6759d7">
+        <yseop-yml:property identifier="92779fca-f2a8-461d-999a-b50b3c6759d7|dsl" type="YML_PROPERTY" name="dsl">"calculating standard deviations"</yseop-yml:property>
+    </yseop-yml:properties>
+</yseop-yml:ymlRuleset>

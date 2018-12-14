@@ -1,0 +1,68 @@
+interface ExpenseRatioItem
+    field expenseRatioCountryName
+        --> domains Text
+        --> xmlMapping XmlMappingProperty_NO_SAVE
+        --> dsl -> Textualization
+            --> language LANG_en
+            --> root "expenseRatioCountryName"
+            --> number SINGULAR
+        ;
+    field expenseRatioPastOne
+        --> domains Number
+        --> xmlMapping XmlMappingProperty_NO_SAVE
+        --> dsl -> Textualization
+            --> language LANG_en
+            --> root "expenseRatioPastOne"
+            --> number SINGULAR
+        ;
+    field expenseRatioPastTwo
+        --> domains Number
+        --> xmlMapping XmlMappingProperty_NO_SAVE
+        --> dsl -> Textualization
+            --> language LANG_en
+            --> root "expenseRatioPastTwo"
+            --> number SINGULAR
+        ;
+    field expenseRatioCurrent
+        --> domains Number
+        --> xmlMapping XmlMappingProperty_NO_SAVE
+        --> dsl -> Textualization
+            --> language LANG_en
+            --> root "expenseRatioCurrent"
+            --> number SINGULAR
+        ;
+    field expenseRatioPercent
+        --> domains Number
+        --> xmlMapping XmlMappingProperty_NO_SAVE
+        --> dsl -> Textualization
+            --> language LANG_en
+            --> root "expenseRatioPercent"
+            --> number SINGULAR
+        ;
+    field expenseRatioDate
+        --> domains Date
+        --> xmlMapping XmlMappingProperty_NO_SAVE
+        --> dsl -> Textualization
+            --> language LANG_en
+            --> root "expenseRatioDate"
+            --> number SINGULAR
+        ;
+    field expenseRatioPeerListInExpenseRatio
+        --> domainsLevel2 ExpenseRatioPeerItem
+        --> domains OrderedSet
+        --> xmlMapping XmlMappingProperty_NO_SAVE
+        --> dsl -> Textualization
+            --> language LANG_en
+            --> root "expenseRatioPeerListInExpenseRatio"
+            --> number SINGULAR
+        ;
+    classProperties
+    --> dsl -> Textualization
+        --> language LANG_en
+        --> root "ExpenseRatioItem"
+        --> number SINGULAR
+    ;
+;
+
+implementation ExpenseRatioItem
+;

@@ -1,0 +1,80 @@
+LibGeography:Country C_CMR
+  --> iso3166_1_numeric_code  "120"
+  --> iso3166_1_alpha_2       "CM"
+  --> iso3166_1_alpha_3       "CMR"
+  --> label
+    -> MultilingualText
+      --> i18nName_fr
+        -> NlgSubstantive
+          --> root    "Cameroun"
+          --> plural  "Cameroun"
+          --> gender  MASCULINE
+          --> number  SINGULAR
+        ;
+      --> i18nName_en
+        -> NlgSubstantive
+          --> root    "Cameroon"
+          --> plural  "Cameroon"
+          --> gender  INANIMATE
+          --> number  SINGULAR
+        ;
+      --> i18nName_es
+        -> NlgSubstantive
+          --> root    "Camerún"
+          --> plural  "Camerún"
+          --> gender  MASCULINE
+          --> number  SINGULAR
+        ;
+      --> i18nName_de
+        -> NlgSubstantive
+          --> root    "Kamerun"
+          --> plural  "Kamerun"
+          --> gender  NEUTRAL
+          --> number  SINGULAR
+        ;
+      --> i18nName_ja
+        -> NlgSubstantive
+          --> root    "カメルーン"
+          --> plural  "カメルーン"
+          --> gender  INANIMATE
+          --> number  SINGULAR
+        ;
+    ;
+  --> demonym
+    -> MultilingualText
+      --> i18nName_fr
+        -> NlgGenderAgreeableSubstantive
+          --> masculine "Camerounais"
+          --> feminine  "Camerounaise"
+        ;
+      --> i18nName_en  "Cameroonian"
+      --> i18nName_es  "camerunés"
+      --> i18nName_de
+        -> NlgGenderAgreeableSubstantive
+          --> masculine "Kameruner"
+          --> feminine  "Kamerunerin"
+        ;
+    ;
+  --> adjective
+    -> MultilingualText
+      --> i18nName_fr
+        -> NlgAdjective
+          --> root      "camerounais"
+          --> feminine  "camerounaise"
+        ;
+      --> i18nName_en
+        -> NlgAdjective
+          --> root      "Cameroonian"
+        ;
+      --> i18nName_es
+        -> NlgAdjective
+          --> root      "camerunés"
+        ;
+      --> i18nName_de
+        -> NlgAdjective
+          --> root      "kamerunisch"
+        ;
+    ;
+  --> useArticle_fr  true
+  --> useArticle_en  false
+;

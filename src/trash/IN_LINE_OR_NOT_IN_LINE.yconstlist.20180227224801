@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<yseop-yml:constList xmlns:yseop-yml="http://www.yseop.com/yml/storage" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" domainModelVersion="3" identifier="a0310522-d958-4874-9285-d667c26bd2ba">
+    <yseop-yml:constListElements>
+        <yseop-yml:constListElement>
+            <yseop-yml:name>IN_LINE</yseop-yml:name>
+            <yseop-yml:localeValues>
+                <yseop-yml:localeValue locale="en">
+                    <yseop-yml:value>in line</yseop-yml:value>
+                </yseop-yml:localeValue>
+                <yseop-yml:localeValue locale="fr">
+                    <yseop-yml:value>en línea</yseop-yml:value>
+                </yseop-yml:localeValue>
+                <yseop-yml:localeValue locale="es">
+                    <yseop-yml:value>en línea</yseop-yml:value>
+                </yseop-yml:localeValue>
+            </yseop-yml:localeValues>
+        </yseop-yml:constListElement>
+        <yseop-yml:constListElement>
+            <yseop-yml:name>NOT_IN_LINE</yseop-yml:name>
+            <yseop-yml:localeValues>
+                <yseop-yml:localeValue locale="en">
+                    <yseop-yml:value>not in line</yseop-yml:value>
+                </yseop-yml:localeValue>
+                <yseop-yml:localeValue locale="fr">
+                    <yseop-yml:value>no esta en línea</yseop-yml:value>
+                </yseop-yml:localeValue>
+                <yseop-yml:localeValue locale="es">
+                    <yseop-yml:value>no esta en línea</yseop-yml:value>
+                </yseop-yml:localeValue>
+            </yseop-yml:localeValues>
+        </yseop-yml:constListElement>
+    </yseop-yml:constListElements>
+    <yseop-yml:name>IN_LINE_OR_NOT_IN_LINE</yseop-yml:name>
+    <yseop-yml:properties identifier="c54b61f4-be2f-4582-a1bf-f83ea0ab5ac9">
+        <yseop-yml:property identifier="c54b61f4-be2f-4582-a1bf-f83ea0ab5ac9|dsl" type="YML_PROPERTY" name="dsl">"in line or not in line"</yseop-yml:property>
+    </yseop-yml:properties>
+</yseop-yml:constList>

@@ -1,0 +1,12 @@
+
+interface Country extends LibCube:HierarchyElement
+    classProperties
+    --> dsl -> Textualization
+        --> language LANG_en
+        --> root "Country"
+        --> number SINGULAR
+    ;
+;
+
+implementation Country
+;

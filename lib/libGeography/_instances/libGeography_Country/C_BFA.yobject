@@ -1,0 +1,76 @@
+LibGeography:Country C_BFA
+  --> iso3166_1_numeric_code  "854"
+  --> iso3166_1_alpha_2       "BF"
+  --> iso3166_1_alpha_3       "BFA"
+  --> label
+    -> MultilingualText
+      --> i18nName_fr
+        -> NlgSubstantive
+          --> root    "Burkina Faso"
+          --> plural  "Burkina Faso"
+          --> gender  MASCULINE
+          --> number  SINGULAR
+        ;
+      --> i18nName_en
+        -> NlgSubstantive
+          --> root    "Burkina Faso"
+          --> plural  "Burkina Faso"
+          --> gender  INANIMATE
+          --> number  SINGULAR
+        ;
+      --> i18nName_es
+        -> NlgSubstantive
+          --> root    "Burkina Faso"
+          --> plural  "Burkina Faso"
+          --> gender  MASCULINE
+          --> number  SINGULAR
+        ;
+      --> i18nName_de
+        -> NlgSubstantive
+          --> root    "Burkina Faso"
+          --> plural  "Burkina Faso"
+          --> gender  NEUTRAL
+          --> number  SINGULAR
+        ;
+      --> i18nName_ja
+        -> NlgSubstantive
+          --> root    "ブルキナファソ"
+          --> plural  "ブルキナファソ"
+          --> gender  INANIMATE
+          --> number  SINGULAR
+        ;
+    ;
+  --> demonym
+    -> MultilingualText
+      --> i18nName_fr  "Burkinabè"
+      --> i18nName_en  "Burkinabe"
+      --> i18nName_es  "burkinés"
+      --> i18nName_de
+        -> NlgGenderAgreeableSubstantive
+          --> masculine "Burkiner"
+          --> feminine  "Burkinerin"
+        ;
+    ;
+  --> adjective
+    -> MultilingualText
+      --> i18nName_fr
+        -> NlgAdjective
+          --> root      "burkinabè"
+          --> invariable true
+        ;
+      --> i18nName_en
+        -> NlgAdjective
+          --> root      "Burkinabe"
+        ;
+      --> i18nName_es
+        -> NlgAdjective
+          --> root      "burkinés"
+        ;
+      --> i18nName_de
+        -> NlgAdjective
+          --> root      "burkinisch"
+        ;
+    ;
+  --> useArticle_fr  true
+  --> useArticle_en  false
+;

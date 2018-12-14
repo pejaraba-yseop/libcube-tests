@@ -1,0 +1,31 @@
+
+interface Company extends LibCube:HierarchyElement, LibActors:Company
+    field local
+        --> domains Boolean
+        --> xmlMapping XmlMappingProperty_NO_SAVE
+        --> dsl -> Textualization
+            --> language LANG_en
+            --> root "local"
+            --> number SINGULAR
+        ;
+        
+    field selectedSegmentsGrossRevenueRank
+        --> domains Integer
+        --> xmlMapping XmlMappingProperty_NO_SAVE
+        --> dsl -> Textualization
+            --> language LANG_en
+            --> root "selected Segments Gross Revenue Rank"
+            --> number SINGULAR
+        ;
+        
+    classProperties
+    --> dsl -> Textualization
+        --> language LANG_en
+        --> root " Company"
+        --> number SINGULAR
+    ;
+;
+
+implementation Company
+;
+

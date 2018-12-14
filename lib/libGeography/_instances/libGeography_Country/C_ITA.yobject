@@ -1,0 +1,80 @@
+LibGeography:Country C_ITA
+  --> iso3166_1_numeric_code  "380"
+  --> iso3166_1_alpha_2       "IT"
+  --> iso3166_1_alpha_3       "ITA"
+  --> label
+    -> MultilingualText
+      --> i18nName_fr
+        -> NlgSubstantive
+          --> root    "Italie"
+          --> plural  "Italie"
+          --> gender  FEMININE
+          --> number  SINGULAR
+        ;
+      --> i18nName_en
+        -> NlgSubstantive
+          --> root    "Italy"
+          --> plural  "Italy"
+          --> gender  INANIMATE
+          --> number  SINGULAR
+        ;
+      --> i18nName_es
+        -> NlgSubstantive
+          --> root    "Italia"
+          --> plural  "Italia"
+          --> gender  FEMININE
+          --> number  SINGULAR
+        ;
+      --> i18nName_de
+        -> NlgSubstantive
+          --> root    "Italien"
+          --> plural  "Italien"
+          --> gender  NEUTRAL
+          --> number  SINGULAR
+        ;
+      --> i18nName_ja
+        -> NlgSubstantive
+          --> root    "イタリア"
+          --> plural  "イタリア"
+          --> gender  INANIMATE
+          --> number  SINGULAR
+        ;
+    ;
+  --> demonym
+    -> MultilingualText
+      --> i18nName_fr
+        -> NlgGenderAgreeableSubstantive
+          --> masculine "Italien"
+          --> feminine  "Italienne"
+        ;
+      --> i18nName_en  "Italian"
+      --> i18nName_es  "italiano"
+      --> i18nName_de
+        -> NlgGenderAgreeableSubstantive
+          --> masculine "Italiener"
+          --> feminine  "Italienerin"
+        ;
+    ;
+  --> adjective
+    -> MultilingualText
+      --> i18nName_fr
+        -> NlgAdjective
+          --> root      "italien"
+          --> feminine  "italienne"
+        ;
+      --> i18nName_en
+        -> NlgAdjective
+          --> root      "Italian"
+        ;
+      --> i18nName_es
+        -> NlgAdjective
+          --> root      "italiano"
+        ;
+      --> i18nName_de
+        -> NlgAdjective
+          --> root      "italienisch"
+        ;
+    ;
+  --> useArticle_fr  true
+  --> useArticle_en  false
+;

@@ -1,0 +1,80 @@
+LibGeography:Country C_DEU
+  --> iso3166_1_numeric_code  "276"
+  --> iso3166_1_alpha_2       "DE"
+  --> iso3166_1_alpha_3       "DEU"
+  --> label
+    -> MultilingualText
+      --> i18nName_fr
+        -> NlgSubstantive
+          --> root    "Allemagne"
+          --> plural  "Allemagne"
+          --> gender  FEMININE
+          --> number  SINGULAR
+        ;
+      --> i18nName_en
+        -> NlgSubstantive
+          --> root    "Germany"
+          --> plural  "Germany"
+          --> gender  INANIMATE
+          --> number  SINGULAR
+        ;
+      --> i18nName_es
+        -> NlgSubstantive
+          --> root    "Alemania"
+          --> plural  "Alemania"
+          --> gender  FEMININE
+          --> number  SINGULAR
+        ;
+      --> i18nName_de
+        -> NlgSubstantive
+          --> root    "Deutschland"
+          --> plural  "Deutschland"
+          --> gender  NEUTRAL
+          --> number  SINGULAR
+        ;
+      --> i18nName_ja
+        -> NlgSubstantive
+          --> root    "ドイツ"
+          --> plural  "ドイツ"
+          --> gender  INANIMATE
+          --> number  SINGULAR
+        ;
+    ;
+  --> demonym
+    -> MultilingualText
+      --> i18nName_fr
+        -> NlgGenderAgreeableSubstantive
+          --> masculine "Allemand"
+          --> feminine  "Allemande"
+        ;
+      --> i18nName_en  "German"
+      --> i18nName_es  "alemán"
+      --> i18nName_de
+        -> NlgGenderAgreeableSubstantive
+          --> masculine "Deutscher"
+          --> feminine  "Deutsche"
+        ;
+    ;
+  --> adjective
+    -> MultilingualText
+      --> i18nName_fr
+        -> NlgAdjective
+          --> root      "allemand"
+          --> feminine  "allemande"
+        ;
+      --> i18nName_en
+        -> NlgAdjective
+          --> root      "German"
+        ;
+      --> i18nName_es
+        -> NlgAdjective
+          --> root      "alemán"
+        ;
+      --> i18nName_de
+        -> NlgAdjective
+          --> root      "deutsch"
+        ;
+    ;
+  --> useArticle_fr  true
+  --> useArticle_en  false
+;

@@ -1,0 +1,81 @@
+LibGeography:Country C_GBR
+  --> iso3166_1_numeric_code  "826"
+  --> iso3166_1_alpha_2       "UK"
+  --> iso3166_1_alpha_2       "GB"
+  --> iso3166_1_alpha_3       "GBR"
+  --> label
+    -> MultilingualText
+      --> i18nName_fr
+        -> NlgSubstantive
+          --> root    "Royaume-Uni"
+          --> plural  "Royaume-Uni"
+          --> gender  MASCULINE
+          --> number  SINGULAR
+        ;
+      --> i18nName_en
+        -> NlgSubstantive
+          --> root    "United Kingdom"
+          --> plural  "United Kingdom"
+          --> gender  INANIMATE
+          --> number  SINGULAR
+        ;
+      --> i18nName_es
+        -> NlgSubstantive
+          --> root    "Reino Unido"
+          --> plural  "Reino Unido"
+          --> gender  MASCULINE
+          --> number  SINGULAR
+        ;
+      --> i18nName_de
+        -> NlgSubstantive
+          --> root    "Vereinigtes Königreich"
+          --> plural  "Vereinigtes Königreich"
+          --> gender  NEUTRAL
+          --> number  SINGULAR
+        ;
+      --> i18nName_ja
+        -> NlgSubstantive
+          --> root    "イギリス"
+          --> plural  "イギリス"
+          --> gender  INANIMATE
+          --> number  SINGULAR
+        ;
+    ;
+  --> demonym
+    -> MultilingualText
+      --> i18nName_fr
+        -> NlgGenderAgreeableSubstantive
+          --> masculine "Britannique"
+          --> feminine  "Britannique"
+        ;
+      --> i18nName_en  "Briton"
+      --> i18nName_es  "británico"
+      --> i18nName_de
+        -> NlgGenderAgreeableSubstantive
+          --> masculine "Brite"
+          --> feminine  "Britin"
+        ;
+    ;
+  --> adjective
+    -> MultilingualText
+      --> i18nName_fr
+        -> NlgAdjective
+          --> root      "britannique"
+          --> feminine  "britannique"
+        ;
+      --> i18nName_en
+        -> NlgAdjective
+          --> root      "British"
+        ;
+      --> i18nName_es
+        -> NlgAdjective
+          --> root      "británico"
+        ;
+      --> i18nName_de
+        -> NlgAdjective
+          --> root      "britisch"
+        ;
+    ;
+  --> useArticle_fr  true
+  --> useArticle_en  true
+;

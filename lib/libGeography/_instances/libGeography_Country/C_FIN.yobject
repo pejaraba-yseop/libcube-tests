@@ -1,0 +1,80 @@
+LibGeography:Country C_FIN
+  --> iso3166_1_numeric_code  "246"
+  --> iso3166_1_alpha_2       "FI"
+  --> iso3166_1_alpha_3       "FIN"
+  --> label
+    -> MultilingualText
+      --> i18nName_fr
+        -> NlgSubstantive
+          --> root    "Finlande"
+          --> plural  "Finlande"
+          --> gender  FEMININE
+          --> number  SINGULAR
+        ;
+      --> i18nName_en
+        -> NlgSubstantive
+          --> root    "Finland"
+          --> plural  "Finland"
+          --> gender  INANIMATE
+          --> number  SINGULAR
+        ;
+      --> i18nName_es
+        -> NlgSubstantive
+          --> root    "Finlandia"
+          --> plural  "Finlandia"
+          --> gender  FEMININE
+          --> number  SINGULAR
+        ;
+      --> i18nName_de
+        -> NlgSubstantive
+          --> root    "Finnland"
+          --> plural  "Finnland"
+          --> gender  NEUTRAL
+          --> number  SINGULAR
+        ;
+      --> i18nName_ja
+        -> NlgSubstantive
+          --> root    "フィンランド"
+          --> plural  "フィンランド"
+          --> gender  INANIMATE
+          --> number  SINGULAR
+        ;
+    ;
+  --> demonym
+    -> MultilingualText
+      --> i18nName_fr
+        -> NlgGenderAgreeableSubstantive
+          --> masculine "Finlandais"
+          --> feminine  "Finlandaise "
+        ;
+      --> i18nName_en  "Finn"
+      --> i18nName_es  "finlandés"
+      --> i18nName_de
+        -> NlgGenderAgreeableSubstantive
+          --> masculine "Finne"
+          --> feminine  "Finnin"
+        ;
+    ;
+  --> adjective
+    -> MultilingualText
+      --> i18nName_fr
+        -> NlgAdjective
+          --> root      "finlandais"
+          --> feminine  "finlandaise"
+        ;
+      --> i18nName_en
+        -> NlgAdjective
+          --> root      "Finnish"
+        ;
+      --> i18nName_es
+        -> NlgAdjective
+          --> root      "finlandés (FI*)"
+        ;
+      --> i18nName_de
+        -> NlgAdjective
+          --> root      "finnisch"
+        ;
+    ;
+  --> useArticle_fr  true
+  --> useArticle_en  false
+;

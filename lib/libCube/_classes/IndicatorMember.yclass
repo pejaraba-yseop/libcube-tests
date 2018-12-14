@@ -1,0 +1,19 @@
+
+interface LibCube:IndicatorMember extends LibCube:HierarchyElement
+
+    classProperties
+    --> dsl -> Textualization
+        --> language LANG_en
+        --> root "Cube Time Member"
+        --> number SINGULAR
+    ;
+    --> trackInstances true
+    --> dynamicInstances  true 		
+;
+
+implementation LibCube:IndicatorMember
+    override {
+        dimension
+            --> defaultValue DIMENSION_INDICATOR
+    }
+;

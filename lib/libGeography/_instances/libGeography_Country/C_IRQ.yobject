@@ -1,0 +1,80 @@
+LibGeography:Country C_IRQ
+  --> iso3166_1_numeric_code  "368"
+  --> iso3166_1_alpha_2       "IQ"
+  --> iso3166_1_alpha_3       "IRQ"
+  --> label
+    -> MultilingualText
+      --> i18nName_fr
+        -> NlgSubstantive
+          --> root    "Irak"
+          --> plural  "Irak"
+          --> gender  MASCULINE
+          --> number  SINGULAR
+        ;
+      --> i18nName_en
+        -> NlgSubstantive
+          --> root    "Iraq"
+          --> plural  "Iraq"
+          --> gender  INANIMATE
+          --> number  SINGULAR
+        ;
+      --> i18nName_es
+        -> NlgSubstantive
+          --> root    "Irak"
+          --> plural  "Irak"
+          --> gender  MASCULINE
+          --> number  SINGULAR
+        ;
+      --> i18nName_de
+        -> NlgSubstantive
+          --> root    "Irak"
+          --> plural  "Irak"
+          --> gender  NEUTRAL
+          --> number  SINGULAR
+        ;
+      --> i18nName_ja
+        -> NlgSubstantive
+          --> root    "イラク"
+          --> plural  "イラク"
+          --> gender  INANIMATE
+          --> number  SINGULAR
+        ;
+    ;
+  --> demonym
+    -> MultilingualText
+      --> i18nName_fr
+        -> NlgGenderAgreeableSubstantive
+          --> masculine "Iraquien"
+          --> feminine  "Iraquienne"
+        ;
+      --> i18nName_en  "Iraqi"
+      --> i18nName_es  "iraquí"
+      --> i18nName_de
+        -> NlgGenderAgreeableSubstantive
+          --> masculine "Iraker"
+          --> feminine  "Irakerin"
+        ;
+    ;
+  --> adjective
+    -> MultilingualText
+      --> i18nName_fr
+        -> NlgAdjective
+          --> root      "iraquien"
+          --> feminine  "iraquienne"
+        ;
+      --> i18nName_en
+        -> NlgAdjective
+          --> root      "Iraqi"
+        ;
+      --> i18nName_es
+        -> NlgAdjective
+          --> root      "iraquí"
+        ;
+      --> i18nName_de
+        -> NlgAdjective
+          --> root      "irakisch"
+        ;
+    ;
+  --> useArticle_fr  true
+  --> useArticle_en  false
+;

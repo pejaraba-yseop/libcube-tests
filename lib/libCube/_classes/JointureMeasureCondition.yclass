@@ -1,0 +1,141 @@
+interface LibCube:JointureMeasureCondition
+    field measure
+        --> domains LibCube:Measure
+        --> documentation "The measure which the condition should apply (will only work for decimal values)"
+        --> xmlMapping XmlMappingProperty_NO_SAVE
+        --> dsl -> Textualization
+            --> language LANG_en
+            --> root "measure"
+            --> number SINGULAR
+        ;
+    field factMeasure
+        --> domains LibCube:FactMeasure
+        --> documentation "The measure which the condition should apply (will only work for decimal values)"
+        --> xmlMapping XmlMappingProperty_NO_SAVE
+        --> dsl -> Textualization
+            --> language LANG_en
+            --> root "fact measure"
+            --> number SINGULAR
+        ;        
+    field upperLimit
+        --> domains Number
+        --> documentation "The upper limit of the measure condition"
+        --> xmlMapping XmlMappingProperty_NO_SAVE
+        --> dsl -> Textualization
+            --> language LANG_en
+            --> root "upper limit"
+            --> number PLURAL
+        ;
+    field lowerLimit
+        --> domains Number
+        --> documentation "The lower limit of the measure condition"
+        --> xmlMapping XmlMappingProperty_NO_SAVE
+        --> dsl -> Textualization
+            --> language LANG_en
+            --> root "lower limit"
+            --> number PLURAL
+        ;
+    field thresholdOrInterval
+        --> domains Symbol
+        --> documentation "Defines whether the condition is a THRESHOLD (i.e. x > y && -x < -z) or an INTERVAL (i.e. z < x < y)"
+        --> xmlMapping XmlMappingProperty_NO_SAVE
+        --> dsl -> Textualization
+            --> language LANG_en
+            --> root "threshold or interval"
+            --> number PLURAL
+        ;              
+    field isOpen
+        --> domains Boolean
+        --> documentation "Defines whether or not the condition is open (i.e. z < x < y) or closed (i.e. z <= x <= y)"
+        --> xmlMapping XmlMappingProperty_NO_SAVE
+        --> dsl -> Textualization
+            --> language LANG_en
+            --> root "is open?"
+            --> number PLURAL
+        ;
+    field useFactMeasureAsValue
+        --> domains Boolean
+        --> xmlMapping XmlMappingProperty_NO_SAVE
+        --> dsl -> Textualization
+            --> language LANG_en
+            --> root "use fact measure as value?"
+            --> number PLURAL
+        ;             
+
+    method conditionSatisfied(LibCube:Fact theFact)
+    --> domains Boolean
+
+    classProperties
+    --> dsl -> Textualization
+        --> language LANG_en
+        --> root "Cube Jointure Dimension condition"
+        --> number SINGULAR
+    ;
+;
+
+implementation LibCube:JointureMeasureCondition
+;
+
+function LibCube:JointureMeasureCondition::conditionSatisfied(LibCube:Fact theFact)
+--> action {
+  factMeasure = theFact.getMeasure(measure)
+  switch {
+    case (measure == null): {
+      logWarning("measure ", measure, " does not exist for fact")
+      return false
+    }
+    case (thresholdOrInterval == null): {
+      logWarning("measure condition must be interval or threshold")
+      return false
+    }
+    case (thresholdOrInterval != MEASURE_CONDITION_THRESHOLD && 
+          thresholdOrInterval != MEASURE_CONDITION_INTERVAL): {
+      logWarning("measure condition must be interval or threshold")
+      return false
+    }
+    case (thresholdOrInterval == MEASURE_CONDITION_INTERVAL): {
+      switch {
+        case (lowerLimit == null && lowerLimit == null): {
+          logWarning("missing intervals for the interval")
+          return false
+        } 
+        case (upperLimit == null): {
+          logWarning("missing upper limit of interval")
+          return false
+        }
+        case (lowerLimit == null): {
+          logWarning("missing lower limit of interval")
+          return false
+        }
+      }
+
+      if (isOpen == true) {
+        if (factMeasure.value < upperLimit && 
+            factMeasure.value > lowerLimit) {
+          return true
+        }  
+      } else {
+        if (factMeasure.value <= upperLimit && 
+            factMeasure.value >= lowerLimit) {
+          return true
+        }
+      }
+    }
+    case (thresholdOrInterval == MEASURE_CONDITION_THRESHOLD): {
+
+      if (isOpen == true) {
+        if (factMeasure.value > upperLimit || 
+            factMeasure.value < lowerLimit) {
+          return true
+        }
+      } else {
+        if (factMeasure.value >= upperLimit || 
+            factMeasure.value <= lowerLimit) {
+          return true
+        }
+      } 
+    }
+  }
+  return false
+}
+;

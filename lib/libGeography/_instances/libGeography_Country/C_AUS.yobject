@@ -1,0 +1,80 @@
+LibGeography:Country C_AUS
+  --> iso3166_1_numeric_code  "036"
+  --> iso3166_1_alpha_2       "AU"
+  --> iso3166_1_alpha_3       "AUS"
+  --> label
+    -> MultilingualText
+      --> i18nName_fr
+        -> NlgSubstantive
+          --> root    "Australie"
+          --> plural  "Australie"
+          --> gender  FEMININE
+          --> number  SINGULAR
+        ;
+      --> i18nName_en
+        -> NlgSubstantive
+          --> root    "Australia"
+          --> plural  "Australia"
+          --> gender  INANIMATE
+          --> number  SINGULAR
+        ;
+      --> i18nName_es
+        -> NlgSubstantive
+          --> root    "Australia"
+          --> plural  "Australia"
+          --> gender  FEMININE
+          --> number  SINGULAR
+        ;
+      --> i18nName_de
+        -> NlgSubstantive
+          --> root    "Australien"
+          --> plural  "Australien"
+          --> gender  NEUTRAL
+          --> number  SINGULAR
+        ;
+      --> i18nName_ja
+        -> NlgSubstantive
+          --> root    "オーストラリア"
+          --> plural  "オーストラリア"
+          --> gender  INANIMATE
+          --> number  SINGULAR
+        ;
+    ;
+  --> demonym
+    -> MultilingualText
+      --> i18nName_fr
+        -> NlgGenderAgreeableSubstantive
+          --> masculine "Australien"
+          --> feminine  "Australienne"
+        ;
+      --> i18nName_en  "Australian"
+      --> i18nName_es  "australiano"
+      --> i18nName_de
+        -> NlgGenderAgreeableSubstantive
+          --> masculine "Australier"
+          --> feminine  "Australierin"
+        ;
+    ;
+  --> adjective
+    -> MultilingualText
+      --> i18nName_fr
+        -> NlgAdjective
+          --> root      "australien"
+          --> feminine  "australienne"
+        ;
+      --> i18nName_en
+        -> NlgAdjective
+          --> root      "Australian"
+        ;
+      --> i18nName_es
+        -> NlgAdjective
+          --> root      "australiano"
+        ;
+      --> i18nName_de
+        -> NlgAdjective
+          --> root      "australisch"
+        ;
+    ;
+  --> useArticle_fr  true
+  --> useArticle_en  false
+;

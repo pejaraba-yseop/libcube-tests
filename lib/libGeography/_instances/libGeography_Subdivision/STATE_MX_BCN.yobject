@@ -1,0 +1,47 @@
+LibGeography:Subdivision STATE_MX_BCN
+  --> iso3166_2    "MX-BCN"
+  --> postal_code  "BJ"
+  --> status       STATE
+  --> label
+    -> MultilingualText
+      --> i18nName_fr
+        -> NlgSubstantive
+          --> root    "Basse-Californie"
+          --> plural  "Basse-Californie"
+          --> number  SINGULAR
+        ;
+      --> i18nName_en
+        -> NlgSubstantive
+          --> root    "Baja California"
+          --> plural  "Baja California"
+          --> gender  INANIMATE
+          --> number  SINGULAR
+        ;
+      --> i18nName_es
+        -> NlgSubstantive
+          --> root    "Baja California"
+          --> plural  "Baja California"
+          --> number  SINGULAR
+        ;
+      --> i18nName_de
+        -> NlgSubstantive
+          --> root    "Baja California"
+          --> plural  "Baja California"
+          --> gender  NEUTRAL
+          --> number  SINGULAR
+        ;
+      --> i18nName_ja
+        -> NlgSubstantive
+          --> root    "バハ・カリフォルニア州"
+          --> plural  "バハ・カリフォルニア州"
+          --> gender  INANIMATE
+          --> number  SINGULAR
+        ;
+    ;
+  --> demonym
+    -> MultilingualText
+    ;
+  --> adjective
+    -> MultilingualText
+    ;
+;

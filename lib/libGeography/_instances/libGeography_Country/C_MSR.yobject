@@ -1,0 +1,71 @@
+LibGeography:Country C_MSR
+  --> iso3166_1_numeric_code  "500"
+  --> iso3166_1_alpha_2       "MS"
+  --> iso3166_1_alpha_3       "MSR"
+  --> label
+    -> MultilingualText
+      --> i18nName_fr
+        -> NlgSubstantive
+          --> root    "Montserrat"
+          --> plural  "Montserrat"
+          --> gender  MASCULINE
+          --> number  SINGULAR
+        ;
+      --> i18nName_en
+        -> NlgSubstantive
+          --> root    "Montserrat"
+          --> plural  "Montserrat"
+          --> gender  INANIMATE
+          --> number  SINGULAR
+        ;
+      --> i18nName_es
+        -> NlgSubstantive
+          --> root    "Montserrat"
+          --> plural  "Montserrat"
+          --> gender  MASCULINE
+          --> number  SINGULAR
+        ;
+      --> i18nName_de
+        -> NlgSubstantive
+          --> root    "Montserrat"
+          --> plural  "Montserrat"
+          --> gender  NEUTRAL
+          --> number  SINGULAR
+        ;
+      --> i18nName_ja
+        -> NlgSubstantive
+          --> root    "モントセラト"
+          --> plural  "モントセラト"
+          --> gender  INANIMATE
+          --> number  SINGULAR
+        ;
+    ;
+  --> demonym
+    -> MultilingualText
+      --> i18nName_fr  "de Montserrat"
+      --> i18nName_en  "Montserratian"
+      --> i18nName_es  "montserratense"
+      --> i18nName_de  "von Montserrat"
+    ;
+  --> adjective
+    -> MultilingualText
+      --> i18nName_fr
+        -> NlgAdjective
+          --> root      "de Montserrat"
+        ;
+      --> i18nName_en
+        -> NlgAdjective
+          --> root      "Montserratian"
+        ;
+      --> i18nName_es
+        -> NlgAdjective
+          --> root      "montserratense"
+        ;
+      --> i18nName_de
+        -> NlgAdjective
+          --> root      "von Montserrat"
+        ;
+    ;
+  --> useArticle_fr  false
+  --> useArticle_en  false
+;

@@ -1,0 +1,76 @@
+LibGeography:Country C_KOR
+  --> iso3166_1_numeric_code  "410"
+  --> iso3166_1_alpha_2       "KR"
+  --> iso3166_1_alpha_3       "KOR"
+  --> label
+    -> MultilingualText
+      --> i18nName_fr
+        -> NlgSubstantive
+          --> root    "Corée du Sud"
+          --> plural  "Corée du Sud"
+          --> gender  FEMININE
+          --> number  SINGULAR
+        ;
+      --> i18nName_en
+        -> NlgSubstantive
+          --> root    "South Korea"
+          --> plural  "South Korea"
+          --> gender  INANIMATE
+          --> number  SINGULAR
+        ;
+      --> i18nName_es
+        -> NlgSubstantive
+          --> root    "Corea del Sur"
+          --> plural  "Corea del Sur"
+          --> gender  FEMININE
+          --> number  SINGULAR
+        ;
+      --> i18nName_de
+        -> NlgSubstantive
+          --> root    "Südkorea"
+          --> plural  "Südkorea"
+          --> gender  NEUTRAL
+          --> number  SINGULAR
+        ;
+      --> i18nName_ja
+        -> NlgSubstantive
+          --> root    "大韓民国"
+          --> plural  "大韓民国"
+          --> gender  INANIMATE
+          --> number  SINGULAR
+        ;
+    ;
+  --> demonym
+    -> MultilingualText
+      --> i18nName_fr
+        -> NlgGenderAgreeableSubstantive
+          --> masculine "Sud-Coréen"
+          --> feminine  "Sud-Coréenne"
+        ;
+      --> i18nName_en  "South Korean"
+      --> i18nName_es  "de la República de Corea"
+      --> i18nName_de  "der Republik Korea"
+    ;
+  --> adjective
+    -> MultilingualText
+      --> i18nName_fr
+        -> NlgAdjective
+          --> root      "sud-coréen"
+          --> feminine  "sud-coréenne"
+        ;
+      --> i18nName_en
+        -> NlgAdjective
+          --> root      "South Korean"
+        ;
+      --> i18nName_es
+        -> NlgAdjective
+          --> root      "de la República de Corea"
+        ;
+      --> i18nName_de
+        -> NlgAdjective
+          --> root      "der Republik Korea"
+        ;
+    ;
+  --> useArticle_fr  true
+  --> useArticle_en  true
+;

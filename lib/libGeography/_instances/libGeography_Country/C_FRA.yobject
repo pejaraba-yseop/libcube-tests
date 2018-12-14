@@ -1,0 +1,80 @@
+LibGeography:Country C_FRA
+  --> iso3166_1_numeric_code  "250"
+  --> iso3166_1_alpha_2       "FR"
+  --> iso3166_1_alpha_3       "FRA"
+  --> label
+    -> MultilingualText
+      --> i18nName_fr
+        -> NlgSubstantive
+          --> root    "France"
+          --> plural  "France"
+          --> gender  FEMININE
+          --> number  SINGULAR
+        ;
+      --> i18nName_en
+        -> NlgSubstantive
+          --> root    "France"
+          --> plural  "France"
+          --> gender  INANIMATE
+          --> number  SINGULAR
+        ;
+      --> i18nName_es
+        -> NlgSubstantive
+          --> root    "Francia"
+          --> plural  "Francia"
+          --> gender  FEMININE
+          --> number  SINGULAR
+        ;
+      --> i18nName_de
+        -> NlgSubstantive
+          --> root    "Frankreich"
+          --> plural  "Frankreich"
+          --> gender  NEUTRAL
+          --> number  SINGULAR
+        ;
+      --> i18nName_ja
+        -> NlgSubstantive
+          --> root    "フランス"
+          --> plural  "フランス"
+          --> gender  INANIMATE
+          --> number  SINGULAR
+        ;
+    ;
+  --> demonym
+    -> MultilingualText
+      --> i18nName_fr
+        -> NlgGenderAgreeableSubstantive
+          --> masculine "Français"
+          --> feminine  "Française"
+        ;
+      --> i18nName_en  "Frenchman; Frenchwoman"
+      --> i18nName_es  "francés"
+      --> i18nName_de
+        -> NlgGenderAgreeableSubstantive
+          --> masculine "Franzose"
+          --> feminine  "Französin"
+        ;
+    ;
+  --> adjective
+    -> MultilingualText
+      --> i18nName_fr
+        -> NlgAdjective
+          --> root      "français"
+          --> feminine  "française"
+        ;
+      --> i18nName_en
+        -> NlgAdjective
+          --> root      "French"
+        ;
+      --> i18nName_es
+        -> NlgAdjective
+          --> root      "francés"
+        ;
+      --> i18nName_de
+        -> NlgAdjective
+          --> root      "französisch"
+        ;
+    ;
+  --> useArticle_fr  true
+  --> useArticle_en  false
+;

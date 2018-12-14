@@ -1,0 +1,80 @@
+LibGeography:Country C_FSM
+  --> iso3166_1_numeric_code  "583"
+  --> iso3166_1_alpha_2       "FM"
+  --> iso3166_1_alpha_3       "FSM"
+  --> label
+    -> MultilingualText
+      --> i18nName_fr
+        -> NlgSubstantive
+          --> root    "Micronésie"
+          --> plural  "Micronésie"
+          --> gender  FEMININE
+          --> number  SINGULAR
+        ;
+      --> i18nName_en
+        -> NlgSubstantive
+          --> root    "Micronesia"
+          --> plural  "Micronesia"
+          --> gender  INANIMATE
+          --> number  SINGULAR
+        ;
+      --> i18nName_es
+        -> NlgSubstantive
+          --> root    "Micronesia"
+          --> plural  "Micronesia"
+          --> gender  FEMININE
+          --> number  SINGULAR
+        ;
+      --> i18nName_de
+        -> NlgSubstantive
+          --> root    "Mikronesien"
+          --> plural  "Mikronesien"
+          --> gender  NEUTRAL
+          --> number  SINGULAR
+        ;
+      --> i18nName_ja
+        -> NlgSubstantive
+          --> root    "ミクロネシア"
+          --> plural  "ミクロネシア"
+          --> gender  INANIMATE
+          --> number  SINGULAR
+        ;
+    ;
+  --> demonym
+    -> MultilingualText
+      --> i18nName_fr
+        -> NlgGenderAgreeableSubstantive
+          --> masculine "Micronésien"
+          --> feminine  "Micronésienne"
+        ;
+      --> i18nName_en  "Micronesian"
+      --> i18nName_es  "micronesio"
+      --> i18nName_de
+        -> NlgGenderAgreeableSubstantive
+          --> masculine "Mikronesier"
+          --> feminine  "Mikronesierin"
+        ;
+    ;
+  --> adjective
+    -> MultilingualText
+      --> i18nName_fr
+        -> NlgAdjective
+          --> root      "micronésien"
+          --> feminine  "micronésienne"
+        ;
+      --> i18nName_en
+        -> NlgAdjective
+          --> root      "of Micronesia"
+        ;
+      --> i18nName_es
+        -> NlgAdjective
+          --> root      "micronesio"
+        ;
+      --> i18nName_de
+        -> NlgAdjective
+          --> root      "mikronesisch"
+        ;
+    ;
+  --> useArticle_fr  true
+  --> useArticle_en  false
+;

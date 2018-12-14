@@ -1,0 +1,257 @@
+interface LibCube:Cube
+    field dimensions
+        --> domains LibCube:Dimension
+        --> documentation "The dimensions of the cube. (i.e. time, hierarchies, etc)"
+        --> xmlMapping XmlMappingProperty_SAVE
+        --> multivalued true
+        --> dsl -> Textualization
+            --> language LANG_en
+            --> root "dimensions"
+            --> number PLURAL
+        ;
+    field measures
+        --> domains LibCube:Measure
+        --> documentation "The measures of the cube.  Examples of measure include: rate of return, weight, etc."
+        --> xmlMapping XmlMappingProperty_SAVE
+        --> multivalued true
+        --> dsl -> Textualization
+            --> language LANG_en
+            --> root "measures"
+            --> number PLURAL
+        ;
+    field facts
+        --> domains LibCube:Fact
+        --> documentation "The facts of the cube. (in a excel spreadsheet, this would typically mean each individual value in a cell)"
+        --> xmlMapping XmlMappingProperty_SAVE
+        --> multivalued true
+        --> dsl -> Textualization
+            --> language LANG_en
+            --> root "facts"
+            --> number PLURAL
+        ;
+
+    field nonIndicatorMembersJointure
+        --> domains LibCube:NonIndicatorMembersJointure
+        --> xmlMapping XmlMappingProperty_NO_SAVE
+        --> multivalued false
+        --> dsl -> Textualization
+            --> language LANG_en
+            --> root "nonIndicatorMembersJointure"
+            --> number PLURAL
+        ;
+    
+    field jointures
+        --> domains LibCube:Jointure
+        --> xmlMapping XmlMappingProperty_NO_SAVE
+        --> multivalued true
+        --> dsl -> Textualization
+            --> language LANG_en
+            --> root "jointures"
+            --> number PLURAL
+        ;
+
+    field factsSelections
+        --> domains LibCube:JointureFactsSelection
+        --> xmlMapping XmlMappingProperty_SAVE
+        --> multivalued true
+        --> dsl -> Textualization
+            --> language LANG_en
+            --> root "factsSelections"
+            --> number PLURAL
+        ;
+
+    field factsService
+        --> domains WebService
+        --> documentation "Web service that requests facts to an OLAP cube"
+        --> xmlMapping XmlMappingProperty_SAVE
+        --> multivalued false
+        --> dsl -> Textualization
+            --> language LANG_en
+            --> root "Facts Service"
+            --> number SINGULAR
+        ;
+
+    field factsRequestsManager
+        --> domains LibCube:FactsRequestsManager
+        --> xmlMapping XmlMappingProperty_SAVE
+        --> dsl -> Textualization
+            --> language LANG_en
+            --> root "facts Requests Manager"
+            --> number SINGULAR
+        ;
+
+    field mdxName
+        --> domains String
+        --> xmlMapping XmlMappingProperty_SAVE
+        --> dsl -> Textualization
+            --> language LANG_en
+            --> root "mdxName"
+            --> number SINGULAR
+        ;
+
+    field generateMdxQueries
+        --> domains Boolean
+        --> defaultValue false
+        --> xmlMapping XmlMappingProperty_SAVE
+        --> multivalued false
+        --> dsl -> Textualization
+            --> language LANG_en
+            --> root "generate Mdx Queries"
+            --> number PLURAL
+        ;
+
+    field generateNonIndicatorMembersJointure
+        --> domains Boolean
+        --> xmlMapping XmlMappingProperty_NO_SAVE
+        --> defaultValue false
+        --> multivalued false
+        --> dsl -> Textualization
+            --> language LANG_en
+            --> root "generate Non Indicator Members Jointure"
+            --> number PLURAL
+        ;
+
+    method calculateJointures()
+        --> domains Object 
+        --> dsl -> Textualization
+            --> language LANG_en
+            --> root "calculate jointures"
+            --> number PLURAL
+        ;
+    
+    method initDimensions()
+        --> domains Void 
+        --> dsl -> Textualization
+            --> language LANG_en
+            --> root "init dimensions"
+            --> number PLURAL
+        ;
+
+    method init()
+        --> domains Void 
+        --> dsl -> Textualization
+            --> language LANG_en
+            --> root "init cube"
+            --> number PLURAL
+        ;
+        
+    method processNewSelection(LibCube:JointureFactsSelection selection)
+        --> domains Void 
+        --> dsl -> Textualization
+            --> language LANG_en
+            --> root "init cube"
+            --> number PLURAL
+        ;
+
+    classProperties
+    --> dsl -> Textualization
+        --> language LANG_en
+        --> root "Cube"
+        --> number SINGULAR
+    ;
+;
+
+implementation LibCube:Cube
+;
+
+
+function LibCube:Cube::processNewSelection(LibCube:JointureFactsSelection selection)
+-->action{
+
+	//gets the selection and verify the init 
+	selection.jointure.init();
+	//this.jointures.add(selection.jointure);
+	//verifies each of the facts from all the possible XML input
+	foreach(_fact, this>>facts) {      
+      selection.jointure.getJointureResult(_fact);
+  	}
+  	//adds the selection to the facts selections
+  	factsSelections.add(selection);
+  	//populates the selection with all the facts from the XML
+  	selection.populateSelection();
+  	
+  	if(this.generateMdxQueries == true){
+        if(this.mdxName == null){
+            logWarning("the cube must have an mdx name to generate it's queries");
+        }
+        else{
+            selection.generateQuery(this.mdxName);
+        }
+    }
+    //prepares the fact selection
+    factsRequestsManager.prepareSelection(selection);
+ 
+}
+;
+
+function LibCube:Cube::calculateJointures()
+--> action {
+  //Cube preparation
+  //  logInfo("CALCULATE JOINTURES ");
+   
+  DIMENSION_TIME_CURRENT_MEMBER = DIMENSION_TIME.getCurrentTimeMember()
+  foreach(_timeMember, LibCube:TimeMember) {
+    _timeMember.findQuarter()
+  }
+
+  if(generateNonIndicatorMembersJointure == true){
+      nonIndicatorMembersJointure = new(LibCube:NonIndicatorMembersJointure);
+  }  
+  
+  // Jointures preparation
+  foreach(_jointure , LibCube:Jointure) {     
+    //jointures.add(_jointure);
+    _jointure.init();      
+  }     
+    
+  // Loop through facts
+  foreach(_fact, this>>facts) {      
+    _fact.checkDimensions()
+      
+    foreach(_jointure , LibCube:Jointure) {    
+      _jointure.getJointureResult(_fact)
+    }
+  }
+
+  foreach(_selection, LibCube:JointureFactsSelection) {
+        factsSelections.add(_selection);
+        _selection.populateSelection();
+        if(this.generateMdxQueries == true){
+            if(this.mdxName == null){
+                logWarning("the cube must have an mdx name to generate it's queries");
+            }
+            else{
+                _selection.generateQuery(this.mdxName);
+            }
+        }
+  }
+
+  if(this.generateMdxQueries == true){
+        factsRequestsManager = new(LibCube:FactsRequestsManager);
+        factsRequestsManager.init();
+  }  
+
+}
+;
+
+function LibCube:Cube::initDimensions()
+--> action {
+    foreach(_dimension, LibCube:Dimension) {
+        // add dimensions to cube (should be added to the lib configuration as a parameter default = true)
+        this.dimensions := _dimension;
+
+        //Loop through the hierarchies and add members to dimensions
+        _dimension.processDimension()        
+    }
+
+}
+;
+
+function LibCube:Cube::init()
+--> action {
+    initDimensions();
+    calculateJointures();
+
+}
+;
+

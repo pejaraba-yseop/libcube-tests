@@ -1,0 +1,80 @@
+LibGeography:Country C_ALB
+  --> iso3166_1_numeric_code  "008"
+  --> iso3166_1_alpha_2       "AL"
+  --> iso3166_1_alpha_3       "ALB"
+  --> label
+    -> MultilingualText
+      --> i18nName_fr
+        -> NlgSubstantive
+          --> root    "Albanie"
+          --> plural  "Albanie"
+          --> gender  FEMININE
+          --> number  SINGULAR
+        ;
+      --> i18nName_en
+        -> NlgSubstantive
+          --> root    "Albania"
+          --> plural  "Albania"
+          --> gender  INANIMATE
+          --> number  SINGULAR
+        ;
+      --> i18nName_es
+        -> NlgSubstantive
+          --> root    "Albania"
+          --> plural  "Albania"
+          --> gender  FEMININE
+          --> number  SINGULAR
+        ;
+      --> i18nName_de
+        -> NlgSubstantive
+          --> root    "Albanien"
+          --> plural  "Albanien"
+          --> gender  NEUTRAL
+          --> number  SINGULAR
+        ;
+      --> i18nName_ja
+        -> NlgSubstantive
+          --> root    "アルバニア"
+          --> plural  "アルバニア"
+          --> gender  INANIMATE
+          --> number  SINGULAR
+        ;
+    ;
+  --> demonym
+    -> MultilingualText
+      --> i18nName_fr
+        -> NlgGenderAgreeableSubstantive
+          --> masculine "Albanais"
+          --> feminine  "Albanaise"
+        ;
+      --> i18nName_en  "Albanian"
+      --> i18nName_es  "albanés"
+      --> i18nName_de
+        -> NlgGenderAgreeableSubstantive
+          --> masculine "Albaner"
+          --> feminine  "Albanerin"
+        ;
+    ;
+  --> adjective
+    -> MultilingualText
+      --> i18nName_fr
+        -> NlgAdjective
+          --> root      "albanais"
+          --> feminine  "albanaise"
+        ;
+      --> i18nName_en
+        -> NlgAdjective
+          --> root      "Albanian"
+        ;
+      --> i18nName_es
+        -> NlgAdjective
+          --> root      "albanés"
+        ;
+      --> i18nName_de
+        -> NlgAdjective
+          --> root      "albanisch"
+        ;
+    ;
+  --> useArticle_fr  true
+  --> useArticle_en  false
+;

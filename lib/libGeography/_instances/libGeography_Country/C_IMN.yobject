@@ -1,0 +1,76 @@
+LibGeography:Country C_IMN
+  --> iso3166_1_numeric_code  "833"
+  --> iso3166_1_alpha_2       "IM"
+  --> iso3166_1_alpha_3       "IMN"
+  --> label
+    -> MultilingualText
+      --> i18nName_fr
+        -> NlgSubstantive
+          --> root    "Île de Man"
+          --> plural  "Île de Man"
+          --> gender  FEMININE
+          --> number  SINGULAR
+        ;
+      --> i18nName_en
+        -> NlgSubstantive
+          --> root    "Isle of Man"
+          --> plural  "Isle of Man"
+          --> gender  INANIMATE
+          --> number  SINGULAR
+        ;
+      --> i18nName_es
+        -> NlgSubstantive
+          --> root    "Isla de Man"
+          --> plural  "Isla de Man"
+          --> gender  FEMININE
+          --> number  SINGULAR
+        ;
+      --> i18nName_de
+        -> NlgSubstantive
+          --> root    "Insel Man"
+          --> plural  "Insel Man"
+          --> gender  NEUTRAL
+          --> number  SINGULAR
+        ;
+      --> i18nName_ja
+        -> NlgSubstantive
+          --> root    "マン島"
+          --> plural  "マン島"
+          --> gender  INANIMATE
+          --> number  SINGULAR
+        ;
+    ;
+  --> demonym
+    -> MultilingualText
+      --> i18nName_fr
+        -> NlgGenderAgreeableSubstantive
+          --> masculine "Mannois"
+          --> feminine  "Mannoise"
+        ;
+      --> i18nName_en  "Manxman; Manxwoman"
+      --> i18nName_es  "de la Isla de Man"
+      --> i18nName_de  "der Insel Man"
+    ;
+  --> adjective
+    -> MultilingualText
+      --> i18nName_fr
+        -> NlgAdjective
+          --> root      "mannois"
+          --> feminine  "mannoise"
+        ;
+      --> i18nName_en
+        -> NlgAdjective
+          --> root      "Manx"
+        ;
+      --> i18nName_es
+        -> NlgAdjective
+          --> root      "de la Isla de Man"
+        ;
+      --> i18nName_de
+        -> NlgAdjective
+          --> root      "Manx"
+        ;
+    ;
+  --> useArticle_fr  true
+  --> useArticle_en  true
+;

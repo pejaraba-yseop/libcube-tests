@@ -1,0 +1,8 @@
+
+LibCube:Dimension DIMENSION_VERSION
+    --> dsl -> Textualization
+        --> language LANG_en
+        --> root "Version Dimension"
+        --> number SINGULAR
+    ;
+;

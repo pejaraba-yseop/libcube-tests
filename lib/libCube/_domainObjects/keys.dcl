@@ -1,0 +1,2 @@
+Symbol _USE_ABSOLUTE_VALUE;
+Symbol _IS_ASCENDANT;

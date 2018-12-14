@@ -1,0 +1,80 @@
+LibGeography:Country C_BDI
+  --> iso3166_1_numeric_code  "108"
+  --> iso3166_1_alpha_2       "BI"
+  --> iso3166_1_alpha_3       "BDI"
+  --> label
+    -> MultilingualText
+      --> i18nName_fr
+        -> NlgSubstantive
+          --> root    "Burundi"
+          --> plural  "Burundi"
+          --> gender  MASCULINE
+          --> number  SINGULAR
+        ;
+      --> i18nName_en
+        -> NlgSubstantive
+          --> root    "Burundi"
+          --> plural  "Burundi"
+          --> gender  INANIMATE
+          --> number  SINGULAR
+        ;
+      --> i18nName_es
+        -> NlgSubstantive
+          --> root    "Burundi"
+          --> plural  "Burundi"
+          --> gender  MASCULINE
+          --> number  SINGULAR
+        ;
+      --> i18nName_de
+        -> NlgSubstantive
+          --> root    "Burundi"
+          --> plural  "Burundi"
+          --> gender  NEUTRAL
+          --> number  SINGULAR
+        ;
+      --> i18nName_ja
+        -> NlgSubstantive
+          --> root    "ブルンジ"
+          --> plural  "ブルンジ"
+          --> gender  INANIMATE
+          --> number  SINGULAR
+        ;
+    ;
+  --> demonym
+    -> MultilingualText
+      --> i18nName_fr
+        -> NlgGenderAgreeableSubstantive
+          --> masculine "Burundais"
+          --> feminine  "Burundaise"
+        ;
+      --> i18nName_en  "Burundian"
+      --> i18nName_es  "burundés"
+      --> i18nName_de
+        -> NlgGenderAgreeableSubstantive
+          --> masculine "Burundier"
+          --> feminine  "Burundierin"
+        ;
+    ;
+  --> adjective
+    -> MultilingualText
+      --> i18nName_fr
+        -> NlgAdjective
+          --> root      "burundais"
+          --> feminine  "burundaise"
+        ;
+      --> i18nName_en
+        -> NlgAdjective
+          --> root      "Burundian"
+        ;
+      --> i18nName_es
+        -> NlgAdjective
+          --> root      "burundés"
+        ;
+      --> i18nName_de
+        -> NlgAdjective
+          --> root      "burundisch"
+        ;
+    ;
+  --> useArticle_fr  true
+  --> useArticle_en  false
+;

@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<yseop-yml:ymlRule xmlns:yseop-yml="http://www.yseop.com/yml/storage" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" domainModelVersion="3" identifier="5c065695-11b1-43d6-b9d5-1b26346c848d">
+    <yseop-yml:content>?expenseRatioItem.expenseRatioPeerListInExpenseRatio.add(?expenseRatioPeerItem);</yseop-yml:content>
+    <yseop-yml:content>?expenseRatioPeerItem in ExpenseRatioPeerItem
+
+?expenseRatioItem in ExpenseRatioItem
+?expenseRatioItem.expenseRatioCountryName.stringCompare( ?expenseRatioPeerItem.expenseRatioPeerCountryName, _CASE_INSENSITIVE ) == true</yseop-yml:content>
+    <yseop-yml:name>addPeerListToExpenseRatioItem</yseop-yml:name>
+    <yseop-yml:properties identifier="c7138fb8-9d62-403b-9a62-946b482974cb">
+        <yseop-yml:property identifier="c7138fb8-9d62-403b-9a62-946b482974cb|dsl" type="YML_PROPERTY" name="dsl">"add peer list to expense ratio item"</yseop-yml:property>
+        <yseop-yml:property identifier="c7138fb8-9d62-403b-9a62-946b482974cb|disabled" type="GENERATION_PROPERTY" name="disabled">true</yseop-yml:property>
+    </yseop-yml:properties>
+</yseop-yml:ymlRule>

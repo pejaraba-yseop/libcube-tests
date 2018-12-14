@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<yseop-yml:ymlTextFunction xmlns:yseop-yml="http://www.yseop.com/yml/storage" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" domainModelVersion="3" identifier="d571d6d2-2b71-4821-8465-7cc0547ceaaf">
+    <yseop-yml:textGranule domainModelVersion="3" identifier="e56b3020-8142-4f06-847e-9b92b7eefd6a">
+        <yseop-yml:granuleI18nContents>
+            <yseop-yml:granuleUnilingueContent locale="en">
+                <yseop-yml:granuleContent>
+                    <yseop-yml:text>\if
+(theGeneralData.runUnitTests == false)\_texts:Paragraphs:GlobalSalesParagraph()
+\p
+\_texts:Paragraphs:SalesByCityParagraph()
+.
+\p
+\_texts:Paragraphs:SalesByProductParagraph()
+\endIf
+</yseop-yml:text>
+
+                    <yseop-yml:inline-assemblies/>
+                    <yseop-yml:inline-dslFunctionCalls/>
+                </yseop-yml:granuleContent>
+            </yseop-yml:granuleUnilingueContent>
+            <yseop-yml:granuleUnilingueContent locale="fr">
+                <yseop-yml:granuleContent>
+                    <yseop-yml:text/>
+                    <yseop-yml:inline-assemblies/>
+                    <yseop-yml:inline-dslFunctionCalls/>
+                </yseop-yml:granuleContent>
+            </yseop-yml:granuleUnilingueContent>
+            <yseop-yml:granuleUnilingueContent locale="es">
+                <yseop-yml:granuleContent>
+                    <yseop-yml:text/>
+                    <yseop-yml:inline-assemblies/>
+                    <yseop-yml:inline-dslFunctionCalls/>
+                </yseop-yml:granuleContent>
+            </yseop-yml:granuleUnilingueContent>
+        </yseop-yml:granuleI18nContents>
+        <yseop-yml:dslCondition/>
+        <yseop-yml:name/>
+        <yseop-yml:creationDate>2012-10-04T21:06:47.281Z</yseop-yml:creationDate>
+        <yseop-yml:properties identifier="048fcf5f-6a90-4edd-a538-7ee3468790fd">
+            <yseop-yml:property identifier="048fcf5f-6a90-4edd-a538-7ee3468790fd|condition" type="YML_PROPERTY" name="condition"></yseop-yml:property>
+        </yseop-yml:properties>
+    </yseop-yml:textGranule>
+    <yseop-yml:localVariables/>
+    <yseop-yml:advancedContent>--> action {
+    
+
+   this.text.write()
+           }</yseop-yml:advancedContent>
+    <yseop-yml:functionParameters>
+        <yseop-yml:parameters/>
+    </yseop-yml:functionParameters>
+    <yseop-yml:ymlParameters/>
+    <yseop-yml:name>finalDocument</yseop-yml:name>
+    <yseop-yml:creationDate>2012-10-04T21:06:47.076Z</yseop-yml:creationDate>
+    <yseop-yml:properties identifier="9becc28f-c601-4ee4-a988-1d1d619b6f81">
+        <yseop-yml:property identifier="9becc28f-c601-4ee4-a988-1d1d619b6f81|dsl" type="YML_PROPERTY" name="dsl">"result"</yseop-yml:property>
+    </yseop-yml:properties>
+</yseop-yml:ymlTextFunction>

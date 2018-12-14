@@ -1,0 +1,7 @@
+Symbol SORT_TYPE_ONE_MEASURE
+    --> dsl -> Textualization
+        --> language LANG_en
+        --> root "One Measure Sort Type"
+        --> number SINGULAR
+    ;
+;

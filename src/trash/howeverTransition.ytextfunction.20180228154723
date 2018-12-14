@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<yseop-yml:ymlTextFunction xmlns:yseop-yml="http://www.yseop.com/yml/storage" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" domainModelVersion="3" identifier="790d3095-482a-4e67-9e23-7c0ff7b0b341">
+    <yseop-yml:textGranule domainModelVersion="3" identifier="d2169fe7-4c13-433f-88bf-4ee56f0fee00">
+        <yseop-yml:granuleI18nContents>
+            <yseop-yml:granuleUnilingueContent locale="en">
+                <yseop-yml:granuleContent>
+                    <yseop-yml:text>
+\beginSynonym
+    \choice 
+        however
+\endSynonym
+</yseop-yml:text>
+                    <yseop-yml:inline-assemblies/>
+                    <yseop-yml:inline-dslFunctionCalls/>
+                </yseop-yml:granuleContent>
+            </yseop-yml:granuleUnilingueContent>
+            <yseop-yml:granuleUnilingueContent locale="fr">
+                <yseop-yml:granuleContent>
+                    <yseop-yml:text/>
+                    <yseop-yml:inline-assemblies/>
+                    <yseop-yml:inline-dslFunctionCalls/>
+                </yseop-yml:granuleContent>
+            </yseop-yml:granuleUnilingueContent>
+            <yseop-yml:granuleUnilingueContent locale="es">
+                <yseop-yml:granuleContent>
+                    <yseop-yml:text/>
+                    <yseop-yml:inline-assemblies/>
+                    <yseop-yml:inline-dslFunctionCalls/>
+                </yseop-yml:granuleContent>
+            </yseop-yml:granuleUnilingueContent>
+        </yseop-yml:granuleI18nContents>
+        <yseop-yml:dslCondition/>
+        <yseop-yml:name/>
+        <yseop-yml:creationDate>2017-11-07T20:46:47.276Z</yseop-yml:creationDate>
+        <yseop-yml:properties identifier="9eaf547a-d85d-4b67-97af-0d7a39d92281">
+            <yseop-yml:property identifier="9eaf547a-d85d-4b67-97af-0d7a39d92281|condition" type="YML_PROPERTY" name="condition"></yseop-yml:property>
+        </yseop-yml:properties>
+    </yseop-yml:textGranule>
+    <yseop-yml:localVariables/>
+    <yseop-yml:advancedContent/>
+    <yseop-yml:ymlParameters/>
+    <yseop-yml:name>howeverTransition</yseop-yml:name>
+    <yseop-yml:properties identifier="ad63e3d5-c862-40ce-a701-9d95484e94ad">
+        <yseop-yml:property identifier="ad63e3d5-c862-40ce-a701-9d95484e94ad|dsl" type="YML_PROPERTY" name="dsl">"however transition2"</yseop-yml:property>
+    </yseop-yml:properties>
+</yseop-yml:ymlTextFunction>

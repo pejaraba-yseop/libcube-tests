@@ -1,0 +1,80 @@
+LibGeography:Country C_HUN
+  --> iso3166_1_numeric_code  "348"
+  --> iso3166_1_alpha_2       "HU"
+  --> iso3166_1_alpha_3       "HUN"
+  --> label
+    -> MultilingualText
+      --> i18nName_fr
+        -> NlgSubstantive
+          --> root    "Hongrie"
+          --> plural  "Hongrie"
+          --> gender  FEMININE
+          --> number  SINGULAR
+        ;
+      --> i18nName_en
+        -> NlgSubstantive
+          --> root    "Hungary"
+          --> plural  "Hungary"
+          --> gender  INANIMATE
+          --> number  SINGULAR
+        ;
+      --> i18nName_es
+        -> NlgSubstantive
+          --> root    "Hungría"
+          --> plural  "Hungría"
+          --> gender  FEMININE
+          --> number  SINGULAR
+        ;
+      --> i18nName_de
+        -> NlgSubstantive
+          --> root    "Ungarn"
+          --> plural  "Ungarn"
+          --> gender  NEUTRAL
+          --> number  SINGULAR
+        ;
+      --> i18nName_ja
+        -> NlgSubstantive
+          --> root    "ハンガリー"
+          --> plural  "ハンガリー"
+          --> gender  INANIMATE
+          --> number  SINGULAR
+        ;
+    ;
+  --> demonym
+    -> MultilingualText
+      --> i18nName_fr
+        -> NlgGenderAgreeableSubstantive
+          --> masculine "Hongrois"
+          --> feminine  "Hongroise"
+        ;
+      --> i18nName_en  "Hungarian"
+      --> i18nName_es  "húngaro"
+      --> i18nName_de
+        -> NlgGenderAgreeableSubstantive
+          --> masculine "Ungar"
+          --> feminine  "Ungarin"
+        ;
+    ;
+  --> adjective
+    -> MultilingualText
+      --> i18nName_fr
+        -> NlgAdjective
+          --> root      "hongrois"
+          --> feminine  "hongroise"
+        ;
+      --> i18nName_en
+        -> NlgAdjective
+          --> root      "Hungarian"
+        ;
+      --> i18nName_es
+        -> NlgAdjective
+          --> root      "húngaro"
+        ;
+      --> i18nName_de
+        -> NlgAdjective
+          --> root      "ungarisch"
+        ;
+    ;
+  --> useArticle_fr  true
+  --> useArticle_en  false
+;

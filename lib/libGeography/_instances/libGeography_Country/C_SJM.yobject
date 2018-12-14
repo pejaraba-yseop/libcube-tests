@@ -1,0 +1,71 @@
+LibGeography:Country C_SJM
+  --> iso3166_1_numeric_code  "744"
+  --> iso3166_1_alpha_2       "SJ"
+  --> iso3166_1_alpha_3       "SJM"
+  --> label
+    -> MultilingualText
+      --> i18nName_fr
+        -> NlgSubstantive
+          --> root    "Svalbard et île Jan Mayen"
+          --> plural  "Svalbard et île Jan Mayen"
+          --> gender  FEMININE
+          --> number  PLURAL
+        ;
+      --> i18nName_en
+        -> NlgSubstantive
+          --> root    "Svalbard and Jan Mayen"
+          --> plural  "Svalbard and Jan Mayen"
+          --> gender  INANIMATE
+          --> number  PLURAL
+        ;
+      --> i18nName_es
+        -> NlgSubstantive
+          --> root    "Svalbard y Jan Mayen"
+          --> plural  "Svalbard y Jan Mayen"
+          --> gender  FEMININE
+          --> number  PLURAL
+        ;
+      --> i18nName_de
+        -> NlgSubstantive
+          --> root    "Svalbard und Jan Mayen"
+          --> plural  "Svalbard und Jan Mayen"
+          --> gender  NEUTRAL
+          --> number  PLURAL
+        ;
+      --> i18nName_ja
+        -> NlgSubstantive
+          --> root    "スヴァールバルとヤン・マイエン"
+          --> plural  "スヴァールバルとヤン・マイエン"
+          --> gender  INANIMATE
+          --> number  PLURAL
+        ;
+    ;
+  --> demonym
+    -> MultilingualText
+      --> i18nName_fr  "de Svalbard, de Jan Mayen"
+      --> i18nName_en  "of Svalbard, of Jan Mayen"
+      --> i18nName_es  "de Svalbard, de Jan Mayen"
+      --> i18nName_de  "von Svalbard, von Jan Mayen"
+    ;
+  --> adjective
+    -> MultilingualText
+      --> i18nName_fr
+        -> NlgAdjective
+          --> root      "de Svalbard, de Jan Mayen"
+        ;
+      --> i18nName_en
+        -> NlgAdjective
+          --> root      "of Svalbard, of Jan Mayen"
+        ;
+      --> i18nName_es
+        -> NlgAdjective
+          --> root      "de Svalbard, de Jan Mayen"
+        ;
+      --> i18nName_de
+        -> NlgAdjective
+          --> root      "von Svalbard, von Jan Mayen"
+        ;
+    ;
+  --> useArticle_fr  false
+  --> useArticle_en  false
+;

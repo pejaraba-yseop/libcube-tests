@@ -1,0 +1,50 @@
+LibGeography:Subdivision PROVINCE_CA_MB
+  --> iso3166_2    "CA-MB"
+  --> postal_code  "MB"
+  --> status       PROVINCE
+  --> label
+    -> MultilingualText
+      --> i18nName_fr
+        -> NlgSubstantive
+          --> root    "Manitoba"
+          --> plural  "Manitoba"
+          --> gender  MASCULINE
+          --> number  SINGULAR
+        ;
+      --> i18nName_en
+        -> NlgSubstantive
+          --> root    "Manitoba"
+          --> plural  "Manitoba"
+          --> gender  INANIMATE
+          --> number  SINGULAR
+        ;
+      --> i18nName_es
+        -> NlgSubstantive
+          --> root    "Manitoba"
+          --> plural  "Manitoba"
+          --> gender  FEMININE
+          --> number  SINGULAR
+        ;
+      --> i18nName_de
+        -> NlgSubstantive
+          --> root    "Manitoba"
+          --> plural  "Manitoba"
+          --> gender  NEUTRAL
+          --> number  SINGULAR
+        ;
+      --> i18nName_ja
+        -> NlgSubstantive
+          --> root    "マニトバ州"
+          --> plural  "マニトバ州"
+          --> gender  INANIMATE
+          --> number  SINGULAR
+        ;
+    ;
+  --> demonym
+    -> MultilingualText
+    ;
+  --> adjective
+    -> MultilingualText
+    ;
+  --> useArticle_en  false
+;

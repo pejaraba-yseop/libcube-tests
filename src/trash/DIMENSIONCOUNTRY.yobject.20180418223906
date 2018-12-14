@@ -1,0 +1,7 @@
+LibCube:Dimension DIMENSION_COUNTRY
+    --> dsl -> Textualization
+        --> language LANG_en
+        --> root "DIMENSION_COUNTRY"
+        --> number SINGULAR
+    ;
+;

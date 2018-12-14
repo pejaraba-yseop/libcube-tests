@@ -1,0 +1,7 @@
+LibCube:TimePeriod PERIOD_DAY
+    --> dsl -> Textualization
+        --> language LANG_en
+        --> root "period day"
+        --> number SINGULAR
+    ;
+;

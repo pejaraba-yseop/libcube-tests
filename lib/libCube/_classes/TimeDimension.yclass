@@ -1,0 +1,27 @@
+interface LibCube:TimeDimension extends LibCube:Dimension
+
+	method getCurrentTimeMember()
+	--> domains LibCube:TimeMember
+	
+    classProperties
+    --> dsl -> Textualization
+        --> language LANG_en
+        --> root "Cube Time Dimension"
+        --> number SINGULAR
+    ;
+    --> hasAccessorFunction true
+;
+
+implementation LibCube:TimeDimension
+;
+
+function LibCube:TimeDimension::getCurrentTimeMember()
+  --> domains LibCube:TimeMember
+  --> local List timeList
+  --> action {
+      timeList = new(List)
+      timeList.addAll(applyCollection(this>>members, __where currentElement.date != null).toList())
+      timeList.sort(_DESCENDANT, _RELATIVE_ORDER_OF: LibCube:TimeMember::date)
+      return timeList.get(_FIRST)
+  }
+;

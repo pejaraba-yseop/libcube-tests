@@ -1,0 +1,54 @@
+interface LibCube:TimeMember extends LibCube:HierarchyElement
+    field date
+        --> domains Date
+        --> xmlMapping XmlMappingProperty_NO_SAVE
+        --> dsl -> Textualization
+            --> language LANG_en
+            --> root "date"
+            --> number SINGULAR
+        ;
+    field quarter
+        --> domains libCube:_constLists:quarter
+        --> xmlMapping XmlMappingProperty_NO_SAVE
+        --> dsl -> Textualization
+            --> language LANG_en
+            --> root "quarter"
+            --> number SINGULAR
+        ;
+    field period
+        --> domains LibCube:TimePeriod
+        --> documentation "The type of time time period being represented (i.e. day vs month vs year)."
+        --> xmlMapping XmlMappingProperty_NO_SAVE
+        --> dsl -> Textualization
+            --> language LANG_en
+            --> root "period of time"
+            --> number SINGULAR
+        ;
+        
+    method findQuarter()
+    --> domains Void
+        
+    classProperties
+    --> dsl -> Textualization
+        --> language LANG_en
+        --> root "Cube Time Member"
+        --> number SINGULAR
+    ;
+    --> trackInstances true
+    --> dynamicInstances  true 		
+;
+
+implementation LibCube:TimeMember
+;
+
+function LibCube:TimeMember::findQuarter()
+--> action {
+	switch {
+		case(date == null): quarter = null
+		case(date.month <= 3): quarter = Q1
+		case(date.month <= 6): quarter = Q2
+		case(date.month <= 9): quarter = Q3
+		case(date.month <= 12): quarter = Q4
+	}
+}
+;

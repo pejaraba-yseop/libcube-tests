@@ -1,0 +1,80 @@
+LibGeography:Country C_MLI
+  --> iso3166_1_numeric_code  "466"
+  --> iso3166_1_alpha_2       "ML"
+  --> iso3166_1_alpha_3       "MLI"
+  --> label
+    -> MultilingualText
+      --> i18nName_fr
+        -> NlgSubstantive
+          --> root    "Mali"
+          --> plural  "Mali"
+          --> gender  MASCULINE
+          --> number  SINGULAR
+        ;
+      --> i18nName_en
+        -> NlgSubstantive
+          --> root    "Mali"
+          --> plural  "Mali"
+          --> gender  INANIMATE
+          --> number  SINGULAR
+        ;
+      --> i18nName_es
+        -> NlgSubstantive
+          --> root    "Mali"
+          --> plural  "Mali"
+          --> gender  MASCULINE
+          --> number  SINGULAR
+        ;
+      --> i18nName_de
+        -> NlgSubstantive
+          --> root    "Mali"
+          --> plural  "Mali"
+          --> gender  NEUTRAL
+          --> number  SINGULAR
+        ;
+      --> i18nName_ja
+        -> NlgSubstantive
+          --> root    "マリ"
+          --> plural  "マリ"
+          --> gender  INANIMATE
+          --> number  SINGULAR
+        ;
+    ;
+  --> demonym
+    -> MultilingualText
+      --> i18nName_fr
+        -> NlgGenderAgreeableSubstantive
+          --> masculine "Malien"
+          --> feminine  "Malienne"
+        ;
+      --> i18nName_en  "Malian"
+      --> i18nName_es  "malí"
+      --> i18nName_de
+        -> NlgGenderAgreeableSubstantive
+          --> masculine "Malier"
+          --> feminine  "Malierin"
+        ;
+    ;
+  --> adjective
+    -> MultilingualText
+      --> i18nName_fr
+        -> NlgAdjective
+          --> root      "malien"
+          --> feminine  "malienne"
+        ;
+      --> i18nName_en
+        -> NlgAdjective
+          --> root      "Malian"
+        ;
+      --> i18nName_es
+        -> NlgAdjective
+          --> root      "malí"
+        ;
+      --> i18nName_de
+        -> NlgAdjective
+          --> root      "malisch"
+        ;
+    ;
+  --> useArticle_fr  true
+  --> useArticle_en  false
+;

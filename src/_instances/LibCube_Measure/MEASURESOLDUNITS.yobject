@@ -1,0 +1,11 @@
+
+LibCube:Measure MEASURE_SOLD_UNITS
+    --> mdxName "SOLD_UNITS"
+    --> mdxFullName "[Measures].[SOLD_UNITS]"
+
+    --> dsl -> Textualization
+        --> language LANG_en
+        --> root "Sold Units Measure"
+        --> number PLURAL
+    ;
+;

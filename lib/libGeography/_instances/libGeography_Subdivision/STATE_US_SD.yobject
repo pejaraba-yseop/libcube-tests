@@ -1,0 +1,55 @@
+LibGeography:Subdivision STATE_US_SD
+  --> iso3166_2    "US-SD"
+  --> postal_code  "SD"
+  --> status       STATE
+  --> label
+    -> MultilingualText
+      --> i18nName_fr
+        -> NlgSubstantive
+          --> root    "Dakota du Sud"
+          --> plural  "Dakota du Sud"
+          --> gender  MASCULINE
+          --> number  SINGULAR
+        ;
+      --> i18nName_en
+        -> NlgSubstantive
+          --> root    "South Dakota"
+          --> plural  "South Dakota"
+          --> gender  INANIMATE
+          --> number  SINGULAR
+        ;
+      --> i18nName_es
+        -> NlgSubstantive
+          --> root    "Dakota del Sur"
+          --> plural  "Dakota del Sur"
+          --> gender  MASCULINE
+          --> number  SINGULAR
+        ;
+      --> i18nName_de
+        -> NlgSubstantive
+          --> root    "South Dakota"
+          --> plural  "South Dakota"
+          --> gender  NEUTRAL
+          --> number  SINGULAR
+        ;
+      --> i18nName_ja
+        -> NlgSubstantive
+          --> root    " サウスダコタ州"
+          --> plural  " サウスダコタ州"
+          --> gender  INANIMATE
+          --> number  SINGULAR
+        ;
+    ;
+  --> demonym
+    -> MultilingualText
+      --> i18nName_en  "South Dakotan"
+    ;
+  --> adjective
+    -> MultilingualText
+      --> i18nName_en
+        -> NlgAdjective
+          --> root      "South Dakotan"
+        ;
+    ;
+  --> useArticle_en  false
+;

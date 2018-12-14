@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<yseop-yml:ymlRule xmlns:yseop-yml="http://www.yseop.com/yml/storage" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" domainModelVersion="3" identifier="062dfcad-c4a6-4d3f-9388-eecfc1d1d9a4">
+    <yseop-yml:content>?netPremiumSegments.netPremiumSegmentEnglishName = "General Liability";</yseop-yml:content>
+    <yseop-yml:content>?netPremiumSegments in NetPremiumSegments
+?netPremiumSegments.netPremiumSegmentName == "Responsabilidad Civil"</yseop-yml:content>
+    <yseop-yml:name>ResponsabilidadCivil</yseop-yml:name>
+    <yseop-yml:properties identifier="528af4ae-096c-4bd9-9052-43fc7f007024">
+        <yseop-yml:property identifier="528af4ae-096c-4bd9-9052-43fc7f007024|dsl" type="YML_PROPERTY" name="dsl">"Responsabilidad Civil"</yseop-yml:property>
+        <yseop-yml:property identifier="528af4ae-096c-4bd9-9052-43fc7f007024|disabled" type="GENERATION_PROPERTY" name="disabled">true</yseop-yml:property>
+    </yseop-yml:properties>
+</yseop-yml:ymlRule>

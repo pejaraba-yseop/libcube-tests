@@ -1,0 +1,80 @@
+LibGeography:Country C_SSD
+  --> iso3166_1_numeric_code  "728"
+  --> iso3166_1_alpha_2       "SS"
+  --> iso3166_1_alpha_3       "SSD"
+  --> label
+    -> MultilingualText
+      --> i18nName_fr
+        -> NlgSubstantive
+          --> root    "Soudan du Sud"
+          --> plural  "Soudan du Sud"
+          --> gender  MASCULINE
+          --> number  SINGULAR
+        ;
+      --> i18nName_en
+        -> NlgSubstantive
+          --> root    "South Sudan"
+          --> plural  "South Sudan"
+          --> gender  INANIMATE
+          --> number  SINGULAR
+        ;
+      --> i18nName_es
+        -> NlgSubstantive
+          --> root    "Sudán del Sur"
+          --> plural  "Sudán del Sur"
+          --> gender  MASCULINE
+          --> number  SINGULAR
+        ;
+      --> i18nName_de
+        -> NlgSubstantive
+          --> root    "Südsudan"
+          --> plural  "Südsudan"
+          --> gender  NEUTRAL
+          --> number  SINGULAR
+        ;
+      --> i18nName_ja
+        -> NlgSubstantive
+          --> root    "南スーダン"
+          --> plural  "南スーダン"
+          --> gender  INANIMATE
+          --> number  SINGULAR
+        ;
+    ;
+  --> demonym
+    -> MultilingualText
+      --> i18nName_fr
+        -> NlgGenderAgreeableSubstantive
+          --> masculine "Sud-Soudanais"
+          --> feminine  "Sud-Soudanaise"
+        ;
+      --> i18nName_en  "South Sudanese"
+      --> i18nName_es  "sursudanés"
+      --> i18nName_de
+        -> NlgGenderAgreeableSubstantive
+          --> masculine "Südsudanese"
+          --> feminine  "Südsudanesin"
+        ;
+    ;
+  --> adjective
+    -> MultilingualText
+      --> i18nName_fr
+        -> NlgAdjective
+          --> root      "sud-soudanais"
+          --> feminine  "sud-soudanaise"
+        ;
+      --> i18nName_en
+        -> NlgAdjective
+          --> root      "South Sudanese"
+        ;
+      --> i18nName_es
+        -> NlgAdjective
+          --> root      "sursudanés"
+        ;
+      --> i18nName_de
+        -> NlgAdjective
+          --> root      "südsudanesisch"
+        ;
+    ;
+  --> useArticle_fr  true
+  --> useArticle_en  false
+;

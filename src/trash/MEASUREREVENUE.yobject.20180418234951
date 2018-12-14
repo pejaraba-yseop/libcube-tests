@@ -1,0 +1,8 @@
+LibCube:Measure MEASURE_NET_REVENUE
+    --> label "Net Revenue"
+    --> dsl -> Textualization
+        --> language LANG_en
+        --> root "Net Revenue"
+        --> number SINGULAR
+    ;
+;

@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<yseop-yml:ymlTextFunction xmlns:yseop-yml="http://www.yseop.com/yml/storage" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" domainModelVersion="3" identifier="ab84b28d-c8bf-4d93-8313-cf2c6b5b8a39">
+    <yseop-yml:textGranule domainModelVersion="3" identifier="adb7609c-8b33-4b36-9c1c-9d65e98a1073">
+        <yseop-yml:granuleI18nContents>
+            <yseop-yml:granuleUnilingueContent locale="en">
+                <yseop-yml:granuleContent>
+                    <yseop-yml:text>
+\beginSynonym
+
+    \choice 
+        Conversely
+
+    \choice 
+        On the other hand
+
+    \choice 
+        Contrarily
+
+    \choice 
+        However
+
+\endSynonym
+</yseop-yml:text>
+                    <yseop-yml:inline-assemblies/>
+                    <yseop-yml:inline-dslFunctionCalls/>
+                </yseop-yml:granuleContent>
+            </yseop-yml:granuleUnilingueContent>
+            <yseop-yml:granuleUnilingueContent locale="es">
+                <yseop-yml:granuleContent>
+                    <yseop-yml:text/>
+                    <yseop-yml:inline-assemblies/>
+                    <yseop-yml:inline-dslFunctionCalls/>
+                </yseop-yml:granuleContent>
+            </yseop-yml:granuleUnilingueContent>
+            <yseop-yml:granuleUnilingueContent locale="fr">
+                <yseop-yml:granuleContent>
+                    <yseop-yml:text/>
+                    <yseop-yml:inline-assemblies/>
+                    <yseop-yml:inline-dslFunctionCalls/>
+                </yseop-yml:granuleContent>
+            </yseop-yml:granuleUnilingueContent>
+        </yseop-yml:granuleI18nContents>
+        <yseop-yml:dslCondition/>
+        <yseop-yml:name/>
+        <yseop-yml:creationDate>2018-04-26T16:03:01.076Z</yseop-yml:creationDate>
+        <yseop-yml:properties identifier="e23b711f-1133-4f9a-9da1-cbad09e225ec">
+            <yseop-yml:property identifier="e23b711f-1133-4f9a-9da1-cbad09e225ec|condition" type="YML_PROPERTY" name="condition"></yseop-yml:property>
+        </yseop-yml:properties>
+    </yseop-yml:textGranule>
+    <yseop-yml:localVariables/>
+    <yseop-yml:advancedContent/>
+    <yseop-yml:ymlParameters/>
+    <yseop-yml:name>ConverselySynonym</yseop-yml:name>
+    <yseop-yml:properties identifier="4bf6663c-2136-4269-bd81-5d752b794cbf">
+        <yseop-yml:property identifier="4bf6663c-2136-4269-bd81-5d752b794cbf|dsl" type="YML_PROPERTY" name="dsl">"Conversely Synonym"</yseop-yml:property>
+    </yseop-yml:properties>
+</yseop-yml:ymlTextFunction>

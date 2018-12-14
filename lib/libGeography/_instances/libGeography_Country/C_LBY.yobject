@@ -1,0 +1,80 @@
+LibGeography:Country C_LBY
+  --> iso3166_1_numeric_code  "434"
+  --> iso3166_1_alpha_2       "LY"
+  --> iso3166_1_alpha_3       "LBY"
+  --> label
+    -> MultilingualText
+      --> i18nName_fr
+        -> NlgSubstantive
+          --> root    "Libye"
+          --> plural  "Libye"
+          --> gender  FEMININE
+          --> number  SINGULAR
+        ;
+      --> i18nName_en
+        -> NlgSubstantive
+          --> root    "Libya"
+          --> plural  "Libya"
+          --> gender  INANIMATE
+          --> number  SINGULAR
+        ;
+      --> i18nName_es
+        -> NlgSubstantive
+          --> root    "Libia"
+          --> plural  "Libia"
+          --> gender  FEMININE
+          --> number  SINGULAR
+        ;
+      --> i18nName_de
+        -> NlgSubstantive
+          --> root    "Libyen"
+          --> plural  "Libyen"
+          --> gender  NEUTRAL
+          --> number  SINGULAR
+        ;
+      --> i18nName_ja
+        -> NlgSubstantive
+          --> root    "リビア"
+          --> plural  "リビア"
+          --> gender  INANIMATE
+          --> number  SINGULAR
+        ;
+    ;
+  --> demonym
+    -> MultilingualText
+      --> i18nName_fr
+        -> NlgGenderAgreeableSubstantive
+          --> masculine "Libyen"
+          --> feminine  "Libyenne"
+        ;
+      --> i18nName_en  "Libyan"
+      --> i18nName_es  "libio"
+      --> i18nName_de
+        -> NlgGenderAgreeableSubstantive
+          --> masculine "Libyer"
+          --> feminine  "Libyerin"
+        ;
+    ;
+  --> adjective
+    -> MultilingualText
+      --> i18nName_fr
+        -> NlgAdjective
+          --> root      "libyen"
+          --> feminine  "libyenne"
+        ;
+      --> i18nName_en
+        -> NlgAdjective
+          --> root      "Libyan"
+        ;
+      --> i18nName_es
+        -> NlgAdjective
+          --> root      "libio"
+        ;
+      --> i18nName_de
+        -> NlgAdjective
+          --> root      "libysch"
+        ;
+    ;
+  --> useArticle_fr  true
+  --> useArticle_en  false
+;

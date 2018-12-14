@@ -1,0 +1,8 @@
+LibCube:Measure MEASURE_SCORE_MARKET_POSITION
+    --> label "Score Market Position"
+    --> dsl -> Textualization
+        --> language LANG_en
+        --> root "Score Market Position"
+        --> number SINGULAR
+    ;
+;

@@ -1,0 +1,80 @@
+LibGeography:Country C_KGZ
+  --> iso3166_1_numeric_code  "417"
+  --> iso3166_1_alpha_2       "KG"
+  --> iso3166_1_alpha_3       "KGZ"
+  --> label
+    -> MultilingualText
+      --> i18nName_fr
+        -> NlgSubstantive
+          --> root    "Kirghizistan"
+          --> plural  "Kirghizistan"
+          --> gender  MASCULINE
+          --> number  SINGULAR
+        ;
+      --> i18nName_en
+        -> NlgSubstantive
+          --> root    "Kyrgyzstan"
+          --> plural  "Kyrgyzstan"
+          --> gender  INANIMATE
+          --> number  SINGULAR
+        ;
+      --> i18nName_es
+        -> NlgSubstantive
+          --> root    "Kirguistán"
+          --> plural  "Kirguistán"
+          --> gender  MASCULINE
+          --> number  SINGULAR
+        ;
+      --> i18nName_de
+        -> NlgSubstantive
+          --> root    "Kirgisistan"
+          --> plural  "Kirgisistan"
+          --> gender  NEUTRAL
+          --> number  SINGULAR
+        ;
+      --> i18nName_ja
+        -> NlgSubstantive
+          --> root    "キルギス"
+          --> plural  "キルギス"
+          --> gender  INANIMATE
+          --> number  SINGULAR
+        ;
+    ;
+  --> demonym
+    -> MultilingualText
+      --> i18nName_fr
+        -> NlgGenderAgreeableSubstantive
+          --> masculine "Kirghize"
+          --> feminine  "Kirghize"
+        ;
+      --> i18nName_en  "Kyrgyz"
+      --> i18nName_es  "kirguís"
+      --> i18nName_de
+        -> NlgGenderAgreeableSubstantive
+          --> masculine "Kirgise"
+          --> feminine  "Kirgisin"
+        ;
+    ;
+  --> adjective
+    -> MultilingualText
+      --> i18nName_fr
+        -> NlgAdjective
+          --> root      "kirghize"
+          --> feminine  "kirghize"
+        ;
+      --> i18nName_en
+        -> NlgAdjective
+          --> root      "Kyrgyz"
+        ;
+      --> i18nName_es
+        -> NlgAdjective
+          --> root      "kirguís"
+        ;
+      --> i18nName_de
+        -> NlgAdjective
+          --> root      "kirgisisch"
+        ;
+    ;
+  --> useArticle_fr  true
+  --> useArticle_en  false
+;

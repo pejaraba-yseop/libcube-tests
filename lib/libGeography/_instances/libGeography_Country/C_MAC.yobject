@@ -1,0 +1,71 @@
+LibGeography:Country C_MAC
+  --> iso3166_1_numeric_code  "446"
+  --> iso3166_1_alpha_2       "MO"
+  --> iso3166_1_alpha_3       "MAC"
+  --> label
+    -> MultilingualText
+      --> i18nName_fr
+        -> NlgSubstantive
+          --> root    "Macao"
+          --> plural  "Macao"
+          --> gender  MASCULINE
+          --> number  SINGULAR
+        ;
+      --> i18nName_en
+        -> NlgSubstantive
+          --> root    "Macao"
+          --> plural  "Macao"
+          --> gender  INANIMATE
+          --> number  SINGULAR
+        ;
+      --> i18nName_es
+        -> NlgSubstantive
+          --> root    "Macao"
+          --> plural  "Macao"
+          --> gender  MASCULINE
+          --> number  SINGULAR
+        ;
+      --> i18nName_de
+        -> NlgSubstantive
+          --> root    "Macau"
+          --> plural  "Macau"
+          --> gender  NEUTRAL
+          --> number  SINGULAR
+        ;
+      --> i18nName_ja
+        -> NlgSubstantive
+          --> root    "マカオ"
+          --> plural  "マカオ"
+          --> gender  INANIMATE
+          --> number  SINGULAR
+        ;
+    ;
+  --> demonym
+    -> MultilingualText
+      --> i18nName_fr  "de Macao"
+      --> i18nName_en  "Macanese"
+      --> i18nName_es  "macaense"
+      --> i18nName_de  "von Macau"
+    ;
+  --> adjective
+    -> MultilingualText
+      --> i18nName_fr
+        -> NlgAdjective
+          --> root      "de Macao"
+        ;
+      --> i18nName_en
+        -> NlgAdjective
+          --> root      "Macanese"
+        ;
+      --> i18nName_es
+        -> NlgAdjective
+          --> root      "macaense"
+        ;
+      --> i18nName_de
+        -> NlgAdjective
+          --> root      "von Macau"
+        ;
+    ;
+  --> useArticle_fr  false
+  --> useArticle_en  false
+;

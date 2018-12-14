@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<yseop-yml:constList xmlns:yseop-yml="http://www.yseop.com/yml/storage" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" domainModelVersion="3" identifier="57aac627-b60b-4150-8a03-48d3c7a22059">
+    <yseop-yml:constListElements>
+        <yseop-yml:constListElement>
+            <yseop-yml:name>RETURN_STATUS_WEIGHED</yseop-yml:name>
+            <yseop-yml:localeValues>
+                <yseop-yml:localeValue locale="en">
+                    <yseop-yml:value>Weighed on returns</yseop-yml:value>
+                </yseop-yml:localeValue>
+                <yseop-yml:localeValue locale="es">
+                    <yseop-yml:value/>
+                </yseop-yml:localeValue>
+                <yseop-yml:localeValue locale="fr">
+                    <yseop-yml:value/>
+                </yseop-yml:localeValue>
+            </yseop-yml:localeValues>
+        </yseop-yml:constListElement>
+        <yseop-yml:constListElement>
+            <yseop-yml:name>RETURN_STATUS_CONTRIBUTED</yseop-yml:name>
+            <yseop-yml:localeValues>
+                <yseop-yml:localeValue locale="en">
+                    <yseop-yml:value>Contributed to returns</yseop-yml:value>
+                </yseop-yml:localeValue>
+                <yseop-yml:localeValue locale="es">
+                    <yseop-yml:value/>
+                </yseop-yml:localeValue>
+                <yseop-yml:localeValue locale="fr">
+                    <yseop-yml:value/>
+                </yseop-yml:localeValue>
+            </yseop-yml:localeValues>
+        </yseop-yml:constListElement>
+    </yseop-yml:constListElements>
+    <yseop-yml:name/>
+    <yseop-yml:properties identifier="c8fb82ee-2d7a-4d7b-ab91-061004c5a11d">
+        <yseop-yml:property identifier="c8fb82ee-2d7a-4d7b-ab91-061004c5a11d|dsl" type="YML_PROPERTY" name="dsl">"Returns Status"</yseop-yml:property>
+    </yseop-yml:properties>
+</yseop-yml:constList>

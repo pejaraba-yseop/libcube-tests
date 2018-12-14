@@ -1,0 +1,80 @@
+LibGeography:Country C_ZWE
+  --> iso3166_1_numeric_code  "716"
+  --> iso3166_1_alpha_2       "ZW"
+  --> iso3166_1_alpha_3       "ZWE"
+  --> label
+    -> MultilingualText
+      --> i18nName_fr
+        -> NlgSubstantive
+          --> root    "Zimbabwe"
+          --> plural  "Zimbabwe"
+          --> gender  MASCULINE
+          --> number  SINGULAR
+        ;
+      --> i18nName_en
+        -> NlgSubstantive
+          --> root    "Zimbabwe"
+          --> plural  "Zimbabwe"
+          --> gender  INANIMATE
+          --> number  SINGULAR
+        ;
+      --> i18nName_es
+        -> NlgSubstantive
+          --> root    "Zimbabue"
+          --> plural  "Zimbabue"
+          --> gender  MASCULINE
+          --> number  SINGULAR
+        ;
+      --> i18nName_de
+        -> NlgSubstantive
+          --> root    "Simbabwe"
+          --> plural  "Simbabwe"
+          --> gender  NEUTRAL
+          --> number  SINGULAR
+        ;
+      --> i18nName_ja
+        -> NlgSubstantive
+          --> root    "ジンバブエ"
+          --> plural  "ジンバブエ"
+          --> gender  INANIMATE
+          --> number  SINGULAR
+        ;
+    ;
+  --> demonym
+    -> MultilingualText
+      --> i18nName_fr
+        -> NlgGenderAgreeableSubstantive
+          --> masculine "Zimbabwéen"
+          --> feminine  "Zimbabwéenne"
+        ;
+      --> i18nName_en  "Zimbabwean"
+      --> i18nName_es  "zimbabuense"
+      --> i18nName_de
+        -> NlgGenderAgreeableSubstantive
+          --> masculine "Simbabwer"
+          --> feminine  "Simbabwerin"
+        ;
+    ;
+  --> adjective
+    -> MultilingualText
+      --> i18nName_fr
+        -> NlgAdjective
+          --> root      "zimbabwéen"
+          --> feminine  "zimbabwéenne"
+        ;
+      --> i18nName_en
+        -> NlgAdjective
+          --> root      "Zimbabwean"
+        ;
+      --> i18nName_es
+        -> NlgAdjective
+          --> root      "zimbabuense"
+        ;
+      --> i18nName_de
+        -> NlgAdjective
+          --> root      "simbabwisch"
+        ;
+    ;
+  --> useArticle_fr  true
+  --> useArticle_en  false
+;

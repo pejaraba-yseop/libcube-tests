@@ -1,0 +1,76 @@
+LibGeography:Country C_GGY
+  --> iso3166_1_numeric_code  "831"
+  --> iso3166_1_alpha_2       "GG"
+  --> iso3166_1_alpha_3       "GGY"
+  --> label
+    -> MultilingualText
+      --> i18nName_fr
+        -> NlgSubstantive
+          --> root    "Guernesey"
+          --> plural  "Guernesey"
+          --> gender  FEMININE
+          --> number  SINGULAR
+        ;
+      --> i18nName_en
+        -> NlgSubstantive
+          --> root    "Guernsey"
+          --> plural  "Guernsey"
+          --> gender  INANIMATE
+          --> number  SINGULAR
+        ;
+      --> i18nName_es
+        -> NlgSubstantive
+          --> root    "Guernesey"
+          --> plural  "Guernesey"
+          --> gender  FEMININE
+          --> number  SINGULAR
+        ;
+      --> i18nName_de
+        -> NlgSubstantive
+          --> root    "Guernsey"
+          --> plural  "Guernsey"
+          --> gender  NEUTRAL
+          --> number  SINGULAR
+        ;
+      --> i18nName_ja
+        -> NlgSubstantive
+          --> root    "ガーンジー島"
+          --> plural  "ガーンジー島"
+          --> gender  INANIMATE
+          --> number  SINGULAR
+        ;
+    ;
+  --> demonym
+    -> MultilingualText
+      --> i18nName_fr
+        -> NlgGenderAgreeableSubstantive
+          --> masculine "Guernesiais"
+          --> feminine  "Guernesiaise"
+        ;
+      --> i18nName_en  "of Guernsey"
+      --> i18nName_es  "de Guernesey"
+      --> i18nName_de  "von Guernsey"
+    ;
+  --> adjective
+    -> MultilingualText
+      --> i18nName_fr
+        -> NlgAdjective
+          --> root      "guernesiais"
+          --> feminine  "guernesiaise"
+        ;
+      --> i18nName_en
+        -> NlgAdjective
+          --> root      "Guernsey"
+        ;
+      --> i18nName_es
+        -> NlgAdjective
+          --> root      "de Guernesey"
+        ;
+      --> i18nName_de
+        -> NlgAdjective
+          --> root      "von Guernsey"
+        ;
+    ;
+  --> useArticle_fr  false
+  --> useArticle_en  false
+;

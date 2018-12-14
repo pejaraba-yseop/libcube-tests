@@ -1,0 +1,265 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<yseop-yml:ymlTextFunction xmlns:yseop-yml="http://www.yseop.com/yml/storage" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" domainModelVersion="3" identifier="20893fe7-f161-46a4-b37c-d2310d2fd9c3">
+    <yseop-yml:textGranule domainModelVersion="3" identifier="0a31a343-284c-4a29-90d6-f6e8c21a8ff0">
+        <yseop-yml:granuleI18nContents>
+            <yseop-yml:granuleUnilingueContent locale="en">
+                <yseop-yml:granuleContent>
+                    <yseop-yml:text>
+\foreach(k,theGeneralData.mentionedBusinessSegmentByRankInMarketHashMap.getKeys(), #435Q#)
+
+    \beginStyle(styleOrdinal)
+        \nounPhrase(k)
+    \endStyle
+
+    in
+
+    \foreach(_businessSegment,theGeneralData.mentionedBusinessSegmentByRankInMarketHashMap.get(k), #RR2P#)
+
+        \if(_businessSegment.currentCompanyMarketShare != 0)
+
+            \beginStyle(lowerCaseSegment)
+                \nounPhrase(_businessSegment.label)
+            \endStyle
+
+            (
+            \nounPhrase(_businessSegment.currentCompanyMarketShare, UNIT_PERCENT)
+            )
+        \endIf
+
+
+    \endForeach
+
+
+\endForeach
+
+.
+
+\if(theGeneralData.mentionedBusinessSegmentByRankInMarketOrderedSet.size() > 1)
+    these
+    \value(theGeneralData.mentionedBusinessSegmentByRankInMarketOrderedSet.size())
+    lines of business represent
+
+    \beginStyle(zeroDigitStyle)
+        \value(marketShare, UNIT_PERCENT)
+    \endStyle
+
+    of the company's total net premium written.
+\endIf
+</yseop-yml:text>
+                    <yseop-yml:inline-assemblies>
+                        <yseop-yml:singleSentenceLinkAssembly name="RR2P" language="en">
+                            <yseop-yml:chooseSeparatorOptions>
+                                <yseop-yml:beforeEachItemCommaSelected>true</yseop-yml:beforeEachItemCommaSelected>
+                                <yseop-yml:beforeEachItemOtherText/>
+                                <yseop-yml:beforeLastItemAndSelected>true</yseop-yml:beforeLastItemAndSelected>
+                                <yseop-yml:beforeLastItemOtherText/>
+                                <yseop-yml:maxCountOfItemsForEachSentenceValue>3</yseop-yml:maxCountOfItemsForEachSentenceValue>
+                                <yseop-yml:endOfSentenceDotSelected>true</yseop-yml:endOfSentenceDotSelected>
+                                <yseop-yml:endOfSentenceQuestionMarkSelected>false</yseop-yml:endOfSentenceQuestionMarkSelected>
+                                <yseop-yml:endOfSentenceOtherSelected>false</yseop-yml:endOfSentenceOtherSelected>
+                                <yseop-yml:switchThresholdValue>4</yseop-yml:switchThresholdValue>
+                            </yseop-yml:chooseSeparatorOptions>
+                            <yseop-yml:beginEndWithOptions>
+                                <yseop-yml:generalBeginWithText/>
+                                <yseop-yml:generalEndWithText/>
+                                <yseop-yml:onlyOneItemBeginWithSameAsGeneralSelected>true</yseop-yml:onlyOneItemBeginWithSameAsGeneralSelected>
+                                <yseop-yml:onlyOneItemBeginWithSpecificText/>
+                                <yseop-yml:onlyOneItemEndWithSameAsGeneralSelected>true</yseop-yml:onlyOneItemEndWithSameAsGeneralSelected>
+                                <yseop-yml:onlyOneItemEndWithSpecificText/>
+                                <yseop-yml:allItemsIdenticalBeginWithSameAsGeneralSelected>true</yseop-yml:allItemsIdenticalBeginWithSameAsGeneralSelected>
+                                <yseop-yml:allItemsIdenticalBeginWithSpecificText/>
+                                <yseop-yml:allItemsIdenticalEndWithSameAsGeneralSelected>true</yseop-yml:allItemsIdenticalEndWithSameAsGeneralSelected>
+                                <yseop-yml:allItemsIdenticalEndWithSpecificText/>
+                                <yseop-yml:noItemGenerateNothingSelected>true</yseop-yml:noItemGenerateNothingSelected>
+                                <yseop-yml:noItemSentenceText/>
+                                <yseop-yml:inGeneralBulletBeginSameAsListSelected>true</yseop-yml:inGeneralBulletBeginSameAsListSelected>
+                                <yseop-yml:inGeneralBulletBeginSpecificSelected>false</yseop-yml:inGeneralBulletBeginSpecificSelected>
+                                <yseop-yml:inGeneralBulletBeginSpecificText/>
+                                <yseop-yml:inGeneralBulletEndSameAsListSelected>true</yseop-yml:inGeneralBulletEndSameAsListSelected>
+                                <yseop-yml:inGeneralBulletEndSpecificSelected>false</yseop-yml:inGeneralBulletEndSpecificSelected>
+                                <yseop-yml:inGeneralBulletEndSpecificText/>
+                            </yseop-yml:beginEndWithOptions>
+                            <yseop-yml:limitSizeOptions>
+                                <yseop-yml:noLimitSelected>true</yseop-yml:noLimitSelected>
+                                <yseop-yml:onlyFirstElementsSelected>true</yseop-yml:onlyFirstElementsSelected>
+                                <yseop-yml:onlyFirstElementsNumberValue>3</yseop-yml:onlyFirstElementsNumberValue>
+                                <yseop-yml:sentenceSizeTypeValue>30</yseop-yml:sentenceSizeTypeValue>
+                                <yseop-yml:limitByTypeValue>words</yseop-yml:limitByTypeValue>
+                                <yseop-yml:limitByTypeNumber>0</yseop-yml:limitByTypeNumber>
+                                <yseop-yml:sentenceEndEtcSelected>true</yseop-yml:sentenceEndEtcSelected>
+                                <yseop-yml:sentenceEndOtherText/>
+                                <yseop-yml:hasWordCharOptions>true</yseop-yml:hasWordCharOptions>
+                            </yseop-yml:limitSizeOptions>
+                        </yseop-yml:singleSentenceLinkAssembly>
+                        <yseop-yml:sentencesGenerationAndAssembly name="435Q" language="en">
+                            <yseop-yml:chooseSeparatorOptions>
+                                <yseop-yml:beforeEachItemCommaSelected>true</yseop-yml:beforeEachItemCommaSelected>
+                                <yseop-yml:beforeEachItemOtherText/>
+                                <yseop-yml:beforeLastItemAndSelected>true</yseop-yml:beforeLastItemAndSelected>
+                                <yseop-yml:beforeLastItemOtherText/>
+                                <yseop-yml:hasSentenceParametersSection>true</yseop-yml:hasSentenceParametersSection>
+                                <yseop-yml:maxCountOfItemsForEachSentenceValue>3</yseop-yml:maxCountOfItemsForEachSentenceValue>
+                                <yseop-yml:endOfSentenceDotSelected>true</yseop-yml:endOfSentenceDotSelected>
+                                <yseop-yml:endOfSentenceQuestionMarkSelected>false</yseop-yml:endOfSentenceQuestionMarkSelected>
+                                <yseop-yml:endOfSentenceOtherSelected>false</yseop-yml:endOfSentenceOtherSelected>
+                                <yseop-yml:endOfSentenceOtherText/>
+                                <yseop-yml:switchThresholdValue>4</yseop-yml:switchThresholdValue>
+                            </yseop-yml:chooseSeparatorOptions>
+                            <yseop-yml:sentenceOrParagraphGeneralOptions>
+                                <yseop-yml:eachItemIsAParagraph>false</yseop-yml:eachItemIsAParagraph>
+                            </yseop-yml:sentenceOrParagraphGeneralOptions>
+                            <yseop-yml:linkWordsBetweenItemsOptions>
+                                <yseop-yml:generalLinkWords xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" yseop-yml:size="6">
+                                    <yseop-yml:entry yseop-yml:key="LANG_DE" xsi:type="xsd:string">Zusätzlich,
+Außerdem,
+Andererseits,
+</yseop-yml:entry>
+                                    <yseop-yml:entry yseop-yml:key="LANG_JA" xsi:type="xsd:string">それに、
+実は、
+そういえば、
+その上に、
+結局、
+一方は
+他方は
+</yseop-yml:entry>
+                                    <yseop-yml:entry yseop-yml:key="LANG_EN" xsi:type="xsd:string">
+What's more,
+Also,
+Furthermore,
+Moreover,
+Besides,
+As well,
+In addition,
+</yseop-yml:entry>
+                                    <yseop-yml:entry yseop-yml:key="LANG_FR" xsi:type="xsd:string">Par ailleurs,
+De plus,
+En outre,
+D'autre part,
+Également,
+</yseop-yml:entry>
+                                    <yseop-yml:entry yseop-yml:key="LANG_ES" xsi:type="xsd:string">Además,
+Luego,
+Después,
+Por otra parte,
+A continuación,
+</yseop-yml:entry>
+                                    <yseop-yml:entry yseop-yml:key="LANG_NL" xsi:type="xsd:string">Bovendien,
+Overigens,
+Daarnaast,
+Verder,
+Anderzijds,
+</yseop-yml:entry>
+                                </yseop-yml:generalLinkWords>
+                                <yseop-yml:generalLinkWordsLinearStrategy>true</yseop-yml:generalLinkWordsLinearStrategy>
+                                <yseop-yml:nextToLastLinkWord xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" yseop-yml:size="6">
+                                    <yseop-yml:entry yseop-yml:key="LANG_DE" xsi:type="xsd:string">Abschließend,</yseop-yml:entry>
+                                    <yseop-yml:entry yseop-yml:key="LANG_JA" xsi:type="xsd:string"></yseop-yml:entry>
+                                    <yseop-yml:entry yseop-yml:key="LANG_EN" xsi:type="xsd:string"></yseop-yml:entry>
+                                    <yseop-yml:entry yseop-yml:key="LANG_FR" xsi:type="xsd:string">Enfin,</yseop-yml:entry>
+                                    <yseop-yml:entry yseop-yml:key="LANG_ES" xsi:type="xsd:string"></yseop-yml:entry>
+                                    <yseop-yml:entry yseop-yml:key="LANG_NL" xsi:type="xsd:string">Eindelijk,</yseop-yml:entry>
+                                </yseop-yml:nextToLastLinkWord>
+                                <yseop-yml:lastLinkWord xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" yseop-yml:size="6">
+                                    <yseop-yml:entry yseop-yml:key="LANG_DE" xsi:type="xsd:string">Schließlich,</yseop-yml:entry>
+                                    <yseop-yml:entry yseop-yml:key="LANG_JA" xsi:type="xsd:string">つまり、</yseop-yml:entry>
+                                    <yseop-yml:entry yseop-yml:key="LANG_EN" xsi:type="xsd:string">Lastly, the company also ranks</yseop-yml:entry>
+                                    <yseop-yml:entry yseop-yml:key="LANG_FR" xsi:type="xsd:string">Pour finir,</yseop-yml:entry>
+                                    <yseop-yml:entry yseop-yml:key="LANG_ES" xsi:type="xsd:string">Por fin,</yseop-yml:entry>
+                                    <yseop-yml:entry yseop-yml:key="LANG_NL" xsi:type="xsd:string">Tenslotte,</yseop-yml:entry>
+                                </yseop-yml:lastLinkWord>
+                            </yseop-yml:linkWordsBetweenItemsOptions>
+                            <yseop-yml:beginEndWithOptions>
+                                <yseop-yml:generalBeginWithText>\thirdAction(theGeneralData.currentCompany, VERB_EN_RANK, PRESENT_EN)</yseop-yml:generalBeginWithText>
+                                <yseop-yml:generalEndWithText/>
+                                <yseop-yml:onlyOneItemBeginWithSameAsGeneralSelected>true</yseop-yml:onlyOneItemBeginWithSameAsGeneralSelected>
+                                <yseop-yml:onlyOneItemBeginWithSpecificText/>
+                                <yseop-yml:onlyOneItemEndWithSameAsGeneralSelected>true</yseop-yml:onlyOneItemEndWithSameAsGeneralSelected>
+                                <yseop-yml:onlyOneItemEndWithSpecificText/>
+                                <yseop-yml:allItemsIdenticalBeginWithSameAsGeneralSelected>true</yseop-yml:allItemsIdenticalBeginWithSameAsGeneralSelected>
+                                <yseop-yml:allItemsIdenticalBeginWithSpecificText/>
+                                <yseop-yml:allItemsIdenticalEndWithSameAsGeneralSelected>true</yseop-yml:allItemsIdenticalEndWithSameAsGeneralSelected>
+                                <yseop-yml:allItemsIdenticalEndWithSpecificText/>
+                                <yseop-yml:noItemGenerateNothingSelected>true</yseop-yml:noItemGenerateNothingSelected>
+                                <yseop-yml:noItemSentenceText/>
+                                <yseop-yml:inGeneralBulletBeginSameAsListSelected>true</yseop-yml:inGeneralBulletBeginSameAsListSelected>
+                                <yseop-yml:inGeneralBulletBeginSpecificSelected>false</yseop-yml:inGeneralBulletBeginSpecificSelected>
+                                <yseop-yml:inGeneralBulletBeginSpecificText/>
+                                <yseop-yml:inGeneralBulletEndSameAsListSelected>true</yseop-yml:inGeneralBulletEndSameAsListSelected>
+                                <yseop-yml:inGeneralBulletEndSpecificSelected>false</yseop-yml:inGeneralBulletEndSpecificSelected>
+                                <yseop-yml:inGeneralBulletEndSpecificText/>
+                            </yseop-yml:beginEndWithOptions>
+                            <yseop-yml:limitSizeOptions>
+                                <yseop-yml:noLimitSelected>true</yseop-yml:noLimitSelected>
+                                <yseop-yml:onlyFirstElementsSelected>true</yseop-yml:onlyFirstElementsSelected>
+                                <yseop-yml:onlyFirstElementsNumberValue>3</yseop-yml:onlyFirstElementsNumberValue>
+                                <yseop-yml:sentenceSizeTypeValue>90</yseop-yml:sentenceSizeTypeValue>
+                                <yseop-yml:limitByTypeValue>words</yseop-yml:limitByTypeValue>
+                                <yseop-yml:limitByTypeNumber>0</yseop-yml:limitByTypeNumber>
+                                <yseop-yml:sentenceEndEtcSelected>true</yseop-yml:sentenceEndEtcSelected>
+                                <yseop-yml:sentenceEndOtherText/>
+                                <yseop-yml:hasWordCharOptions>true</yseop-yml:hasWordCharOptions>
+                            </yseop-yml:limitSizeOptions>
+                        </yseop-yml:sentencesGenerationAndAssembly>
+                    </yseop-yml:inline-assemblies>
+                    <yseop-yml:inline-dslFunctionCalls/>
+                </yseop-yml:granuleContent>
+            </yseop-yml:granuleUnilingueContent>
+            <yseop-yml:granuleUnilingueContent locale="es">
+                <yseop-yml:granuleContent>
+                    <yseop-yml:text>
+\foreach(_businessSegment, theGeneralData.mentionedBusinessSegmentByRankInMarketOrderedSet)
+
+    \beginStyle(oneDigitStyle)
+        \value(_businessSegment.currentCompanyMarketShare, UNIT_PERCENT)
+        de cuota de mercado (posicionado
+
+        \beginStyle(styleOrdinal)
+            \value(_businessSegment.currentCompanyRank)
+        \endStyle
+
+        )
+    \endStyle
+
+    en
+    \nounPhrase(_businessSegment.label)
+
+\endForeach
+</yseop-yml:text>
+                    <yseop-yml:inline-assemblies/>
+                    <yseop-yml:inline-dslFunctionCalls/>
+                </yseop-yml:granuleContent>
+            </yseop-yml:granuleUnilingueContent>
+            <yseop-yml:granuleUnilingueContent locale="fr">
+                <yseop-yml:granuleContent>
+                    <yseop-yml:text/>
+                    <yseop-yml:inline-assemblies/>
+                    <yseop-yml:inline-dslFunctionCalls/>
+                </yseop-yml:granuleContent>
+            </yseop-yml:granuleUnilingueContent>
+        </yseop-yml:granuleI18nContents>
+        <yseop-yml:dslCondition/>
+        <yseop-yml:name/>
+        <yseop-yml:creationDate>2018-02-26T19:09:56.476Z</yseop-yml:creationDate>
+        <yseop-yml:properties identifier="0a436573-da23-4b10-969f-12a20c73f947">
+            <yseop-yml:property identifier="0a436573-da23-4b10-969f-12a20c73f947|condition" type="YML_PROPERTY" name="condition"></yseop-yml:property>
+        </yseop-yml:properties>
+    </yseop-yml:textGranule>
+    <yseop-yml:localVariables>Number marketShare
+    --> dsl -> Textualization
+        --> language LANG_en
+        --> root "marketShare"
+        --> number SINGULAR
+    ;
+</yseop-yml:localVariables>
+    <yseop-yml:advancedContent>--> action {
+
+    marketShare = theGeneralData.totalMentionedBusinessSegmentByRankInMarketCurrentCompanyRevenue/ CURRENT_COMPANY_ALL_SEGMENTS_FACT_SELECTION.selectedFact.getMeasure(MEASURE_NET_REVENUE).value    
+
+   this.text.write();
+           }</yseop-yml:advancedContent>
+    <yseop-yml:ymlParameters/>
+    <yseop-yml:name>mentionedSegments</yseop-yml:name>
+    <yseop-yml:properties identifier="ac124a6b-8f48-4598-9799-74d9cb29b9c1">
+        <yseop-yml:property identifier="ac124a6b-8f48-4598-9799-74d9cb29b9c1|dsl" type="YML_PROPERTY" name="dsl">"mentioned segments"</yseop-yml:property>
+    </yseop-yml:properties>
+</yseop-yml:ymlTextFunction>

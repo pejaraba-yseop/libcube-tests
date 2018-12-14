@@ -1,0 +1,80 @@
+LibGeography:Country C_DJI
+  --> iso3166_1_numeric_code  "262"
+  --> iso3166_1_alpha_2       "DJ"
+  --> iso3166_1_alpha_3       "DJI"
+  --> label
+    -> MultilingualText
+      --> i18nName_fr
+        -> NlgSubstantive
+          --> root    "Djibouti"
+          --> plural  "Djibouti"
+          --> gender  MASCULINE
+          --> number  SINGULAR
+        ;
+      --> i18nName_en
+        -> NlgSubstantive
+          --> root    "Djibouti"
+          --> plural  "Djibouti"
+          --> gender  INANIMATE
+          --> number  SINGULAR
+        ;
+      --> i18nName_es
+        -> NlgSubstantive
+          --> root    "Yibuti"
+          --> plural  "Yibuti"
+          --> gender  MASCULINE
+          --> number  SINGULAR
+        ;
+      --> i18nName_de
+        -> NlgSubstantive
+          --> root    "Dschibuti"
+          --> plural  "Dschibuti"
+          --> gender  NEUTRAL
+          --> number  SINGULAR
+        ;
+      --> i18nName_ja
+        -> NlgSubstantive
+          --> root    "ジブチ"
+          --> plural  "ジブチ"
+          --> gender  INANIMATE
+          --> number  SINGULAR
+        ;
+    ;
+  --> demonym
+    -> MultilingualText
+      --> i18nName_fr
+        -> NlgGenderAgreeableSubstantive
+          --> masculine "Djiboutien"
+          --> feminine  "Djiboutienne"
+        ;
+      --> i18nName_en  "Djiboutian"
+      --> i18nName_es  "yibutiano"
+      --> i18nName_de
+        -> NlgGenderAgreeableSubstantive
+          --> masculine "Dschibutier"
+          --> feminine  "Dschibutierin"
+        ;
+    ;
+  --> adjective
+    -> MultilingualText
+      --> i18nName_fr
+        -> NlgAdjective
+          --> root      "djiboutien"
+          --> feminine  "djiboutienne"
+        ;
+      --> i18nName_en
+        -> NlgAdjective
+          --> root      "of Djibouti"
+        ;
+      --> i18nName_es
+        -> NlgAdjective
+          --> root      "yibutiano"
+        ;
+      --> i18nName_de
+        -> NlgAdjective
+          --> root      "dschibutisch"
+        ;
+    ;
+  --> useArticle_fr  false
+  --> useArticle_en  false
+;

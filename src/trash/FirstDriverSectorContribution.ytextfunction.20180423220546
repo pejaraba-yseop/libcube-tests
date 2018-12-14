@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<yseop-yml:ymlTextFunction xmlns:yseop-yml="http://www.yseop.com/yml/storage" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" domainModelVersion="3" identifier="68ae253a-780f-45fd-8bbe-160a6ba1684f">
+    <yseop-yml:textGranule domainModelVersion="3" identifier="b2f1bb2e-7a32-44f6-9347-07832289d07c">
+        <yseop-yml:granuleI18nContents>
+            <yseop-yml:granuleUnilingueContent locale="en">
+                <yseop-yml:granuleContent>
+                    <yseop-yml:text>The fund's
+//\_texts:Options:SectorWeightStatus()
+position in
+// \value(theGeneralData.driverSectorsFact.getDimension(DIMENSION_SECTOR))
+securities was the most significant contributor to performance at the sector level. Specifically, the overweight stance in securitised bonds of Aspire Defense, Tesco and Enterprise Inns added value.</yseop-yml:text>
+                    <yseop-yml:inline-assemblies/>
+                    <yseop-yml:inline-dslFunctionCalls/>
+                </yseop-yml:granuleContent>
+            </yseop-yml:granuleUnilingueContent>
+            <yseop-yml:granuleUnilingueContent locale="es">
+                <yseop-yml:granuleContent>
+                    <yseop-yml:text/>
+                    <yseop-yml:inline-assemblies/>
+                    <yseop-yml:inline-dslFunctionCalls/>
+                </yseop-yml:granuleContent>
+            </yseop-yml:granuleUnilingueContent>
+            <yseop-yml:granuleUnilingueContent locale="fr">
+                <yseop-yml:granuleContent>
+                    <yseop-yml:text/>
+                    <yseop-yml:inline-assemblies/>
+                    <yseop-yml:inline-dslFunctionCalls/>
+                </yseop-yml:granuleContent>
+            </yseop-yml:granuleUnilingueContent>
+        </yseop-yml:granuleI18nContents>
+        <yseop-yml:dslCondition/>
+        <yseop-yml:name/>
+        <yseop-yml:creationDate>2018-04-23T18:53:43.535Z</yseop-yml:creationDate>
+        <yseop-yml:properties identifier="0047ef64-37b5-4acd-aff2-0546132f00e6">
+            <yseop-yml:property identifier="0047ef64-37b5-4acd-aff2-0546132f00e6|condition" type="YML_PROPERTY" name="condition"></yseop-yml:property>
+        </yseop-yml:properties>
+    </yseop-yml:textGranule>
+    <yseop-yml:localVariables/>
+    <yseop-yml:advancedContent/>
+    <yseop-yml:ymlParameters/>
+    <yseop-yml:name>FirstDriverSectorContribution</yseop-yml:name>
+    <yseop-yml:properties identifier="8eb2e8bf-baa9-4d44-82ac-097fdd0660a9">
+        <yseop-yml:property identifier="8eb2e8bf-baa9-4d44-82ac-097fdd0660a9|dsl" type="YML_PROPERTY" name="dsl">"First Driver Sector Contribution"</yseop-yml:property>
+    </yseop-yml:properties>
+</yseop-yml:ymlTextFunction>

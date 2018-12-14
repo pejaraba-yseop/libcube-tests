@@ -1,0 +1,47 @@
+LibGeography:Subdivision STATE_MX_TAM
+  --> iso3166_2    "MX-TAM"
+  --> postal_code  "TM"
+  --> status       STATE
+  --> label
+    -> MultilingualText
+      --> i18nName_fr
+        -> NlgSubstantive
+          --> root    "Tamaulipas"
+          --> plural  "Tamaulipas"
+          --> number  SINGULAR
+        ;
+      --> i18nName_en
+        -> NlgSubstantive
+          --> root    "Tamaulipas"
+          --> plural  "Tamaulipas"
+          --> gender  INANIMATE
+          --> number  SINGULAR
+        ;
+      --> i18nName_es
+        -> NlgSubstantive
+          --> root    "Tamaulipas"
+          --> plural  "Tamaulipas"
+          --> number  SINGULAR
+        ;
+      --> i18nName_de
+        -> NlgSubstantive
+          --> root    "Tamaulipas"
+          --> plural  "Tamaulipas"
+          --> gender  NEUTRAL
+          --> number  SINGULAR
+        ;
+      --> i18nName_ja
+        -> NlgSubstantive
+          --> root    "タマウリパス州"
+          --> plural  "タマウリパス州"
+          --> gender  INANIMATE
+          --> number  SINGULAR
+        ;
+    ;
+  --> demonym
+    -> MultilingualText
+    ;
+  --> adjective
+    -> MultilingualText
+    ;
+;

@@ -1,0 +1,80 @@
+LibGeography:Country C_SYC
+  --> iso3166_1_numeric_code  "690"
+  --> iso3166_1_alpha_2       "SC"
+  --> iso3166_1_alpha_3       "SYC"
+  --> label
+    -> MultilingualText
+      --> i18nName_fr
+        -> NlgSubstantive
+          --> root    "Seychelles"
+          --> plural  "Seychelles"
+          --> gender  FEMININE
+          --> number  PLURAL
+        ;
+      --> i18nName_en
+        -> NlgSubstantive
+          --> root    "Seychelles"
+          --> plural  "Seychelles"
+          --> gender  INANIMATE
+          --> number  PLURAL
+        ;
+      --> i18nName_es
+        -> NlgSubstantive
+          --> root    "Seychelles "
+          --> plural  "Seychelles "
+          --> gender  FEMININE
+          --> number  PLURAL
+        ;
+      --> i18nName_de
+        -> NlgSubstantive
+          --> root    "Seychellen"
+          --> plural  "Seychellen"
+          --> gender  NEUTRAL
+          --> number  PLURAL
+        ;
+      --> i18nName_ja
+        -> NlgSubstantive
+          --> root    "セイシェル"
+          --> plural  "セイシェル"
+          --> gender  INANIMATE
+          --> number  PLURAL
+        ;
+    ;
+  --> demonym
+    -> MultilingualText
+      --> i18nName_fr
+        -> NlgGenderAgreeableSubstantive
+          --> masculine "Seychellois"
+          --> feminine  "Seychelloise"
+        ;
+      --> i18nName_en  "Seychellois"
+      --> i18nName_es  "seychellense"
+      --> i18nName_de
+        -> NlgGenderAgreeableSubstantive
+          --> masculine "Seycheller"
+          --> feminine  "Seychellerin"
+        ;
+    ;
+  --> adjective
+    -> MultilingualText
+      --> i18nName_fr
+        -> NlgAdjective
+          --> root      "seychellois"
+          --> feminine  "seychelloise"
+        ;
+      --> i18nName_en
+        -> NlgAdjective
+          --> root      "of Seychelles"
+        ;
+      --> i18nName_es
+        -> NlgAdjective
+          --> root      "seychellense"
+        ;
+      --> i18nName_de
+        -> NlgAdjective
+          --> root      "seychellisch"
+        ;
+    ;
+  --> useArticle_fr  true
+  --> useArticle_en  false
+;

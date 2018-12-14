@@ -1,0 +1,80 @@
+LibGeography:Country C_BEN
+  --> iso3166_1_numeric_code  "204"
+  --> iso3166_1_alpha_2       "BJ"
+  --> iso3166_1_alpha_3       "BEN"
+  --> label
+    -> MultilingualText
+      --> i18nName_fr
+        -> NlgSubstantive
+          --> root    "Bénin"
+          --> plural  "Bénin"
+          --> gender  MASCULINE
+          --> number  SINGULAR
+        ;
+      --> i18nName_en
+        -> NlgSubstantive
+          --> root    "Benin"
+          --> plural  "Benin"
+          --> gender  INANIMATE
+          --> number  SINGULAR
+        ;
+      --> i18nName_es
+        -> NlgSubstantive
+          --> root    "Benín"
+          --> plural  "Benín"
+          --> gender  MASCULINE
+          --> number  SINGULAR
+        ;
+      --> i18nName_de
+        -> NlgSubstantive
+          --> root    "Benin"
+          --> plural  "Benin"
+          --> gender  NEUTRAL
+          --> number  SINGULAR
+        ;
+      --> i18nName_ja
+        -> NlgSubstantive
+          --> root    "ベニン"
+          --> plural  "ベニン"
+          --> gender  INANIMATE
+          --> number  SINGULAR
+        ;
+    ;
+  --> demonym
+    -> MultilingualText
+      --> i18nName_fr
+        -> NlgGenderAgreeableSubstantive
+          --> masculine "Béninois"
+          --> feminine  "Béninoise"
+        ;
+      --> i18nName_en  "Beninese"
+      --> i18nName_es  "beninés"
+      --> i18nName_de
+        -> NlgGenderAgreeableSubstantive
+          --> masculine "Beniner"
+          --> feminine  "Beninerin"
+        ;
+    ;
+  --> adjective
+    -> MultilingualText
+      --> i18nName_fr
+        -> NlgAdjective
+          --> root      "béninois"
+          --> feminine  "béninoise"
+        ;
+      --> i18nName_en
+        -> NlgAdjective
+          --> root      "Beninese"
+        ;
+      --> i18nName_es
+        -> NlgAdjective
+          --> root      "beninés"
+        ;
+      --> i18nName_de
+        -> NlgAdjective
+          --> root      "beninisch"
+        ;
+    ;
+  --> useArticle_fr  true
+  --> useArticle_en  false
+;

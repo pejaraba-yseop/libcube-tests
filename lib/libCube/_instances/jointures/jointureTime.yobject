@@ -1,0 +1,12 @@
+LibCube:Jointure JOINTURE_TIME
+  --> attribute LibCube:Fact::timeMember
+  --> dimensionConditions
+    -> List 
+    	--> values                     
+        -> LibCube:JointureDimensionCondition
+        	--> dimension DIMENSION_TIME
+        	--> membersCollection LibCube:TimeMember
+        	--> setItselfAsValue true
+      ;
+    ;
+;

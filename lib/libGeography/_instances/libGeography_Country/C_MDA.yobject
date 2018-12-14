@@ -1,0 +1,80 @@
+LibGeography:Country C_MDA
+  --> iso3166_1_numeric_code  "498"
+  --> iso3166_1_alpha_2       "MD"
+  --> iso3166_1_alpha_3       "MDA"
+  --> label
+    -> MultilingualText
+      --> i18nName_fr
+        -> NlgSubstantive
+          --> root    "Moldavie"
+          --> plural  "Moldavie"
+          --> gender  FEMININE
+          --> number  SINGULAR
+        ;
+      --> i18nName_en
+        -> NlgSubstantive
+          --> root    "Moldova"
+          --> plural  "Moldova"
+          --> gender  INANIMATE
+          --> number  SINGULAR
+        ;
+      --> i18nName_es
+        -> NlgSubstantive
+          --> root    "Moldavia"
+          --> plural  "Moldavia"
+          --> gender  FEMININE
+          --> number  SINGULAR
+        ;
+      --> i18nName_de
+        -> NlgSubstantive
+          --> root    "Moldau"
+          --> plural  "Moldau"
+          --> gender  NEUTRAL
+          --> number  SINGULAR
+        ;
+      --> i18nName_ja
+        -> NlgSubstantive
+          --> root    "モルドバ"
+          --> plural  "モルドバ"
+          --> gender  INANIMATE
+          --> number  SINGULAR
+        ;
+    ;
+  --> demonym
+    -> MultilingualText
+      --> i18nName_fr
+        -> NlgGenderAgreeableSubstantive
+          --> masculine "Moldave"
+          --> feminine  "Moldave"
+        ;
+      --> i18nName_en  "Moldovan"
+      --> i18nName_es  "moldavo"
+      --> i18nName_de
+        -> NlgGenderAgreeableSubstantive
+          --> masculine "Moldauer"
+          --> feminine  "Moldauerin"
+        ;
+    ;
+  --> adjective
+    -> MultilingualText
+      --> i18nName_fr
+        -> NlgAdjective
+          --> root      "moldave"
+          --> feminine  "moldave"
+        ;
+      --> i18nName_en
+        -> NlgAdjective
+          --> root      "Moldovan"
+        ;
+      --> i18nName_es
+        -> NlgAdjective
+          --> root      "moldavo"
+        ;
+      --> i18nName_de
+        -> NlgAdjective
+          --> root      "moldauisch"
+        ;
+    ;
+  --> useArticle_fr  true
+  --> useArticle_en  false
+;

@@ -1,0 +1,76 @@
+LibGeography:Country C_MAF
+  --> iso3166_1_numeric_code  "663"
+  --> iso3166_1_alpha_2       "MF"
+  --> iso3166_1_alpha_3       "MAF"
+  --> label
+    -> MultilingualText
+      --> i18nName_fr
+        -> NlgSubstantive
+          --> root    "Saint-Martin"
+          --> plural  "Saint-Martin"
+          --> gender  MASCULINE
+          --> number  SINGULAR
+        ;
+      --> i18nName_en
+        -> NlgSubstantive
+          --> root    "Saint Martin"
+          --> plural  "Saint Martin"
+          --> gender  INANIMATE
+          --> number  SINGULAR
+        ;
+      --> i18nName_es
+        -> NlgSubstantive
+          --> root    "San Martín"
+          --> plural  "San Martín"
+          --> gender  MASCULINE
+          --> number  SINGULAR
+        ;
+      --> i18nName_de
+        -> NlgSubstantive
+          --> root    "St. Martin"
+          --> plural  "St. Martin"
+          --> gender  NEUTRAL
+          --> number  SINGULAR
+        ;
+      --> i18nName_ja
+        -> NlgSubstantive
+          --> root    "サンマルタン"
+          --> plural  "サンマルタン"
+          --> gender  INANIMATE
+          --> number  SINGULAR
+        ;
+    ;
+  --> demonym
+    -> MultilingualText
+      --> i18nName_fr
+        -> NlgGenderAgreeableSubstantive
+          --> masculine "Saint-Martinois"
+          --> feminine  "Saint-Martinoise"
+        ;
+      --> i18nName_en  "of Saint Martin"
+      --> i18nName_es  "de San Martín"
+      --> i18nName_de  "von St. Martin"
+    ;
+  --> adjective
+    -> MultilingualText
+      --> i18nName_fr
+        -> NlgAdjective
+          --> root      "saint-martinois"
+          --> feminine  "saint-martinoise"
+        ;
+      --> i18nName_en
+        -> NlgAdjective
+          --> root      "of Saint Martin"
+        ;
+      --> i18nName_es
+        -> NlgAdjective
+          --> root      "de San Martín"
+        ;
+      --> i18nName_de
+        -> NlgAdjective
+          --> root      "von St. Martin"
+        ;
+    ;
+  --> useArticle_fr  false
+  --> useArticle_en  false
+;

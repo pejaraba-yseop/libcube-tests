@@ -1,0 +1,187 @@
+interface LibCube:JointureLevelDimensionCondition extends LibCube:JointureDimensionCondition
+
+    field level
+        --> domains Number
+        --> xmlMapping XmlMappingProperty_NO_SAVE
+        --> dsl -> Textualization
+            --> language LANG_en
+            --> root "level"
+            --> number SINGULAR
+        ;
+
+    field originMember
+        --> domains LibCube:Member
+        --> xmlMapping XmlMappingProperty_NO_SAVE
+        --> dsl -> Textualization
+            --> language LANG_en
+            --> root "origin member"
+            --> number SINGULAR
+        ;
+    
+    field includeOriginMember
+        --> domains Boolean
+        --> defaultValue false
+        --> xmlMapping XmlMappingProperty_NO_SAVE
+        --> dsl -> Textualization
+            --> language LANG_en
+            --> root "includeOriginMember"
+            --> number SINGULAR
+        ;
+    
+
+    field areLeaves
+        --> domains Boolean
+        --> defaultValue false
+        --> xmlMapping XmlMappingProperty_NO_SAVE
+        --> dsl -> Textualization
+            --> language LANG_en
+            --> root "lastLevel"
+            --> number SINGULAR
+        ;
+
+    classProperties
+    --> dsl -> Textualization
+        --> language LANG_en
+        --> root "Cube Jointure Level Dimension condition"
+        --> number SINGULAR
+    ;
+;
+
+implementation LibCube:JointureLevelDimensionCondition override {
+    init function
+    generateQueryFragment function
+}
+;
+
+function LibCube:JointureLevelDimensionCondition::init() 
+--> local LibCube:HierarchyMembersAccesor hierarchyAccesor, Integer accesorIndex, Collection levelDescendants, Integer currentLevel, Collection leaves, Collection children
+--> action{
+    if(this.membersCollection == null || this.membersCollection.isEmpty() == true){
+        if(hierarchy==null){
+            hierarchyAccesor = dimension>>hierarchyMembersAccesors.get(_FIRST);
+        }
+        else{
+            accesorIndex = dimension>>hierarchies.indexOf(hierarchy);
+            hierarchyAccesor = dimension>>hierarchyMembersAccesors.get(accesorIndex);
+        }
+        
+        if(hierarchyAccesor != null){
+            if(originMember == null){
+                if(areLeaves == true){
+                    this.membersCollection = hierarchyAccesor.leafMembers;
+                }
+                else{
+                    this.membersCollection = hierarchyAccesor.getMembersByLevel(level);
+                }
+            }else{
+                if(areLeaves == true){
+                    levelDescendants = new(OrderedSet);
+                    leaves = new(List);
+                    levelDescendants.add(originMember);
+                    while(levelDescendants.isEmpty() == false){
+                        foreach(_descendant, levelDescendants){
+                            children = hierarchyAccesor.getChildren(_descendant);
+                            if(children == null || children.isEmpty() == true){
+                                leaves.add(_descendant);
+                            }
+                            else{
+                                levelDescendants.addAll(children);
+                            }
+                            levelDescendants.remove(_descendant);
+                        }
+                    }
+                    this.membersCollection = leaves;
+                }else{
+                    /* go down in the tree x levels */
+                    currentLevel = 0;
+                    levelDescendants = new(OrderedSet);
+                    levelDescendants.add(originMember);
+                    while(currentLevel < level){
+                        foreach(_descendant, levelDescendants){
+                            children = hierarchyAccesor.getChildren(_descendant);
+                            levelDescendants.addAll(children);
+                            levelDescendants.remove(_descendant);
+                        }
+                        currentLevel = currentLevel + 1;
+                    }
+                    this.membersCollection = levelDescendants;
+                }
+                if(includeOriginMember == true){
+                    if(originMember == null){
+                        logWarning("Can't set level jointure dim condition includeOriginMember option to true with a null originMember");
+                    }
+                    else{
+                        this.membersCollection.add(originMember);
+                    }
+                }
+            }
+            
+        }
+
+    }        
+}
+;
+function LibCube:JointureLevelDimensionCondition::generateQueryFragment() 
+--> local Boolean valid, LibCube:Hierarchy theHierarchy, String originMemberMdxName
+--> action{
+    valid = true;
+    if(hierarchy == null){
+        theHierarchy = dimension>>hierarchies.get(_FIRST);
+    }
+    else{
+        theHierarchy = hierarchy;
+    }
+
+    if(theHierarchy != null && theHierarchy.mdxName == null){
+        logWarning("The mdxName of the hierarchy ", theHierarchy.identifier," must be defined for a dimension condition query fragment.");
+        valid = false;
+    }
+
+    if(originMember != null && originMember.getMdxFullName(theHierarchy) == null){
+        logWarning("Origin member of a level dimension condition must have an mdx name to generate a query");
+        valid = false;
+    }
+
+    if(originMember != null && originMember.dimension != this.dimension){
+        logWarning("The dimension of the origin Member must be the same as the of a level dimension condition one ");
+        valid = false;
+    }
+
+    if(valid == true){
+        this.queryFragment= new(LibCube:QueryFragment);
+        if(originMember != null){
+            originMemberMdxName = originMember.getMdxFullName(theHierarchy);
+        }else{
+            if(theHierarchy != null){
+                originMemberMdxName = concat("[", dimension.mdxName, ".", theHierarchy.mdxName, "].DefaultMember");
+            }
+            else{
+                originMemberMdxName = concat("[", dimension.mdxName, "].DefaultMember");
+            }
+        }
+
+        if(areLeaves == true){
+            this.queryFragment.mdxString = concat("Descendants(", originMemberMdxName,", -1, LEAVES)");
+        }
+        else{
+            if(originMember != null){
+              this.queryFragment.mdxString = concat("Descendants(", originMemberMdxName,", ", level, ")"); 
+            }else{
+              if(theHierarchy != null){
+                this.queryFragment.mdxString = concat("[", dimension.mdxName, ".", theHierarchy.mdxName, "].Levels(", level, ").Members");
+              }
+              else{
+                this.queryFragment.mdxString = concat("[", dimension.mdxName, "].Levels(", level, ").Members");  
+              }
+            }
+        }        
+
+        if(includeOriginMember == true){
+            this.queryFragment.mdxString = concat("Union(", originMemberMdxName, ",", this.queryFragment.mdxString, ")");
+        }
+        this.queryFragment.fragmentType = QUERY_FRAGMENT_TYPE_ROWS;
+    }
+   
+}
+;
+

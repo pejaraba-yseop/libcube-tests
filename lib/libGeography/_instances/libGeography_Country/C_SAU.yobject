@@ -1,0 +1,80 @@
+LibGeography:Country C_SAU
+  --> iso3166_1_numeric_code  "682"
+  --> iso3166_1_alpha_2       "SA"
+  --> iso3166_1_alpha_3       "SAU"
+  --> label
+    -> MultilingualText
+      --> i18nName_fr
+        -> NlgSubstantive
+          --> root    "Arabie saoudite"
+          --> plural  "Arabie saoudite"
+          --> gender  FEMININE
+          --> number  SINGULAR
+        ;
+      --> i18nName_en
+        -> NlgSubstantive
+          --> root    "Saudi Arabia"
+          --> plural  "Saudi Arabia"
+          --> gender  INANIMATE
+          --> number  SINGULAR
+        ;
+      --> i18nName_es
+        -> NlgSubstantive
+          --> root    "Arabia Saudí"
+          --> plural  "Arabia Saudí"
+          --> gender  MASCULINE
+          --> number  SINGULAR
+        ;
+      --> i18nName_de
+        -> NlgSubstantive
+          --> root    "Saudi-Arabien"
+          --> plural  "Saudi-Arabien"
+          --> gender  NEUTRAL
+          --> number  SINGULAR
+        ;
+      --> i18nName_ja
+        -> NlgSubstantive
+          --> root    "サウジアラビア"
+          --> plural  "サウジアラビア"
+          --> gender  INANIMATE
+          --> number  SINGULAR
+        ;
+    ;
+  --> demonym
+    -> MultilingualText
+      --> i18nName_fr
+        -> NlgGenderAgreeableSubstantive
+          --> masculine "Saoudien"
+          --> feminine  "Saoudienne"
+        ;
+      --> i18nName_en  "Saudi Arabian"
+      --> i18nName_es  "saudí"
+      --> i18nName_de
+        -> NlgGenderAgreeableSubstantive
+          --> masculine "Saudi-Araber"
+          --> feminine  "Saudi-Araberin"
+        ;
+    ;
+  --> adjective
+    -> MultilingualText
+      --> i18nName_fr
+        -> NlgAdjective
+          --> root      "saoudien"
+          --> feminine  "saoudienne"
+        ;
+      --> i18nName_en
+        -> NlgAdjective
+          --> root      "Saudi Arabian"
+        ;
+      --> i18nName_es
+        -> NlgAdjective
+          --> root      "saudí"
+        ;
+      --> i18nName_de
+        -> NlgAdjective
+          --> root      "saudi-arabisch"
+        ;
+    ;
+  --> useArticle_fr  true
+  --> useArticle_en  false
+;

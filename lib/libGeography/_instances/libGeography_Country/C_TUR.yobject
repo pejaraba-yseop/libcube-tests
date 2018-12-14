@@ -1,0 +1,80 @@
+LibGeography:Country C_TUR
+  --> iso3166_1_numeric_code  "792"
+  --> iso3166_1_alpha_2       "TR"
+  --> iso3166_1_alpha_3       "TUR"
+  --> label
+    -> MultilingualText
+      --> i18nName_fr
+        -> NlgSubstantive
+          --> root    "Turquie"
+          --> plural  "Turquie"
+          --> gender  FEMININE
+          --> number  SINGULAR
+        ;
+      --> i18nName_en
+        -> NlgSubstantive
+          --> root    "Turkey"
+          --> plural  "Turkey"
+          --> gender  INANIMATE
+          --> number  SINGULAR
+        ;
+      --> i18nName_es
+        -> NlgSubstantive
+          --> root    "Turquía"
+          --> plural  "Turquía"
+          --> gender  FEMININE
+          --> number  SINGULAR
+        ;
+      --> i18nName_de
+        -> NlgSubstantive
+          --> root    "Türkei"
+          --> plural  "Türkei"
+          --> gender  NEUTRAL
+          --> number  SINGULAR
+        ;
+      --> i18nName_ja
+        -> NlgSubstantive
+          --> root    "トルコ"
+          --> plural  "トルコ"
+          --> gender  INANIMATE
+          --> number  SINGULAR
+        ;
+    ;
+  --> demonym
+    -> MultilingualText
+      --> i18nName_fr
+        -> NlgGenderAgreeableSubstantive
+          --> masculine "Turc"
+          --> feminine  "Turque"
+        ;
+      --> i18nName_en  "Turk"
+      --> i18nName_es  "turco"
+      --> i18nName_de
+        -> NlgGenderAgreeableSubstantive
+          --> masculine "Türke"
+          --> feminine  "Türkin"
+        ;
+    ;
+  --> adjective
+    -> MultilingualText
+      --> i18nName_fr
+        -> NlgAdjective
+          --> root      "turc"
+          --> feminine  "turque"
+        ;
+      --> i18nName_en
+        -> NlgAdjective
+          --> root      "Turkish"
+        ;
+      --> i18nName_es
+        -> NlgAdjective
+          --> root      "turco"
+        ;
+      --> i18nName_de
+        -> NlgAdjective
+          --> root      "türkisch"
+        ;
+    ;
+  --> useArticle_fr  true
+  --> useArticle_en  false
+;

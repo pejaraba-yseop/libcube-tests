@@ -1,0 +1,175 @@
+interface LibCube:JointureChildParentDimensionCondition extends LibCube:JointureDimensionCondition
+
+    field parentElem
+        --> domains LibCube:HierarchyElement
+        --> xmlMapping XmlMappingProperty_NO_SAVE
+        --> dsl -> Textualization
+            --> language LANG_en
+            --> root "parent Elem"
+            --> number SINGULAR
+        ;
+
+    field includeParent
+        --> domains Boolean
+        --> defaultValue false
+        --> xmlMapping XmlMappingProperty_NO_SAVE
+        --> dsl -> Textualization
+            --> language LANG_en
+            --> root "include Parent"
+            --> number SINGULAR
+        ;
+
+    field relationship
+        --> domains Symbol
+        --> xmlMapping XmlMappingProperty_NO_SAVE
+        --> dsl -> Textualization
+            --> language LANG_en
+            --> root "relationship"
+            --> number SINGULAR
+        ;
+
+    classProperties
+    --> dsl -> Textualization
+        --> language LANG_en
+        --> root "Cube Jointure Child Parent Dimension condition"
+        --> number SINGULAR
+    ;
+;
+
+implementation LibCube:JointureChildParentDimensionCondition override {
+    init function
+    generateQueryFragment function
+}
+;
+
+function LibCube:JointureChildParentDimensionCondition::init()
+--> local Boolean valid, LibCube:Hierarchy theHierarchy, LibCube:HierarchyMembersAccesor hierarchyAccesor, Collection descendants, Collection pendingDescendants, LibCube:HierarchyElement currentDesc, Collection children
+--> action{
+    valid = true;
+    if(this.members != null || (this.membersCollection.isEmpty() == false)){
+        valid = false;
+    }
+    
+    if(parentElem == null){
+        logWarning("Can't make a child parent jointure dimension condition with a null parentElem");
+        valid = false;
+    }
+    if(hierarchy == null){
+        theHierarchy = dimension>>hierarchies.get(_FIRST);
+    }
+    else{
+        theHierarchy = hierarchy;
+    }
+    if(relationship == null){
+        logWarning("The relationship of a child parent dimension condition can't be null");
+        valid = false;
+    }
+    if(theHierarchy != null){
+        hierarchyAccesor = dimension.getHierarchyAccessor(theHierarchy);
+    }
+
+    if(hierarchyAccesor == null){
+        valid = false;
+    }
+    if(valid == true){
+        switch(relationship){
+            case(CHILDREN_RELATIONSHIP):
+                this.membersCollection = hierarchyAccesor.getChildren(parentElem);
+                
+            case(DESCENDANTS_RELATIONSHIP):{
+                descendants = new(List);
+                pendingDescendants = new(List);
+                pendingDescendants.add(parentElem);
+                while(pendingDescendants.isEmpty() == false){
+                    currentDesc = pendingDescendants.get(_FIRST);
+                    children = hierarchyAccesor.getChildren(currentDesc);
+                    pendingDescendants.addAll(children);
+                    descendants.addAll(children);
+                    pendingDescendants.remove(currentDesc);
+                }
+                this.membersCollection = descendants;
+                
+            }
+            case(LEAF_RELATIONSHIP):{
+                descendants = new(List);
+                pendingDescendants = new(List);
+                pendingDescendants.add(parentElem);
+                while(pendingDescendants.isEmpty() == false){
+                    currentDesc = pendingDescendants.get(_FIRST);
+                    children = hierarchyAccesor.getChildren(currentDesc);
+                    pendingDescendants.addAll(children);
+                    if(children.isEmpty() == true) {
+                        descendants.add(currentDesc);
+                    }
+                    pendingDescendants.remove(currentDesc);
+                }
+                this.membersCollection = descendants;
+            }
+
+        }
+        if(includeParent == true){
+            this.membersCollection.add(parentElem);
+        }
+    }
+    
+        
+}
+;
+function LibCube:JointureChildParentDimensionCondition::generateQueryFragment() 
+--> local Boolean valid, LibCube:Hierarchy theHierarchy
+--> action{
+    valid = true;
+    if(hierarchy == null){
+        theHierarchy = dimension>>hierarchies.get(_FIRST);
+    }
+    else{
+        theHierarchy = hierarchy;
+    }
+
+    if(theHierarchy == null){
+        logWarning("Can't have a null hierarchy in a child parent dimension doncition query");
+        valid = false;
+    }
+
+    if(theHierarchy != null && theHierarchy.mdxName == null){
+        logWarning("The mdxName of the hierarchy ", theHierarchy.identifier," must be defined for a dimension condition query fragment.");
+        valid = false;
+    }
+
+    if(parentElem != null && parentElem.mdxName == null){
+        logWarning("The mdxName of the parent element of a child parent dimension condition can't be null");
+        valid = false;
+    }
+
+    if(valid == true){
+        this.queryFragment= new(LibCube:QueryFragment);
+        switch(relationship){
+            case(CHILDREN_RELATIONSHIP):{
+                if(includeParent == true){
+                    this.queryFragment.mdxString = concat("Union(", parentElem.getMdxFullName(theHierarchy), "," , parentElem.getMdxFullName(theHierarchy), ".Children)");
+                }
+                else{
+                    this.queryFragment.mdxString = concat(parentElem.getMdxFullName(theHierarchy), ".Children");
+                }
+                
+            }
+            
+            case(DESCENDANTS_RELATIONSHIP):{
+                if(includeParent == true){
+                   //this.queryFragment.mdxString = concat("Union(", parentElem.getMdxFullName(theHierarchy), "," , "Descendants(", parentElem.getMdxFullName(theHierarchy), "))");   
+                   this.queryFragment.mdxString = concat("Descendants(", parentElem.getMdxFullName(theHierarchy), ")");
+
+                }
+                else{
+                    this.queryFragment.mdxString = concat("Descendants(", parentElem.getMdxFullName(theHierarchy), ", 0.0, AFTER)");
+                }
+            }
+
+            // TODO: case LEAF_RELATIONSHIP
+            
+        }
+        this.queryFragment.fragmentType = QUERY_FRAGMENT_TYPE_ROWS;
+    }
+   
+}
+;

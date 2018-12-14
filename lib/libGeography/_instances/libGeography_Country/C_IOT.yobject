@@ -1,0 +1,67 @@
+LibGeography:Country C_IOT
+  --> iso3166_1_numeric_code  "086"
+  --> iso3166_1_alpha_2       "IO"
+  --> iso3166_1_alpha_3       "IOT"
+  --> label
+    -> MultilingualText
+      --> i18nName_fr
+        -> NlgSubstantive
+          --> root    "Territoire britannique de l'océan Indien"
+          --> plural  "Territoire britannique de l'océan Indien"
+          --> gender  MASCULINE
+          --> number  SINGULAR
+        ;
+      --> i18nName_en
+        -> NlgSubstantive
+          --> root    "British Indian Ocean Territory"
+          --> plural  "British Indian Ocean Territory"
+          --> gender  INANIMATE
+          --> number  SINGULAR
+        ;
+      --> i18nName_es
+        -> NlgSubstantive
+          --> root    "Territorio Británico del Océano Índico"
+          --> plural  "Territorio Británico del Océano Índico"
+          --> gender  MASCULINE
+          --> number  SINGULAR
+        ;
+      --> i18nName_de
+        -> NlgSubstantive
+          --> root    "Britisch Territorium im Indischen Ozean"
+          --> plural  "Britisch Territorium im Indischen Ozean"
+          --> gender  NEUTRAL
+          --> number  SINGULAR
+        ;
+      --> i18nName_ja
+        -> NlgSubstantive
+          --> root    "イギリス領インド洋地域"
+          --> plural  "イギリス領インド洋地域"
+          --> gender  INANIMATE
+          --> number  SINGULAR
+        ;
+    ;
+  --> demonym
+    -> MultilingualText
+    ;
+  --> adjective
+    -> MultilingualText
+      --> i18nName_fr
+        -> NlgAdjective
+          --> root      "du Territoire britannique de l’océan Indien"
+        ;
+      --> i18nName_en
+        -> NlgAdjective
+          --> root      "of the British Indian Ocean Territory"
+        ;
+      --> i18nName_es
+        -> NlgAdjective
+          --> root      "del Territorio Británico del Océano Índico"
+        ;
+      --> i18nName_de
+        -> NlgAdjective
+          --> root      "des Britischen Territoriums im Indischen Ozean"
+        ;
+    ;
+  --> useArticle_fr  true
+  --> useArticle_en  false
+;

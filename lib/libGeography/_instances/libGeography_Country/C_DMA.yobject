@@ -1,0 +1,80 @@
+LibGeography:Country C_DMA
+  --> iso3166_1_numeric_code  "212"
+  --> iso3166_1_alpha_2       "DM"
+  --> iso3166_1_alpha_3       "DMA"
+  --> label
+    -> MultilingualText
+      --> i18nName_fr
+        -> NlgSubstantive
+          --> root    "Dominique"
+          --> plural  "Dominique"
+          --> gender  FEMININE
+          --> number  SINGULAR
+        ;
+      --> i18nName_en
+        -> NlgSubstantive
+          --> root    "Dominica"
+          --> plural  "Dominica"
+          --> gender  INANIMATE
+          --> number  SINGULAR
+        ;
+      --> i18nName_es
+        -> NlgSubstantive
+          --> root    "Dominica"
+          --> plural  "Dominica"
+          --> gender  FEMININE
+          --> number  SINGULAR
+        ;
+      --> i18nName_de
+        -> NlgSubstantive
+          --> root    "Dominica"
+          --> plural  "Dominica"
+          --> gender  NEUTRAL
+          --> number  SINGULAR
+        ;
+      --> i18nName_ja
+        -> NlgSubstantive
+          --> root    "ドミニカ"
+          --> plural  "ドミニカ"
+          --> gender  INANIMATE
+          --> number  SINGULAR
+        ;
+    ;
+  --> demonym
+    -> MultilingualText
+      --> i18nName_fr
+        -> NlgGenderAgreeableSubstantive
+          --> masculine "Dominiquais"
+          --> feminine  "Dominiquaise"
+        ;
+      --> i18nName_en  "Dominican"
+      --> i18nName_es  "dominiqués"
+      --> i18nName_de
+        -> NlgGenderAgreeableSubstantive
+          --> masculine "Dominicaner"
+          --> feminine  "Dominicanerin"
+        ;
+    ;
+  --> adjective
+    -> MultilingualText
+      --> i18nName_fr
+        -> NlgAdjective
+          --> root      "dominiquais"
+          --> feminine  "dominiquaise"
+        ;
+      --> i18nName_en
+        -> NlgAdjective
+          --> root      "of Dominica"
+        ;
+      --> i18nName_es
+        -> NlgAdjective
+          --> root      "dominiqués"
+        ;
+      --> i18nName_de
+        -> NlgAdjective
+          --> root      "dominicanisch"
+        ;
+    ;
+  --> useArticle_fr  true
+  --> useArticle_en  false
+;

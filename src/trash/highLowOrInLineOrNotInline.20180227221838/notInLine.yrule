@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<yseop-yml:ymlRule xmlns:yseop-yml="http://www.yseop.com/yml/storage" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" domainModelVersion="3" identifier="014b231a-37d4-4622-8566-2e053cbaaec3">
+    <yseop-yml:content>?expenseRatioPeerItem.inLineOrNot = NOT_IN_LINE;</yseop-yml:content>
+    <yseop-yml:content>?expenseRatioPeerItem in getGeneralData().expenseRatioPeerList
+?expenseRatioPeerItem.expenseRatioPeerPercent > getGeneralData().twoStandardDeviatonOfAverageHigh || ?expenseRatioPeerItem.expenseRatioPeerPercent &lt; getGeneralData().twoStandardDeviationOfAverageLow</yseop-yml:content>
+    <yseop-yml:name>notInLine</yseop-yml:name>
+    <yseop-yml:properties identifier="2c5d9797-9f62-4304-9303-3dafdfde0d17">
+        <yseop-yml:property identifier="2c5d9797-9f62-4304-9303-3dafdfde0d17|dsl" type="YML_PROPERTY" name="dsl">"not in line"</yseop-yml:property>
+        <yseop-yml:property identifier="2c5d9797-9f62-4304-9303-3dafdfde0d17|disabled" type="GENERATION_PROPERTY" name="disabled">true</yseop-yml:property>
+    </yseop-yml:properties>
+</yseop-yml:ymlRule>

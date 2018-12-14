@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<yseop-yml:ymlRule xmlns:yseop-yml="http://www.yseop.com/yml/storage" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" domainModelVersion="3" identifier="befb1ba7-aa21-400a-8d2d-d88d6c500f78">
+    <yseop-yml:content>?netPremiumSegments.netPremiumSegmentEnglishName = "Group Life";</yseop-yml:content>
+    <yseop-yml:content>?netPremiumSegments in NetPremiumSegments
+?netPremiumSegments.netPremiumSegmentName == "Vida Colectivo"</yseop-yml:content>
+    <yseop-yml:name>VidaColectivo</yseop-yml:name>
+    <yseop-yml:properties identifier="528af4ae-096c-4bd9-9052-43fc7f007024">
+        <yseop-yml:property identifier="528af4ae-096c-4bd9-9052-43fc7f007024|dsl" type="YML_PROPERTY" name="dsl">"Vida Colectivo"</yseop-yml:property>
+        <yseop-yml:property identifier="528af4ae-096c-4bd9-9052-43fc7f007024|disabled" type="GENERATION_PROPERTY" name="disabled">true</yseop-yml:property>
+    </yseop-yml:properties>
+</yseop-yml:ymlRule>

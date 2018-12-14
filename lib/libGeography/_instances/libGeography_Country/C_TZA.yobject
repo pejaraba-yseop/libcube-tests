@@ -1,0 +1,80 @@
+LibGeography:Country C_TZA
+  --> iso3166_1_numeric_code  "834"
+  --> iso3166_1_alpha_2       "TZ"
+  --> iso3166_1_alpha_3       "TZA"
+  --> label
+    -> MultilingualText
+      --> i18nName_fr
+        -> NlgSubstantive
+          --> root    "Tanzanie"
+          --> plural  "Tanzanie"
+          --> gender  FEMININE
+          --> number  SINGULAR
+        ;
+      --> i18nName_en
+        -> NlgSubstantive
+          --> root    "Tanzania"
+          --> plural  "Tanzania"
+          --> gender  INANIMATE
+          --> number  SINGULAR
+        ;
+      --> i18nName_es
+        -> NlgSubstantive
+          --> root    "Tanzania"
+          --> plural  "Tanzania"
+          --> gender  MASCULINE
+          --> number  SINGULAR
+        ;
+      --> i18nName_de
+        -> NlgSubstantive
+          --> root    "Tansania"
+          --> plural  "Tansania"
+          --> gender  NEUTRAL
+          --> number  SINGULAR
+        ;
+      --> i18nName_ja
+        -> NlgSubstantive
+          --> root    "タンザニア"
+          --> plural  "タンザニア"
+          --> gender  INANIMATE
+          --> number  SINGULAR
+        ;
+    ;
+  --> demonym
+    -> MultilingualText
+      --> i18nName_fr
+        -> NlgGenderAgreeableSubstantive
+          --> masculine "Tanzanien"
+          --> feminine  "Tanzanienne"
+        ;
+      --> i18nName_en  "Tanzanian"
+      --> i18nName_es  "tanzano"
+      --> i18nName_de
+        -> NlgGenderAgreeableSubstantive
+          --> masculine "Tansanier"
+          --> feminine  "Tansanierin"
+        ;
+    ;
+  --> adjective
+    -> MultilingualText
+      --> i18nName_fr
+        -> NlgAdjective
+          --> root      "tanzanien"
+          --> feminine  "tanzanienne"
+        ;
+      --> i18nName_en
+        -> NlgAdjective
+          --> root      "Tanzanian"
+        ;
+      --> i18nName_es
+        -> NlgAdjective
+          --> root      "tanzano"
+        ;
+      --> i18nName_de
+        -> NlgAdjective
+          --> root      "tansanisch"
+        ;
+    ;
+  --> useArticle_fr  true
+  --> useArticle_en  false
+;

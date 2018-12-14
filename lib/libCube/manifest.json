@@ -1,0 +1,49 @@
+{
+  "displayName_en": "Cube Library",
+  "displayName_fr": "librairie Cube",
+  "version": "1.0.0.BETA13",
+  "name": "libCube",
+  "creator": "Yseop",
+  "date": "2018-05-16",
+  "engineVersionCompatible": "7.1.0.RC01",
+  "instanceEditorClasses": [
+    "LibCube:TimePeriod",
+    "LibCube:Dimension",
+    "LibCube:Measure",
+    "LibCube:JointureFactsSelection",
+    "LibCube:JointureOneFactSelection",
+    "LibCube:IndicatorMember"
+  ],
+  "simpleCustomSections": [
+    {
+      "location": "REFERENTIAL",
+      "class": "LibCube:TimePeriod",
+      "type": "INSTANCE"
+    },
+    {
+      "location": "REFERENTIAL",
+      "class": "LibCube:Dimension",
+      "type": "INSTANCE"
+    },
+    {
+      "location": "REFERENTIAL",
+      "class": "LibCube:Measure",
+      "type": "INSTANCE"
+    },
+    {
+      "location": "REFERENTIAL",
+      "class": "LibCube:JointureFactsSelection",
+      "type": "INSTANCE"
+    },
+    {
+      "location": "REFERENTIAL",
+      "class": "LibCube:JointureOneFactSelection",
+      "type": "INSTANCE"
+    },
+    {
+      "location": "REFERENTIAL",
+      "class": "LibCube:IndicatorMember",
+      "type": "INSTANCE"
+    }
+  ]
+}

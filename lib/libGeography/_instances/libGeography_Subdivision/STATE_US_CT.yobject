@@ -1,0 +1,55 @@
+LibGeography:Subdivision STATE_US_CT
+  --> iso3166_2    "US-CT"
+  --> postal_code  "CT"
+  --> status       STATE
+  --> label
+    -> MultilingualText
+      --> i18nName_fr
+        -> NlgSubstantive
+          --> root    "Connecticut"
+          --> plural  "Connecticut"
+          --> gender  MASCULINE
+          --> number  SINGULAR
+        ;
+      --> i18nName_en
+        -> NlgSubstantive
+          --> root    "Connecticut"
+          --> plural  "Connecticut"
+          --> gender  INANIMATE
+          --> number  SINGULAR
+        ;
+      --> i18nName_es
+        -> NlgSubstantive
+          --> root    "Connecticut"
+          --> plural  "Connecticut"
+          --> gender  MASCULINE
+          --> number  SINGULAR
+        ;
+      --> i18nName_de
+        -> NlgSubstantive
+          --> root    "Connecticut"
+          --> plural  "Connecticut"
+          --> gender  NEUTRAL
+          --> number  SINGULAR
+        ;
+      --> i18nName_ja
+        -> NlgSubstantive
+          --> root    " コネチカット州"
+          --> plural  " コネチカット州"
+          --> gender  INANIMATE
+          --> number  SINGULAR
+        ;
+    ;
+  --> demonym
+    -> MultilingualText
+      --> i18nName_en  "Connecticuter"
+    ;
+  --> adjective
+    -> MultilingualText
+      --> i18nName_en
+        -> NlgAdjective
+          --> root      "Connecticuter"
+        ;
+    ;
+  --> useArticle_en  false
+;

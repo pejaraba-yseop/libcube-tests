@@ -1,0 +1,76 @@
+LibGeography:Country C_MTQ
+  --> iso3166_1_numeric_code  "474"
+  --> iso3166_1_alpha_2       "MQ"
+  --> iso3166_1_alpha_3       "MTQ"
+  --> label
+    -> MultilingualText
+      --> i18nName_fr
+        -> NlgSubstantive
+          --> root    "Martinique"
+          --> plural  "Martinique"
+          --> gender  FEMININE
+          --> number  SINGULAR
+        ;
+      --> i18nName_en
+        -> NlgSubstantive
+          --> root    "Martinique"
+          --> plural  "Martinique"
+          --> gender  INANIMATE
+          --> number  SINGULAR
+        ;
+      --> i18nName_es
+        -> NlgSubstantive
+          --> root    "Martinica"
+          --> plural  "Martinica"
+          --> gender  FEMININE
+          --> number  SINGULAR
+        ;
+      --> i18nName_de
+        -> NlgSubstantive
+          --> root    "Martinique"
+          --> plural  "Martinique"
+          --> gender  NEUTRAL
+          --> number  SINGULAR
+        ;
+      --> i18nName_ja
+        -> NlgSubstantive
+          --> root    "マルティニーク島"
+          --> plural  "マルティニーク島"
+          --> gender  INANIMATE
+          --> number  SINGULAR
+        ;
+    ;
+  --> demonym
+    -> MultilingualText
+      --> i18nName_fr
+        -> NlgGenderAgreeableSubstantive
+          --> masculine "Martiniquais"
+          --> feminine  "Martiniquaise"
+        ;
+      --> i18nName_en  "Martinican"
+      --> i18nName_es  "martiniqués"
+      --> i18nName_de  "von Martinique"
+    ;
+  --> adjective
+    -> MultilingualText
+      --> i18nName_fr
+        -> NlgAdjective
+          --> root      "martiniquais"
+          --> feminine  "martiniquaise"
+        ;
+      --> i18nName_en
+        -> NlgAdjective
+          --> root      "Martinican"
+        ;
+      --> i18nName_es
+        -> NlgAdjective
+          --> root      "martiniqués"
+        ;
+      --> i18nName_de
+        -> NlgAdjective
+          --> root      "von Martinique"
+        ;
+    ;
+  --> useArticle_fr  true
+  --> useArticle_en  false
+;

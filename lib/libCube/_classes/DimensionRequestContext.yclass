@@ -1,0 +1,43 @@
+interface LibCube:DimensionRequestContext
+    field mdxName
+        --> domains Text
+        --> documentation "The MDX name of a dimension in an OLAP cube, ex: DIM_ENTITY"
+        --> xmlMapping XmlMappingProperty_SAVE
+        --> dsl -> Textualization
+            --> language LANG_en
+            --> root "MDX name"
+            --> number SINGULAR
+        ;
+
+    field yseopId
+        --> domains Text
+        --> documentation "Yid of the dimension, ex: DIMENSION_ENTITY"
+        --> xmlMapping XmlMappingProperty_SAVE
+        --> dsl -> Textualization
+            --> language LANG_en
+            --> root "YseopId"
+            --> number SINGULAR
+        ;
+
+    field yseopMembersClass
+        --> domains Text
+        --> defaultValue "LibCube:Member"
+        --> documentation "yClass of the members of the dimension"
+        --> xmlMapping XmlMappingProperty_SAVE
+        --> dsl -> Textualization
+            --> language LANG_en
+            --> root "yseop Members Class"
+            --> number SINGULAR
+        ;
+    
+
+    classProperties
+    --> dsl -> Textualization
+        --> language LANG_en
+        --> root "Dimension Request Context"
+        --> number SINGULAR
+    ;
+;
+
+implementation LibCube:DimensionRequestContext
+;

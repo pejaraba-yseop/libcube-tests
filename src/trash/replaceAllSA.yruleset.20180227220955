@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<yseop-yml:ymlRuleset xmlns:yseop-yml="http://www.yseop.com/yml/storage" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" domainModelVersion="3" identifier="f6902513-1582-4259-ab03-074f163b51ca">
+    <yseop-yml:rules/>
+    <yseop-yml:name>replaceAllSA</yseop-yml:name>
+    <yseop-yml:properties identifier="a62ee2c4-1e40-4ed4-bd73-d4e0ec93c8c7">
+        <yseop-yml:property identifier="a62ee2c4-1e40-4ed4-bd73-d4e0ec93c8c7|dsl" type="YML_PROPERTY" name="dsl">"replace all S.A"</yseop-yml:property>
+    </yseop-yml:properties>
+</yseop-yml:ymlRuleset>

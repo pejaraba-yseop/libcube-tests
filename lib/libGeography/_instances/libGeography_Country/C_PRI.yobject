@@ -1,0 +1,80 @@
+LibGeography:Country C_PRI
+  --> iso3166_1_numeric_code  "630"
+  --> iso3166_1_alpha_2       "PR"
+  --> iso3166_1_alpha_3       "PRI"
+  --> label
+    -> MultilingualText
+      --> i18nName_fr
+        -> NlgSubstantive
+          --> root    "Porto Rico"
+          --> plural  "Porto Rico"
+          --> gender  MASCULINE
+          --> number  SINGULAR
+        ;
+      --> i18nName_en
+        -> NlgSubstantive
+          --> root    "Puerto Rico"
+          --> plural  "Puerto Rico"
+          --> gender  INANIMATE
+          --> number  SINGULAR
+        ;
+      --> i18nName_es
+        -> NlgSubstantive
+          --> root    "Puerto Rico"
+          --> plural  "Puerto Rico"
+          --> gender  MASCULINE
+          --> number  SINGULAR
+        ;
+      --> i18nName_de
+        -> NlgSubstantive
+          --> root    "Puerto Rico"
+          --> plural  "Puerto Rico"
+          --> gender  NEUTRAL
+          --> number  SINGULAR
+        ;
+      --> i18nName_ja
+        -> NlgSubstantive
+          --> root    "プエルトリコ"
+          --> plural  "プエルトリコ"
+          --> gender  INANIMATE
+          --> number  SINGULAR
+        ;
+    ;
+  --> demonym
+    -> MultilingualText
+      --> i18nName_fr
+        -> NlgGenderAgreeableSubstantive
+          --> masculine "Portoricain"
+          --> feminine  "Portoricaine"
+        ;
+      --> i18nName_en  "Puerto Rican"
+      --> i18nName_es  "puertorriqueño"
+      --> i18nName_de
+        -> NlgGenderAgreeableSubstantive
+          --> masculine "Puerto-Ricaner"
+          --> feminine  "Puerto-Ricanerin"
+        ;
+    ;
+  --> adjective
+    -> MultilingualText
+      --> i18nName_fr
+        -> NlgAdjective
+          --> root      "portoricain"
+          --> feminine  "portoricaine"
+        ;
+      --> i18nName_en
+        -> NlgAdjective
+          --> root      "Puerto Rican"
+        ;
+      --> i18nName_es
+        -> NlgAdjective
+          --> root      "puertorriqueño"
+        ;
+      --> i18nName_de
+        -> NlgAdjective
+          --> root      "puerto-ricanisch"
+        ;
+    ;
+  --> useArticle_fr  false
+  --> useArticle_en  false
+;

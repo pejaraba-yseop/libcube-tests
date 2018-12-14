@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<yseop-yml:constList xmlns:yseop-yml="http://www.yseop.com/yml/storage" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" domainModelVersion="3" identifier="6d29ea73-b24c-4996-b8ec-cd983cf137a8">
+    <yseop-yml:constListElements>
+        <yseop-yml:constListElement>
+            <yseop-yml:name>WEIGHT_STATUS_OVERWEIGHT</yseop-yml:name>
+            <yseop-yml:localeValues>
+                <yseop-yml:localeValue locale="en">
+                    <yseop-yml:value>Overweight</yseop-yml:value>
+                </yseop-yml:localeValue>
+                <yseop-yml:localeValue locale="es">
+                    <yseop-yml:value/>
+                </yseop-yml:localeValue>
+                <yseop-yml:localeValue locale="fr">
+                    <yseop-yml:value/>
+                </yseop-yml:localeValue>
+            </yseop-yml:localeValues>
+        </yseop-yml:constListElement>
+        <yseop-yml:constListElement>
+            <yseop-yml:name>WEIGHT_STATUS_UNDERWEIGHT</yseop-yml:name>
+            <yseop-yml:localeValues>
+                <yseop-yml:localeValue locale="en">
+                    <yseop-yml:value>Underweight</yseop-yml:value>
+                </yseop-yml:localeValue>
+                <yseop-yml:localeValue locale="es">
+                    <yseop-yml:value/>
+                </yseop-yml:localeValue>
+                <yseop-yml:localeValue locale="fr">
+                    <yseop-yml:value/>
+                </yseop-yml:localeValue>
+            </yseop-yml:localeValues>
+        </yseop-yml:constListElement>
+        <yseop-yml:constListElement>
+            <yseop-yml:name>WEIGHT_STATUS_UNWEIGHTED</yseop-yml:name>
+            <yseop-yml:localeValues>
+                <yseop-yml:localeValue locale="en">
+                    <yseop-yml:value>Unweighted</yseop-yml:value>
+                </yseop-yml:localeValue>
+                <yseop-yml:localeValue locale="es">
+                    <yseop-yml:value/>
+                </yseop-yml:localeValue>
+                <yseop-yml:localeValue locale="fr">
+                    <yseop-yml:value/>
+                </yseop-yml:localeValue>
+            </yseop-yml:localeValues>
+        </yseop-yml:constListElement>
+    </yseop-yml:constListElements>
+    <yseop-yml:name>WEIGHT_STATUS</yseop-yml:name>
+    <yseop-yml:properties identifier="42858a10-6a8d-4d61-b77d-d6b9540e14da">
+        <yseop-yml:property identifier="42858a10-6a8d-4d61-b77d-d6b9540e14da|dsl" type="YML_PROPERTY" name="dsl">"Weight Status"</yseop-yml:property>
+    </yseop-yml:properties>
+</yseop-yml:constList>

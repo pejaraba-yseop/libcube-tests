@@ -1,0 +1,76 @@
+LibGeography:Country C_ESH
+  --> iso3166_1_numeric_code  "732"
+  --> iso3166_1_alpha_2       "EH"
+  --> iso3166_1_alpha_3       "ESH"
+  --> label
+    -> MultilingualText
+      --> i18nName_fr
+        -> NlgSubstantive
+          --> root    "Sahara occidental"
+          --> plural  "Sahara occidental"
+          --> gender  MASCULINE
+          --> number  SINGULAR
+        ;
+      --> i18nName_en
+        -> NlgSubstantive
+          --> root    "Western Sahara"
+          --> plural  "Western Sahara"
+          --> gender  INANIMATE
+          --> number  SINGULAR
+        ;
+      --> i18nName_es
+        -> NlgSubstantive
+          --> root    "Sáhara Occidental"
+          --> plural  "Sáhara Occidental"
+          --> gender  MASCULINE
+          --> number  SINGULAR
+        ;
+      --> i18nName_de
+        -> NlgSubstantive
+          --> root    "Westsahara"
+          --> plural  "Westsahara"
+          --> gender  NEUTRAL
+          --> number  SINGULAR
+        ;
+      --> i18nName_ja
+        -> NlgSubstantive
+          --> root    "西サハラ"
+          --> plural  "西サハラ"
+          --> gender  INANIMATE
+          --> number  SINGULAR
+        ;
+    ;
+  --> demonym
+    -> MultilingualText
+      --> i18nName_fr
+        -> NlgGenderAgreeableSubstantive
+          --> masculine "Sahraoui"
+          --> feminine  "Sahraouie"
+        ;
+      --> i18nName_en  "Sahrawi"
+      --> i18nName_es  "saharaui"
+      --> i18nName_de  "Saharaui"
+    ;
+  --> adjective
+    -> MultilingualText
+      --> i18nName_fr
+        -> NlgAdjective
+          --> root      "sahraoui"
+          --> feminine  "sahraouie"
+        ;
+      --> i18nName_en
+        -> NlgAdjective
+          --> root      "Sahrawi"
+        ;
+      --> i18nName_es
+        -> NlgAdjective
+          --> root      "saharaui"
+        ;
+      --> i18nName_de
+        -> NlgAdjective
+          --> root      "saharauisch"
+        ;
+    ;
+  --> useArticle_fr  true
+  --> useArticle_en  false
+;

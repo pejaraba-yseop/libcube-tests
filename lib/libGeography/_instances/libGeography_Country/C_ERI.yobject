@@ -1,0 +1,80 @@
+LibGeography:Country C_ERI
+  --> iso3166_1_numeric_code  "232"
+  --> iso3166_1_alpha_2       "ER"
+  --> iso3166_1_alpha_3       "ERI"
+  --> label
+    -> MultilingualText
+      --> i18nName_fr
+        -> NlgSubstantive
+          --> root    "Érythrée"
+          --> plural  "Érythrée"
+          --> gender  MASCULINE
+          --> number  SINGULAR
+        ;
+      --> i18nName_en
+        -> NlgSubstantive
+          --> root    "Eritrea"
+          --> plural  "Eritrea"
+          --> gender  INANIMATE
+          --> number  SINGULAR
+        ;
+      --> i18nName_es
+        -> NlgSubstantive
+          --> root    "Eritrea"
+          --> plural  "Eritrea"
+          --> gender  MASCULINE
+          --> number  SINGULAR
+        ;
+      --> i18nName_de
+        -> NlgSubstantive
+          --> root    "Eritrea"
+          --> plural  "Eritrea"
+          --> gender  NEUTRAL
+          --> number  SINGULAR
+        ;
+      --> i18nName_ja
+        -> NlgSubstantive
+          --> root    "エリトリア"
+          --> plural  "エリトリア"
+          --> gender  INANIMATE
+          --> number  SINGULAR
+        ;
+    ;
+  --> demonym
+    -> MultilingualText
+      --> i18nName_fr
+        -> NlgGenderAgreeableSubstantive
+          --> masculine "Érythréen"
+          --> feminine  "Érythréenne"
+        ;
+      --> i18nName_en  "Eritrean"
+      --> i18nName_es  "eritreo"
+      --> i18nName_de
+        -> NlgGenderAgreeableSubstantive
+          --> masculine "Eritreer"
+          --> feminine  "Eritreerin"
+        ;
+    ;
+  --> adjective
+    -> MultilingualText
+      --> i18nName_fr
+        -> NlgAdjective
+          --> root      "érythréen"
+          --> feminine  "érythréenne"
+        ;
+      --> i18nName_en
+        -> NlgAdjective
+          --> root      "Eritrean"
+        ;
+      --> i18nName_es
+        -> NlgAdjective
+          --> root      "eritreo"
+        ;
+      --> i18nName_de
+        -> NlgAdjective
+          --> root      "eritreisch"
+        ;
+    ;
+  --> useArticle_fr  true
+  --> useArticle_en  false
+;

@@ -1,0 +1,93 @@
+interface LibCube:SortingOptions
+    field measure
+        --> domains LibCube:Measure
+        --> documentation "The measure used as comparation criteria"
+        --> xmlMapping XmlMappingProperty_NO_SAVE
+        --> dsl -> Textualization
+            --> language LANG_en
+            --> root "measure"
+            --> number SINGULAR
+    ;
+
+    field measures
+        --> domains OrderedSet
+        --> xmlMapping XmlMappingProperty_NO_SAVE
+        --> documentation "The measure used as comparation criteria"
+        --> dsl -> Textualization
+            --> language LANG_en
+            --> root "measures"
+            --> number PLURAL
+    ;
+    
+    field comparisonAttribute
+        --> domains Attribute
+        --> xmlMapping XmlMappingProperty_NO_SAVE
+        --> documentation "The TwoFactsOneMeasureComparison object used as comparison criteria"
+        --> dsl -> Textualization
+            --> language LANG_en
+            --> root "comparison attribute"
+            --> number SINGULAR
+    ;
+
+    field differenceAttribute
+        --> domains Attribute
+        --> xmlMapping XmlMappingProperty_NO_SAVE
+        --> documentation "The TwoFactsOneMeasureComparison object diff attribute used as comparison criteria"
+        --> dsl -> Textualization
+            --> language LANG_en
+            --> root "comparison attribute"
+            --> number SINGULAR
+    ;
+
+    field useAbsoluteValue
+        --> domains Boolean
+        --> defaultValue false
+        --> documentation "Use Absolute for comparison?"
+        --> dsl -> Textualization
+            --> language LANG_en
+            --> root "use absolute value?"
+            --> number SINGULAR
+    ;
+
+    field sortType
+        --> domains Symbol
+        --> documentation "Mode of sorting"
+        --> xmlMapping XmlMappingProperty_NO_SAVE
+        --> dsl -> Textualization
+            --> language LANG_en
+            --> root "sort type"
+            --> number PLURAL
+    ;
+
+    method validateOptions()
+    --> domains Void 
+
+    classProperties
+    --> dsl -> Textualization
+        --> language LANG_en
+        --> root "Sorting Options"
+        --> number SINGULAR
+    ;
+;
+implementation LibCube:SortingOptions
+;
+
+Function LibCube:SortingOptions::validateOptions()
+--> action {
+    if(sortType == null){
+        assert(sortType != null, "the sort Type attribute must be set");
+    }
+    switch(sortType){
+        case(SORT_TYPE_ONE_MEASURE):{
+            assert(measure != null, "The measure must be set in a One Measure Sorter");
+        }
+        case(SORT_TYPE_MULTIPLE_MEASURES):{
+            assert(measures != null && measures.isEmpty() == false, "The measures must be set in a Multiple Measures Sorter");
+        }
+        case(SORT_TYPE_COMPARISON_ATTRIBUTE):{
+            assert(comparisonAttribute != null, "The TwoFactsOneMeasureComparison attribute must be set in a Comparison Attribute Sorter");
+            assert(differenceAttribute != null, "The TwoFactsOneMeasureComparison difference field attribute must be set in a Comparison Attribute Sorter");
+        }
+    }
+}
+;

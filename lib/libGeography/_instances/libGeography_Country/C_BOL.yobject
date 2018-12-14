@@ -1,0 +1,80 @@
+LibGeography:Country C_BOL
+  --> iso3166_1_numeric_code  "068"
+  --> iso3166_1_alpha_2       "BO"
+  --> iso3166_1_alpha_3       "BOL"
+  --> label
+    -> MultilingualText
+      --> i18nName_fr
+        -> NlgSubstantive
+          --> root    "Bolivie"
+          --> plural  "Bolivie"
+          --> gender  FEMININE
+          --> number  SINGULAR
+        ;
+      --> i18nName_en
+        -> NlgSubstantive
+          --> root    "Bolivia"
+          --> plural  "Bolivia"
+          --> gender  INANIMATE
+          --> number  SINGULAR
+        ;
+      --> i18nName_es
+        -> NlgSubstantive
+          --> root    "Bolivia"
+          --> plural  "Bolivia"
+          --> gender  FEMININE
+          --> number  SINGULAR
+        ;
+      --> i18nName_de
+        -> NlgSubstantive
+          --> root    "Bolivien"
+          --> plural  "Bolivien"
+          --> gender  NEUTRAL
+          --> number  SINGULAR
+        ;
+      --> i18nName_ja
+        -> NlgSubstantive
+          --> root    "ボリビア"
+          --> plural  "ボリビア"
+          --> gender  INANIMATE
+          --> number  SINGULAR
+        ;
+    ;
+  --> demonym
+    -> MultilingualText
+      --> i18nName_fr
+        -> NlgGenderAgreeableSubstantive
+          --> masculine "Bolivien"
+          --> feminine  "Bolivienne"
+        ;
+      --> i18nName_en  "Bolivian"
+      --> i18nName_es  "boliviano"
+      --> i18nName_de
+        -> NlgGenderAgreeableSubstantive
+          --> masculine "Bolivianer"
+          --> feminine  "Bolivianerin"
+        ;
+    ;
+  --> adjective
+    -> MultilingualText
+      --> i18nName_fr
+        -> NlgAdjective
+          --> root      "bolivien"
+          --> feminine  "bolivienne"
+        ;
+      --> i18nName_en
+        -> NlgAdjective
+          --> root      "Bolivian"
+        ;
+      --> i18nName_es
+        -> NlgAdjective
+          --> root      "boliviano"
+        ;
+      --> i18nName_de
+        -> NlgAdjective
+          --> root      "bolivianisch"
+        ;
+    ;
+  --> useArticle_fr  true
+  --> useArticle_en  false
+;

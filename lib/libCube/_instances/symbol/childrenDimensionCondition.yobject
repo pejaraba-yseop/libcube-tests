@@ -1,0 +1,7 @@
+Symbol CHILDREN_RELATIONSHIP
+    --> dsl -> Textualization
+        --> language LANG_en
+        --> root "Children Jointure Dimension Condition Relationship"
+        --> number SINGULAR
+    ;
+;

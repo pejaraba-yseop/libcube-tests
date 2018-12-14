@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<yseop-yml:ymlRule xmlns:yseop-yml="http://www.yseop.com/yml/storage" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" domainModelVersion="3" identifier="a4ad0724-63e2-4fd2-8d84-60adde1a6621">
+    <yseop-yml:content>?netPremiumSegments.netPremiumSegmentEnglishName = ?translation.englishWord;</yseop-yml:content>
+    <yseop-yml:content>?translation in Translation
+
+?netPremiumSegments in NetPremiumSegments
+?netPremiumSegments.netPremiumSegmentName.stringCompare(?translation.foreignWord, _CASE_INSENSITIVE) == true</yseop-yml:content>
+    <yseop-yml:name>EnglishNetPremiumSegmentNew</yseop-yml:name>
+    <yseop-yml:properties identifier="b045461c-9065-4026-9432-26b3f29732e1">
+        <yseop-yml:property identifier="b045461c-9065-4026-9432-26b3f29732e1|dsl" type="YML_PROPERTY" name="dsl">"English net Premium segment new"</yseop-yml:property>
+        <yseop-yml:property identifier="b045461c-9065-4026-9432-26b3f29732e1|disabled" type="GENERATION_PROPERTY" name="disabled">true</yseop-yml:property>
+    </yseop-yml:properties>
+</yseop-yml:ymlRule>

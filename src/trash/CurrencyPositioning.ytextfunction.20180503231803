@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<yseop-yml:ymlTextFunction xmlns:yseop-yml="http://www.yseop.com/yml/storage" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" domainModelVersion="3" identifier="2748d6a0-ab5c-419b-b5d5-68d927958b08">
+    <yseop-yml:textGranule domainModelVersion="3" identifier="6fb7f9bb-01f3-475c-8143-c909227419d0">
+        <yseop-yml:granuleI18nContents>
+            <yseop-yml:granuleUnilingueContent locale="en">
+                <yseop-yml:granuleContent>
+                    <yseop-yml:text>
+\beginStyle(BOLD_STYLE)
+    Interest rate risk positioning
+    \_texts:Options:ReturnsStatus(theGeneralData.allCurrenciesDurationFact.returnStatus)
+\endStyle
+
+\endOfLine
+The fund's interest rate strategy, specifically the
+\_texts:Options:WeightStatus(theGeneralData.currencyDriverFact.weightStatus)
+\value(theGeneralData.currencyDriverFact.getDimension(DIMENSION_CURRENCY_ATTRIBUTION).label)
+duration position
+\_texts:Options:ReturnsStatus(theGeneralData.allCurrenciesDurationFact.returnStatus)
+.
+
+\if(theGeneralData.currencyDriverFact.getMeasure(MEASURE_PERFORMANCE).value > 0)
+    Profits
+\else
+    Losses
+\endIf
+
+ were partially offset by the cross-market exposure to
+\value(theGeneralData.currencyDriverOffsetFact.getDimension(DIMENSION_CURRENCY_ATTRIBUTION).label)
+duration .</yseop-yml:text>
+                    <yseop-yml:inline-assemblies/>
+                    <yseop-yml:inline-dslFunctionCalls/>
+                </yseop-yml:granuleContent>
+            </yseop-yml:granuleUnilingueContent>
+            <yseop-yml:granuleUnilingueContent locale="es">
+                <yseop-yml:granuleContent>
+                    <yseop-yml:text/>
+                    <yseop-yml:inline-assemblies/>
+                    <yseop-yml:inline-dslFunctionCalls/>
+                </yseop-yml:granuleContent>
+            </yseop-yml:granuleUnilingueContent>
+            <yseop-yml:granuleUnilingueContent locale="fr">
+                <yseop-yml:granuleContent>
+                    <yseop-yml:text/>
+                    <yseop-yml:inline-assemblies/>
+                    <yseop-yml:inline-dslFunctionCalls/>
+                </yseop-yml:granuleContent>
+            </yseop-yml:granuleUnilingueContent>
+        </yseop-yml:granuleI18nContents>
+        <yseop-yml:dslCondition/>
+        <yseop-yml:name/>
+        <yseop-yml:creationDate>2018-04-24T15:50:46.46Z</yseop-yml:creationDate>
+        <yseop-yml:properties identifier="ac1780c7-94b8-4c33-bd96-f5c9e236c12c">
+            <yseop-yml:property identifier="ac1780c7-94b8-4c33-bd96-f5c9e236c12c|condition" type="YML_PROPERTY" name="condition"></yseop-yml:property>
+        </yseop-yml:properties>
+    </yseop-yml:textGranule>
+    <yseop-yml:localVariables/>
+    <yseop-yml:advancedContent/>
+    <yseop-yml:ymlParameters/>
+    <yseop-yml:name>CurrencyPositioning</yseop-yml:name>
+    <yseop-yml:properties identifier="013030bb-25d1-47bd-99a8-e1aae30a748c">
+        <yseop-yml:property identifier="013030bb-25d1-47bd-99a8-e1aae30a748c|dsl" type="YML_PROPERTY" name="dsl">"Currency positioning"</yseop-yml:property>
+    </yseop-yml:properties>
+</yseop-yml:ymlTextFunction>

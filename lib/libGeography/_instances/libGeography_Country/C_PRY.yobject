@@ -1,0 +1,80 @@
+LibGeography:Country C_PRY
+  --> iso3166_1_numeric_code  "600"
+  --> iso3166_1_alpha_2       "PY"
+  --> iso3166_1_alpha_3       "PRY"
+  --> label
+    -> MultilingualText
+      --> i18nName_fr
+        -> NlgSubstantive
+          --> root    "Paraguay"
+          --> plural  "Paraguay"
+          --> gender  MASCULINE
+          --> number  SINGULAR
+        ;
+      --> i18nName_en
+        -> NlgSubstantive
+          --> root    "Paraguay"
+          --> plural  "Paraguay"
+          --> gender  INANIMATE
+          --> number  SINGULAR
+        ;
+      --> i18nName_es
+        -> NlgSubstantive
+          --> root    "Paraguay"
+          --> plural  "Paraguay"
+          --> gender  FEMININE
+          --> number  SINGULAR
+        ;
+      --> i18nName_de
+        -> NlgSubstantive
+          --> root    "Paraguay"
+          --> plural  "Paraguay"
+          --> gender  NEUTRAL
+          --> number  SINGULAR
+        ;
+      --> i18nName_ja
+        -> NlgSubstantive
+          --> root    "パラグアイ"
+          --> plural  "パラグアイ"
+          --> gender  INANIMATE
+          --> number  SINGULAR
+        ;
+    ;
+  --> demonym
+    -> MultilingualText
+      --> i18nName_fr
+        -> NlgGenderAgreeableSubstantive
+          --> masculine "Paraguayen"
+          --> feminine  "Paraguayenne"
+        ;
+      --> i18nName_en  "Paraguayan"
+      --> i18nName_es  "paraguayo"
+      --> i18nName_de
+        -> NlgGenderAgreeableSubstantive
+          --> masculine "Paraguayer"
+          --> feminine  "Paraguayerin"
+        ;
+    ;
+  --> adjective
+    -> MultilingualText
+      --> i18nName_fr
+        -> NlgAdjective
+          --> root      "paraguayen"
+          --> feminine  "paraguayenne"
+        ;
+      --> i18nName_en
+        -> NlgAdjective
+          --> root      "Paraguayan"
+        ;
+      --> i18nName_es
+        -> NlgAdjective
+          --> root      "paraguayo"
+        ;
+      --> i18nName_de
+        -> NlgAdjective
+          --> root      "paraguayisch"
+        ;
+    ;
+  --> useArticle_fr  true
+  --> useArticle_en  false
+;

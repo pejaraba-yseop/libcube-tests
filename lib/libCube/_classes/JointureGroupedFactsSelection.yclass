@@ -1,0 +1,68 @@
+interface LibCube:JointureGroupedFactsSelection extends LibCube:JointureFactsSelection
+
+    field _groupedSelectedFacts
+        --> domains HashMap
+        --> documentation "grouped Selected Facts"
+        --> xmlMapping XmlMappingProperty_SAVE
+        --> multivalued false
+        --> dsl -> Textualization
+            --> language LANG_en
+            --> root "grouped Selected Facts"
+            --> number SINGULAR
+        ;
+    
+    field groupingDimension
+        --> domains LibCube:Dimension
+        --> documentation "grouping Dimension"
+        --> xmlMapping XmlMappingProperty_SAVE
+        --> multivalued false
+        --> dsl -> Textualization
+            --> language LANG_en
+            --> root "grouping dimension"
+            --> number SINGULAR
+        ;
+
+     method getFactsOfMember(LibCube:Member member)
+        --> domains Collection 
+
+     method getGroupedFacts()
+        --> domains HashMap
+    
+    classProperties
+    --> dsl -> Textualization
+        --> language LANG_en
+        --> root "Jointure Facts Selection"
+        --> number SINGULAR
+    ;
+;
+
+implementation LibCube:JointureGroupedFactsSelection
+;
+
+function LibCube:JointureGroupedFactsSelection::getFactsOfMember(LibCube:Member member)
+--> local Collection factsOfMember, LibCube:Member currentMember
+--> action {  
+   return this.getGroupedFacts()[member];
+}
+;
+
+function LibCube:JointureGroupedFactsSelection::getGroupedFacts()
+--> local Collection factsOfMember, LibCube:Member currentMember
+--> action {  
+    if(this.selectedFacts == null){
+        logInfo("no selected facts");
+    }
+   if(this._groupedSelectedFacts == null){
+       this._groupedSelectedFacts = new(HashMap);
+       foreach(_fact, this>>selectedFacts){
+           currentMember = _fact.getDimension(this.groupingDimension);
+           if(this._groupedSelectedFacts.containsKey(currentMember) == false){
+             this._groupedSelectedFacts[currentMember] = new(List);
+           }
+           this._groupedSelectedFacts[currentMember].add(_fact);
+       }
+   }
+
+   return _groupedSelectedFacts;
+}
+;

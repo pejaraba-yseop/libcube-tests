@@ -1,0 +1,80 @@
+LibGeography:Country C_TGO
+  --> iso3166_1_numeric_code  "768"
+  --> iso3166_1_alpha_2       "TG"
+  --> iso3166_1_alpha_3       "TGO"
+  --> label
+    -> MultilingualText
+      --> i18nName_fr
+        -> NlgSubstantive
+          --> root    "Togo"
+          --> plural  "Togo"
+          --> gender  MASCULINE
+          --> number  SINGULAR
+        ;
+      --> i18nName_en
+        -> NlgSubstantive
+          --> root    "Togo"
+          --> plural  "Togo"
+          --> gender  INANIMATE
+          --> number  SINGULAR
+        ;
+      --> i18nName_es
+        -> NlgSubstantive
+          --> root    "Togo"
+          --> plural  "Togo"
+          --> gender  FEMININE
+          --> number  SINGULAR
+        ;
+      --> i18nName_de
+        -> NlgSubstantive
+          --> root    "Togo"
+          --> plural  "Togo"
+          --> gender  NEUTRAL
+          --> number  SINGULAR
+        ;
+      --> i18nName_ja
+        -> NlgSubstantive
+          --> root    "トーゴ"
+          --> plural  "トーゴ"
+          --> gender  INANIMATE
+          --> number  SINGULAR
+        ;
+    ;
+  --> demonym
+    -> MultilingualText
+      --> i18nName_fr
+        -> NlgGenderAgreeableSubstantive
+          --> masculine "Togolais"
+          --> feminine  "Togolaise"
+        ;
+      --> i18nName_en  "Togolese"
+      --> i18nName_es  "togolés"
+      --> i18nName_de
+        -> NlgGenderAgreeableSubstantive
+          --> masculine "Togoer"
+          --> feminine  "Togoerin"
+        ;
+    ;
+  --> adjective
+    -> MultilingualText
+      --> i18nName_fr
+        -> NlgAdjective
+          --> root      "togolais"
+          --> feminine  "togolaise"
+        ;
+      --> i18nName_en
+        -> NlgAdjective
+          --> root      "Togolese"
+        ;
+      --> i18nName_es
+        -> NlgAdjective
+          --> root      "togolés"
+        ;
+      --> i18nName_de
+        -> NlgAdjective
+          --> root      "togoisch"
+        ;
+    ;
+  --> useArticle_fr  true
+  --> useArticle_en  false
+;

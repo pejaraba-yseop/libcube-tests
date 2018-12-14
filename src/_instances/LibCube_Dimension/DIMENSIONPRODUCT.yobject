@@ -1,0 +1,8 @@
+
+LibCube:Dimension DIMENSION_PRODUCT
+    --> dsl -> Textualization
+        --> language LANG_en
+        --> root "Product Dimension"
+        --> number SINGULAR
+    ;
+;

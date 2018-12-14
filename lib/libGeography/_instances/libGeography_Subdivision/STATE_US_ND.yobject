@@ -1,0 +1,55 @@
+LibGeography:Subdivision STATE_US_ND
+  --> iso3166_2    "US-ND"
+  --> postal_code  "ND"
+  --> status       STATE
+  --> label
+    -> MultilingualText
+      --> i18nName_fr
+        -> NlgSubstantive
+          --> root    "Dakota du Nord"
+          --> plural  "Dakota du Nord"
+          --> gender  MASCULINE
+          --> number  SINGULAR
+        ;
+      --> i18nName_en
+        -> NlgSubstantive
+          --> root    "North Dakota"
+          --> plural  "North Dakota"
+          --> gender  INANIMATE
+          --> number  SINGULAR
+        ;
+      --> i18nName_es
+        -> NlgSubstantive
+          --> root    "Dakota del Norte"
+          --> plural  "Dakota del Norte"
+          --> gender  MASCULINE
+          --> number  SINGULAR
+        ;
+      --> i18nName_de
+        -> NlgSubstantive
+          --> root    "North Dakota"
+          --> plural  "North Dakota"
+          --> gender  NEUTRAL
+          --> number  SINGULAR
+        ;
+      --> i18nName_ja
+        -> NlgSubstantive
+          --> root    " ノースダコタ州"
+          --> plural  " ノースダコタ州"
+          --> gender  INANIMATE
+          --> number  SINGULAR
+        ;
+    ;
+  --> demonym
+    -> MultilingualText
+      --> i18nName_en  "North Dakotan"
+    ;
+  --> adjective
+    -> MultilingualText
+      --> i18nName_en
+        -> NlgAdjective
+          --> root      "North Dakotan"
+        ;
+    ;
+  --> useArticle_en  false
+;

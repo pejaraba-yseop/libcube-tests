@@ -1,0 +1,47 @@
+LibGeography:Subdivision STATE_MX_SIN
+  --> iso3166_2    "MX-SIN"
+  --> postal_code  "SI"
+  --> status       STATE
+  --> label
+    -> MultilingualText
+      --> i18nName_fr
+        -> NlgSubstantive
+          --> root    "Sinaloa"
+          --> plural  "Sinaloa"
+          --> number  SINGULAR
+        ;
+      --> i18nName_en
+        -> NlgSubstantive
+          --> root    "Sinaloa"
+          --> plural  "Sinaloa"
+          --> gender  INANIMATE
+          --> number  SINGULAR
+        ;
+      --> i18nName_es
+        -> NlgSubstantive
+          --> root    "Sinaloa"
+          --> plural  "Sinaloa"
+          --> number  SINGULAR
+        ;
+      --> i18nName_de
+        -> NlgSubstantive
+          --> root    "Sinaloa"
+          --> plural  "Sinaloa"
+          --> gender  NEUTRAL
+          --> number  SINGULAR
+        ;
+      --> i18nName_ja
+        -> NlgSubstantive
+          --> root    "シナロア州"
+          --> plural  "シナロア州"
+          --> gender  INANIMATE
+          --> number  SINGULAR
+        ;
+    ;
+  --> demonym
+    -> MultilingualText
+    ;
+  --> adjective
+    -> MultilingualText
+    ;
+;

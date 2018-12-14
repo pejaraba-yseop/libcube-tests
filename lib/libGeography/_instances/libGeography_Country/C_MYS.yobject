@@ -1,0 +1,80 @@
+LibGeography:Country C_MYS
+  --> iso3166_1_numeric_code  "458"
+  --> iso3166_1_alpha_2       "MY"
+  --> iso3166_1_alpha_3       "MYS"
+  --> label
+    -> MultilingualText
+      --> i18nName_fr
+        -> NlgSubstantive
+          --> root    "Malaisie"
+          --> plural  "Malaisie"
+          --> gender  FEMININE
+          --> number  SINGULAR
+        ;
+      --> i18nName_en
+        -> NlgSubstantive
+          --> root    "Malaysia"
+          --> plural  "Malaysia"
+          --> gender  INANIMATE
+          --> number  SINGULAR
+        ;
+      --> i18nName_es
+        -> NlgSubstantive
+          --> root    "Malasia"
+          --> plural  "Malasia"
+          --> gender  FEMININE
+          --> number  SINGULAR
+        ;
+      --> i18nName_de
+        -> NlgSubstantive
+          --> root    "Malaysia"
+          --> plural  "Malaysia"
+          --> gender  NEUTRAL
+          --> number  SINGULAR
+        ;
+      --> i18nName_ja
+        -> NlgSubstantive
+          --> root    "マレーシア"
+          --> plural  "マレーシア"
+          --> gender  INANIMATE
+          --> number  SINGULAR
+        ;
+    ;
+  --> demonym
+    -> MultilingualText
+      --> i18nName_fr
+        -> NlgGenderAgreeableSubstantive
+          --> masculine "Malaisien"
+          --> feminine  "Malaisienne"
+        ;
+      --> i18nName_en  "Malaysian"
+      --> i18nName_es  "malasio"
+      --> i18nName_de
+        -> NlgGenderAgreeableSubstantive
+          --> masculine "Malaysier"
+          --> feminine  "Malaysierin"
+        ;
+    ;
+  --> adjective
+    -> MultilingualText
+      --> i18nName_fr
+        -> NlgAdjective
+          --> root      "malaisien"
+          --> feminine  "malaisienne"
+        ;
+      --> i18nName_en
+        -> NlgAdjective
+          --> root      "Malaysian"
+        ;
+      --> i18nName_es
+        -> NlgAdjective
+          --> root      "malasio"
+        ;
+      --> i18nName_de
+        -> NlgAdjective
+          --> root      "malaysisch"
+        ;
+    ;
+  --> useArticle_fr  true
+  --> useArticle_en  false
+;

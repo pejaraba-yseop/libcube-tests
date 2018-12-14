@@ -1,0 +1,10 @@
+
+LibCube:Measure MEASURE_SALE_VALUE
+    --> mdxName "SALE_VALUE"
+
+    --> dsl -> Textualization
+        --> language LANG_en
+        --> root "Sale Value Measure"
+        --> number SINGULAR
+    ;
+;

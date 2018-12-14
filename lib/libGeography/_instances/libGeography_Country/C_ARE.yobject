@@ -1,0 +1,71 @@
+LibGeography:Country C_ARE
+  --> iso3166_1_numeric_code  "784"
+  --> iso3166_1_alpha_2       "AE"
+  --> iso3166_1_alpha_3       "ARE"
+  --> label
+    -> MultilingualText
+      --> i18nName_fr
+        -> NlgSubstantive
+          --> root    "Émirats arabes unis"
+          --> plural  "Émirats arabes unis"
+          --> gender  MASCULINE
+          --> number  PLURAL
+        ;
+      --> i18nName_en
+        -> NlgSubstantive
+          --> root    "United Arab Emirates"
+          --> plural  "United Arab Emirates"
+          --> gender  INANIMATE
+          --> number  PLURAL
+        ;
+      --> i18nName_es
+        -> NlgSubstantive
+          --> root    "Emiratos Árabes Unidos"
+          --> plural  "Emiratos Árabes Unidos"
+          --> gender  MASCULINE
+          --> number  PLURAL
+        ;
+      --> i18nName_de
+        -> NlgSubstantive
+          --> root    "Vereinigte Arabische Emirate"
+          --> plural  "Vereinigte Arabische Emirate"
+          --> gender  NEUTRAL
+          --> number  PLURAL
+        ;
+      --> i18nName_ja
+        -> NlgSubstantive
+          --> root    "アラブ首長国連邦"
+          --> plural  "アラブ首長国連邦"
+          --> gender  INANIMATE
+          --> number  PLURAL
+        ;
+    ;
+  --> demonym
+    -> MultilingualText
+      --> i18nName_fr  "des Émirats arabes unis"
+      --> i18nName_en  "Emirian"
+      --> i18nName_es  "de los Emiratos Árabes Unidos"
+      --> i18nName_de  "der Vereinigten Arabischen Emirate"
+    ;
+  --> adjective
+    -> MultilingualText
+      --> i18nName_fr
+        -> NlgAdjective
+          --> root      "des Émirats arabes unis"
+        ;
+      --> i18nName_en
+        -> NlgAdjective
+          --> root      "Emirian"
+        ;
+      --> i18nName_es
+        -> NlgAdjective
+          --> root      "de los Emiratos Árabes Unidos"
+        ;
+      --> i18nName_de
+        -> NlgAdjective
+          --> root      "der Vereinigten Arabischen Emirate"
+        ;
+    ;
+  --> useArticle_fr  true
+  --> useArticle_en  true
+;

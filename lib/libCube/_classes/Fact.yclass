@@ -1,0 +1,279 @@
+interface LibCube:Fact extends LibCube:PrintableValuesObject
+    field members
+        --> domains LibCube:Member
+        --> documentation "The dimensions to which the fact belongs"
+        --> xmlMapping XmlMappingProperty_SAVE
+        --> multivalued true
+        --> dsl -> Textualization
+            --> language LANG_en
+            --> root "member"
+            --> number PLURAL
+            --> hasDeterminer true				
+        ;
+    field factMeasures
+        --> domains LibCube:FactMeasure
+        --> documentation "The measures of the fact (i.e. the value, rate of return, etc).  Measures should not include any differences as they can be easily calculated with LibCube:TwoFactsOneMeasureComparison."
+        --> xmlMapping XmlMappingProperty_SAVE
+        --> multivalued true
+        --> dsl -> Textualization
+            --> language LANG_en
+            --> root "fact measure"
+            --> number PLURAL
+            --> hasDeterminer true				
+        ;
+    field timeMember
+        --> domains LibCube:TimeMember
+        --> documentation "The time member to which the fact belongs.  Will be calculated  using included Jointure"
+        --> xmlMapping XmlMappingProperty_SAVE
+        --> dsl -> Textualization
+            --> language LANG_en
+            --> root "time member"
+            --> number SINGULAR
+            --> hasDeterminer true			
+        ;
+    field isCurrentTime
+        --> domains Boolean
+        --> documentation "true or null.  Will be calculated  using included Jointure"
+        --> xmlMapping XmlMappingProperty_SAVE
+        --> dsl -> Textualization
+            --> language LANG_en
+            --> root "is current time"
+            --> number SINGULAR
+            --> hasDeterminer false			
+        ;		
+    field generatesDrillDown
+        --> domains Boolean
+        --> defaultValue false
+        --> documentation "true or null.  Flag to classify if a fact on a selection will generate drill down selection"
+        --> xmlMapping XmlMappingProperty_SAVE
+        --> dsl -> Textualization
+            --> language LANG_en
+            --> root "generates drill down"
+            --> number SINGULAR
+            --> hasDeterminer false			
+        ;		
+  field twoFactsComparisonResult
+        --> domains Number
+        --> documentation "Gets the value of the result of twoFactsOneMeasureComparison"
+        --> xmlMapping XmlMappingProperty_SAVE
+        --> dsl -> Textualization
+            --> language LANG_en
+            --> root "two facts Comparison Result"
+            --> number SINGULAR
+            --> hasDeterminer false			
+        ;
+     field factSelectionIdentifier
+        --> domains Text
+        --> documentation "Gets the name of the selection to related to the identifier"
+        --> xmlMapping XmlMappingProperty_SAVE
+        --> dsl -> Textualization
+            --> language LANG_en
+            --> root "fact Selection identifier"
+            --> number SINGULAR
+            --> hasDeterminer false			
+        ;
+		
+    field sortField
+        --> domains Object        
+        --> xmlMapping XmlMappingProperty_SAVE
+        --> dsl -> Textualization
+            --> language LANG_en
+            --> root "sort field"
+            --> number SINGULAR
+        ;
+
+    field relatedFactsByIndicator
+        --> domains HashMap
+        --> xmlMapping XmlMappingProperty_SAVE
+        --> dsl -> Textualization
+            --> language LANG_en
+            --> root "related Facts By Indicator"
+            --> number SINGULAR
+        ;
+
+    field nonIndicatorMembersId
+        --> domains LibCube:NonIndicatorMembersId
+        --> documentation "key representing all the members of the fact, except the indicator member(s)"
+        --> xmlMapping XmlMappingProperty_NO_SAVE
+        --> dsl -> Textualization
+            --> language LANG_en
+            --> root "non Kpi Members Key"
+            --> number SINGULAR
+        ;                              	                              
+
+	method getDimension(LibCube:Dimension theDimension)
+		--> domains LibCube:Member
+        --> documentation "A method to get the member of a Dimension of the Fact by ID"
+        --> dsl -> Textualization
+            --> language LANG_en
+            --> root "{1} of {0}"
+            --> number PLURAL
+            --> hasDeterminer false
+        ;
+    method getDimensionNameFromMdxName(String mdxName)
+		--> domains Text
+        --> documentation "A method to get the name of the dimension from the mdxName"
+        --> dsl -> Textualization
+            --> language LANG_en
+            --> root "{1} of {0}"
+            --> number PLURAL
+            --> hasDeterminer false
+        ;
+
+    method getRelatedIndicatorFact(LibCube:IndicatorMember indicatorMember)
+        --> domains LibCube:Fact
+        --> documentation "Returns a related fact with the same members except the Indicator member passed by parameter"
+        --> dsl -> Textualization
+            --> language LANG_en
+            --> root "related indicator fact of {0}"
+            --> number PLURAL
+            --> hasDeterminer false
+        ;
+
+	method getMeasure(LibCube:Measure theMeasure)
+    --> documentation "A method to get the Measure of the Fact by ID"
+		--> domains LibCube:FactMeasure
+        --> dsl -> Textualization
+            --> language LANG_en
+            --> root "{1} of {0}"
+            --> number PLURAL
+            --> hasDeterminer false
+        ;
+	method getDate()
+    --> documentation "A method used to get the Date of the Fact"
+		--> domains Date
+        --> dsl -> Textualization
+            --> language LANG_en
+            --> root "date of {0}"
+            --> number SINGULAR
+            --> hasDeterminer false
+        ;    
+        
+    method checkDimensions()
+    --> domains Void
+           
+    classProperties
+    --> dsl -> Textualization
+        --> language LANG_en
+        --> root "Cube Fact"
+        --> number SINGULAR
+    ;
+;
+
+implementation LibCube:Fact
+	override{
+        printValues function
+    }
+    --> dynamicAttributesSize 10000
+;
+
+function LibCube:Fact::getDimension(LibCube:Dimension theDimension)
+--> action{
+	foreach(_member, this>>members){
+		if(_member.dimension == theDimension){
+			return _member;
+		}
+	}
+}
+;
+
+function LibCube:Fact::getMeasure(LibCube:Measure theMeasure)
+--> local Collection foundMeasures
+--> action {
+    foundMeasures = applyCollection(this>>factMeasures, __where currentElement.measure == theMeasure).toList();
+
+    if(foundMeasures.isEmpty() == true){
+        return null;
+    }
+    if(foundMeasures.size() == 1){
+        return foundMeasures.get(_FIRST);
+    }
+    if(foundMeasures.size() > 1){
+        return foundMeasures.get(_FIRST);
+        logWarning("Repeated measure: ", theMeasure.label, " on the fact: ", this);
+    }
+}
+;
+
+function LibCube:Fact::getDate()
+--> return this.getDimension(DIMENSION_TIME).date
+;
+
+function LibCube:Fact::checkDimensions()
+--> local HashMap hashMapByDimension
+--> action {
+  //check fact dimensions
+  hashMapByDimension = this>>members.groupItems (_KEY: LibCube:Member::dimension,
+                                                  _OCCURRENCES_COUNT, 
+                                                  _FREQUENCY_ORDER, 
+                                                  _DESCENDANT);
+  
+  foreach(_dimension, LibCube:Dimension) {
+    switch {
+      case(hashMapByDimension[_dimension] == null && _dimension.isOptional == false): {
+        if(_dimension.defaultMember != null) {
+          // add a defualtMember to this 
+          this.members := _dimension.defaultMember;
+        } else {
+          logWarning("missing dimension :", _dimension, " for fact :", this)
+        }              
+      }
+      case(hashMapByDimension[_dimension] > 1): {
+        logWarning("too many members for dimension :", _dimension, " for fact :", this)
+      }
+    }          
+  }  // end check dimensions
+
+  free(hashMapByDimension);
+}
+;
+
+function LibCube:Fact::getRelatedIndicatorFact(LibCube:IndicatorMember indicatorMember)
+--> local Collection relatedFacts
+--> action {
+    if(this.nonIndicatorMembersId == null){
+        logWarning("Can't get a related indicator fact of a non indicator fact!");
+        return null;
+    }
+    if(relatedFactsByIndicator == null){
+        relatedFacts = as(?fact, ?fact.nonIndicatorMembersId == this.nonIndicatorMembersId);
+        relatedFactsByIndicator = new(HashMap);
+        foreach(_relatedFact,relatedFacts){
+            relatedFactsByIndicator[_relatedFact.getDimension(DIMENSION_INDICATOR)] = _relatedFact;
+        }
+    }
+    
+    if(relatedFactsByIndicator != null){
+        return relatedFactsByIndicator[indicatorMember];
+    }
+    else{
+        return null;
+    }
+    
+}
+;
+//function will receive the string value of the mdxName coming from the json of the webservice, 
+//and will capture the label of the dimension
+function LibCube:Fact::getDimensionNameFromMdxName(String mdxName)
+--> local List label
+--> action{
+	label=mdxName.split(".");
+	return label.get(label.size());
+}
+;
+
+textMethod LibCube:Fact::printValues()
+--> text 
+\( 
+    Fact Members: \endOfLine
+    \foreach(_member, members)
+        \value(_member.printValues())
+    \endForeach
+    \endOfLine
+    Fact Measures: \endOfLine
+    \foreach(_factMeasure, factMeasures)
+        \value(_factMeasure.printValues())
+    \endForeach
+\)
+; 
+

@@ -1,0 +1,80 @@
+LibGeography:Country C_UKR
+  --> iso3166_1_numeric_code  "804"
+  --> iso3166_1_alpha_2       "UA"
+  --> iso3166_1_alpha_3       "UKR"
+  --> label
+    -> MultilingualText
+      --> i18nName_fr
+        -> NlgSubstantive
+          --> root    "Ukraine"
+          --> plural  "Ukraine"
+          --> gender  FEMININE
+          --> number  SINGULAR
+        ;
+      --> i18nName_en
+        -> NlgSubstantive
+          --> root    "Ukraine"
+          --> plural  "Ukraine"
+          --> gender  INANIMATE
+          --> number  SINGULAR
+        ;
+      --> i18nName_es
+        -> NlgSubstantive
+          --> root    "Ucrania"
+          --> plural  "Ucrania"
+          --> gender  FEMININE
+          --> number  SINGULAR
+        ;
+      --> i18nName_de
+        -> NlgSubstantive
+          --> root    "Ukraine"
+          --> plural  "Ukraine"
+          --> gender  NEUTRAL
+          --> number  SINGULAR
+        ;
+      --> i18nName_ja
+        -> NlgSubstantive
+          --> root    "ウクライナ"
+          --> plural  "ウクライナ"
+          --> gender  INANIMATE
+          --> number  SINGULAR
+        ;
+    ;
+  --> demonym
+    -> MultilingualText
+      --> i18nName_fr
+        -> NlgGenderAgreeableSubstantive
+          --> masculine "Ukrainien"
+          --> feminine  "Ukrainienne"
+        ;
+      --> i18nName_en  "Ukrainian"
+      --> i18nName_es  "ucraniano"
+      --> i18nName_de
+        -> NlgGenderAgreeableSubstantive
+          --> masculine "Ukrainer"
+          --> feminine  "Ukrainerin"
+        ;
+    ;
+  --> adjective
+    -> MultilingualText
+      --> i18nName_fr
+        -> NlgAdjective
+          --> root      "ukrainien"
+          --> feminine  "ukrainienne"
+        ;
+      --> i18nName_en
+        -> NlgAdjective
+          --> root      "Ukrainian"
+        ;
+      --> i18nName_es
+        -> NlgAdjective
+          --> root      "ucraniano"
+        ;
+      --> i18nName_de
+        -> NlgAdjective
+          --> root      "ukrainisch"
+        ;
+    ;
+  --> useArticle_fr  true
+  --> useArticle_en  false
+;

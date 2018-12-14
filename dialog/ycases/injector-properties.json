@@ -1,0 +1,32 @@
+{
+  "": {
+    "displayLanguages": false,
+    "languages": ["en"],
+    "project": {
+      "title": "Money Builder",
+      "modeDirect": true,
+      "hideXSLTransformationChoice": true,
+      "transformations": ["html"],
+      "defaultTransformation": "html",
+      "resultTarget": "area",
+    "cssOverride": true,
+    "usePictureForTitle": true,
+    "pictureFileName": "cube.png"
+    },
+    "displayLaunchYseopButton": true,
+    
+    "caseGroups": [{
+      "folded": false,
+      "cases": [{
+        "file": "test.ycase",
+        "label": "Test Case 1",
+        "defaultValue": true
+      }]
+    }],
+    "submitOnCaseChange": true,
+    "includeLogsInDialogMode": false,
+    "submitOnSliderChange": true,
+    "displayRewriteMeButton": true,
+    "submitOnSelectChange": false
+  }
+}

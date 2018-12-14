@@ -1,0 +1,80 @@
+LibGeography:Country C_NCL
+  --> iso3166_1_numeric_code  "540"
+  --> iso3166_1_alpha_2       "NC"
+  --> iso3166_1_alpha_3       "NCL"
+  --> label
+    -> MultilingualText
+      --> i18nName_fr
+        -> NlgSubstantive
+          --> root    "Nouvelle-Calédonie"
+          --> plural  "Nouvelle-Calédonie"
+          --> gender  FEMININE
+          --> number  SINGULAR
+        ;
+      --> i18nName_en
+        -> NlgSubstantive
+          --> root    "New Caledonia"
+          --> plural  "New Caledonia"
+          --> gender  INANIMATE
+          --> number  SINGULAR
+        ;
+      --> i18nName_es
+        -> NlgSubstantive
+          --> root    "Nueva Caledonia"
+          --> plural  "Nueva Caledonia"
+          --> gender  FEMININE
+          --> number  SINGULAR
+        ;
+      --> i18nName_de
+        -> NlgSubstantive
+          --> root    "Neukaledonien"
+          --> plural  "Neukaledonien"
+          --> gender  NEUTRAL
+          --> number  SINGULAR
+        ;
+      --> i18nName_ja
+        -> NlgSubstantive
+          --> root    "ニューカレドニア"
+          --> plural  "ニューカレドニア"
+          --> gender  INANIMATE
+          --> number  SINGULAR
+        ;
+    ;
+  --> demonym
+    -> MultilingualText
+      --> i18nName_fr
+        -> NlgGenderAgreeableSubstantive
+          --> masculine "Néo-Calédonien"
+          --> feminine  "Néo-Calédonienne"
+        ;
+      --> i18nName_en  "New Caledonian"
+      --> i18nName_es  "neocaledonio"
+      --> i18nName_de
+        -> NlgGenderAgreeableSubstantive
+          --> masculine "Neukaledonier"
+          --> feminine  "Neukaledonierin"
+        ;
+    ;
+  --> adjective
+    -> MultilingualText
+      --> i18nName_fr
+        -> NlgAdjective
+          --> root      "néo-calédonien"
+          --> feminine  "néo-calédonienne"
+        ;
+      --> i18nName_en
+        -> NlgAdjective
+          --> root      "New Caledonian"
+        ;
+      --> i18nName_es
+        -> NlgAdjective
+          --> root      "neocaledonio"
+        ;
+      --> i18nName_de
+        -> NlgAdjective
+          --> root      "neukaledonisch"
+        ;
+    ;
+  --> useArticle_fr  true
+  --> useArticle_en  false
+;

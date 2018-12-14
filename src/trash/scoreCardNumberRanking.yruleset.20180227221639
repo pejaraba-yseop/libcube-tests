@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<yseop-yml:ymlRuleset xmlns:yseop-yml="http://www.yseop.com/yml/storage" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" domainModelVersion="3" identifier="272801ad-c6ac-48d5-9466-c2dee403477d">
+    <yseop-yml:rules/>
+    <yseop-yml:name>scoreCardNumberRanking</yseop-yml:name>
+    <yseop-yml:properties identifier="aa2e3b8c-a091-4dce-b16c-21068193d12c">
+        <yseop-yml:property identifier="aa2e3b8c-a091-4dce-b16c-21068193d12c|dsl" type="YML_PROPERTY" name="dsl">"scoreCardNumberRanking"</yseop-yml:property>
+    </yseop-yml:properties>
+</yseop-yml:ymlRuleset>

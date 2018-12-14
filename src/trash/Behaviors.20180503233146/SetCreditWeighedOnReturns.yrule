@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<yseop-yml:ymlRule xmlns:yseop-yml="http://www.yseop.com/yml/storage" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" domainModelVersion="3" identifier="176e4701-a7cf-4195-8025-67784a63ba39">
+    <yseop-yml:content>theGeneralData.creditPositioningStatus = RETURN_STATUS_WEIGHED;</yseop-yml:content>
+    <yseop-yml:content>theGeneralData.creditPositioningFact != null &amp;&amp; theGeneralData.creditPositioningFact.getMeasure(MEASURE_PERFORMANCE).value &lt; 0</yseop-yml:content>
+    <yseop-yml:name>SetCreditWeighedOnReturns</yseop-yml:name>
+    <yseop-yml:properties identifier="d82d6c3a-74ba-44ad-8564-a5188a30855b">
+        <yseop-yml:property identifier="d82d6c3a-74ba-44ad-8564-a5188a30855b|dsl" type="YML_PROPERTY" name="dsl">"Set Credit Weighed On Returns"</yseop-yml:property>
+        <yseop-yml:property identifier="d82d6c3a-74ba-44ad-8564-a5188a30855b|disabled" type="GENERATION_PROPERTY" name="disabled">false</yseop-yml:property>
+    </yseop-yml:properties>
+</yseop-yml:ymlRule>

@@ -1,0 +1,47 @@
+LibGeography:Subdivision STATE_MX_AGU
+  --> iso3166_2    "MX-AGU"
+  --> postal_code  "AG"
+  --> status       STATE
+  --> label
+    -> MultilingualText
+      --> i18nName_fr
+        -> NlgSubstantive
+          --> root    "Aguascalientes"
+          --> plural  "Aguascalientes"
+          --> number  SINGULAR
+        ;
+      --> i18nName_en
+        -> NlgSubstantive
+          --> root    "Aguascalientes"
+          --> plural  "Aguascalientes"
+          --> gender  INANIMATE
+          --> number  SINGULAR
+        ;
+      --> i18nName_es
+        -> NlgSubstantive
+          --> root    "Aguascalientes"
+          --> plural  "Aguascalientes"
+          --> number  SINGULAR
+        ;
+      --> i18nName_de
+        -> NlgSubstantive
+          --> root    "Aguascalientes"
+          --> plural  "Aguascalientes"
+          --> gender  NEUTRAL
+          --> number  SINGULAR
+        ;
+      --> i18nName_ja
+        -> NlgSubstantive
+          --> root    "アグアスカリエンテス州"
+          --> plural  "アグアスカリエンテス州"
+          --> gender  INANIMATE
+          --> number  SINGULAR
+        ;
+    ;
+  --> demonym
+    -> MultilingualText
+    ;
+  --> adjective
+    -> MultilingualText
+    ;
+;

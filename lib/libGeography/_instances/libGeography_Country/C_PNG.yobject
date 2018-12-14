@@ -1,0 +1,75 @@
+LibGeography:Country C_PNG
+  --> iso3166_1_numeric_code  "598"
+  --> iso3166_1_alpha_2       "PG"
+  --> iso3166_1_alpha_3       "PNG"
+  --> label
+    -> MultilingualText
+      --> i18nName_fr
+        -> NlgSubstantive
+          --> root    "Papouasie-Nouvelle-Guinée"
+          --> plural  "Papouasie-Nouvelle-Guinée"
+          --> gender  FEMININE
+          --> number  SINGULAR
+        ;
+      --> i18nName_en
+        -> NlgSubstantive
+          --> root    "Papua New Guinea"
+          --> plural  "Papua New Guinea"
+          --> gender  INANIMATE
+          --> number  SINGULAR
+        ;
+      --> i18nName_es
+        -> NlgSubstantive
+          --> root    "Papúa Nueva Guinea"
+          --> plural  "Papúa Nueva Guinea"
+          --> gender  FEMININE
+          --> number  SINGULAR
+        ;
+      --> i18nName_de
+        -> NlgSubstantive
+          --> root    "Papua-Neuguinea"
+          --> plural  "Papua-Neuguinea"
+          --> gender  NEUTRAL
+          --> number  SINGULAR
+        ;
+      --> i18nName_ja
+        -> NlgSubstantive
+          --> root    "パプアニューギニア"
+          --> plural  "パプアニューギニア"
+          --> gender  INANIMATE
+          --> number  SINGULAR
+        ;
+    ;
+  --> demonym
+    -> MultilingualText
+      --> i18nName_fr  "de Papouasie -"
+      --> i18nName_en  "Papua New Guinean"
+      --> i18nName_es  "papú"
+      --> i18nName_de
+        -> NlgGenderAgreeableSubstantive
+          --> masculine "Papua-Neuguineer"
+          --> feminine  "Papua-Neuguineerin"
+        ;
+    ;
+  --> adjective
+    -> MultilingualText
+      --> i18nName_fr
+        -> NlgAdjective
+          --> root      "de Papouasie -"
+        ;
+      --> i18nName_en
+        -> NlgAdjective
+          --> root      "of Papua New Guinea"
+        ;
+      --> i18nName_es
+        -> NlgAdjective
+          --> root      "papú"
+        ;
+      --> i18nName_de
+        -> NlgAdjective
+          --> root      "papua-neuguineisch"
+        ;
+    ;
+  --> useArticle_fr  true
+  --> useArticle_en  false
+;

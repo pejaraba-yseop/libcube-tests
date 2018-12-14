@@ -1,0 +1,80 @@
+LibGeography:Country C_NRU
+  --> iso3166_1_numeric_code  "520"
+  --> iso3166_1_alpha_2       "NR"
+  --> iso3166_1_alpha_3       "NRU"
+  --> label
+    -> MultilingualText
+      --> i18nName_fr
+        -> NlgSubstantive
+          --> root    "Nauru"
+          --> plural  "Nauru"
+          --> gender  MASCULINE
+          --> number  SINGULAR
+        ;
+      --> i18nName_en
+        -> NlgSubstantive
+          --> root    "Nauru"
+          --> plural  "Nauru"
+          --> gender  INANIMATE
+          --> number  SINGULAR
+        ;
+      --> i18nName_es
+        -> NlgSubstantive
+          --> root    "Nauru"
+          --> plural  "Nauru"
+          --> gender  MASCULINE
+          --> number  SINGULAR
+        ;
+      --> i18nName_de
+        -> NlgSubstantive
+          --> root    "Nauru"
+          --> plural  "Nauru"
+          --> gender  NEUTRAL
+          --> number  SINGULAR
+        ;
+      --> i18nName_ja
+        -> NlgSubstantive
+          --> root    "ナウル"
+          --> plural  "ナウル"
+          --> gender  INANIMATE
+          --> number  SINGULAR
+        ;
+    ;
+  --> demonym
+    -> MultilingualText
+      --> i18nName_fr
+        -> NlgGenderAgreeableSubstantive
+          --> masculine "Nauruan"
+          --> feminine  "Nauruane"
+        ;
+      --> i18nName_en  "Nauruan"
+      --> i18nName_es  "nauruano"
+      --> i18nName_de
+        -> NlgGenderAgreeableSubstantive
+          --> masculine "Nauruer"
+          --> feminine  "Nauruerin"
+        ;
+    ;
+  --> adjective
+    -> MultilingualText
+      --> i18nName_fr
+        -> NlgAdjective
+          --> root      "nauruan"
+          --> feminine  "nauruane"
+        ;
+      --> i18nName_en
+        -> NlgAdjective
+          --> root      "Nauruan"
+        ;
+      --> i18nName_es
+        -> NlgAdjective
+          --> root      "nauruano"
+        ;
+      --> i18nName_de
+        -> NlgAdjective
+          --> root      "nauruisch"
+        ;
+    ;
+  --> useArticle_fr  false
+  --> useArticle_en  false
+;

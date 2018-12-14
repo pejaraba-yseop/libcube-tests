@@ -1,0 +1,80 @@
+LibGeography:Country C_SOM
+  --> iso3166_1_numeric_code  "706"
+  --> iso3166_1_alpha_2       "SO"
+  --> iso3166_1_alpha_3       "SOM"
+  --> label
+    -> MultilingualText
+      --> i18nName_fr
+        -> NlgSubstantive
+          --> root    "Somalie"
+          --> plural  "Somalie"
+          --> gender  FEMININE
+          --> number  SINGULAR
+        ;
+      --> i18nName_en
+        -> NlgSubstantive
+          --> root    "Somalia"
+          --> plural  "Somalia"
+          --> gender  INANIMATE
+          --> number  SINGULAR
+        ;
+      --> i18nName_es
+        -> NlgSubstantive
+          --> root    "Somalia"
+          --> plural  "Somalia"
+          --> gender  MASCULINE
+          --> number  SINGULAR
+        ;
+      --> i18nName_de
+        -> NlgSubstantive
+          --> root    "Somalia"
+          --> plural  "Somalia"
+          --> gender  NEUTRAL
+          --> number  SINGULAR
+        ;
+      --> i18nName_ja
+        -> NlgSubstantive
+          --> root    "ソマリア"
+          --> plural  "ソマリア"
+          --> gender  INANIMATE
+          --> number  SINGULAR
+        ;
+    ;
+  --> demonym
+    -> MultilingualText
+      --> i18nName_fr
+        -> NlgGenderAgreeableSubstantive
+          --> masculine "Somalien"
+          --> feminine  "Somalienne"
+        ;
+      --> i18nName_en  "Somali"
+      --> i18nName_es  "somalí"
+      --> i18nName_de
+        -> NlgGenderAgreeableSubstantive
+          --> masculine "Somalier"
+          --> feminine  "Somalierin"
+        ;
+    ;
+  --> adjective
+    -> MultilingualText
+      --> i18nName_fr
+        -> NlgAdjective
+          --> root      "somalien"
+          --> feminine  "somalienne"
+        ;
+      --> i18nName_en
+        -> NlgAdjective
+          --> root      "Somali; Somalian"
+        ;
+      --> i18nName_es
+        -> NlgAdjective
+          --> root      "somalí"
+        ;
+      --> i18nName_de
+        -> NlgAdjective
+          --> root      "somalisch"
+        ;
+    ;
+  --> useArticle_fr  true
+  --> useArticle_en  false
+;

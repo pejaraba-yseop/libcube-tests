@@ -1,0 +1,12 @@
+interface LibGeography:EconomicUnion extends LibGeography:Area         
+           
+    classProperties
+    --> dsl -> Textualization
+        --> language LANG_en
+        --> root "Economic Union"
+        --> number SINGULAR
+    ;
+;
+
+implementation LibGeography:EconomicUnion
+;

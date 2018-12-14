@@ -1,0 +1,8 @@
+LibCube:TimeDimension DIMENSION_TIME
+    //--> defaultMember DIMENSION_TIME_CURRENT_MEMBER  
+    --> dsl -> Textualization
+        --> language LANG_en
+        --> root "dimension time"
+        --> number SINGULAR
+    ;
+;

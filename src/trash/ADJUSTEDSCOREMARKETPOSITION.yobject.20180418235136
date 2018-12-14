@@ -1,0 +1,7 @@
+LibCube:Measure MEASURE_VALUE
+    --> dsl -> Textualization
+        --> language LANG_en
+        --> root "Value"
+        --> number SINGULAR
+    ;
+;

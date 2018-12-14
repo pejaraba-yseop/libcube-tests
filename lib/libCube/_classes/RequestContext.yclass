@@ -1,0 +1,65 @@
+interface LibCube:RequestContext
+    field dimensionContexts
+        --> domains List
+        --> domainsLevel2 LibCube:DimensionRequestContext
+        --> automaticCreation true
+        --> documentation "The request contexts about dimensions in the OLAP Cube and the KB"
+        --> xmlMapping XmlMappingProperty_SAVE
+        --> dsl -> Textualization
+            --> language LANG_en
+            --> root "dimension contexts"
+            --> number SINGULAR
+        ;
+
+    field measureContexts
+        --> domains List
+        --> domainsLevel2 LibCube:MeasureRequestContext
+        --> automaticCreation true
+        --> documentation "The request contexts about measures in the OLAP Cube and the KB"
+        --> xmlMapping XmlMappingProperty_SAVE
+        --> dsl -> Textualization
+            --> language LANG_en
+            --> root "measures contexts"
+            --> number SINGULAR
+        ;
+
+    method addDimensionContext(Text mdxName, Text yseopId, Text yseopMembersClass)
+    --> domains Void
+    
+
+    method addMeasureContext(Text mdxName, Text yseopId)
+    --> domains Void
+    
+
+    classProperties
+    --> dsl -> Textualization
+        --> language LANG_en
+        --> root "Request Context"
+        --> number SINGULAR
+    ;
+;
+
+implementation LibCube:RequestContext
+;
+
+
+function LibCube:RequestContext::addDimensionContext(Text mdxName, Text yseopId, Text yseopMembersClass)
+--> local LibCube:DimensionRequestContext context
+--> action {
+    context = new(LibCube:DimensionRequestContext);
+    context.mdxName = mdxName;
+    context.yseopId = yseopId;
+    context.yseopMembersClass = yseopMembersClass;
+    dimensionContexts.add(context);
+}
+;
+
+function LibCube:RequestContext::addMeasureContext(Text mdxName, Text yseopId)
+--> local LibCube:MeasureRequestContext context
+--> action {
+    context = new(LibCube:MeasureRequestContext);
+    context.mdxName = mdxName;
+    context.yseopId = yseopId;
+    measureContexts.add(context);
+}
+;

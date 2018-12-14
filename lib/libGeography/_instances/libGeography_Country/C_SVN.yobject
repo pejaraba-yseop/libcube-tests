@@ -1,0 +1,80 @@
+LibGeography:Country C_SVN
+  --> iso3166_1_numeric_code  "705"
+  --> iso3166_1_alpha_2       "SI"
+  --> iso3166_1_alpha_3       "SVN"
+  --> label
+    -> MultilingualText
+      --> i18nName_fr
+        -> NlgSubstantive
+          --> root    "Slovénie"
+          --> plural  "Slovénie"
+          --> gender  FEMININE
+          --> number  SINGULAR
+        ;
+      --> i18nName_en
+        -> NlgSubstantive
+          --> root    "Slovenia"
+          --> plural  "Slovenia"
+          --> gender  INANIMATE
+          --> number  SINGULAR
+        ;
+      --> i18nName_es
+        -> NlgSubstantive
+          --> root    "Eslovenia"
+          --> plural  "Eslovenia"
+          --> gender  FEMININE
+          --> number  SINGULAR
+        ;
+      --> i18nName_de
+        -> NlgSubstantive
+          --> root    "Slowenien"
+          --> plural  "Slowenien"
+          --> gender  NEUTRAL
+          --> number  SINGULAR
+        ;
+      --> i18nName_ja
+        -> NlgSubstantive
+          --> root    "スロベニア"
+          --> plural  "スロベニア"
+          --> gender  INANIMATE
+          --> number  SINGULAR
+        ;
+    ;
+  --> demonym
+    -> MultilingualText
+      --> i18nName_fr
+        -> NlgGenderAgreeableSubstantive
+          --> masculine "Slovène"
+          --> feminine  "Slovène"
+        ;
+      --> i18nName_en  "Slovene"
+      --> i18nName_es  "esloveno"
+      --> i18nName_de
+        -> NlgGenderAgreeableSubstantive
+          --> masculine "Slowene"
+          --> feminine  "Slowenin"
+        ;
+    ;
+  --> adjective
+    -> MultilingualText
+      --> i18nName_fr
+        -> NlgAdjective
+          --> root      "slovène"
+          --> feminine  "slovène"
+        ;
+      --> i18nName_en
+        -> NlgAdjective
+          --> root      "Slovenian"
+        ;
+      --> i18nName_es
+        -> NlgAdjective
+          --> root      "esloveno"
+        ;
+      --> i18nName_de
+        -> NlgAdjective
+          --> root      "slowenisch"
+        ;
+    ;
+  --> useArticle_fr  true
+  --> useArticle_en  false
+;

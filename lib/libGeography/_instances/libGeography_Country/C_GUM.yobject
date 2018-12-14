@@ -1,0 +1,75 @@
+LibGeography:Country C_GUM
+  --> iso3166_1_numeric_code  "316"
+  --> iso3166_1_alpha_2       "GU"
+  --> iso3166_1_alpha_3       "GUM"
+  --> label
+    -> MultilingualText
+      --> i18nName_fr
+        -> NlgSubstantive
+          --> root    "Guam"
+          --> plural  "Guam"
+          --> gender  FEMININE
+          --> number  SINGULAR
+        ;
+      --> i18nName_en
+        -> NlgSubstantive
+          --> root    "Guam"
+          --> plural  "Guam"
+          --> gender  INANIMATE
+          --> number  SINGULAR
+        ;
+      --> i18nName_es
+        -> NlgSubstantive
+          --> root    "Guam"
+          --> plural  "Guam"
+          --> gender  FEMININE
+          --> number  SINGULAR
+        ;
+      --> i18nName_de
+        -> NlgSubstantive
+          --> root    "Guam"
+          --> plural  "Guam"
+          --> gender  NEUTRAL
+          --> number  SINGULAR
+        ;
+      --> i18nName_ja
+        -> NlgSubstantive
+          --> root    "グアム"
+          --> plural  "グアム"
+          --> gender  INANIMATE
+          --> number  SINGULAR
+        ;
+    ;
+  --> demonym
+    -> MultilingualText
+      --> i18nName_fr  "de Guam"
+      --> i18nName_en  "Guamanian"
+      --> i18nName_es  "guameño"
+      --> i18nName_de
+        -> NlgGenderAgreeableSubstantive
+          --> masculine "Guamer"
+          --> feminine  "Guamerin"
+        ;
+    ;
+  --> adjective
+    -> MultilingualText
+      --> i18nName_fr
+        -> NlgAdjective
+          --> root      "de Guam"
+        ;
+      --> i18nName_en
+        -> NlgAdjective
+          --> root      "Guamanian"
+        ;
+      --> i18nName_es
+        -> NlgAdjective
+          --> root      "guameño"
+        ;
+      --> i18nName_de
+        -> NlgAdjective
+          --> root      "guamisch"
+        ;
+    ;
+  --> useArticle_fr  false
+  --> useArticle_en  false
+;

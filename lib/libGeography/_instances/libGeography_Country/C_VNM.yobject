@@ -1,0 +1,80 @@
+LibGeography:Country C_VNM
+  --> iso3166_1_numeric_code  "704"
+  --> iso3166_1_alpha_2       "VN"
+  --> iso3166_1_alpha_3       "VNM"
+  --> label
+    -> MultilingualText
+      --> i18nName_fr
+        -> NlgSubstantive
+          --> root    "Viêt Nam"
+          --> plural  "Viêt Nam"
+          --> gender  MASCULINE
+          --> number  SINGULAR
+        ;
+      --> i18nName_en
+        -> NlgSubstantive
+          --> root    "Vietnam"
+          --> plural  "Vietnam"
+          --> gender  INANIMATE
+          --> number  SINGULAR
+        ;
+      --> i18nName_es
+        -> NlgSubstantive
+          --> root    "Vietnam"
+          --> plural  "Vietnam"
+          --> gender  MASCULINE
+          --> number  SINGULAR
+        ;
+      --> i18nName_de
+        -> NlgSubstantive
+          --> root    "Vietnam"
+          --> plural  "Vietnam"
+          --> gender  NEUTRAL
+          --> number  SINGULAR
+        ;
+      --> i18nName_ja
+        -> NlgSubstantive
+          --> root    "ベトナム"
+          --> plural  "ベトナム"
+          --> gender  INANIMATE
+          --> number  SINGULAR
+        ;
+    ;
+  --> demonym
+    -> MultilingualText
+      --> i18nName_fr
+        -> NlgGenderAgreeableSubstantive
+          --> masculine "Vietnamien"
+          --> feminine  "Vietnamienne"
+        ;
+      --> i18nName_en  "Vietnamese"
+      --> i18nName_es  "vietnamita"
+      --> i18nName_de
+        -> NlgGenderAgreeableSubstantive
+          --> masculine "Vietnamese"
+          --> feminine  "Vietnamesin"
+        ;
+    ;
+  --> adjective
+    -> MultilingualText
+      --> i18nName_fr
+        -> NlgAdjective
+          --> root      "vietnamien"
+          --> feminine  "vietnamienne"
+        ;
+      --> i18nName_en
+        -> NlgAdjective
+          --> root      "Vietnamese"
+        ;
+      --> i18nName_es
+        -> NlgAdjective
+          --> root      "vietnamita"
+        ;
+      --> i18nName_de
+        -> NlgAdjective
+          --> root      "vietnamesisch"
+        ;
+    ;
+  --> useArticle_fr  true
+  --> useArticle_en  false
+;

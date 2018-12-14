@@ -1,0 +1,7 @@
+LibCube:TimePeriod PERIOD_QUARTER
+    --> dsl -> Textualization
+        --> language LANG_en
+        --> root "period quarter"
+        --> number SINGULAR
+    ;
+;

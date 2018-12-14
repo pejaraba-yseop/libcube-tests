@@ -1,0 +1,47 @@
+LibGeography:Subdivision STATE_MX_OAX
+  --> iso3166_2    "MX-OAX"
+  --> postal_code  "OA"
+  --> status       STATE
+  --> label
+    -> MultilingualText
+      --> i18nName_fr
+        -> NlgSubstantive
+          --> root    "Oaxaca"
+          --> plural  "Oaxaca"
+          --> number  SINGULAR
+        ;
+      --> i18nName_en
+        -> NlgSubstantive
+          --> root    "Oaxaca"
+          --> plural  "Oaxaca"
+          --> gender  INANIMATE
+          --> number  SINGULAR
+        ;
+      --> i18nName_es
+        -> NlgSubstantive
+          --> root    "Oaxaca"
+          --> plural  "Oaxaca"
+          --> number  SINGULAR
+        ;
+      --> i18nName_de
+        -> NlgSubstantive
+          --> root    "Oaxaca"
+          --> plural  "Oaxaca"
+          --> gender  NEUTRAL
+          --> number  SINGULAR
+        ;
+      --> i18nName_ja
+        -> NlgSubstantive
+          --> root    "オアハカ州"
+          --> plural  "オアハカ州"
+          --> gender  INANIMATE
+          --> number  SINGULAR
+        ;
+    ;
+  --> demonym
+    -> MultilingualText
+    ;
+  --> adjective
+    -> MultilingualText
+    ;
+;

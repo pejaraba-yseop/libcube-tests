@@ -1,0 +1,266 @@
+interface BusinessSegmentByIndex
+    field index2List
+        --> domainsLevel2 BusinessSegment
+        --> domains Collection
+        --> xmlMapping XmlMappingProperty_NO_SAVE
+        --> dsl -> Textualization
+            --> language LANG_en
+            --> root "index 2 list"
+            --> number SINGULAR
+        ;
+    field index3List
+        --> domainsLevel2 BusinessSegment
+        --> domains Collection
+        --> xmlMapping XmlMappingProperty_NO_SAVE
+        --> dsl -> Textualization
+            --> language LANG_en
+            --> root "index 3 list"
+            --> number SINGULAR
+        ;
+    field index4List
+        --> domainsLevel2 BusinessSegment
+        --> domains Collection
+        --> xmlMapping XmlMappingProperty_NO_SAVE
+        --> dsl -> Textualization
+            --> language LANG_en
+            --> root "index 4 list"
+            --> number SINGULAR
+        ;
+    field index5List
+        --> domainsLevel2 BusinessSegment
+        --> domains Collection
+        --> xmlMapping XmlMappingProperty_NO_SAVE
+        --> dsl -> Textualization
+            --> language LANG_en
+            --> root "index 5 list"
+            --> number SINGULAR
+        ;
+        
+    field index6List
+        --> domainsLevel2 BusinessSegment
+        --> domains Collection
+        --> xmlMapping XmlMappingProperty_NO_SAVE
+        --> dsl -> Textualization
+            --> language LANG_en
+            --> root "index 6 list"
+            --> number SINGULAR
+        ;
+    field index7List
+        --> domainsLevel2 BusinessSegment
+        --> domains Collection
+        --> xmlMapping XmlMappingProperty_NO_SAVE
+        --> dsl -> Textualization
+            --> language LANG_en
+            --> root "index 7 list"
+            --> number SINGULAR
+        ;
+    field index8List
+        --> domainsLevel2 BusinessSegment
+        --> domains Collection
+        --> xmlMapping XmlMappingProperty_NO_SAVE
+        --> dsl -> Textualization
+            --> language LANG_en
+            --> root "index 8 list"
+            --> number SINGULAR
+        ;
+    field index9List
+        --> domainsLevel2 BusinessSegment
+        --> domains Collection
+        --> xmlMapping XmlMappingProperty_NO_SAVE
+        --> dsl -> Textualization
+            --> language LANG_en
+            --> root "index 9 list"
+            --> number SINGULAR
+        ;
+        
+    field index10List
+        --> domainsLevel2 BusinessSegment
+        --> domains Collection
+        --> xmlMapping XmlMappingProperty_NO_SAVE
+        --> dsl -> Textualization
+            --> language LANG_en
+            --> root "index 10 list"
+            --> number SINGULAR
+        ;
+        
+        
+    field index11List
+        --> domainsLevel2 BusinessSegment
+        --> domains Collection
+        --> xmlMapping XmlMappingProperty_NO_SAVE
+        --> dsl -> Textualization
+            --> language LANG_en
+            --> root "index 11 list"
+            --> number SINGULAR
+        ;
+        
+    field index12List
+        --> domainsLevel2 BusinessSegment
+        --> domains Collection
+        --> xmlMapping XmlMappingProperty_NO_SAVE
+        --> dsl -> Textualization
+            --> language LANG_en
+            --> root "index 12 list"
+            --> number SINGULAR
+        ;      
+    field index13List
+        --> domainsLevel2 BusinessSegment
+        --> domains Collection
+        --> xmlMapping XmlMappingProperty_NO_SAVE
+        --> dsl -> Textualization
+            --> language LANG_en
+            --> root "index 13 list"
+            --> number SINGULAR
+        ;
+        
+    field index14List
+        --> domainsLevel2 BusinessSegment
+        --> domains Collection
+        --> xmlMapping XmlMappingProperty_NO_SAVE
+        --> dsl -> Textualization
+            --> language LANG_en
+            --> root "index 14 list"
+            --> number SINGULAR
+        ;
+        
+    field index15List
+        --> domainsLevel2 BusinessSegment
+        --> domains Collection
+        --> xmlMapping XmlMappingProperty_NO_SAVE
+        --> dsl -> Textualization
+            --> language LANG_en
+            --> root "index 15 list"
+            --> number SINGULAR
+        ;
+        
+    field index16List
+        --> domainsLevel2 BusinessSegment
+        --> domains Collection
+        --> xmlMapping XmlMappingProperty_NO_SAVE
+        --> dsl -> Textualization
+            --> language LANG_en
+            --> root "index 16 list"
+            --> number SINGULAR
+        ;
+
+    field index17List
+        --> domainsLevel2 BusinessSegment
+        --> domains Collection
+        --> xmlMapping XmlMappingProperty_NO_SAVE
+        --> dsl -> Textualization
+            --> language LANG_en
+            --> root "index 17 list"
+            --> number SINGULAR
+        ;
+        
+        
+    field index18List
+        --> domainsLevel2 BusinessSegment
+        --> domains Collection
+        --> xmlMapping XmlMappingProperty_NO_SAVE
+        --> dsl -> Textualization
+            --> language LANG_en
+            --> root "index 18 list"
+            --> number SINGULAR
+        ;
+        
+    field index19List
+        --> domainsLevel2 BusinessSegment
+        --> domains Collection
+        --> xmlMapping XmlMappingProperty_NO_SAVE
+        --> dsl -> Textualization
+            --> language LANG_en
+            --> root "index 19 list"
+            --> number SINGULAR
+        ;
+        
+    field index20List
+        --> domainsLevel2 BusinessSegment
+        --> domains Collection
+        --> xmlMapping XmlMappingProperty_NO_SAVE
+        --> dsl -> Textualization
+            --> language LANG_en
+            --> root "index 20 list"
+            --> number SINGULAR
+        ;
+        
+    field index21List
+        --> domainsLevel2 BusinessSegment
+        --> domains Collection
+        --> xmlMapping XmlMappingProperty_NO_SAVE
+        --> dsl -> Textualization
+            --> language LANG_en
+            --> root "index 21 list"
+            --> number SINGULAR
+        ;
+        
+    field index22List
+        --> domainsLevel2 BusinessSegment
+        --> domains Collection
+        --> xmlMapping XmlMappingProperty_NO_SAVE
+        --> dsl -> Textualization
+            --> language LANG_en
+            --> root "index 22 list"
+            --> number SINGULAR
+        ;
+        
+    field index23List
+        --> domainsLevel2 BusinessSegment
+        --> domains Collection
+        --> xmlMapping XmlMappingProperty_NO_SAVE
+        --> dsl -> Textualization
+            --> language LANG_en
+            --> root "index 23 list"
+            --> number SINGULAR
+        ;
+        
+    field index24List
+        --> domainsLevel2 BusinessSegment
+        --> domains Collection
+        --> xmlMapping XmlMappingProperty_NO_SAVE
+        --> dsl -> Textualization
+            --> language LANG_en
+            --> root "index 24 list"
+            --> number SINGULAR
+        ;
+        
+    field index25List
+        --> domainsLevel2 BusinessSegment
+        --> domains Collection
+        --> xmlMapping XmlMappingProperty_NO_SAVE
+        --> dsl -> Textualization
+            --> language LANG_en
+            --> root "index 25 list"
+            --> number SINGULAR
+        ;
+        
+    field index26List
+        --> domainsLevel2 BusinessSegment
+        --> domains Collection
+        --> xmlMapping XmlMappingProperty_NO_SAVE
+        --> dsl -> Textualization
+            --> language LANG_en
+            --> root "index 26 list"
+            --> number SINGULAR
+        ;
+        
+    field index27List
+        --> domainsLevel2 BusinessSegment
+        --> domains Collection
+        --> xmlMapping XmlMappingProperty_NO_SAVE
+        --> dsl -> Textualization
+            --> language LANG_en
+            --> root "index 27 list"
+            --> number SINGULAR
+        ;
+        
+    classProperties
+    --> dsl -> Textualization
+        --> language LANG_en
+        --> root "Business Segment By Index"
+        --> number SINGULAR
+    ;
+;
+
+implementation BusinessSegmentByIndex
+;

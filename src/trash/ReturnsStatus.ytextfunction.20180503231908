@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<yseop-yml:ymlTextFunction xmlns:yseop-yml="http://www.yseop.com/yml/storage" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" domainModelVersion="3" identifier="4615359b-9bda-4b6a-8c67-6c04adada494">
+    <yseop-yml:textGranule domainModelVersion="3" identifier="3c2ccf41-0cc7-4e4f-9dc6-a1bbc6190a04">
+        <yseop-yml:granuleI18nContents>
+            <yseop-yml:granuleUnilingueContent locale="en">
+                <yseop-yml:granuleContent>
+                    <yseop-yml:text>
+\switch(returnStatus)
+
+    \case(RETURN_STATUS_WEIGHED)
+        \_texts:WordSynonyms:WeighedOnSynonym()
+        returns
+
+    \case(RETURN_STATUS_CONTRIBUTED)
+        contributed to returns
+
+    \noDefault
+\endSwitch
+</yseop-yml:text>
+                    <yseop-yml:inline-assemblies/>
+                    <yseop-yml:inline-dslFunctionCalls/>
+                </yseop-yml:granuleContent>
+            </yseop-yml:granuleUnilingueContent>
+            <yseop-yml:granuleUnilingueContent locale="es">
+                <yseop-yml:granuleContent>
+                    <yseop-yml:text/>
+                    <yseop-yml:inline-assemblies/>
+                    <yseop-yml:inline-dslFunctionCalls/>
+                </yseop-yml:granuleContent>
+            </yseop-yml:granuleUnilingueContent>
+            <yseop-yml:granuleUnilingueContent locale="fr">
+                <yseop-yml:granuleContent>
+                    <yseop-yml:text/>
+                    <yseop-yml:inline-assemblies/>
+                    <yseop-yml:inline-dslFunctionCalls/>
+                </yseop-yml:granuleContent>
+            </yseop-yml:granuleUnilingueContent>
+        </yseop-yml:granuleI18nContents>
+        <yseop-yml:dslCondition/>
+        <yseop-yml:name/>
+        <yseop-yml:creationDate>2018-04-24T16:47:05.142Z</yseop-yml:creationDate>
+        <yseop-yml:properties identifier="9c66034f-3cdf-4327-9458-d7b6978b9b78">
+            <yseop-yml:property identifier="9c66034f-3cdf-4327-9458-d7b6978b9b78|condition" type="YML_PROPERTY" name="condition"></yseop-yml:property>
+        </yseop-yml:properties>
+    </yseop-yml:textGranule>
+    <yseop-yml:localVariables/>
+    <yseop-yml:advancedContent/>
+    <yseop-yml:ymlParameters>_constLists:RETURNS_STATUS returnStatus
+    --> dsl -> Textualization
+        --> language LANG_en
+        --> root "return status"
+        --> number SINGULAR
+    ;
+</yseop-yml:ymlParameters>
+    <yseop-yml:name>ReturnsStatus</yseop-yml:name>
+    <yseop-yml:properties identifier="d5f3d475-9f9d-4891-92a4-0967581c6226">
+        <yseop-yml:property identifier="d5f3d475-9f9d-4891-92a4-0967581c6226|dsl" type="YML_PROPERTY" name="dsl">"Returns Status"</yseop-yml:property>
+    </yseop-yml:properties>
+</yseop-yml:ymlTextFunction>

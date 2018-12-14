@@ -1,0 +1,7 @@
+LibCube:TimePeriod PERIOD_FISCAL_YEAR
+    --> dsl -> Textualization
+        --> language LANG_en
+        --> root "period fiscal year"
+        --> number SINGULAR
+    ;
+;

@@ -1,0 +1,80 @@
+LibGeography:Country C_LKA
+  --> iso3166_1_numeric_code  "144"
+  --> iso3166_1_alpha_2       "LK"
+  --> iso3166_1_alpha_3       "LKA"
+  --> label
+    -> MultilingualText
+      --> i18nName_fr
+        -> NlgSubstantive
+          --> root    "Sri Lanka"
+          --> plural  "Sri Lanka"
+          --> gender  MASCULINE
+          --> number  SINGULAR
+        ;
+      --> i18nName_en
+        -> NlgSubstantive
+          --> root    "Sri Lanka"
+          --> plural  "Sri Lanka"
+          --> gender  INANIMATE
+          --> number  SINGULAR
+        ;
+      --> i18nName_es
+        -> NlgSubstantive
+          --> root    "Sri Lanka"
+          --> plural  "Sri Lanka"
+          --> gender  MASCULINE
+          --> number  SINGULAR
+        ;
+      --> i18nName_de
+        -> NlgSubstantive
+          --> root    "Sri Lanka"
+          --> plural  "Sri Lanka"
+          --> gender  NEUTRAL
+          --> number  SINGULAR
+        ;
+      --> i18nName_ja
+        -> NlgSubstantive
+          --> root    "スリランカ"
+          --> plural  "スリランカ"
+          --> gender  INANIMATE
+          --> number  SINGULAR
+        ;
+    ;
+  --> demonym
+    -> MultilingualText
+      --> i18nName_fr
+        -> NlgGenderAgreeableSubstantive
+          --> masculine "Sri-Lankais"
+          --> feminine  "Sri-Lankaise"
+        ;
+      --> i18nName_en  "Sri Lankan"
+      --> i18nName_es  "esrilanqués"
+      --> i18nName_de
+        -> NlgGenderAgreeableSubstantive
+          --> masculine "Sri-Lanker"
+          --> feminine  "Sri-Lankerin"
+        ;
+    ;
+  --> adjective
+    -> MultilingualText
+      --> i18nName_fr
+        -> NlgAdjective
+          --> root      "sri-lankais"
+          --> feminine  "sri-lankaise"
+        ;
+      --> i18nName_en
+        -> NlgAdjective
+          --> root      "Sri Lankan"
+        ;
+      --> i18nName_es
+        -> NlgAdjective
+          --> root      "esrilanqués (LK*)"
+        ;
+      --> i18nName_de
+        -> NlgAdjective
+          --> root      "sri-lankisch"
+        ;
+    ;
+  --> useArticle_fr  true
+  --> useArticle_en  false
+;

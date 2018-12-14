@@ -1,0 +1,80 @@
+LibGeography:Country C_IDN
+  --> iso3166_1_numeric_code  "360"
+  --> iso3166_1_alpha_2       "ID"
+  --> iso3166_1_alpha_3       "IDN"
+  --> label
+    -> MultilingualText
+      --> i18nName_fr
+        -> NlgSubstantive
+          --> root    "Indonésie"
+          --> plural  "Indonésie"
+          --> gender  FEMININE
+          --> number  SINGULAR
+        ;
+      --> i18nName_en
+        -> NlgSubstantive
+          --> root    "Indonesia"
+          --> plural  "Indonesia"
+          --> gender  INANIMATE
+          --> number  SINGULAR
+        ;
+      --> i18nName_es
+        -> NlgSubstantive
+          --> root    "Indonesia"
+          --> plural  "Indonesia"
+          --> gender  FEMININE
+          --> number  SINGULAR
+        ;
+      --> i18nName_de
+        -> NlgSubstantive
+          --> root    "Indonesien"
+          --> plural  "Indonesien"
+          --> gender  NEUTRAL
+          --> number  SINGULAR
+        ;
+      --> i18nName_ja
+        -> NlgSubstantive
+          --> root    "インドネシア"
+          --> plural  "インドネシア"
+          --> gender  INANIMATE
+          --> number  SINGULAR
+        ;
+    ;
+  --> demonym
+    -> MultilingualText
+      --> i18nName_fr
+        -> NlgGenderAgreeableSubstantive
+          --> masculine "Indonésien"
+          --> feminine  "Indonésienne"
+        ;
+      --> i18nName_en  "Indonesian"
+      --> i18nName_es  "indonesio"
+      --> i18nName_de
+        -> NlgGenderAgreeableSubstantive
+          --> masculine "Indonesier"
+          --> feminine  "Indonesierin"
+        ;
+    ;
+  --> adjective
+    -> MultilingualText
+      --> i18nName_fr
+        -> NlgAdjective
+          --> root      "indonésien"
+          --> feminine  "indonésienne"
+        ;
+      --> i18nName_en
+        -> NlgAdjective
+          --> root      "Indonesian"
+        ;
+      --> i18nName_es
+        -> NlgAdjective
+          --> root      "indonesio"
+        ;
+      --> i18nName_de
+        -> NlgAdjective
+          --> root      "indonesisch"
+        ;
+    ;
+  --> useArticle_fr  true
+  --> useArticle_en  false
+;

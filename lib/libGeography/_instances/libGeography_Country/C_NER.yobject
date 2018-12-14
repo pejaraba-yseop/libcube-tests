@@ -1,0 +1,80 @@
+LibGeography:Country C_NER
+  --> iso3166_1_numeric_code  "562"
+  --> iso3166_1_alpha_2       "NE"
+  --> iso3166_1_alpha_3       "NER"
+  --> label
+    -> MultilingualText
+      --> i18nName_fr
+        -> NlgSubstantive
+          --> root    "Niger"
+          --> plural  "Niger"
+          --> gender  MASCULINE
+          --> number  SINGULAR
+        ;
+      --> i18nName_en
+        -> NlgSubstantive
+          --> root    "Niger"
+          --> plural  "Niger"
+          --> gender  INANIMATE
+          --> number  SINGULAR
+        ;
+      --> i18nName_es
+        -> NlgSubstantive
+          --> root    "Níger"
+          --> plural  "Níger"
+          --> gender  MASCULINE
+          --> number  SINGULAR
+        ;
+      --> i18nName_de
+        -> NlgSubstantive
+          --> root    "Niger"
+          --> plural  "Niger"
+          --> gender  NEUTRAL
+          --> number  SINGULAR
+        ;
+      --> i18nName_ja
+        -> NlgSubstantive
+          --> root    "ニジェール"
+          --> plural  "ニジェール"
+          --> gender  INANIMATE
+          --> number  SINGULAR
+        ;
+    ;
+  --> demonym
+    -> MultilingualText
+      --> i18nName_fr
+        -> NlgGenderAgreeableSubstantive
+          --> masculine "Nigérien"
+          --> feminine  "Nigérienne"
+        ;
+      --> i18nName_en  "Nigerien"
+      --> i18nName_es  "nigerino"
+      --> i18nName_de
+        -> NlgGenderAgreeableSubstantive
+          --> masculine "Nigrer"
+          --> feminine  "Nigrerin"
+        ;
+    ;
+  --> adjective
+    -> MultilingualText
+      --> i18nName_fr
+        -> NlgAdjective
+          --> root      "nigérien"
+          --> feminine  "nigérienne"
+        ;
+      --> i18nName_en
+        -> NlgAdjective
+          --> root      "Nigerien"
+        ;
+      --> i18nName_es
+        -> NlgAdjective
+          --> root      "nigerino"
+        ;
+      --> i18nName_de
+        -> NlgAdjective
+          --> root      "nigrisch"
+        ;
+    ;
+  --> useArticle_fr  true
+  --> useArticle_en  false
+;

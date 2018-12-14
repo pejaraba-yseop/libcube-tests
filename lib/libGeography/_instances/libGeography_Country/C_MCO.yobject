@@ -1,0 +1,80 @@
+LibGeography:Country C_MCO
+  --> iso3166_1_numeric_code  "492"
+  --> iso3166_1_alpha_2       "MC"
+  --> iso3166_1_alpha_3       "MCO"
+  --> label
+    -> MultilingualText
+      --> i18nName_fr
+        -> NlgSubstantive
+          --> root    "Monaco"
+          --> plural  "Monaco"
+          --> gender  MASCULINE
+          --> number  SINGULAR
+        ;
+      --> i18nName_en
+        -> NlgSubstantive
+          --> root    "Monaco"
+          --> plural  "Monaco"
+          --> gender  INANIMATE
+          --> number  SINGULAR
+        ;
+      --> i18nName_es
+        -> NlgSubstantive
+          --> root    "Mónaco"
+          --> plural  "Mónaco"
+          --> gender  MASCULINE
+          --> number  SINGULAR
+        ;
+      --> i18nName_de
+        -> NlgSubstantive
+          --> root    "Monaco"
+          --> plural  "Monaco"
+          --> gender  NEUTRAL
+          --> number  SINGULAR
+        ;
+      --> i18nName_ja
+        -> NlgSubstantive
+          --> root    "モナコ"
+          --> plural  "モナコ"
+          --> gender  INANIMATE
+          --> number  SINGULAR
+        ;
+    ;
+  --> demonym
+    -> MultilingualText
+      --> i18nName_fr
+        -> NlgGenderAgreeableSubstantive
+          --> masculine "Monégasque"
+          --> feminine  "Monégasque"
+        ;
+      --> i18nName_en  "Monegasque"
+      --> i18nName_es  "monegasco"
+      --> i18nName_de
+        -> NlgGenderAgreeableSubstantive
+          --> masculine "Monegasse"
+          --> feminine  "Monegassin"
+        ;
+    ;
+  --> adjective
+    -> MultilingualText
+      --> i18nName_fr
+        -> NlgAdjective
+          --> root      "monégasque"
+          --> feminine  "monégasque"
+        ;
+      --> i18nName_en
+        -> NlgAdjective
+          --> root      "Monegasque"
+        ;
+      --> i18nName_es
+        -> NlgAdjective
+          --> root      "monegasco"
+        ;
+      --> i18nName_de
+        -> NlgAdjective
+          --> root      "monegassisch"
+        ;
+    ;
+  --> useArticle_fr  false
+  --> useArticle_en  false
+;

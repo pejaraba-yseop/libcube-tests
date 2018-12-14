@@ -1,0 +1,75 @@
+LibGeography:Country C_GNB
+  --> iso3166_1_numeric_code  "624"
+  --> iso3166_1_alpha_2       "GW"
+  --> iso3166_1_alpha_3       "GNB"
+  --> label
+    -> MultilingualText
+      --> i18nName_fr
+        -> NlgSubstantive
+          --> root    "Guinée-Bissau"
+          --> plural  "Guinée-Bissau"
+          --> gender  FEMININE
+          --> number  SINGULAR
+        ;
+      --> i18nName_en
+        -> NlgSubstantive
+          --> root    "Guinea-Bissau"
+          --> plural  "Guinea-Bissau"
+          --> gender  INANIMATE
+          --> number  SINGULAR
+        ;
+      --> i18nName_es
+        -> NlgSubstantive
+          --> root    "Guinea-Bisáu"
+          --> plural  "Guinea-Bisáu"
+          --> gender  FEMININE
+          --> number  SINGULAR
+        ;
+      --> i18nName_de
+        -> NlgSubstantive
+          --> root    "Guinea-Bissau"
+          --> plural  "Guinea-Bissau"
+          --> gender  NEUTRAL
+          --> number  SINGULAR
+        ;
+      --> i18nName_ja
+        -> NlgSubstantive
+          --> root    "ギニアビサウ"
+          --> plural  "ギニアビサウ"
+          --> gender  INANIMATE
+          --> number  SINGULAR
+        ;
+    ;
+  --> demonym
+    -> MultilingualText
+      --> i18nName_fr  "de Guinée-Bissau"
+      --> i18nName_en  "Guinea-Bissau national"
+      --> i18nName_es  "de Guinea-Bisáu"
+      --> i18nName_de
+        -> NlgGenderAgreeableSubstantive
+          --> masculine "Guinea-Bissauer"
+          --> feminine  "Guinea-Bissauerin"
+        ;
+    ;
+  --> adjective
+    -> MultilingualText
+      --> i18nName_fr
+        -> NlgAdjective
+          --> root      "de Guinée-Bissau"
+        ;
+      --> i18nName_en
+        -> NlgAdjective
+          --> root      "of Guinea-Bissau"
+        ;
+      --> i18nName_es
+        -> NlgAdjective
+          --> root      "de Guinea-Bisáu"
+        ;
+      --> i18nName_de
+        -> NlgAdjective
+          --> root      "guinea-bissauisch"
+        ;
+    ;
+  --> useArticle_fr  true
+  --> useArticle_en  false
+;

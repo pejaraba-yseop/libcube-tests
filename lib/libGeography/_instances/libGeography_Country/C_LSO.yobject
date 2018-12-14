@@ -1,0 +1,75 @@
+LibGeography:Country C_LSO
+  --> iso3166_1_numeric_code  "426"
+  --> iso3166_1_alpha_2       "LS"
+  --> iso3166_1_alpha_3       "LSO"
+  --> label
+    -> MultilingualText
+      --> i18nName_fr
+        -> NlgSubstantive
+          --> root    "Lesotho"
+          --> plural  "Lesotho"
+          --> gender  MASCULINE
+          --> number  SINGULAR
+        ;
+      --> i18nName_en
+        -> NlgSubstantive
+          --> root    "Lesotho"
+          --> plural  "Lesotho"
+          --> gender  INANIMATE
+          --> number  SINGULAR
+        ;
+      --> i18nName_es
+        -> NlgSubstantive
+          --> root    "Lesoto"
+          --> plural  "Lesoto"
+          --> gender  MASCULINE
+          --> number  SINGULAR
+        ;
+      --> i18nName_de
+        -> NlgSubstantive
+          --> root    "Lesotho"
+          --> plural  "Lesotho"
+          --> gender  NEUTRAL
+          --> number  SINGULAR
+        ;
+      --> i18nName_ja
+        -> NlgSubstantive
+          --> root    "レソト"
+          --> plural  "レソト"
+          --> gender  INANIMATE
+          --> number  SINGULAR
+        ;
+    ;
+  --> demonym
+    -> MultilingualText
+      --> i18nName_fr  "du Lesotho"
+      --> i18nName_en  "Basotho"
+      --> i18nName_es  "lesotense"
+      --> i18nName_de
+        -> NlgGenderAgreeableSubstantive
+          --> masculine "Lesother"
+          --> feminine  "Lesotherin"
+        ;
+    ;
+  --> adjective
+    -> MultilingualText
+      --> i18nName_fr
+        -> NlgAdjective
+          --> root      "du Lesotho"
+        ;
+      --> i18nName_en
+        -> NlgAdjective
+          --> root      "of Lesotho"
+        ;
+      --> i18nName_es
+        -> NlgAdjective
+          --> root      "lesotense"
+        ;
+      --> i18nName_de
+        -> NlgAdjective
+          --> root      "lesothisch"
+        ;
+    ;
+  --> useArticle_fr  true
+  --> useArticle_en  false
+;

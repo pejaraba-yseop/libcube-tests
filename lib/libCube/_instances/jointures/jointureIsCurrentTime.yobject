@@ -1,0 +1,11 @@
+LibCube:Jointure JOINTURE_CURRENT_TIME
+  --> attribute LibCube:Fact::isCurrentTime
+  --> dimensionConditions
+    -> List 
+    	--> values                     
+        -> LibCube:JointureDimensionCondition
+        	--> dimension DIMENSION_TIME
+        	--> members DIMENSION_TIME_CURRENT_MEMBER
+      ;
+    ;
+;

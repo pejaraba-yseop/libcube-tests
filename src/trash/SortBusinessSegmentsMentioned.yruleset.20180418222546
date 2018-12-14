@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<yseop-yml:ymlRuleset xmlns:yseop-yml="http://www.yseop.com/yml/storage" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" domainModelVersion="3" identifier="6fe21ae7-66c8-41a0-ad84-d15728e9dd65">
+    <yseop-yml:rules>
+        <yseop-yml:rule>24b00318-a53b-4414-b754-1375f8c8b58d</yseop-yml:rule>
+        <yseop-yml:rule>d21b5f51-0312-4a47-a4a5-bde2f57b7880</yseop-yml:rule>
+        <yseop-yml:rule>f37c751f-4da5-4f7b-846d-afa58022e41d</yseop-yml:rule>
+        <yseop-yml:rule>3b800283-1618-4ed7-a0b6-42db79a3e3b5</yseop-yml:rule>
+        <yseop-yml:rule>7859ec68-3d52-4b50-8728-52317debcd38</yseop-yml:rule>
+        <yseop-yml:rule>735b38c4-2bcf-464d-99d6-6946c92bb8b8</yseop-yml:rule>
+    </yseop-yml:rules>
+    <yseop-yml:name>SortBusinessSegmentsMentioned</yseop-yml:name>
+    <yseop-yml:properties identifier="5817d955-b169-4575-b793-28c342eb412f">
+        <yseop-yml:property identifier="5817d955-b169-4575-b793-28c342eb412f|dsl" type="YML_PROPERTY" name="dsl">"define mentioned Business Segments"</yseop-yml:property>
+    </yseop-yml:properties>
+</yseop-yml:ymlRuleset>

@@ -1,0 +1,80 @@
+LibGeography:Country C_COL
+  --> iso3166_1_numeric_code  "170"
+  --> iso3166_1_alpha_2       "CO"
+  --> iso3166_1_alpha_3       "COL"
+  --> label
+    -> MultilingualText
+      --> i18nName_fr
+        -> NlgSubstantive
+          --> root    "Colombie"
+          --> plural  "Colombie"
+          --> gender  FEMININE
+          --> number  SINGULAR
+        ;
+      --> i18nName_en
+        -> NlgSubstantive
+          --> root    "Colombia"
+          --> plural  "Colombia"
+          --> gender  INANIMATE
+          --> number  SINGULAR
+        ;
+      --> i18nName_es
+        -> NlgSubstantive
+          --> root    "Colombia"
+          --> plural  "Colombia"
+          --> gender  FEMININE
+          --> number  SINGULAR
+        ;
+      --> i18nName_de
+        -> NlgSubstantive
+          --> root    "Kolumbien"
+          --> plural  "Kolumbien"
+          --> gender  NEUTRAL
+          --> number  SINGULAR
+        ;
+      --> i18nName_ja
+        -> NlgSubstantive
+          --> root    "コロンビア"
+          --> plural  "コロンビア"
+          --> gender  INANIMATE
+          --> number  SINGULAR
+        ;
+    ;
+  --> demonym
+    -> MultilingualText
+      --> i18nName_fr
+        -> NlgGenderAgreeableSubstantive
+          --> masculine "Colombien"
+          --> feminine  "colombienne"
+        ;
+      --> i18nName_en  "Colombian"
+      --> i18nName_es  "colombiano"
+      --> i18nName_de
+        -> NlgGenderAgreeableSubstantive
+          --> masculine "Kolumbianer"
+          --> feminine  "Kolumbianerin"
+        ;
+    ;
+  --> adjective
+    -> MultilingualText
+      --> i18nName_fr
+        -> NlgAdjective
+          --> root      "colombien"
+          --> feminine  "colombienne"
+        ;
+      --> i18nName_en
+        -> NlgAdjective
+          --> root      "Colombian"
+        ;
+      --> i18nName_es
+        -> NlgAdjective
+          --> root      "colombiano"
+        ;
+      --> i18nName_de
+        -> NlgAdjective
+          --> root      "kolumbianisch"
+        ;
+    ;
+  --> useArticle_fr  true
+  --> useArticle_en  false
+;

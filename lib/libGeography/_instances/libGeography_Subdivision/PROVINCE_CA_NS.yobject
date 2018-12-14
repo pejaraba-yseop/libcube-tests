@@ -1,0 +1,50 @@
+LibGeography:Subdivision PROVINCE_CA_NS
+  --> iso3166_2    "CA-NS"
+  --> postal_code  "NS"
+  --> status       PROVINCE
+  --> label
+    -> MultilingualText
+      --> i18nName_fr
+        -> NlgSubstantive
+          --> root    "Nouvelle-Écosse"
+          --> plural  "Nouvelle-Écosse"
+          --> gender  FEMININE
+          --> number  SINGULAR
+        ;
+      --> i18nName_en
+        -> NlgSubstantive
+          --> root    "Nova Scotia"
+          --> plural  "Nova Scotia"
+          --> gender  INANIMATE
+          --> number  SINGULAR
+        ;
+      --> i18nName_es
+        -> NlgSubstantive
+          --> root    "Nueva Escocia"
+          --> plural  "Nueva Escocia"
+          --> gender  FEMININE
+          --> number  SINGULAR
+        ;
+      --> i18nName_de
+        -> NlgSubstantive
+          --> root    "Nova Scotia"
+          --> plural  "Nova Scotia"
+          --> gender  NEUTRAL
+          --> number  SINGULAR
+        ;
+      --> i18nName_ja
+        -> NlgSubstantive
+          --> root    "ノバスコシア州"
+          --> plural  "ノバスコシア州"
+          --> gender  INANIMATE
+          --> number  SINGULAR
+        ;
+    ;
+  --> demonym
+    -> MultilingualText
+    ;
+  --> adjective
+    -> MultilingualText
+    ;
+  --> useArticle_en  false
+;

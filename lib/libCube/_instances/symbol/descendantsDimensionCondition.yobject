@@ -1,0 +1,7 @@
+Symbol DESCENDANTS_RELATIONSHIP
+    --> dsl -> Textualization
+        --> language LANG_en
+        --> root "Descendants Jointure Dimension Condition Relationship"
+        --> number SINGULAR
+    ;
+;

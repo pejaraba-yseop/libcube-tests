@@ -1,0 +1,80 @@
+LibGeography:Country C_VUT
+  --> iso3166_1_numeric_code  "548"
+  --> iso3166_1_alpha_2       "VU"
+  --> iso3166_1_alpha_3       "VUT"
+  --> label
+    -> MultilingualText
+      --> i18nName_fr
+        -> NlgSubstantive
+          --> root    "Vanuatu"
+          --> plural  "Vanuatu"
+          --> gender  MASCULINE
+          --> number  SINGULAR
+        ;
+      --> i18nName_en
+        -> NlgSubstantive
+          --> root    "Vanuatu"
+          --> plural  "Vanuatu"
+          --> gender  INANIMATE
+          --> number  SINGULAR
+        ;
+      --> i18nName_es
+        -> NlgSubstantive
+          --> root    "Vanuatu"
+          --> plural  "Vanuatu"
+          --> gender  MASCULINE
+          --> number  SINGULAR
+        ;
+      --> i18nName_de
+        -> NlgSubstantive
+          --> root    "Vanuatu"
+          --> plural  "Vanuatu"
+          --> gender  NEUTRAL
+          --> number  SINGULAR
+        ;
+      --> i18nName_ja
+        -> NlgSubstantive
+          --> root    "バヌアツ"
+          --> plural  "バヌアツ"
+          --> gender  INANIMATE
+          --> number  SINGULAR
+        ;
+    ;
+  --> demonym
+    -> MultilingualText
+      --> i18nName_fr
+        -> NlgGenderAgreeableSubstantive
+          --> masculine "Vanuatuan"
+          --> feminine  "Vanuatuane"
+        ;
+      --> i18nName_en  "Vanuatuan"
+      --> i18nName_es  "vanuatense"
+      --> i18nName_de
+        -> NlgGenderAgreeableSubstantive
+          --> masculine "Vanuatuer"
+          --> feminine  "Vanuatuerin"
+        ;
+    ;
+  --> adjective
+    -> MultilingualText
+      --> i18nName_fr
+        -> NlgAdjective
+          --> root      "vanuatuan"
+          --> feminine  "vanuatuane"
+        ;
+      --> i18nName_en
+        -> NlgAdjective
+          --> root      "Vanuatuan"
+        ;
+      --> i18nName_es
+        -> NlgAdjective
+          --> root      "vanuatense"
+        ;
+      --> i18nName_de
+        -> NlgAdjective
+          --> root      "vanuatuisch"
+        ;
+    ;
+  --> useArticle_fr  true
+  --> useArticle_en  false
+;

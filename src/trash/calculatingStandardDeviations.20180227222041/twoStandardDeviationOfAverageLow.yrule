@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<yseop-yml:ymlRule xmlns:yseop-yml="http://www.yseop.com/yml/storage" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" domainModelVersion="3" identifier="bdc7b14b-5425-45a2-9896-f67314cf9b66">
+    <yseop-yml:content>getGeneralData().twoStandardDeviationOfAverageLow = getGeneralData().averagePeerList - (2* getGeneralData().standardDeviationPeerList);</yseop-yml:content>
+    <yseop-yml:content>getGeneralData().twoStandardDeviationOfAverageLow == null</yseop-yml:content>
+    <yseop-yml:name>twoStandardDeviationOfAverageLow</yseop-yml:name>
+    <yseop-yml:properties identifier="303c0c88-9962-46f3-a32f-0def5012f10b">
+        <yseop-yml:property identifier="303c0c88-9962-46f3-a32f-0def5012f10b|dsl" type="YML_PROPERTY" name="dsl">"two standard deviation of average low"</yseop-yml:property>
+        <yseop-yml:property identifier="303c0c88-9962-46f3-a32f-0def5012f10b|disabled" type="GENERATION_PROPERTY" name="disabled">true</yseop-yml:property>
+    </yseop-yml:properties>
+</yseop-yml:ymlRule>

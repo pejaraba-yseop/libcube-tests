@@ -1,0 +1,80 @@
+LibGeography:Country C_ABW
+  --> iso3166_1_numeric_code  "533"
+  --> iso3166_1_alpha_2       "AW"
+  --> iso3166_1_alpha_3       "ABW"
+  --> label
+    -> MultilingualText
+      --> i18nName_fr
+        -> NlgSubstantive
+          --> root    "Aruba"
+          --> plural  "Aruba"
+          --> gender  MASCULINE
+          --> number  SINGULAR
+        ;
+      --> i18nName_en
+        -> NlgSubstantive
+          --> root    "Aruba"
+          --> plural  "Aruba"
+          --> gender  INANIMATE
+          --> number  SINGULAR
+        ;
+      --> i18nName_es
+        -> NlgSubstantive
+          --> root    "Aruba"
+          --> plural  "Aruba"
+          --> gender  MASCULINE
+          --> number  SINGULAR
+        ;
+      --> i18nName_de
+        -> NlgSubstantive
+          --> root    "Aruba"
+          --> plural  "Aruba"
+          --> gender  NEUTRAL
+          --> number  SINGULAR
+        ;
+      --> i18nName_ja
+        -> NlgSubstantive
+          --> root    "アルバ"
+          --> plural  "アルバ"
+          --> gender  INANIMATE
+          --> number  SINGULAR
+        ;
+    ;
+  --> demonym
+    -> MultilingualText
+      --> i18nName_fr
+        -> NlgGenderAgreeableSubstantive
+          --> masculine "Arubain"
+          --> feminine  "Arubaine"
+        ;
+      --> i18nName_en  "Aruban"
+      --> i18nName_es  "arubeño"
+      --> i18nName_de
+        -> NlgGenderAgreeableSubstantive
+          --> masculine "Arubaner"
+          --> feminine  "Arubanerin"
+        ;
+    ;
+  --> adjective
+    -> MultilingualText
+      --> i18nName_fr
+        -> NlgAdjective
+          --> root      "arubain"
+          --> feminine  "arubaine"
+        ;
+      --> i18nName_en
+        -> NlgAdjective
+          --> root      "Aruban"
+        ;
+      --> i18nName_es
+        -> NlgAdjective
+          --> root      "arubeño"
+        ;
+      --> i18nName_de
+        -> NlgAdjective
+          --> root      "arubanisch"
+        ;
+    ;
+  --> useArticle_fr  false
+  --> useArticle_en  false
+;

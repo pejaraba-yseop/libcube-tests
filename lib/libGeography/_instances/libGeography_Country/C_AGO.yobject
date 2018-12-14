@@ -1,0 +1,80 @@
+LibGeography:Country C_AGO
+  --> iso3166_1_numeric_code  "024"
+  --> iso3166_1_alpha_2       "AO"
+  --> iso3166_1_alpha_3       "AGO"
+  --> label
+    -> MultilingualText
+      --> i18nName_fr
+        -> NlgSubstantive
+          --> root    "Angola"
+          --> plural  "Angola"
+          --> gender  MASCULINE
+          --> number  SINGULAR
+        ;
+      --> i18nName_en
+        -> NlgSubstantive
+          --> root    "Angola"
+          --> plural  "Angola"
+          --> gender  INANIMATE
+          --> number  SINGULAR
+        ;
+      --> i18nName_es
+        -> NlgSubstantive
+          --> root    "Angola"
+          --> plural  "Angola"
+          --> gender  MASCULINE
+          --> number  SINGULAR
+        ;
+      --> i18nName_de
+        -> NlgSubstantive
+          --> root    "Angola"
+          --> plural  "Angola"
+          --> gender  NEUTRAL
+          --> number  SINGULAR
+        ;
+      --> i18nName_ja
+        -> NlgSubstantive
+          --> root    "アンゴラ"
+          --> plural  "アンゴラ"
+          --> gender  INANIMATE
+          --> number  SINGULAR
+        ;
+    ;
+  --> demonym
+    -> MultilingualText
+      --> i18nName_fr
+        -> NlgGenderAgreeableSubstantive
+          --> masculine "Angolais"
+          --> feminine  "Angolaise"
+        ;
+      --> i18nName_en  "Angolan"
+      --> i18nName_es  "angoleño"
+      --> i18nName_de
+        -> NlgGenderAgreeableSubstantive
+          --> masculine "Angolaner"
+          --> feminine  "Angolanerin"
+        ;
+    ;
+  --> adjective
+    -> MultilingualText
+      --> i18nName_fr
+        -> NlgAdjective
+          --> root      "angolais"
+          --> feminine  "angolaise"
+        ;
+      --> i18nName_en
+        -> NlgAdjective
+          --> root      "Angolan"
+        ;
+      --> i18nName_es
+        -> NlgAdjective
+          --> root      "angoleño"
+        ;
+      --> i18nName_de
+        -> NlgAdjective
+          --> root      "angolanisch"
+        ;
+    ;
+  --> useArticle_fr  true
+  --> useArticle_en  false
+;

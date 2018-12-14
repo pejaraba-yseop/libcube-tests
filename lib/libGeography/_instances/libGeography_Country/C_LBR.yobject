@@ -1,0 +1,80 @@
+LibGeography:Country C_LBR
+  --> iso3166_1_numeric_code  "430"
+  --> iso3166_1_alpha_2       "LR"
+  --> iso3166_1_alpha_3       "LBR"
+  --> label
+    -> MultilingualText
+      --> i18nName_fr
+        -> NlgSubstantive
+          --> root    "Liberia"
+          --> plural  "Liberia"
+          --> gender  MASCULINE
+          --> number  SINGULAR
+        ;
+      --> i18nName_en
+        -> NlgSubstantive
+          --> root    "Liberia"
+          --> plural  "Liberia"
+          --> gender  INANIMATE
+          --> number  SINGULAR
+        ;
+      --> i18nName_es
+        -> NlgSubstantive
+          --> root    "Liberia"
+          --> plural  "Liberia"
+          --> gender  MASCULINE
+          --> number  SINGULAR
+        ;
+      --> i18nName_de
+        -> NlgSubstantive
+          --> root    "Liberia"
+          --> plural  "Liberia"
+          --> gender  NEUTRAL
+          --> number  SINGULAR
+        ;
+      --> i18nName_ja
+        -> NlgSubstantive
+          --> root    "リベリア"
+          --> plural  "リベリア"
+          --> gender  INANIMATE
+          --> number  SINGULAR
+        ;
+    ;
+  --> demonym
+    -> MultilingualText
+      --> i18nName_fr
+        -> NlgGenderAgreeableSubstantive
+          --> masculine "Libérien"
+          --> feminine  "Libérienne"
+        ;
+      --> i18nName_en  "Liberian"
+      --> i18nName_es  "liberiano"
+      --> i18nName_de
+        -> NlgGenderAgreeableSubstantive
+          --> masculine "Liberianer"
+          --> feminine  "Liberianerin"
+        ;
+    ;
+  --> adjective
+    -> MultilingualText
+      --> i18nName_fr
+        -> NlgAdjective
+          --> root      "libérien"
+          --> feminine  "libérienne"
+        ;
+      --> i18nName_en
+        -> NlgAdjective
+          --> root      "Liberian"
+        ;
+      --> i18nName_es
+        -> NlgAdjective
+          --> root      "liberiano"
+        ;
+      --> i18nName_de
+        -> NlgAdjective
+          --> root      "liberianisch"
+        ;
+    ;
+  --> useArticle_fr  true
+  --> useArticle_en  false
+;

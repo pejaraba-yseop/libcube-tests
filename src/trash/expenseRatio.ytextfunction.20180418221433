@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<yseop-yml:ymlTextFunction xmlns:yseop-yml="http://www.yseop.com/yml/storage" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" domainModelVersion="3" identifier="cb2adde4-7973-47b0-99ff-8ea8f168cd85">
+    <yseop-yml:textGranule domainModelVersion="3" identifier="94dcce7c-3137-40f1-a958-0061a8686e3a">
+        <yseop-yml:granuleI18nContents>
+            <yseop-yml:granuleUnilingueContent locale="en">
+                <yseop-yml:granuleContent>
+                    <yseop-yml:text>\beginStyle(nameStyle)
+    \value(theGeneralData.currentCompany)
+
+\endStyle
+
+has an expense ratio of
+
+\beginStyle(oneDigitStyle)
+    \value(expensesRatio, UNIT_PERCENT)
+
+\endStyle
+
+annualized as of
+\date(theGeneralData.currentPeriod.date, _DATE_DD, _DATE_MONTH, _DATE_YYYY, _DATE_MIDDLE_ENDIAN_CARDINAL)
+
+\if(theGeneralData.currentCompany.local == true)
+.though their expense ratio is 
+    \value(CURRENT_COMPANY_ALL_SEGMENTS_FACT_SELECTION.selectedFact.expensesRatioLowHigh) 
+    on a global basis, it is
+    \value(CURRENT_COMPANY_ALL_SEGMENTS_FACT_SELECTION.selectedFact.expensesRatioInLine) 
+    with their local peers.
+    
+\else
+    , which is considered
+    \value(CURRENT_COMPANY_ALL_SEGMENTS_FACT_SELECTION.selectedFact.expensesRatioLowHigh)
+on a global basis.
+\endIf</yseop-yml:text>
+                    <yseop-yml:inline-assemblies/>
+                    <yseop-yml:inline-dslFunctionCalls/>
+                </yseop-yml:granuleContent>
+            </yseop-yml:granuleUnilingueContent>
+            <yseop-yml:granuleUnilingueContent locale="es">
+                <yseop-yml:granuleContent>
+                    <yseop-yml:text/>
+                    <yseop-yml:inline-assemblies/>
+                    <yseop-yml:inline-dslFunctionCalls/>
+                </yseop-yml:granuleContent>
+            </yseop-yml:granuleUnilingueContent>
+            <yseop-yml:granuleUnilingueContent locale="fr">
+                <yseop-yml:granuleContent>
+                    <yseop-yml:text/>
+                    <yseop-yml:inline-assemblies/>
+                    <yseop-yml:inline-dslFunctionCalls/>
+                </yseop-yml:granuleContent>
+            </yseop-yml:granuleUnilingueContent>
+        </yseop-yml:granuleI18nContents>
+        <yseop-yml:dslCondition/>
+        <yseop-yml:name/>
+        <yseop-yml:creationDate>2018-02-26T20:14:37.341Z</yseop-yml:creationDate>
+        <yseop-yml:properties identifier="6bba0cf7-30ec-4d44-a997-ac20f87cfb51">
+            <yseop-yml:property identifier="6bba0cf7-30ec-4d44-a997-ac20f87cfb51|condition" type="YML_PROPERTY" name="condition"></yseop-yml:property>
+        </yseop-yml:properties>
+    </yseop-yml:textGranule>
+    <yseop-yml:localVariables>Number expensesRatio
+    --> dsl -> Textualization
+        --> language LANG_en
+        --> root "expensesRatio"
+        --> number SINGULAR
+    ;
+</yseop-yml:localVariables>
+    <yseop-yml:advancedContent>--> action {
+
+    expensesRatio = CURRENT_COMPANY_ALL_SEGMENTS_FACT_SELECTION.selectedFact.expensesRatio
+
+   this.text.write();
+           }</yseop-yml:advancedContent>
+    <yseop-yml:ymlParameters/>
+    <yseop-yml:name>expenseRatio</yseop-yml:name>
+    <yseop-yml:properties identifier="878fae8f-365a-4b4b-9241-36497dcdfe7f">
+        <yseop-yml:property identifier="878fae8f-365a-4b4b-9241-36497dcdfe7f|dsl" type="YML_PROPERTY" name="dsl">"expense ratio"</yseop-yml:property>
+    </yseop-yml:properties>
+</yseop-yml:ymlTextFunction>

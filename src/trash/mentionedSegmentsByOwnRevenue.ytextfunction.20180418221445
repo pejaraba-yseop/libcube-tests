@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<yseop-yml:ymlTextFunction xmlns:yseop-yml="http://www.yseop.com/yml/storage" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" domainModelVersion="3" identifier="73d4bd92-cd1f-4969-a142-8c438f83f3bc">
+    <yseop-yml:textGranule domainModelVersion="3" identifier="0a31a343-284c-4a29-90d6-f6e8c21a8ff0">
+        <yseop-yml:granuleI18nContents>
+            <yseop-yml:granuleUnilingueContent locale="en">
+                <yseop-yml:granuleContent>
+                    <yseop-yml:text>
+\foreach(_businessSegment, theGeneralData.mentionedBusinessSegmentByShareInOwnRevenueOrderedSet)
+    the
+    \value(_businessSegment)
+    segment represents
+
+    \beginStyle(oneDigitStyle)
+        \value(_businessSegment.segmentShareInCurrentCompanyRevenue, UNIT_PERCENT)
+
+    \endStyle
+
+    of total net premium written.
+
+\endForeach
+</yseop-yml:text>
+                    <yseop-yml:inline-assemblies/>
+                    <yseop-yml:inline-dslFunctionCalls/>
+                </yseop-yml:granuleContent>
+            </yseop-yml:granuleUnilingueContent>
+            <yseop-yml:granuleUnilingueContent locale="es">
+                <yseop-yml:granuleContent>
+                    <yseop-yml:text/>
+                    <yseop-yml:inline-assemblies/>
+                    <yseop-yml:inline-dslFunctionCalls/>
+                </yseop-yml:granuleContent>
+            </yseop-yml:granuleUnilingueContent>
+            <yseop-yml:granuleUnilingueContent locale="fr">
+                <yseop-yml:granuleContent>
+                    <yseop-yml:text/>
+                    <yseop-yml:inline-assemblies/>
+                    <yseop-yml:inline-dslFunctionCalls/>
+                </yseop-yml:granuleContent>
+            </yseop-yml:granuleUnilingueContent>
+        </yseop-yml:granuleI18nContents>
+        <yseop-yml:dslCondition/>
+        <yseop-yml:name/>
+        <yseop-yml:creationDate>2018-02-26T19:09:56.476Z</yseop-yml:creationDate>
+        <yseop-yml:properties identifier="0a436573-da23-4b10-969f-12a20c73f947">
+            <yseop-yml:property identifier="0a436573-da23-4b10-969f-12a20c73f947|condition" type="YML_PROPERTY" name="condition"></yseop-yml:property>
+        </yseop-yml:properties>
+    </yseop-yml:textGranule>
+    <yseop-yml:localVariables/>
+    <yseop-yml:advancedContent/>
+    <yseop-yml:ymlParameters/>
+    <yseop-yml:name>mentionedSegmentsByOwnRevenue</yseop-yml:name>
+    <yseop-yml:properties identifier="ac124a6b-8f48-4598-9799-74d9cb29b9c1">
+        <yseop-yml:property identifier="ac124a6b-8f48-4598-9799-74d9cb29b9c1|dsl" type="YML_PROPERTY" name="dsl">"mentioned segments by own revenue"</yseop-yml:property>
+    </yseop-yml:properties>
+</yseop-yml:ymlTextFunction>

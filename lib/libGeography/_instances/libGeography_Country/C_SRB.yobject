@@ -1,0 +1,80 @@
+LibGeography:Country C_SRB
+  --> iso3166_1_numeric_code  "688"
+  --> iso3166_1_alpha_2       "RS"
+  --> iso3166_1_alpha_3       "SRB"
+  --> label
+    -> MultilingualText
+      --> i18nName_fr
+        -> NlgSubstantive
+          --> root    "Serbie"
+          --> plural  "Serbie"
+          --> gender  FEMININE
+          --> number  SINGULAR
+        ;
+      --> i18nName_en
+        -> NlgSubstantive
+          --> root    "Serbia"
+          --> plural  "Serbia"
+          --> gender  INANIMATE
+          --> number  SINGULAR
+        ;
+      --> i18nName_es
+        -> NlgSubstantive
+          --> root    "Serbia"
+          --> plural  "Serbia"
+          --> gender  FEMININE
+          --> number  SINGULAR
+        ;
+      --> i18nName_de
+        -> NlgSubstantive
+          --> root    "Serbien"
+          --> plural  "Serbien"
+          --> gender  NEUTRAL
+          --> number  SINGULAR
+        ;
+      --> i18nName_ja
+        -> NlgSubstantive
+          --> root    "セルビア"
+          --> plural  "セルビア"
+          --> gender  INANIMATE
+          --> number  SINGULAR
+        ;
+    ;
+  --> demonym
+    -> MultilingualText
+      --> i18nName_fr
+        -> NlgGenderAgreeableSubstantive
+          --> masculine "Serbe"
+          --> feminine  "Serbe"
+        ;
+      --> i18nName_en  "Serb"
+      --> i18nName_es  "serbio"
+      --> i18nName_de
+        -> NlgGenderAgreeableSubstantive
+          --> masculine "Serbe"
+          --> feminine  "Serbin"
+        ;
+    ;
+  --> adjective
+    -> MultilingualText
+      --> i18nName_fr
+        -> NlgAdjective
+          --> root      "serbe"
+          --> feminine  "serbe"
+        ;
+      --> i18nName_en
+        -> NlgAdjective
+          --> root      "Serbian"
+        ;
+      --> i18nName_es
+        -> NlgAdjective
+          --> root      "serbio"
+        ;
+      --> i18nName_de
+        -> NlgAdjective
+          --> root      "serbisch"
+        ;
+    ;
+  --> useArticle_fr  true
+  --> useArticle_en  false
+;

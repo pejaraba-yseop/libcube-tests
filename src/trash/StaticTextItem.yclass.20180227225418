@@ -1,0 +1,72 @@
+interface StaticTextItem
+    field staticTextCountry
+        --> domains Text
+        --> xmlMapping XmlMappingProperty_NO_SAVE
+        --> dsl -> Textualization
+            --> language LANG_en
+            --> root "staticTextCountry"
+            --> number SINGULAR
+        ;
+    field startP1
+        --> domains Text
+        --> xmlMapping XmlMappingProperty_NO_SAVE
+        --> dsl -> Textualization
+            --> language LANG_en
+            --> root "startP1"
+            --> number SINGULAR
+            --> hasDeterminer false
+        ;
+    field endP1
+        --> domains Text
+        --> xmlMapping XmlMappingProperty_NO_SAVE
+        --> dsl -> Textualization
+            --> language LANG_en
+            --> root "endP1"
+            --> number SINGULAR
+            --> hasDeterminer false
+        ;
+    field startP2
+        --> domains Text
+        --> xmlMapping XmlMappingProperty_NO_SAVE
+        --> dsl -> Textualization
+            --> language LANG_en
+            --> root "startP2"
+            --> number SINGULAR
+            --> hasDeterminer false
+        ;
+    field endP2
+        --> domains Text
+        --> xmlMapping XmlMappingProperty_NO_SAVE
+        --> dsl -> Textualization
+            --> language LANG_en
+            --> root "endP2"
+            --> number SINGULAR
+        ;
+    field startP3
+        --> domains Text
+        --> xmlMapping XmlMappingProperty_NO_SAVE
+        --> dsl -> Textualization
+            --> language LANG_en
+            --> root "startP3"
+            --> number SINGULAR
+            --> hasDeterminer false
+        ;
+    field endP3
+        --> domains Text
+        --> xmlMapping XmlMappingProperty_NO_SAVE
+        --> dsl -> Textualization
+            --> language LANG_en
+            --> root "endP3"
+            --> number SINGULAR
+            --> hasDeterminer false
+        ;
+    classProperties
+    --> dsl -> Textualization
+        --> language LANG_en
+        --> root "staticTextItem"
+        --> number SINGULAR
+    ;
+;
+
+implementation StaticTextItem
+;

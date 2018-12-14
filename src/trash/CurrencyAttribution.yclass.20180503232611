@@ -1,0 +1,21 @@
+
+interface CurrencyAttribution extends LibCube:HierarchyElement
+    field code
+        --> domains Text
+        --> xmlMapping XmlMappingProperty_NO_SAVE
+        --> dsl -> Textualization
+            --> language LANG_en
+            --> root "code"
+            --> number SINGULAR
+        ;
+    classProperties
+    --> dsl -> Textualization
+        --> language LANG_en
+        --> root "Currency Attribution"
+        --> number SINGULAR
+    ;
+;
+
+implementation CurrencyAttribution
+;
+

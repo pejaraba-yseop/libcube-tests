@@ -1,0 +1,7 @@
+Symbol LEAF_RELATIONSHIP
+    --> dsl -> Textualization
+        --> language LANG_en
+        --> root "Leaf of a tree hierarchy"
+        --> number SINGULAR
+    ;
+;

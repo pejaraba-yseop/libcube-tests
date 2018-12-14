@@ -1,0 +1,76 @@
+LibGeography:Country C_REU
+  --> iso3166_1_numeric_code  "638"
+  --> iso3166_1_alpha_2       "RE"
+  --> iso3166_1_alpha_3       "REU"
+  --> label
+    -> MultilingualText
+      --> i18nName_fr
+        -> NlgSubstantive
+          --> root    "La Réunion"
+          --> plural  "La Réunion"
+          --> gender  FEMININE
+          --> number  SINGULAR
+        ;
+      --> i18nName_en
+        -> NlgSubstantive
+          --> root    "Réunion"
+          --> plural  "Réunion"
+          --> gender  INANIMATE
+          --> number  SINGULAR
+        ;
+      --> i18nName_es
+        -> NlgSubstantive
+          --> root    "Reunión"
+          --> plural  "Reunión"
+          --> gender  MASCULINE
+          --> number  SINGULAR
+        ;
+      --> i18nName_de
+        -> NlgSubstantive
+          --> root    "Réunion"
+          --> plural  "Réunion"
+          --> gender  NEUTRAL
+          --> number  SINGULAR
+        ;
+      --> i18nName_ja
+        -> NlgSubstantive
+          --> root    "レユニオン"
+          --> plural  "レユニオン"
+          --> gender  INANIMATE
+          --> number  SINGULAR
+        ;
+    ;
+  --> demonym
+    -> MultilingualText
+      --> i18nName_fr
+        -> NlgGenderAgreeableSubstantive
+          --> masculine "Réunionnais"
+          --> feminine  "Réunionnaise"
+        ;
+      --> i18nName_en  "Reunionese"
+      --> i18nName_es  "reunionés"
+      --> i18nName_de  "von Réunion"
+    ;
+  --> adjective
+    -> MultilingualText
+      --> i18nName_fr
+        -> NlgAdjective
+          --> root      "réunionnais"
+          --> feminine  "réunionnaise"
+        ;
+      --> i18nName_en
+        -> NlgAdjective
+          --> root      "Reunionese"
+        ;
+      --> i18nName_es
+        -> NlgAdjective
+          --> root      "reunionés"
+        ;
+      --> i18nName_de
+        -> NlgAdjective
+          --> root      "von Réunion"
+        ;
+    ;
+  --> useArticle_fr  true
+  --> useArticle_en  false
+;

@@ -1,0 +1,80 @@
+LibGeography:Country C_GHA
+  --> iso3166_1_numeric_code  "288"
+  --> iso3166_1_alpha_2       "GH"
+  --> iso3166_1_alpha_3       "GHA"
+  --> label
+    -> MultilingualText
+      --> i18nName_fr
+        -> NlgSubstantive
+          --> root    "Ghana"
+          --> plural  "Ghana"
+          --> gender  MASCULINE
+          --> number  SINGULAR
+        ;
+      --> i18nName_en
+        -> NlgSubstantive
+          --> root    "Ghana"
+          --> plural  "Ghana"
+          --> gender  INANIMATE
+          --> number  SINGULAR
+        ;
+      --> i18nName_es
+        -> NlgSubstantive
+          --> root    "Ghana"
+          --> plural  "Ghana"
+          --> gender  MASCULINE
+          --> number  SINGULAR
+        ;
+      --> i18nName_de
+        -> NlgSubstantive
+          --> root    "Ghana"
+          --> plural  "Ghana"
+          --> gender  NEUTRAL
+          --> number  SINGULAR
+        ;
+      --> i18nName_ja
+        -> NlgSubstantive
+          --> root    "ガーナ"
+          --> plural  "ガーナ"
+          --> gender  INANIMATE
+          --> number  SINGULAR
+        ;
+    ;
+  --> demonym
+    -> MultilingualText
+      --> i18nName_fr
+        -> NlgGenderAgreeableSubstantive
+          --> masculine "Ghanéen"
+          --> feminine  "Ghanéenne"
+        ;
+      --> i18nName_en  "Ghanaian"
+      --> i18nName_es  "ghanés"
+      --> i18nName_de
+        -> NlgGenderAgreeableSubstantive
+          --> masculine "Ghanaer"
+          --> feminine  "Ghanaerin"
+        ;
+    ;
+  --> adjective
+    -> MultilingualText
+      --> i18nName_fr
+        -> NlgAdjective
+          --> root      "ghanéen"
+          --> feminine  "ghanéenne"
+        ;
+      --> i18nName_en
+        -> NlgAdjective
+          --> root      "Ghanaian"
+        ;
+      --> i18nName_es
+        -> NlgAdjective
+          --> root      "ghanés"
+        ;
+      --> i18nName_de
+        -> NlgAdjective
+          --> root      "ghanaisch"
+        ;
+    ;
+  --> useArticle_fr  true
+  --> useArticle_en  false
+;

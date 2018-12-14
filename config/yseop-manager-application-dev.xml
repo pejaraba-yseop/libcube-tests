@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<yseop-manager>
+  <application>
+    <transfos>
+      <transfo name="html">
+        <out mime="text/html">$home$/dialog/output.xsl</out>
+      </transfo>
+    </transfos>
+    <runtime-path generated="true">C:\yseop\yseop-engine\yseop-engine-7.1.0.M2-003</runtime-path>
+    <runtime generated="true">erunbc_</runtime>
+  </application>
+</yseop-manager>

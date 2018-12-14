@@ -1,0 +1,7 @@
+Symbol SORT_TYPE_MULTIPLE_MEASURES
+    --> dsl -> Textualization
+        --> language LANG_en
+        --> root "Multiple Measures Sort Type"
+        --> number SINGULAR
+    ;
+;

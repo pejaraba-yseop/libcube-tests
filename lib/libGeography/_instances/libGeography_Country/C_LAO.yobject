@@ -1,0 +1,80 @@
+LibGeography:Country C_LAO
+  --> iso3166_1_numeric_code  "418"
+  --> iso3166_1_alpha_2       "LA"
+  --> iso3166_1_alpha_3       "LAO"
+  --> label
+    -> MultilingualText
+      --> i18nName_fr
+        -> NlgSubstantive
+          --> root    "Laos"
+          --> plural  "Laos"
+          --> gender  MASCULINE
+          --> number  SINGULAR
+        ;
+      --> i18nName_en
+        -> NlgSubstantive
+          --> root    "Laos"
+          --> plural  "Laos"
+          --> gender  INANIMATE
+          --> number  SINGULAR
+        ;
+      --> i18nName_es
+        -> NlgSubstantive
+          --> root    "Laos"
+          --> plural  "Laos"
+          --> gender  MASCULINE
+          --> number  SINGULAR
+        ;
+      --> i18nName_de
+        -> NlgSubstantive
+          --> root    "Laos"
+          --> plural  "Laos"
+          --> gender  NEUTRAL
+          --> number  SINGULAR
+        ;
+      --> i18nName_ja
+        -> NlgSubstantive
+          --> root    "ラオス"
+          --> plural  "ラオス"
+          --> gender  INANIMATE
+          --> number  SINGULAR
+        ;
+    ;
+  --> demonym
+    -> MultilingualText
+      --> i18nName_fr
+        -> NlgGenderAgreeableSubstantive
+          --> masculine "Laotien"
+          --> feminine  "Laotienne "
+        ;
+      --> i18nName_en  "Lao"
+      --> i18nName_es  "laosiano"
+      --> i18nName_de
+        -> NlgGenderAgreeableSubstantive
+          --> masculine "Laote"
+          --> feminine  "Laotin"
+        ;
+    ;
+  --> adjective
+    -> MultilingualText
+      --> i18nName_fr
+        -> NlgAdjective
+          --> root      "laotien"
+          --> feminine  "laotienne"
+        ;
+      --> i18nName_en
+        -> NlgAdjective
+          --> root      "Lao; Laotian"
+        ;
+      --> i18nName_es
+        -> NlgAdjective
+          --> root      "laosiano"
+        ;
+      --> i18nName_de
+        -> NlgAdjective
+          --> root      "laotisch"
+        ;
+    ;
+  --> useArticle_fr  true
+  --> useArticle_en  false
+;

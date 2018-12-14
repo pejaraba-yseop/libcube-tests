@@ -1,0 +1,80 @@
+LibGeography:Country C_ROU
+  --> iso3166_1_numeric_code  "642"
+  --> iso3166_1_alpha_2       "RO"
+  --> iso3166_1_alpha_3       "ROU"
+  --> label
+    -> MultilingualText
+      --> i18nName_fr
+        -> NlgSubstantive
+          --> root    "Roumanie"
+          --> plural  "Roumanie"
+          --> gender  FEMININE
+          --> number  SINGULAR
+        ;
+      --> i18nName_en
+        -> NlgSubstantive
+          --> root    "Romania"
+          --> plural  "Romania"
+          --> gender  INANIMATE
+          --> number  SINGULAR
+        ;
+      --> i18nName_es
+        -> NlgSubstantive
+          --> root    "Rumanía"
+          --> plural  "Rumanía"
+          --> gender  FEMININE
+          --> number  SINGULAR
+        ;
+      --> i18nName_de
+        -> NlgSubstantive
+          --> root    "Rumänien"
+          --> plural  "Rumänien"
+          --> gender  NEUTRAL
+          --> number  SINGULAR
+        ;
+      --> i18nName_ja
+        -> NlgSubstantive
+          --> root    "ルーマニア"
+          --> plural  "ルーマニア"
+          --> gender  INANIMATE
+          --> number  SINGULAR
+        ;
+    ;
+  --> demonym
+    -> MultilingualText
+      --> i18nName_fr
+        -> NlgGenderAgreeableSubstantive
+          --> masculine "Roumain"
+          --> feminine  "Roumaine"
+        ;
+      --> i18nName_en  "Romanian"
+      --> i18nName_es  "rumano"
+      --> i18nName_de
+        -> NlgGenderAgreeableSubstantive
+          --> masculine "Rumäne"
+          --> feminine  "Rumänin"
+        ;
+    ;
+  --> adjective
+    -> MultilingualText
+      --> i18nName_fr
+        -> NlgAdjective
+          --> root      "roumain"
+          --> feminine  "roumaine"
+        ;
+      --> i18nName_en
+        -> NlgAdjective
+          --> root      "Romanian"
+        ;
+      --> i18nName_es
+        -> NlgAdjective
+          --> root      "rumano"
+        ;
+      --> i18nName_de
+        -> NlgAdjective
+          --> root      "rumänisch"
+        ;
+    ;
+  --> useArticle_fr  true
+  --> useArticle_en  false
+;

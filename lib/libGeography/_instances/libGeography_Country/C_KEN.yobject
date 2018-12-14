@@ -1,0 +1,80 @@
+LibGeography:Country C_KEN
+  --> iso3166_1_numeric_code  "404"
+  --> iso3166_1_alpha_2       "KE"
+  --> iso3166_1_alpha_3       "KEN"
+  --> label
+    -> MultilingualText
+      --> i18nName_fr
+        -> NlgSubstantive
+          --> root    "Kenya"
+          --> plural  "Kenya"
+          --> gender  MASCULINE
+          --> number  SINGULAR
+        ;
+      --> i18nName_en
+        -> NlgSubstantive
+          --> root    "Kenya"
+          --> plural  "Kenya"
+          --> gender  INANIMATE
+          --> number  SINGULAR
+        ;
+      --> i18nName_es
+        -> NlgSubstantive
+          --> root    "Kenia"
+          --> plural  "Kenia"
+          --> gender  MASCULINE
+          --> number  SINGULAR
+        ;
+      --> i18nName_de
+        -> NlgSubstantive
+          --> root    "Kenia"
+          --> plural  "Kenia"
+          --> gender  NEUTRAL
+          --> number  SINGULAR
+        ;
+      --> i18nName_ja
+        -> NlgSubstantive
+          --> root    "ケニア"
+          --> plural  "ケニア"
+          --> gender  INANIMATE
+          --> number  SINGULAR
+        ;
+    ;
+  --> demonym
+    -> MultilingualText
+      --> i18nName_fr
+        -> NlgGenderAgreeableSubstantive
+          --> masculine "Kényan"
+          --> feminine  "Kényane"
+        ;
+      --> i18nName_en  "Kenyan"
+      --> i18nName_es  "keniata"
+      --> i18nName_de
+        -> NlgGenderAgreeableSubstantive
+          --> masculine "Kenianer"
+          --> feminine  "Kenianerin"
+        ;
+    ;
+  --> adjective
+    -> MultilingualText
+      --> i18nName_fr
+        -> NlgAdjective
+          --> root      "kényan"
+          --> feminine  "kényane"
+        ;
+      --> i18nName_en
+        -> NlgAdjective
+          --> root      "Kenyan"
+        ;
+      --> i18nName_es
+        -> NlgAdjective
+          --> root      "keniata"
+        ;
+      --> i18nName_de
+        -> NlgAdjective
+          --> root      "kenianisch"
+        ;
+    ;
+  --> useArticle_fr  true
+  --> useArticle_en  false
+;

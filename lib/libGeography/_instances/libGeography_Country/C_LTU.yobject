@@ -1,0 +1,80 @@
+LibGeography:Country C_LTU
+  --> iso3166_1_numeric_code  "440"
+  --> iso3166_1_alpha_2       "LT"
+  --> iso3166_1_alpha_3       "LTU"
+  --> label
+    -> MultilingualText
+      --> i18nName_fr
+        -> NlgSubstantive
+          --> root    "Lituanie"
+          --> plural  "Lituanie"
+          --> gender  FEMININE
+          --> number  SINGULAR
+        ;
+      --> i18nName_en
+        -> NlgSubstantive
+          --> root    "Lithuania"
+          --> plural  "Lithuania"
+          --> gender  INANIMATE
+          --> number  SINGULAR
+        ;
+      --> i18nName_es
+        -> NlgSubstantive
+          --> root    "Lituania"
+          --> plural  "Lituania"
+          --> gender  FEMININE
+          --> number  SINGULAR
+        ;
+      --> i18nName_de
+        -> NlgSubstantive
+          --> root    "Litauen"
+          --> plural  "Litauen"
+          --> gender  NEUTRAL
+          --> number  SINGULAR
+        ;
+      --> i18nName_ja
+        -> NlgSubstantive
+          --> root    "リトアニア"
+          --> plural  "リトアニア"
+          --> gender  INANIMATE
+          --> number  SINGULAR
+        ;
+    ;
+  --> demonym
+    -> MultilingualText
+      --> i18nName_fr
+        -> NlgGenderAgreeableSubstantive
+          --> masculine "Lituanien"
+          --> feminine  "Lituanienne"
+        ;
+      --> i18nName_en  "Lithuanian"
+      --> i18nName_es  "lituano"
+      --> i18nName_de
+        -> NlgGenderAgreeableSubstantive
+          --> masculine "Litauer"
+          --> feminine  "Litauerin"
+        ;
+    ;
+  --> adjective
+    -> MultilingualText
+      --> i18nName_fr
+        -> NlgAdjective
+          --> root      "lituanien"
+          --> feminine  "lituanienne"
+        ;
+      --> i18nName_en
+        -> NlgAdjective
+          --> root      "Lithuanian"
+        ;
+      --> i18nName_es
+        -> NlgAdjective
+          --> root      "lituano"
+        ;
+      --> i18nName_de
+        -> NlgAdjective
+          --> root      "litauisch"
+        ;
+    ;
+  --> useArticle_fr  true
+  --> useArticle_en  false
+;

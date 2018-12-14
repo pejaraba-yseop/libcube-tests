@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<yseop-yml:ymlTextFunction xmlns:yseop-yml="http://www.yseop.com/yml/storage" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" domainModelVersion="3" identifier="38c66008-2e6a-4919-8f70-98feaa9d9fcb">
+    <yseop-yml:textGranule domainModelVersion="3" identifier="af25a3d1-d167-43e3-b8c2-346b76cc46db">
+        <yseop-yml:granuleI18nContents>
+            <yseop-yml:granuleUnilingueContent locale="en">
+                <yseop-yml:granuleContent>
+                    <yseop-yml:text>
+\if(scoreCardScore == scoreCardScoreAdjusted)
+    Moody's considers
+    \nounPhrase("Market Position, Brand, and Distribution", _OWNER: getGeneralData().currentCompany)
+    as meeting expectations for
+    \nounPhrase(scoreCardScoreAdjusted)
+    \+
+    -
+    \+
+    rated insurers, as indicated by its
+    \nounPhrase(scoreCardScore)
+    \+
+    -
+    \+
+    level designated by the score card metrics.
+\else
+    Moody's considers
+    \nounPhrase("Market Position, Brand, and Distribution", _OWNER: getGeneralData().currentCompany)
+    as being more aligned with expectations for
+    \nounPhrase(scoreCardScoreAdjusted)
+    \+
+    -
+    \+
+    rated insurers, as opposed to the
+    \nounPhrase(scoreCardScore)
+    \+
+    -
+    \+
+    level designated by the score card metrics.
+\endIf
+</yseop-yml:text>
+                    <yseop-yml:inline-assemblies/>
+                    <yseop-yml:inline-dslFunctionCalls/>
+                </yseop-yml:granuleContent>
+            </yseop-yml:granuleUnilingueContent>
+            <yseop-yml:granuleUnilingueContent locale="es">
+                <yseop-yml:granuleContent>
+                    <yseop-yml:text/>
+                    <yseop-yml:inline-assemblies/>
+                    <yseop-yml:inline-dslFunctionCalls/>
+                </yseop-yml:granuleContent>
+            </yseop-yml:granuleUnilingueContent>
+            <yseop-yml:granuleUnilingueContent locale="fr">
+                <yseop-yml:granuleContent>
+                    <yseop-yml:text/>
+                    <yseop-yml:inline-assemblies/>
+                    <yseop-yml:inline-dslFunctionCalls/>
+                </yseop-yml:granuleContent>
+            </yseop-yml:granuleUnilingueContent>
+        </yseop-yml:granuleI18nContents>
+        <yseop-yml:dslCondition/>
+        <yseop-yml:name/>
+        <yseop-yml:creationDate>2018-03-02T15:59:22.504Z</yseop-yml:creationDate>
+        <yseop-yml:properties identifier="0d4aa55a-8e04-4d14-9e9e-29e6b041ed08">
+            <yseop-yml:property identifier="0d4aa55a-8e04-4d14-9e9e-29e6b041ed08|condition" type="YML_PROPERTY" name="condition"></yseop-yml:property>
+        </yseop-yml:properties>
+    </yseop-yml:textGranule>
+    <yseop-yml:localVariables>Text scoreCardScore
+    --> dsl -> Textualization
+        --> language LANG_en
+        --> root "scoreCardScore"
+        --> number SINGULAR
+    ;
+
+Text scoreCardScoreAdjusted
+    --> dsl -> Textualization
+        --> language LANG_en
+        --> root "scoreCardScoreAdjusted"
+        --> number SINGULAR
+        --> hasDeterminer false
+    ;
+</yseop-yml:localVariables>
+    <yseop-yml:advancedContent>--> action {
+
+    if(CURRENT_COMPANY_ALL_SEGMENTS_FACT_SELECTION.selectedFact.getMeasure(MEASURE_SCORE_MARKET_POSITION) != null &amp;&amp; CURRENT_COMPANY_ALL_SEGMENTS_FACT_SELECTION.selectedFact.getMeasure(MEASURE_ADJUSTED_SCORE_MARKET_POSITION) != null) {
+        
+    
+    
+        scoreCardScore = CURRENT_COMPANY_ALL_SEGMENTS_FACT_SELECTION.selectedFact.getMeasure(MEASURE_SCORE_MARKET_POSITION).textValue;
+        scoreCardScoreAdjusted = CURRENT_COMPANY_ALL_SEGMENTS_FACT_SELECTION.selectedFact.getMeasure(MEASURE_ADJUSTED_SCORE_MARKET_POSITION).textValue;    
+    
+        
+    
+       this.text.write();
+    }
+           }</yseop-yml:advancedContent>
+    <yseop-yml:ymlParameters/>
+    <yseop-yml:name>rating</yseop-yml:name>
+    <yseop-yml:properties identifier="03980c58-b1fd-4922-a9d5-0ac58df7ee2f">
+        <yseop-yml:property identifier="03980c58-b1fd-4922-a9d5-0ac58df7ee2f|dsl" type="YML_PROPERTY" name="dsl">"rating"</yseop-yml:property>
+    </yseop-yml:properties>
+</yseop-yml:ymlTextFunction>

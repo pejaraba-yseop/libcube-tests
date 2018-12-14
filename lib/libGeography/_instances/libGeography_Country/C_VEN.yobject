@@ -1,0 +1,80 @@
+LibGeography:Country C_VEN
+  --> iso3166_1_numeric_code  "862"
+  --> iso3166_1_alpha_2       "VE"
+  --> iso3166_1_alpha_3       "VEN"
+  --> label
+    -> MultilingualText
+      --> i18nName_fr
+        -> NlgSubstantive
+          --> root    "Venezuela"
+          --> plural  "Venezuela"
+          --> gender  MASCULINE
+          --> number  SINGULAR
+        ;
+      --> i18nName_en
+        -> NlgSubstantive
+          --> root    "Venezuela"
+          --> plural  "Venezuela"
+          --> gender  INANIMATE
+          --> number  SINGULAR
+        ;
+      --> i18nName_es
+        -> NlgSubstantive
+          --> root    "Venezuela"
+          --> plural  "Venezuela"
+          --> gender  MASCULINE
+          --> number  SINGULAR
+        ;
+      --> i18nName_de
+        -> NlgSubstantive
+          --> root    "Venezuela"
+          --> plural  "Venezuela"
+          --> gender  NEUTRAL
+          --> number  SINGULAR
+        ;
+      --> i18nName_ja
+        -> NlgSubstantive
+          --> root    "ベネズエラ"
+          --> plural  "ベネズエラ"
+          --> gender  INANIMATE
+          --> number  SINGULAR
+        ;
+    ;
+  --> demonym
+    -> MultilingualText
+      --> i18nName_fr
+        -> NlgGenderAgreeableSubstantive
+          --> masculine "Vénézuélien"
+          --> feminine  "Vénézuélienne"
+        ;
+      --> i18nName_en  "Venezuelan"
+      --> i18nName_es  "venezolano"
+      --> i18nName_de
+        -> NlgGenderAgreeableSubstantive
+          --> masculine "Venezolaner"
+          --> feminine  "Venezolanerin"
+        ;
+    ;
+  --> adjective
+    -> MultilingualText
+      --> i18nName_fr
+        -> NlgAdjective
+          --> root      "vénézuélien"
+          --> feminine  "vénézuélienne"
+        ;
+      --> i18nName_en
+        -> NlgAdjective
+          --> root      "Venezuelan"
+        ;
+      --> i18nName_es
+        -> NlgAdjective
+          --> root      "venezolano"
+        ;
+      --> i18nName_de
+        -> NlgAdjective
+          --> root      "venezolanisch"
+        ;
+    ;
+  --> useArticle_fr  true
+  --> useArticle_en  false
+;

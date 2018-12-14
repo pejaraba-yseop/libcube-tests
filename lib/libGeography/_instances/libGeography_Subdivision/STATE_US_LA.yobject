@@ -1,0 +1,55 @@
+LibGeography:Subdivision STATE_US_LA
+  --> iso3166_2    "US-LA"
+  --> postal_code  "LA"
+  --> status       STATE
+  --> label
+    -> MultilingualText
+      --> i18nName_fr
+        -> NlgSubstantive
+          --> root    "Louisiane"
+          --> plural  "Louisiane"
+          --> gender  FEMININE
+          --> number  SINGULAR
+        ;
+      --> i18nName_en
+        -> NlgSubstantive
+          --> root    "Louisiana"
+          --> plural  "Louisiana"
+          --> gender  INANIMATE
+          --> number  SINGULAR
+        ;
+      --> i18nName_es
+        -> NlgSubstantive
+          --> root    "Luisiana​"
+          --> plural  "Luisiana​"
+          --> gender  FEMININE
+          --> number  SINGULAR
+        ;
+      --> i18nName_de
+        -> NlgSubstantive
+          --> root    "Louisiana"
+          --> plural  "Louisiana"
+          --> gender  NEUTRAL
+          --> number  SINGULAR
+        ;
+      --> i18nName_ja
+        -> NlgSubstantive
+          --> root    " ルイジアナ州"
+          --> plural  " ルイジアナ州"
+          --> gender  INANIMATE
+          --> number  SINGULAR
+        ;
+    ;
+  --> demonym
+    -> MultilingualText
+      --> i18nName_en  "Louisianian"
+    ;
+  --> adjective
+    -> MultilingualText
+      --> i18nName_en
+        -> NlgAdjective
+          --> root      "Louisianian"
+        ;
+    ;
+  --> useArticle_en  false
+;

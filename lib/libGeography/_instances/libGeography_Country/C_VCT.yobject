@@ -1,0 +1,75 @@
+LibGeography:Country C_VCT
+  --> iso3166_1_numeric_code  "670"
+  --> iso3166_1_alpha_2       "VC"
+  --> iso3166_1_alpha_3       "VCT"
+  --> label
+    -> MultilingualText
+      --> i18nName_fr
+        -> NlgSubstantive
+          --> root    "Saint-Vincent-et-les Grenadines"
+          --> plural  "Saint-Vincent-et-les Grenadines"
+          --> gender  MASCULINE
+          --> number  SINGULAR
+        ;
+      --> i18nName_en
+        -> NlgSubstantive
+          --> root    "Saint Vincent and the Grenadines"
+          --> plural  "Saint Vincent and the Grenadines"
+          --> gender  INANIMATE
+          --> number  SINGULAR
+        ;
+      --> i18nName_es
+        -> NlgSubstantive
+          --> root    "San Vicente y las Granadinas"
+          --> plural  "San Vicente y las Granadinas"
+          --> gender  MASCULINE
+          --> number  SINGULAR
+        ;
+      --> i18nName_de
+        -> NlgSubstantive
+          --> root    "St. Vincent und Grenadinen"
+          --> plural  "St. Vincent und Grenadinen"
+          --> gender  NEUTRAL
+          --> number  SINGULAR
+        ;
+      --> i18nName_ja
+        -> NlgSubstantive
+          --> root    "セントビンセントとグレナディーン"
+          --> plural  "セントビンセントとグレナディーン"
+          --> gender  INANIMATE
+          --> number  SINGULAR
+        ;
+    ;
+  --> demonym
+    -> MultilingualText
+      --> i18nName_fr  " de Saint-Vincent-et-les-Grenadines"
+      --> i18nName_en  "Vincentian"
+      --> i18nName_es  "sanvicentino"
+      --> i18nName_de
+        -> NlgGenderAgreeableSubstantive
+          --> masculine "Vincenter"
+          --> feminine  "Vincenterin"
+        ;
+    ;
+  --> adjective
+    -> MultilingualText
+      --> i18nName_fr
+        -> NlgAdjective
+          --> root      "de Saint-Vincent-"
+        ;
+      --> i18nName_en
+        -> NlgAdjective
+          --> root      "Vincentian; of Saint Vincent and the Grenadines"
+        ;
+      --> i18nName_es
+        -> NlgAdjective
+          --> root      "sanvicentino"
+        ;
+      --> i18nName_de
+        -> NlgAdjective
+          --> root      "vincentisch"
+        ;
+    ;
+  --> useArticle_fr  false
+  --> useArticle_en  false
+;

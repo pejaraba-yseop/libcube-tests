@@ -1,0 +1,58 @@
+interface LibCube:NonIndicatorMembersId
+    field nonIndicatorMembers
+        --> domains HashSet
+        --> xmlMapping XmlMappingProperty_NO_SAVE
+        --> dsl -> Textualization
+            --> language LANG_en
+            --> root "nonIndicatorMembers"
+            --> number SINGULAR
+        ;
+
+    method isEqualTo(LibCube:NonIndicatorMembersId otherId)
+        --> domains Boolean
+
+    method equalMembers(HashSet otherMembers)
+        --> domains Boolean
+
+    method getText()
+        --> domains String
+
+    classProperties
+    --> dsl -> Textualization
+        --> language LANG_en
+        --> root "Cube Measure"
+        --> number SINGULAR
+    ;
+;
+
+implementation LibCube:NonIndicatorMembersId
+;
+
+function LibCube:NonIndicatorMembersId::isEqualTo(LibCube:NonIndicatorMembersId otherId)
+--> action {
+    return this.equalMembers(otherId.nonIndicatorMembers);
+}
+;
+
+
+function LibCube:NonIndicatorMembersId::equalMembers(HashSet otherMembers)
+--> action {
+    if(intersection(this.nonIndicatorMembers, otherMembers).size() == this.nonIndicatorMembers.size()){
+      return true;  
+    }
+    else{
+        return false;
+    }
+}
+;
+
+function LibCube:NonIndicatorMembersId::getText()
+--> local String id
+--> action {
+    id=""
+    foreach(_member, this.nonIndicatorMembers){
+        id = concat(id, _member.identifier);
+    }
+    return id;
+}
+;

@@ -1,0 +1,55 @@
+LibGeography:Subdivision STATE_US_SC
+  --> iso3166_2    "US-SC"
+  --> postal_code  "SC"
+  --> status       STATE
+  --> label
+    -> MultilingualText
+      --> i18nName_fr
+        -> NlgSubstantive
+          --> root    "Caroline du Sud"
+          --> plural  "Caroline du Sud"
+          --> gender  FEMININE
+          --> number  SINGULAR
+        ;
+      --> i18nName_en
+        -> NlgSubstantive
+          --> root    "South Carolina"
+          --> plural  "South Carolina"
+          --> gender  INANIMATE
+          --> number  SINGULAR
+        ;
+      --> i18nName_es
+        -> NlgSubstantive
+          --> root    "Carolina del Sur"
+          --> plural  "Carolina del Sur"
+          --> gender  MASCULINE
+          --> number  SINGULAR
+        ;
+      --> i18nName_de
+        -> NlgSubstantive
+          --> root    "South Carolina"
+          --> plural  "South Carolina"
+          --> gender  NEUTRAL
+          --> number  SINGULAR
+        ;
+      --> i18nName_ja
+        -> NlgSubstantive
+          --> root    " サウスカロライナ州"
+          --> plural  " サウスカロライナ州"
+          --> gender  INANIMATE
+          --> number  SINGULAR
+        ;
+    ;
+  --> demonym
+    -> MultilingualText
+      --> i18nName_en  "South Carolinian"
+    ;
+  --> adjective
+    -> MultilingualText
+      --> i18nName_en
+        -> NlgAdjective
+          --> root      "South Carolinian"
+        ;
+    ;
+  --> useArticle_en  false
+;

@@ -1,0 +1,75 @@
+LibGeography:Country C_GIB
+  --> iso3166_1_numeric_code  "292"
+  --> iso3166_1_alpha_2       "GI"
+  --> iso3166_1_alpha_3       "GIB"
+  --> label
+    -> MultilingualText
+      --> i18nName_fr
+        -> NlgSubstantive
+          --> root    "Gibraltar"
+          --> plural  "Gibraltar"
+          --> gender  MASCULINE
+          --> number  SINGULAR
+        ;
+      --> i18nName_en
+        -> NlgSubstantive
+          --> root    "Gibraltar"
+          --> plural  "Gibraltar"
+          --> gender  INANIMATE
+          --> number  SINGULAR
+        ;
+      --> i18nName_es
+        -> NlgSubstantive
+          --> root    "Gibraltar"
+          --> plural  "Gibraltar"
+          --> gender  MASCULINE
+          --> number  SINGULAR
+        ;
+      --> i18nName_de
+        -> NlgSubstantive
+          --> root    "Gibraltar"
+          --> plural  "Gibraltar"
+          --> gender  NEUTRAL
+          --> number  SINGULAR
+        ;
+      --> i18nName_ja
+        -> NlgSubstantive
+          --> root    "ジブラルタル"
+          --> plural  "ジブラルタル"
+          --> gender  INANIMATE
+          --> number  SINGULAR
+        ;
+    ;
+  --> demonym
+    -> MultilingualText
+      --> i18nName_fr  "de Gibraltar"
+      --> i18nName_en  "Gibraltarian"
+      --> i18nName_es  "gibraltareño"
+      --> i18nName_de
+        -> NlgGenderAgreeableSubstantive
+          --> masculine "Gibraltarer"
+          --> feminine  "Gibraltarerin"
+        ;
+    ;
+  --> adjective
+    -> MultilingualText
+      --> i18nName_fr
+        -> NlgAdjective
+          --> root      "de Gibraltar"
+        ;
+      --> i18nName_en
+        -> NlgAdjective
+          --> root      "Gibraltarian"
+        ;
+      --> i18nName_es
+        -> NlgAdjective
+          --> root      "gibraltareño"
+        ;
+      --> i18nName_de
+        -> NlgAdjective
+          --> root      "gibraltarisch"
+        ;
+    ;
+  --> useArticle_fr  false
+  --> useArticle_en  false
+;

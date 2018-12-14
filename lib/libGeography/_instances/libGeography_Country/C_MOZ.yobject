@@ -1,0 +1,80 @@
+LibGeography:Country C_MOZ
+  --> iso3166_1_numeric_code  "508"
+  --> iso3166_1_alpha_2       "MZ"
+  --> iso3166_1_alpha_3       "MOZ"
+  --> label
+    -> MultilingualText
+      --> i18nName_fr
+        -> NlgSubstantive
+          --> root    "Mozambique"
+          --> plural  "Mozambique"
+          --> gender  MASCULINE
+          --> number  SINGULAR
+        ;
+      --> i18nName_en
+        -> NlgSubstantive
+          --> root    "Mozambique"
+          --> plural  "Mozambique"
+          --> gender  INANIMATE
+          --> number  SINGULAR
+        ;
+      --> i18nName_es
+        -> NlgSubstantive
+          --> root    "Mozambique"
+          --> plural  "Mozambique"
+          --> gender  MASCULINE
+          --> number  SINGULAR
+        ;
+      --> i18nName_de
+        -> NlgSubstantive
+          --> root    "Mosambik"
+          --> plural  "Mosambik"
+          --> gender  NEUTRAL
+          --> number  SINGULAR
+        ;
+      --> i18nName_ja
+        -> NlgSubstantive
+          --> root    "モザンビーク"
+          --> plural  "モザンビーク"
+          --> gender  INANIMATE
+          --> number  SINGULAR
+        ;
+    ;
+  --> demonym
+    -> MultilingualText
+      --> i18nName_fr
+        -> NlgGenderAgreeableSubstantive
+          --> masculine "Mozambicain"
+          --> feminine  "Mozambicaine"
+        ;
+      --> i18nName_en  "Mozambican"
+      --> i18nName_es  "mozambiqueño"
+      --> i18nName_de
+        -> NlgGenderAgreeableSubstantive
+          --> masculine "Mosambikaner"
+          --> feminine  "Mosambikanerin"
+        ;
+    ;
+  --> adjective
+    -> MultilingualText
+      --> i18nName_fr
+        -> NlgAdjective
+          --> root      "mozambicain"
+          --> feminine  "mozambicaine"
+        ;
+      --> i18nName_en
+        -> NlgAdjective
+          --> root      "Mozambican"
+        ;
+      --> i18nName_es
+        -> NlgAdjective
+          --> root      "mozambiqueño"
+        ;
+      --> i18nName_de
+        -> NlgAdjective
+          --> root      "mosambikanisch"
+        ;
+    ;
+  --> useArticle_fr  true
+  --> useArticle_en  false
+;

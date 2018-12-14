@@ -1,0 +1,80 @@
+LibGeography:Country C_BMU
+  --> iso3166_1_numeric_code  "060"
+  --> iso3166_1_alpha_2       "BM"
+  --> iso3166_1_alpha_3       "BMU"
+  --> label
+    -> MultilingualText
+      --> i18nName_fr
+        -> NlgSubstantive
+          --> root    "Bermudes"
+          --> plural  "Bermudes"
+          --> gender  MASCULINE
+          --> number  PLURAL
+        ;
+      --> i18nName_en
+        -> NlgSubstantive
+          --> root    "Bermuda"
+          --> plural  "Bermuda"
+          --> gender  INANIMATE
+          --> number  PLURAL
+        ;
+      --> i18nName_es
+        -> NlgSubstantive
+          --> root    "Bermudas"
+          --> plural  "Bermudas"
+          --> gender  MASCULINE
+          --> number  PLURAL
+        ;
+      --> i18nName_de
+        -> NlgSubstantive
+          --> root    "Bermuda"
+          --> plural  "Bermuda"
+          --> gender  NEUTRAL
+          --> number  PLURAL
+        ;
+      --> i18nName_ja
+        -> NlgSubstantive
+          --> root    "バミューダ"
+          --> plural  "バミューダ"
+          --> gender  INANIMATE
+          --> number  PLURAL
+        ;
+    ;
+  --> demonym
+    -> MultilingualText
+      --> i18nName_fr
+        -> NlgGenderAgreeableSubstantive
+          --> masculine "Bermudien"
+          --> feminine  "Bermudienne"
+        ;
+      --> i18nName_en  "Bermudian"
+      --> i18nName_es  "bermudeño"
+      --> i18nName_de
+        -> NlgGenderAgreeableSubstantive
+          --> masculine "Bermuder"
+          --> feminine  "Bermuderin"
+        ;
+    ;
+  --> adjective
+    -> MultilingualText
+      --> i18nName_fr
+        -> NlgAdjective
+          --> root      "bermudien"
+          --> feminine  "bermudienne"
+        ;
+      --> i18nName_en
+        -> NlgAdjective
+          --> root      "Bermudian"
+        ;
+      --> i18nName_es
+        -> NlgAdjective
+          --> root      "bermudeño"
+        ;
+      --> i18nName_de
+        -> NlgAdjective
+          --> root      "bermudisch"
+        ;
+    ;
+  --> useArticle_fr  true
+  --> useArticle_en  false
+;

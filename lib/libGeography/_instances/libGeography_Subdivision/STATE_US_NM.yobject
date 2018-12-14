@@ -1,0 +1,55 @@
+LibGeography:Subdivision STATE_US_NM
+  --> iso3166_2    "US-NM"
+  --> postal_code  "NM"
+  --> status       STATE
+  --> label
+    -> MultilingualText
+      --> i18nName_fr
+        -> NlgSubstantive
+          --> root    "Nouveau-Mexique"
+          --> plural  "Nouveau-Mexique"
+          --> gender  MASCULINE
+          --> number  SINGULAR
+        ;
+      --> i18nName_en
+        -> NlgSubstantive
+          --> root    "New Mexico"
+          --> plural  "New Mexico"
+          --> gender  INANIMATE
+          --> number  SINGULAR
+        ;
+      --> i18nName_es
+        -> NlgSubstantive
+          --> root    "Nuevo México​"
+          --> plural  "Nuevo México​"
+          --> gender  MASCULINE
+          --> number  SINGULAR
+        ;
+      --> i18nName_de
+        -> NlgSubstantive
+          --> root    "New Mexico"
+          --> plural  "New Mexico"
+          --> gender  NEUTRAL
+          --> number  SINGULAR
+        ;
+      --> i18nName_ja
+        -> NlgSubstantive
+          --> root    " ニューメキシコ州"
+          --> plural  " ニューメキシコ州"
+          --> gender  INANIMATE
+          --> number  SINGULAR
+        ;
+    ;
+  --> demonym
+    -> MultilingualText
+      --> i18nName_en  "New Mexican"
+    ;
+  --> adjective
+    -> MultilingualText
+      --> i18nName_en
+        -> NlgAdjective
+          --> root      "New Mexican"
+        ;
+    ;
+  --> useArticle_en  false
+;

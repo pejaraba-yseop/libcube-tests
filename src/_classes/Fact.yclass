@@ -1,0 +1,58 @@
+
+interface Fact extends LibCube:Fact
+    field isPreviousYearGeneralSalesFact
+        --> domains Boolean
+        --> xmlMapping XmlMappingProperty_NO_SAVE
+        --> dsl -> Textualization
+            --> language LANG_en
+            --> root "is previous year general sales fact"
+            --> number SINGULAR
+            --> hasDeterminer false
+        ;
+    field isCurrentYearGeneralSalesFact
+        --> domains Boolean
+        --> xmlMapping XmlMappingProperty_NO_SAVE
+        --> dsl -> Textualization
+            --> language LANG_en
+            --> root "is current year general sales fact"
+            --> number SINGULAR
+            --> hasDeterminer false
+        ;
+    field isCitySalesFact
+        --> domains Boolean
+        --> xmlMapping XmlMappingProperty_NO_SAVE
+        --> dsl -> Textualization
+            --> language LANG_en
+            --> root "is city sales fact"
+            --> number SINGULAR
+            --> hasDeterminer false
+        ;
+    field isProductTypeSalesFact
+        --> domains Boolean
+        --> xmlMapping XmlMappingProperty_NO_SAVE
+        --> dsl -> Textualization
+            --> language LANG_en
+            --> root "is product type sales fact"
+            --> number SINGULAR
+            --> hasDeterminer false
+        ;
+    field isProductSalesFact
+        --> domains Boolean
+        --> xmlMapping XmlMappingProperty_NO_SAVE
+        --> dsl -> Textualization
+            --> language LANG_en
+            --> root "is product sales fact"
+            --> number SINGULAR
+            --> hasDeterminer false
+        ;
+    classProperties
+    --> dsl -> Textualization
+        --> language LANG_en
+        --> root "Fact"
+        --> number SINGULAR
+    ;
+;
+
+implementation Fact
+;
+

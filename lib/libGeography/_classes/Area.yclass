@@ -1,0 +1,204 @@
+interface LibGeography:Area
+
+    //identifiant sur le code, par exemple "055"
+    field iso3166_1_numeric_code
+    --> domains String
+    --> xmlMapping XmlMappingProperty_NO_SAVE
+
+    //identifiant sur le code alphanumérique 2 position : "FR"
+    field iso3166_1_alpha_2
+    --> domains String
+    --> multivalued true
+    --> xmlMapping XmlMappingProperty_NO_SAVE
+
+    //identifiant sur le code alphanumérique 3 position : "FRA"
+    field iso3166_1_alpha_3
+    --> domains String
+    --> xmlMapping XmlMappingProperty_NO_SAVE
+
+    field iso3166_2
+    --> domains String
+    --> xmlMapping XmlMappingProperty_NO_SAVE
+
+    field postal_code
+    --> domains String
+    --> xmlMapping XmlMappingProperty_NO_SAVE
+
+    field status
+    --> domains stateStatus
+    --> xmlMapping XmlMappingProperty_NO_SAVE  
+
+    field label
+        --> domains MultilingualText
+        --> style areaLabelStyle
+        --> xmlMapping XmlMappingProperty_NO_SAVE
+        --> dsl -> Textualization
+            --> language LANG_en
+            --> root "name"
+            --> number PLURAL
+        ;
+    field demonym
+        --> domains MultilingualText
+        --> xmlMapping XmlMappingProperty_NO_SAVE
+        --> dsl -> Textualization
+            --> language LANG_en
+            --> root "demonym"
+            --> number PLURAL
+        ;
+    field adjective
+        --> domains MultilingualText
+        --> xmlMapping XmlMappingProperty_NO_SAVE
+        --> dsl -> Textualization
+            --> language LANG_en
+            --> root "adjective"
+            --> number PLURAL
+        ;
+
+    field useArticle_fr
+    --> domains Boolean
+    --> defaultValue false
+    --> xmlMapping XmlMappingProperty_NO_SAVE
+
+    field useArticle_en
+    --> domains Boolean
+    --> defaultValue false
+    --> xmlMapping XmlMappingProperty_NO_SAVE
+    
+    //field country
+    //--> domains LibGeography:Area
+    //--> multivalued true
+    
+    /* Returns the Country corresponding to the code in argument */
+    method findAreaByCode(Text code)
+    --> domains LibGeography:Area
+    --> dsl -> Textualization
+        --> language LANG_en
+        --> root "get the Area by the ISO 3166 code"
+        --> number SINGULAR
+    ; 
+
+    method findAreaByLibelle(Text label)
+    --> domains LibGeography:Area
+    --> dsl -> Textualization
+        --> language LANG_en
+        --> root "get the Area with the label"
+        --> number SINGULAR
+    ; 
+
+    classProperties
+    --> dsl -> Textualization
+        --> language LANG_en
+        --> root "Area"
+        --> number SINGULAR
+    ;
+;
+
+implementation LibGeography:Area
+	override {
+		getNativeGender	function
+		getNativeNumber	function
+		toStringInStream function
+	}
+;
+
+function LibGeography:Area::getNativeGender()
+	--> action {
+		return this.label.i18nName.getNativeGender(); 
+		//return this.label.getNativeGender();
+	}
+;
+
+function LibGeography:Area::getNativeNumber()
+	--> action {
+		return this.label.i18nName.getNativeNumber();
+		//return this.label.getNativeNumber();
+	}
+;
+
+function LibGeography:Area::findAreaByCode(Text code)
+  --> local
+      LibGeography:Area dep
+  --> action {
+    dep = getObjectByAttribute(code, LibGeography:Area::iso3166_1_numeric_code);
+    if (dep == null){
+      dep = getObjectByAttribute(code, LibGeography:Area::iso3166_1_alpha_2);
+      if (dep == null){
+        dep = getObjectByAttribute(code, LibGeography:Area::iso3166_1_alpha_3);
+        if (dep == null){
+          dep = getObjectByAttribute(code, LibGeography:Area::iso3166_2);
+        }
+      }
+    }
+    if (dep == null){
+      logInfo(\( Aucun pays ne correspond à ce code de pays : \value(code) )\));
+    }
+    return dep;
+  }
+;
+
+function LibGeography:Area::findAreaByLibelle(Text label)
+  --> local
+      LibGeography:Area a,
+      PredicateAttribute chp
+  --> action {
+  //@if (engine_version_compatible ("5.5.0.BETA06") == true)
+    forall(?area in LibGeography:Area , 
+           ?area != dummyArea
+          (?area.label.i18nName_fr != null 
+       && (NlgSubstantive(?area.label.i18nName_fr).root == label  
+                       || ?area.label.i18nName_fr.plural == label)) 
+       || (?area.label.i18nName_en != null 
+       && (NlgSubstantive(?area.label.i18nName_en).root == label 
+                       || ?area.label.i18nName_en.plural == label))) {
+      a = ?area;
+    }
+
+      
+    return a;
+  }
+;
+
+
+/* ****************************************************************************** */
+/* ******************** LibGeography:Area::toStringInStream ******************************* */
+/* ****************************************************************************** */
+Function LibGeography:Area::toStringInStream ({ 
+									_DETERMINER: NlgDeterminer || DeterminerSynonym theDeterminer, 
+									_NO_DETERMINER : Boolean,
+									_ADJECTIVE: Text adj, 
+									[_ADJECTIVE_POSITION]: {_BEFORE_NOUN,_AFTER_NOUN} adjectivePos,
+									} args)
+									
+static {
+    NlgRepresentant AREA_REPRESENTANT
+		--> referential    
+			-> NlgNounPhrase
+				--> determiner   
+					ifExpr(theDeterminer == null) then
+						switchExprExclusive {
+								case (TEXT_EXECUTION_CONTEXT.kBBaseLanguage == LANG_en && useArticle_en == true && args[_NO_DETERMINER]!= true) : 
+										DEFINITE_ARTICLE
+								case (TEXT_EXECUTION_CONTEXT.kBBaseLanguage == LANG_fr && useArticle_fr == true && args[_NO_DETERMINER]!= true) : 
+										DEFINITE_ARTICLE
+								case (TEXT_EXECUTION_CONTEXT.kBBaseLanguage == LANG_fr && useArticle_fr == false && adj != null && args[_NO_DETERMINER]!= true) : 
+										DEFINITE_ARTICLE										
+								default :
+										null
+										}			
+					else
+						theDeterminer
+					
+			   --> adjective    		adj
+			   --> adjectivePosition 	adjectivePos
+			   --> head        			\( \value(this.label, _THROW_TEXT_GRANULE_AGREEMENT) \)  
+			;
+		//--> anaphor PERSONAL_PRONOUN
+	;
+
+}
+
+ 
+--> action  {
+				AREA_REPRESENTANT.write (_REFERENT: this, args);
+			}
+;

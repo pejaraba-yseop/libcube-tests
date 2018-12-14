@@ -1,0 +1,80 @@
+LibGeography:Country C_UGA
+  --> iso3166_1_numeric_code  "800"
+  --> iso3166_1_alpha_2       "UG"
+  --> iso3166_1_alpha_3       "UGA"
+  --> label
+    -> MultilingualText
+      --> i18nName_fr
+        -> NlgSubstantive
+          --> root    "Ouganda"
+          --> plural  "Ouganda"
+          --> gender  MASCULINE
+          --> number  SINGULAR
+        ;
+      --> i18nName_en
+        -> NlgSubstantive
+          --> root    "Uganda"
+          --> plural  "Uganda"
+          --> gender  INANIMATE
+          --> number  SINGULAR
+        ;
+      --> i18nName_es
+        -> NlgSubstantive
+          --> root    "Uganda"
+          --> plural  "Uganda"
+          --> gender  FEMININE
+          --> number  SINGULAR
+        ;
+      --> i18nName_de
+        -> NlgSubstantive
+          --> root    "Uganda"
+          --> plural  "Uganda"
+          --> gender  NEUTRAL
+          --> number  SINGULAR
+        ;
+      --> i18nName_ja
+        -> NlgSubstantive
+          --> root    "ウガンダ"
+          --> plural  "ウガンダ"
+          --> gender  INANIMATE
+          --> number  SINGULAR
+        ;
+    ;
+  --> demonym
+    -> MultilingualText
+      --> i18nName_fr
+        -> NlgGenderAgreeableSubstantive
+          --> masculine "Ougandais"
+          --> feminine  "Ougandaise"
+        ;
+      --> i18nName_en  "Ugandan"
+      --> i18nName_es  "ugandés"
+      --> i18nName_de
+        -> NlgGenderAgreeableSubstantive
+          --> masculine "Ugander"
+          --> feminine  "Uganderin"
+        ;
+    ;
+  --> adjective
+    -> MultilingualText
+      --> i18nName_fr
+        -> NlgAdjective
+          --> root      "ougandais"
+          --> feminine  "ougandaise"
+        ;
+      --> i18nName_en
+        -> NlgAdjective
+          --> root      "Ugandan"
+        ;
+      --> i18nName_es
+        -> NlgAdjective
+          --> root      "ugandés"
+        ;
+      --> i18nName_de
+        -> NlgAdjective
+          --> root      "ugandisch"
+        ;
+    ;
+  --> useArticle_fr  true
+  --> useArticle_en  false
+;

@@ -1,0 +1,55 @@
+LibGeography:Subdivision STATE_US_WV
+  --> iso3166_2    "US-WV"
+  --> postal_code  "WV"
+  --> status       STATE
+  --> label
+    -> MultilingualText
+      --> i18nName_fr
+        -> NlgSubstantive
+          --> root    "Virginie-Occidentale"
+          --> plural  "Virginie-Occidentale"
+          --> gender  FEMININE
+          --> number  SINGULAR
+        ;
+      --> i18nName_en
+        -> NlgSubstantive
+          --> root    "West Virginia"
+          --> plural  "West Virginia"
+          --> gender  INANIMATE
+          --> number  SINGULAR
+        ;
+      --> i18nName_es
+        -> NlgSubstantive
+          --> root    "Virginia Occidental"
+          --> plural  "Virginia Occidental"
+          --> gender  MASCULINE
+          --> number  SINGULAR
+        ;
+      --> i18nName_de
+        -> NlgSubstantive
+          --> root    "West Virginia"
+          --> plural  "West Virginia"
+          --> gender  NEUTRAL
+          --> number  SINGULAR
+        ;
+      --> i18nName_ja
+        -> NlgSubstantive
+          --> root    " ウェストバージニア州"
+          --> plural  " ウェストバージニア州"
+          --> gender  INANIMATE
+          --> number  SINGULAR
+        ;
+    ;
+  --> demonym
+    -> MultilingualText
+      --> i18nName_en  "West Virginian"
+    ;
+  --> adjective
+    -> MultilingualText
+      --> i18nName_en
+        -> NlgAdjective
+          --> root      "West Virginian"
+        ;
+    ;
+  --> useArticle_en  false
+;

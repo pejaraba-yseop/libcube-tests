@@ -1,0 +1,80 @@
+LibGeography:Country C_BRB
+  --> iso3166_1_numeric_code  "052"
+  --> iso3166_1_alpha_2       "BB"
+  --> iso3166_1_alpha_3       "BRB"
+  --> label
+    -> MultilingualText
+      --> i18nName_fr
+        -> NlgSubstantive
+          --> root    "Barbade"
+          --> plural  "Barbade"
+          --> gender  FEMININE
+          --> number  SINGULAR
+        ;
+      --> i18nName_en
+        -> NlgSubstantive
+          --> root    "Barbados"
+          --> plural  "Barbados"
+          --> gender  INANIMATE
+          --> number  SINGULAR
+        ;
+      --> i18nName_es
+        -> NlgSubstantive
+          --> root    "Barbados"
+          --> plural  "Barbados"
+          --> gender  FEMININE
+          --> number  SINGULAR
+        ;
+      --> i18nName_de
+        -> NlgSubstantive
+          --> root    "Barbados"
+          --> plural  "Barbados"
+          --> gender  NEUTRAL
+          --> number  SINGULAR
+        ;
+      --> i18nName_ja
+        -> NlgSubstantive
+          --> root    "バルバドス"
+          --> plural  "バルバドス"
+          --> gender  INANIMATE
+          --> number  SINGULAR
+        ;
+    ;
+  --> demonym
+    -> MultilingualText
+      --> i18nName_fr
+        -> NlgGenderAgreeableSubstantive
+          --> masculine "Barbadien"
+          --> feminine  "Barbadienne"
+        ;
+      --> i18nName_en  "Barbadian"
+      --> i18nName_es  "barbadense"
+      --> i18nName_de
+        -> NlgGenderAgreeableSubstantive
+          --> masculine "Barbadier"
+          --> feminine  "Barbadierin"
+        ;
+    ;
+  --> adjective
+    -> MultilingualText
+      --> i18nName_fr
+        -> NlgAdjective
+          --> root      "barbadien"
+          --> feminine  "barbadienne"
+        ;
+      --> i18nName_en
+        -> NlgAdjective
+          --> root      "Barbadian"
+        ;
+      --> i18nName_es
+        -> NlgAdjective
+          --> root      "barbadense"
+        ;
+      --> i18nName_de
+        -> NlgAdjective
+          --> root      "barbadisch"
+        ;
+    ;
+  --> useArticle_fr  true
+  --> useArticle_en  false
+;

@@ -1,0 +1,8 @@
+
+City CITY_ALL
+    --> dsl -> Textualization
+        --> language LANG_en
+        --> root "All Cities"
+        --> number SINGULAR
+    ;
+;

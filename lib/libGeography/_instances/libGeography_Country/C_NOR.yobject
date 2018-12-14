@@ -1,0 +1,80 @@
+LibGeography:Country C_NOR
+  --> iso3166_1_numeric_code  "578"
+  --> iso3166_1_alpha_2       "NO"
+  --> iso3166_1_alpha_3       "NOR"
+  --> label
+    -> MultilingualText
+      --> i18nName_fr
+        -> NlgSubstantive
+          --> root    "Norvège"
+          --> plural  "Norvège"
+          --> gender  FEMININE
+          --> number  SINGULAR
+        ;
+      --> i18nName_en
+        -> NlgSubstantive
+          --> root    "Norway"
+          --> plural  "Norway"
+          --> gender  INANIMATE
+          --> number  SINGULAR
+        ;
+      --> i18nName_es
+        -> NlgSubstantive
+          --> root    "Noruega"
+          --> plural  "Noruega"
+          --> gender  FEMININE
+          --> number  SINGULAR
+        ;
+      --> i18nName_de
+        -> NlgSubstantive
+          --> root    "Norwegen"
+          --> plural  "Norwegen"
+          --> gender  NEUTRAL
+          --> number  SINGULAR
+        ;
+      --> i18nName_ja
+        -> NlgSubstantive
+          --> root    "ノルウェー"
+          --> plural  "ノルウェー"
+          --> gender  INANIMATE
+          --> number  SINGULAR
+        ;
+    ;
+  --> demonym
+    -> MultilingualText
+      --> i18nName_fr
+        -> NlgGenderAgreeableSubstantive
+          --> masculine "Norvégien"
+          --> feminine  "Norvégienne"
+        ;
+      --> i18nName_en  "Norwegian"
+      --> i18nName_es  "noruego"
+      --> i18nName_de
+        -> NlgGenderAgreeableSubstantive
+          --> masculine "Norweger"
+          --> feminine  "Norwegerin"
+        ;
+    ;
+  --> adjective
+    -> MultilingualText
+      --> i18nName_fr
+        -> NlgAdjective
+          --> root      "norvégien"
+          --> feminine  "norvégienne"
+        ;
+      --> i18nName_en
+        -> NlgAdjective
+          --> root      "Norwegian"
+        ;
+      --> i18nName_es
+        -> NlgAdjective
+          --> root      "noruego"
+        ;
+      --> i18nName_de
+        -> NlgAdjective
+          --> root      "norwegisch"
+        ;
+    ;
+  --> useArticle_fr  true
+  --> useArticle_en  false
+;

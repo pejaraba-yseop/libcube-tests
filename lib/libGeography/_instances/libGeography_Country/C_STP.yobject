@@ -1,0 +1,75 @@
+LibGeography:Country C_STP
+  --> iso3166_1_numeric_code  "678"
+  --> iso3166_1_alpha_2       "ST"
+  --> iso3166_1_alpha_3       "STP"
+  --> label
+    -> MultilingualText
+      --> i18nName_fr
+        -> NlgSubstantive
+          --> root    "Sao Tomé-et-Principe"
+          --> plural  "Sao Tomé-et-Principe"
+          --> gender  FEMININE
+          --> number  PLURAL
+        ;
+      --> i18nName_en
+        -> NlgSubstantive
+          --> root    "Sao Tome and Principe"
+          --> plural  "Sao Tome and Principe"
+          --> gender  INANIMATE
+          --> number  PLURAL
+        ;
+      --> i18nName_es
+        -> NlgSubstantive
+          --> root    "Santo Tomé y Príncipe"
+          --> plural  "Santo Tomé y Príncipe"
+          --> gender  MASCULINE
+          --> number  PLURAL
+        ;
+      --> i18nName_de
+        -> NlgSubstantive
+          --> root    "São Tomé und Príncipe"
+          --> plural  "São Tomé und Príncipe"
+          --> gender  NEUTRAL
+          --> number  PLURAL
+        ;
+      --> i18nName_ja
+        -> NlgSubstantive
+          --> root    "サントメプリンシペ"
+          --> plural  "サントメプリンシペ"
+          --> gender  INANIMATE
+          --> number  PLURAL
+        ;
+    ;
+  --> demonym
+    -> MultilingualText
+      --> i18nName_fr  "de Sao Tomé-"
+      --> i18nName_en  "São Toméan"
+      --> i18nName_es  "santotomense"
+      --> i18nName_de
+        -> NlgGenderAgreeableSubstantive
+          --> masculine "São-Toméer"
+          --> feminine  "São-Toméerin"
+        ;
+    ;
+  --> adjective
+    -> MultilingualText
+      --> i18nName_fr
+        -> NlgAdjective
+          --> root      "de Sao Tomé-"
+        ;
+      --> i18nName_en
+        -> NlgAdjective
+          --> root      "of São Tomé and Príncipe"
+        ;
+      --> i18nName_es
+        -> NlgAdjective
+          --> root      "santotomense"
+        ;
+      --> i18nName_de
+        -> NlgAdjective
+          --> root      "são-toméisch"
+        ;
+    ;
+  --> useArticle_fr  false
+  --> useArticle_en  false
+;

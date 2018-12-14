@@ -1,0 +1,80 @@
+LibGeography:Country C_THA
+  --> iso3166_1_numeric_code  "764"
+  --> iso3166_1_alpha_2       "TH"
+  --> iso3166_1_alpha_3       "THA"
+  --> label
+    -> MultilingualText
+      --> i18nName_fr
+        -> NlgSubstantive
+          --> root    "Thaïlande"
+          --> plural  "Thaïlande"
+          --> gender  FEMININE
+          --> number  SINGULAR
+        ;
+      --> i18nName_en
+        -> NlgSubstantive
+          --> root    "Thailand"
+          --> plural  "Thailand"
+          --> gender  INANIMATE
+          --> number  SINGULAR
+        ;
+      --> i18nName_es
+        -> NlgSubstantive
+          --> root    "Tailandia"
+          --> plural  "Tailandia"
+          --> gender  MASCULINE
+          --> number  SINGULAR
+        ;
+      --> i18nName_de
+        -> NlgSubstantive
+          --> root    "Thailand"
+          --> plural  "Thailand"
+          --> gender  NEUTRAL
+          --> number  SINGULAR
+        ;
+      --> i18nName_ja
+        -> NlgSubstantive
+          --> root    "タイ"
+          --> plural  "タイ"
+          --> gender  INANIMATE
+          --> number  SINGULAR
+        ;
+    ;
+  --> demonym
+    -> MultilingualText
+      --> i18nName_fr
+        -> NlgGenderAgreeableSubstantive
+          --> masculine "Thaïlandais"
+          --> feminine  "Thaïlandaise"
+        ;
+      --> i18nName_en  "Thai"
+      --> i18nName_es  "tailandés"
+      --> i18nName_de
+        -> NlgGenderAgreeableSubstantive
+          --> masculine "Thailänder"
+          --> feminine  "Thailänderin"
+        ;
+    ;
+  --> adjective
+    -> MultilingualText
+      --> i18nName_fr
+        -> NlgAdjective
+          --> root      "thaïlandais"
+          --> feminine  "thaïlandaise"
+        ;
+      --> i18nName_en
+        -> NlgAdjective
+          --> root      "Thai"
+        ;
+      --> i18nName_es
+        -> NlgAdjective
+          --> root      "tailandés"
+        ;
+      --> i18nName_de
+        -> NlgAdjective
+          --> root      "thailändisch"
+        ;
+    ;
+  --> useArticle_fr  true
+  --> useArticle_en  false
+;

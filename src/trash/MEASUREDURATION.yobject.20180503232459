@@ -1,0 +1,8 @@
+
+Measure MEASURE_DURATION
+    --> dsl -> Textualization
+        --> language LANG_en
+        --> root "Duration Measure"
+        --> number SINGULAR
+    ;
+;

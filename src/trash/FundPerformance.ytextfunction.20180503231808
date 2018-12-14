@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<yseop-yml:ymlTextFunction xmlns:yseop-yml="http://www.yseop.com/yml/storage" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" domainModelVersion="3" identifier="26f52cda-b47a-41bb-a98c-3ba9451b3804">
+    <yseop-yml:textGranule domainModelVersion="3" identifier="352ed52d-857f-4bd7-b103-fdfec9c71d53">
+        <yseop-yml:granuleI18nContents>
+            <yseop-yml:granuleUnilingueContent locale="en">
+                <yseop-yml:granuleContent>
+                    <yseop-yml:text>
+\beginSynonym
+
+    \choice 
+
+        \beginStyle(BOLD_STYLE)
+            Fund Performance
+        \endStyle
+
+        \endOfLine
+        The fund
+        \_texts:Options:FundMovement()
+        over the quarter and
+        \_texts:Options:FundPerformanceVsIndex()
+        ,primarily due to
+        \_texts:Options:FundDriverPolarity()
+        \value(theGeneralData.fundPerformanceDriverFact.getDimension(DIMENSION_MEASURE))
+        .
+        \p
+
+    \choice 
+
+        \beginStyle(BOLD_STYLE)
+            Fund Performance
+        \endStyle
+
+        \endOfLine
+        \_texts:Options:FundDriverPolarity()
+        \value(theGeneralData.fundPerformanceDriverFact.getDimension(DIMENSION_MEASURE))
+        was the main driver of the fund's
+        \_texts:Options:FundMovement2()
+        over the quarter and
+        \_texts:Options:FundPerformanceVsIndex2()
+        .
+        \p
+
+\endSynonym
+</yseop-yml:text>
+                    <yseop-yml:inline-assemblies/>
+                    <yseop-yml:inline-dslFunctionCalls/>
+                </yseop-yml:granuleContent>
+            </yseop-yml:granuleUnilingueContent>
+            <yseop-yml:granuleUnilingueContent locale="es">
+                <yseop-yml:granuleContent>
+                    <yseop-yml:text/>
+                    <yseop-yml:inline-assemblies/>
+                    <yseop-yml:inline-dslFunctionCalls/>
+                </yseop-yml:granuleContent>
+            </yseop-yml:granuleUnilingueContent>
+            <yseop-yml:granuleUnilingueContent locale="fr">
+                <yseop-yml:granuleContent>
+                    <yseop-yml:text/>
+                    <yseop-yml:inline-assemblies/>
+                    <yseop-yml:inline-dslFunctionCalls/>
+                </yseop-yml:granuleContent>
+            </yseop-yml:granuleUnilingueContent>
+        </yseop-yml:granuleI18nContents>
+        <yseop-yml:dslCondition/>
+        <yseop-yml:name/>
+        <yseop-yml:creationDate>2018-04-19T15:12:39.758Z</yseop-yml:creationDate>
+        <yseop-yml:properties identifier="e5fd87d4-6346-4c8b-8463-3c0d22d92622">
+            <yseop-yml:property identifier="e5fd87d4-6346-4c8b-8463-3c0d22d92622|condition" type="YML_PROPERTY" name="condition"></yseop-yml:property>
+        </yseop-yml:properties>
+    </yseop-yml:textGranule>
+    <yseop-yml:localVariables/>
+    <yseop-yml:advancedContent/>
+    <yseop-yml:ymlParameters/>
+    <yseop-yml:name>FundPerformance</yseop-yml:name>
+    <yseop-yml:properties identifier="990b7564-d0d5-4f83-b69f-e93ea2e938a9">
+        <yseop-yml:property identifier="990b7564-d0d5-4f83-b69f-e93ea2e938a9|dsl" type="YML_PROPERTY" name="dsl">"Fund Performance"</yseop-yml:property>
+    </yseop-yml:properties>
+</yseop-yml:ymlTextFunction>

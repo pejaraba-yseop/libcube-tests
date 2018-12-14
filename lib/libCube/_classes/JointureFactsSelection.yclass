@@ -1,0 +1,215 @@
+interface LibCube:JointureFactsSelection extends LibCube:PrintableValuesObject
+    field jointure
+        --> domains LibCube:Jointure
+        --> documentation "A Jointure. The Jointure should collect facts which are store in the 'selected facts'"
+        --> xmlMapping XmlMappingProperty_NO_SAVE
+        --> dsl -> Textualization
+            --> language LANG_en
+            --> root "jointure"
+            --> number SINGULAR
+        ;
+        
+    field selectedFacts
+        --> domains LibCube:Fact
+        --> documentation "The facts collected by the Jointure"
+        --> xmlMapping XmlMappingProperty_SAVE
+        --> multivalued true
+        --> dsl -> Textualization
+            --> language LANG_en
+            --> root "selected facts"
+            --> number PLURAL
+        ;
+    
+    field mdxQuery
+        --> domains Text
+        --> documentation "MDX Query"
+        --> xmlMapping XmlMappingProperty_SAVE
+        --> multivalued false
+        --> dsl -> Textualization
+            --> language LANG_en
+            --> root "MDX Query"
+            --> number SINGULAR
+        ;
+
+    field factsRequest
+        --> domains LibCube:FactsRequest
+        --> documentation "Selection's facts request to an OLAP Cube Service"
+        --> xmlMapping XmlMappingProperty_SAVE
+        --> multivalued false
+        --> dsl -> Textualization
+            --> language LANG_en
+            --> root "Facts Request"
+            --> number SINGULAR
+        ;
+    method generateQuery(String cubeMdxName)
+    --> domains Void
+
+    method generateQueryRowsFilterString(OrderedSet conditionFragments)
+    --> domains String
+
+    method generateQueryColsFilterString(OrderedSet conditionFragments)
+    --> domains String
+
+    method populateSelection()
+    --> domains Void
+    
+    method prepareFactsRequest()
+    --> domains Void
+
+    classProperties
+    --> dsl -> Textualization
+        --> language LANG_en
+        --> root "Jointure Facts Selection"
+        --> number SINGULAR
+    ;
+;
+
+implementation LibCube:JointureFactsSelection
+	override {
+        printValues function
+    }
+;
+
+
+function LibCube:JointureFactsSelection::prepareFactsRequest()
+--> local LibCube:RequestContext context
+--> action {  
+
+  if(mdxQuery != null && factsRequest == null){
+      logInfo("Preparing selection Facts Request...");
+	  factsRequest = new(LibCube:FactsRequest);
+      factsRequest.query = mdxQuery;
+      context = new(LibCube:RequestContext);
+      
+      foreach(_measure, LibCube:Measure){
+            if(_measure.mdxName != null){
+                context.addMeasureContext(_measure.mdxName, _measure.identifier);
+            }
+      }
+
+      foreach(_dimCondition, jointure.dimensionConditions){
+          // TODO: that "LibCube:Member " should not be hardcoded
+          if(_dimCondition.dimension.mdxName != null){
+              if(_dimCondition.dimension.className != null){
+              	     context.addDimensionContext(_dimCondition.dimension.mdxName, _dimCondition.dimension.identifier,_dimCondition.dimension.className);
+              }else{
+              		context.addDimensionContext(_dimCondition.dimension.mdxName, _dimCondition.dimension.identifier, "LibCube:Member");
+              }	
+          }
+      }
+      factsRequest.context = context;
+  }
+
+}
+;
+
+function LibCube:JointureFactsSelection::populateSelection()
+--> local Collection theSelectedFacts
+--> action {  
+
+  theSelectedFacts = as(?fact, ?att = jointure.attribute, ?fact.?att != null)
+  foreach(_fact, theSelectedFacts) {
+    selectedFacts := _fact;
+  }
+
+}
+;
+
+function LibCube:JointureFactsSelection::generateQuery(String cubeMdxName)
+--> local OrderedSet rowQueryFrags, OrderedSet colQueryFrags, LibCube:QueryFragment currentFrag, String rowsFilter, String colsFilter
+--> action {
+   rowQueryFrags = new(OrderedSet);
+   colQueryFrags = new(OrderedSet);
+   rowsFilter = "";  
+   colsFilter = "";
+   foreach(_condition, jointure.dimensionConditions){
+       _condition.generateQueryFragment();
+       currentFrag = _condition.queryFragment;
+       switch(currentFrag.fragmentType){
+           case(QUERY_FRAGMENT_TYPE_ROWS):{
+               rowQueryFrags.add(currentFrag);
+           }
+           case(QUERY_FRAGMENT_TYPE_COLUMNS):{
+               colQueryFrags.add(currentFrag);
+           }
+       }
+   }
+   rowsFilter = generateQueryRowsFilterString(rowQueryFrags);
+   colsFilter = generateQueryColsFilterString(colQueryFrags);
+   mdxQuery = concat("SELECT ", colsFilter, " , ", rowsFilter, " FROM [", cubeMdxName, "]");
+   logInfo("mdxQuery: ", mdxQuery);
+
+}
+;
+
+function LibCube:JointureFactsSelection::generateQueryRowsFilterString(OrderedSet conditionFragments)
+--> local OrderedSet rowQueryFrags, LibCube:QueryFragment currentFrag, String rowsFilter, Number parenthCount
+--> action {
+   rowQueryFrags = conditionFragments.clone();
+   rowsFilter = "";  
+   parenthCount = 0;
+   while(rowQueryFrags.isEmpty() == false){
+       currentFrag = rowQueryFrags.get(_FIRST);
+       rowQueryFrags.remove(currentFrag);
+       if(rowQueryFrags.isEmpty() == false){
+           rowsFilter = concat(rowsFilter, "CrossJoin(", currentFrag.mdxString, ",");
+           parenthCount = parenthCount + 1;
+       }
+       else{
+           rowsFilter = concat(rowsFilter, currentFrag.mdxString);
+       }
+   }
+   while(parenthCount > 0){
+       rowsFilter = concat(rowsFilter, ")");
+       parenthCount = parenthCount - 1;
+   }
+   rowsFilter = concat("{", rowsFilter , "} ON ROWS");
+   return rowsFilter;
+}
+;
+
+function LibCube:JointureFactsSelection::generateQueryColsFilterString(OrderedSet conditionFragments)
+--> local OrderedSet colQueryFrags, String colsFilter, Collection measures
+--> action {
+   colQueryFrags = conditionFragments.clone();
+   colsFilter = "";  
+   if(colQueryFrags.isEmpty() == true){
+       measures = applyCollection(LibCube:Measure, __where currentElement.includeInJointureConditions == true).toList();
+       foreach(LibCube:Measure _measure, measures){
+          if(_measure.getMdxFullName() == null){
+              logWarning("Measure ", _measure.identifier, " must have an mdx name to generate a query.");
+          }
+          else{
+              if(colsFilter == null || colsFilter == ""){
+                colsFilter = _measure.getMdxFullName();
+              }
+              else{
+                colsFilter = concat(colsFilter, ",", _measure.getMdxFullName());
+              }
+          } 
+       }
+   }
+   else{
+       foreach(_colFrag, colQueryFrags){
+           if(colsFilter == null){
+               colsFilter = _colFrag.mdxString;
+           }
+           else{
+               colsFilter = concat(",", _colFrag.mdxString);
+           }
+       }
+   }
+   colsFilter = concat("{", colsFilter , "} ON COLUMNS");
+   return colsFilter;
+}
+;
+
+textMethod LibCube:JointureFactsSelection::printValues()
+--> text 
+\( 
+    Selected Facts: \endOfLine
+    \foreach(_fact, selectedFacts)
+        \value(_fact.printValues())
+    \endForeach
+\)
+;

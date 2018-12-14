@@ -1,0 +1,80 @@
+LibGeography:Country C_FJI
+  --> iso3166_1_numeric_code  "242"
+  --> iso3166_1_alpha_2       "FJ"
+  --> iso3166_1_alpha_3       "FJI"
+  --> label
+    -> MultilingualText
+      --> i18nName_fr
+        -> NlgSubstantive
+          --> root    "Fidji"
+          --> plural  "Fidji"
+          --> gender  FEMININE
+          --> number  PLURAL
+        ;
+      --> i18nName_en
+        -> NlgSubstantive
+          --> root    "Fiji"
+          --> plural  "Fiji"
+          --> gender  INANIMATE
+          --> number  PLURAL
+        ;
+      --> i18nName_es
+        -> NlgSubstantive
+          --> root    "Fiyi"
+          --> plural  "Fiyi"
+          --> gender  FEMININE
+          --> number  PLURAL
+        ;
+      --> i18nName_de
+        -> NlgSubstantive
+          --> root    "Fidschi"
+          --> plural  "Fidschi"
+          --> gender  NEUTRAL
+          --> number  PLURAL
+        ;
+      --> i18nName_ja
+        -> NlgSubstantive
+          --> root    "フィジー"
+          --> plural  "フィジー"
+          --> gender  INANIMATE
+          --> number  PLURAL
+        ;
+    ;
+  --> demonym
+    -> MultilingualText
+      --> i18nName_fr
+        -> NlgGenderAgreeableSubstantive
+          --> masculine "Fidjien"
+          --> feminine  "Fidjienne"
+        ;
+      --> i18nName_en  "Fijian"
+      --> i18nName_es  "fiyiano"
+      --> i18nName_de
+        -> NlgGenderAgreeableSubstantive
+          --> masculine "Fidschianer"
+          --> feminine  "Fidschianerin"
+        ;
+    ;
+  --> adjective
+    -> MultilingualText
+      --> i18nName_fr
+        -> NlgAdjective
+          --> root      "fidjien"
+          --> feminine  "fidjienne"
+        ;
+      --> i18nName_en
+        -> NlgAdjective
+          --> root      "Fijian"
+        ;
+      --> i18nName_es
+        -> NlgAdjective
+          --> root      "fiyiano"
+        ;
+      --> i18nName_de
+        -> NlgAdjective
+          --> root      "fidschianisch"
+        ;
+    ;
+  --> useArticle_fr  true
+  --> useArticle_en  false
+;

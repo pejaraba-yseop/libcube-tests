@@ -1,0 +1,80 @@
+LibGeography:Country C_ECU
+  --> iso3166_1_numeric_code  "218"
+  --> iso3166_1_alpha_2       "EC"
+  --> iso3166_1_alpha_3       "ECU"
+  --> label
+    -> MultilingualText
+      --> i18nName_fr
+        -> NlgSubstantive
+          --> root    "Équateur"
+          --> plural  "Équateur"
+          --> gender  MASCULINE
+          --> number  SINGULAR
+        ;
+      --> i18nName_en
+        -> NlgSubstantive
+          --> root    "Ecuador"
+          --> plural  "Ecuador"
+          --> gender  INANIMATE
+          --> number  SINGULAR
+        ;
+      --> i18nName_es
+        -> NlgSubstantive
+          --> root    "Ecuador"
+          --> plural  "Ecuador"
+          --> gender  MASCULINE
+          --> number  SINGULAR
+        ;
+      --> i18nName_de
+        -> NlgSubstantive
+          --> root    "Ecuador"
+          --> plural  "Ecuador"
+          --> gender  NEUTRAL
+          --> number  SINGULAR
+        ;
+      --> i18nName_ja
+        -> NlgSubstantive
+          --> root    "エクアドル"
+          --> plural  "エクアドル"
+          --> gender  INANIMATE
+          --> number  SINGULAR
+        ;
+    ;
+  --> demonym
+    -> MultilingualText
+      --> i18nName_fr
+        -> NlgGenderAgreeableSubstantive
+          --> masculine "Équatorien"
+          --> feminine  "Équatorienne"
+        ;
+      --> i18nName_en  "Ecuadorian"
+      --> i18nName_es  "ecuatoriano"
+      --> i18nName_de
+        -> NlgGenderAgreeableSubstantive
+          --> masculine "Ecuadorianer"
+          --> feminine  "Ecuadorianerin"
+        ;
+    ;
+  --> adjective
+    -> MultilingualText
+      --> i18nName_fr
+        -> NlgAdjective
+          --> root      "équatorien"
+          --> feminine  "équatorienne"
+        ;
+      --> i18nName_en
+        -> NlgAdjective
+          --> root      "Ecuadorian"
+        ;
+      --> i18nName_es
+        -> NlgAdjective
+          --> root      "ecuatoriano"
+        ;
+      --> i18nName_de
+        -> NlgAdjective
+          --> root      "ecuadorianisch"
+        ;
+    ;
+  --> useArticle_fr  true
+  --> useArticle_en  false
+;

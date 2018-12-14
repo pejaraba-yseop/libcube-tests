@@ -1,0 +1,55 @@
+LibGeography:Subdivision STATE_US_NH
+  --> iso3166_2    "US-NH"
+  --> postal_code  "NH"
+  --> status       STATE
+  --> label
+    -> MultilingualText
+      --> i18nName_fr
+        -> NlgSubstantive
+          --> root    "New Hampshire"
+          --> plural  "New Hampshire"
+          --> gender  MASCULINE
+          --> number  SINGULAR
+        ;
+      --> i18nName_en
+        -> NlgSubstantive
+          --> root    "New Hampshire"
+          --> plural  "New Hampshire"
+          --> gender  INANIMATE
+          --> number  SINGULAR
+        ;
+      --> i18nName_es
+        -> NlgSubstantive
+          --> root    "Nuevo Hampshire​"
+          --> plural  "Nuevo Hampshire​"
+          --> gender  MASCULINE
+          --> number  SINGULAR
+        ;
+      --> i18nName_de
+        -> NlgSubstantive
+          --> root    "New Hampshire"
+          --> plural  "New Hampshire"
+          --> gender  NEUTRAL
+          --> number  SINGULAR
+        ;
+      --> i18nName_ja
+        -> NlgSubstantive
+          --> root    " ニューハンプシャー州"
+          --> plural  " ニューハンプシャー州"
+          --> gender  INANIMATE
+          --> number  SINGULAR
+        ;
+    ;
+  --> demonym
+    -> MultilingualText
+      --> i18nName_en  "New Hampshirite"
+    ;
+  --> adjective
+    -> MultilingualText
+      --> i18nName_en
+        -> NlgAdjective
+          --> root      "New Hampshirite"
+        ;
+    ;
+  --> useArticle_en  false
+;

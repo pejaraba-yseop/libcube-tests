@@ -1,0 +1,13 @@
+
+interface Product extends LibCube:HierarchyElement
+    classProperties
+    --> dsl -> Textualization
+        --> language LANG_en
+        --> root "Product"
+        --> number SINGULAR
+    ;
+;
+
+implementation Product
+;
+

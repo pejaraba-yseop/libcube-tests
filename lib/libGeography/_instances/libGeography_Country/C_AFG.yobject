@@ -1,0 +1,80 @@
+LibGeography:Country C_AFG
+  --> iso3166_1_numeric_code  "004"
+  --> iso3166_1_alpha_2       "AF"
+  --> iso3166_1_alpha_3       "AFG"
+  --> label
+    -> MultilingualText
+      --> i18nName_fr
+        -> NlgSubstantive
+          --> root    "Afghanistan"
+          --> plural  "Afghanistan"
+          --> gender  MASCULINE
+          --> number  SINGULAR
+        ;
+      --> i18nName_en
+        -> NlgSubstantive
+          --> root    "Afghanistan"
+          --> plural  "Afghanistan"
+          --> gender  INANIMATE
+          --> number  SINGULAR
+        ;
+      --> i18nName_es
+        -> NlgSubstantive
+          --> root    "Afganistán"
+          --> plural  "Afganistán"
+          --> gender  MASCULINE
+          --> number  SINGULAR
+        ;
+      --> i18nName_de
+        -> NlgSubstantive
+          --> root    "Afghanistan"
+          --> plural  "Afghanistan"
+          --> gender  NEUTRAL
+          --> number  SINGULAR
+        ;
+      --> i18nName_ja
+        -> NlgSubstantive
+          --> root    "アフガニスタン"
+          --> plural  "アフガニスタン"
+          --> gender  INANIMATE
+          --> number  SINGULAR
+        ;
+    ;
+  --> demonym
+    -> MultilingualText
+      --> i18nName_fr
+        -> NlgGenderAgreeableSubstantive
+          --> masculine "Afghan"
+          --> feminine  "Afghane"
+        ;
+      --> i18nName_en  "Afghan"
+      --> i18nName_es  "afgano"
+      --> i18nName_de
+        -> NlgGenderAgreeableSubstantive
+          --> masculine "Afghane"
+          --> feminine  "Afghanin"
+        ;
+    ;
+  --> adjective
+    -> MultilingualText
+      --> i18nName_fr
+        -> NlgAdjective
+          --> root      "afghan"
+          --> feminine  "afghane"
+        ;
+      --> i18nName_en
+        -> NlgAdjective
+          --> root      "Afghan"
+        ;
+      --> i18nName_es
+        -> NlgAdjective
+          --> root      "afgano"
+        ;
+      --> i18nName_de
+        -> NlgAdjective
+          --> root      "afghanisch"
+        ;
+    ;
+  --> useArticle_fr  true
+  --> useArticle_en  false
+;

@@ -1,0 +1,13 @@
+
+interface City extends LibCube:HierarchyElement
+    classProperties
+    --> dsl -> Textualization
+        --> language LANG_en
+        --> root "City"
+        --> number SINGULAR
+    ;
+;
+
+implementation City
+;
+

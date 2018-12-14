@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<yseop-yml:ymlRule xmlns:yseop-yml="http://www.yseop.com/yml/storage" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" domainModelVersion="3" identifier="d21b5f51-0312-4a47-a4a5-bde2f57b7880">
+    <yseop-yml:content>getGeneralData().mentionedBusinessSegmentByRankInMarketOrderedSet.add(?businessSegment);</yseop-yml:content>
+    <yseop-yml:content>?businessSegment in DIMENSION_BUSINESS_SEGMENT.hierarchyMembersAccesors.getMembersByLevel(3)
+?businessSegment.currentCompanyRank != null &amp;&amp; (?businessSegment.currentCompanyMarketShare > 0.1 || (?businessSegment.currentCompanyRank > 0 &amp;&amp; ?businessSegment.currentCompanyRank &lt; 10))</yseop-yml:content>
+    <yseop-yml:name>AddBusinessSegmentToMentionedBusinessSegmentOrderedSet</yseop-yml:name>
+    <yseop-yml:properties identifier="be5633b7-7be9-419f-9583-2373b0ad2f8e">
+        <yseop-yml:property identifier="be5633b7-7be9-419f-9583-2373b0ad2f8e|dsl" type="YML_PROPERTY" name="dsl">"Add Business Segment to Mentioned Business Segment by rank in market"</yseop-yml:property>
+        <yseop-yml:property identifier="be5633b7-7be9-419f-9583-2373b0ad2f8e|disabled" type="GENERATION_PROPERTY" name="disabled">false</yseop-yml:property>
+    </yseop-yml:properties>
+</yseop-yml:ymlRule>

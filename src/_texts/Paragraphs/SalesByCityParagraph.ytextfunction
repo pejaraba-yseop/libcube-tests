@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<yseop-yml:ymlTextFunction xmlns:yseop-yml="http://www.yseop.com/yml/storage" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" domainModelVersion="3" identifier="2e5d468b-bc00-4e86-960a-15378f24ada4">
+    <yseop-yml:textGranule domainModelVersion="3" identifier="56642a3a-dd0c-4c78-b0c7-061e1277fc7d">
+        <yseop-yml:granuleI18nContents>
+            <yseop-yml:granuleUnilingueContent locale="en">
+                <yseop-yml:granuleContent>
+                    <yseop-yml:text>
+\beginStyle(BOLD_STYLE)
+    Cheese Sales By City
+\endStyle
+
+\endOfLine
+The city with the most sales revenue was
+\value(theGeneralData.topSalesRevenueCityFact.getDimension(DIMENSION_CITY).label)
+with incomes worth
+\value(theGeneralData.topSalesRevenueCityFact.getMeasure(MEASURE_SALE_VALUE).value)
+USD. However, the city with the biggest amount of sold units was
+\value(theGeneralData.topSoldUnitsCityFact.getDimension(DIMENSION_CITY).label)
+ , reporting
+\value(theGeneralData.topSoldUnitsCityFact.getMeasure(MEASURE_SOLD_UNITS).value)
+sold cheeses.
+\value(theGeneralData.leastSalesRevenueCityFact.getDimension(DIMENSION_CITY).label)
+was the city with the least amount of sales revenue with
+\value(theGeneralData.leastSalesRevenueCityFact.getMeasure(MEASURE_SALE_VALUE).value)
+USD</yseop-yml:text>
+                    <yseop-yml:inline-assemblies/>
+                    <yseop-yml:inline-dslFunctionCalls/>
+                </yseop-yml:granuleContent>
+            </yseop-yml:granuleUnilingueContent>
+            <yseop-yml:granuleUnilingueContent locale="es">
+                <yseop-yml:granuleContent>
+                    <yseop-yml:text/>
+                    <yseop-yml:inline-assemblies/>
+                    <yseop-yml:inline-dslFunctionCalls/>
+                </yseop-yml:granuleContent>
+            </yseop-yml:granuleUnilingueContent>
+            <yseop-yml:granuleUnilingueContent locale="fr">
+                <yseop-yml:granuleContent>
+                    <yseop-yml:text/>
+                    <yseop-yml:inline-assemblies/>
+                    <yseop-yml:inline-dslFunctionCalls/>
+                </yseop-yml:granuleContent>
+            </yseop-yml:granuleUnilingueContent>
+        </yseop-yml:granuleI18nContents>
+        <yseop-yml:dslCondition/>
+        <yseop-yml:name/>
+        <yseop-yml:creationDate>2018-05-10T16:47:24.711Z</yseop-yml:creationDate>
+        <yseop-yml:properties identifier="26830790-7364-4911-af0e-994125cd8dc3">
+            <yseop-yml:property identifier="26830790-7364-4911-af0e-994125cd8dc3|condition" type="YML_PROPERTY" name="condition"></yseop-yml:property>
+        </yseop-yml:properties>
+    </yseop-yml:textGranule>
+    <yseop-yml:localVariables/>
+    <yseop-yml:advancedContent/>
+    <yseop-yml:ymlParameters/>
+    <yseop-yml:name>SalesByCityParagraph</yseop-yml:name>
+    <yseop-yml:properties identifier="3a9137b1-711d-4fe8-b64d-bff356eb20e1">
+        <yseop-yml:property identifier="3a9137b1-711d-4fe8-b64d-bff356eb20e1|dsl" type="YML_PROPERTY" name="dsl">"Sales by City Paragraph"</yseop-yml:property>
+    </yseop-yml:properties>
+</yseop-yml:ymlTextFunction>

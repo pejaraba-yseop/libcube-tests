@@ -1,0 +1,75 @@
+LibGeography:Country C_SLE
+  --> iso3166_1_numeric_code  "694"
+  --> iso3166_1_alpha_2       "SL"
+  --> iso3166_1_alpha_3       "SLE"
+  --> label
+    -> MultilingualText
+      --> i18nName_fr
+        -> NlgSubstantive
+          --> root    "Sierra Leone"
+          --> plural  "Sierra Leone"
+          --> gender  FEMININE
+          --> number  SINGULAR
+        ;
+      --> i18nName_en
+        -> NlgSubstantive
+          --> root    "Sierra Leone"
+          --> plural  "Sierra Leone"
+          --> gender  INANIMATE
+          --> number  SINGULAR
+        ;
+      --> i18nName_es
+        -> NlgSubstantive
+          --> root    "Sierra Leona"
+          --> plural  "Sierra Leona"
+          --> gender  FEMININE
+          --> number  SINGULAR
+        ;
+      --> i18nName_de
+        -> NlgSubstantive
+          --> root    "Sierra Leone"
+          --> plural  "Sierra Leone"
+          --> gender  NEUTRAL
+          --> number  SINGULAR
+        ;
+      --> i18nName_ja
+        -> NlgSubstantive
+          --> root    "シエラレオネ"
+          --> plural  "シエラレオネ"
+          --> gender  INANIMATE
+          --> number  SINGULAR
+        ;
+    ;
+  --> demonym
+    -> MultilingualText
+      --> i18nName_fr  "de Sierra Leone"
+      --> i18nName_en  "Sierra Leonean"
+      --> i18nName_es  "sierraleonés"
+      --> i18nName_de
+        -> NlgGenderAgreeableSubstantive
+          --> masculine "Sierra-Leoner"
+          --> feminine  "Sierra-Leonerin"
+        ;
+    ;
+  --> adjective
+    -> MultilingualText
+      --> i18nName_fr
+        -> NlgAdjective
+          --> root      "de Sierra Leone"
+        ;
+      --> i18nName_en
+        -> NlgAdjective
+          --> root      "Sierra Leonean"
+        ;
+      --> i18nName_es
+        -> NlgAdjective
+          --> root      "sierraleonés"
+        ;
+      --> i18nName_de
+        -> NlgAdjective
+          --> root      "sierra-leonisch"
+        ;
+    ;
+  --> useArticle_fr  true
+  --> useArticle_en  false
+;

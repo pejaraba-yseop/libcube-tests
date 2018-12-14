@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<yseop-yml:ymlRuleset xmlns:yseop-yml="http://www.yseop.com/yml/storage" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" domainModelVersion="3" identifier="d47782ae-8691-4122-b867-ef27c051d58e">
+    <yseop-yml:rules>
+        <yseop-yml:rule>0cf9ea43-c4d0-410c-add7-a876b712eaaf</yseop-yml:rule>
+    </yseop-yml:rules>
+    <yseop-yml:name>compareMarket</yseop-yml:name>
+    <yseop-yml:properties identifier="c5cf3024-4716-4fee-8c66-34a34fa18990">
+        <yseop-yml:property identifier="c5cf3024-4716-4fee-8c66-34a34fa18990|dsl" type="YML_PROPERTY" name="dsl">"compare market %"</yseop-yml:property>
+    </yseop-yml:properties>
+</yseop-yml:ymlRuleset>

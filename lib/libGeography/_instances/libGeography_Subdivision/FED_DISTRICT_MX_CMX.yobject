@@ -1,0 +1,47 @@
+LibGeography:Subdivision FED_DISTRICT_MX_CMX
+  --> iso3166_2    "MX-CMX"
+  --> postal_code  "DF"
+  --> status       FED_DISTRICT
+  --> label
+    -> MultilingualText
+      --> i18nName_fr
+        -> NlgSubstantive
+          --> root    "Ciudad de México"
+          --> plural  "Ciudad de México"
+          --> number  SINGULAR
+        ;
+      --> i18nName_en
+        -> NlgSubstantive
+          --> root    "Mexico City"
+          --> plural  "Mexico City"
+          --> gender  INANIMATE
+          --> number  SINGULAR
+        ;
+      --> i18nName_es
+        -> NlgSubstantive
+          --> root    "Ciudad de México"
+          --> plural  "Ciudad de México"
+          --> number  SINGULAR
+        ;
+      --> i18nName_de
+        -> NlgSubstantive
+          --> root    "Mexiko-Stadt"
+          --> plural  "Mexiko-Stadt"
+          --> gender  NEUTRAL
+          --> number  SINGULAR
+        ;
+      --> i18nName_ja
+        -> NlgSubstantive
+          --> root    "メキシコシティ"
+          --> plural  "メキシコシティ"
+          --> gender  INANIMATE
+          --> number  SINGULAR
+        ;
+    ;
+  --> demonym
+    -> MultilingualText
+    ;
+  --> adjective
+    -> MultilingualText
+    ;
+;

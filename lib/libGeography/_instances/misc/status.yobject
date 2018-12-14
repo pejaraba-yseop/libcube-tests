@@ -1,0 +1,16 @@
+ConstList stateStatus
+  --> values
+    -> Symbol STATE
+      --> i18nName_en  "State"
+    ;,
+    -> Symbol FED_DISTRICT
+      --> i18nName_en  "Federal District"  
+  	;,
+    -> Symbol PROVINCE
+      --> i18nName_en  "Province"  
+  	;,
+    -> Symbol TERRITORY
+      --> i18nName_en  "Territory"  
+  	;
+ ;
+ 

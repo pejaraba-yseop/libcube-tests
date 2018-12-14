@@ -1,0 +1,50 @@
+LibGeography:Subdivision PROVINCE_CA_BC
+  --> iso3166_2    "CA-BC"
+  --> postal_code  "BC"
+  --> status       PROVINCE
+  --> label
+    -> MultilingualText
+      --> i18nName_fr
+        -> NlgSubstantive
+          --> root    "Colombie-Britannique"
+          --> plural  "Colombie-Britannique"
+          --> gender  FEMININE
+          --> number  SINGULAR
+        ;
+      --> i18nName_en
+        -> NlgSubstantive
+          --> root    "British Columbia"
+          --> plural  "British Columbia"
+          --> gender  INANIMATE
+          --> number  SINGULAR
+        ;
+      --> i18nName_es
+        -> NlgSubstantive
+          --> root    "Columbia Británica"
+          --> plural  "Columbia Británica"
+          --> gender  FEMININE
+          --> number  SINGULAR
+        ;
+      --> i18nName_de
+        -> NlgSubstantive
+          --> root    "British Columbia"
+          --> plural  "British Columbia"
+          --> gender  NEUTRAL
+          --> number  SINGULAR
+        ;
+      --> i18nName_ja
+        -> NlgSubstantive
+          --> root    "ブリティッシュコロンビア州"
+          --> plural  "ブリティッシュコロンビア州"
+          --> gender  INANIMATE
+          --> number  SINGULAR
+        ;
+    ;
+  --> demonym
+    -> MultilingualText
+    ;
+  --> adjective
+    -> MultilingualText
+    ;
+  --> useArticle_en  false
+;

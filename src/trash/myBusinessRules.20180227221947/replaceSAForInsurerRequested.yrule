@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<yseop-yml:ymlRule xmlns:yseop-yml="http://www.yseop.com/yml/storage" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" domainModelVersion="3" identifier="460ca37a-f637-4912-9927-0318d3bce008">
+    <yseop-yml:content>getGeneralData().insurerRequestedNoSA = getGeneralData().insurerRequested.replace(" S.A.", "", _CASE_INSENSITIVE);</yseop-yml:content>
+    <yseop-yml:content/>
+    <yseop-yml:name>replaceSAForInsurerRequested</yseop-yml:name>
+    <yseop-yml:properties identifier="faa18872-bdbb-4afa-a905-59402307e1c5">
+        <yseop-yml:property identifier="faa18872-bdbb-4afa-a905-59402307e1c5|dsl" type="YML_PROPERTY" name="dsl">"replace SA for insurerRequested"</yseop-yml:property>
+        <yseop-yml:property identifier="faa18872-bdbb-4afa-a905-59402307e1c5|disabled" type="GENERATION_PROPERTY" name="disabled">true</yseop-yml:property>
+    </yseop-yml:properties>
+</yseop-yml:ymlRule>

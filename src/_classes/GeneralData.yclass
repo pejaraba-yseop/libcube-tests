@@ -1,0 +1,158 @@
+
+interface GeneralData
+    field language
+        --> domains Language
+        --> dsl -> Textualization
+            --> language LANG_fr
+            --> root "langage"
+            --> number SINGULAR
+        ;
+    field cube
+        --> domains LibCube:Cube
+        --> xmlMapping XmlMappingProperty_SAVE
+        --> dsl -> Textualization
+            --> language LANG_en
+            --> root "cube"
+            --> number SINGULAR
+        ;
+    field currentPeriod
+        --> domains LibCube:TimeMember
+        --> xmlMapping XmlMappingProperty_NO_SAVE
+        --> dsl -> Textualization
+            --> language LANG_en
+            --> root "currentPeriod"
+            --> number SINGULAR
+        ;
+    field previousPeriod
+        --> domains LibCube:TimeMember
+        --> xmlMapping XmlMappingProperty_NO_SAVE
+        --> dsl -> Textualization
+            --> language LANG_en
+            --> root "previousPeriod"
+            --> number SINGULAR
+        ;
+    field generalSalesVariation
+        --> domains Number
+        --> xmlMapping XmlMappingProperty_NO_SAVE
+        --> dsl -> Textualization
+            --> language LANG_en
+            --> root "general sales percentage variation"
+            --> number SINGULAR
+        ;
+    field previousYearGeneralSalesFact
+        --> domains LibCube:Fact
+        --> xmlMapping XmlMappingProperty_NO_SAVE
+        --> dsl -> Textualization
+            --> language LANG_en
+            --> root "previous year general sales fact"
+            --> number SINGULAR
+        ;
+    field currentYearGeneralSalesFact
+        --> domains LibCube:Fact
+        --> xmlMapping XmlMappingProperty_NO_SAVE
+        --> dsl -> Textualization
+            --> language LANG_en
+            --> root "current year general sales fact"
+            --> number SINGULAR
+        ;
+    field totalSoldUnitsVariation
+        --> domains Number
+        --> xmlMapping XmlMappingProperty_NO_SAVE
+        --> dsl -> Textualization
+            --> language LANG_en
+            --> root "total sold units variation"
+            --> number SINGULAR
+        ;
+    field previousYearTotalSoldUnits
+        --> domains Number
+        --> xmlMapping XmlMappingProperty_NO_SAVE
+        --> dsl -> Textualization
+            --> language LANG_en
+            --> root "previous year total sold units"
+            --> number PLURAL
+        ;
+    field previousYearSoldUnits
+        --> domains Number
+        --> xmlMapping XmlMappingProperty_NO_SAVE
+        --> dsl -> Textualization
+            --> language LANG_en
+            --> root "previous year sold units"
+            --> number PLURAL
+        ;
+    field topSalesRevenueCityFact
+        --> domains LibCube:Fact
+        --> xmlMapping XmlMappingProperty_NO_SAVE
+        --> dsl -> Textualization
+            --> language LANG_en
+            --> root "top sales revenue city fact"
+            --> number SINGULAR
+        ;
+    field leastSalesRevenueCityFact
+        --> domains LibCube:Fact
+        --> xmlMapping XmlMappingProperty_NO_SAVE
+        --> dsl -> Textualization
+            --> language LANG_en
+            --> root "least sales revenue city fact"
+            --> number SINGULAR
+        ;
+    field topSalesRevenueProductTypeFact
+        --> domains LibCube:Fact
+        --> xmlMapping XmlMappingProperty_NO_SAVE
+        --> dsl -> Textualization
+            --> language LANG_en
+            --> root "top sales revenue product type fact "
+            --> number SINGULAR
+        ;
+    field topSoldUnitsProductTypeFact
+        --> domains LibCube:Fact
+        --> xmlMapping XmlMappingProperty_NO_SAVE
+        --> dsl -> Textualization
+            --> language LANG_en
+            --> root "top sold units product type fact"
+            --> number SINGULAR
+        ;
+    field topProductTypeSalesRevenueDriver
+        --> domains LibCube:Fact
+        --> xmlMapping XmlMappingProperty_NO_SAVE
+        --> dsl -> Textualization
+            --> language LANG_en
+            --> root "top product type sales revenue driver"
+            --> number SINGULAR
+        ;
+    field topProductTypeSoldUnitsDriver
+        --> domains LibCube:Fact
+        --> xmlMapping XmlMappingProperty_NO_SAVE
+        --> dsl -> Textualization
+            --> language LANG_en
+            --> root "top product type sold units driver"
+            --> number SINGULAR
+        ;
+    field topSoldUnitsCityFact
+        --> domains LibCube:Fact
+        --> xmlMapping XmlMappingProperty_NO_SAVE
+        --> dsl -> Textualization
+            --> language LANG_en
+            --> root "top sold units city fact"
+            --> number SINGULAR
+        ;
+
+     field runUnitTests
+        --> domains Boolean
+        --> defaultValue false
+        --> xmlMapping XmlMappingProperty_NO_SAVE
+        --> dsl -> Textualization
+            --> language LANG_en
+            --> root "run unit tests"
+            --> number SINGULAR
+        ;
+    classProperties
+    --> dsl -> Textualization
+        --> language LANG_en
+        --> root "general data"
+        --> number PLURAL
+    ;
+;
+
+implementation GeneralData
+;
+

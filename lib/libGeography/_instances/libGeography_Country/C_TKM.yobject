@@ -1,0 +1,80 @@
+LibGeography:Country C_TKM
+  --> iso3166_1_numeric_code  "795"
+  --> iso3166_1_alpha_2       "TM"
+  --> iso3166_1_alpha_3       "TKM"
+  --> label
+    -> MultilingualText
+      --> i18nName_fr
+        -> NlgSubstantive
+          --> root    "Turkménistan"
+          --> plural  "Turkménistan"
+          --> gender  MASCULINE
+          --> number  SINGULAR
+        ;
+      --> i18nName_en
+        -> NlgSubstantive
+          --> root    "Turkmenistan"
+          --> plural  "Turkmenistan"
+          --> gender  INANIMATE
+          --> number  SINGULAR
+        ;
+      --> i18nName_es
+        -> NlgSubstantive
+          --> root    "Turkmenistán"
+          --> plural  "Turkmenistán"
+          --> gender  MASCULINE
+          --> number  SINGULAR
+        ;
+      --> i18nName_de
+        -> NlgSubstantive
+          --> root    "Turkmenistan"
+          --> plural  "Turkmenistan"
+          --> gender  NEUTRAL
+          --> number  SINGULAR
+        ;
+      --> i18nName_ja
+        -> NlgSubstantive
+          --> root    "トルクメニスタン"
+          --> plural  "トルクメニスタン"
+          --> gender  INANIMATE
+          --> number  SINGULAR
+        ;
+    ;
+  --> demonym
+    -> MultilingualText
+      --> i18nName_fr
+        -> NlgGenderAgreeableSubstantive
+          --> masculine "Turkmène"
+          --> feminine  "Turkmène"
+        ;
+      --> i18nName_en  "Turkmen"
+      --> i18nName_es  "turcomano"
+      --> i18nName_de
+        -> NlgGenderAgreeableSubstantive
+          --> masculine "Turkmene"
+          --> feminine  "Turkmenin"
+        ;
+    ;
+  --> adjective
+    -> MultilingualText
+      --> i18nName_fr
+        -> NlgAdjective
+          --> root      "turkmène"
+          --> feminine  "turkmène"
+        ;
+      --> i18nName_en
+        -> NlgAdjective
+          --> root      "Turkmen"
+        ;
+      --> i18nName_es
+        -> NlgAdjective
+          --> root      "turcomano"
+        ;
+      --> i18nName_de
+        -> NlgAdjective
+          --> root      "turkmenisch"
+        ;
+    ;
+  --> useArticle_fr  true
+  --> useArticle_en  false
+;

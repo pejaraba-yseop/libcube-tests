@@ -1,0 +1,57 @@
+interface LibCube:FactMeasure extends LibCube:PrintableValuesObject
+    field measure
+        --> domains LibCube:Measure
+        --> documentation "The measure (i.e. the value, rate of return, etc)"
+        --> xmlMapping XmlMappingProperty_SAVE
+        --> dsl -> Textualization
+            --> language LANG_en
+            --> root "measure"
+            --> number SINGULAR
+        ;
+    field value
+        --> domains Number
+        --> documentation "The value of the measure (must be a decimal). If other value types are needed, the field should be created using a complete."
+        --> xmlMapping XmlMappingProperty_SAVE
+        --> dsl -> Textualization
+            --> language LANG_en
+            --> root "value"
+            --> number SINGULAR
+        ;
+    field textValue
+        --> domains Text
+        --> documentation "The text value of the measure. If other value types are needed, the field should be created using a complete or subclass."
+        --> xmlMapping XmlMappingProperty_SAVE
+        --> dsl -> Textualization
+            --> language LANG_en
+            --> root "value"
+            --> number SINGULAR
+        ;
+
+    classProperties
+    --> dsl -> Textualization
+        --> language LANG_en
+        --> root "Cube Fact measure"
+        --> number SINGULAR
+    ;
+;
+
+implementation LibCube:FactMeasure
+    override{
+        printValues function
+    }
+;
+
+textMethod LibCube:FactMeasure::printValues()
+--> text 
+\(  
+     Measure: \value(measure.identifier) -
+    \if(value != null)
+        Value: \value(value)
+    \endIf
+
+    \if(textValue != null)
+        - Text Value: \value(textValue)
+    \endIf
+     
+\)
+; 

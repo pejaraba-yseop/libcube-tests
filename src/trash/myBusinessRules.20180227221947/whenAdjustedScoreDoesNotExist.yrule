@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<yseop-yml:ymlRule xmlns:yseop-yml="http://www.yseop.com/yml/storage" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" domainModelVersion="3" identifier="ab5f17f5-430d-4ebe-8323-19834d8a1189">
+    <yseop-yml:content>?scoreCardItem.scoreCardAdjusted = ?scoreCardItem.scoreCardScore;</yseop-yml:content>
+    <yseop-yml:content>?scoreCardItem in ScoreCardItem
+?scoreCardItem.scoreCardAdjusted == null</yseop-yml:content>
+    <yseop-yml:name>whenAdjustedScoreDoesNotExist</yseop-yml:name>
+    <yseop-yml:properties identifier="c06b71d5-816a-41e2-b508-c715d926941d">
+        <yseop-yml:property identifier="c06b71d5-816a-41e2-b508-c715d926941d|dsl" type="YML_PROPERTY" name="dsl">"when adjusted score does not exist"</yseop-yml:property>
+        <yseop-yml:property identifier="c06b71d5-816a-41e2-b508-c715d926941d|disabled" type="GENERATION_PROPERTY" name="disabled">true</yseop-yml:property>
+    </yseop-yml:properties>
+</yseop-yml:ymlRule>

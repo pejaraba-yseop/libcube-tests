@@ -1,0 +1,67 @@
+LibGeography:Country C_BVT
+  --> iso3166_1_numeric_code  "074"
+  --> iso3166_1_alpha_2       "BV"
+  --> iso3166_1_alpha_3       "BVT"
+  --> label
+    -> MultilingualText
+      --> i18nName_fr
+        -> NlgSubstantive
+          --> root    "Île Bouvet"
+          --> plural  "Île Bouvet"
+          --> gender  FEMININE
+          --> number  SINGULAR
+        ;
+      --> i18nName_en
+        -> NlgSubstantive
+          --> root    "Bouvet Island"
+          --> plural  "Bouvet Island"
+          --> gender  INANIMATE
+          --> number  SINGULAR
+        ;
+      --> i18nName_es
+        -> NlgSubstantive
+          --> root    "Isla Bouvet"
+          --> plural  "Isla Bouvet"
+          --> gender  FEMININE
+          --> number  SINGULAR
+        ;
+      --> i18nName_de
+        -> NlgSubstantive
+          --> root    "Bouvetinsel"
+          --> plural  "Bouvetinsel"
+          --> gender  NEUTRAL
+          --> number  SINGULAR
+        ;
+      --> i18nName_ja
+        -> NlgSubstantive
+          --> root    "ブーベ島"
+          --> plural  "ブーベ島"
+          --> gender  INANIMATE
+          --> number  SINGULAR
+        ;
+    ;
+  --> demonym
+    -> MultilingualText
+    ;
+  --> adjective
+    -> MultilingualText
+      --> i18nName_fr
+        -> NlgAdjective
+          --> root      "de l’Île Bouvet"
+        ;
+      --> i18nName_en
+        -> NlgAdjective
+          --> root      "of Bouvet Island"
+        ;
+      --> i18nName_es
+        -> NlgAdjective
+          --> root      "de la Isla Bouvet"
+        ;
+      --> i18nName_de
+        -> NlgAdjective
+          --> root      "der Bouvetinsel"
+        ;
+    ;
+  --> useArticle_fr  true
+  --> useArticle_en  false
+;

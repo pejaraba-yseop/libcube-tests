@@ -1,0 +1,80 @@
+LibGeography:Country C_GMB
+  --> iso3166_1_numeric_code  "270"
+  --> iso3166_1_alpha_2       "GM"
+  --> iso3166_1_alpha_3       "GMB"
+  --> label
+    -> MultilingualText
+      --> i18nName_fr
+        -> NlgSubstantive
+          --> root    "Gambie"
+          --> plural  "Gambie"
+          --> gender  FEMININE
+          --> number  SINGULAR
+        ;
+      --> i18nName_en
+        -> NlgSubstantive
+          --> root    "Gambia"
+          --> plural  "Gambia"
+          --> gender  INANIMATE
+          --> number  SINGULAR
+        ;
+      --> i18nName_es
+        -> NlgSubstantive
+          --> root    "Gambia"
+          --> plural  "Gambia"
+          --> gender  FEMININE
+          --> number  SINGULAR
+        ;
+      --> i18nName_de
+        -> NlgSubstantive
+          --> root    "Gambia"
+          --> plural  "Gambia"
+          --> gender  NEUTRAL
+          --> number  SINGULAR
+        ;
+      --> i18nName_ja
+        -> NlgSubstantive
+          --> root    "ガンビア"
+          --> plural  "ガンビア"
+          --> gender  INANIMATE
+          --> number  SINGULAR
+        ;
+    ;
+  --> demonym
+    -> MultilingualText
+      --> i18nName_fr
+        -> NlgGenderAgreeableSubstantive
+          --> masculine "Gambien"
+          --> feminine  "Gambienne"
+        ;
+      --> i18nName_en  "Gambian"
+      --> i18nName_es  "gambiano"
+      --> i18nName_de
+        -> NlgGenderAgreeableSubstantive
+          --> masculine "Gambier"
+          --> feminine  "Gambierin"
+        ;
+    ;
+  --> adjective
+    -> MultilingualText
+      --> i18nName_fr
+        -> NlgAdjective
+          --> root      "gambien"
+          --> feminine  "gambienne"
+        ;
+      --> i18nName_en
+        -> NlgAdjective
+          --> root      "Gambian"
+        ;
+      --> i18nName_es
+        -> NlgAdjective
+          --> root      "gambiano"
+        ;
+      --> i18nName_de
+        -> NlgAdjective
+          --> root      "gambisch"
+        ;
+    ;
+  --> useArticle_fr  true
+  --> useArticle_en  false
+;

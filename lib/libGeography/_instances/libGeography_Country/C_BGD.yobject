@@ -1,0 +1,80 @@
+LibGeography:Country C_BGD
+  --> iso3166_1_numeric_code  "050"
+  --> iso3166_1_alpha_2       "BD"
+  --> iso3166_1_alpha_3       "BGD"
+  --> label
+    -> MultilingualText
+      --> i18nName_fr
+        -> NlgSubstantive
+          --> root    "Bangladesh"
+          --> plural  "Bangladesh"
+          --> gender  MASCULINE
+          --> number  SINGULAR
+        ;
+      --> i18nName_en
+        -> NlgSubstantive
+          --> root    "Bangladesh"
+          --> plural  "Bangladesh"
+          --> gender  INANIMATE
+          --> number  SINGULAR
+        ;
+      --> i18nName_es
+        -> NlgSubstantive
+          --> root    "Bangladés"
+          --> plural  "Bangladés"
+          --> gender  MASCULINE
+          --> number  SINGULAR
+        ;
+      --> i18nName_de
+        -> NlgSubstantive
+          --> root    "Bangladesch"
+          --> plural  "Bangladesch"
+          --> gender  NEUTRAL
+          --> number  SINGULAR
+        ;
+      --> i18nName_ja
+        -> NlgSubstantive
+          --> root    "バングラデシュ"
+          --> plural  "バングラデシュ"
+          --> gender  INANIMATE
+          --> number  SINGULAR
+        ;
+    ;
+  --> demonym
+    -> MultilingualText
+      --> i18nName_fr
+        -> NlgGenderAgreeableSubstantive
+          --> masculine "Bangladais"
+          --> feminine  "Bangladaise"
+        ;
+      --> i18nName_en  "Bangladeshi"
+      --> i18nName_es  "bangladesí"
+      --> i18nName_de
+        -> NlgGenderAgreeableSubstantive
+          --> masculine "Bangladescher"
+          --> feminine  "Bangladescherin"
+        ;
+    ;
+  --> adjective
+    -> MultilingualText
+      --> i18nName_fr
+        -> NlgAdjective
+          --> root      "bangladais"
+          --> feminine  "bangladaise"
+        ;
+      --> i18nName_en
+        -> NlgAdjective
+          --> root      "Bangladeshi"
+        ;
+      --> i18nName_es
+        -> NlgAdjective
+          --> root      "bangladesí"
+        ;
+      --> i18nName_de
+        -> NlgAdjective
+          --> root      "bangladeschisch"
+        ;
+    ;
+  --> useArticle_fr  true
+  --> useArticle_en  false
+;

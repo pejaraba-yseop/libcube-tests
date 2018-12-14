@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<yseop-yml:ymlRuleset xmlns:yseop-yml="http://www.yseop.com/yml/storage" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" domainModelVersion="3" identifier="db3604aa-119e-42cf-95e3-19c9e6cd50da">
+    <yseop-yml:ymlParameters/>
+    <yseop-yml:localVariables/>
+    <yseop-yml:advancedContent/>
+    <yseop-yml:rules>
+        <yseop-yml:rule>0579dcf8-3fb1-4740-81d2-0d1712d9603c</yseop-yml:rule>
+        <yseop-yml:rule>e282fa42-0350-44c8-a657-5290e28bdb21</yseop-yml:rule>
+        <yseop-yml:rule>b5be4d84-3e11-47ef-b556-ba8c1d2bfd67</yseop-yml:rule>
+        <yseop-yml:rule>be3d0f2a-e66c-491e-86b6-334b5245cd18</yseop-yml:rule>
+        <yseop-yml:rule>f486a9cd-0b37-449c-a4d8-a5b761bb3d40</yseop-yml:rule>
+    </yseop-yml:rules>
+    <yseop-yml:name>highLowOrInLineOrNotInline</yseop-yml:name>
+    <yseop-yml:properties identifier="0fa7812a-901c-4e2c-9376-1e19f397bc05">
+        <yseop-yml:property identifier="0fa7812a-901c-4e2c-9376-1e19f397bc05|dsl" type="YML_PROPERTY" name="dsl">"highLow or inLineOrNotInline"</yseop-yml:property>
+    </yseop-yml:properties>
+</yseop-yml:ymlRuleset>

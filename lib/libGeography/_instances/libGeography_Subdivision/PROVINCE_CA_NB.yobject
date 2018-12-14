@@ -1,0 +1,50 @@
+LibGeography:Subdivision PROVINCE_CA_NB
+  --> iso3166_2    "CA-NB"
+  --> postal_code  "NB"
+  --> status       PROVINCE
+  --> label
+    -> MultilingualText
+      --> i18nName_fr
+        -> NlgSubstantive
+          --> root    "Nouveau-Brunswick"
+          --> plural  "Nouveau-Brunswick"
+          --> gender  MASCULINE
+          --> number  SINGULAR
+        ;
+      --> i18nName_en
+        -> NlgSubstantive
+          --> root    "New Brunswick"
+          --> plural  "New Brunswick"
+          --> gender  INANIMATE
+          --> number  SINGULAR
+        ;
+      --> i18nName_es
+        -> NlgSubstantive
+          --> root    "Nuevo Brunswick"
+          --> plural  "Nuevo Brunswick"
+          --> gender  MASCULINE
+          --> number  SINGULAR
+        ;
+      --> i18nName_de
+        -> NlgSubstantive
+          --> root    "New Brunswick"
+          --> plural  "New Brunswick"
+          --> gender  NEUTRAL
+          --> number  SINGULAR
+        ;
+      --> i18nName_ja
+        -> NlgSubstantive
+          --> root    "ニューブランズウィック州"
+          --> plural  "ニューブランズウィック州"
+          --> gender  INANIMATE
+          --> number  SINGULAR
+        ;
+    ;
+  --> demonym
+    -> MultilingualText
+    ;
+  --> adjective
+    -> MultilingualText
+    ;
+  --> useArticle_en  false
+;

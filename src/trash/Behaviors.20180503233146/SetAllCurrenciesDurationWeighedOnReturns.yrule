@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<yseop-yml:ymlRule xmlns:yseop-yml="http://www.yseop.com/yml/storage" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" domainModelVersion="3" identifier="b295c379-a178-4431-bb3d-2a819a15795b">
+    <yseop-yml:content>theGeneralData.allCurrenciesDurationFact.returnStatus = RETURN_STATUS_WEIGHED;</yseop-yml:content>
+    <yseop-yml:content>theGeneralData.allCurrenciesDurationFact != null &amp;&amp; theGeneralData.allCurrenciesDurationFact.getMeasure(MEASURE_PERFORMANCE).value &lt; 0</yseop-yml:content>
+    <yseop-yml:name>SetAllCurrenciesDurationWeighedOnReturns</yseop-yml:name>
+    <yseop-yml:properties identifier="1a674164-6ee5-4c3a-86a0-57e42c5b43dc">
+        <yseop-yml:property identifier="1a674164-6ee5-4c3a-86a0-57e42c5b43dc|dsl" type="YML_PROPERTY" name="dsl">"Set All Currencies Duration Weighed On Returns"</yseop-yml:property>
+        <yseop-yml:property identifier="1a674164-6ee5-4c3a-86a0-57e42c5b43dc|disabled" type="GENERATION_PROPERTY" name="disabled">false</yseop-yml:property>
+    </yseop-yml:properties>
+</yseop-yml:ymlRule>

@@ -1,0 +1,71 @@
+LibGeography:Country C_CUW
+  --> iso3166_1_numeric_code  "531"
+  --> iso3166_1_alpha_2       "CW"
+  --> iso3166_1_alpha_3       "CUW"
+  --> label
+    -> MultilingualText
+      --> i18nName_fr
+        -> NlgSubstantive
+          --> root    "Curaçao"
+          --> plural  "Curaçao"
+          --> gender  MASCULINE
+          --> number  SINGULAR
+        ;
+      --> i18nName_en
+        -> NlgSubstantive
+          --> root    "Curaçao"
+          --> plural  "Curaçao"
+          --> gender  INANIMATE
+          --> number  SINGULAR
+        ;
+      --> i18nName_es
+        -> NlgSubstantive
+          --> root    "Curazao"
+          --> plural  "Curazao"
+          --> gender  MASCULINE
+          --> number  SINGULAR
+        ;
+      --> i18nName_de
+        -> NlgSubstantive
+          --> root    "Curaçao"
+          --> plural  "Curaçao"
+          --> gender  NEUTRAL
+          --> number  SINGULAR
+        ;
+      --> i18nName_ja
+        -> NlgSubstantive
+          --> root    "キュラソー"
+          --> plural  "キュラソー"
+          --> gender  INANIMATE
+          --> number  SINGULAR
+        ;
+    ;
+  --> demonym
+    -> MultilingualText
+      --> i18nName_fr  "de Curaçao"
+      --> i18nName_en  "Curaçaoan"
+      --> i18nName_es  "curazoleño"
+      --> i18nName_de  "von Curaçao"
+    ;
+  --> adjective
+    -> MultilingualText
+      --> i18nName_fr
+        -> NlgAdjective
+          --> root      "de Curaçao"
+        ;
+      --> i18nName_en
+        -> NlgAdjective
+          --> root      "of Curaçao"
+        ;
+      --> i18nName_es
+        -> NlgAdjective
+          --> root      "curazoleño"
+        ;
+      --> i18nName_de
+        -> NlgAdjective
+          --> root      "von Curaçao"
+        ;
+    ;
+  --> useArticle_fr  false
+  --> useArticle_en  false
+;

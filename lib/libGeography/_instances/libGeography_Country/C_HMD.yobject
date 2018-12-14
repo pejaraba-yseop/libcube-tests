@@ -1,0 +1,67 @@
+LibGeography:Country C_HMD
+  --> iso3166_1_numeric_code  "334"
+  --> iso3166_1_alpha_2       "HM"
+  --> iso3166_1_alpha_3       "HMD"
+  --> label
+    -> MultilingualText
+      --> i18nName_fr
+        -> NlgSubstantive
+          --> root    "Îles Heard-et-MacDonald"
+          --> plural  "Îles Heard-et-MacDonald"
+          --> gender  FEMININE
+          --> number  PLURAL
+        ;
+      --> i18nName_en
+        -> NlgSubstantive
+          --> root    "Heard Island and McDonald Islands"
+          --> plural  "Heard Island and McDonald Islands"
+          --> gender  INANIMATE
+          --> number  PLURAL
+        ;
+      --> i18nName_es
+        -> NlgSubstantive
+          --> root    "Islas Heard y McDonald"
+          --> plural  "Islas Heard y McDonald"
+          --> gender  FEMININE
+          --> number  PLURAL
+        ;
+      --> i18nName_de
+        -> NlgSubstantive
+          --> root    "Heard und die McDonaldinseln"
+          --> plural  "Heard und die McDonaldinseln"
+          --> gender  NEUTRAL
+          --> number  PLURAL
+        ;
+      --> i18nName_ja
+        -> NlgSubstantive
+          --> root    "ハード島とマクドナルド諸島"
+          --> plural  "ハード島とマクドナルド諸島"
+          --> gender  INANIMATE
+          --> number  PLURAL
+        ;
+    ;
+  --> demonym
+    -> MultilingualText
+    ;
+  --> adjective
+    -> MultilingualText
+      --> i18nName_fr
+        -> NlgAdjective
+          --> root      "des Îles Heard et McDonald"
+        ;
+      --> i18nName_en
+        -> NlgAdjective
+          --> root      "of the Heard Island and McDonald Islands"
+        ;
+      --> i18nName_es
+        -> NlgAdjective
+          --> root      "de las Islas Heard y McDonald"
+        ;
+      --> i18nName_de
+        -> NlgAdjective
+          --> root      "von Heard und den McDonaldinseln"
+        ;
+    ;
+  --> useArticle_fr  true
+  --> useArticle_en  true
+;

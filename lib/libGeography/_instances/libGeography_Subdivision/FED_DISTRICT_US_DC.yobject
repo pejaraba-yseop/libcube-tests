@@ -1,0 +1,50 @@
+LibGeography:Subdivision FED_DISTRICT_US_DC
+  --> iso3166_2    "US-DC"
+  --> postal_code  "DC"
+  --> status       FED_DISTRICT
+  --> label
+    -> MultilingualText
+      --> i18nName_fr
+        -> NlgSubstantive
+          --> root    "Washington, D.C."
+          --> plural  "Washington, D.C."
+          --> gender  MASCULINE
+          --> number  SINGULAR
+        ;
+      --> i18nName_en
+        -> NlgSubstantive
+          --> root    "Washington, D.C."
+          --> plural  "Washington, D.C."
+          --> gender  INANIMATE
+          --> number  SINGULAR
+        ;
+      --> i18nName_es
+        -> NlgSubstantive
+          --> root    "Washington, D.C."
+          --> plural  "Washington, D.C."
+          --> gender  MASCULINE
+          --> number  SINGULAR
+        ;
+      --> i18nName_de
+        -> NlgSubstantive
+          --> root    "Washington, D.C."
+          --> plural  "Washington, D.C."
+          --> gender  NEUTRAL
+          --> number  SINGULAR
+        ;
+      --> i18nName_ja
+        -> NlgSubstantive
+          --> root    "ワシントンD.C."
+          --> plural  "ワシントンD.C."
+          --> gender  INANIMATE
+          --> number  SINGULAR
+        ;
+    ;
+  --> demonym
+    -> MultilingualText
+    ;
+  --> adjective
+    -> MultilingualText
+    ;
+  --> useArticle_en  false
+;

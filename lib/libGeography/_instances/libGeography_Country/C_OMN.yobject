@@ -1,0 +1,80 @@
+LibGeography:Country C_OMN
+  --> iso3166_1_numeric_code  "512"
+  --> iso3166_1_alpha_2       "OM"
+  --> iso3166_1_alpha_3       "OMN"
+  --> label
+    -> MultilingualText
+      --> i18nName_fr
+        -> NlgSubstantive
+          --> root    "Oman"
+          --> plural  "Oman"
+          --> gender  MASCULINE
+          --> number  SINGULAR
+        ;
+      --> i18nName_en
+        -> NlgSubstantive
+          --> root    "Oman"
+          --> plural  "Oman"
+          --> gender  INANIMATE
+          --> number  SINGULAR
+        ;
+      --> i18nName_es
+        -> NlgSubstantive
+          --> root    "Omán"
+          --> plural  "Omán"
+          --> gender  MASCULINE
+          --> number  SINGULAR
+        ;
+      --> i18nName_de
+        -> NlgSubstantive
+          --> root    "Oman"
+          --> plural  "Oman"
+          --> gender  NEUTRAL
+          --> number  SINGULAR
+        ;
+      --> i18nName_ja
+        -> NlgSubstantive
+          --> root    "オマーン"
+          --> plural  "オマーン"
+          --> gender  INANIMATE
+          --> number  SINGULAR
+        ;
+    ;
+  --> demonym
+    -> MultilingualText
+      --> i18nName_fr
+        -> NlgGenderAgreeableSubstantive
+          --> masculine "Omanais"
+          --> feminine  "Omanaise"
+        ;
+      --> i18nName_en  "Omani"
+      --> i18nName_es  "omaní"
+      --> i18nName_de
+        -> NlgGenderAgreeableSubstantive
+          --> masculine "Omaner"
+          --> feminine  "Omanerin"
+        ;
+    ;
+  --> adjective
+    -> MultilingualText
+      --> i18nName_fr
+        -> NlgAdjective
+          --> root      "omanais"
+          --> feminine  "omanaise"
+        ;
+      --> i18nName_en
+        -> NlgAdjective
+          --> root      "Omani"
+        ;
+      --> i18nName_es
+        -> NlgAdjective
+          --> root      "omaní"
+        ;
+      --> i18nName_de
+        -> NlgAdjective
+          --> root      "omanisch"
+        ;
+    ;
+  --> useArticle_fr  true
+  --> useArticle_en  false
+;

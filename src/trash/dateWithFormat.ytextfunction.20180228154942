@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<yseop-yml:ymlTextFunction xmlns:yseop-yml="http://www.yseop.com/yml/storage" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" domainModelVersion="3" identifier="976205bd-d263-48bd-b47f-93279e0a9018">
+    <yseop-yml:textGranule domainModelVersion="3" identifier="465a893a-a21f-47c6-a18b-ec83f3cdb6b1">
+        <yseop-yml:granuleI18nContents>
+            <yseop-yml:granuleUnilingueContent locale="en">
+                <yseop-yml:granuleContent>
+                    <yseop-yml:text>\date(date, _DATE_DD, _DATE_MONTH, _DATE_YYYY, _DATE_MIDDLE_ENDIAN_CARDINAL)</yseop-yml:text>
+                    <yseop-yml:inline-assemblies/>
+                    <yseop-yml:inline-dslFunctionCalls/>
+                </yseop-yml:granuleContent>
+            </yseop-yml:granuleUnilingueContent>
+            <yseop-yml:granuleUnilingueContent locale="es">
+                <yseop-yml:granuleContent>
+                    <yseop-yml:text/>
+                    <yseop-yml:inline-assemblies/>
+                    <yseop-yml:inline-dslFunctionCalls/>
+                </yseop-yml:granuleContent>
+            </yseop-yml:granuleUnilingueContent>
+            <yseop-yml:granuleUnilingueContent locale="fr">
+                <yseop-yml:granuleContent>
+                    <yseop-yml:text/>
+                    <yseop-yml:inline-assemblies/>
+                    <yseop-yml:inline-dslFunctionCalls/>
+                </yseop-yml:granuleContent>
+            </yseop-yml:granuleUnilingueContent>
+        </yseop-yml:granuleI18nContents>
+        <yseop-yml:dslCondition/>
+        <yseop-yml:name/>
+        <yseop-yml:creationDate>2018-02-26T18:56:37.351Z</yseop-yml:creationDate>
+        <yseop-yml:properties identifier="2b9b6bb4-5997-4474-9f94-ec396e122680">
+            <yseop-yml:property identifier="2b9b6bb4-5997-4474-9f94-ec396e122680|condition" type="YML_PROPERTY" name="condition"></yseop-yml:property>
+        </yseop-yml:properties>
+    </yseop-yml:textGranule>
+    <yseop-yml:localVariables/>
+    <yseop-yml:advancedContent/>
+    <yseop-yml:ymlParameters>Date date
+    --> dsl -> Textualization
+        --> language LANG_en
+        --> root "date"
+        --> number SINGULAR
+    ;
+</yseop-yml:ymlParameters>
+    <yseop-yml:name>dateWithFormat</yseop-yml:name>
+    <yseop-yml:properties identifier="2c4cd35b-a9f4-45ce-8fe9-61c06287e38a">
+        <yseop-yml:property identifier="2c4cd35b-a9f4-45ce-8fe9-61c06287e38a|dsl" type="YML_PROPERTY" name="dsl">"date with format2"</yseop-yml:property>
+    </yseop-yml:properties>
+</yseop-yml:ymlTextFunction>

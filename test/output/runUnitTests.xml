@@ -1,0 +1,159 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" href="C:/yseop/projects/LibCubeBasicExample/dialog/../dialog/output.xsl"?>
+<y:output xmlns:y="http://www.yseop.com/engine/3" xmlns:yt="http://www.yseop.com/text/2" xmlns:yd="http://www.yseop.com/dialog/1" xmlns:i18n="http://apache.org/cocoon/i18n/2.1" xmlns:fd="http://apache.org/cocoon/forms/1.0#definition" xmlns:ft="http://apache.org/cocoon/forms/1.0#template" xmlns:fi="http://apache.org/cocoon/forms/1.0#instance" xmlns:fb="http://apache.org/cocoon/forms/1.0#binding">
+	<y:results>
+		<y:texts>
+			<y:txt id="finalDocument" index="1" name="text1" format="xml-dialect"></y:txt>
+		</y:texts>
+	</y:results>
+	<y:dataset>
+		<y:action command="next-request"></y:action>
+		<y:dialog-session>
+			<y:request-count>1</y:request-count>
+			<y:start-timestamp>2018-11-01T10:53:59:427</y:start-timestamp>
+		</y:dialog-session>
+		<y:data>
+			<y:instance yid="theGeneralData"></y:instance>
+		</y:data>
+		<y:gathering-store></y:gathering-store>
+	</y:dataset>
+	<y:settings
+		freeze-random="true"></y:settings>
+	<y:data-end>
+		<y:logging>
+			<y:log
+				index="1"
+				level="info"
+				nature="user-log"
+				origin-nb-ms="0.66"
+				file="C:/yseop/projects/LibCubeBasicExample/lib/libCube/tests/unit_tests.dcl"
+				line="25">
+				<y:message>Running LibCube unit tests</y:message>
+			</y:log>
+			<y:log
+				index="2"
+				level="info"
+				nature="user-log"
+				origin-nb-ms="0.77"
+				file="C:/yseop/projects/LibCubeBasicExample/lib/libCube/tests/unit_tests.dcl"
+				line="3">
+				<y:message>Testing TwoFactsOneMeasureComparison</y:message>
+			</y:log>
+			<y:log
+				index="3"
+				level="info"
+				nature="user-log"
+				origin-nb-ms="0.85"
+				file="C:/yseop/projects/LibCubeBasicExample/lib/libCube/tests/unit_tests.dcl"
+				line="10">
+				<y:message>Testing factsSorter</y:message>
+			</y:log>
+			<y:log
+				index="4"
+				level="info"
+				nature="user-log"
+				origin-nb-ms="0.93"
+				file="C:/yseop/projects/LibCubeBasicExample/lib/libCube/tests/unit_tests.dcl"
+				line="17">
+				<y:message>Testing groupedFactsSelection</y:message>
+			</y:log>
+		</y:logging>
+		<y:synthesis>
+			<y:language
+				id="en"/>
+			<y:random
+				seed="154108764"
+				peak="0"/>
+			<y:process
+				id="67D8"
+				start-runtime="2018-11-01T10:53:59:313"
+				runtime="erunbc"
+				engine-version="7.1.0.RC01"
+				os="WINDOWS 6.2"
+				computer-name="LAPTOP-UIJ93B8J"/>
+			<y:key-user
+				name="For Yseop internal use - By AK"
+				email="akaeser@yseop.com"
+				creation-date="2018-04-05"
+				expiration-date="2018-12-30"/>
+			<y:request-exec-time
+				begin="2018-11-01T10:53:59:427"
+				end="2018-11-01T10:53:59:429"/>
+			<y:stat
+				errors="0"
+				warnings="0"
+				success-rule-fire="0"
+				text-write="4"
+				main-words="0"
+				main-chars="0"/>
+		</y:synthesis>
+		<y:profiling
+			xmlns:yp="http://www.yseop.com/profiling/1">
+			<yp:workflow
+				request-elapsed-ms="2.57">
+				<yp:step
+					id="SC_REQUEST_MANAGER_INITIALIZE"
+					name="rq-initialize"
+					start="1308014295950484"
+					end="1308014295957537"
+					elapsed-ms="0.01">
+					<yp:engine-time-counters>
+						<yp:cnt id="internal-kb-assertions" cnt="1"/>
+					</yp:engine-time-counters>
+				</yp:step>
+				<yp:step
+					id="SC_REQUEST_MANAGER_READ"
+					name="rq-read"
+					start="1308014296048159"
+					end="1308014296367982"
+					elapsed-ms="0.32">
+					<yp:engine-time-counters>
+						<yp:tc id="xml-read" elapsed-ms="0.230">
+							<yp:tc id="read-object" elapsed-ms="0.230">
+								<yp:tc id="init" elapsed-ms="0.026"/>
+								<yp:tc id="stream-read" elapsed-ms="0.024" small="true" info="264 bytes"/>
+								<yp:tc id="xml-parse" elapsed-ms="0.127">
+									<yp:tc id="match-attribute-with-class" elapsed-ms="0.008" cnt="2"/>
+								</yp:tc>
+							</yp:tc>
+						</yp:tc>
+						<yp:tc id="match-attribute-with-class" elapsed-ms="0.008" cnt="2" small="true"/>
+						<yp:cnt id="internal-kb-assertions" cnt="25"/>
+					</yp:engine-time-counters>
+					<yp:engine-time-counters>
+						<yp:tc id="read-englobant" elapsed-ms="0.407"/>
+						<yp:tc id="read-end" elapsed-ms="0.004"/>
+					</yp:engine-time-counters>
+				</yp:step>
+				<yp:step
+					id="SC_REQUEST_MANAGER_PROCESS"
+					name="rq-process"
+					start="1308014296381029"
+					end="1308014296988939"
+					elapsed-ms="0.61">
+					<yp:engine-time-counters>
+						<yp:tc id="write-text-method" elapsed-ms="0.122" cnt="4"></yp:tc>
+						<yp:cnt id="internal-kb-assertions" cnt="50"/>
+						<yp:tc id="log-and-other-write-to-console" elapsed-ms="0.009" cnt="17" medium="true"/>
+					</yp:engine-time-counters>
+					<yp:engine-time-counters></yp:engine-time-counters>
+				</yp:step>
+				<yp:step
+					id="SC_REQUEST_MANAGER_WRITE"
+					name="rq-write"
+					start="1308014297500938"
+					end="1308014298539746"
+					elapsed-ms="1.04">
+					<yp:engine-time-counters>
+						<yp:tc id="write-text-method" elapsed-ms="0.235" cnt="5"></yp:tc>
+						<yp:cnt id="internal-kb-assertions" cnt="166"/>
+					</yp:engine-time-counters>
+					<yp:engine-time-counters>
+						<yp:tc id="init-end" elapsed-ms="1308014297.590" small="true"/>
+					</yp:engine-time-counters>
+				</yp:step>
+				<yp:misc>116.425</yp:misc>
+			</yp:workflow>
+		</y:profiling>
+	</y:data-end>
+</y:output>

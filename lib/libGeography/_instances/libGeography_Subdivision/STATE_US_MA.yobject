@@ -1,0 +1,55 @@
+LibGeography:Subdivision STATE_US_MA
+  --> iso3166_2    "US-MA"
+  --> postal_code  "MA"
+  --> status       STATE
+  --> label
+    -> MultilingualText
+      --> i18nName_fr
+        -> NlgSubstantive
+          --> root    "Massachusetts"
+          --> plural  "Massachusetts"
+          --> gender  MASCULINE
+          --> number  SINGULAR
+        ;
+      --> i18nName_en
+        -> NlgSubstantive
+          --> root    "Massachusetts"
+          --> plural  "Massachusetts"
+          --> gender  INANIMATE
+          --> number  SINGULAR
+        ;
+      --> i18nName_es
+        -> NlgSubstantive
+          --> root    "Massachusetts"
+          --> plural  "Massachusetts"
+          --> gender  MASCULINE
+          --> number  SINGULAR
+        ;
+      --> i18nName_de
+        -> NlgSubstantive
+          --> root    "Massachusetts"
+          --> plural  "Massachusetts"
+          --> gender  NEUTRAL
+          --> number  SINGULAR
+        ;
+      --> i18nName_ja
+        -> NlgSubstantive
+          --> root    " マサチューセッツ州"
+          --> plural  " マサチューセッツ州"
+          --> gender  INANIMATE
+          --> number  SINGULAR
+        ;
+    ;
+  --> demonym
+    -> MultilingualText
+      --> i18nName_en  "Massachusettsan"
+    ;
+  --> adjective
+    -> MultilingualText
+      --> i18nName_en
+        -> NlgAdjective
+          --> root      "Massachusettsan"
+        ;
+    ;
+  --> useArticle_en  false
+;

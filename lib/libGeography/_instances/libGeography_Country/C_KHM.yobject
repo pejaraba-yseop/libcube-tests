@@ -1,0 +1,80 @@
+LibGeography:Country C_KHM
+  --> iso3166_1_numeric_code  "116"
+  --> iso3166_1_alpha_2       "KH"
+  --> iso3166_1_alpha_3       "KHM"
+  --> label
+    -> MultilingualText
+      --> i18nName_fr
+        -> NlgSubstantive
+          --> root    "Cambodge"
+          --> plural  "Cambodge"
+          --> gender  MASCULINE
+          --> number  SINGULAR
+        ;
+      --> i18nName_en
+        -> NlgSubstantive
+          --> root    "Cambodia"
+          --> plural  "Cambodia"
+          --> gender  INANIMATE
+          --> number  SINGULAR
+        ;
+      --> i18nName_es
+        -> NlgSubstantive
+          --> root    "Camboya"
+          --> plural  "Camboya"
+          --> gender  MASCULINE
+          --> number  SINGULAR
+        ;
+      --> i18nName_de
+        -> NlgSubstantive
+          --> root    "Kambodscha"
+          --> plural  "Kambodscha"
+          --> gender  NEUTRAL
+          --> number  SINGULAR
+        ;
+      --> i18nName_ja
+        -> NlgSubstantive
+          --> root    "カンボジア"
+          --> plural  "カンボジア"
+          --> gender  INANIMATE
+          --> number  SINGULAR
+        ;
+    ;
+  --> demonym
+    -> MultilingualText
+      --> i18nName_fr
+        -> NlgGenderAgreeableSubstantive
+          --> masculine "Cambodgien"
+          --> feminine  "Cambodgienne"
+        ;
+      --> i18nName_en  "Cambodian"
+      --> i18nName_es  "camboyano"
+      --> i18nName_de
+        -> NlgGenderAgreeableSubstantive
+          --> masculine "Kambodschaner"
+          --> feminine  "Kambodschanerin"
+        ;
+    ;
+  --> adjective
+    -> MultilingualText
+      --> i18nName_fr
+        -> NlgAdjective
+          --> root      "cambodgien"
+          --> feminine  "cambodgienne"
+        ;
+      --> i18nName_en
+        -> NlgAdjective
+          --> root      "Cambodian"
+        ;
+      --> i18nName_es
+        -> NlgAdjective
+          --> root      "camboyano"
+        ;
+      --> i18nName_de
+        -> NlgAdjective
+          --> root      "kambodschanisch"
+        ;
+    ;
+  --> useArticle_fr  true
+  --> useArticle_en  false
+;

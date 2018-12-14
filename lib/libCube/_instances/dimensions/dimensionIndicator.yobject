@@ -1,0 +1,8 @@
+LibCube:Dimension DIMENSION_INDICATOR
+    --> dsl -> Textualization
+        --> language LANG_en
+        --> root "dimension kpi"
+        --> number SINGULAR
+    ;
+    --> isOptional true
+;

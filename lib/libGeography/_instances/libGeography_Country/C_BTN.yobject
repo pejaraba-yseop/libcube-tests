@@ -1,0 +1,80 @@
+LibGeography:Country C_BTN
+  --> iso3166_1_numeric_code  "064"
+  --> iso3166_1_alpha_2       "BT"
+  --> iso3166_1_alpha_3       "BTN"
+  --> label
+    -> MultilingualText
+      --> i18nName_fr
+        -> NlgSubstantive
+          --> root    "Bhoutan"
+          --> plural  "Bhoutan"
+          --> gender  MASCULINE
+          --> number  SINGULAR
+        ;
+      --> i18nName_en
+        -> NlgSubstantive
+          --> root    "Bhutan"
+          --> plural  "Bhutan"
+          --> gender  INANIMATE
+          --> number  SINGULAR
+        ;
+      --> i18nName_es
+        -> NlgSubstantive
+          --> root    "Bután"
+          --> plural  "Bután"
+          --> gender  MASCULINE
+          --> number  SINGULAR
+        ;
+      --> i18nName_de
+        -> NlgSubstantive
+          --> root    "Bhutan"
+          --> plural  "Bhutan"
+          --> gender  NEUTRAL
+          --> number  SINGULAR
+        ;
+      --> i18nName_ja
+        -> NlgSubstantive
+          --> root    "ブータン"
+          --> plural  "ブータン"
+          --> gender  INANIMATE
+          --> number  SINGULAR
+        ;
+    ;
+  --> demonym
+    -> MultilingualText
+      --> i18nName_fr
+        -> NlgGenderAgreeableSubstantive
+          --> masculine "Bhoutanais"
+          --> feminine  "Bhoutanaise"
+        ;
+      --> i18nName_en  "Bhutanese"
+      --> i18nName_es  "butanés"
+      --> i18nName_de
+        -> NlgGenderAgreeableSubstantive
+          --> masculine "Bhutaner"
+          --> feminine  "Bhutanerin"
+        ;
+    ;
+  --> adjective
+    -> MultilingualText
+      --> i18nName_fr
+        -> NlgAdjective
+          --> root      "bhoutanais"
+          --> feminine  "bhoutanaise"
+        ;
+      --> i18nName_en
+        -> NlgAdjective
+          --> root      "Bhutanese"
+        ;
+      --> i18nName_es
+        -> NlgAdjective
+          --> root      "butanés"
+        ;
+      --> i18nName_de
+        -> NlgAdjective
+          --> root      "bhutanisch"
+        ;
+    ;
+  --> useArticle_fr  true
+  --> useArticle_en  false
+;

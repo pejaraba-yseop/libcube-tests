@@ -1,0 +1,38 @@
+extern function getFactsComparison(LibCube:Fact comparedFact, LibCube:Fact comparingFact, LibCube:Measure comparingMeasure)
+--> dsl -> Textualization
+    --> language LANG_en
+    --> root "the comparison between {1} and  {2}"
+    --> number SINGULAR
+;;
+
+extern function getOneMeasureSorter
+args{
+    Collection          facts
+
+    LibCube:Measure     comparingMeasure
+
+    Boolean             useAbsoluteValue
+    --> key             _USE_ABSOLUTE_VALUE
+    --> defaultValue    false
+
+    Boolean             isAscendant
+    --> key             _IS_ASCENDANT
+    --> defaultValue    false
+}
+;
+extern function getComparisonAttributeSorter
+args{
+    Collection          facts
+
+    Attribute           twoFactsComparisonAttr
+
+    Attribute           twoFactsDifferenceAttr
+
+    Boolean             useAbsoluteValue
+    --> key             _USE_ABSOLUTE_VALUE
+    --> defaultValue    false
+
+    Boolean             isAscendant
+    --> key             _IS_ASCENDANT
+    --> defaultValue    false
+};

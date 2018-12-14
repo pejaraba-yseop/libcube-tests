@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<yseop-yml:ymlTextFunction xmlns:yseop-yml="http://www.yseop.com/yml/storage" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" domainModelVersion="3" identifier="b4e02387-ccb3-4c36-8179-89715cef1a2e">
+    <yseop-yml:textGranule domainModelVersion="3" identifier="08e096c0-d2bd-4004-95b0-593a8a878a62">
+        <yseop-yml:granuleI18nContents>
+            <yseop-yml:granuleUnilingueContent locale="en">
+                <yseop-yml:granuleContent>
+                    <yseop-yml:text>DIMENSION_BUSINESS_SEGMENT.hierarchyMembersAccesors.rootMember
+\endOfLine
+//\value(DIMENSION_BUSINESS_SEGMENT>>hierarchies.size())
+//\value(DIMENSION_BUSINESS_SEGMENT>>hierarchyAccesors.size())
+\value(DIMENSION_BUSINESS_SEGMENT.hierarchyMembersAccesors.rootMember.label)
+\p
+DIMENSION_COMPANY.hierarchyMembersAccesors.leafMembers
+\value(DIMENSION_COMPANY.hierarchyMembersAccesors.leafMembers.size())
+\p</yseop-yml:text>
+                    <yseop-yml:inline-assemblies/>
+                    <yseop-yml:inline-dslFunctionCalls/>
+                </yseop-yml:granuleContent>
+            </yseop-yml:granuleUnilingueContent>
+            <yseop-yml:granuleUnilingueContent locale="es">
+                <yseop-yml:granuleContent>
+                    <yseop-yml:text/>
+                    <yseop-yml:inline-assemblies/>
+                    <yseop-yml:inline-dslFunctionCalls/>
+                </yseop-yml:granuleContent>
+            </yseop-yml:granuleUnilingueContent>
+            <yseop-yml:granuleUnilingueContent locale="fr">
+                <yseop-yml:granuleContent>
+                    <yseop-yml:text/>
+                    <yseop-yml:inline-assemblies/>
+                    <yseop-yml:inline-dslFunctionCalls/>
+                </yseop-yml:granuleContent>
+            </yseop-yml:granuleUnilingueContent>
+        </yseop-yml:granuleI18nContents>
+        <yseop-yml:dslCondition/>
+        <yseop-yml:name/>
+        <yseop-yml:creationDate>2018-02-23T20:57:40.957Z</yseop-yml:creationDate>
+        <yseop-yml:properties identifier="27edaa18-7dba-4695-b17e-a36a3c202811">
+            <yseop-yml:property identifier="27edaa18-7dba-4695-b17e-a36a3c202811|condition" type="YML_PROPERTY" name="condition"></yseop-yml:property>
+        </yseop-yml:properties>
+    </yseop-yml:textGranule>
+    <yseop-yml:localVariables/>
+    <yseop-yml:advancedContent/>
+    <yseop-yml:ymlParameters/>
+    <yseop-yml:name>members</yseop-yml:name>
+    <yseop-yml:properties identifier="8dc40f81-09af-44d3-927f-8a08489a1545">
+        <yseop-yml:property identifier="8dc40f81-09af-44d3-927f-8a08489a1545|dsl" type="YML_PROPERTY" name="dsl">"members"</yseop-yml:property>
+    </yseop-yml:properties>
+</yseop-yml:ymlTextFunction>

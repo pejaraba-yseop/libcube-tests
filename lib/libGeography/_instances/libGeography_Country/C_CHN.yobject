@@ -1,0 +1,80 @@
+LibGeography:Country C_CHN
+  --> iso3166_1_numeric_code  "156"
+  --> iso3166_1_alpha_2       "CN"
+  --> iso3166_1_alpha_3       "CHN"
+  --> label
+    -> MultilingualText
+      --> i18nName_fr
+        -> NlgSubstantive
+          --> root    "Chine"
+          --> plural  "Chine"
+          --> gender  FEMININE
+          --> number  SINGULAR
+        ;
+      --> i18nName_en
+        -> NlgSubstantive
+          --> root    "China"
+          --> plural  "China"
+          --> gender  INANIMATE
+          --> number  SINGULAR
+        ;
+      --> i18nName_es
+        -> NlgSubstantive
+          --> root    "China"
+          --> plural  "China"
+          --> gender  FEMININE
+          --> number  SINGULAR
+        ;
+      --> i18nName_de
+        -> NlgSubstantive
+          --> root    "China"
+          --> plural  "China"
+          --> gender  NEUTRAL
+          --> number  SINGULAR
+        ;
+      --> i18nName_ja
+        -> NlgSubstantive
+          --> root    "中国"
+          --> plural  "中国"
+          --> gender  INANIMATE
+          --> number  SINGULAR
+        ;
+    ;
+  --> demonym
+    -> MultilingualText
+      --> i18nName_fr
+        -> NlgGenderAgreeableSubstantive
+          --> masculine "Chinois"
+          --> feminine  "Chinoise"
+        ;
+      --> i18nName_en  "Chinese"
+      --> i18nName_es  "chino"
+      --> i18nName_de
+        -> NlgGenderAgreeableSubstantive
+          --> masculine "Chinese"
+          --> feminine  "Chinesin"
+        ;
+    ;
+  --> adjective
+    -> MultilingualText
+      --> i18nName_fr
+        -> NlgAdjective
+          --> root      "chinois"
+          --> feminine  "chinoise"
+        ;
+      --> i18nName_en
+        -> NlgAdjective
+          --> root      "Chinese"
+        ;
+      --> i18nName_es
+        -> NlgAdjective
+          --> root      "chino"
+        ;
+      --> i18nName_de
+        -> NlgAdjective
+          --> root      "chinesisch"
+        ;
+    ;
+  --> useArticle_fr  true
+  --> useArticle_en  false
+;

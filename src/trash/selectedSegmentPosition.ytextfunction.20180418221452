@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<yseop-yml:ymlTextFunction xmlns:yseop-yml="http://www.yseop.com/yml/storage" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" domainModelVersion="3" identifier="da76af33-f601-4c0d-aecb-36d9c434e641">
+    <yseop-yml:textGranule domainModelVersion="3" identifier="e35cfdf0-37ac-455e-926d-a03802d3d649">
+        <yseop-yml:granuleI18nContents>
+            <yseop-yml:granuleUnilingueContent locale="en">
+                <yseop-yml:granuleContent>
+                    <yseop-yml:text>In the
+\nounPhrase(theGeneralData.currentSegmentSelectionName)
+market segment,
+
+\beginStyle(nameStyle)
+    \nounPhrase(theGeneralData.currentCompany)
+\endStyle
+
+ranks
+
+\beginStyle(styleOrdinal)
+    \value(COMPANY_FACTS_SORTER_BY_SELECTED_GROSS_REVENUE.getRank(theGeneralData.currentCompany))
+\endStyle
+
+with a market share of
+
+\beginStyle(oneDigitStyle)
+    \value(marketShare, UNIT_PERCENT)
+\endStyle
+
+.</yseop-yml:text>
+                    <yseop-yml:inline-assemblies/>
+                    <yseop-yml:inline-dslFunctionCalls/>
+                </yseop-yml:granuleContent>
+            </yseop-yml:granuleUnilingueContent>
+            <yseop-yml:granuleUnilingueContent locale="es">
+                <yseop-yml:granuleContent>
+                    <yseop-yml:text>La cuota de mercado de la compañia en el segmento de
+\nounPhrase(theGeneralData.currentSegmentSelectionName)
+fue de
+
+\beginStyle(oneDigitStyle)
+    \value(marketShare, UNIT_PERCENT)
+\endStyle
+
+//\value(theGeneralData.businessSegmentCurrentCompanyRevenue)
+.</yseop-yml:text>
+                    <yseop-yml:inline-assemblies/>
+                    <yseop-yml:inline-dslFunctionCalls/>
+                </yseop-yml:granuleContent>
+            </yseop-yml:granuleUnilingueContent>
+            <yseop-yml:granuleUnilingueContent locale="fr">
+                <yseop-yml:granuleContent>
+                    <yseop-yml:text/>
+                    <yseop-yml:inline-assemblies/>
+                    <yseop-yml:inline-dslFunctionCalls/>
+                </yseop-yml:granuleContent>
+            </yseop-yml:granuleUnilingueContent>
+        </yseop-yml:granuleI18nContents>
+        <yseop-yml:dslCondition/>
+        <yseop-yml:name/>
+        <yseop-yml:creationDate>2018-02-23T22:20:57.895Z</yseop-yml:creationDate>
+        <yseop-yml:properties identifier="22601e94-5c24-413e-87cc-83a3bae8994c">
+            <yseop-yml:property identifier="22601e94-5c24-413e-87cc-83a3bae8994c|condition" type="YML_PROPERTY" name="condition"></yseop-yml:property>
+        </yseop-yml:properties>
+    </yseop-yml:textGranule>
+    <yseop-yml:localVariables>Number marketShare
+    --> dsl -> Textualization
+        --> language LANG_en
+        --> root "segmentShareCompany"
+        --> number SINGULAR
+    ;
+</yseop-yml:localVariables>
+    <yseop-yml:advancedContent>--> action {
+
+    // TODO: Review change
+    marketShare = CURRENT_COMPANY_ALL_SEGMENTS_FACT_SELECTION.selectedFact.getMeasure(MEASURE_SELECTED_GROSS_REVENUE).value / ROOT_FACT_SELECTION.selectedFact.getMeasure(MEASURE_SELECTED_GROSS_REVENUE).value;
+    //marketShare = CURRENT_COMPANY_ALL_SEGMENTS_FACT_SELECTION.selectedFact.getMeasure(MEASURE_SELECTED_GROSS_REVENUE).value;
+    
+    //theGeneralData.currentSegment.label = TEST_MULTI;
+    
+    this.text.write();
+           }</yseop-yml:advancedContent>
+    <yseop-yml:ymlParameters/>
+    <yseop-yml:name>selectedSegmentPosition</yseop-yml:name>
+    <yseop-yml:properties identifier="79a6e751-4476-4418-ac46-31dfa92cde5d">
+        <yseop-yml:property identifier="79a6e751-4476-4418-ac46-31dfa92cde5d|dsl" type="YML_PROPERTY" name="dsl">"selected segment position"</yseop-yml:property>
+    </yseop-yml:properties>
+</yseop-yml:ymlTextFunction>

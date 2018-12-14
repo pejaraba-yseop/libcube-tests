@@ -1,0 +1,50 @@
+LibGeography:Subdivision TERRITORY_US_MP
+  --> iso3166_2    "US-MP"
+  --> postal_code  "MP"
+  --> status       TERRITORY
+  --> label
+    -> MultilingualText
+      --> i18nName_fr
+        -> NlgSubstantive
+          --> root    "Îles Mariannes du Nord"
+          --> plural  "Îles Mariannes du Nord"
+          --> gender  FEMININE
+          --> number  PLURAL
+        ;
+      --> i18nName_en
+        -> NlgSubstantive
+          --> root    " Northern Mariana Islands"
+          --> plural  " Northern Mariana Islands"
+          --> gender  INANIMATE
+          --> number  PLURAL
+        ;
+      --> i18nName_es
+        -> NlgSubstantive
+          --> root    "Islas Marianas del Norte"
+          --> plural  "Islas Marianas del Norte"
+          --> gender  FEMININE
+          --> number  PLURAL
+        ;
+      --> i18nName_de
+        -> NlgSubstantive
+          --> root    "Nördliche Marianen"
+          --> plural  "Nördliche Marianen"
+          --> gender  NEUTRAL
+          --> number  PLURAL
+        ;
+      --> i18nName_ja
+        -> NlgSubstantive
+          --> root    "北マリアナ諸島"
+          --> plural  "北マリアナ諸島"
+          --> gender  INANIMATE
+          --> number  PLURAL
+        ;
+    ;
+  --> demonym
+    -> MultilingualText
+    ;
+  --> adjective
+    -> MultilingualText
+    ;
+  --> useArticle_en  true
+;

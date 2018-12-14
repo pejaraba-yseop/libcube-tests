@@ -1,0 +1,8 @@
+
+LibCube:Dimension DIMENSION_STORE
+    --> dsl -> Textualization
+        --> language LANG_en
+        --> root "Store Dimension"
+        --> number SINGULAR
+    ;
+;

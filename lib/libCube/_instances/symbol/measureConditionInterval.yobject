@@ -1,0 +1,7 @@
+Symbol MEASURE_CONDITION_INTERVAL
+    --> dsl -> Textualization
+        --> language LANG_en
+        --> root "measure condition interval"
+        --> number SINGULAR
+    ;
+;

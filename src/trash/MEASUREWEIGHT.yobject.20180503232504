@@ -1,0 +1,8 @@
+
+Measure MEASURE_WEIGHT
+    --> dsl -> Textualization
+        --> language LANG_en
+        --> root "Weight Measure"
+        --> number SINGULAR
+    ;
+;

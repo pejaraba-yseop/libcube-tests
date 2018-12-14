@@ -1,0 +1,80 @@
+LibGeography:Country C_GTM
+  --> iso3166_1_numeric_code  "320"
+  --> iso3166_1_alpha_2       "GT"
+  --> iso3166_1_alpha_3       "GTM"
+  --> label
+    -> MultilingualText
+      --> i18nName_fr
+        -> NlgSubstantive
+          --> root    "Guatemala"
+          --> plural  "Guatemala"
+          --> gender  MASCULINE
+          --> number  SINGULAR
+        ;
+      --> i18nName_en
+        -> NlgSubstantive
+          --> root    "Guatemala"
+          --> plural  "Guatemala"
+          --> gender  INANIMATE
+          --> number  SINGULAR
+        ;
+      --> i18nName_es
+        -> NlgSubstantive
+          --> root    "Guatemala"
+          --> plural  "Guatemala"
+          --> gender  MASCULINE
+          --> number  SINGULAR
+        ;
+      --> i18nName_de
+        -> NlgSubstantive
+          --> root    "Guatemala"
+          --> plural  "Guatemala"
+          --> gender  NEUTRAL
+          --> number  SINGULAR
+        ;
+      --> i18nName_ja
+        -> NlgSubstantive
+          --> root    "グアテマラ"
+          --> plural  "グアテマラ"
+          --> gender  INANIMATE
+          --> number  SINGULAR
+        ;
+    ;
+  --> demonym
+    -> MultilingualText
+      --> i18nName_fr
+        -> NlgGenderAgreeableSubstantive
+          --> masculine "Guatémaltèque"
+          --> feminine  "Guatémaltèque"
+        ;
+      --> i18nName_en  "Guatemalan"
+      --> i18nName_es  "guatemalteco"
+      --> i18nName_de
+        -> NlgGenderAgreeableSubstantive
+          --> masculine "Guatemalteke"
+          --> feminine  "Guatemaltekin"
+        ;
+    ;
+  --> adjective
+    -> MultilingualText
+      --> i18nName_fr
+        -> NlgAdjective
+          --> root      "guatémaltèque"
+          --> feminine  "guatémaltèque"
+        ;
+      --> i18nName_en
+        -> NlgAdjective
+          --> root      "Guatemalan"
+        ;
+      --> i18nName_es
+        -> NlgAdjective
+          --> root      "guatemalteco"
+        ;
+      --> i18nName_de
+        -> NlgAdjective
+          --> root      "guatemaltekisch"
+        ;
+    ;
+  --> useArticle_fr  true
+  --> useArticle_en  false
+;

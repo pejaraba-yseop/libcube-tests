@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<yseop-yml:ymlRule xmlns:yseop-yml="http://www.yseop.com/yml/storage" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" domainModelVersion="3" identifier="b708b27b-7368-4e5f-845b-cfd4407d51ec">
+    <yseop-yml:content>theGeneralData.fundMovement = FUND_MOVEMENT_REGRESSED;</yseop-yml:content>
+    <yseop-yml:content>theGeneralData.fundPerformanceFact != null &amp;&amp; theGeneralData.fundPerformanceFact.getMeasure(MEASURE_PERFORMANCE).value &lt; 0</yseop-yml:content>
+    <yseop-yml:name>SetFundRegressed</yseop-yml:name>
+    <yseop-yml:properties identifier="31d017dc-6f4f-4078-ac97-ef828cb0e403">
+        <yseop-yml:property identifier="31d017dc-6f4f-4078-ac97-ef828cb0e403|dsl" type="YML_PROPERTY" name="dsl">"Set Fund Regressed"</yseop-yml:property>
+        <yseop-yml:property identifier="31d017dc-6f4f-4078-ac97-ef828cb0e403|disabled" type="GENERATION_PROPERTY" name="disabled">false</yseop-yml:property>
+    </yseop-yml:properties>
+</yseop-yml:ymlRule>

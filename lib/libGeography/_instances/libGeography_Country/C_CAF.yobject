@@ -1,0 +1,80 @@
+LibGeography:Country C_CAF
+  --> iso3166_1_numeric_code  "140"
+  --> iso3166_1_alpha_2       "CF"
+  --> iso3166_1_alpha_3       "CAF"
+  --> label
+    -> MultilingualText
+      --> i18nName_fr
+        -> NlgSubstantive
+          --> root    "République centrafricaine"
+          --> plural  "République centrafricaine"
+          --> gender  FEMININE
+          --> number  SINGULAR
+        ;
+      --> i18nName_en
+        -> NlgSubstantive
+          --> root    "Central African Republic"
+          --> plural  "Central African Republic"
+          --> gender  INANIMATE
+          --> number  SINGULAR
+        ;
+      --> i18nName_es
+        -> NlgSubstantive
+          --> root    "República Centroafricana"
+          --> plural  "República Centroafricana"
+          --> gender  FEMININE
+          --> number  SINGULAR
+        ;
+      --> i18nName_de
+        -> NlgSubstantive
+          --> root    "Zentralafrikanische Republik"
+          --> plural  "Zentralafrikanische Republik"
+          --> gender  NEUTRAL
+          --> number  SINGULAR
+        ;
+      --> i18nName_ja
+        -> NlgSubstantive
+          --> root    "中央アフリカ共和国"
+          --> plural  "中央アフリカ共和国"
+          --> gender  INANIMATE
+          --> number  SINGULAR
+        ;
+    ;
+  --> demonym
+    -> MultilingualText
+      --> i18nName_fr
+        -> NlgGenderAgreeableSubstantive
+          --> masculine "Centrafricain"
+          --> feminine  "Centrafricaine"
+        ;
+      --> i18nName_en  "Central African"
+      --> i18nName_es  "centroafricano"
+      --> i18nName_de
+        -> NlgGenderAgreeableSubstantive
+          --> masculine "Zentralafrikaner"
+          --> feminine  "Zentralafrikanerin"
+        ;
+    ;
+  --> adjective
+    -> MultilingualText
+      --> i18nName_fr
+        -> NlgAdjective
+          --> root      "centrafricain"
+          --> feminine  "centrafricaine"
+        ;
+      --> i18nName_en
+        -> NlgAdjective
+          --> root      "Central African"
+        ;
+      --> i18nName_es
+        -> NlgAdjective
+          --> root      "centroafricano"
+        ;
+      --> i18nName_de
+        -> NlgAdjective
+          --> root      "zentralafrikanisch"
+        ;
+    ;
+  --> useArticle_fr  true
+  --> useArticle_en  false
+;

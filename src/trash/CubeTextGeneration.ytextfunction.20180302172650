@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<yseop-yml:ymlTextFunction xmlns:yseop-yml="http://www.yseop.com/yml/storage" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" domainModelVersion="3" identifier="3f823989-e182-4a19-a0f9-7d9904c2a2a8">
+    <yseop-yml:textGranule domainModelVersion="3" identifier="5978031a-c388-4516-8725-c7c103b9eb03">
+        <yseop-yml:granuleI18nContents>
+            <yseop-yml:granuleUnilingueContent locale="en">
+                <yseop-yml:granuleContent>
+                    <yseop-yml:text/>
+                    <yseop-yml:inline-assemblies/>
+                    <yseop-yml:inline-dslFunctionCalls/>
+                </yseop-yml:granuleContent>
+            </yseop-yml:granuleUnilingueContent>
+            <yseop-yml:granuleUnilingueContent locale="es">
+                <yseop-yml:granuleContent>
+                    <yseop-yml:text>Caja de Seguros se encuentra posicionada en el segundo lugar en el mercado de seguros generales, excluyendo riesgo de trabajo con un porcentaje de participación de mercado aproximado del 8,9%, sobre la base de primas brutas al 31 de marzo de 2017. Caja de Seguros esta posicionada primera en el segmento de vida colectivo (con un porcentaje de participacion del 9,2%), segunda en el segmento de automotores (con un 11,7%), otros riesgos (con un 20,4%), y sexta en el segmento de transportes (cascos) (5,9%).
+
+Caja de Seguros esta posicionada en el segundo lugar en el mercado Argentino de seguros con un porcentaje de participaciï¿½n de mercado aproximado del 5,8% sobre la base de primas brutas al 31 de marzo de 2017. </yseop-yml:text>
+                    <yseop-yml:inline-assemblies/>
+                    <yseop-yml:inline-dslFunctionCalls/>
+                </yseop-yml:granuleContent>
+            </yseop-yml:granuleUnilingueContent>
+            <yseop-yml:granuleUnilingueContent locale="fr">
+                <yseop-yml:granuleContent>
+                    <yseop-yml:text/>
+                    <yseop-yml:inline-assemblies/>
+                    <yseop-yml:inline-dslFunctionCalls/>
+                </yseop-yml:granuleContent>
+            </yseop-yml:granuleUnilingueContent>
+        </yseop-yml:granuleI18nContents>
+        <yseop-yml:dslCondition/>
+        <yseop-yml:name/>
+        <yseop-yml:creationDate>2018-02-21T13:49:30.753Z</yseop-yml:creationDate>
+        <yseop-yml:properties identifier="8cf462df-e6e4-4962-b6c5-24ea4319437a">
+            <yseop-yml:property identifier="8cf462df-e6e4-4962-b6c5-24ea4319437a|condition" type="YML_PROPERTY" name="condition"></yseop-yml:property>
+        </yseop-yml:properties>
+    </yseop-yml:textGranule>
+    <yseop-yml:localVariables/>
+    <yseop-yml:advancedContent/>
+    <yseop-yml:ymlParameters/>
+    <yseop-yml:name>CubeTextGeneration</yseop-yml:name>
+    <yseop-yml:properties identifier="090b2313-e1b0-4666-802c-22dfb5f20f14">
+        <yseop-yml:property identifier="090b2313-e1b0-4666-802c-22dfb5f20f14|dsl" type="YML_PROPERTY" name="dsl">"Cube Text Generation"</yseop-yml:property>
+    </yseop-yml:properties>
+</yseop-yml:ymlTextFunction>

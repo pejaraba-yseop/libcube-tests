@@ -1,0 +1,7 @@
+Symbol QUERY_FRAGMENT_TYPE_SLICE
+    --> dsl -> Textualization
+        --> language LANG_en
+        --> root "Slice Query Fragment Type"
+        --> number SINGULAR
+    ;
+;

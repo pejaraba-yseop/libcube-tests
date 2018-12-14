@@ -1,0 +1,8 @@
+
+LibCube:Measure MEASURE_SCORE_PRODUCT_DIVERSIFICATION
+    --> dsl -> Textualization
+        --> language LANG_en
+        --> root "Score product diversification"
+        --> number SINGULAR
+    ;
+;
