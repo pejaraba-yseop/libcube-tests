@@ -90,7 +90,7 @@ interface LibCube:FactsSorter
             --> root "use absolute value?"
             --> number SINGULAR
     ; 
-
+ 
     method multipleMeasuresComparatorFunc(LibCube:Fact fact1, 
                                           LibCube:Fact fact2, 
                                           LibCube:SortingOptions sortingOptions)
@@ -126,6 +126,14 @@ interface LibCube:FactsSorter
         --> number SINGULAR
     ;
     
+    method getBottomFact()
+    --> domains LibCube:Fact
+    --> dsl -> Textualization
+        --> language LANG_en
+        --> root "to fact"
+        --> number SINGULAR
+    ;
+
     method getFact(Number position)
     --> domains LibCube:Fact
     --> dsl -> Textualization
@@ -308,20 +316,17 @@ Function LibCube:FactsSorter::sortFacts()
 
             foreach(_fact, facts){
                 hasAttributes = true;
-                if(_fact.getAttributeValue(twoFactsComparisonAttribute)==null){
-                    logWarning("The following fact does not have the passed TwoFactsOneMeasureComparison attribute for sorting: ", _fact);
-                    hasAttributes = false;
-                } else {
-                    if(_fact.getAttributeValue(twoFactsComparisonAttribute).getAttributeValue(twoFactsDifferenceAttribute) == null){
-                        logWarning("The following fact does not have the passed TwoFactsOneMeasureComparison difference field attribute for sorting: ", _fact);
-                        hasAttributes = false;
-                    }
-                }
-            
+                /*acacacaccacacac*/
+                _fact.timeMember.date
+
                 if(hasAttributes == true){
                     sortedFacts.add(_fact);
                 }
             }
+        }
+        case(SORT_TYPE_DIMENSION):{
+            /*sortingOptions.timeMember = measure;
+            sortParam.expressionToValuate = LibCube:FactsSorter::oneMeasureComparatorFunc;*/
         }
     }
     
@@ -356,6 +361,12 @@ Function LibCube:FactsSorter::getTopNFacts(Number numberOfFacts)
 Function LibCube:FactsSorter::getTopFact()
 --> action {
     return sortedFacts.get(_FIRST)
+}
+;
+
+Function LibCube:FactsSorter::getBottomFact()
+--> action {
+    return sortedFacts.get(sortedFacts.size())
 }
 ;
 
