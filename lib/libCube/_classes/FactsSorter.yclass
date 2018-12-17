@@ -316,17 +316,27 @@ Function LibCube:FactsSorter::sortFacts()
 
             foreach(_fact, facts){
                 hasAttributes = true;
-                /*acacacaccacacac*/
-                _fact.timeMember.date
-
+                if(_fact.getAttributeValue(twoFactsComparisonAttribute)==null){
+                    logWarning("The following fact does not have the passed TwoFactsOneMeasureComparison attribute for sorting: ", _fact);
+                    hasAttributes = false;
+                } else {
+                    if(_fact.getAttributeValue(twoFactsComparisonAttribute).getAttributeValue(twoFactsDifferenceAttribute) == null){
+                        logWarning("The following fact does not have the passed TwoFactsOneMeasureComparison difference field attribute for sorting: ", _fact);
+                        hasAttributes = false;
+                    }
+                }
+            
                 if(hasAttributes == true){
                     sortedFacts.add(_fact);
                 }
             }
         }
+
         case(SORT_TYPE_DIMENSION):{
-            /*sortingOptions.timeMember = measure;
-            sortParam.expressionToValuate = LibCube:FactsSorter::oneMeasureComparatorFunc;*/
+            /*
+            sortingOptions.timeMember = measure;
+            sortParam.expressionToValuate = LibCube:FactsSorter::oneMeasureComparatorFunc;
+            _fact.timeMember.date*/
         }
     }
     
