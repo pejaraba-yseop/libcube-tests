@@ -331,13 +331,13 @@ Function LibCube:FactsSorter::sortFacts()
                 }
             }
         }
-
+/*
         case(SORT_TYPE_DIMENSION):{
-            /*
+            
             sortingOptions.timeMember = measure;
             sortParam.expressionToValuate = LibCube:FactsSorter::oneMeasureComparatorFunc;
-            _fact.timeMember.date*/
-        }
+            _fact.timeMember.date
+        }*/
     }
     
     sortingOptions.validateOptions();
