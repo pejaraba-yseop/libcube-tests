@@ -152,9 +152,6 @@ _FILE_TYPE_ F
   src/_technical/interfaces.kao  
 @endif 
 
-@if(exists_file("lib/libCube/tests.kao") == true)
-  lib/libCube/tests.kao
-@endif
  
  
 /** end of project specific interfaces **/
@@ -232,6 +229,10 @@ lib/fwDialog/implementations.kao
   lib/libCube/implementations.kao  
 @endif
  
+ @if(exists_file("lib/libCube/tests.kao") == true)
+  lib/libCube/tests.kao
+@endif
+
 /** project specific implementations **/
  
 @if(exists_file("src/Prj/implementations.kao") == true)
