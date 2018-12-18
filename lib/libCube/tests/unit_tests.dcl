@@ -104,7 +104,7 @@ function LibCube:Test:factsSorter()
 }
 ;
 
-function LibCube:Test:factsDimensionSorter()
+function LibCube:Test:factsDimensionSorterCaseTimeDimension()
  local {
     LibCube:FactsSorter sorter
     LibCube:Fact bottomFact
@@ -128,7 +128,7 @@ function LibCube:Test:factsDimensionSorter()
     List facts
 }
 --> action {
-    logInfo("Testing factsDimensionSorter");
+    logInfo("Testing factsDimensionSorterCaseTimeDimension");
 
     //fact value and label to give them shape-------------------------------------------------
     time2k18 = new(LibCube:TimeMember);
@@ -220,8 +220,122 @@ function LibCube:Test:factsDimensionSorter()
     //sorter.sortFacts(); sort facts from low to high when sortType is SORT_TYPE_DIMENSION example {2,1,3} --> {1,2,3}
     assert(bottomFact == fact2k18);
     assert(topFact == fact1986);
+    assert(sorter.sortedFacts.get(2) == fact2k13);
+    assert(sorter.sortedFacts.get(4) == fact2k15);
+    assert(sorter.sortedFacts.get(6) == fact2k17);
 
-    logInfo("LibCube:Test:factsDimensionSorter() passed");
+
+    logInfo("LibCube:Test:factsDimensionSorterCaseTimeDimension() passed");
+}
+;
+
+function LibCube:Test:factsDimensionSorterCaseAnyDimension()
+ local {
+    LibCube:FactsSorter sorter
+    LibCube:Fact bottomFact
+    LibCube:Fact topFact
+    LibCube:Member memberDallas
+    LibCube:Member memberBogota
+    LibCube:Member memberNewYork
+    LibCube:Member memberParis
+    LibCube:Member memberBuenosAires
+    LibCube:Member memberLima
+    LibCube:Member memberMexicoDF
+    
+    LibCube:Fact factDallas
+    LibCube:Fact factBogota
+    LibCube:Fact factNewYork
+    LibCube:Fact factParis
+    LibCube:Fact factBuenosAires
+    LibCube:Fact factLima
+    LibCube:Fact factMexicoDF
+
+    List facts
+}
+--> action {
+    logInfo("Testing factsDimensionSorterCaseAnyDimension");
+
+    //fact value and label to give them shape-------------------------------------------------
+    memberDallas = new(LibCube:Member);
+    memberDallas.dimension = DIMENSION_CITY;
+    memberDallas.label = "DALLAS";
+
+    memberBogota = new(LibCube:Member);
+    memberBogota.dimension = DIMENSION_CITY;
+    memberBogota.label = "BOGOTA";
+
+    memberNewYork = new(LibCube:Member);
+    memberNewYork.dimension = DIMENSION_CITY;
+    memberNewYork.label = "NEW YORK";
+
+    memberParis = new(LibCube:Member);
+    memberParis.dimension = DIMENSION_CITY;
+    memberParis.label = "PARIS";
+
+    memberBuenosAires = new(LibCube:Member);
+    memberBuenosAires.dimension = DIMENSION_CITY;
+    memberBuenosAires.label = "BUENOS AIRES";
+
+    memberLima = new(LibCube:Member);
+    memberLima.dimension = DIMENSION_CITY;
+    memberLima.label = "LIMA";
+
+    memberMexicoDF = new(LibCube:Member);
+    memberMexicoDF.dimension = DIMENSION_CITY;
+    memberMexicoDF.label = "MEXICO DF";
+    //-----------------------------------------------------------------------------------------
+
+    //init of every fact that will be inside the factSorter class
+    factDallas = new(LibCube:Fact);
+    factDallas.members.add(memberDallas);//setting the fact shape
+
+    factBogota = new(LibCube:Fact);
+    factBogota.members.add(memberBogota);//setting the fact shape
+
+    factNewYork = new(LibCube:Fact);
+    factNewYork.members.add(memberNewYork);//setting the fact shape
+    
+    factParis = new(LibCube:Fact);
+    factParis.members.add(memberParis);//setting the fact shape
+
+    factBuenosAires = new(LibCube:Fact);
+    factBuenosAires.members.add(memberBuenosAires);//setting the fact shape
+
+    factLima = new(LibCube:Fact);
+    factLima.members.add(memberLima);//setting the fact shape
+
+    factMexicoDF = new(LibCube:Fact);
+    factMexicoDF.members.add(memberMexicoDF);//setting the fact shape
+    //---------------------------------------------------------------------------------------
+
+    //Adding the every fact to facts list
+    facts = new(List); 
+    facts.add(factNewYork);
+    facts.add(factBuenosAires);
+    facts.add(factDallas);
+    facts.add(factBogota);
+    facts.add(factLima);
+    facts.add(factParis);
+    facts.add(factMexicoDF);
+    //----------------------------------------------------------------------------------------
+
+    //init and setting of factSorter class 
+    sorter = new(LibCube:FactsSorter);
+    sorter.facts = facts;
+    sorter.sortType = SORT_TYPE_DIMENSION;
+    sorter.dimension = memberBuenosAires.dimension;
+    sorter.sortFacts();//should be Bogota,Buenos Aires,Dallas,Lima,MexicoDF,NewYork, Paris
+    //Calling test case function
+    bottomFact = sorter.getBottomFact();
+    topFact = sorter.getTopFact();
+    //sorter.sortFacts(); sort facts in desc order when sortType is SORT_TYPE_DIMENSION example {2,1,3} --> {1,2,3}
+    assert(bottomFact == factParis);
+    assert(topFact == factBogota);
+    assert(sorter.sortedFacts.get(2) == factBuenosAires);
+    assert(sorter.sortedFacts.get(4) == factLima);
+    assert(sorter.sortedFacts.get(6) == factNewYork);
+
+    logInfo("LibCube:Test:factsDimensionSorterCaseAnyDimension() passed");
 }
 ;
 
@@ -238,7 +352,8 @@ function LibCube:Test:main()
     logInfo("Running LibCube unit tests");
     LibCube:Test:twoFactsOneMeasureComp();
     LibCube:Test:factsSorter();//issue4
-    LibCube:Test:factsDimensionSorter();//issue15
+    LibCube:Test:factsDimensionSorterCaseTimeDimension();//issue15
+    LibCube:Test:factsDimensionSorterCaseAnyDimension();//issue15
     LibCube:Test:groupedFactsSelection();
 }
 ;

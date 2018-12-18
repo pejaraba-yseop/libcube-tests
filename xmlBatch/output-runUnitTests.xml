@@ -10,7 +10,7 @@
 		<y:action command="next-request"></y:action>
 		<y:dialog-session>
 			<y:request-count>1</y:request-count>
-			<y:start-timestamp>2018-12-18T10:19:50:188</y:start-timestamp>
+			<y:start-timestamp>2018-12-18T15:02:15:980</y:start-timestamp>
 		</y:dialog-session>
 		<y:data>
 			<y:instance yid="theGeneralData"></y:instance>
@@ -24,9 +24,9 @@
 				index="1"
 				level="info"
 				nature="user-log"
-				origin-nb-ms="1.12"
+				origin-nb-ms="1.15"
 				file="C:/Users/asuarez/Documents/gitRepos/libcube-tests/lib/libCube/tests/unit_tests.dcl"
-				line="238">
+				line="352">
 				<y:message>Running LibCube unit tests</y:message>
 			</y:log>
 			<y:log
@@ -42,7 +42,7 @@
 				index="3"
 				level="info"
 				nature="user-log"
-				origin-nb-ms="1.30"
+				origin-nb-ms="1.32"
 				file="C:/Users/asuarez/Documents/gitRepos/libcube-tests/lib/libCube/tests/unit_tests.dcl"
 				line="30">
 				<y:message>Testing factsSorter</y:message>
@@ -51,7 +51,7 @@
 				index="4"
 				level="info"
 				nature="user-log"
-				origin-nb-ms="1.52"
+				origin-nb-ms="1.57"
 				file="C:/Users/asuarez/Documents/gitRepos/libcube-tests/lib/libCube/tests/unit_tests.dcl"
 				line="103">
 				<y:message>LibCube:Test:factsSorter() passed</y:message>
@@ -60,27 +60,45 @@
 				index="5"
 				level="info"
 				nature="user-log"
-				origin-nb-ms="1.58"
+				origin-nb-ms="1.64"
 				file="C:/Users/asuarez/Documents/gitRepos/libcube-tests/lib/libCube/tests/unit_tests.dcl"
 				line="131">
-				<y:message>Testing factsDimensionSorter</y:message>
+				<y:message>Testing factsDimensionSorterCaseTimeDimension</y:message>
 			</y:log>
 			<y:log
 				index="6"
 				level="info"
 				nature="user-log"
-				origin-nb-ms="1.72"
+				origin-nb-ms="1.81"
 				file="C:/Users/asuarez/Documents/gitRepos/libcube-tests/lib/libCube/tests/unit_tests.dcl"
-				line="224">
-				<y:message>LibCube:Test:factsDimensionSorter() passed</y:message>
+				line="228">
+				<y:message>LibCube:Test:factsDimensionSorterCaseTimeDimension() passed</y:message>
 			</y:log>
 			<y:log
 				index="7"
 				level="info"
 				nature="user-log"
-				origin-nb-ms="1.77"
+				origin-nb-ms="1.88"
 				file="C:/Users/asuarez/Documents/gitRepos/libcube-tests/lib/libCube/tests/unit_tests.dcl"
-				line="230">
+				line="256">
+				<y:message>Testing factsDimensionSorterCaseAnyDimension</y:message>
+			</y:log>
+			<y:log
+				index="8"
+				level="info"
+				nature="user-log"
+				origin-nb-ms="2.04"
+				file="C:/Users/asuarez/Documents/gitRepos/libcube-tests/lib/libCube/tests/unit_tests.dcl"
+				line="338">
+				<y:message>LibCube:Test:factsDimensionSorterCaseAnyDimension() passed</y:message>
+			</y:log>
+			<y:log
+				index="9"
+				level="info"
+				nature="user-log"
+				origin-nb-ms="2.11"
+				file="C:/Users/asuarez/Documents/gitRepos/libcube-tests/lib/libCube/tests/unit_tests.dcl"
+				line="344">
 				<y:message>Testing groupedFactsSelection</y:message>
 			</y:log>
 		</y:logging>
@@ -88,11 +106,11 @@
 			<y:language
 				id="en"/>
 			<y:random
-				seed="1545146390"
+				seed="257527223"
 				peak="0"/>
 			<y:process
-				id="6138"
-				start-runtime="2018-12-18T10:19:50:134"
+				id="8968"
+				start-runtime="2018-12-18T15:02:15:926"
 				runtime="erunbc_"
 				engine-version="7.1.0.RC01"
 				os="WINDOWS 6.2"
@@ -103,13 +121,13 @@
 				creation-date="2018-11-19"
 				expiration-date="2018-12-30"/>
 			<y:request-exec-time
-				begin="2018-12-18T10:19:50:188"
-				end="2018-12-18T10:19:50:192"/>
+				begin="2018-12-18T15:02:15:980"
+				end="2018-12-18T15:02:15:984"/>
 			<y:stat
 				errors="0"
 				warnings="0"
 				success-rule-fire="0"
-				text-write="9"
+				text-write="11"
 				main-words="0"
 				main-chars="0"/>
 		</y:synthesis>
