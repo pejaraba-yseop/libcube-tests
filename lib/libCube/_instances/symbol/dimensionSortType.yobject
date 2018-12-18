@@ -1,0 +1,8 @@
+Symbol SORT_TYPE_DIMENSION
+    --> documentation "Mean to sort by the labels of dimension"
+    --> dsl -> Textualization
+        --> language LANG_en
+        --> root "Dimension Sort Type"
+        --> number SINGULAR
+    ;
+;

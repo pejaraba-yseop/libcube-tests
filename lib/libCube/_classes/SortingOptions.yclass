@@ -59,6 +59,16 @@ interface LibCube:SortingOptions
             --> number PLURAL
     ;
 
+    field dimension
+        --> domains LibCube:Dimension
+        --> documentation "The time dimension used as comparation criteria"
+        --> xmlMapping XmlMappingProperty_NO_SAVE
+        --> dsl -> Textualization
+            --> language LANG_en
+            --> root "dimension"
+            --> number SINGULAR
+    ;
+
     method validateOptions()
     --> domains Void 
 
@@ -87,6 +97,9 @@ Function LibCube:SortingOptions::validateOptions()
         case(SORT_TYPE_COMPARISON_ATTRIBUTE):{
             assert(comparisonAttribute != null, "The TwoFactsOneMeasureComparison attribute must be set in a Comparison Attribute Sorter");
             assert(differenceAttribute != null, "The TwoFactsOneMeasureComparison difference field attribute must be set in a Comparison Attribute Sorter");
+        }
+        case(SORT_TYPE_DIMENSION):{
+            assert(dimension != null, "The dimension must be set in a Dimension Sorter");
         }
     }
 }

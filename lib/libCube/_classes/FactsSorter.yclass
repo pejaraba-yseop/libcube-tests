@@ -41,6 +41,16 @@ interface LibCube:FactsSorter
             --> number SINGULAR
     ;
 
+    field dimension
+        --> domains LibCube:Dimension
+        --> documentation "The dimension used as comparation criteria"
+        --> xmlMapping XmlMappingProperty_NO_SAVE
+        --> dsl -> Textualization
+            --> language LANG_en
+            --> root "dimension"
+            --> number SINGULAR
+    ;
+
     field measures
         --> domains OrderedSet
         --> xmlMapping XmlMappingProperty_NO_SAVE
@@ -99,6 +109,11 @@ interface LibCube:FactsSorter
     method oneMeasureComparatorFunc(LibCube:Fact fact1, 
                                     LibCube:Fact fact2, 
                                     LibCube:SortingOptions sortingOptions)
+    --> domains Number
+
+    method oneDimensionComparatorFunc(LibCube:Fact fact1, 
+                                      LibCube:Fact fact2,
+                                      LibCube:SortingOptions sortingOptions)
     --> domains Number
 
     method comparisonAttributeComparatorFunc(LibCube:Fact fact1, 
@@ -210,6 +225,25 @@ Function LibCube:FactsSorter::oneMeasureComparatorFunc(LibCube:Fact fact1,
     } else {
         return fact1.getMeasure(measure).value - fact2.getMeasure(measure).value;
     }
+}
+;
+
+Function LibCube:FactsSorter::oneDimensionComparatorFunc(LibCube:Fact fact1, 
+                                                       LibCube:Fact fact2,
+                                                       LibCube:SortingOptions sortingOptions)
+local {
+    LibCube:Dimension dimension
+    LibCube:TimeMember member1
+    LibCube:TimeMember member2
+}
+--> action {
+    dimension = sortingOptions.dimension;
+    member1 = fact1.timeMember;
+    member2 = fact2.timeMember;
+    if(member1.date < member2.date)
+        return 1;
+    else
+        return -1;
 }
 ;
 
@@ -331,13 +365,23 @@ Function LibCube:FactsSorter::sortFacts()
                 }
             }
         }
-/*
+
         case(SORT_TYPE_DIMENSION):{
+            sortingOptions.dimension = dimension;
+            sortParam.expressionToValuate = LibCube:FactsSorter::oneDimensionComparatorFunc;
             
-            sortingOptions.timeMember = measure;
-            sortParam.expressionToValuate = LibCube:FactsSorter::oneMeasureComparatorFunc;
-            _fact.timeMember.date
-        }*/
+            foreach(_fact, facts){
+                hasAttributes = true;
+                if(_fact.getDimension(dimension) == null){
+                    logWarning("The following fact does not have the ", dimension.members.label, " dimension sorting: ", _fact);
+                    hasAllMeasures = false
+                } 
+            
+                if(hasAttributes == true){
+                    sortedFacts.add(_fact);
+                }
+            }
+        }
     }
     
     sortingOptions.validateOptions();
