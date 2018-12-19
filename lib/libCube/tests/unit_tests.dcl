@@ -658,10 +658,10 @@ function LibCube:Test:main()
     //LibKPI:Test:ranges();
     logInfo("Running LibCube unit tests");
     LibCube:Test:twoFactsOneMeasureComp();
-    //LibCube:Test:factsSorter();//issue4
-    //LibCube:Test:factsDimensionSorterCaseTimeDimension();//issue15
-    //LibCube:Test:factsDimensionSorterCaseAnyDimension();//issue15
-    //LibCube:Test:factsDimensionSorterHelper();//issue15
+    LibCube:Test:factsSorter();//issue4
+    LibCube:Test:factsDimensionSorterCaseTimeDimension();//issue15
+    LibCube:Test:factsDimensionSorterCaseAnyDimension();//issue15
+    LibCube:Test:factsDimensionSorterHelper();//issue15
     LibCube:Test:timeMember();//issue1
     LibCube:Test:groupedFactsSelection();
 }
