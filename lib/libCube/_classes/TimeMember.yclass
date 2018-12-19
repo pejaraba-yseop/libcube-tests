@@ -1,4 +1,12 @@
+/**
+ * Entry point for this class
+ *
+ * @author 
+ */
 interface LibCube:TimeMember extends LibCube:HierarchyElement
+    // **************************************************
+    // Fields
+    // **************************************************
     field date
         --> domains Date
         --> xmlMapping XmlMappingProperty_NO_SAVE
@@ -24,10 +32,53 @@ interface LibCube:TimeMember extends LibCube:HierarchyElement
             --> root "period of time"
             --> number SINGULAR
         ;
-        
+    
+    // **************************************************
+    // methods
+    // **************************************************
+
     method findQuarter()
     --> domains Void
-        
+    
+    method findLastDayOfPeriod()
+    --> domains Date
+    --> documentation "returns a date for the last day of the period of TimeMember"
+    --> dsl -> Textualization
+        --> language LANG_en
+        --> root "find last day of period"
+        --> number SINGULAR
+    ;
+
+    method findFirstDayOfPeriod()
+    --> domains Date
+    --> documentation "returns a date for the first day of the period of TimeMember"
+    --> dsl -> Textualization
+        --> language LANG_en
+        --> root "find first day of period"
+        --> number SINGULAR
+    ;
+
+    method findDayCountOfPeriod()
+    --> domains Integer
+    --> documentation "returns day count of the period of TimeMember"
+    --> dsl -> Textualization
+        --> language LANG_en
+        --> root "find day count of period"
+        --> number SINGULAR
+    ;
+
+    method validatePeriod()
+    --> domains Void 
+
+    method isLeapYear()
+    --> domains Boolean
+    --> documentation "returns true if it is a leap year"
+    --> dsl -> Textualization
+        --> language LANG_en
+        --> root "is leap year"
+        --> number SINGULAR
+    ;
+
     classProperties
     --> dsl -> Textualization
         --> language LANG_en
@@ -41,6 +92,9 @@ interface LibCube:TimeMember extends LibCube:HierarchyElement
 implementation LibCube:TimeMember
 ;
 
+/**
+ * Function to set quarter of the TimeMember object
+ */
 function LibCube:TimeMember::findQuarter()
 --> action {
 	switch {
@@ -50,5 +104,170 @@ function LibCube:TimeMember::findQuarter()
 		case(date.month <= 9): quarter = Q3
 		case(date.month <= 12): quarter = Q4
 	}
+}
+;
+
+/**
+ * Function to find the last day of period of the TimeMember object
+ * @return an object of type Date for the last day of period
+ */
+function LibCube:TimeMember::findLastDayOfPeriod()
+local {
+    Date genericDate
+    Text monthNumber
+}
+--> action {
+        validatePeriod();
+        switch(period) {
+        
+            case(PERIOD_DAY): {return date;}
+            case(PERIOD_WEEK):{
+                genericDate = date.increment(7 - date.dayOfWeek, UNIT_DAY);
+                return genericDate;
+            }
+            case(PERIOD_MONTH):{return date.lastDayOfMonth();}//firstMondayOfMonth()
+            case(PERIOD_YEAR):{return Date..stringToDate(concat(date.year, "/12/31") );}
+            case(PERIOD_QUARTER):{
+                findQuarter();
+                if(quarter == Q1){
+                    monthNumber = "/03";
+                }
+                if(quarter == Q2){
+                    monthNumber = "/06";
+                }
+                if(quarter == Q3){
+                    monthNumber = "/09";
+                }
+                if(quarter == Q4){
+                    monthNumber = "/12";
+                }
+                genericDate = Date..stringToDate(concat(date.year, concat(monthNumber,"/01")));
+                return genericDate.lastDayOfMonth();
+        }
+        
+    }
+    
+}
+;
+
+/**
+ * Function to find the first day of period of the TimeMember object
+ * @return an object of type Date for the first day of period
+ */
+function LibCube:TimeMember::findFirstDayOfPeriod()
+local {
+    Date genericDate
+    Text monthNumber
+}
+--> action {
+        validatePeriod();
+        switch(period) {
+        
+            case(PERIOD_DAY): {return date;}
+            case(PERIOD_WEEK):{
+                genericDate = date.increment(1 - date.dayOfWeek , UNIT_DAY);
+                return genericDate;
+            }
+            case(PERIOD_MONTH):{return date.firstDayOfMonth();}
+            case(PERIOD_YEAR):{return Date..stringToDate(concat(date.year, "/01/01") );}
+            case(PERIOD_QUARTER):{
+                findQuarter();
+                if(quarter == Q1){
+                    monthNumber = "/01";
+                }
+                if(quarter == Q2){
+                    monthNumber = "/04";
+                }
+                if(quarter == Q3){
+                    monthNumber = "/07";
+                }
+                if(quarter == Q4){
+                    monthNumber = "/10";
+                }
+                genericDate = Date..stringToDate(concat(date.year, concat(monthNumber,"/01")));
+                return genericDate.firstDayOfMonth();
+        }
+        
+    }
+    
+}
+;
+
+/**
+ * Function to find the day count of period of the TimeMember object
+ * @return an object of type Date for the day count of period
+ */
+function LibCube:TimeMember::findDayCountOfPeriod()
+local {
+    Date genericDate
+    Integer dayCountQ1
+    Integer dayCountQ2
+    Integer dayCountQ3
+    Integer dayCountQ4
+}
+--> action {
+        validatePeriod();
+        switch(period) {
+            case(PERIOD_DAY): {return 1;}
+            case(PERIOD_WEEK):{
+                return date.dayOfWeek;
+            }
+            case(PERIOD_MONTH):{return date.day;}
+            case(PERIOD_YEAR):{return date.dayOfYear;}
+            case(PERIOD_QUARTER):{
+                findQuarter();
+                if(isLeapYear() == true){
+                    dayCountQ1 = 91;
+                }
+                else{
+                    dayCountQ1 = 90;
+                }
+                dayCountQ2 = 91;
+                dayCountQ3 = 92;
+                dayCountQ4 = 92;
+
+                if(quarter == Q1){
+                    return date.dayOfYear;
+                }
+                if(quarter == Q2){
+                    return date.dayOfYear - dayCountQ1;
+                }
+                if(quarter == Q3){
+                    return date.dayOfYear - dayCountQ1 - dayCountQ2;
+                }
+                if(quarter == Q4){
+                    return date.dayOfYear - dayCountQ1 - dayCountQ2 - dayCountQ3;
+                }
+        }
+        
+    }
+    
+}
+;
+
+/**
+ * Function to validate if period is set for the TimeMember object
+ */
+function LibCube:TimeMember::validatePeriod()
+--> action {
+    if(period == null){
+        assert(period != null, "the period attribute must be set");
+    }
+}
+;
+
+/**
+ * Function to validate if the given year of TimeMember is leap
+ * @return true if the year is leap or false if it is not
+ */
+function LibCube:TimeMember::isLeapYear()
+--> action {
+    
+    if(date.year mod 4 == 0 && date.year mod 100 > 0){
+        return true;
+    }
+    else{
+        return false;
+    }
 }
 ;

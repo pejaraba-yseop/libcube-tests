@@ -446,6 +446,206 @@ function LibCube:Test:factsDimensionSorterHelper()
 }
 ;
 
+function LibCube:Test:timeMember()
+local {
+    LibCube:TimeMember timeMember
+    Date dateFoundForLastDayOfPeriod
+    Date dateFoundForFirstDayOfPeriod
+    Date dateComparatorForLastDayOfPeriod
+    Date dateComparatorForFirstDayOfPeriod
+    Integer dayCountFound
+    Integer dayCountComparator
+}
+--> action {
+    logInfo("Testing timeMember");
+    timeMember = new(LibCube:TimeMember);
+    
+    //CASE timeMember.period = PERIOD_DAY;
+    timeMember.period = PERIOD_DAY;
+    timeMember.date = Date..stringToDate("1986-01-01");
+    dateFoundForLastDayOfPeriod = timeMember.findLastDayOfPeriod();
+    dateFoundForFirstDayOfPeriod = timeMember.findFirstDayOfPeriod();
+    dateComparatorForLastDayOfPeriod = Date..stringToDate("1986-01-01");
+    dateComparatorForFirstDayOfPeriod = Date..stringToDate("1986-01-01");
+    dayCountFound = timeMember.findDayCountOfPeriod();
+    dayCountComparator = 1;
+    assert(dateFoundForLastDayOfPeriod == dateComparatorForLastDayOfPeriod);
+    assert(dateFoundForFirstDayOfPeriod == dateComparatorForFirstDayOfPeriod);
+    assert(dayCountFound == dayCountComparator);
+    logInfo("CASE timeMember.period = PERIOD_DAY passed");
+
+    //CASE timeMember.period = PERIOD_MONTH;
+    timeMember.period = PERIOD_MONTH;
+        //CASE 1
+    timeMember.date = Date..stringToDate("2018-02-01");
+    dateFoundForLastDayOfPeriod = timeMember.findLastDayOfPeriod();
+    dateFoundForFirstDayOfPeriod = timeMember.findFirstDayOfPeriod();
+    dateComparatorForLastDayOfPeriod = Date..stringToDate("2018-02-28");
+    dateComparatorForFirstDayOfPeriod = Date..stringToDate("2018-02-01");
+    dayCountFound = timeMember.findDayCountOfPeriod();
+    dayCountComparator = 1;
+    assert(dateFoundForLastDayOfPeriod == dateComparatorForLastDayOfPeriod);
+    assert(dateFoundForFirstDayOfPeriod == dateComparatorForFirstDayOfPeriod);
+    assert(dayCountFound == dayCountComparator);
+        //CASE 2
+    timeMember.date = Date..stringToDate("2020-02-01");
+    dateFoundForLastDayOfPeriod = timeMember.findLastDayOfPeriod();
+    dateFoundForFirstDayOfPeriod = timeMember.findFirstDayOfPeriod();
+    dateComparatorForLastDayOfPeriod = Date..stringToDate("2020-02-29");
+    dateComparatorForFirstDayOfPeriod = Date..stringToDate("2020-02-01");
+    assert(dateFoundForLastDayOfPeriod == dateComparatorForLastDayOfPeriod);
+    assert(dateFoundForFirstDayOfPeriod == dateComparatorForFirstDayOfPeriod);
+    logInfo("CASE timeMember.period = PERIOD_MONTH passed");
+        //CASE 3
+    timeMember.date = Date..stringToDate("2020-02-25");
+    dayCountFound = timeMember.findDayCountOfPeriod();
+    dayCountComparator = 25;
+    assert(dayCountFound == dayCountComparator);
+
+    //CASE timeMember.period = PERIOD_YEAR;
+    timeMember.period = PERIOD_YEAR;
+    timeMember.date = Date..stringToDate("2017-04-20");
+    dateFoundForLastDayOfPeriod = timeMember.findLastDayOfPeriod();
+    dateFoundForFirstDayOfPeriod = timeMember.findFirstDayOfPeriod();
+    dateComparatorForLastDayOfPeriod = Date..stringToDate("2017-12-31");
+    dateComparatorForFirstDayOfPeriod = Date..stringToDate("2017-01-01");
+    dayCountFound = timeMember.findDayCountOfPeriod();
+    dayCountComparator = 110;
+    assert(dateFoundForLastDayOfPeriod == dateComparatorForLastDayOfPeriod);
+    assert(dateFoundForFirstDayOfPeriod == dateComparatorForFirstDayOfPeriod);
+    assert(dayCountFound == dayCountComparator);
+    logInfo("CASE timeMember.period = PERIOD_YEAR passed");
+
+    //CASE timeMember.period = PERIOD_QUARTER;
+    timeMember.period = PERIOD_QUARTER;
+        //CASE 1
+    timeMember.date = Date..stringToDate("2018-03-20");
+    dateFoundForLastDayOfPeriod = timeMember.findLastDayOfPeriod();
+    dateFoundForFirstDayOfPeriod = timeMember.findFirstDayOfPeriod();
+    dateComparatorForLastDayOfPeriod = Date..stringToDate("2018-03-31");
+    dateComparatorForFirstDayOfPeriod = Date..stringToDate("2018-01-01");
+    dayCountFound = timeMember.findDayCountOfPeriod();
+    dayCountComparator = 79;
+    assert(dateFoundForLastDayOfPeriod == dateComparatorForLastDayOfPeriod);
+    assert(dateFoundForFirstDayOfPeriod == dateComparatorForFirstDayOfPeriod);
+    assert(dayCountFound == dayCountComparator);
+        //CASE 2
+    timeMember.date = Date..stringToDate("2018-03-31");
+    dateFoundForLastDayOfPeriod = timeMember.findLastDayOfPeriod();
+    dateFoundForFirstDayOfPeriod = timeMember.findFirstDayOfPeriod();
+    dateComparatorForLastDayOfPeriod = Date..stringToDate("2018-03-31");
+    dateComparatorForFirstDayOfPeriod = Date..stringToDate("2018-01-01");
+    assert(dateFoundForLastDayOfPeriod == dateComparatorForLastDayOfPeriod);
+    assert(dateFoundForFirstDayOfPeriod == dateComparatorForFirstDayOfPeriod);
+        //CASE 3
+    timeMember.date = Date..stringToDate("2018-01-02");
+    dateFoundForLastDayOfPeriod = timeMember.findLastDayOfPeriod();
+    dateFoundForFirstDayOfPeriod = timeMember.findFirstDayOfPeriod();
+    dateComparatorForLastDayOfPeriod = Date..stringToDate("2018-03-31");
+    dateComparatorForFirstDayOfPeriod = Date..stringToDate("2018-01-01");
+    dayCountFound = timeMember.findDayCountOfPeriod();
+    dayCountComparator = 2;
+    assert(dateFoundForLastDayOfPeriod == dateComparatorForLastDayOfPeriod);
+    assert(dateFoundForFirstDayOfPeriod == dateComparatorForFirstDayOfPeriod);
+    assert(dayCountFound == dayCountComparator);
+        //CASE 4
+    timeMember.date = Date..stringToDate("2018-04-02");
+    dateFoundForLastDayOfPeriod = timeMember.findLastDayOfPeriod();
+    dateFoundForFirstDayOfPeriod = timeMember.findFirstDayOfPeriod();
+    dateComparatorForLastDayOfPeriod = Date..stringToDate("2018-06-30");
+    dateComparatorForFirstDayOfPeriod = Date..stringToDate("2018-04-01");
+    dayCountFound = timeMember.findDayCountOfPeriod();
+    dayCountComparator = 2;
+    assert(dateFoundForLastDayOfPeriod == dateComparatorForLastDayOfPeriod);
+    assert(dateFoundForFirstDayOfPeriod == dateComparatorForFirstDayOfPeriod);
+    assert(dayCountFound == dayCountComparator);
+        //CASE 5
+    timeMember.date = Date..stringToDate("2018-08-15");
+    dateFoundForLastDayOfPeriod = timeMember.findLastDayOfPeriod();
+    dateFoundForFirstDayOfPeriod = timeMember.findFirstDayOfPeriod();
+    dateComparatorForLastDayOfPeriod = Date..stringToDate("2018-09-30");
+    dateComparatorForFirstDayOfPeriod = Date..stringToDate("2018-07-01");
+    dayCountFound = timeMember.findDayCountOfPeriod();
+    dayCountComparator = 46;
+    assert(dateFoundForLastDayOfPeriod == dateComparatorForLastDayOfPeriod);
+    assert(dateFoundForFirstDayOfPeriod == dateComparatorForFirstDayOfPeriod);
+    assert(dayCountFound == dayCountComparator);
+        //CASE 6
+    timeMember.date = Date..stringToDate("2018-10-25");
+    dateFoundForLastDayOfPeriod = timeMember.findLastDayOfPeriod();
+    dateFoundForFirstDayOfPeriod = timeMember.findFirstDayOfPeriod();
+    dateComparatorForLastDayOfPeriod = Date..stringToDate("2018-12-31");
+    dateComparatorForFirstDayOfPeriod = Date..stringToDate("2018-10-01");
+    dayCountFound = timeMember.findDayCountOfPeriod();
+    dayCountComparator = 25;
+    assert(dateFoundForLastDayOfPeriod == dateComparatorForLastDayOfPeriod);
+    assert(dateFoundForFirstDayOfPeriod == dateComparatorForFirstDayOfPeriod);
+    assert(dayCountFound == dayCountComparator);
+        //CASE 7 LEAP YEAR
+    timeMember.date = Date..stringToDate("2016-04-25");
+    dayCountFound = timeMember.findDayCountOfPeriod();
+    dayCountComparator = 25;
+    assert(dayCountFound == dayCountComparator);
+        //CASE 8 NO LEAP YEAR
+    timeMember.date = Date..stringToDate("2017-04-25");
+    dayCountFound = timeMember.findDayCountOfPeriod();
+    dayCountComparator = 25;
+    assert(dayCountFound == dayCountComparator);
+    logInfo("CASE timeMember.period = PERIOD_QUARTER passed");
+    
+    //CASE timeMember.period = PERIOD_WEEK;
+    timeMember.period = PERIOD_WEEK;
+        // CASE 1
+    timeMember.date = Date..stringToDate("2018-04-20");
+    dateFoundForLastDayOfPeriod = timeMember.findLastDayOfPeriod();
+    dateFoundForFirstDayOfPeriod = timeMember.findFirstDayOfPeriod();
+    dateComparatorForLastDayOfPeriod = Date..stringToDate("2018-04-22");
+    dateComparatorForFirstDayOfPeriod = Date..stringToDate("2018-04-16");
+    dayCountFound = timeMember.findDayCountOfPeriod();
+    dayCountComparator = 5;
+    assert(dateFoundForLastDayOfPeriod == dateComparatorForLastDayOfPeriod);
+    assert(dateFoundForFirstDayOfPeriod == dateComparatorForFirstDayOfPeriod);
+    assert(dayCountFound == dayCountComparator);
+        // CASE 2
+    timeMember.date = Date..stringToDate("2018-12-31");
+    dateFoundForLastDayOfPeriod = timeMember.findLastDayOfPeriod();
+    dateFoundForFirstDayOfPeriod = timeMember.findFirstDayOfPeriod();
+    dateComparatorForLastDayOfPeriod = Date..stringToDate("2019-01-06");
+    dateComparatorForFirstDayOfPeriod = Date..stringToDate("2018-12-31");
+    dayCountFound = timeMember.findDayCountOfPeriod();
+    dayCountComparator = 1;
+    assert(dateFoundForLastDayOfPeriod == dateComparatorForLastDayOfPeriod);
+    assert(dateFoundForFirstDayOfPeriod == dateComparatorForFirstDayOfPeriod);
+    assert(dayCountFound == dayCountComparator);
+        // CASE 3
+    timeMember.date = Date..stringToDate("2017-11-29");
+    dateFoundForLastDayOfPeriod = timeMember.findLastDayOfPeriod();
+    dateFoundForFirstDayOfPeriod = timeMember.findFirstDayOfPeriod();
+    dateComparatorForLastDayOfPeriod = Date..stringToDate("2017-12-03");
+    dateComparatorForFirstDayOfPeriod = Date..stringToDate("2017-11-27");
+    dayCountFound = timeMember.findDayCountOfPeriod();
+    dayCountComparator = 3;
+    assert(dateFoundForLastDayOfPeriod == dateComparatorForLastDayOfPeriod);
+    assert(dateFoundForFirstDayOfPeriod == dateComparatorForFirstDayOfPeriod);
+    assert(dayCountFound == dayCountComparator);
+        // CASE 4
+    timeMember.date = Date..stringToDate("2018-12-01");
+    dateFoundForFirstDayOfPeriod = timeMember.findFirstDayOfPeriod();
+    dateComparatorForFirstDayOfPeriod = Date..stringToDate("2018-11-26");
+    assert(dateFoundForFirstDayOfPeriod == dateComparatorForFirstDayOfPeriod);
+    assert(dayCountFound == dayCountComparator);
+        // CASE 5
+    timeMember.date = Date..stringToDate("2019-01-04");
+    dateFoundForFirstDayOfPeriod = timeMember.findFirstDayOfPeriod();
+    dateComparatorForFirstDayOfPeriod = Date..stringToDate("2018-12-31");
+    assert(dateFoundForFirstDayOfPeriod == dateComparatorForFirstDayOfPeriod);
+    assert(dayCountFound == dayCountComparator);
+    logInfo("CASE timeMember.period = PERIOD_WEEK passed");
+
+    logInfo("LibCube:Test:timeMember() passed");
+}
+;
+
 function LibCube:Test:groupedFactsSelection()
 --> action {
     logInfo("Testing groupedFactsSelection");
@@ -458,10 +658,11 @@ function LibCube:Test:main()
     //LibKPI:Test:ranges();
     logInfo("Running LibCube unit tests");
     LibCube:Test:twoFactsOneMeasureComp();
-    LibCube:Test:factsSorter();//issue4
-    LibCube:Test:factsDimensionSorterCaseTimeDimension();//issue15
-    LibCube:Test:factsDimensionSorterCaseAnyDimension();//issue15
-    LibCube:Test:factsDimensionSorterHelper();//issue15
+    //LibCube:Test:factsSorter();//issue4
+    //LibCube:Test:factsDimensionSorterCaseTimeDimension();//issue15
+    //LibCube:Test:factsDimensionSorterCaseAnyDimension();//issue15
+    //LibCube:Test:factsDimensionSorterHelper();//issue15
+    LibCube:Test:timeMember();//issue1
     LibCube:Test:groupedFactsSelection();
 }
 ;
