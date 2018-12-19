@@ -20,6 +20,14 @@ args{
     --> defaultValue    false
 }
 ;
+
+extern function getOneDimensionSorter
+args{
+    Collection          facts
+
+    LibCube:Dimension comparingDimension
+};
+
 extern function getComparisonAttributeSorter
 args{
     Collection          facts
