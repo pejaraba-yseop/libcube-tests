@@ -79,6 +79,18 @@ interface LibCube:TimeMember extends LibCube:HierarchyElement
         --> number SINGULAR
     ;
 
+    method findDayCountOfPeriodQuarter()
+    --> domains Number
+    --> documentation "returns day count for quarter period type"
+
+    method findFirstDayOfPeriodQuarter()
+    --> domains Number
+    --> documentation "return date of first day of the quarter of the TimeMember"
+
+    method findLastDayOfPeriodQuarter()
+    --> domains Number
+    --> documentation "return date of last day of the quarter of the TimeMember"
+
     classProperties
     --> dsl -> Textualization
         --> language LANG_en
@@ -117,34 +129,20 @@ local {
     Text monthNumber
 }
 --> action {
-        validatePeriod();
-        switch(period) {
-        
-            case(PERIOD_DAY): {return date;}
-            case(PERIOD_WEEK):{
-                genericDate = date.increment(7 - date.dayOfWeek, UNIT_DAY);
-                return genericDate;
-            }
-            case(PERIOD_MONTH):{return date.lastDayOfMonth();}//firstMondayOfMonth()
-            case(PERIOD_YEAR):{return Date..stringToDate(concat(date.year, "/12/31") );}
-            case(PERIOD_QUARTER):{
-                findQuarter();
-                if(quarter == Q1){
-                    monthNumber = "/03";
-                }
-                if(quarter == Q2){
-                    monthNumber = "/06";
-                }
-                if(quarter == Q3){
-                    monthNumber = "/09";
-                }
-                if(quarter == Q4){
-                    monthNumber = "/12";
-                }
-                genericDate = Date..stringToDate(concat(date.year, concat(monthNumber,"/01")));
-                return genericDate.lastDayOfMonth();
+    validatePeriod();
+    switch(period) {    
+        case(PERIOD_DAY):{return date;}
+        case(PERIOD_WEEK):{
+            genericDate = date.increment(7 - date.dayOfWeek, UNIT_DAY);
+            return genericDate;
         }
-        
+        case(PERIOD_WTD):{return date;}
+        case(PERIOD_MONTH):{return date.lastDayOfMonth();}
+        case(PERIOD_MTD):{return date;}
+        case(PERIOD_YEAR):{return Date..stringToDate(concat(date.year, "/12/31") );}
+        case(PERIOD_YTD):{return date;}
+        case(PERIOD_QUARTER):{return findLastDayOfPeriodQuarter();}
+        case(PERIOD_QTD):{return date;}
     }
     
 }
@@ -157,39 +155,27 @@ local {
 function LibCube:TimeMember::findFirstDayOfPeriod()
 local {
     Date genericDate
-    Text monthNumber
 }
 --> action {
-        validatePeriod();
-        switch(period) {
-        
-            case(PERIOD_DAY): {return date;}
-            case(PERIOD_WEEK):{
-                genericDate = date.increment(1 - date.dayOfWeek , UNIT_DAY);
-                return genericDate;
-            }
-            case(PERIOD_MONTH):{return date.firstDayOfMonth();}
-            case(PERIOD_YEAR):{return Date..stringToDate(concat(date.year, "/01/01") );}
-            case(PERIOD_QUARTER):{
-                findQuarter();
-                if(quarter == Q1){
-                    monthNumber = "/01";
-                }
-                if(quarter == Q2){
-                    monthNumber = "/04";
-                }
-                if(quarter == Q3){
-                    monthNumber = "/07";
-                }
-                if(quarter == Q4){
-                    monthNumber = "/10";
-                }
-                genericDate = Date..stringToDate(concat(date.year, concat(monthNumber,"/01")));
-                return genericDate.firstDayOfMonth();
+    validatePeriod();
+    switch(period) {    
+        case(PERIOD_DAY): {return date;}
+        case(PERIOD_WEEK):{
+            genericDate = date.increment(1 - date.dayOfWeek , UNIT_DAY);
+            return genericDate;
         }
-        
+        case(PERIOD_WTD):{
+            genericDate = date.increment(1 - date.dayOfWeek , UNIT_DAY);
+            return genericDate;
+        }
+        case(PERIOD_MONTH):{return date.firstDayOfMonth();}
+        case(PERIOD_MTD):{return date.firstDayOfMonth();}
+        case(PERIOD_YEAR):{return Date..stringToDate(concat(date.year, "/01/01") );}
+        case(PERIOD_YTD):{return Date..stringToDate(concat(date.year, "/01/01") );}
+        case(PERIOD_QUARTER):{return findFirstDayOfPeriodQuarter()}
+        case(PERIOD_QTD):{return findFirstDayOfPeriodQuarter();}    
     }
-    
+
 }
 ;
 
@@ -198,50 +184,19 @@ local {
  * @return an object of type Date for the day count of period
  */
 function LibCube:TimeMember::findDayCountOfPeriod()
-local {
-    Date genericDate
-    Integer dayCountQ1
-    Integer dayCountQ2
-    Integer dayCountQ3
-    Integer dayCountQ4
-}
 --> action {
-        validatePeriod();
-        switch(period) {
-            case(PERIOD_DAY): {return 1;}
-            case(PERIOD_WEEK):{
-                return date.dayOfWeek;
-            }
-            case(PERIOD_MONTH):{return date.day;}
-            case(PERIOD_YEAR):{return date.dayOfYear;}
-            case(PERIOD_QUARTER):{
-                findQuarter();
-                if(isLeapYear() == true){
-                    dayCountQ1 = 91;
-                }
-                else{
-                    dayCountQ1 = 90;
-                }
-                dayCountQ2 = 91;
-                dayCountQ3 = 92;
-                dayCountQ4 = 92;
-
-                if(quarter == Q1){
-                    return date.dayOfYear;
-                }
-                if(quarter == Q2){
-                    return date.dayOfYear - dayCountQ1;
-                }
-                if(quarter == Q3){
-                    return date.dayOfYear - dayCountQ1 - dayCountQ2;
-                }
-                if(quarter == Q4){
-                    return date.dayOfYear - dayCountQ1 - dayCountQ2 - dayCountQ3;
-                }
-        }
-        
+    validatePeriod();
+    switch(period) {
+        case(PERIOD_DAY):{return 1;}
+        case(PERIOD_WEEK):{return date.dayOfWeek;}
+        case(PERIOD_WTD):{return date.dayOfWeek;}
+        case(PERIOD_MONTH):{return date.day;}
+        case(PERIOD_MTD):{return date.day;}
+        case(PERIOD_YEAR):{return date.dayOfYear;}
+        case(PERIOD_YTD):{return date.dayOfYear;}
+        case(PERIOD_QUARTER):{return findDayCountOfPeriodQuarter();}
+        case(PERIOD_QTD):{return findDayCountOfPeriodQuarter();}    
     }
-    
 }
 ;
 
@@ -262,12 +217,105 @@ function LibCube:TimeMember::validatePeriod()
  */
 function LibCube:TimeMember::isLeapYear()
 --> action {
-    
     if(date.year mod 4 == 0 && date.year mod 100 > 0){
         return true;
     }
     else{
         return false;
     }
+}
+;
+
+/**
+ * Function to calculate day count for quarter period type
+ * @return day count for quarter period type
+ */
+function LibCube:TimeMember::findDayCountOfPeriodQuarter()
+local {
+    Integer dayCountQ1
+    Integer dayCountQ2
+    Integer dayCountQ3
+    Integer dayCountQ4
+}
+--> action {
+    findQuarter();
+    if(isLeapYear() == true){
+        dayCountQ1 = 91;
+    }
+    else{
+        dayCountQ1 = 90;
+    }
+    dayCountQ2 = 91;
+    dayCountQ3 = 92;
+    dayCountQ4 = 92;
+
+    if(quarter == Q1){
+        return date.dayOfYear;
+    }
+    if(quarter == Q2){
+        return date.dayOfYear - dayCountQ1;
+    }
+    if(quarter == Q3){
+        return date.dayOfYear - dayCountQ1 - dayCountQ2;
+    }
+    if(quarter == Q4){
+        return date.dayOfYear - dayCountQ1 - dayCountQ2 - dayCountQ3;
+    }
+}
+;
+
+/**
+ * Function to find the first day of the quarter of the TimeMember
+ * @return date of first day of the quarter of the TimeMember
+ */
+function LibCube:TimeMember::findFirstDayOfPeriodQuarter()
+local {
+    Date genericDate
+    Text monthNumber
+}
+--> action {
+    findQuarter();
+    if(quarter == Q1){
+        monthNumber = "/01";
+    }
+    if(quarter == Q2){
+        monthNumber = "/04";
+    }
+    if(quarter == Q3){
+        monthNumber = "/07";
+    }
+    if(quarter == Q4){
+        monthNumber = "/10";
+    }
+    genericDate = Date..stringToDate(concat(date.year, concat(monthNumber,"/01")));
+    return genericDate.firstDayOfMonth();
+}
+;
+
+/**
+ * Function to find the first day of the quarter of the TimeMember
+ * @return date of first day of the quarter of the TimeMember
+ */
+function LibCube:TimeMember::findLastDayOfPeriodQuarter()
+local {
+    Date genericDate
+    Text monthNumber
+}
+--> action {
+    findQuarter();
+    if(quarter == Q1){
+        monthNumber = "/03";
+    }
+    if(quarter == Q2){
+        monthNumber = "/06";
+    }
+    if(quarter == Q3){
+        monthNumber = "/09";
+    }
+    if(quarter == Q4){
+        monthNumber = "/12";
+    }
+    genericDate = Date..stringToDate(concat(date.year, concat(monthNumber,"/01")));
+    return genericDate.lastDayOfMonth();
 }
 ;
