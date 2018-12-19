@@ -61,6 +61,26 @@ local {
 }
 ;
 
+function getOneDimensionSorter
+args{
+    Collection          facts
+
+    LibCube:Dimension comparingDimension
+}
+local {
+    LibCube:FactsSorter sorter
+}
+--> domains LibCube:FactsSorter
+--> action {
+    sorter = new(LibCube:FactsSorter)
+    sorter.facts = facts
+    sorter.sortType = SORT_TYPE_DIMENSION
+    sorter.dimension = comparingDimension
+    sorter.sortFacts()
+    return sorter;
+}
+;
+
 function getComparisonAttributeSorter
 args{
     Collection          facts
