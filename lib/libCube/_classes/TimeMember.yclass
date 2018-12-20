@@ -37,38 +37,39 @@ interface LibCube:TimeMember extends LibCube:HierarchyElement
     // methods
     // **************************************************
 
-    method findQuarter()
+    method getQuarter()
     --> domains Void
     
-    method findLastDayOfPeriod()
+    method getLastDayOfPeriod()
     --> domains Date
     --> documentation "returns a date for the last day of the period of TimeMember"
     --> dsl -> Textualization
         --> language LANG_en
-        --> root "find last day of period"
+        --> root "get last day of period"
         --> number SINGULAR
     ;
 
-    method findFirstDayOfPeriod()
+    method getFirstDayOfPeriod()
     --> domains Date
     --> documentation "returns a date for the first day of the period of TimeMember"
     --> dsl -> Textualization
         --> language LANG_en
-        --> root "find first day of period"
+        --> root "get first day of period"
         --> number SINGULAR
     ;
 
-    method findDayCountOfPeriod()
+    method getDayCountOfPeriod()
     --> domains Integer
     --> documentation "returns day count of the period of TimeMember"
     --> dsl -> Textualization
         --> language LANG_en
-        --> root "find day count of period"
+        --> root "get day count of period"
         --> number SINGULAR
     ;
 
     method validatePeriod()
-    --> domains Void 
+    --> domains Void
+    --> visibility _PRIVATE
 
     method isLeapYear()
     --> domains Boolean
@@ -79,15 +80,15 @@ interface LibCube:TimeMember extends LibCube:HierarchyElement
         --> number SINGULAR
     ;
 
-    method findDayCountOfPeriodQuarter()
+    method getDayCountOfPeriodQuarter()
     --> domains Number
     --> documentation "returns day count for quarter period type"
 
-    method findFirstDayOfPeriodQuarter()
+    method getFirstDayOfPeriodQuarter()
     --> domains Number
     --> documentation "return date of first day of the quarter of the TimeMember"
 
-    method findLastDayOfPeriodQuarter()
+    method getLastDayOfPeriodQuarter()
     --> domains Number
     --> documentation "return date of last day of the quarter of the TimeMember"
 
@@ -107,7 +108,7 @@ implementation LibCube:TimeMember
 /**
  * Function to set quarter of the TimeMember object
  */
-function LibCube:TimeMember::findQuarter()
+function LibCube:TimeMember::getQuarter()
 --> action {
 	switch {
 		case(date == null): quarter = null
@@ -120,10 +121,10 @@ function LibCube:TimeMember::findQuarter()
 ;
 
 /**
- * Function to find the last day of period of the TimeMember object
+ * Function to get the last day of period of the TimeMember object
  * @return an object of type Date for the last day of period
  */
-function LibCube:TimeMember::findLastDayOfPeriod()
+function LibCube:TimeMember::getLastDayOfPeriod()
 local {
     Date genericDate
     Text monthNumber
@@ -141,7 +142,7 @@ local {
         case(PERIOD_MTD):{return date;}
         case(PERIOD_YEAR):{return Date..stringToDate(concat(date.year, "/12/31") );}
         case(PERIOD_YTD):{return date;}
-        case(PERIOD_QUARTER):{return findLastDayOfPeriodQuarter();}
+        case(PERIOD_QUARTER):{return getLastDayOfPeriodQuarter();}
         case(PERIOD_QTD):{return date;}
     }
     
@@ -149,10 +150,10 @@ local {
 ;
 
 /**
- * Function to find the first day of period of the TimeMember object
+ * Function to get the first day of period of the TimeMember object
  * @return an object of type Date for the first day of period
  */
-function LibCube:TimeMember::findFirstDayOfPeriod()
+function LibCube:TimeMember::getFirstDayOfPeriod()
 local {
     Date genericDate
 }
@@ -172,18 +173,18 @@ local {
         case(PERIOD_MTD):{return date.firstDayOfMonth();}
         case(PERIOD_YEAR):{return Date..stringToDate(concat(date.year, "/01/01") );}
         case(PERIOD_YTD):{return Date..stringToDate(concat(date.year, "/01/01") );}
-        case(PERIOD_QUARTER):{return findFirstDayOfPeriodQuarter()}
-        case(PERIOD_QTD):{return findFirstDayOfPeriodQuarter();}    
+        case(PERIOD_QUARTER):{return getFirstDayOfPeriodQuarter()}
+        case(PERIOD_QTD):{return getFirstDayOfPeriodQuarter();}    
     }
 
 }
 ;
 
 /**
- * Function to find the day count of period of the TimeMember object
+ * Function to get the day count of period of the TimeMember object
  * @return an object of type Date for the day count of period
  */
-function LibCube:TimeMember::findDayCountOfPeriod()
+function LibCube:TimeMember::getDayCountOfPeriod()
 --> action {
     validatePeriod();
     switch(period) {
@@ -194,8 +195,8 @@ function LibCube:TimeMember::findDayCountOfPeriod()
         case(PERIOD_MTD):{return date.day;}
         case(PERIOD_YEAR):{return date.dayOfYear;}
         case(PERIOD_YTD):{return date.dayOfYear;}
-        case(PERIOD_QUARTER):{return findDayCountOfPeriodQuarter();}
-        case(PERIOD_QTD):{return findDayCountOfPeriodQuarter();}    
+        case(PERIOD_QUARTER):{return getDayCountOfPeriodQuarter();}
+        case(PERIOD_QTD):{return getDayCountOfPeriodQuarter();}    
     }
 }
 ;
@@ -230,7 +231,7 @@ function LibCube:TimeMember::isLeapYear()
  * Function to calculate day count for quarter period type
  * @return day count for quarter period type
  */
-function LibCube:TimeMember::findDayCountOfPeriodQuarter()
+function LibCube:TimeMember::getDayCountOfPeriodQuarter()
 local {
     Integer dayCountQ1
     Integer dayCountQ2
@@ -238,7 +239,7 @@ local {
     Integer dayCountQ4
 }
 --> action {
-    findQuarter();
+    getQuarter();
     if(isLeapYear() == true){
         dayCountQ1 = 91;
     }
@@ -265,16 +266,16 @@ local {
 ;
 
 /**
- * Function to find the first day of the quarter of the TimeMember
+ * Function to get the first day of the quarter of the TimeMember
  * @return date of first day of the quarter of the TimeMember
  */
-function LibCube:TimeMember::findFirstDayOfPeriodQuarter()
+function LibCube:TimeMember::getFirstDayOfPeriodQuarter()
 local {
     Date genericDate
     Text monthNumber
 }
 --> action {
-    findQuarter();
+    getQuarter();
     if(quarter == Q1){
         monthNumber = "/01";
     }
@@ -293,16 +294,16 @@ local {
 ;
 
 /**
- * Function to find the first day of the quarter of the TimeMember
+ * Function to get the first day of the quarter of the TimeMember
  * @return date of first day of the quarter of the TimeMember
  */
-function LibCube:TimeMember::findLastDayOfPeriodQuarter()
+function LibCube:TimeMember::getLastDayOfPeriodQuarter()
 local {
     Date genericDate
     Text monthNumber
 }
 --> action {
-    findQuarter();
+    getQuarter();
     if(quarter == Q1){
         monthNumber = "/03";
     }

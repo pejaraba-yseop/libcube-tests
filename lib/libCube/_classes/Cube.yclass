@@ -191,7 +191,7 @@ function LibCube:Cube::calculateJointures()
    
   DIMENSION_TIME_CURRENT_MEMBER = DIMENSION_TIME.getCurrentTimeMember()
   foreach(_timeMember, LibCube:TimeMember) {
-    _timeMember.findQuarter()
+    _timeMember.getQuarter()
   }
 
   if(generateNonIndicatorMembersJointure == true){
