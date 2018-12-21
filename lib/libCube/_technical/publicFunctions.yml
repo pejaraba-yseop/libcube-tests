@@ -5,6 +5,13 @@ extern function getFactsComparison(LibCube:Fact comparedFact, LibCube:Fact compa
     --> number SINGULAR
 ;;
 
+extern function getMeasuresComparison(LibCube:Measure measure, LibCube:Measure referenceMeasure, LibCube:Fact comparingFact)
+--> dsl -> Textualization
+    --> language LANG_en
+    --> root "the comparison between {1} and {2}"
+    --> number SINGULAR
+;;
+
 extern function getOneMeasureSorter
 args{
     Collection          facts

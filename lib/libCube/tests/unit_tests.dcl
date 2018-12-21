@@ -1,10 +1,3 @@
-function LibCube:Test:twoFactsOneMeasureComp()
---> action {
-    logInfo("Testing TwoFactsOneMeasureComparison");
-    
-}
-;
-
 function LibCube:Test:factsSorter()
  local {
     LibCube:FactsSorter sorter
@@ -762,6 +755,438 @@ local {
 }
 ;
 
+function LibCube:Test:twoMeasuresOneFactComparison()
+ local {
+     LibCube:TwoMeasuresOneFactComparison twoMeasuresOneFactComparison
+
+     LibCube:Fact comparingFact
+     LibCube:FactMeasure comparingFactMeasure1
+     LibCube:FactMeasure comparingFactMeasure2
+     LibCube:Measure measure
+     LibCube:Measure referenceMeasure
+
+     LibCube:Member storeMember
+ }
+ --> action {
+    logInfo("Testing twoMeasuresOneFactComparison");
+    
+    //Setting measures
+    measure = new (LibCube:Measure);
+    measure.label = "unitValue";
+    referenceMeasure = new (LibCube:Measure);
+    referenceMeasure.label = "soldUnits";
+
+    //Setting factMeasures
+    comparingFactMeasure1 = new(LibCube:FactMeasure);
+    comparingFactMeasure1.value = 150000;
+    comparingFactMeasure1.measure = measure;
+    comparingFactMeasure2 = new(LibCube:FactMeasure);
+    comparingFactMeasure2.value = 10;
+    comparingFactMeasure2.measure = referenceMeasure;
+
+    //Setting members
+    storeMember = new(LibCube:Member);
+    storeMember.dimension = DIMENSION_STORE;
+    storeMember.label = "SuperStic Store";
+
+    comparingFact = new(LibCube:Fact);
+    comparingFact.members.add(storeMember);
+    comparingFact.factMeasures.add(comparingFactMeasure1);
+    comparingFact.factMeasures.add(comparingFactMeasure2);
+    
+    twoMeasuresOneFactComparison = new(LibCube:TwoMeasuresOneFactComparison);
+    
+    //CASE 1 areComparedValuesRelative = true
+    twoMeasuresOneFactComparison.areComparedValuesRelative = true;
+    twoMeasuresOneFactComparison.fact = comparingFact;
+    twoMeasuresOneFactComparison.measure = measure;
+    twoMeasuresOneFactComparison.referenceMeasure = referenceMeasure;
+    twoMeasuresOneFactComparison.compute();
+    assert(comparingFactMeasure1.value == twoMeasuresOneFactComparison.currentValue);
+    assert(comparingFactMeasure2.value == twoMeasuresOneFactComparison.referenceValue);
+    //change = value - referenceValue
+    assert(comparingFactMeasure1.value - comparingFactMeasure2.value  == twoMeasuresOneFactComparison.change);
+    //if areComparedValuesRelative == true then relativeChange = change
+    assert(twoMeasuresOneFactComparison.relativeChange == twoMeasuresOneFactComparison.change);
+    //absRelativeChange
+    assert(twoMeasuresOneFactComparison.absRelativeChange == abs(twoMeasuresOneFactComparison.change));
+    //absDiff = abs(change)
+    assert(twoMeasuresOneFactComparison.absDiff == abs(twoMeasuresOneFactComparison.change));
+    //relativeDiffWithMax
+    assert(twoMeasuresOneFactComparison.relativeDiffWithMax == null);
+    //relativeDiffWithAbsMax
+    assert(twoMeasuresOneFactComparison.relativeDiffWithAbsMax == null);
+    //relativeDiffWithAvg
+    assert(twoMeasuresOneFactComparison.relativeDiffWithAvg == null);
+    
+    //CASE 2 areComparedValuesRelative = false referenceValue = 0
+    twoMeasuresOneFactComparison.areComparedValuesRelative = false;
+    twoMeasuresOneFactComparison.fact = comparingFact;
+    twoMeasuresOneFactComparison.measure = measure;
+    twoMeasuresOneFactComparison.referenceMeasure = referenceMeasure;
+    //Changing values
+    twoMeasuresOneFactComparison.fact.getMeasure(referenceMeasure).value =0;
+    //Calling compute
+    twoMeasuresOneFactComparison.compute();
+    assert(comparingFactMeasure1.value == twoMeasuresOneFactComparison.currentValue);
+    assert(comparingFactMeasure2.value == twoMeasuresOneFactComparison.referenceValue);
+    //change = value - referenceValue
+    assert(comparingFactMeasure1.value - comparingFactMeasure2.value  == twoMeasuresOneFactComparison.change);
+    //absDiff = abs(change)
+    assert(twoMeasuresOneFactComparison.absDiff == abs(twoMeasuresOneFactComparison.change));
+
+    //if areComparedValuesRelative == false then relativeChange = change
+    assert(twoMeasuresOneFactComparison.relativeChange == null);
+    //absRelativeChange
+    assert(twoMeasuresOneFactComparison.absRelativeChange == null);
+    //relativeDiffWithMax = absDiff / abs( max(value, referenceValue) )
+    assert(twoMeasuresOneFactComparison.relativeDiffWithMax == ( twoMeasuresOneFactComparison.absDiff / abs(max(twoMeasuresOneFactComparison.currentValue, twoMeasuresOneFactComparison.referenceValue) )));
+    //relativeDiffWithAbsMax = absDiff / max( abs(value), abs(referenceValue) )
+    assert(twoMeasuresOneFactComparison.relativeDiffWithAbsMax == ( twoMeasuresOneFactComparison.absDiff / max( abs(twoMeasuresOneFactComparison.currentValue), abs(twoMeasuresOneFactComparison.referenceValue) )));
+    //relativeDiffWithAvg = absDiff / average( abs(value), abs(referenceValue) )
+    assert(twoMeasuresOneFactComparison.relativeDiffWithAvg == ( twoMeasuresOneFactComparison.absDiff / average( abs(twoMeasuresOneFactComparison.currentValue) ,abs(twoMeasuresOneFactComparison.referenceValue) )));
+    
+    //CASE 3 areComparedValuesRelative = false, referenceValue = 0, value=0
+    twoMeasuresOneFactComparison.areComparedValuesRelative = false;
+    twoMeasuresOneFactComparison.fact = comparingFact;
+    twoMeasuresOneFactComparison.measure = measure;
+    twoMeasuresOneFactComparison.referenceMeasure = referenceMeasure;
+    //Changing values
+    twoMeasuresOneFactComparison.fact.getMeasure(referenceMeasure).value =0;
+    twoMeasuresOneFactComparison.fact.getMeasure(measure).value =0;
+    //Calling compute
+    twoMeasuresOneFactComparison.compute();
+    assert(comparingFactMeasure1.value == twoMeasuresOneFactComparison.currentValue);
+    assert(comparingFactMeasure2.value == twoMeasuresOneFactComparison.referenceValue);
+    //change = value - referenceValue
+    assert(comparingFactMeasure1.value - comparingFactMeasure2.value  == twoMeasuresOneFactComparison.change);
+    //absDiff = abs(change)
+    assert(twoMeasuresOneFactComparison.absDiff == abs(twoMeasuresOneFactComparison.change));
+
+    //if areComparedValuesRelative == false then relativeChange = change
+    assert(twoMeasuresOneFactComparison.relativeChange == null);
+    //absRelativeChange
+    assert(twoMeasuresOneFactComparison.absRelativeChange == null);
+    //relativeDiffWithMax = null
+    assert(twoMeasuresOneFactComparison.relativeDiffWithMax == null );
+    //relativeDiffWithAbsMax = null
+    assert(twoMeasuresOneFactComparison.relativeDiffWithAbsMax == null );
+    //relativeDiffWithAvg = absDiff / average( abs(value), abs(referenceValue) )
+    assert(twoMeasuresOneFactComparison.relativeDiffWithAvg == null);
+    
+    //CASE 4 areComparedValuesRelative = false, referenceValue > 0, value >0
+    twoMeasuresOneFactComparison.areComparedValuesRelative = false;
+    twoMeasuresOneFactComparison.fact = comparingFact;
+    twoMeasuresOneFactComparison.measure = measure;
+    twoMeasuresOneFactComparison.referenceMeasure = referenceMeasure;
+    //Changing values
+    twoMeasuresOneFactComparison.fact.getMeasure(referenceMeasure).value =2;
+    twoMeasuresOneFactComparison.fact.getMeasure(measure).value =4;
+    //Calling compute
+    twoMeasuresOneFactComparison.compute();
+    assert(comparingFactMeasure1.value == twoMeasuresOneFactComparison.currentValue);
+    assert(comparingFactMeasure2.value == twoMeasuresOneFactComparison.referenceValue);
+    //change = value - referenceValue
+    assert(comparingFactMeasure1.value - comparingFactMeasure2.value  == twoMeasuresOneFactComparison.change);
+    //absDiff = abs(change)
+    assert(twoMeasuresOneFactComparison.absDiff == abs(twoMeasuresOneFactComparison.change));
+
+    //if areComparedValuesRelative == false then relativeChange = change / referenceValue
+    assert(twoMeasuresOneFactComparison.relativeChange == twoMeasuresOneFactComparison.change / twoMeasuresOneFactComparison.referenceValue );
+    //absRelativeChange = abs(relativeChange)
+    assert(twoMeasuresOneFactComparison.absRelativeChange == abs(twoMeasuresOneFactComparison.relativeChange) );
+    //relativeDiffWithMax = absDiff / abs( max(value, referenceValue) )
+    assert(twoMeasuresOneFactComparison.relativeDiffWithMax == twoMeasuresOneFactComparison.absDiff / abs( max(twoMeasuresOneFactComparison.currentValue, twoMeasuresOneFactComparison.referenceValue)) );
+    //relativeDiffWithAbsMax = absDiff / max( abs(value), abs(referenceValue) )
+    assert(twoMeasuresOneFactComparison.relativeDiffWithAbsMax == twoMeasuresOneFactComparison.absDiff / max( abs(twoMeasuresOneFactComparison.currentValue), abs(twoMeasuresOneFactComparison.referenceValue)) );
+    //relativeDiffWithAvg = absDiff / average( abs(value), abs(referenceValue) )
+    assert(twoMeasuresOneFactComparison.relativeDiffWithAvg == twoMeasuresOneFactComparison.absDiff / average( abs(twoMeasuresOneFactComparison.currentValue), abs(twoMeasuresOneFactComparison.referenceValue) ) );
+    
+    logInfo("LibCube:Test:twoMeasuresOneFactComparison() passed");
+
+ }
+ ;
+
+function LibCube:Test:twoFactsOneMesureComparison()
+local {
+
+     LibCube:TwoFactsOneMeasureComparison twoFactsOneMeasureComparison
+     LibCube:Fact fact
+     LibCube:FactMeasure factMeasure
+     LibCube:Fact referenceFact
+     LibCube:FactMeasure referenceFactMeasure
+     LibCube:Measure comparingMeasure
+     
+     LibCube:Member storeMember
+ }
+ --> action {
+    logInfo("Testing twoFactsOneMesureComparison");
+    
+    //Setting measures
+    comparingMeasure = new (LibCube:Measure);
+    comparingMeasure.label = "unitValue";
+
+    //Setting factMeasures
+    factMeasure = new(LibCube:FactMeasure);
+    factMeasure.value = 150000;
+    factMeasure.measure = comparingMeasure;
+    referenceFactMeasure = new(LibCube:FactMeasure);
+    referenceFactMeasure.value = 10;
+    referenceFactMeasure.measure = comparingMeasure;
+
+    //Setting members
+    storeMember = new(LibCube:Member);
+    storeMember.dimension = DIMENSION_STORE;
+    storeMember.label = "SuperStic Store";
+
+    //Setting the facts
+    fact = new(LibCube:Fact);
+    fact.members.add(storeMember);
+    fact.factMeasures.add(factMeasure);
+
+    referenceFact = new(LibCube:Fact);
+    referenceFact.members.add(storeMember);
+    referenceFact.factMeasures.add(referenceFactMeasure);
+    
+    twoFactsOneMeasureComparison = new(LibCube:TwoFactsOneMeasureComparison);
+    
+    //CASE 1 areComparedValuesRelative = true
+    twoFactsOneMeasureComparison.areComparedValuesRelative = true;
+    twoFactsOneMeasureComparison.fact = fact;
+    twoFactsOneMeasureComparison.referenceFact = referenceFact;
+    twoFactsOneMeasureComparison.measure = comparingMeasure;
+    twoFactsOneMeasureComparison.compute();
+    assert(factMeasure.value == twoFactsOneMeasureComparison.currentValue);
+    assert(referenceFactMeasure.value == twoFactsOneMeasureComparison.referenceValue);
+    //change = measureValue - referenceValue
+    assert(factMeasure.value - referenceFactMeasure.value  == twoFactsOneMeasureComparison.change);
+    //if areComparedValuesRelative == true then relativeChange = change
+    assert(twoFactsOneMeasureComparison.relativeChange == twoFactsOneMeasureComparison.change);
+    //absRelativeChange
+    assert(twoFactsOneMeasureComparison.absRelativeChange == abs(twoFactsOneMeasureComparison.change));
+    //absDiff = abs(change)
+    assert(twoFactsOneMeasureComparison.absDiff == abs(twoFactsOneMeasureComparison.change));
+    //relativeDiffWithMax
+    assert(twoFactsOneMeasureComparison.relativeDiffWithMax == null);
+    //relativeDiffWithAbsMax
+    assert(twoFactsOneMeasureComparison.relativeDiffWithAbsMax == null);
+    //relativeDiffWithAvg
+    assert(twoFactsOneMeasureComparison.relativeDiffWithAvg == null);
+    
+    //CASE 2 areComparedValuesRelative = false referenceValue = 0
+    twoFactsOneMeasureComparison.areComparedValuesRelative = false;
+    twoFactsOneMeasureComparison.fact = fact;
+    twoFactsOneMeasureComparison.measure = comparingMeasure;
+    //Changing values
+    twoFactsOneMeasureComparison.referenceFact.getMeasure(comparingMeasure).value =0;
+    //Calling compute
+    twoFactsOneMeasureComparison.compute();
+    assert(factMeasure.value == twoFactsOneMeasureComparison.currentValue);
+    assert(referenceFactMeasure.value == twoFactsOneMeasureComparison.referenceValue);
+    //change = measureValue - referenceValue
+    assert(factMeasure.value - referenceFactMeasure.value  == twoFactsOneMeasureComparison.change);
+    //absDiff = abs(change)
+    assert(twoFactsOneMeasureComparison.absDiff == abs(twoFactsOneMeasureComparison.change));
+
+    //if areComparedValuesRelative == false then relativeChange = change
+    assert(twoFactsOneMeasureComparison.relativeChange == null);
+    //absRelativeChange
+    assert(twoFactsOneMeasureComparison.absRelativeChange == null);
+    //relativeDiffWithMax = absDiff / abs( max(measureValue, referenceValue) )
+    assert(twoFactsOneMeasureComparison.relativeDiffWithMax == ( twoFactsOneMeasureComparison.absDiff / abs(max(twoFactsOneMeasureComparison.currentValue, twoFactsOneMeasureComparison.referenceValue) )));
+    //relativeDiffWithAbsMax = absDiff / max( abs(measureValue), abs(referenceValue) )
+    assert(twoFactsOneMeasureComparison.relativeDiffWithAbsMax == ( twoFactsOneMeasureComparison.absDiff / max( abs(twoFactsOneMeasureComparison.currentValue), abs(twoFactsOneMeasureComparison.referenceValue) )));
+    //relativeDiffWithAvg = absDiff / average( abs(measureValue), abs(referenceValue) )
+    assert(twoFactsOneMeasureComparison.relativeDiffWithAvg == ( twoFactsOneMeasureComparison.absDiff / average( abs(twoFactsOneMeasureComparison.currentValue) ,abs(twoFactsOneMeasureComparison.referenceValue) )));
+    
+    //CASE 3 areComparedValuesRelative = false, referenceValue = 0, value=0
+    twoFactsOneMeasureComparison.areComparedValuesRelative = false;
+    twoFactsOneMeasureComparison.fact = fact;
+    twoFactsOneMeasureComparison.measure = comparingMeasure;
+    //Changing values
+    twoFactsOneMeasureComparison.fact.getMeasure(comparingMeasure).value =0;
+    twoFactsOneMeasureComparison.referenceFact.getMeasure(comparingMeasure).value =0;
+    //Calling compute
+    twoFactsOneMeasureComparison.compute();
+    assert(factMeasure.value == twoFactsOneMeasureComparison.currentValue);
+    assert(referenceFactMeasure.value == twoFactsOneMeasureComparison.referenceValue);
+    //change = measureValue - referenceValue
+    assert(factMeasure.value - referenceFactMeasure.value  == twoFactsOneMeasureComparison.change);
+    //absDiff = abs(change)
+    assert(twoFactsOneMeasureComparison.absDiff == abs(twoFactsOneMeasureComparison.change));
+
+    //if areComparedValuesRelative == false then relativeChange = change
+    assert(twoFactsOneMeasureComparison.relativeChange == null);
+    //absRelativeChange
+    assert(twoFactsOneMeasureComparison.absRelativeChange == null);
+    //relativeDiffWithMax = null
+    assert(twoFactsOneMeasureComparison.relativeDiffWithMax == null );
+    //relativeDiffWithAbsMax = null
+    assert(twoFactsOneMeasureComparison.relativeDiffWithAbsMax == null );
+    //relativeDiffWithAvg = absDiff / average( abs(measureValue), abs(referenceValue) )
+    assert(twoFactsOneMeasureComparison.relativeDiffWithAvg == null);
+    
+    //CASE 4 areComparedValuesRelative = false, referenceValue > 0, value >0
+    twoFactsOneMeasureComparison.areComparedValuesRelative = false;
+    twoFactsOneMeasureComparison.fact = fact;
+    twoFactsOneMeasureComparison.measure = comparingMeasure;
+    //Changing values
+    twoFactsOneMeasureComparison.fact.getMeasure(comparingMeasure).value =2;
+    twoFactsOneMeasureComparison.referenceFact.getMeasure(comparingMeasure).value =4;
+    //Calling compute
+    twoFactsOneMeasureComparison.compute();
+    assert(factMeasure.value == twoFactsOneMeasureComparison.currentValue);
+    assert(referenceFactMeasure.value == twoFactsOneMeasureComparison.referenceValue);
+    //change = measureValue - referenceValue
+    assert(factMeasure.value - referenceFactMeasure.value  == twoFactsOneMeasureComparison.change);
+    //absDiff = abs(change)
+    assert(twoFactsOneMeasureComparison.absDiff == abs(twoFactsOneMeasureComparison.change));
+
+    //if areComparedValuesRelative == false then relativeChange = change / referenceValue
+    assert(twoFactsOneMeasureComparison.relativeChange == twoFactsOneMeasureComparison.change / twoFactsOneMeasureComparison.referenceValue );
+    //absRelativeChange = abs(relativeChange)
+    assert(twoFactsOneMeasureComparison.absRelativeChange == abs(twoFactsOneMeasureComparison.relativeChange) );
+    //relativeDiffWithMax = absDiff / abs( max(measureValue, referenceValue) )
+    assert(twoFactsOneMeasureComparison.relativeDiffWithMax == twoFactsOneMeasureComparison.absDiff / abs( max(twoFactsOneMeasureComparison.currentValue, twoFactsOneMeasureComparison.referenceValue)) );
+    //relativeDiffWithAbsMax = absDiff / max( abs(measureValue), abs(referenceValue) )
+    assert(twoFactsOneMeasureComparison.relativeDiffWithAbsMax == twoFactsOneMeasureComparison.absDiff / max( abs(twoFactsOneMeasureComparison.currentValue), abs(twoFactsOneMeasureComparison.referenceValue)) );
+    //relativeDiffWithAvg = absDiff / average( abs(measureValue), abs(referenceValue) )
+    assert(twoFactsOneMeasureComparison.relativeDiffWithAvg == twoFactsOneMeasureComparison.absDiff / average( abs(twoFactsOneMeasureComparison.currentValue), abs(twoFactsOneMeasureComparison.referenceValue) ) );
+    
+    logInfo("LibCube:Test:twoFactsOneMeasureComparison() passed");
+ }
+ ;
+
+function LibCube:Test:getMeasuresComparison()
+local {
+    LibCube:TwoMeasuresOneFactComparison twoMeasuresOneFactComparison
+    LibCube:Measure measure
+    LibCube:Measure referenceMeasure
+    LibCube:Fact comparingFact
+
+    LibCube:FactMeasure comparingFactMeasure1
+    LibCube:FactMeasure comparingFactMeasure2
+    LibCube:Member storeMember
+}
+--> action {
+
+    logInfo("Testing getMeasuresComparison");
+    
+    //Setting measures
+    measure = new (LibCube:Measure);
+    measure.label = "unitValue";
+    referenceMeasure = new (LibCube:Measure);
+    referenceMeasure.label = "soldUnits";
+
+    //Setting factMeasures
+    comparingFactMeasure1 = new(LibCube:FactMeasure);
+    comparingFactMeasure1.value = 150000;
+    comparingFactMeasure1.measure = measure;
+    comparingFactMeasure2 = new(LibCube:FactMeasure);
+    comparingFactMeasure2.value = 10;
+    comparingFactMeasure2.measure = referenceMeasure;
+
+    //Setting members
+    storeMember = new(LibCube:Member);
+    storeMember.dimension = DIMENSION_STORE;
+    storeMember.label = "SuperStic Store";
+
+    comparingFact = new(LibCube:Fact);
+    comparingFact.members.add(storeMember);
+    comparingFact.factMeasures.add(comparingFactMeasure1);
+    comparingFact.factMeasures.add(comparingFactMeasure2);
+    
+    twoMeasuresOneFactComparison = getMeasuresComparison(measure,referenceMeasure,comparingFact);
+    
+    //CASE 4 areComparedValuesRelative = false, referenceValue > 0, value >0
+    assert(comparingFactMeasure1.value == twoMeasuresOneFactComparison.currentValue);
+    assert(comparingFactMeasure2.value == twoMeasuresOneFactComparison.referenceValue);
+    //change = value - referenceValue
+    assert(comparingFactMeasure1.value - comparingFactMeasure2.value  == twoMeasuresOneFactComparison.change);
+    //absDiff = abs(change)
+    assert(twoMeasuresOneFactComparison.absDiff == abs(twoMeasuresOneFactComparison.change));
+
+    //if areComparedValuesRelative == false then relativeChange = change / referenceValue
+    assert(twoMeasuresOneFactComparison.relativeChange == twoMeasuresOneFactComparison.change / twoMeasuresOneFactComparison.referenceValue );
+    //absRelativeChange = abs(relativeChange)
+    assert(twoMeasuresOneFactComparison.absRelativeChange == abs(twoMeasuresOneFactComparison.relativeChange) );
+    //relativeDiffWithMax = absDiff / abs( max(value, referenceValue) )
+    assert(twoMeasuresOneFactComparison.relativeDiffWithMax == twoMeasuresOneFactComparison.absDiff / abs( max(twoMeasuresOneFactComparison.currentValue, twoMeasuresOneFactComparison.referenceValue)) );
+    //relativeDiffWithAbsMax = absDiff / max( abs(value), abs(referenceValue) )
+    assert(twoMeasuresOneFactComparison.relativeDiffWithAbsMax == twoMeasuresOneFactComparison.absDiff / max( abs(twoMeasuresOneFactComparison.currentValue), abs(twoMeasuresOneFactComparison.referenceValue)) );
+    //relativeDiffWithAvg = absDiff / average( abs(value), abs(referenceValue) )
+    assert(twoMeasuresOneFactComparison.relativeDiffWithAvg == twoMeasuresOneFactComparison.absDiff / average( abs(twoMeasuresOneFactComparison.currentValue), abs(twoMeasuresOneFactComparison.referenceValue) ) );
+    
+    logInfo("LibCube:Test:getMeasuresComparison() passed");
+}
+;
+
+function LibCube:Test:getFactsComparison()
+local {
+
+     LibCube:TwoFactsOneMeasureComparison twoFactsOneMeasureComparison
+     LibCube:Fact fact
+     LibCube:FactMeasure factMeasure
+     LibCube:Fact referenceFact
+     LibCube:FactMeasure referenceFactMeasure
+     LibCube:Measure comparingMeasure
+     
+     LibCube:Member storeMember
+ }
+ --> action {
+    logInfo("Testing getFactsComparison");
+    
+    //Setting measures
+    comparingMeasure = new (LibCube:Measure);
+    comparingMeasure.label = "unitValue";
+
+    //Setting factMeasures
+    factMeasure = new(LibCube:FactMeasure);
+    factMeasure.value = 150000;
+    factMeasure.measure = comparingMeasure;
+    referenceFactMeasure = new(LibCube:FactMeasure);
+    referenceFactMeasure.value = 10;
+    referenceFactMeasure.measure = comparingMeasure;
+
+    //Setting members
+    storeMember = new(LibCube:Member);
+    storeMember.dimension = DIMENSION_STORE;
+    storeMember.label = "SuperStic Store";
+
+    //Setting the facts
+    fact = new(LibCube:Fact);
+    fact.members.add(storeMember);
+    fact.factMeasures.add(factMeasure);
+
+    referenceFact = new(LibCube:Fact);
+    referenceFact.members.add(storeMember);
+    referenceFact.factMeasures.add(referenceFactMeasure);
+    
+    twoFactsOneMeasureComparison = getFactsComparison(fact,referenceFact,comparingMeasure);
+
+    //CASE 4 areComparedValuesRelative = false, referenceValue > 0, value >0
+    assert(factMeasure.value == twoFactsOneMeasureComparison.currentValue);
+    assert(referenceFactMeasure.value == twoFactsOneMeasureComparison.referenceValue);
+    //change = measureValue - referenceValue
+    assert(factMeasure.value - referenceFactMeasure.value  == twoFactsOneMeasureComparison.change);
+    //absDiff = abs(change)
+    assert(twoFactsOneMeasureComparison.absDiff == abs(twoFactsOneMeasureComparison.change));
+
+    //if areComparedValuesRelative == false then relativeChange = change / referenceValue
+    assert(twoFactsOneMeasureComparison.relativeChange == twoFactsOneMeasureComparison.change / twoFactsOneMeasureComparison.referenceValue );
+    //absRelativeChange = abs(relativeChange)
+    assert(twoFactsOneMeasureComparison.absRelativeChange == abs(twoFactsOneMeasureComparison.relativeChange) );
+    //relativeDiffWithMax = absDiff / abs( max(measureValue, referenceValue) )
+    assert(twoFactsOneMeasureComparison.relativeDiffWithMax == twoFactsOneMeasureComparison.absDiff / abs( max(twoFactsOneMeasureComparison.currentValue, twoFactsOneMeasureComparison.referenceValue)) );
+    //relativeDiffWithAbsMax = absDiff / max( abs(measureValue), abs(referenceValue) )
+    assert(twoFactsOneMeasureComparison.relativeDiffWithAbsMax == twoFactsOneMeasureComparison.absDiff / max( abs(twoFactsOneMeasureComparison.currentValue), abs(twoFactsOneMeasureComparison.referenceValue)) );
+    //relativeDiffWithAvg = absDiff / average( abs(measureValue), abs(referenceValue) )
+    assert(twoFactsOneMeasureComparison.relativeDiffWithAvg == twoFactsOneMeasureComparison.absDiff / average( abs(twoFactsOneMeasureComparison.currentValue), abs(twoFactsOneMeasureComparison.referenceValue) ) );
+    
+    logInfo("LibCube:Test:getFactsComparison() passed");
+ }
+ ;
+
 function LibCube:Test:groupedFactsSelection()
 --> action {
     logInfo("Testing groupedFactsSelection");
@@ -773,12 +1198,16 @@ function LibCube:Test:main()
 --> action {
     //LibKPI:Test:ranges();
     logInfo("Running LibCube unit tests");
-    LibCube:Test:twoFactsOneMeasureComp();
     LibCube:Test:factsSorter();//issue4
     LibCube:Test:factsDimensionSorterCaseTimeDimension();//issue15
     LibCube:Test:factsDimensionSorterCaseAnyDimension();//issue15
     LibCube:Test:factsDimensionSorterHelper();//issue15
     LibCube:Test:timeMember();//issue1
+    
+    LibCube:Test:twoMeasuresOneFactComparison();//issue3
+    LibCube:Test:twoFactsOneMesureComparison();//issue3
+    LibCube:Test:getMeasuresComparison();//issue3
+    LibCube:Test:getFactsComparison();//issue3
     LibCube:Test:groupedFactsSelection();
 }
 ;

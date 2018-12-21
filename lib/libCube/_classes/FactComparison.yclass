@@ -1,0 +1,358 @@
+interface LibCube:FactComparison
+
+    field fact
+        --> domains LibCube:Fact
+        --> documentation "Fact that is going to be compared with a reference"
+        --> xmlMapping XmlMappingProperty_NO_SAVE
+        --> dsl -> Textualization
+            --> language LANG_en
+            --> root "fact"
+            --> number SINGULAR
+        ;
+
+    field measure
+        --> domains LibCube:Measure
+        --> documentation "Measure that is going to be compared with a reference"
+        --> xmlMapping XmlMappingProperty_NO_SAVE
+        --> dsl -> Textualization
+            --> language LANG_en
+            --> root "measure"
+            --> number SINGULAR
+        ;
+
+    field currentValue
+        --> domains Number
+        //--> visibility _PRIVATE
+        --> documentation "Value of the fact's measure"
+        --> xmlMapping XmlMappingProperty_SAVE
+        --> dsl -> Textualization
+            --> language LANG_en
+            --> root "measure value"
+            --> number SINGULAR
+        ;
+
+    field referenceValue
+        --> domains Number
+        //--> visibility _PRIVATE
+        --> documentation 
+        """
+
+        Value of the reference fact's measure.
+        A theoretical/actual/correct/accepted/optimal/starting, etc. value; the value that x is being compared to.
+
+        """
+        --> xmlMapping XmlMappingProperty_SAVE
+        --> dsl -> Textualization
+            --> language LANG_en
+            --> root "new value"
+            --> number SINGULAR
+        ;
+
+    field change
+        --> domains Number
+        --> documentation
+        """
+
+        This is the calculated difference taking account the reference value.
+        Formula:   Δ = x − y, where 'y' is the reference value.
+
+        """
+        --> xmlMapping XmlMappingProperty_SAVE
+        --> dsl -> Textualization
+            --> language LANG_en
+            --> root "change"
+            --> number SINGULAR
+        ;
+
+    field relativeChange
+        --> domains Number
+        --> documentation
+        """
+
+        This is the calculated change ratio taking account the 'size' of the values involved.
+        Formula: Relative Change(x, x reference) = Change / x reference 
+                                                 = (x - x reference) / |x reference|, where 'x reference' is != 0
+        """
+        --> xmlMapping XmlMappingProperty_SAVE
+        --> dsl -> Textualization
+            --> language LANG_en
+            --> root "relative change"
+            --> number SINGULAR
+        ;
+
+    field absRelativeChange
+        --> domains Number
+        --> documentation
+        """
+
+        This is the absolute value of the Percentage Change
+        Formula:   Absolute RelativeChange Change = |Relative Change|
+
+        """
+        --> xmlMapping XmlMappingProperty_SAVE
+        --> dsl -> Textualization
+            --> language LANG_en
+            --> root "absolute relative change"
+            --> number SINGULAR
+        ;
+
+    field absDiff
+        --> domains Number
+        --> documentation 
+        """
+
+        This is the calculated difference WITHOUT taking account that there is a reference value.
+        Formula: |Δ| = |x − y|
+
+        """
+        --> xmlMapping XmlMappingProperty_SAVE
+        --> dsl -> Textualization
+            --> language LANG_en
+            --> root "absolute difference"
+            --> number SINGULAR
+        ;
+
+    /*
+        Note on Relative Difference:
+
+        Defining relative difference is not as easy as defining relative change 
+        since there is no 'correct' value to scale the absolute difference with.
+        
+        As a result, there are many options for how to define relative difference 
+        and which one is used depends on what the comparison is being used for.
+
+        In general we can say that the absolute difference |Δ| is being scaled by some function of the values x and y, say f(x, y).
+
+        Relative Difference(x, y) = Absolute difference / |f(x,y)| = |Δ| / |f(x,y)| = | (x-y)/f(x,y) |, where f(x,y) != 0
+
+        Several common choices for the function f(x, y) would be:
+
+        - max(|x|, |y|),
+        - max(x, y),
+        - min(|x|, |y|),
+        - min (x, y),
+        - (x + y)/2, and
+        - (|x| + |y|)/2.
+
+    */
+
+    field relativeDiffWithMax
+        --> domains Number
+        --> documentation 
+        """
+
+        This is the calculated relative difference ratio using the maximum between the fact's value and the reference value as a reference.
+        Formula: Relative Difference(x, y) = Absolute difference / |max(x,y)| 
+                                           = |Δ| / |max(x,y)| 
+                                           = | (x-y) / max(x,y) |, where max(x,y) != 0
+        """
+        --> xmlMapping XmlMappingProperty_SAVE
+        --> dsl -> Textualization
+            --> language LANG_en
+            --> root "relative diff with max"
+            --> number SINGULAR
+        ;
+
+    field relativeDiffWithAbsMax
+        --> domains Number
+        --> documentation 
+        """
+
+        This is the calculated relative difference ratio using the maximum between the absolute fact's value 
+        and the absolute reference value as a reference.
+
+        Formula: Relative Difference(x, y) = Absolute difference / max(|x|,|y|)
+                                           = |Δ| / max(|x|,|y|) 
+                                           = |(x-y)| / max(|x|,|y|) , where max(|x|,|y|) != 0
+
+        """
+        --> xmlMapping XmlMappingProperty_SAVE
+        --> dsl -> Textualization
+            --> language LANG_en
+            --> root "relative diff with absolute max"
+            --> number SINGULAR
+        ;
+
+    field relativeDiffWithAvg
+        --> domains Number
+        --> documentation 
+        """
+
+        This is the calculated relative difference ratio using the average between the fact's value 
+        and the reference value as a reference.
+
+        Formula: Relative Difference(x, y) = Absolute difference / |avg(x,y)|
+                                           = |Δ| / |avg(x,y)|
+                                           = |(x-y)| / |avg(x,y)| , where |avg(x,y)| != 0
+        """
+        --> xmlMapping XmlMappingProperty_SAVE
+        --> dsl -> Textualization
+            --> language LANG_en
+            --> root "relative diff with average"
+            --> number SINGULAR
+        ;
+
+    field relativeDiffWithAbsAvg
+        --> domains Number
+        --> documentation 
+        """
+        This is the calculated relative difference ratio using the average between the absolute fact's value 
+        and the absolute reference value as a reference.
+
+        Formula: Relative Difference(x, y) = Absolute difference / avg(|x|,|y|)
+                                           = |Δ| / avg(|x|,|y|)
+                                           = |(x-y)| / avg(|x|,|y|) , where avg(|x|,|y|) != 0
+        """
+        --> xmlMapping XmlMappingProperty_SAVE
+        --> dsl -> Textualization
+            --> language LANG_en
+            --> root "relative diff with absolute average"
+            --> number SINGULAR
+        ;
+
+    field significantDigit
+        --> domains Integer
+        --> documentation 
+        """
+        The first significant digit if you write a text showing both the fact's and reference values.
+        For instance, if the fact's value is 10842 and the reference value is 10748, the significant digit will be -3.
+        If the fact's value is 10842 and the reference value is 9748, the significant digit will be -4 
+        """
+        --> xmlMapping XmlMappingProperty_SAVE
+        --> dsl -> Textualization
+            --> language LANG_en
+            --> root "significant digit"
+            --> number SINGULAR
+        ;
+
+    field areComparedValuesRelative
+        --> domains Boolean
+        --> defaultValue false
+        --> documentation 
+        """
+        This flag changes the calculation of differences between the compared values, 
+        since the values are already relative (percentages, ratios) we don't need to calculate
+        proportions again in relative changes/diffs.
+        for example: the change between 10% and 20% is 10%, not 100%.
+        """
+        --> xmlMapping XmlMappingProperty_SAVE
+        --> dsl -> Textualization
+            --> language LANG_en
+            --> root "are compared values percentages"
+            --> number SINGULAR
+        ;
+
+    method computeFactComparison()
+    --> domains Void
+
+    classProperties
+    --> dsl -> Textualization
+        --> language LANG_en
+        --> root "two facts / one measure comparison"
+        --> number SINGULAR
+        --> hasDeterminer true
+    ;
+    --> documentation 
+    """
+
+    This class is used for calculating the absolute and relative changes and differences 
+    between two facts. 
+
+    The documentation for diferent calculations can be found in this link:
+    https://en.wikipedia.org/wiki/Relative_change_and_difference
+
+    """
+;
+
+implementation LibCube:FactComparison
+;
+
+function LibCube:FactComparison::computeFactComparison()
+--> action {
+    /*value = fact.getMeasure(measure).value;
+	referenceValue = fact.getMeasure(referenceMeasure).value;*/
+    if(currentValue == null){
+        logWarning("null value!");
+    }
+
+    if(referenceValue == null){
+        logWarning("null referenceValue!");
+    }
+
+	if(currentValue != null && referenceValue != null) {
+        // Read each field's documentation first
+        change = currentValue - referenceValue
+        if(areComparedValuesRelative == true){
+            relativeChange = change
+            absRelativeChange = abs(change)
+        }else{
+            if(referenceValue == 0){
+                relativeChange = null    
+                absRelativeChange = null
+            }else{
+                relativeChange = change / referenceValue
+                absRelativeChange = abs(relativeChange)
+            }
+        }
+        
+        absDiff = abs(change)
+
+        if(areComparedValuesRelative == false){
+            if( abs( max(currentValue, referenceValue) ) == 0){
+                relativeDiffWithMax = null
+            }else{
+                relativeDiffWithMax = absDiff / abs( max(currentValue, referenceValue) )
+            }
+            
+            if( max( abs(currentValue), abs(referenceValue) ) == 0){
+                relativeDiffWithAbsMax = null
+            }else{
+                relativeDiffWithAbsMax = absDiff / max( abs(currentValue), abs(referenceValue) )
+            }
+            
+            if( average( abs(currentValue), abs(referenceValue) ) == 0){
+                relativeDiffWithAvg = null
+            }else{
+                relativeDiffWithAvg = absDiff / average( abs(currentValue), abs(referenceValue) )
+            }   
+        }
+
+        //significant digit
+        // case 1 
+        if (compareNumbers(currentValue, referenceValue,0) == false) {
+            significantDigit  = -16;
+            for(i , 1, 15) {
+                if (compareNumbers(currentValue/pow(10,i), referenceValue/pow(10,i),0) == true) {
+                    significantDigit  = 1-i;
+                    break;
+                }
+            }        
+        } else {
+            significantDigit  = 16;
+            for(i , 1, 15) {
+                if (compareNumbers(currentValue, referenceValue, i) == false) {
+                    significantDigit  = i;
+                    break;
+                }
+            }
+        }
+        
+
+    }
+               
+}
+;
+
+/*
+function LibCube:FactComparison::getvalue()
+--> action {
+    return currentValue;
+}
+;
+
+function LibCube:FactComparison::getReferenceValue()
+--> action {
+    return referenceValue;
+}
+;
+*/

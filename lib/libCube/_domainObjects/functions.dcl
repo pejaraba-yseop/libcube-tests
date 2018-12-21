@@ -33,6 +33,41 @@ function getRatioFactsComparison(LibCube:Fact fact, LibCube:Fact referenceFact, 
 }
 ;
 
+function getMeasuresComparison(LibCube:Measure measure, LibCube:Measure referenceMeasure, LibCube:Fact comparingFact)
+--> domains LibCube:TwoMeasuresOneFactComparison 
+--> local LibCube:TwoMeasuresOneFactComparison comparison
+--> action {
+    comparison = new(LibCube:TwoMeasuresOneFactComparison)
+    comparison.measure = measure
+    comparison.referenceMeasure = referenceMeasure
+    comparison.fact = comparingFact
+    comparison.compute()
+    return comparison;
+}
+;
+
+function getPercentageMeasuresComparison(LibCube:Measure measure, LibCube:Measure referenceMeasure, LibCube:Fact comparingFact)
+--> domains LibCube:TwoMeasuresOneFactComparison 
+--> local LibCube:TwoMeasuresOneFactComparison comparison
+--> action {
+    comparison = new(LibCube:TwoMeasuresOneFactComparison)
+    comparison.measure = measure
+    comparison.referenceMeasure = referenceMeasure
+    comparison.fact = comparingFact
+    comparison.areComparedValuesRelative = true
+    comparison.compute()
+    return comparison;
+}
+;
+
+function getRatioMeasuresComparison(LibCube:Measure measure, LibCube:Measure referenceMeasure, LibCube:Fact comparingFact)
+--> domains LibCube:TwoMeasuresOneFactComparison 
+--> local LibCube:TwoMeasuresOneFactComparison comparison
+--> action {
+    return getPercentageMeasuresComparison(measure, referenceMeasure, comparingFact);
+}
+;
+
 function getOneMeasureSorter
 args{
     Collection          facts

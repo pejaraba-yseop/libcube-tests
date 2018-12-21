@@ -1,18 +1,18 @@
-interface LibCube:TwoFactsOneMeasureComparison extends LibCube:FactComparison,LibCube:PrintableValuesObject
-    
-    field referenceFact
-        --> domains LibCube:Fact
-        --> documentation "Fact used as a reference to be compared with"
+interface LibCube:TwoMeasuresOneFactComparison extends LibCube:FactComparison,LibCube:PrintableValuesObject
+        
+    field referenceMeasure
+        --> domains LibCube:Measure
+        --> documentation "Measure used as a reference to be compared"
         --> xmlMapping XmlMappingProperty_NO_SAVE
         --> dsl -> Textualization
             --> language LANG_en
-            --> root "reference fact"
+            --> root "measure"
             --> number SINGULAR
         ;
-
+    
     method compute()
-    --> domains Void        
-        
+    --> domains Void
+
     classProperties
     --> dsl -> Textualization
         --> language LANG_en
@@ -32,25 +32,25 @@ interface LibCube:TwoFactsOneMeasureComparison extends LibCube:FactComparison,Li
     """
 ;
 
-implementation LibCube:TwoFactsOneMeasureComparison
-    override {
+implementation LibCube:TwoMeasuresOneFactComparison
+    override { 
         printValues
     }
 ;
 
-function LibCube:TwoFactsOneMeasureComparison::compute()
+function LibCube:TwoMeasuresOneFactComparison::compute()
 --> action {
-    currentValue = fact.getMeasure(measure).value
-	referenceValue = referenceFact.getMeasure(measure).value
+    currentValue = fact.getMeasure(measure).value;
+	referenceValue = fact.getMeasure(referenceMeasure).value;
     computeFactComparison();
 }
 ;
 
-
-textMethod LibCube:TwoFactsOneMeasureComparison::printValues()
+textMethod LibCube:TwoMeasuresOneFactComparison::printValues()
 --> text 
 \( 
     measure: \value(measure.identifier) \endOfLine
+    reference measure: \value(referenceMeasure.identifier) \endOfLine
     fact value:  \value(currentValue), reference value: \value(referenceValue) \endOfLine
     calculated values: \endOfLine
     change: \value(change) \endOfLine
@@ -61,3 +61,4 @@ textMethod LibCube:TwoFactsOneMeasureComparison::printValues()
     relative difference with average: \value(relativeDiffWithAvg) \endOfLine
 \)
 ; 
+
