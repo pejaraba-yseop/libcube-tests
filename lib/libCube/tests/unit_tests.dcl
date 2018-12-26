@@ -1187,6 +1187,45 @@ local {
  }
  ;
 
+function LibCube:Test:getMeasureValue()
+ local {
+    LibCube:Measure valueMeasure
+    LibCube:Measure valueMeasure2
+    LibCube:Fact fact
+    LibCube:FactMeasure factMeasure
+    LibCube:FactMeasure factMeasure2
+    LibCube:FactMeasure comparingFactMeasure
+}
+--> action {
+    logInfo("Testing getMeasureValue");
+
+    //Setting measures
+    valueMeasure = new (LibCube:Measure);
+    valueMeasure.label = "MEASURE_SOLD_UNITS";
+    valueMeasure2 = new (LibCube:Measure);
+    valueMeasure2.label = "MEASURE_VALUE";
+
+    //Setting factMeasure
+    factMeasure = new(LibCube:FactMeasure);
+    factMeasure.value = 150000;
+    factMeasure.measure = valueMeasure;
+    factMeasure2 = new(LibCube:FactMeasure);
+    factMeasure2.value = 321;
+    factMeasure2.measure = valueMeasure2;
+
+    //Setting the facts
+    fact = new(LibCube:Fact);
+    fact.factMeasures.add(factMeasure);
+    fact.factMeasures.add(factMeasure2);
+
+    comparingFactMeasure = fact.getMeasureValue();
+    
+    assert(factMeasure2 == comparingFactMeasure );
+
+    logInfo("LibCube:Test:getMeasureValue() passed");
+}
+;
+
 function LibCube:Test:groupedFactsSelection()
 --> action {
     logInfo("Testing groupedFactsSelection");
@@ -1198,6 +1237,7 @@ function LibCube:Test:main()
 --> action {
     //LibKPI:Test:ranges();
     logInfo("Running LibCube unit tests");
+    /*
     LibCube:Test:factsSorter();//issue4
     LibCube:Test:factsDimensionSorterCaseTimeDimension();//issue15
     LibCube:Test:factsDimensionSorterCaseAnyDimension();//issue15
@@ -1209,6 +1249,8 @@ function LibCube:Test:main()
     LibCube:Test:getMeasuresComparison();//issue3
     LibCube:Test:getFactsComparison();//issue3
     LibCube:Test:groupedFactsSelection();
+    */
+    LibCube:Test:getMeasureValue();//issue21
 }
 ;
 

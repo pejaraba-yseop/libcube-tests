@@ -139,6 +139,17 @@ interface LibCube:Fact extends LibCube:PrintableValuesObject
             --> number PLURAL
             --> hasDeterminer false
         ;
+    
+    method getMeasureValue()
+    --> documentation "A method to get the value Measure of the Fact by ID: MEASURE_VALUE"
+		--> domains LibCube:FactMeasure
+        --> dsl -> Textualization
+            --> language LANG_en
+            --> root "{1} of {0}"
+            --> number PLURAL
+            --> hasDeterminer false
+        ;
+
 	method getDate()
     --> documentation "A method used to get the Date of the Fact"
 		--> domains Date
@@ -191,6 +202,27 @@ function LibCube:Fact::getMeasure(LibCube:Measure theMeasure)
     if(foundMeasures.size() > 1){
         return foundMeasures.get(_FIRST);
         logWarning("Repeated measure: ", theMeasure.label, " on the fact: ", this);
+    }
+}
+;
+
+/**
+  @return and Object of type FactMeasure for measure with label MEASURE_VALUE
+ */
+function LibCube:Fact::getMeasureValue()
+--> local Collection foundMeasures
+--> action {
+    foundMeasures = applyCollection(this>>factMeasures, __where currentElement.measure.label=="MEASURE_VALUE").toList();
+    
+    if(foundMeasures.isEmpty() == true){
+        return null;
+    }
+    if(foundMeasures.size() == 1){
+        return foundMeasures.get(_FIRST);
+    }
+    if(foundMeasures.size() > 1){
+        return foundMeasures.get(_FIRST);
+        logWarning("Repeated measure : ", "MEASURE_VALUE", " on the fact: ", this);
     }
 }
 ;
