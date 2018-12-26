@@ -109,7 +109,20 @@ interface LibCube:Fact extends LibCube:PrintableValuesObject
             --> root "{1} of {0}"
             --> number PLURAL
             --> hasDeterminer false
+            --> deprecated "Beta14"
         ;
+    
+    method getMember(LibCube:Dimension theDimension)
+		--> domains LibCube:Member
+        --> documentation "A method to get the member of a Dimension of the Fact by ID"
+        --> dsl -> Textualization
+            --> language LANG_en
+            --> root "{1} of {0}"
+            --> number PLURAL
+            --> hasDeterminer false
+            --> deprecated "Beta14"
+        ;
+
     method getDimensionNameFromMdxName(String mdxName)
 		--> domains Text
         --> documentation "A method to get the name of the dimension from the mdxName"
@@ -179,6 +192,16 @@ implementation LibCube:Fact
 ;
 
 function LibCube:Fact::getDimension(LibCube:Dimension theDimension)
+--> action{
+	foreach(_member, this>>members){
+		if(_member.dimension == theDimension){
+			return _member;
+		}
+	}
+}
+;
+
+function LibCube:Fact::getMember(LibCube:Dimension theDimension)
 --> action{
 	foreach(_member, this>>members){
 		if(_member.dimension == theDimension){

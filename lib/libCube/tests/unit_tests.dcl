@@ -1226,6 +1226,47 @@ function LibCube:Test:getMeasureValue()
 }
 ;
 
+function LibCube:Test:getMember()
+ local {
+    LibCube:Fact fact
+    LibCube:Member storeMember
+    LibCube:Member cityMember
+    LibCube:Member productMember
+    LibCube:Member comparatorMember
+    LibCube:Fact fact
+}
+--> action {
+    logInfo("Testing getMember");
+    //Setting members
+    storeMember = new(LibCube:Member);
+    storeMember.dimension = DIMENSION_STORE;
+    storeMember.label = "SuperStic Store";
+    
+    cityMember = new(LibCube:Member);
+    cityMember.dimension = DIMENSION_CITY;
+    cityMember.label = "Bogota";
+
+    productMember = new(LibCube:Member);
+    productMember.dimension = DIMENSION_PRODUCT;
+    productMember.label = "Product American";
+
+    //Setting the facts
+    fact = new(LibCube:Fact);
+    fact.members.add(storeMember);
+    fact.members.add(cityMember);
+    fact.members.add(productMember);
+
+    comparatorMember = fact.getMember(DIMENSION_PRODUCT);
+    assert(comparatorMember == productMember);
+    comparatorMember = fact.getMember(DIMENSION_CITY);
+    assert(comparatorMember == cityMember);
+    comparatorMember = fact.getMember(DIMENSION_STORE);
+    assert(comparatorMember == storeMember);
+
+    logInfo("LibCube:Test:getMember() passed");
+}
+;
+
 function LibCube:Test:groupedFactsSelection()
 --> action {
     logInfo("Testing groupedFactsSelection");
@@ -1251,6 +1292,7 @@ function LibCube:Test:main()
     LibCube:Test:groupedFactsSelection();
     
     LibCube:Test:getMeasureValue();//issue21
+    LibCube:Test:getMember();//issue20
 }
 ;
 
