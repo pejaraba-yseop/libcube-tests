@@ -1268,9 +1268,39 @@ function LibCube:Test:getMember()
 ;
 
 function LibCube:Test:groupedFactsSelection()
+--> local LibCube:JointureGroupedFactsSelection jointureGroupedFactsSelection,
+          LibCube:Fact fact1,
+          LibCube:Fact fact2,
+          LibCube:Member cityMember,
+          LibCube:Member cityMember2,
+          HashMap _groupedSelectedFacts
 --> action {
     logInfo("Testing groupedFactsSelection");
+
+    cityMember = new(LibCube:Member);
+    cityMember.dimension = DIMENSION_CITY;
+    cityMember.label = "Bogota";
+
+    cityMember2 = new(LibCube:Member);
+    cityMember2.dimension = DIMENSION_CITY;
+    cityMember2.label = "Dallas";
+
+    fact1 = new(LibCube:Fact);
+    fact1.members.add(cityMember);
+    fact2 = new(LibCube:Fact);
+    fact2.members.add(cityMember2);
     
+    jointureGroupedFactsSelection = new(LibCube:JointureGroupedFactsSelection);
+    jointureGroupedFactsSelection.groupingDimension = DIMENSION_CITY;
+    jointureGroupedFactsSelection.selectedFacts.add(fact1);
+    jointureGroupedFactsSelection.selectedFacts.add(fact2);
+    _groupedSelectedFacts = jointureGroupedFactsSelection.getGroupedFacts();
+
+    assert(jointureGroupedFactsSelection.getFactsOfMember(cityMember) == _groupedSelectedFacts[cityMember]);
+    assert(fact1 == _groupedSelectedFacts[cityMember].toList().get(_FIRST));
+    assert(fact2 == _groupedSelectedFacts[cityMember2].toList().get(_FIRST));
+    
+    logInfo("LibCube:Test:groupedFactsSelection() passed");
 }
 ;
 
@@ -1278,21 +1308,25 @@ function LibCube:Test:main()
 --> action {
     //LibKPI:Test:ranges();
     logInfo("Running LibCube unit tests");
-    
+  
     LibCube:Test:factsSorter();//issue4
+    
     LibCube:Test:factsDimensionSorterCaseTimeDimension();//issue15
     LibCube:Test:factsDimensionSorterCaseAnyDimension();//issue15
     LibCube:Test:factsDimensionSorterHelper();//issue15
+    
     LibCube:Test:timeMember();//issue1
     
     LibCube:Test:twoMeasuresOneFactComparison();//issue3
     LibCube:Test:twoFactsOneMesureComparison();//issue3
     LibCube:Test:getMeasuresComparison();//issue3
     LibCube:Test:getFactsComparison();//issue3
-    LibCube:Test:groupedFactsSelection();
     
     LibCube:Test:getMeasureValue();//issue21
+    
     LibCube:Test:getMember();//issue20
+
+    LibCube:Test:groupedFactsSelection();
 }
 ;
 
