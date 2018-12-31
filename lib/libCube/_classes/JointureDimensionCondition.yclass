@@ -114,7 +114,7 @@ function LibCube:JointureDimensionCondition::init()
 }
 ;
 
-function LibCube:JointureDimensionCondition::generateQueryFragment() 
+function LibCube:JointureDimensionCondition::generateQueryFragment()
 --> local String queryFragString, Boolean valid, LibCube:Hierarchy theHierarchy
 --> action{
     valid = true;

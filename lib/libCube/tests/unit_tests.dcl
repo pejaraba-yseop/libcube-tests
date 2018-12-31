@@ -1304,11 +1304,49 @@ function LibCube:Test:groupedFactsSelection()
 }
 ;
 
+function LibCube:Test:generateQueryFragment()
+--> local LibCube:JointureDimensionCondition jointureDimensionCondition,
+          LibCube:Dimension dimension, 
+          LibCube:TimeMember time2k18,
+          LibCube:TimeMember time2k17,
+          LibCube:Hierarchy hierarchy
+--> action {
+
+    logInfo("Testing generateQueryFragment");
+
+    //fact value and label to give them shape-----------------------------
+    time2k18 = new(LibCube:TimeMember);
+    time2k18.dimension = DIMENSION_TIME;
+    time2k18.label = "2018";
+    time2k18.date = Date..stringToDate("2018-01-01");
+
+    time2k17 = new(LibCube:TimeMember);
+    time2k17.dimension = DIMENSION_TIME;
+    time2k17.label = "2017";
+    time2k17.date = Date..stringToDate("2017-01-01");
+
+    hierarchy = new(LibCube:Hierarchy);
+    hierarchy.mdxName = "timeMDX";
+
+    dimension = new(LibCube:Dimension);
+    dimension.members.add(time2k18);
+    dimension.members.add(time2k17);
+    dimension.hierarchies.add(hierarchy);
+
+    jointureDimensionCondition = new(LibCube:JointureDimensionCondition);
+    jointureDimensionCondition.dimension = dimension;
+
+    jointureDimensionCondition.generateQueryFragment();
+
+    logInfo("LibCube:Test:generateQueryFragment() passed");
+}
+;
+
 function LibCube:Test:main()
 --> action {
     //LibKPI:Test:ranges();
     logInfo("Running LibCube unit tests");
-  
+    /*
     LibCube:Test:factsSorter();//issue4
     
     LibCube:Test:factsDimensionSorterCaseTimeDimension();//issue15
@@ -1327,6 +1365,9 @@ function LibCube:Test:main()
     LibCube:Test:getMember();//issue20
 
     LibCube:Test:groupedFactsSelection();
+    */
+
+    LibCube:Test:generateQueryFragment();
 }
 ;
 
