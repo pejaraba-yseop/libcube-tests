@@ -1378,7 +1378,7 @@ function LibCube:Test:main()
 --> action {
     //LibKPI:Test:ranges();
     logInfo("Running LibCube unit tests");
-    /*
+    
     LibCube:Test:factsSorter();//issue4
     
     LibCube:Test:factsDimensionSorterCaseTimeDimension();//issue15
@@ -1397,7 +1397,6 @@ function LibCube:Test:main()
     LibCube:Test:getMember();//issue20
 
     LibCube:Test:groupedFactsSelection();
-    */
 
     LibCube:Test:generateQueryFragment();
 }

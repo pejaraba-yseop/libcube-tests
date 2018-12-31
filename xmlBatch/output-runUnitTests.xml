@@ -11,7 +11,7 @@
 		<y:dialog-session>
 			<y:request-count>1</y:request-count>
 			<y:status>_IN_PROGRESS</y:status>
-			<y:start-timestamp>2018-12-31T11:12:25:435</y:start-timestamp>
+			<y:start-timestamp>2018-12-31T11:27:00:600</y:start-timestamp>
 		</y:dialog-session>
 		<y:data>
 			<y:instance yid="theGeneralData"></y:instance>
@@ -25,117 +25,306 @@
 				index="1"
 				level="info"
 				nature="user-log"
-				origin-nb-ms="0.96"
+				origin-nb-ms="1.07"
 				file="C:/Users/asuarez/Documents/gitRepos/libcube-tests/lib/libCube/tests/unit_tests.dcl"
-				line="1383">
+				line="1380">
 				<y:message>Running LibCube unit tests</y:message>
 			</y:log>
 			<y:log
 				index="2"
 				level="info"
 				nature="user-log"
-				origin-nb-ms="1.03"
+				origin-nb-ms="1.16"
 				file="C:/Users/asuarez/Documents/gitRepos/libcube-tests/lib/libCube/tests/unit_tests.dcl"
-				line="1315">
-				<y:message>Testing generateQueryFragment</y:message>
+				line="23">
+				<y:message>Testing factsSorter</y:message>
 			</y:log>
 			<y:log
 				index="3"
 				level="info"
 				nature="user-log"
-				origin-nb-ms="1.14"
-				file="C:/Users/asuarez/Documents/gitRepos/libcube-tests/lib/libCube/_classes/JointureDimensionCondition.yclass"
-				line="138">
-				<y:message>entro valid == true</y:message>
+				origin-nb-ms="1.46"
+				file="C:/Users/asuarez/Documents/gitRepos/libcube-tests/lib/libCube/tests/unit_tests.dcl"
+				line="96">
+				<y:message>LibCube:Test:factsSorter() passed</y:message>
 			</y:log>
 			<y:log
 				index="4"
 				level="info"
 				nature="user-log"
-				origin-nb-ms="1.21"
-				file="C:/Users/asuarez/Documents/gitRepos/libcube-tests/lib/libCube/_classes/JointureDimensionCondition.yclass"
-				line="142">
-				<y:message>entro acceptsAnyMembers == true</y:message>
+				origin-nb-ms="1.54"
+				file="C:/Users/asuarez/Documents/gitRepos/libcube-tests/lib/libCube/tests/unit_tests.dcl"
+				line="124">
+				<y:message>Testing factsDimensionSorterCaseTimeDimension</y:message>
 			</y:log>
 			<y:log
 				index="5"
 				level="info"
 				nature="user-log"
-				origin-nb-ms="1.47"
-				file="C:/Users/asuarez/Documents/gitRepos/libcube-tests/lib/libCube/_classes/JointureDimensionCondition.yclass"
-				line="138">
-				<y:message>entro valid == true</y:message>
+				origin-nb-ms="1.70"
+				file="C:/Users/asuarez/Documents/gitRepos/libcube-tests/lib/libCube/tests/unit_tests.dcl"
+				line="221">
+				<y:message>LibCube:Test:factsDimensionSorterCaseTimeDimension() passed</y:message>
 			</y:log>
 			<y:log
 				index="6"
 				level="info"
 				nature="user-log"
-				origin-nb-ms="1.53"
-				file="C:/Users/asuarez/Documents/gitRepos/libcube-tests/lib/libCube/_classes/JointureDimensionCondition.yclass"
-				line="147">
-				<y:message>entro members != null</y:message>
+				origin-nb-ms="1.78"
+				file="C:/Users/asuarez/Documents/gitRepos/libcube-tests/lib/libCube/tests/unit_tests.dcl"
+				line="249">
+				<y:message>Testing factsDimensionSorterCaseAnyDimension</y:message>
 			</y:log>
 			<y:log
 				index="7"
 				level="info"
 				nature="user-log"
-				origin-nb-ms="1.65"
-				file="C:/Users/asuarez/Documents/gitRepos/libcube-tests/lib/libCube/_classes/JointureDimensionCondition.yclass"
-				line="149">
-				<y:message>[dimensionMDX.hierarchyMDX].TimeMember2018MDX</y:message>
+				origin-nb-ms="1.92"
+				file="C:/Users/asuarez/Documents/gitRepos/libcube-tests/lib/libCube/tests/unit_tests.dcl"
+				line="331">
+				<y:message>LibCube:Test:factsDimensionSorterCaseAnyDimension() passed</y:message>
 			</y:log>
 			<y:log
 				index="8"
 				level="info"
 				nature="user-log"
-				origin-nb-ms="3.71"
-				file="C:/Users/asuarez/Documents/gitRepos/libcube-tests/lib/libCube/_classes/JointureDimensionCondition.yclass"
-				line="138">
-				<y:message>entro valid == true</y:message>
+				origin-nb-ms="1.99"
+				file="C:/Users/asuarez/Documents/gitRepos/libcube-tests/lib/libCube/tests/unit_tests.dcl"
+				line="359">
+				<y:message>Testing factsDimensionSorterHelper</y:message>
 			</y:log>
 			<y:log
 				index="9"
 				level="info"
 				nature="user-log"
-				origin-nb-ms="3.77"
-				file="C:/Users/asuarez/Documents/gitRepos/libcube-tests/lib/libCube/_classes/JointureDimensionCondition.yclass"
-				line="142">
-				<y:message>entro acceptsAnyMembers == true</y:message>
+				origin-nb-ms="2.13"
+				file="C:/Users/asuarez/Documents/gitRepos/libcube-tests/lib/libCube/tests/unit_tests.dcl"
+				line="438">
+				<y:message>LibCube:Test:factsDimensionSorterHelper() passed</y:message>
 			</y:log>
 			<y:log
 				index="10"
 				level="info"
 				nature="user-log"
-				origin-nb-ms="3.88"
-				file="C:/Users/asuarez/Documents/gitRepos/libcube-tests/lib/libCube/_classes/JointureDimensionCondition.yclass"
-				line="147">
-				<y:message>entro members != null</y:message>
+				origin-nb-ms="2.20"
+				file="C:/Users/asuarez/Documents/gitRepos/libcube-tests/lib/libCube/tests/unit_tests.dcl"
+				line="455">
+				<y:message>Testing timeMember</y:message>
 			</y:log>
 			<y:log
 				index="11"
 				level="info"
 				nature="user-log"
-				origin-nb-ms="4.00"
-				file="C:/Users/asuarez/Documents/gitRepos/libcube-tests/lib/libCube/_classes/JointureDimensionCondition.yclass"
-				line="149">
-				<y:message>[dimensionMDX.hierarchyMDX].TimeMember2018MDX</y:message>
+				origin-nb-ms="2.31"
+				file="C:/Users/asuarez/Documents/gitRepos/libcube-tests/lib/libCube/tests/unit_tests.dcl"
+				line="519">
+				<y:message>CASE TESTING getQuarter() passed</y:message>
 			</y:log>
 			<y:log
 				index="12"
 				level="info"
 				nature="user-log"
-				origin-nb-ms="4.85"
-				file="C:/Users/asuarez/Documents/gitRepos/libcube-tests/lib/libCube/_classes/JointureDimensionCondition.yclass"
-				line="138">
-				<y:message>entro valid == true</y:message>
+				origin-nb-ms="2.42"
+				file="C:/Users/asuarez/Documents/gitRepos/libcube-tests/lib/libCube/tests/unit_tests.dcl"
+				line="533">
+				<y:message>CASE timeMember.period = PERIOD_DAY passed</y:message>
 			</y:log>
 			<y:log
 				index="13"
 				level="info"
 				nature="user-log"
-				origin-nb-ms="4.92"
+				origin-nb-ms="2.53"
 				file="C:/Users/asuarez/Documents/gitRepos/libcube-tests/lib/libCube/tests/unit_tests.dcl"
-				line="1376">
+				line="556">
+				<y:message>CASE timeMember.period = PERIOD_MONTH passed</y:message>
+			</y:log>
+			<y:log
+				index="14"
+				level="info"
+				nature="user-log"
+				origin-nb-ms="2.78"
+				file="C:/Users/asuarez/Documents/gitRepos/libcube-tests/lib/libCube/tests/unit_tests.dcl"
+				line="575">
+				<y:message>CASE timeMember.period = PERIOD_YEAR passed</y:message>
+			</y:log>
+			<y:log
+				index="15"
+				level="info"
+				nature="user-log"
+				origin-nb-ms="9.12"
+				file="C:/Users/asuarez/Documents/gitRepos/libcube-tests/lib/libCube/tests/unit_tests.dcl"
+				line="652">
+				<y:message>CASE timeMember.period = PERIOD_QUARTER passed</y:message>
+			</y:log>
+			<y:log
+				index="16"
+				level="info"
+				nature="user-log"
+				origin-nb-ms="9.34"
+				file="C:/Users/asuarez/Documents/gitRepos/libcube-tests/lib/libCube/tests/unit_tests.dcl"
+				line="701">
+				<y:message>CASE timeMember.period = PERIOD_WEEK passed</y:message>
+			</y:log>
+			<y:log
+				index="17"
+				level="info"
+				nature="user-log"
+				origin-nb-ms="10.10"
+				file="C:/Users/asuarez/Documents/gitRepos/libcube-tests/lib/libCube/tests/unit_tests.dcl"
+				line="752">
+				<y:message>CASE TO DATE passed</y:message>
+			</y:log>
+			<y:log
+				index="18"
+				level="info"
+				nature="user-log"
+				origin-nb-ms="10.17"
+				file="C:/Users/asuarez/Documents/gitRepos/libcube-tests/lib/libCube/tests/unit_tests.dcl"
+				line="754">
+				<y:message>LibCube:Test:timeMember() passed</y:message>
+			</y:log>
+			<y:log
+				index="19"
+				level="info"
+				nature="user-log"
+				origin-nb-ms="10.24"
+				file="C:/Users/asuarez/Documents/gitRepos/libcube-tests/lib/libCube/tests/unit_tests.dcl"
+				line="771">
+				<y:message>Testing twoMeasuresOneFactComparison</y:message>
+			</y:log>
+			<y:log
+				index="20"
+				level="info"
+				nature="user-log"
+				origin-nb-ms="10.50"
+				file="C:/Users/asuarez/Documents/gitRepos/libcube-tests/lib/libCube/tests/unit_tests.dcl"
+				line="905">
+				<y:message>LibCube:Test:twoMeasuresOneFactComparison() passed</y:message>
+			</y:log>
+			<y:log
+				index="21"
+				level="info"
+				nature="user-log"
+				origin-nb-ms="10.57"
+				file="C:/Users/asuarez/Documents/gitRepos/libcube-tests/lib/libCube/tests/unit_tests.dcl"
+				line="923">
+				<y:message>Testing twoFactsOneMesureComparison</y:message>
+			</y:log>
+			<y:log
+				index="22"
+				level="info"
+				nature="user-log"
+				origin-nb-ms="10.76"
+				file="C:/Users/asuarez/Documents/gitRepos/libcube-tests/lib/libCube/tests/unit_tests.dcl"
+				line="1056">
+				<y:message>LibCube:Test:twoFactsOneMeasureComparison() passed</y:message>
+			</y:log>
+			<y:log
+				index="23"
+				level="info"
+				nature="user-log"
+				origin-nb-ms="10.83"
+				file="C:/Users/asuarez/Documents/gitRepos/libcube-tests/lib/libCube/tests/unit_tests.dcl"
+				line="1073">
+				<y:message>Testing getMeasuresComparison</y:message>
+			</y:log>
+			<y:log
+				index="24"
+				level="info"
+				nature="user-log"
+				origin-nb-ms="10.94"
+				file="C:/Users/asuarez/Documents/gitRepos/libcube-tests/lib/libCube/tests/unit_tests.dcl"
+				line="1120">
+				<y:message>LibCube:Test:getMeasuresComparison() passed</y:message>
+			</y:log>
+			<y:log
+				index="25"
+				level="info"
+				nature="user-log"
+				origin-nb-ms="11.01"
+				file="C:/Users/asuarez/Documents/gitRepos/libcube-tests/lib/libCube/tests/unit_tests.dcl"
+				line="1137">
+				<y:message>Testing getFactsComparison</y:message>
+			</y:log>
+			<y:log
+				index="26"
+				level="info"
+				nature="user-log"
+				origin-nb-ms="11.12"
+				file="C:/Users/asuarez/Documents/gitRepos/libcube-tests/lib/libCube/tests/unit_tests.dcl"
+				line="1186">
+				<y:message>LibCube:Test:getFactsComparison() passed</y:message>
+			</y:log>
+			<y:log
+				index="27"
+				level="info"
+				nature="user-log"
+				origin-nb-ms="11.20"
+				file="C:/Users/asuarez/Documents/gitRepos/libcube-tests/lib/libCube/tests/unit_tests.dcl"
+				line="1200">
+				<y:message>Testing getMeasureValue</y:message>
+			</y:log>
+			<y:log
+				index="28"
+				level="info"
+				nature="user-log"
+				origin-nb-ms="11.28"
+				file="C:/Users/asuarez/Documents/gitRepos/libcube-tests/lib/libCube/tests/unit_tests.dcl"
+				line="1225">
+				<y:message>LibCube:Test:getMeasureValue() passed</y:message>
+			</y:log>
+			<y:log
+				index="29"
+				level="info"
+				nature="user-log"
+				origin-nb-ms="11.35"
+				file="C:/Users/asuarez/Documents/gitRepos/libcube-tests/lib/libCube/tests/unit_tests.dcl"
+				line="1239">
+				<y:message>Testing getMember</y:message>
+			</y:log>
+			<y:log
+				index="30"
+				level="info"
+				nature="user-log"
+				origin-nb-ms="11.43"
+				file="C:/Users/asuarez/Documents/gitRepos/libcube-tests/lib/libCube/tests/unit_tests.dcl"
+				line="1266">
+				<y:message>LibCube:Test:getMember() passed</y:message>
+			</y:log>
+			<y:log
+				index="31"
+				level="info"
+				nature="user-log"
+				origin-nb-ms="11.54"
+				file="C:/Users/asuarez/Documents/gitRepos/libcube-tests/lib/libCube/tests/unit_tests.dcl"
+				line="1278">
+				<y:message>Testing groupedFactsSelection</y:message>
+			</y:log>
+			<y:log
+				index="32"
+				level="info"
+				nature="user-log"
+				origin-nb-ms="11.70"
+				file="C:/Users/asuarez/Documents/gitRepos/libcube-tests/lib/libCube/tests/unit_tests.dcl"
+				line="1303">
+				<y:message>LibCube:Test:groupedFactsSelection() passed</y:message>
+			</y:log>
+			<y:log
+				index="33"
+				level="info"
+				nature="user-log"
+				origin-nb-ms="11.83"
+				file="C:/Users/asuarez/Documents/gitRepos/libcube-tests/lib/libCube/tests/unit_tests.dcl"
+				line="1315">
+				<y:message>Testing generateQueryFragment</y:message>
+			</y:log>
+			<y:log
+				index="34"
+				level="info"
+				nature="user-log"
+				origin-nb-ms="16.63"
+				file="C:/Users/asuarez/Documents/gitRepos/libcube-tests/lib/libCube/tests/unit_tests.dcl"
+				line="1373">
 				<y:message>LibCube:Test:generateQueryFragment() passed</y:message>
 			</y:log>
 		</y:logging>
@@ -143,11 +332,11 @@
 			<y:language
 				id="en"/>
 			<y:random
-				seed="257712124"
+				seed="1546273620"
 				peak="0"/>
 			<y:process
-				id="2494"
-				start-runtime="2018-12-31T11:12:25:383"
+				id="1FE0"
+				start-runtime="2018-12-31T11:27:00:546"
 				runtime="erunbc_"
 				engine-version="7.2.0.M1-002"
 				os="WINDOWS 6.2"
@@ -158,13 +347,13 @@
 				creation-date="2018-12-19"
 				expiration-date="2019-01-30"/>
 			<y:request-exec-time
-				begin="2018-12-31T11:12:25:435"
-				end="2018-12-31T11:12:25:442"/>
+				begin="2018-12-31T11:27:00:600"
+				end="2018-12-31T11:27:00:618"/>
 			<y:stat
 				errors="0"
 				warnings="0"
 				success-rule-fire="0"
-				text-write="15"
+				text-write="52"
 				main-words="0"
 				main-chars="0"/>
 		</y:synthesis>
