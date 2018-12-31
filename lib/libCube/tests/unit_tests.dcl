@@ -1308,35 +1308,67 @@ function LibCube:Test:generateQueryFragment()
 --> local LibCube:JointureDimensionCondition jointureDimensionCondition,
           LibCube:Dimension dimension, 
           LibCube:TimeMember time2k18,
-          LibCube:TimeMember time2k17,
-          LibCube:Hierarchy hierarchy
+          LibCube:Hierarchy hierarchy,
+          Text comparatorText 
 --> action {
 
     logInfo("Testing generateQueryFragment");
 
     //fact value and label to give them shape-----------------------------
     time2k18 = new(LibCube:TimeMember);
-    time2k18.dimension = DIMENSION_TIME;
+    //time2k18.dimension = DIMENSION_TIME;
     time2k18.label = "2018";
+    time2k18.mdxName = "TimeMember2018MDX";
     time2k18.date = Date..stringToDate("2018-01-01");
 
-    time2k17 = new(LibCube:TimeMember);
-    time2k17.dimension = DIMENSION_TIME;
-    time2k17.label = "2017";
-    time2k17.date = Date..stringToDate("2017-01-01");
-
     hierarchy = new(LibCube:Hierarchy);
-    hierarchy.mdxName = "timeMDX";
+    hierarchy.mdxName = "hierarchyMDX";
 
     dimension = new(LibCube:Dimension);
     dimension.members.add(time2k18);
-    dimension.members.add(time2k17);
+    dimension.mdxName = "dimensionMDX";
+    time2k18.dimension = dimension;
     dimension.hierarchies.add(hierarchy);
-
+    
+    //CASE 1 No members in jointure and acceptsAnyMembers = true
     jointureDimensionCondition = new(LibCube:JointureDimensionCondition);
     jointureDimensionCondition.dimension = dimension;
-
+    jointureDimensionCondition.acceptsAnyMembers = true;
     jointureDimensionCondition.generateQueryFragment();
+
+    comparatorText = concat(concat(concat("[",dimension.mdxName),  "]"), ".members");
+    
+    assert(jointureDimensionCondition.queryFragment.mdxString == comparatorText);
+
+    //CASE 2 Jointure with members and acceptsAnyMembers = FALSE
+    jointureDimensionCondition = new(LibCube:JointureDimensionCondition);
+    jointureDimensionCondition.dimension = dimension;
+    jointureDimensionCondition.members.add(time2k18);
+    jointureDimensionCondition.acceptsAnyMembers = false;
+    jointureDimensionCondition.generateQueryFragment();
+
+    comparatorText = concat(concat(concat("[",concat(dimension.mdxName, concat(".",hierarchy.mdxName))),  "]"), concat(".",time2k18.mdxName));
+    
+    assert(jointureDimensionCondition.queryFragment.mdxString == comparatorText);
+
+    //CASE 3 Jointure with members and acceptsAnyMembers = TRUE
+    jointureDimensionCondition = new(LibCube:JointureDimensionCondition);
+    jointureDimensionCondition.dimension = dimension;
+    jointureDimensionCondition.members.add(time2k18);
+    jointureDimensionCondition.acceptsAnyMembers = true;
+    jointureDimensionCondition.generateQueryFragment();
+
+    comparatorText = concat(concat(concat("[",concat(dimension.mdxName, concat(".",hierarchy.mdxName))),  "]"), concat(".",time2k18.mdxName));
+    
+    assert(jointureDimensionCondition.queryFragment.mdxString == comparatorText);
+
+    //CASE 4 Jointure with no members and acceptsAnyMembers = FALSE
+    jointureDimensionCondition = new(LibCube:JointureDimensionCondition);
+    jointureDimensionCondition.dimension = dimension;
+    jointureDimensionCondition.acceptsAnyMembers = false;
+    jointureDimensionCondition.generateQueryFragment();
+    
+    assert(jointureDimensionCondition.queryFragment.mdxString == null);
 
     logInfo("LibCube:Test:generateQueryFragment() passed");
 }
