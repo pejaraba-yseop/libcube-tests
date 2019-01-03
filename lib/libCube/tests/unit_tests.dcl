@@ -1512,6 +1512,238 @@ function LibCube:Test:jointureLevelDimensionConditionTest()
 }
 ;
 
+function LibCube:Test:jointureMeasureConditionTest()
+--> local LibCube:Fact fact2k16,
+          LibCube:TimeMember time2k16,
+          LibCube:FactMeasure factMeasure2k16,
+          LibCube:Measure valueMeasure,
+          LibCube:JointureMeasureCondition jointureMeasureCondition
+--> action {
+
+    logInfo("Testing jointureMeasureConditionTest");
+
+    //fact value and label to give them shape-------------------------------------------------
+    time2k16 = new(LibCube:TimeMember);
+    time2k16.dimension = DIMENSION_TIME;
+    time2k16.label = "2016";
+    time2k16.date = Date..stringToDate("2016-01-01");
+    //-----------------------------------------------------------------------------------------
+    
+    //label for the measure for any fact
+    valueMeasure = new(LibCube:Measure);
+    valueMeasure.label = "value";
+    //-----------------------------------------------------------------------------------
+
+    //setting fact measure values
+    factMeasure2k16 = new(LibCube:FactMeasure);
+    factMeasure2k16.measure = valueMeasure;
+    factMeasure2k16.value = 800000;
+    //-----------------------------------------------------------------------------------
+
+    //init of every fact that will be inside the factSorter class
+    fact2k16 = new(LibCube:Fact);
+    fact2k16.timeMember = time2k16;//setting the fact shape 
+    fact2k16.members.add(time2k16);//setting the fact shape
+    fact2k16.factMeasures = factMeasure2k16;
+
+    //CASE thresholdOrInterval == MEASURE_CONDITION_INTERVAL------------------------------
+        //CASE 1.0 evaluating upperLimit, isOpen = false
+    jointureMeasureCondition = new(LibCube:JointureMeasureCondition);
+    jointureMeasureCondition.measure = valueMeasure;
+    jointureMeasureCondition.thresholdOrInterval = MEASURE_CONDITION_INTERVAL;
+    jointureMeasureCondition.isOpen = false;
+    jointureMeasureCondition.lowerLimit = 0;
+    jointureMeasureCondition.upperLimit = 800000;
+
+    assert(jointureMeasureCondition.conditionSatisfied(fact2k16) == true);
+    
+        //CASE 1.1 evaluating upperLimit, isOpen = false
+    jointureMeasureCondition = new(LibCube:JointureMeasureCondition);
+    jointureMeasureCondition.measure = valueMeasure;
+    jointureMeasureCondition.thresholdOrInterval = MEASURE_CONDITION_INTERVAL;
+    jointureMeasureCondition.isOpen = false;
+    factMeasure2k16.value = 800000;
+    fact2k16.factMeasures = factMeasure2k16;
+    jointureMeasureCondition.lowerLimit = 0;
+    jointureMeasureCondition.upperLimit = 799999;
+
+    assert(jointureMeasureCondition.conditionSatisfied(fact2k16) == false);
+
+        //CASE 1.2 evaluating lowerLimit, isOpen = false
+    jointureMeasureCondition = new(LibCube:JointureMeasureCondition);
+    jointureMeasureCondition.measure = valueMeasure;
+    jointureMeasureCondition.thresholdOrInterval = MEASURE_CONDITION_INTERVAL;
+    jointureMeasureCondition.isOpen = false;
+    factMeasure2k16.value = 1;
+    fact2k16.factMeasures = factMeasure2k16;
+    jointureMeasureCondition.lowerLimit = 0;
+    jointureMeasureCondition.upperLimit = 800000;
+
+    assert(jointureMeasureCondition.conditionSatisfied(fact2k16) == true);
+
+        //CASE 1.3 evaluating lowerLimit, isOpen = false
+    jointureMeasureCondition = new(LibCube:JointureMeasureCondition);
+    jointureMeasureCondition.measure = valueMeasure;
+    jointureMeasureCondition.thresholdOrInterval = MEASURE_CONDITION_INTERVAL;
+    jointureMeasureCondition.isOpen = false;
+    factMeasure2k16.value = -1;
+    fact2k16.factMeasures = factMeasure2k16;
+    jointureMeasureCondition.lowerLimit = 0;
+    jointureMeasureCondition.upperLimit = 800000;
+
+    assert(jointureMeasureCondition.conditionSatisfied(fact2k16) == false);
+
+        //CASE 1.4 evaluating upperLimit, isOpen = true
+    jointureMeasureCondition = new(LibCube:JointureMeasureCondition);
+    jointureMeasureCondition.measure = valueMeasure;
+    jointureMeasureCondition.thresholdOrInterval = MEASURE_CONDITION_INTERVAL;
+    jointureMeasureCondition.isOpen = true;
+    factMeasure2k16.value = 800000;
+    fact2k16.factMeasures = factMeasure2k16;
+    jointureMeasureCondition.lowerLimit = 0;
+    jointureMeasureCondition.upperLimit = 800000;
+
+    assert(jointureMeasureCondition.conditionSatisfied(fact2k16)== false);
+
+        //CASE 1.5 evaluating upperLimit, isOpen = true
+    jointureMeasureCondition = new(LibCube:JointureMeasureCondition);
+    jointureMeasureCondition.measure = valueMeasure;
+    jointureMeasureCondition.thresholdOrInterval = MEASURE_CONDITION_INTERVAL;
+    jointureMeasureCondition.isOpen = true;
+    factMeasure2k16.value = 799999;
+    fact2k16.factMeasures = factMeasure2k16;
+    jointureMeasureCondition.lowerLimit = 0;
+    jointureMeasureCondition.upperLimit = 800000;
+
+    assert(jointureMeasureCondition.conditionSatisfied(fact2k16)== true);
+
+        //CASE 1.6 evaluating lowerLimit, isOpen = true
+    jointureMeasureCondition = new(LibCube:JointureMeasureCondition);
+    jointureMeasureCondition.measure = valueMeasure;
+    jointureMeasureCondition.thresholdOrInterval = MEASURE_CONDITION_INTERVAL;
+    jointureMeasureCondition.isOpen = true;
+    factMeasure2k16.value = 1;
+    fact2k16.factMeasures = factMeasure2k16;
+    jointureMeasureCondition.lowerLimit = 0;
+    jointureMeasureCondition.upperLimit = 800000;
+
+    assert(jointureMeasureCondition.conditionSatisfied(fact2k16)== true);
+
+        //CASE 1.7 evaluating lowerLimit, isOpen = true
+    jointureMeasureCondition = new(LibCube:JointureMeasureCondition);
+    jointureMeasureCondition.measure = valueMeasure;
+    jointureMeasureCondition.thresholdOrInterval = MEASURE_CONDITION_INTERVAL;
+    jointureMeasureCondition.isOpen = true;
+    factMeasure2k16.value = 0;
+    fact2k16.factMeasures = factMeasure2k16;
+    jointureMeasureCondition.lowerLimit = 0;
+    jointureMeasureCondition.upperLimit = 800000;
+
+    assert(jointureMeasureCondition.conditionSatisfied(fact2k16)== false);
+    //-------------------------------------------------------------------------------
+
+    //CASE thresholdOrInterval == MEASURE_CONDITION_THRESHOLD------------------------------
+        //CASE 2.0 evaluating lowerLimit, isOpen = false
+    jointureMeasureCondition = new(LibCube:JointureMeasureCondition);
+    jointureMeasureCondition.measure = valueMeasure;
+    jointureMeasureCondition.thresholdOrInterval = MEASURE_CONDITION_THRESHOLD;
+    jointureMeasureCondition.isOpen = false;
+    factMeasure2k16.value = 0;
+    fact2k16.factMeasures = factMeasure2k16;
+    jointureMeasureCondition.lowerLimit = 0;
+    jointureMeasureCondition.upperLimit = 10;
+
+    assert(jointureMeasureCondition.conditionSatisfied(fact2k16) == true);
+
+        //CASE 2.1 evaluating lowerLimit, isOpen = false
+    jointureMeasureCondition = new(LibCube:JointureMeasureCondition);
+    jointureMeasureCondition.measure = valueMeasure;
+    jointureMeasureCondition.thresholdOrInterval = MEASURE_CONDITION_THRESHOLD;
+    jointureMeasureCondition.isOpen = false;
+    factMeasure2k16.value = 1;
+    fact2k16.factMeasures = factMeasure2k16;
+    jointureMeasureCondition.lowerLimit = 0;
+    jointureMeasureCondition.upperLimit = 10;
+
+    assert(jointureMeasureCondition.conditionSatisfied(fact2k16) == false);
+
+        //CASE 2.2 evaluating upperLimit, isOpen = false
+    jointureMeasureCondition = new(LibCube:JointureMeasureCondition);
+    jointureMeasureCondition.measure = valueMeasure;
+    jointureMeasureCondition.thresholdOrInterval = MEASURE_CONDITION_THRESHOLD;
+    jointureMeasureCondition.isOpen = false;
+    factMeasure2k16.value = 10;
+    fact2k16.factMeasures = factMeasure2k16;
+    jointureMeasureCondition.lowerLimit = 0;
+    jointureMeasureCondition.upperLimit = 10;
+
+    assert(jointureMeasureCondition.conditionSatisfied(fact2k16) == true);
+
+        //CASE 2.3 evaluating upperLimit, isOpen = false
+    jointureMeasureCondition = new(LibCube:JointureMeasureCondition);
+    jointureMeasureCondition.measure = valueMeasure;
+    jointureMeasureCondition.thresholdOrInterval = MEASURE_CONDITION_THRESHOLD;
+    jointureMeasureCondition.isOpen = false;
+    factMeasure2k16.value = 9;
+    fact2k16.factMeasures = factMeasure2k16;
+    jointureMeasureCondition.lowerLimit = 0;
+    jointureMeasureCondition.upperLimit = 10;
+
+    assert(jointureMeasureCondition.conditionSatisfied(fact2k16) == false);
+
+        //CASE 2.4 evaluating upperLimit,  isOpen = true
+    jointureMeasureCondition = new(LibCube:JointureMeasureCondition);
+    jointureMeasureCondition.measure = valueMeasure;
+    jointureMeasureCondition.thresholdOrInterval = MEASURE_CONDITION_THRESHOLD;
+    jointureMeasureCondition.isOpen = true;
+    factMeasure2k16.value = 10;
+    fact2k16.factMeasures = factMeasure2k16;
+    jointureMeasureCondition.lowerLimit = 0;
+    jointureMeasureCondition.upperLimit = 10;
+
+    assert(jointureMeasureCondition.conditionSatisfied(fact2k16) == false);
+
+        //CASE 2.5 evaluating upperLimit,  isOpen = true
+    jointureMeasureCondition = new(LibCube:JointureMeasureCondition);
+    jointureMeasureCondition.measure = valueMeasure;
+    jointureMeasureCondition.thresholdOrInterval = MEASURE_CONDITION_THRESHOLD;
+    jointureMeasureCondition.isOpen = true;
+    factMeasure2k16.value = 11;
+    fact2k16.factMeasures = factMeasure2k16;
+    jointureMeasureCondition.lowerLimit = 0;
+    jointureMeasureCondition.upperLimit = 10;
+
+    assert(jointureMeasureCondition.conditionSatisfied(fact2k16) == true);
+
+        //CASE 2.6 evaluating lowerLimit,  isOpen = true
+    jointureMeasureCondition = new(LibCube:JointureMeasureCondition);
+    jointureMeasureCondition.measure = valueMeasure;
+    jointureMeasureCondition.thresholdOrInterval = MEASURE_CONDITION_THRESHOLD;
+    jointureMeasureCondition.isOpen = true;
+    factMeasure2k16.value = -1;
+    fact2k16.factMeasures = factMeasure2k16;
+    jointureMeasureCondition.lowerLimit = 0;
+    jointureMeasureCondition.upperLimit = 10;
+
+    assert(jointureMeasureCondition.conditionSatisfied(fact2k16) == true);
+
+        //CASE 2.7 evaluating lowerLimit,  isOpen = true
+    jointureMeasureCondition = new(LibCube:JointureMeasureCondition);
+    jointureMeasureCondition.measure = valueMeasure;
+    jointureMeasureCondition.thresholdOrInterval = MEASURE_CONDITION_THRESHOLD;
+    jointureMeasureCondition.isOpen = true;
+    factMeasure2k16.value = 0;
+    fact2k16.factMeasures = factMeasure2k16;
+    jointureMeasureCondition.lowerLimit = 0;
+    jointureMeasureCondition.upperLimit = 10;
+
+    assert(jointureMeasureCondition.conditionSatisfied(fact2k16) == false);
+    //-------------------------------------------------------------------------------
+
+    logInfo("LibCube:Test:jointureMeasureConditionTest() passed");
+}
+;
+
 function LibCube:Test:main()
 --> action {
     //LibKPI:Test:ranges();
@@ -1541,6 +1773,8 @@ function LibCube:Test:main()
     LibCube:Test:jointureFactsSelectionTest();
     
     LibCube:Test:jointureLevelDimensionConditionTest();
+    
+    LibCube:Test:jointureMeasureConditionTest();
 }
 ;
 
