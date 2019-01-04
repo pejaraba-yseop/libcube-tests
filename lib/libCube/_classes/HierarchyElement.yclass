@@ -34,7 +34,21 @@ interface LibCube:HierarchyElement extends LibCube:Member
             --> number SINGULAR
         ;
 
-    
+    method getAllParents()
+        --> domains List
+        --> dsl -> Textualization
+            --> language LANG_en
+            --> root "get all parents"
+            --> number PLURAL
+        ;
+
+    method getParentByLevel(Number level)
+        --> domains LibCube:HierarchyElement
+        --> dsl -> Textualization
+            --> language LANG_en
+            --> root "get parent by level"
+            --> number PLURAL
+        ;
 
     classProperties
     --> dsl -> Textualization
@@ -47,4 +61,31 @@ interface LibCube:HierarchyElement extends LibCube:Member
 ;
 
 implementation LibCube:HierarchyElement
+;
+
+function LibCube:HierarchyElement::getAllParents()
+--> local List parents,
+          LibCube:HierarchyElement theParent
+--> action {
+    theParent = this.parent;
+    parents = new(List);
+    
+    while(theParent != null){
+        parents.add(theParent);
+        theParent = theParent.parent;
+    }
+    return parents;
+}
+;
+
+function LibCube:HierarchyElement::getParentByLevel(Number level)
+--> action {
+    if(getAllParents().size() < level){
+        logWarning("There is no current parent with level: " , level)
+        return null;
+    }
+    else{
+        return getAllParents().get(level);
+    }
+}
 ;

@@ -114,9 +114,9 @@ function LibCube:Dimension::processDimension()
     theAccessor.hierarchyIdentifier = _hierarchy.identifier
     theAccessor.hierarchy = _hierarchy;
     
-    foreach(_node , _hierarchy) {   
+    foreach(_node , _hierarchy) {
       this.members := LibCube:Hierarchy(_node).value;
-
+      theAccessor.maxHierarchyLevel = LibCube:Hierarchy(_node).depth();
       if (LibCube:Hierarchy(_node).depth() > 1) {
         LibCube:HierarchyElement(_node.value).parent = _node.getParentNode().value;
 		if (LibCube:Hierarchy(_node).depth() > 2) {
@@ -146,6 +146,7 @@ function LibCube:Dimension::processDimension()
   }  
 }
 ;
+
 
 function LibCube:Dimension::getElemFullMdxName(LibCube:HierarchyElement elem, LibCube:Hierarchy hierarchy)
 --> local String fullMdxName, LibCube:HierarchyElement currentElem

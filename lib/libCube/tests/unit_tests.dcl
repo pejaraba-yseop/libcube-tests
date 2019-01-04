@@ -516,8 +516,6 @@ local {
     quarterComparator = Q2;
     assert(quarterFound == quarterComparator);
 
-    logInfo("CASE TESTING getQuarter() passed");
-
     //CASE timeMember.period = PERIOD_DAY;
     timeMember.period = PERIOD_DAY;
     timeMember.date = Date..stringToDate("1986-01-01");
@@ -530,7 +528,6 @@ local {
     assert(dateFoundForLastDayOfPeriod == dateComparatorForLastDayOfPeriod);
     assert(dateFoundForFirstDayOfPeriod == dateComparatorForFirstDayOfPeriod);
     assert(dayCountFound == dayCountComparator);
-    logInfo("CASE timeMember.period = PERIOD_DAY passed");
 
     //CASE timeMember.period = PERIOD_MONTH;
     timeMember.period = PERIOD_MONTH;
@@ -553,7 +550,7 @@ local {
     dateComparatorForFirstDayOfPeriod = Date..stringToDate("2020-02-01");
     assert(dateFoundForLastDayOfPeriod == dateComparatorForLastDayOfPeriod);
     assert(dateFoundForFirstDayOfPeriod == dateComparatorForFirstDayOfPeriod);
-    logInfo("CASE timeMember.period = PERIOD_MONTH passed");
+
         //CASE 3
     timeMember.date = Date..stringToDate("2020-02-25");
     dayCountFound = timeMember.getDayCountOfPeriod();
@@ -572,7 +569,6 @@ local {
     assert(dateFoundForLastDayOfPeriod == dateComparatorForLastDayOfPeriod);
     assert(dateFoundForFirstDayOfPeriod == dateComparatorForFirstDayOfPeriod);
     assert(dayCountFound == dayCountComparator);
-    logInfo("CASE timeMember.period = PERIOD_YEAR passed");
 
     //CASE timeMember.period = PERIOD_QUARTER;
     timeMember.period = PERIOD_QUARTER;
@@ -649,7 +645,6 @@ local {
     dayCountFound = timeMember.getDayCountOfPeriod();
     dayCountComparator = 25;
     assert(dayCountFound == dayCountComparator);
-    logInfo("CASE timeMember.period = PERIOD_QUARTER passed");
     
     //CASE timeMember.period = PERIOD_WEEK;
     timeMember.period = PERIOD_WEEK;
@@ -698,7 +693,6 @@ local {
     dateComparatorForFirstDayOfPeriod = Date..stringToDate("2018-12-31");
     assert(dateFoundForFirstDayOfPeriod == dateComparatorForFirstDayOfPeriod);
     assert(dayCountFound == dayCountComparator);
-    logInfo("CASE timeMember.period = PERIOD_WEEK passed");
 
     //CASE PERIOD TO DATE
         //CASE YEAR
@@ -749,7 +743,6 @@ local {
     assert(dateFoundForLastDayOfPeriod == dateComparatorForLastDayOfPeriod);
     assert(dateFoundForFirstDayOfPeriod == dateComparatorForFirstDayOfPeriod);
     assert(dayCountFound == dayCountComparator);
-    logInfo("CASE TO DATE passed");
 
     logInfo("LibCube:Test:timeMember() passed");
 }
@@ -1227,14 +1220,12 @@ function LibCube:Test:getMeasureValue()
 ;
 
 function LibCube:Test:getMember()
- local {
-    LibCube:Fact fact
-    LibCube:Member storeMember
-    LibCube:Member cityMember
-    LibCube:Member productMember
+--> local
+    LibCube:Fact fact,
+    LibCube:Member storeMember,
+    LibCube:Member cityMember,
+    LibCube:Member productMember,
     LibCube:Member comparatorMember
-    LibCube:Fact fact
-}
 --> action {
     logInfo("Testing getMember");
     //Setting members
@@ -1744,37 +1735,156 @@ function LibCube:Test:jointureMeasureConditionTest()
 }
 ;
 
+function LibCube:Test:getParentByLevelTest()
+--> local 
+          LibCube:Cube cube,
+          LibCube:TimeMember memberYear,
+          LibCube:TimeMember memberMonthJan,
+          LibCube:TimeMember memberMonthFeb,
+          LibCube:TimeMember memberWeek3,
+          LibCube:TimeMember memberWeek2,
+          LibCube:TimeMember memberWeek1,
+          LibCube:TimeMember memberDay1,
+
+          LibCube:Dimension dimension,
+          LibCube:Hierarchy dimensionHierarchies,
+          
+          LibCube:Hierarchy yearHierarchy,
+          LibCube:Hierarchy monthJanHierarchy,
+          LibCube:Hierarchy monthFebHierarchy,
+          LibCube:Hierarchy week3Hierarchy,
+          LibCube:Hierarchy week2Hierarchy,
+          LibCube:Hierarchy week1Hierarchy,
+          LibCube:Hierarchy day1Hierarchy,
+
+          LibCube:HierarchyMembersAccesor theAccessor,
+
+          LibCube:Member resMember
+--> action {
+    //dimensions members---------------------------------
+    memberYear = new(LibCube:TimeMember);
+    memberYear.label = "2018";
+    memberYear.date = Date..stringToDate("2018-01-01");
+    
+    memberMonthJan = new(LibCube:TimeMember);
+    memberMonthJan.label = "January";
+    memberMonthJan.date = Date..stringToDate("2018-01-01");
+
+    memberMonthFeb = new(LibCube:TimeMember);
+    memberMonthFeb.label = "January";
+    memberMonthFeb.date = Date..stringToDate("2018-01-01");
+
+    memberWeek3 = new(LibCube:TimeMember);
+    memberWeek3.label = "Third Week";
+    memberWeek3.date = Date..stringToDate("2018-02-10");
+
+    memberWeek2 = new(LibCube:TimeMember);
+    memberWeek2.label = "Second Week";
+    memberWeek2.date = Date..stringToDate("2018-01-08");
+
+    memberWeek1 = new(LibCube:TimeMember);
+    memberWeek1.label = "First Week";
+    memberWeek1.date = Date..stringToDate("2018-01-05");
+
+    memberDay1 = new(LibCube:TimeMember);
+    memberDay1.label = "01";
+    memberDay1.date = Date..stringToDate("2018-01-01");
+    
+    //hierarchies -----------------------------------------
+    day1Hierarchy = new(LibCube:Hierarchy);
+    day1Hierarchy.label = "01";
+    day1Hierarchy.value = memberDay1;
+
+    week3Hierarchy = new(LibCube:Hierarchy);
+    week3Hierarchy.label = "Third week";
+    week3Hierarchy.value = memberWeek3;
+    week3Hierarchy.addChild(day1Hierarchy);
+
+    week2Hierarchy = new(LibCube:Hierarchy);
+    week2Hierarchy.label = "Second week";
+    week2Hierarchy.value = memberWeek2;
+
+    week1Hierarchy = new(LibCube:Hierarchy);
+    week1Hierarchy.label = "First Week";
+    week1Hierarchy.value = memberWeek1;
+
+    monthJanHierarchy = new(LibCube:Hierarchy);
+    monthJanHierarchy.label = "January";
+    monthJanHierarchy.value = memberMonthJan;
+    monthJanHierarchy.addChild(week2Hierarchy);
+    monthJanHierarchy.addChild(week1Hierarchy);
+    
+    monthFebHierarchy = new(LibCube:Hierarchy);
+    monthFebHierarchy.label = "February";
+    monthFebHierarchy.value = memberMonthFeb;
+    monthFebHierarchy.addChild(week3Hierarchy);
+
+    yearHierarchy = new(LibCube:Hierarchy);
+    yearHierarchy.label = "2018";
+    yearHierarchy.value = memberYear;
+    yearHierarchy.addChild(monthJanHierarchy);
+    yearHierarchy.addChild(monthFebHierarchy);
+    //---------------------------------------------------
+
+    //dimension setting
+    dimension = new(LibCube:Dimension);
+    dimension.hierarchies.add(yearHierarchy);
+    
+    //---------------------------------------------------
+    cube = new(LibCube:Cube);
+    cube.dimensions.add(dimension);
+    
+    cube.initDimensions();
+
+    foreach(_dimension , cube>>dimensions){
+        foreach(_member,_dimension>>members){
+                
+            if(_member.label == "01"){
+                assert(_member.getParentByLevel(3) == memberYear);
+                assert(_member.getParentByLevel(2) == memberMonthFeb);
+                assert(_member.getParentByLevel(1) == memberWeek3);
+            }
+            if(_member.label == "January" || _member.label == "February"){
+                assert(_member.getParentByLevel(1) == memberYear);
+                assert(_member.getParentByLevel(2) == null);
+            }
+            if(_member.label == "2018"){
+                assert(_member.getParentByLevel(1) == null);
+            }
+            if(_member.label == "First Week"){
+                assert(_member.getParentByLevel(1) == memberMonthJan);
+                assert(_member.getParentByLevel(2) == memberYear);
+                assert(_member.getParentByLevel(3) == null);
+            }
+        }
+    }
+    
+}
+;
+
 function LibCube:Test:main()
 --> action {
     //LibKPI:Test:ranges();
     logInfo("Running LibCube unit tests");
-    
+    /*
     LibCube:Test:factsSorter();//issue4
-    
     LibCube:Test:factsDimensionSorterCaseTimeDimension();//issue15
     LibCube:Test:factsDimensionSorterCaseAnyDimension();//issue15
     LibCube:Test:factsDimensionSorterHelper();//issue15
-    
     LibCube:Test:timeMember();//issue1
-    
     LibCube:Test:twoMeasuresOneFactComparison();//issue3
     LibCube:Test:twoFactsOneMesureComparison();//issue3
     LibCube:Test:getMeasuresComparison();//issue3
     LibCube:Test:getFactsComparison();//issue3
-    
     LibCube:Test:getMeasureValue();//issue21
-    
     LibCube:Test:getMember();//issue20
-
     LibCube:Test:groupedFactsSelection();
-
     LibCube:Test:jointureDimensionConditionTest();
-
     LibCube:Test:jointureFactsSelectionTest();
-    
     LibCube:Test:jointureLevelDimensionConditionTest();
-    
     LibCube:Test:jointureMeasureConditionTest();
+    */
+    LibCube:Test:getParentByLevelTest();//issue22
 }
 ;
 
