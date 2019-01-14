@@ -106,7 +106,7 @@ interface LibCube:Dimension
 implementation LibCube:Dimension
 ;
 
-function LibCube:Dimension::processDimension() 
+function LibCube:Dimension::processDimension()
 --> local LibCube:HierarchyMembersAccesor theAccessor
 --> action {
   foreach(_hierarchy , this>>hierarchies) {   

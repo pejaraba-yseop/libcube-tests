@@ -236,12 +236,11 @@ function LibCube:Cube::calculateJointures()
 
 function LibCube:Cube::initDimensions()
 --> action {
-    foreach(_dimension, LibCube:Dimension) {
+    foreach(_dimension, this>>dimensions) {
+        //Loop through the hierarchies and add members to dimensions
+        _dimension.processDimension();
         // add dimensions to cube (should be added to the lib configuration as a parameter default = true)
         this.dimensions := _dimension;
-
-        //Loop through the hierarchies and add members to dimensions
-        _dimension.processDimension()        
     }
 
 }

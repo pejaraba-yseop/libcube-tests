@@ -1181,22 +1181,18 @@ local {
  ;
 
 function LibCube:Test:getMeasureValue()
- local {
-    LibCube:Measure valueMeasure
-    LibCube:Measure valueMeasure2
-    LibCube:Fact fact
-    LibCube:FactMeasure factMeasure
-    LibCube:FactMeasure factMeasure2
+ --> local
+    LibCube:Measure valueMeasure,
+    LibCube:Fact fact,
+    LibCube:FactMeasure factMeasure,
+    LibCube:FactMeasure factMeasure2,
     LibCube:FactMeasure comparingFactMeasure
-}
 --> action {
     logInfo("Testing getMeasureValue");
 
     //Setting measures
     valueMeasure = new (LibCube:Measure);
     valueMeasure.label = "MEASURE_SOLD_UNITS";
-    valueMeasure2 = new (LibCube:Measure);
-    valueMeasure2.label = "MEASURE_VALUE";
 
     //Setting factMeasure
     factMeasure = new(LibCube:FactMeasure);
@@ -1204,7 +1200,7 @@ function LibCube:Test:getMeasureValue()
     factMeasure.measure = valueMeasure;
     factMeasure2 = new(LibCube:FactMeasure);
     factMeasure2.value = 321;
-    factMeasure2.measure = valueMeasure2;
+    factMeasure2.measure = MEASURE_VALUE;
 
     //Setting the facts
     fact = new(LibCube:Fact);
@@ -1212,7 +1208,8 @@ function LibCube:Test:getMeasureValue()
     fact.factMeasures.add(factMeasure2);
 
     comparingFactMeasure = fact.getMeasureValue();
-    
+    logInfo(comparingFactMeasure);
+    logInfo(factMeasure2);
     assert(factMeasure2 == comparingFactMeasure );
 
     logInfo("LibCube:Test:getMeasureValue() passed");
@@ -1310,6 +1307,7 @@ function LibCube:Test:jointureDimensionConditionTest()
     //time2k18.dimension = DIMENSION_TIME;
     time2k18.label = "2018";
     time2k18.mdxName = "TimeMember2018MDX";
+    //time2k18.mdxFullName = "TimeMember2018MDX";
     time2k18.date = Date..stringToDate("2018-01-01");
 
     hierarchy = new(LibCube:Hierarchy);
@@ -1761,6 +1759,7 @@ function LibCube:Test:getParentByLevelTest()
 
           LibCube:Member resMember
 --> action {
+    logInfo("Testing getParentByLevelTest");
     //dimensions members---------------------------------
     memberYear = new(LibCube:TimeMember);
     memberYear.label = "2018";
@@ -1771,8 +1770,8 @@ function LibCube:Test:getParentByLevelTest()
     memberMonthJan.date = Date..stringToDate("2018-01-01");
 
     memberMonthFeb = new(LibCube:TimeMember);
-    memberMonthFeb.label = "January";
-    memberMonthFeb.date = Date..stringToDate("2018-01-01");
+    memberMonthFeb.label = "February";
+    memberMonthFeb.date = Date..stringToDate("2018-02-01");
 
     memberWeek3 = new(LibCube:TimeMember);
     memberWeek3.label = "Third Week";
@@ -1820,7 +1819,7 @@ function LibCube:Test:getParentByLevelTest()
     monthFebHierarchy.addChild(week3Hierarchy);
 
     yearHierarchy = new(LibCube:Hierarchy);
-    yearHierarchy.label = "2018";
+    yearHierarchy.label = "2018"; 
     yearHierarchy.value = memberYear;
     yearHierarchy.addChild(monthJanHierarchy);
     yearHierarchy.addChild(monthFebHierarchy);
@@ -1835,7 +1834,7 @@ function LibCube:Test:getParentByLevelTest()
     cube.dimensions.add(dimension);
     
     cube.initDimensions();
-
+    
     foreach(_dimension , cube>>dimensions){
         foreach(_member,_dimension>>members){
                 
@@ -1858,7 +1857,155 @@ function LibCube:Test:getParentByLevelTest()
             }
         }
     }
+    logInfo("LibCube:Test:getParentByLevelTest() passed");
     
+}
+;
+
+function LibCube:Test:populateSelectionTest()
+--> local LibCube:Jointure jointure,
+          LibCube:JointureOneFactSelection jointureOneFactSelection,
+          PredicateAttribute theAttr,
+          LibCube:Member cityMember,
+          LibCube:Fact fact1,
+          LibCube:Fact fact2,
+          LibCube:Dimension dimension,
+          LibCube:Dimension dimension2,
+          LibCube:JointureDimensionCondition jointureDimensionCondition,
+          List dimensionConditions,
+          List measureConditions,
+          LibCube:JointureMeasureCondition measureCondition,
+          LibCube:Measure valueMeasure,
+          LibCube:TimeMember time2k18,
+          LibCube:Member time2k17,
+          LibCube:FactMeasure factMeasure,
+          LibCube:FactMeasure factMeasure2
+--> action {
+
+    logInfo("Testing populateSelectionTest");
+
+    cityMember = new(LibCube:Member);
+    cityMember.dimension = DIMENSION_CITY;
+    cityMember.label = "Bogota";
+
+    //label for the measure for any fact
+    valueMeasure = new(LibCube:Measure);
+    valueMeasure.label = "value";
+
+    //setting Member, dimension
+    time2k18 = new(LibCube:TimeMember);
+    time2k18.label = "2018";
+    time2k18.mdxName = "TimeMember2018MDX";
+    time2k18.date = Date..stringToDate("2018-01-01");
+
+    time2k17 = new(LibCube:Member);
+    time2k17.label = "2017";
+
+    //setting fact measure values
+    factMeasure = new(LibCube:FactMeasure);
+    factMeasure.measure = valueMeasure;
+    factMeasure.value = 800000;
+
+    factMeasure2 = new(LibCube:FactMeasure);
+    factMeasure2.measure = valueMeasure;
+    factMeasure2.value = 123456;
+
+    dimension = new(LibCube:Dimension);
+    dimension.members.add(time2k18);
+    dimension2 = new(LibCube:Dimension);
+    dimension2.members.add(time2k17);
+
+    //Creating facts
+    fact1 = new(LibCube:Fact);
+    fact1.members.add(cityMember);
+    fact1.members.add(time2k18);
+    fact1.factMeasures.add(factMeasure);
+
+    fact2 = new(LibCube:Fact);
+    fact2.members.add(time2k17);
+    fact2.factMeasures.add(factMeasure2);
+
+    //--------------
+    measureCondition = new(LibCube:JointureMeasureCondition);
+    measureCondition.measure = valueMeasure;
+    measureCondition.thresholdOrInterval = MEASURE_CONDITION_INTERVAL;
+    measureCondition.isOpen = false;
+    measureCondition.lowerLimit = 0;
+    measureCondition.upperLimit = 800000;
+
+    measureConditions = new(List);
+    measureConditions.add(measureCondition);
+
+    jointureDimensionCondition = new(LibCube:JointureDimensionCondition);
+    jointureDimensionCondition.dimension = dimension;
+    jointureDimensionCondition.acceptsAnyMembers = true;
+    jointureDimensionCondition.setItselfAsValue = true;
+
+    dimensionConditions  = new(List);
+    dimensionConditions.add(jointureDimensionCondition);
+    
+    jointure = new(LibCube:Jointure);
+    jointure = JOINTURE_TIME;
+    jointure.measureConditions = measureConditions;
+    jointure.dimensionConditions = dimensionConditions;
+    jointure.init();
+    jointure.getJointureResult(fact1);
+
+    jointureOneFactSelection = new(LibCube:JointureOneFactSelection);
+
+    jointureOneFactSelection.jointure = jointure;
+    jointureOneFactSelection.populateSelection();
+    
+    assert(fact1 == jointureOneFactSelection.selectedFact);
+    
+    //CASE 2    
+    jointureOneFactSelection = new(LibCube:JointureOneFactSelection);
+    jointureOneFactSelection.jointure = jointure;
+    jointure = new(LibCube:Jointure);
+    jointureDimensionCondition.setItselfAsValue = false;
+    dimensionConditions  = new(List);
+    dimensionConditions.add(jointureDimensionCondition);
+    jointure = JOINTURE_TIME;
+    jointure.measureConditions = measureConditions;
+    jointure.dimensionConditions = dimensionConditions;
+    jointure.init();
+    jointure.attribute = LibCube:Fact::nonIndicatorMembersId;
+    jointure.getJointureResult(fact2);
+    jointureOneFactSelection.populateSelection();
+
+    assert(jointureOneFactSelection.selectedFact == null);
+
+    logInfo("LibCube:Test:populateSelection() passed");
+}
+;
+
+function LibCube:Test:getIndicatorMemberTest()
+--> local LibCube:Fact fact,
+          LibCube:Dimension dimension,
+          LibCube:Member memberComparator,
+          LibCube:Member memberCity,
+          LibCube:Member memberProduct,
+          LibCube:Measure measure
+--> action {
+    logInfo("Testing getIndicatorMemberTest");
+    
+    memberComparator = new(LibCube:Member);
+    memberComparator.label = "DIMENSION_INDICATOR";
+    memberComparator.dimension = DIMENSION_INDICATOR;
+    memberCity = new(LibCube:Member);
+    memberCity.label = "DIMENSION_CITY";
+    memberCity.dimension = DIMENSION_CITY;
+    memberProduct = new(LibCube:Member);
+    memberProduct.label = "DIMENSION_PRODUCT";
+    memberProduct.dimension = DIMENSION_PRODUCT;
+
+    fact = new(LibCube:Fact);
+    fact.members.add(memberCity);
+    fact.members.add(memberComparator);
+    fact.members.add(memberProduct);
+    assert(fact.getIndicatorMember() == memberComparator);
+
+    logInfo("LibCube:Test:getIndicatorMemberTest() passed");
 }
 ;
 
@@ -1866,7 +2013,9 @@ function LibCube:Test:main()
 --> action {
     //LibKPI:Test:ranges();
     logInfo("Running LibCube unit tests");
-    /*
+    
+    LibCube:Test:populateSelectionTest();
+
     LibCube:Test:factsSorter();//issue4
     LibCube:Test:factsDimensionSorterCaseTimeDimension();//issue15
     LibCube:Test:factsDimensionSorterCaseAnyDimension();//issue15
@@ -1883,8 +2032,9 @@ function LibCube:Test:main()
     LibCube:Test:jointureFactsSelectionTest();
     LibCube:Test:jointureLevelDimensionConditionTest();
     LibCube:Test:jointureMeasureConditionTest();
-    */
     LibCube:Test:getParentByLevelTest();//issue22
+    
+    LibCube:Test:getIndicatorMemberTest();
 }
 ;
 

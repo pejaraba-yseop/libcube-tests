@@ -17,6 +17,7 @@ function runProcessingTasks()
         printCitySaleFactsByProduct();
     }else{
         LibCube:Test:main();
+        LibCube:Test:main2();
     }
     //_businessRules:Behaviors();
 }

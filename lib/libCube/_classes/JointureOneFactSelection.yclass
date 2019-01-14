@@ -25,13 +25,12 @@ implementation LibCube:JointureOneFactSelection override {
 function LibCube:JointureOneFactSelection::populateSelection()
 --> local Collection theSelectedFacts
 --> action {  
-	theSelectedFacts = as(?fact, ?att = jointure.attribute, ?fact.?att != null)
-
+	theSelectedFacts = as(?fact, ?att = jointure.attribute, ?fact.?att != null);
 	foreach(_fact, theSelectedFacts) {
 		selectedFacts := _fact;
 
 	}
-
+    
 	if(theSelectedFacts.size() == 1) {
 		selectedFact = theSelectedFacts.get(_FIRST);
 	} else {

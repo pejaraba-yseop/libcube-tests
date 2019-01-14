@@ -78,7 +78,8 @@ function LibCube:Jointure::checkJointureDimensions()
               newDimensionCondition.dimension = _dimension;
               newDimensionCondition.members = _dimension.defaultMember;
               dimensionConditions.add(newDimensionCondition);
-            } else {                    
+            } else {
+              logInfo("fue aca");
               logWarning("missing dimension :", _dimension, " for jointure :", this)
             }
           }

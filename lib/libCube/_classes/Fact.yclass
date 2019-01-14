@@ -120,7 +120,6 @@ interface LibCube:Fact extends LibCube:PrintableValuesObject
             --> root "{1} of {0}"
             --> number PLURAL
             --> hasDeterminer false
-            --> deprecated "Beta14"
         ;
 
     method getDimensionNameFromMdxName(String mdxName)
@@ -172,10 +171,21 @@ interface LibCube:Fact extends LibCube:PrintableValuesObject
             --> number SINGULAR
             --> hasDeterminer false
         ;    
-        
+    
+    method getIndicatorMember()
+    --> documentation "A method to get the member of DIMENSION_INDICATOR"
+        --> domains LibCube:Member
+        --> dsl -> Textualization
+            --> language LANG_en
+            --> root "{1} of {0}"
+            --> number SINGULAR
+            --> hasDeterminer false
+        ;
+
     method checkDimensions()
     --> domains Void
-           
+        
+
     classProperties
     --> dsl -> Textualization
         --> language LANG_en
@@ -233,21 +243,7 @@ function LibCube:Fact::getMeasure(LibCube:Measure theMeasure)
   @return and Object of type FactMeasure for measure with label MEASURE_VALUE
  */
 function LibCube:Fact::getMeasureValue()
---> local Collection foundMeasures
---> action {
-    foundMeasures = applyCollection(this>>factMeasures, __where currentElement.measure.label=="MEASURE_VALUE").toList();
-    
-    if(foundMeasures.isEmpty() == true){
-        return null;
-    }
-    if(foundMeasures.size() == 1){
-        return foundMeasures.get(_FIRST);
-    }
-    if(foundMeasures.size() > 1){
-        return foundMeasures.get(_FIRST);
-        logWarning("Repeated measure : ", "MEASURE_VALUE", " on the fact: ", this);
-    }
-}
+--> action return getMeasure(MEASURE_VALUE);
 ;
 
 function LibCube:Fact::getDate()
@@ -315,6 +311,10 @@ function LibCube:Fact::getDimensionNameFromMdxName(String mdxName)
 	label=mdxName.split(".");
 	return label.get(label.size());
 }
+;
+
+function LibCube:Fact::getIndicatorMember()
+--> action return getMember(DIMENSION_INDICATOR);
 ;
 
 textMethod LibCube:Fact::printValues()
