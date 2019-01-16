@@ -231,20 +231,21 @@ Function LibCube:FactsSorter::oneMeasureComparatorFunc(LibCube:Fact fact1,
 Function LibCube:FactsSorter::oneDimensionComparatorFunc(LibCube:Fact fact1, 
                                                        LibCube:Fact fact2,
                                                        LibCube:SortingOptions sortingOptions)
-local {
-    LibCube:Dimension dimension
-    LibCube:Member member1
+--> local
+    LibCube:Member member1,
     LibCube:Member member2
-}
 --> action {
-    dimension = sortingOptions.dimension;
-    member1 = fact1.members;
-    member2 = fact2.members;
-    if(member1.label < member2.label)
-        return 1;
-    else
-        return -1;
-        
+    foreach(_memberF1, fact1.members){
+        foreach(_memberF2, fact2.members){
+            if(_memberF1.label < _memberF2.label){
+                return 1;
+                break;
+            }else{
+                return -1;
+                break;
+            }
+        }   
+    }
 }
 ;
 

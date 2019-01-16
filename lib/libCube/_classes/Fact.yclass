@@ -263,7 +263,7 @@ function LibCube:Fact::checkDimensions()
     switch {
       case(hashMapByDimension[_dimension] == null && _dimension.isOptional == false): {
         if(_dimension.defaultMember != null) {
-          // add a defualtMember to this 
+          // add a defualtMember to this
           this.members := _dimension.defaultMember;
         } else {
           logWarning("missing dimension :", _dimension, " for fact :", this)

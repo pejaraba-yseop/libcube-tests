@@ -59,13 +59,7 @@ interface LibCube:FactsRequestsManager
             --> root "callPendingRequest"
             --> number PLURAL
         ;
-   method addFactsSelection()
-        --> domains Void
-        --> dsl -> Textualization
-            --> language LANG_en
-            --> root "addFactsSelection"
-            --> number PLURAL
-        ;
+
     method getPendingFactSelection()
         --> domains LibCube:JointureFactsSelection
         --> dsl -> Textualization
@@ -167,12 +161,6 @@ function LibCube:FactsRequestsManager::getPendingFactSelection()
 function LibCube:FactsRequestsManager::removePendingFactSelection()
 --> action {
 	this.requestingFactsSelections.remove(getPendingFactSelection());
-}
-;
-
-function LibCube:FactsRequestsManager::addFactsSelection()
---> action {
-		//this.requestingFactsSelections.add(LibCube:JointureFactsSelection);
 }
 ;
 

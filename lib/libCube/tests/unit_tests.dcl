@@ -2017,7 +2017,9 @@ function LibCube:Test:main()
     LibCube:Test:populateSelectionTest();
 
     LibCube:Test:factsSorter();//issue4
+    
     LibCube:Test:factsDimensionSorterCaseTimeDimension();//issue15
+    
     LibCube:Test:factsDimensionSorterCaseAnyDimension();//issue15
     LibCube:Test:factsDimensionSorterHelper();//issue15
     LibCube:Test:timeMember();//issue1
@@ -2034,7 +2036,8 @@ function LibCube:Test:main()
     LibCube:Test:jointureMeasureConditionTest();
     LibCube:Test:getParentByLevelTest();//issue22
     
-    LibCube:Test:getIndicatorMemberTest();
+    LibCube:Test:getIndicatorMemberTest();//issue26
+    
 }
 ;
 
