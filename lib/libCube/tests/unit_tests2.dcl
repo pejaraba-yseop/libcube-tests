@@ -297,10 +297,15 @@ function LibCube:Test:factsSorterTest()
           LibCube:FactMeasure factMeasure2,
           LibCube:FactMeasure factMeasure3,
           LibCube:Measure valueMeasure,
+          LibCube:Measure anotherValueMeasure,
           LibCube:FactsSorter factsSorter,
           Number multipleMeasuresComparatorFuncResult,
           Number oneMeasureComparatorFuncResult,
-          List facts
+          List facts,
+          LibCube:Member storeMember,
+          LibCube:Member cityMember,
+          LibCube:Member productMember
+
 --> action {
 
     logInfo("Testing factsSorterTest");
@@ -309,6 +314,17 @@ function LibCube:Test:factsSorterTest()
     valueMeasure = new(LibCube:Measure);
     valueMeasure.label = "value";
     //-----------------------------------------------------------------------------------
+    storeMember = new(LibCube:Member);
+    storeMember.dimension = DIMENSION_STORE;
+    storeMember.label = "SuperStic Store";
+    
+    cityMember = new(LibCube:Member);
+    cityMember.dimension = DIMENSION_CITY;
+    cityMember.label = "Bogota";
+
+    productMember = new(LibCube:Member);
+    productMember.dimension = DIMENSION_PRODUCT;
+    productMember.label = "Product American";
 
     //setting fact measure values
     factMeasure1 = new(LibCube:FactMeasure);
@@ -325,10 +341,13 @@ function LibCube:Test:factsSorterTest()
     //------------------------
     fact1 = new(LibCube:Fact);
     fact1.factMeasures.add(factMeasure1);
+    fact1.members.add(storeMember);
     fact2 = new(LibCube:Fact);
     fact2.factMeasures.add(factMeasure2);
+    fact2.members.add(cityMember);
     fact3 = new(LibCube:Fact);
     fact3.factMeasures.add(factMeasure3);
+    fact3.members.add(productMember);
 
     sortingOptions = new(LibCube:SortingOptions);
     sortingOptions.measures.add(valueMeasure);
@@ -412,14 +431,194 @@ function LibCube:Test:factsSorterTest()
     assert(factsSorter.getFact(2) == fact1);
     //-------------------------------------------------------------------------------------------------------------
     //---------------------getFactsGreaterThan---------------------------------------------------------------------
+        //CASE 1
     facts.add(fact2);
     factsSorter.facts = facts;
     factsSorter.sortFacts();
     
     assert(factsSorter.getFactsGreaterThan(11).size() == 0);
+    assert(factsSorter.getFactsGreaterThan(-9).size() == 3);
+        //CASE 2
+    factsSorter.sortType = SORT_TYPE_MULTIPLE_MEASURES;
+    assert(factsSorter.getFactsGreaterThan(0).size() == 2);
+    assert(factsSorter.getFactsGreaterThan(-11).size() == 3);
+
     //-------------------------------------------------------------------------------------------------------------
-    factsSorter.sortType = SORT_TYPE_ONE_MEASURE;
+    //---------------------getFactsLowerThan-----------------------------------------------------------------------
+    assert(factsSorter.getFactsLowerThan(11).size() == 3);
+    assert(factsSorter.getFactsLowerThan(-9).size() == 0);
+        //CASE 2
+    factsSorter.sortType = SORT_TYPE_MULTIPLE_MEASURES;
+    assert(factsSorter.getFactsLowerThan(0).size() == 1);
+    assert(factsSorter.getFactsLowerThan(-11).size() == 0);
+    //-------------------------------------------------------------------------------------------------------------
+    //---------------------getFactsSumUnderTotalPercentage---------------------------------------------------------
+        //CASE 1
+    factsSorter.measure = valueMeasure;
+    assert(factsSorter.getFactsSumUnderTotalPercentage(150,11).size() == 2);
+    assert(factsSorter.getFactsSumUnderTotalPercentage(150,11).get(_FIRST) == fact3);
+    assert(factsSorter.getFactsSumUnderTotalPercentage(10,11).size() == 0);
+        //CASE 2
+    assert(factsSorter.getFactsSumUnderTotalPercentage(150).size() == 1);
+    assert(factsSorter.getFactsSumUnderTotalPercentage(150).get(_FIRST) == fact3);
+    assert(factsSorter.getFactsSumUnderTotalPercentage(10).size() == 0);
+    //-------------------------------------------------------------------------------------------------------------
+    //---------------------getRank---------------------------------------------------------------------------------
+    assert(factsSorter.getRank(storeMember) == 2);
+    assert(factsSorter.getRank(productMember) == 1);
+    //-------------------------------------------------------------------------------------------------------------
     logInfo("LibCube:Test:factsSorterTest() passed");
+}
+;
+
+function LibCube:Test:jointureChildParentDimensionCondition()
+--> local LibCube:JointureChildParentDimensionCondition jointureChildParentDimensionCondition,
+          LibCube:TimeMember time2k18,
+          LibCube:Hierarchy hierarchy,
+          LibCube:Dimension dimension,
+          LibCube:HierarchyElement parentElem,
+          String mdxStringComparator
+--> action {
+    logInfo("Testing jointureChildParentDimensionCondition");
+    
+    //------------------------------------------
+    time2k18 = new(LibCube:TimeMember);
+    time2k18.label = "2018";
+    time2k18.mdxName = "TimeMember2018MDX";
+    time2k18.date = Date..stringToDate("2018-01-01");
+
+    hierarchy = new(LibCube:Hierarchy);
+    hierarchy.mdxName = "hierarchyMDX";
+
+    dimension = new(LibCube:Dimension);
+    dimension.members.add(time2k18);
+    dimension.mdxName = "dimensionMDX";
+    time2k18.dimension = dimension;
+    dimension.hierarchies.add(hierarchy);
+    //--------------------------------------------
+
+    parentElem = new(LibCube:HierarchyElement);
+    parentElem.mdxName = "parentElem.mdxName";
+    parentElem.mdxFullName = "parentElem.mdxFullName";
+
+    jointureChildParentDimensionCondition = new(LibCube:JointureChildParentDimensionCondition);
+    jointureChildParentDimensionCondition.dimension = dimension;
+    jointureChildParentDimensionCondition.parentElem = parentElem;
+    
+    //-------CHILDREN_RELATIONSHIP
+        //CASE 1.1 includeParent = true
+    jointureChildParentDimensionCondition.relationship = CHILDREN_RELATIONSHIP;
+    jointureChildParentDimensionCondition.includeParent = true;
+    jointureChildParentDimensionCondition.generateQueryFragment();
+    mdxStringComparator = concat("Union(", parentElem.getMdxFullName(hierarchy), "," , parentElem.getMdxFullName(hierarchy), ".Children)");
+    
+    assert( jointureChildParentDimensionCondition.queryFragment.mdxString == mdxStringComparator);
+        //CASE 1.2 includeParent = false
+    jointureChildParentDimensionCondition.includeParent = false;
+    jointureChildParentDimensionCondition.generateQueryFragment();
+    mdxStringComparator = concat(parentElem.getMdxFullName(hierarchy), ".Children");
+    
+    assert( jointureChildParentDimensionCondition.queryFragment.mdxString == mdxStringComparator);
+    //-------DESCENDANTS_RELATIONSHIP
+        //CASE 2.1 includeParent = true
+    jointureChildParentDimensionCondition.relationship = DESCENDANTS_RELATIONSHIP;
+    jointureChildParentDimensionCondition.includeParent = true;
+    jointureChildParentDimensionCondition.generateQueryFragment();
+    mdxStringComparator = concat("Descendants(", parentElem.getMdxFullName(hierarchy), ")");
+    
+    assert( jointureChildParentDimensionCondition.queryFragment.mdxString == mdxStringComparator);
+        //CASE 2.2 includeParent = false
+    jointureChildParentDimensionCondition.includeParent = false;
+    jointureChildParentDimensionCondition.generateQueryFragment();
+    mdxStringComparator = concat("Descendants(", parentElem.getMdxFullName(hierarchy), ", 0.0, AFTER)");
+    
+    assert( jointureChildParentDimensionCondition.queryFragment.mdxString == mdxStringComparator);
+    
+    logInfo("LibCube:Test:jointureChildParentDimensionCondition() passed");
+}
+;
+
+function LibCube:Test:measureGetMdxFullNameTest()
+--> local LibCube:Measure measure
+--> action {
+
+    logInfo("Testing measureGetMdxFullNameTest");
+
+    measure = new(LibCube:Measure);
+    //CASE 1
+    assert(measure.getMdxFullName() == null);
+    //CASE 2
+    measure.mdxFullName = "measure.mdxFullName";
+    assert(measure.getMdxFullName() == measure.mdxFullName);
+    //CASE 3
+    measure.mdxFullName = null;
+    measure.mdxName = "measure.mdxName";
+    assert(measure.getMdxFullName() == concat("[Measures].[", measure.mdxName, "]"));
+    
+    logInfo("LibCube:Test:measureGetMdxFullNameTest() passed");
+}
+;
+
+function LibCube:Test:multidimensionalTotalFactsCreatorTest()
+--> local LibCube:MultidimensionalTotalFactsCreator multidimensionalTotalFactsCreator
+--> action {
+
+}
+;
+
+function LibCube:Test:memberGetMdxFullNameTest()
+--> local 
+          LibCube:Member member,
+          LibCube:Dimension dimension,
+          LibCube:Hierarchy hierarchy
+
+--> action {
+
+    logInfo("Testing memberGetMdxFullNameTest");
+
+    member = new(LibCube:Member);
+    
+    //CASE 1
+    member.mdxFullName = "member.mdxFullName";
+    assert(member.getMdxFullName(null) == member.mdxFullName);
+    //CASE 2
+    member.mdxFullName = null;
+    member.mdxName = null;
+    assert(member.getMdxFullName(null) == null);
+    //CASE 3
+    member.mdxFullName = null;
+    member.mdxName = "member.mdxName";
+    dimension = new(LibCube:Dimension);
+    dimension.mdxName = null;
+    member.dimension = dimension;
+    assert(member.getMdxFullName(null) == null);
+    //CASE 4
+    member.mdxFullName = null;
+    member.mdxName = "member.mdxName";
+    dimension = new(LibCube:Dimension);
+    dimension.mdxName = "dimension.mdxName";
+    member.dimension = dimension;
+    assert(member.getMdxFullName(null) == concat("[", dimension.mdxName, "].", member.mdxName , ""));
+    //CASE 5
+    member.mdxFullName = null;
+    member.mdxName = "member.mdxName";
+    dimension = new(LibCube:Dimension);
+    dimension.mdxName = "dimension.mdxName";
+    member.dimension = dimension;
+    hierarchy = new(LibCube:Hierarchy);
+    hierarchy.mdxName = null;
+    assert(member.getMdxFullName(hierarchy) == null);
+    //CASE 6
+    member.mdxFullName = null;
+    member.mdxName = "member.mdxName";
+    dimension = new(LibCube:Dimension);
+    dimension.mdxName = "dimension.mdxName";
+    member.dimension = dimension;
+    hierarchy = new(LibCube:Hierarchy);
+    hierarchy.mdxName = "hierarchy.mdxName";
+    assert(member.getMdxFullName(hierarchy) == concat("[", dimension.mdxName, ".", hierarchy.mdxName , "].", member.mdxName , "" ));
+    
+    logInfo("LibCube:Test:memberGetMdxFullNameTest() passed");
 }
 ;
 
@@ -432,7 +631,10 @@ function LibCube:Test:main2()
     LibCube:Test:getDateTest();
     LibCube:Test:checkDimensionsTest();
     LibCube:Test:getRemovePendingFactSelectionTest();
-    
     LibCube:Test:factsSorterTest();
+    LibCube:Test:jointureChildParentDimensionCondition();
+    LibCube:Test:measureGetMdxFullNameTest();
+    LibCube:Test:memberGetMdxFullNameTest();
+    
 }
 ;

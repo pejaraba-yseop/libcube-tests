@@ -214,7 +214,7 @@ interface LibCube:FactsSorter
 implementation LibCube:FactsSorter
 ;
 
-Function LibCube:FactsSorter::oneMeasureComparatorFunc(LibCube:Fact fact1, 
+function LibCube:FactsSorter::oneMeasureComparatorFunc(LibCube:Fact fact1, 
                                                        LibCube:Fact fact2,
                                                        LibCube:SortingOptions sortingOptions)
 --> local LibCube:Measure measure                                               
@@ -228,7 +228,7 @@ Function LibCube:FactsSorter::oneMeasureComparatorFunc(LibCube:Fact fact1,
 }
 ;
 
-Function LibCube:FactsSorter::oneDimensionComparatorFunc(LibCube:Fact fact1, 
+function LibCube:FactsSorter::oneDimensionComparatorFunc(LibCube:Fact fact1, 
                                                        LibCube:Fact fact2,
                                                        LibCube:SortingOptions sortingOptions)
 --> local
@@ -249,7 +249,7 @@ Function LibCube:FactsSorter::oneDimensionComparatorFunc(LibCube:Fact fact1,
 }
 ;
 
-Function LibCube:FactsSorter::multipleMeasuresComparatorFunc(LibCube:Fact fact1, 
+function LibCube:FactsSorter::multipleMeasuresComparatorFunc(LibCube:Fact fact1, 
                                                      LibCube:Fact fact2,
                                                      LibCube:SortingOptions sortingOptions)
 --> action {
@@ -282,7 +282,7 @@ Function LibCube:FactsSorter::multipleMeasuresComparatorFunc(LibCube:Fact fact1,
 }
 ;
 
-Function LibCube:FactsSorter::comparisonAttributeComparatorFunc(LibCube:Fact fact1, 
+function LibCube:FactsSorter::comparisonAttributeComparatorFunc(LibCube:Fact fact1, 
                                                         LibCube:Fact fact2,
                                                         LibCube:SortingOptions sortingOptions)
 --> local Attribute twoFactsComparisonAttribute, Attribute twoFactsDifferenceAttribute                                                        
@@ -299,7 +299,7 @@ Function LibCube:FactsSorter::comparisonAttributeComparatorFunc(LibCube:Fact fac
 }
 ;
 
-Function LibCube:FactsSorter::sortFacts()
+function LibCube:FactsSorter::sortFacts()
 --> local Boolean hasAllMeasures, Boolean hasAttributes, SortParameter sortParam, LibCube:SortingOptions sortingOptions
 --> action {
     
@@ -398,7 +398,7 @@ Function LibCube:FactsSorter::sortFacts()
 }
 ;
 
-Function LibCube:FactsSorter::getTopNFacts(Number numberOfFacts)
+function LibCube:FactsSorter::getTopNFacts(Number numberOfFacts)
 --> local OrderedSet topNItems
 --> action {
     topNItems = new(OrderedSet)
@@ -414,19 +414,19 @@ Function LibCube:FactsSorter::getTopNFacts(Number numberOfFacts)
 }
 ;
 
-Function LibCube:FactsSorter::getTopFact()
+function LibCube:FactsSorter::getTopFact()
 --> action {
     return sortedFacts.get(_FIRST)
 }
 ;
 
-Function LibCube:FactsSorter::getBottomFact()
+function LibCube:FactsSorter::getBottomFact()
 --> action {
     return sortedFacts.get(sortedFacts.size())
 }
 ;
 
-Function LibCube:FactsSorter::getFact(Number position)
+function LibCube:FactsSorter::getFact(Number position)
 --> action {
 	return ifExpr(position >0 ) 
 		then sortedFacts.get(position)
@@ -434,7 +434,7 @@ Function LibCube:FactsSorter::getFact(Number position)
 }
 ;
 
-Function LibCube:FactsSorter::getFactsGreaterThan(Number value)
+function LibCube:FactsSorter::getFactsGreaterThan(Number value)
 --> local OrderedSet greaterFacts
 --> action {
     greaterFacts = new(OrderedSet)
@@ -464,7 +464,7 @@ Function LibCube:FactsSorter::getFactsGreaterThan(Number value)
 }
 ;
 
-Function LibCube:FactsSorter::getFactsLowerThan(Number value)
+function LibCube:FactsSorter::getFactsLowerThan(Number value)
 --> local OrderedSet lowerFacts
 --> action {
     lowerFacts = new(OrderedSet)
@@ -514,12 +514,14 @@ args{
             total =  total + _sortedFact.getMeasure(measure).value;
         }
     }
-    
+
     percentageValue = total*(percentage/100);
+
     sum = 0;
     subTotal = 0;
     foreach(_sortedFact, sortedFacts){
         subTotal =  sum + _sortedFact.getMeasure(measure).value;
+
         if(subTotal <= percentageValue){
             factsUnderTotal.add(_sortedFact);
             sum = sum + subTotal;
@@ -532,7 +534,7 @@ args{
 }
 ;
 
-Function LibCube:FactsSorter::addMeasure(LibCube:Measure newMeasure)
+function LibCube:FactsSorter::addMeasure(LibCube:Measure newMeasure)
 --> action {
     if(measures == null){
         measures = new(OrderedSet)
@@ -541,10 +543,10 @@ Function LibCube:FactsSorter::addMeasure(LibCube:Measure newMeasure)
 }
 ;
 
-Function LibCube:FactsSorter::getRank(LibCube:Member member)
+function LibCube:FactsSorter::getRank(LibCube:Member member)
 --> action {
     foreach(_fact, sortedFacts){
-        if(_fact.getDimension(member.dimension) == member){
+        if(_fact.getMember(member.dimension) == member){
             return sortedFacts.indexOf(_fact);
         }
     }

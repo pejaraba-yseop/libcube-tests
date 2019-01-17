@@ -11,7 +11,7 @@
 		<y:dialog-session>
 			<y:request-count>1</y:request-count>
 			<y:status>_IN_PROGRESS</y:status>
-			<y:start-timestamp>2019-01-16T11:43:55:075</y:start-timestamp>
+			<y:start-timestamp>2019-01-17T14:24:39:396</y:start-timestamp>
 		</y:dialog-session>
 		<y:data>
 			<y:instance yid="theGeneralData"></y:instance>
@@ -25,538 +25,529 @@
 				index="1"
 				level="info"
 				nature="user-log"
-				origin-nb-ms="1.48"
+				origin-nb-ms="0.99"
 				file="C:/Users/asuarez/Documents/gitRepos/libcube-tests/lib/libCube/tests/unit_tests.dcl"
-				line="2015">
+				line="2135">
 				<y:message>Running LibCube unit tests</y:message>
 			</y:log>
 			<y:log
 				index="2"
 				level="info"
 				nature="user-log"
-				origin-nb-ms="1.71"
+				origin-nb-ms="1.07"
 				file="C:/Users/asuarez/Documents/gitRepos/libcube-tests/lib/libCube/tests/unit_tests.dcl"
-				line="1885">
-				<y:message>Testing populateSelectionTest</y:message>
+				line="2034">
+				<y:message>Testing jointureFactsSelectionPopulateTest</y:message>
 			</y:log>
 			<y:log
 				index="3"
-				level="warning"
+				level="info"
 				nature="user-log"
-				origin-nb-ms="2.67"
-				file="C:/Users/asuarez/Documents/gitRepos/libcube-tests/lib/libCube/_classes/JointureOneFactSelection.yclass"
-				line="36">
-				<y:message>abnormal number of facts :0 for jointure :LibCube:Fact::nonIndicatorMembersId</y:message>
+				origin-nb-ms="1.47"
+				file="C:/Users/asuarez/Documents/gitRepos/libcube-tests/lib/libCube/tests/unit_tests.dcl"
+				line="2129">
+				<y:message>LibCube:Test:jointureFactsSelectionPopulateTest() passed</y:message>
 			</y:log>
 			<y:log
 				index="4"
 				level="info"
 				nature="user-log"
-				origin-nb-ms="3.48"
-				file="C:/Users/asuarez/Documents/gitRepos/libcube-tests/lib/libCube/tests/unit_tests.dcl"
-				line="1978">
-				<y:message>LibCube:Test:populateSelection() passed</y:message>
-			</y:log>
-			<y:log
-				index="5"
-				level="info"
-				nature="user-log"
-				origin-nb-ms="3.76"
+				origin-nb-ms="1.55"
 				file="C:/Users/asuarez/Documents/gitRepos/libcube-tests/lib/libCube/tests/unit_tests.dcl"
 				line="23">
 				<y:message>Testing factsSorter</y:message>
 			</y:log>
 			<y:log
-				index="6"
+				index="5"
 				level="info"
 				nature="user-log"
-				origin-nb-ms="4.48"
+				origin-nb-ms="1.78"
 				file="C:/Users/asuarez/Documents/gitRepos/libcube-tests/lib/libCube/tests/unit_tests.dcl"
 				line="96">
 				<y:message>LibCube:Test:factsSorter() passed</y:message>
 			</y:log>
 			<y:log
-				index="7"
+				index="6"
 				level="info"
 				nature="user-log"
-				origin-nb-ms="4.70"
+				origin-nb-ms="1.84"
 				file="C:/Users/asuarez/Documents/gitRepos/libcube-tests/lib/libCube/tests/unit_tests.dcl"
 				line="124">
 				<y:message>Testing factsDimensionSorterCaseTimeDimension</y:message>
 			</y:log>
 			<y:log
-				index="8"
+				index="7"
 				level="info"
 				nature="user-log"
-				origin-nb-ms="5.20"
+				origin-nb-ms="1.98"
 				file="C:/Users/asuarez/Documents/gitRepos/libcube-tests/lib/libCube/tests/unit_tests.dcl"
 				line="221">
 				<y:message>LibCube:Test:factsDimensionSorterCaseTimeDimension() passed</y:message>
 			</y:log>
 			<y:log
-				index="9"
+				index="8"
 				level="info"
 				nature="user-log"
-				origin-nb-ms="5.35"
+				origin-nb-ms="2.05"
 				file="C:/Users/asuarez/Documents/gitRepos/libcube-tests/lib/libCube/tests/unit_tests.dcl"
 				line="249">
 				<y:message>Testing factsDimensionSorterCaseAnyDimension</y:message>
 			</y:log>
 			<y:log
-				index="10"
+				index="9"
 				level="info"
 				nature="user-log"
-				origin-nb-ms="5.66"
+				origin-nb-ms="2.19"
 				file="C:/Users/asuarez/Documents/gitRepos/libcube-tests/lib/libCube/tests/unit_tests.dcl"
 				line="331">
 				<y:message>LibCube:Test:factsDimensionSorterCaseAnyDimension() passed</y:message>
 			</y:log>
 			<y:log
-				index="11"
+				index="10"
 				level="info"
 				nature="user-log"
-				origin-nb-ms="5.85"
+				origin-nb-ms="2.24"
 				file="C:/Users/asuarez/Documents/gitRepos/libcube-tests/lib/libCube/tests/unit_tests.dcl"
 				line="359">
 				<y:message>Testing factsDimensionSorterHelper</y:message>
 			</y:log>
 			<y:log
-				index="12"
+				index="11"
 				level="info"
 				nature="user-log"
-				origin-nb-ms="6.31"
+				origin-nb-ms="2.35"
 				file="C:/Users/asuarez/Documents/gitRepos/libcube-tests/lib/libCube/tests/unit_tests.dcl"
 				line="438">
 				<y:message>LibCube:Test:factsDimensionSorterHelper() passed</y:message>
 			</y:log>
 			<y:log
-				index="13"
+				index="12"
 				level="info"
 				nature="user-log"
-				origin-nb-ms="6.50"
+				origin-nb-ms="2.41"
 				file="C:/Users/asuarez/Documents/gitRepos/libcube-tests/lib/libCube/tests/unit_tests.dcl"
 				line="455">
 				<y:message>Testing timeMember</y:message>
 			</y:log>
 			<y:log
-				index="14"
+				index="13"
 				level="info"
 				nature="user-log"
-				origin-nb-ms="18.24"
+				origin-nb-ms="9.37"
 				file="C:/Users/asuarez/Documents/gitRepos/libcube-tests/lib/libCube/tests/unit_tests.dcl"
 				line="747">
 				<y:message>LibCube:Test:timeMember() passed</y:message>
 			</y:log>
 			<y:log
-				index="15"
+				index="14"
 				level="info"
 				nature="user-log"
-				origin-nb-ms="18.57"
+				origin-nb-ms="9.88"
 				file="C:/Users/asuarez/Documents/gitRepos/libcube-tests/lib/libCube/tests/unit_tests.dcl"
 				line="764">
 				<y:message>Testing twoMeasuresOneFactComparison</y:message>
 			</y:log>
 			<y:log
-				index="16"
+				index="15"
 				level="info"
 				nature="user-log"
-				origin-nb-ms="19.09"
+				origin-nb-ms="10.68"
 				file="C:/Users/asuarez/Documents/gitRepos/libcube-tests/lib/libCube/tests/unit_tests.dcl"
 				line="898">
 				<y:message>LibCube:Test:twoMeasuresOneFactComparison() passed</y:message>
 			</y:log>
 			<y:log
-				index="17"
+				index="16"
 				level="info"
 				nature="user-log"
-				origin-nb-ms="19.19"
+				origin-nb-ms="10.86"
 				file="C:/Users/asuarez/Documents/gitRepos/libcube-tests/lib/libCube/tests/unit_tests.dcl"
 				line="916">
 				<y:message>Testing twoFactsOneMesureComparison</y:message>
 			</y:log>
 			<y:log
-				index="18"
+				index="17"
 				level="info"
 				nature="user-log"
-				origin-nb-ms="19.64"
+				origin-nb-ms="11.21"
 				file="C:/Users/asuarez/Documents/gitRepos/libcube-tests/lib/libCube/tests/unit_tests.dcl"
 				line="1049">
 				<y:message>LibCube:Test:twoFactsOneMeasureComparison() passed</y:message>
 			</y:log>
 			<y:log
-				index="19"
+				index="18"
 				level="info"
 				nature="user-log"
-				origin-nb-ms="19.84"
+				origin-nb-ms="11.32"
 				file="C:/Users/asuarez/Documents/gitRepos/libcube-tests/lib/libCube/tests/unit_tests.dcl"
 				line="1066">
 				<y:message>Testing getMeasuresComparison</y:message>
 			</y:log>
 			<y:log
-				index="20"
+				index="19"
 				level="info"
 				nature="user-log"
-				origin-nb-ms="20.49"
+				origin-nb-ms="11.56"
 				file="C:/Users/asuarez/Documents/gitRepos/libcube-tests/lib/libCube/tests/unit_tests.dcl"
 				line="1113">
 				<y:message>LibCube:Test:getMeasuresComparison() passed</y:message>
 			</y:log>
 			<y:log
-				index="21"
+				index="20"
 				level="info"
 				nature="user-log"
-				origin-nb-ms="20.75"
+				origin-nb-ms="11.66"
 				file="C:/Users/asuarez/Documents/gitRepos/libcube-tests/lib/libCube/tests/unit_tests.dcl"
 				line="1130">
 				<y:message>Testing getFactsComparison</y:message>
 			</y:log>
 			<y:log
-				index="22"
+				index="21"
 				level="info"
 				nature="user-log"
-				origin-nb-ms="21.60"
+				origin-nb-ms="12.42"
 				file="C:/Users/asuarez/Documents/gitRepos/libcube-tests/lib/libCube/tests/unit_tests.dcl"
 				line="1179">
 				<y:message>LibCube:Test:getFactsComparison() passed</y:message>
 			</y:log>
 			<y:log
-				index="23"
+				index="22"
 				level="info"
 				nature="user-log"
-				origin-nb-ms="21.86"
+				origin-nb-ms="12.60"
 				file="C:/Users/asuarez/Documents/gitRepos/libcube-tests/lib/libCube/tests/unit_tests.dcl"
 				line="1191">
 				<y:message>Testing getMeasureValue</y:message>
 			</y:log>
 			<y:log
+				index="23"
+				level="info"
+				nature="user-log"
+				origin-nb-ms="12.81"
+				file="C:/Users/asuarez/Documents/gitRepos/libcube-tests/lib/libCube/tests/unit_tests.dcl"
+				line="1211">
+				<y:message>&apos;0x56C3&apos;</y:message>
+			</y:log>
+			<y:log
 				index="24"
 				level="info"
 				nature="user-log"
-				origin-nb-ms="22.14"
+				origin-nb-ms="12.91"
 				file="C:/Users/asuarez/Documents/gitRepos/libcube-tests/lib/libCube/tests/unit_tests.dcl"
-				line="1211">
-				<y:message>&apos;0x558B&apos;</y:message>
+				line="1212">
+				<y:message>&apos;0x56C3&apos;</y:message>
 			</y:log>
 			<y:log
 				index="25"
 				level="info"
 				nature="user-log"
-				origin-nb-ms="22.79"
-				file="C:/Users/asuarez/Documents/gitRepos/libcube-tests/lib/libCube/tests/unit_tests.dcl"
-				line="1212">
-				<y:message>&apos;0x558B&apos;</y:message>
-			</y:log>
-			<y:log
-				index="26"
-				level="info"
-				nature="user-log"
-				origin-nb-ms="22.94"
+				origin-nb-ms="13.01"
 				file="C:/Users/asuarez/Documents/gitRepos/libcube-tests/lib/libCube/tests/unit_tests.dcl"
 				line="1215">
 				<y:message>LibCube:Test:getMeasureValue() passed</y:message>
 			</y:log>
 			<y:log
-				index="27"
+				index="26"
 				level="info"
 				nature="user-log"
-				origin-nb-ms="23.05"
+				origin-nb-ms="13.10"
 				file="C:/Users/asuarez/Documents/gitRepos/libcube-tests/lib/libCube/tests/unit_tests.dcl"
 				line="1227">
 				<y:message>Testing getMember</y:message>
 			</y:log>
 			<y:log
-				index="28"
+				index="27"
 				level="info"
 				nature="user-log"
-				origin-nb-ms="23.17"
+				origin-nb-ms="13.24"
 				file="C:/Users/asuarez/Documents/gitRepos/libcube-tests/lib/libCube/tests/unit_tests.dcl"
 				line="1254">
 				<y:message>LibCube:Test:getMember() passed</y:message>
 			</y:log>
 			<y:log
-				index="29"
+				index="28"
 				level="info"
 				nature="user-log"
-				origin-nb-ms="23.27"
+				origin-nb-ms="13.34"
 				file="C:/Users/asuarez/Documents/gitRepos/libcube-tests/lib/libCube/tests/unit_tests.dcl"
 				line="1266">
 				<y:message>Testing groupedFactsSelection</y:message>
 			</y:log>
 			<y:log
-				index="30"
+				index="29"
 				level="info"
 				nature="user-log"
-				origin-nb-ms="23.49"
+				origin-nb-ms="13.53"
 				file="C:/Users/asuarez/Documents/gitRepos/libcube-tests/lib/libCube/tests/unit_tests.dcl"
 				line="1291">
 				<y:message>LibCube:Test:groupedFactsSelection() passed</y:message>
 			</y:log>
 			<y:log
-				index="31"
+				index="30"
 				level="info"
 				nature="user-log"
-				origin-nb-ms="23.65"
+				origin-nb-ms="13.65"
 				file="C:/Users/asuarez/Documents/gitRepos/libcube-tests/lib/libCube/tests/unit_tests.dcl"
 				line="1303">
 				<y:message>Testing jointureDimensionConditionTest</y:message>
 			</y:log>
 			<y:log
-				index="32"
+				index="31"
 				level="info"
 				nature="user-log"
-				origin-nb-ms="25.78"
+				origin-nb-ms="15.84"
 				file="C:/Users/asuarez/Documents/gitRepos/libcube-tests/lib/libCube/tests/unit_tests.dcl"
 				line="1362">
 				<y:message>LibCube:Test:jointureDimensionConditionTest() passed</y:message>
 			</y:log>
 			<y:log
-				index="33"
+				index="32"
 				level="info"
 				nature="user-log"
-				origin-nb-ms="25.93"
+				origin-nb-ms="15.95"
 				file="C:/Users/asuarez/Documents/gitRepos/libcube-tests/lib/libCube/tests/unit_tests.dcl"
 				line="1382">
 				<y:message>Testing jointureFactsSelectionTest</y:message>
 			</y:log>
 			<y:log
-				index="34"
+				index="33"
 				level="warning"
 				nature="user-log"
-				origin-nb-ms="26.87"
+				origin-nb-ms="16.70"
 				file="C:/Users/asuarez/Documents/gitRepos/libcube-tests/lib/libCube/_classes/Measure.yclass"
 				line="88">
 				<y:message>Can&apos;t get MdxFullName from Measure, null because no mdx name was defined</y:message>
+			</y:log>
+			<y:log
+				index="34"
+				level="warning"
+				nature="user-log"
+				origin-nb-ms="16.81"
+				file="C:/Users/asuarez/Documents/gitRepos/libcube-tests/lib/libCube/_classes/JointureFactsSelection.yclass"
+				line="179">
+				<y:message>Measure null must have an mdx name to generate a query.</y:message>
 			</y:log>
 			<y:log
 				index="35"
 				level="warning"
 				nature="user-log"
-				origin-nb-ms="27.00"
-				file="C:/Users/asuarez/Documents/gitRepos/libcube-tests/lib/libCube/_classes/JointureFactsSelection.yclass"
-				line="179">
-				<y:message>Measure null must have an mdx name to generate a query.</y:message>
+				origin-nb-ms="16.92"
+				file="C:/Users/asuarez/Documents/gitRepos/libcube-tests/lib/libCube/_classes/Measure.yclass"
+				line="88">
+				<y:message>Can&apos;t get MdxFullName from Measure, null because no mdx name was defined</y:message>
 			</y:log>
 			<y:log
 				index="36"
 				level="warning"
 				nature="user-log"
-				origin-nb-ms="27.12"
-				file="C:/Users/asuarez/Documents/gitRepos/libcube-tests/lib/libCube/_classes/Measure.yclass"
-				line="88">
-				<y:message>Can&apos;t get MdxFullName from Measure, null because no mdx name was defined</y:message>
+				origin-nb-ms="17.02"
+				file="C:/Users/asuarez/Documents/gitRepos/libcube-tests/lib/libCube/_classes/JointureFactsSelection.yclass"
+				line="179">
+				<y:message>Measure null must have an mdx name to generate a query.</y:message>
 			</y:log>
 			<y:log
 				index="37"
 				level="warning"
 				nature="user-log"
-				origin-nb-ms="27.23"
-				file="C:/Users/asuarez/Documents/gitRepos/libcube-tests/lib/libCube/_classes/JointureFactsSelection.yclass"
-				line="179">
-				<y:message>Measure null must have an mdx name to generate a query.</y:message>
+				origin-nb-ms="17.34"
+				file="C:/Users/asuarez/Documents/gitRepos/libcube-tests/lib/libCube/_classes/Measure.yclass"
+				line="88">
+				<y:message>Can&apos;t get MdxFullName from Measure, null because no mdx name was defined</y:message>
 			</y:log>
 			<y:log
 				index="38"
 				level="warning"
 				nature="user-log"
-				origin-nb-ms="27.34"
-				file="C:/Users/asuarez/Documents/gitRepos/libcube-tests/lib/libCube/_classes/Measure.yclass"
-				line="88">
-				<y:message>Can&apos;t get MdxFullName from Measure, null because no mdx name was defined</y:message>
+				origin-nb-ms="17.72"
+				file="C:/Users/asuarez/Documents/gitRepos/libcube-tests/lib/libCube/_classes/JointureFactsSelection.yclass"
+				line="179">
+				<y:message>Measure null must have an mdx name to generate a query.</y:message>
 			</y:log>
 			<y:log
 				index="39"
 				level="warning"
 				nature="user-log"
-				origin-nb-ms="27.45"
-				file="C:/Users/asuarez/Documents/gitRepos/libcube-tests/lib/libCube/_classes/JointureFactsSelection.yclass"
-				line="179">
-				<y:message>Measure null must have an mdx name to generate a query.</y:message>
+				origin-nb-ms="18.03"
+				file="C:/Users/asuarez/Documents/gitRepos/libcube-tests/lib/libCube/_classes/Measure.yclass"
+				line="88">
+				<y:message>Can&apos;t get MdxFullName from Measure, null because no mdx name was defined</y:message>
 			</y:log>
 			<y:log
 				index="40"
 				level="warning"
 				nature="user-log"
-				origin-nb-ms="27.57"
-				file="C:/Users/asuarez/Documents/gitRepos/libcube-tests/lib/libCube/_classes/Measure.yclass"
-				line="88">
-				<y:message>Can&apos;t get MdxFullName from Measure, null because no mdx name was defined</y:message>
+				origin-nb-ms="18.20"
+				file="C:/Users/asuarez/Documents/gitRepos/libcube-tests/lib/libCube/_classes/JointureFactsSelection.yclass"
+				line="179">
+				<y:message>Measure null must have an mdx name to generate a query.</y:message>
 			</y:log>
 			<y:log
 				index="41"
 				level="warning"
 				nature="user-log"
-				origin-nb-ms="27.68"
-				file="C:/Users/asuarez/Documents/gitRepos/libcube-tests/lib/libCube/_classes/JointureFactsSelection.yclass"
-				line="179">
-				<y:message>Measure null must have an mdx name to generate a query.</y:message>
+				origin-nb-ms="18.33"
+				file="C:/Users/asuarez/Documents/gitRepos/libcube-tests/lib/libCube/_classes/Measure.yclass"
+				line="88">
+				<y:message>Can&apos;t get MdxFullName from Measure, null because no mdx name was defined</y:message>
 			</y:log>
 			<y:log
 				index="42"
 				level="warning"
 				nature="user-log"
-				origin-nb-ms="27.78"
-				file="C:/Users/asuarez/Documents/gitRepos/libcube-tests/lib/libCube/_classes/Measure.yclass"
-				line="88">
-				<y:message>Can&apos;t get MdxFullName from Measure, null because no mdx name was defined</y:message>
+				origin-nb-ms="18.44"
+				file="C:/Users/asuarez/Documents/gitRepos/libcube-tests/lib/libCube/_classes/JointureFactsSelection.yclass"
+				line="179">
+				<y:message>Measure null must have an mdx name to generate a query.</y:message>
 			</y:log>
 			<y:log
 				index="43"
 				level="warning"
 				nature="user-log"
-				origin-nb-ms="27.89"
-				file="C:/Users/asuarez/Documents/gitRepos/libcube-tests/lib/libCube/_classes/JointureFactsSelection.yclass"
-				line="179">
-				<y:message>Measure null must have an mdx name to generate a query.</y:message>
+				origin-nb-ms="18.53"
+				file="C:/Users/asuarez/Documents/gitRepos/libcube-tests/lib/libCube/_classes/Measure.yclass"
+				line="88">
+				<y:message>Can&apos;t get MdxFullName from Measure, null because no mdx name was defined</y:message>
 			</y:log>
 			<y:log
 				index="44"
 				level="warning"
 				nature="user-log"
-				origin-nb-ms="27.99"
-				file="C:/Users/asuarez/Documents/gitRepos/libcube-tests/lib/libCube/_classes/Measure.yclass"
-				line="88">
-				<y:message>Can&apos;t get MdxFullName from Measure, null because no mdx name was defined</y:message>
+				origin-nb-ms="18.60"
+				file="C:/Users/asuarez/Documents/gitRepos/libcube-tests/lib/libCube/_classes/JointureFactsSelection.yclass"
+				line="179">
+				<y:message>Measure null must have an mdx name to generate a query.</y:message>
 			</y:log>
 			<y:log
 				index="45"
 				level="warning"
 				nature="user-log"
-				origin-nb-ms="28.08"
-				file="C:/Users/asuarez/Documents/gitRepos/libcube-tests/lib/libCube/_classes/JointureFactsSelection.yclass"
-				line="179">
-				<y:message>Measure null must have an mdx name to generate a query.</y:message>
+				origin-nb-ms="18.69"
+				file="C:/Users/asuarez/Documents/gitRepos/libcube-tests/lib/libCube/_classes/Measure.yclass"
+				line="88">
+				<y:message>Can&apos;t get MdxFullName from Measure, null because no mdx name was defined</y:message>
 			</y:log>
 			<y:log
 				index="46"
 				level="warning"
 				nature="user-log"
-				origin-nb-ms="28.19"
-				file="C:/Users/asuarez/Documents/gitRepos/libcube-tests/lib/libCube/_classes/Measure.yclass"
-				line="88">
-				<y:message>Can&apos;t get MdxFullName from Measure, null because no mdx name was defined</y:message>
+				origin-nb-ms="18.81"
+				file="C:/Users/asuarez/Documents/gitRepos/libcube-tests/lib/libCube/_classes/JointureFactsSelection.yclass"
+				line="179">
+				<y:message>Measure null must have an mdx name to generate a query.</y:message>
 			</y:log>
 			<y:log
 				index="47"
 				level="warning"
 				nature="user-log"
-				origin-nb-ms="28.29"
-				file="C:/Users/asuarez/Documents/gitRepos/libcube-tests/lib/libCube/_classes/JointureFactsSelection.yclass"
-				line="179">
-				<y:message>Measure null must have an mdx name to generate a query.</y:message>
+				origin-nb-ms="18.90"
+				file="C:/Users/asuarez/Documents/gitRepos/libcube-tests/lib/libCube/_classes/Measure.yclass"
+				line="88">
+				<y:message>Can&apos;t get MdxFullName from Measure, null because no mdx name was defined</y:message>
 			</y:log>
 			<y:log
 				index="48"
 				level="warning"
 				nature="user-log"
-				origin-nb-ms="28.41"
-				file="C:/Users/asuarez/Documents/gitRepos/libcube-tests/lib/libCube/_classes/Measure.yclass"
-				line="88">
-				<y:message>Can&apos;t get MdxFullName from Measure, null because no mdx name was defined</y:message>
+				origin-nb-ms="18.99"
+				file="C:/Users/asuarez/Documents/gitRepos/libcube-tests/lib/libCube/_classes/JointureFactsSelection.yclass"
+				line="179">
+				<y:message>Measure null must have an mdx name to generate a query.</y:message>
 			</y:log>
 			<y:log
 				index="49"
 				level="warning"
 				nature="user-log"
-				origin-nb-ms="28.53"
-				file="C:/Users/asuarez/Documents/gitRepos/libcube-tests/lib/libCube/_classes/JointureFactsSelection.yclass"
-				line="179">
-				<y:message>Measure null must have an mdx name to generate a query.</y:message>
-			</y:log>
-			<y:log
-				index="50"
-				level="warning"
-				nature="user-log"
-				origin-nb-ms="28.64"
+				origin-nb-ms="19.07"
 				file="C:/Users/asuarez/Documents/gitRepos/libcube-tests/lib/libCube/_classes/Measure.yclass"
 				line="88">
 				<y:message>Can&apos;t get MdxFullName from Measure, null because no mdx name was defined</y:message>
 			</y:log>
 			<y:log
-				index="51"
+				index="50"
 				level="warning"
 				nature="user-log"
-				origin-nb-ms="28.74"
+				origin-nb-ms="19.18"
 				file="C:/Users/asuarez/Documents/gitRepos/libcube-tests/lib/libCube/_classes/JointureFactsSelection.yclass"
 				line="179">
 				<y:message>Measure null must have an mdx name to generate a query.</y:message>
 			</y:log>
 			<y:log
-				index="52"
+				index="51"
 				level="info"
 				nature="user-log"
-				origin-nb-ms="29.31"
+				origin-nb-ms="19.63"
 				file="C:/Users/asuarez/Documents/gitRepos/libcube-tests/lib/libCube/_classes/JointureFactsSelection.yclass"
 				line="139">
 				<y:message>mdxQuery: SELECT {[Measures].[SALE_VALUE],[Measures].[SOLD_UNITS]} ON COLUMNS , {[dimensionMDX].members} ON ROWS FROM [cubeMdxGenericName]</y:message>
 			</y:log>
 			<y:log
-				index="53"
+				index="52"
 				level="info"
 				nature="user-log"
-				origin-nb-ms="29.42"
+				origin-nb-ms="19.70"
 				file="C:/Users/asuarez/Documents/gitRepos/libcube-tests/lib/libCube/tests/unit_tests.dcl"
 				line="1420">
 				<y:message>LibCube:Test:jointureFactsSelectionTest() passed</y:message>
 			</y:log>
 			<y:log
-				index="54"
+				index="53"
 				level="info"
 				nature="user-log"
-				origin-nb-ms="29.56"
+				origin-nb-ms="19.77"
 				file="C:/Users/asuarez/Documents/gitRepos/libcube-tests/lib/libCube/tests/unit_tests.dcl"
 				line="1432">
 				<y:message>Testing jointureLevelDimensionConditionTest</y:message>
 			</y:log>
 			<y:log
-				index="55"
+				index="54"
 				level="info"
 				nature="user-log"
-				origin-nb-ms="31.59"
+				origin-nb-ms="22.37"
 				file="C:/Users/asuarez/Documents/gitRepos/libcube-tests/lib/libCube/tests/unit_tests.dcl"
 				line="1498">
 				<y:message>ask pedro what happen if the object JointureLevelDimensionCondition does not come with variable level</y:message>
 			</y:log>
 			<y:log
-				index="56"
+				index="55"
 				level="info"
 				nature="user-log"
-				origin-nb-ms="31.73"
+				origin-nb-ms="22.43"
 				file="C:/Users/asuarez/Documents/gitRepos/libcube-tests/lib/libCube/tests/unit_tests.dcl"
 				line="1500">
 				<y:message>LibCube:Test:jointureLevelDimensionConditionTest() passed</y:message>
 			</y:log>
 			<y:log
-				index="57"
+				index="56"
 				level="info"
 				nature="user-log"
-				origin-nb-ms="31.85"
+				origin-nb-ms="22.48"
 				file="C:/Users/asuarez/Documents/gitRepos/libcube-tests/lib/libCube/tests/unit_tests.dcl"
 				line="1512">
 				<y:message>Testing jointureMeasureConditionTest</y:message>
 			</y:log>
 			<y:log
-				index="58"
+				index="57"
 				level="info"
 				nature="user-log"
-				origin-nb-ms="32.28"
+				origin-nb-ms="22.70"
 				file="C:/Users/asuarez/Documents/gitRepos/libcube-tests/lib/libCube/tests/unit_tests.dcl"
 				line="1732">
 				<y:message>LibCube:Test:jointureMeasureConditionTest() passed</y:message>
 			</y:log>
 			<y:log
-				index="59"
+				index="58"
 				level="info"
 				nature="user-log"
-				origin-nb-ms="32.40"
+				origin-nb-ms="22.75"
 				file="C:/Users/asuarez/Documents/gitRepos/libcube-tests/lib/libCube/tests/unit_tests.dcl"
 				line="1762">
 				<y:message>Testing getParentByLevelTest</y:message>
 			</y:log>
 			<y:log
-				index="60"
+				index="59"
 				level="warning"
 				nature="alert"
-				origin-nb-ms="32.69"
+				origin-nb-ms="22.88"
 				file="C:/Users/asuarez/Documents/gitRepos/libcube-tests/lib/libCube/_classes/Dimension.yclass"
 				line="134">
 				<y:message>It is more efficient to exploit symbolic objects as a key (here 1)</y:message>
@@ -578,264 +569,354 @@
 {
 {
 _node.value.isLeaf = true;
-theAccessor.leafMembers.add(0x425C);
+theAccessor.leafMembers.add(0x4394);
 }}
 </y:act-previous>
 				</y:kb-context>
 			</y:log>
 			<y:log
-				index="61"
+				index="60"
 				level="warning"
 				nature="user-log"
-				origin-nb-ms="33.12"
+				origin-nb-ms="23.02"
 				file="C:/Users/asuarez/Documents/gitRepos/libcube-tests/lib/libCube/_classes/HierarchyElement.yclass"
 				line="83">
 				<y:message>There is no current parent with level: 2</y:message>
 			</y:log>
 			<y:log
-				index="62"
+				index="61"
 				level="warning"
 				nature="user-log"
-				origin-nb-ms="33.46"
+				origin-nb-ms="23.10"
 				file="C:/Users/asuarez/Documents/gitRepos/libcube-tests/lib/libCube/_classes/HierarchyElement.yclass"
 				line="83">
 				<y:message>There is no current parent with level: 3</y:message>
 			</y:log>
 			<y:log
-				index="63"
+				index="62"
 				level="warning"
 				nature="user-log"
-				origin-nb-ms="33.80"
+				origin-nb-ms="23.17"
 				file="C:/Users/asuarez/Documents/gitRepos/libcube-tests/lib/libCube/_classes/HierarchyElement.yclass"
 				line="83">
 				<y:message>There is no current parent with level: 2</y:message>
 			</y:log>
 			<y:log
-				index="64"
+				index="63"
 				level="warning"
 				nature="user-log"
-				origin-nb-ms="34.09"
+				origin-nb-ms="23.23"
 				file="C:/Users/asuarez/Documents/gitRepos/libcube-tests/lib/libCube/_classes/HierarchyElement.yclass"
 				line="83">
 				<y:message>There is no current parent with level: 1</y:message>
 			</y:log>
 			<y:log
-				index="65"
+				index="64"
 				level="info"
 				nature="user-log"
-				origin-nb-ms="34.20"
+				origin-nb-ms="23.29"
 				file="C:/Users/asuarez/Documents/gitRepos/libcube-tests/lib/libCube/tests/unit_tests.dcl"
 				line="1860">
 				<y:message>LibCube:Test:getParentByLevelTest() passed</y:message>
 			</y:log>
 			<y:log
+				index="65"
+				level="info"
+				nature="user-log"
+				origin-nb-ms="23.34"
+				file="C:/Users/asuarez/Documents/gitRepos/libcube-tests/lib/libCube/tests/unit_tests.dcl"
+				line="1992">
+				<y:message>Testing getIndicatorMemberTest</y:message>
+			</y:log>
+			<y:log
 				index="66"
 				level="info"
 				nature="user-log"
-				origin-nb-ms="34.29"
+				origin-nb-ms="23.41"
 				file="C:/Users/asuarez/Documents/gitRepos/libcube-tests/lib/libCube/tests/unit_tests.dcl"
-				line="1990">
-				<y:message>Testing getIndicatorMemberTest</y:message>
+				line="2010">
+				<y:message>LibCube:Test:getIndicatorMemberTest() passed</y:message>
 			</y:log>
 			<y:log
 				index="67"
 				level="info"
 				nature="user-log"
-				origin-nb-ms="34.45"
-				file="C:/Users/asuarez/Documents/gitRepos/libcube-tests/lib/libCube/tests/unit_tests.dcl"
-				line="2008">
-				<y:message>LibCube:Test:getIndicatorMemberTest() passed</y:message>
+				origin-nb-ms="23.46"
+				file="C:/Users/asuarez/Documents/gitRepos/libcube-tests/lib/libCube/tests/unit_tests2.dcl"
+				line="627">
+				<y:message>Running LibCube unit tests</y:message>
 			</y:log>
 			<y:log
 				index="68"
 				level="info"
 				nature="user-log"
-				origin-nb-ms="34.56"
-				file="C:/Users/asuarez/Documents/gitRepos/libcube-tests/lib/libCube/tests/unit_tests2.dcl"
-				line="428">
-				<y:message>Running LibCube unit tests</y:message>
-			</y:log>
-			<y:log
-				index="69"
-				level="info"
-				nature="user-log"
-				origin-nb-ms="34.67"
+				origin-nb-ms="23.52"
 				file="C:/Users/asuarez/Documents/gitRepos/libcube-tests/lib/libCube/tests/unit_tests2.dcl"
 				line="30">
 				<y:message>Testing dimensionTest</y:message>
 			</y:log>
 			<y:log
-				index="70"
+				index="69"
 				level="info"
 				nature="user-log"
-				origin-nb-ms="39.25"
+				origin-nb-ms="25.05"
 				file="C:/Users/asuarez/Documents/gitRepos/libcube-tests/lib/libCube/tests/unit_tests2.dcl"
 				line="160">
 				<y:message>LibCube:Test:dimensionTest() passed</y:message>
 			</y:log>
 			<y:log
-				index="71"
+				index="70"
 				level="info"
 				nature="user-log"
-				origin-nb-ms="39.36"
+				origin-nb-ms="25.12"
 				file="C:/Users/asuarez/Documents/gitRepos/libcube-tests/lib/libCube/tests/unit_tests2.dcl"
 				line="170">
 				<y:message>Testing getDimensionNameFromMdxNameTest</y:message>
 			</y:log>
 			<y:log
-				index="72"
+				index="71"
 				level="info"
 				nature="user-log"
-				origin-nb-ms="39.52"
+				origin-nb-ms="25.19"
 				file="C:/Users/asuarez/Documents/gitRepos/libcube-tests/lib/libCube/tests/unit_tests2.dcl"
 				line="176">
 				<y:message>LibCube:Test:dimensionTest() passed</y:message>
 			</y:log>
 			<y:log
-				index="73"
+				index="72"
 				level="info"
 				nature="user-log"
-				origin-nb-ms="39.66"
+				origin-nb-ms="25.25"
 				file="C:/Users/asuarez/Documents/gitRepos/libcube-tests/lib/libCube/tests/unit_tests2.dcl"
 				line="184">
 				<y:message>Testing getDateTest</y:message>
 			</y:log>
 			<y:log
-				index="74"
+				index="73"
 				level="info"
 				nature="user-log"
-				origin-nb-ms="39.85"
+				origin-nb-ms="25.32"
 				file="C:/Users/asuarez/Documents/gitRepos/libcube-tests/lib/libCube/tests/unit_tests2.dcl"
 				line="195">
 				<y:message>LibCube:Test:getDateTest() passed</y:message>
 			</y:log>
 			<y:log
-				index="75"
+				index="74"
 				level="info"
 				nature="user-log"
-				origin-nb-ms="39.96"
+				origin-nb-ms="25.37"
 				file="C:/Users/asuarez/Documents/gitRepos/libcube-tests/lib/libCube/tests/unit_tests2.dcl"
 				line="211">
 				<y:message>Testing checkDimensionsTest</y:message>
 			</y:log>
 			<y:log
+				index="75"
+				level="warning"
+				nature="user-log"
+				origin-nb-ms="25.46"
+				file="C:/Users/asuarez/Documents/gitRepos/libcube-tests/lib/libCube/_classes/Fact.yclass"
+				line="268">
+				<y:message>missing dimension :&apos;0x5759&apos; for fact :&apos;0x5772&apos;</y:message>
+			</y:log>
+			<y:log
 				index="76"
 				level="warning"
 				nature="user-log"
-				origin-nb-ms="40.20"
+				origin-nb-ms="25.54"
 				file="C:/Users/asuarez/Documents/gitRepos/libcube-tests/lib/libCube/_classes/Fact.yclass"
 				line="268">
-				<y:message>missing dimension :&apos;0x5621&apos; for fact :&apos;0x563A&apos;</y:message>
+				<y:message>missing dimension :&apos;0x572C&apos; for fact :&apos;0x5772&apos;</y:message>
 			</y:log>
 			<y:log
 				index="77"
 				level="warning"
 				nature="user-log"
-				origin-nb-ms="40.35"
+				origin-nb-ms="25.60"
 				file="C:/Users/asuarez/Documents/gitRepos/libcube-tests/lib/libCube/_classes/Fact.yclass"
 				line="268">
-				<y:message>missing dimension :&apos;0x55F4&apos; for fact :&apos;0x563A&apos;</y:message>
+				<y:message>missing dimension :&apos;0x56EF&apos; for fact :&apos;0x5772&apos;</y:message>
 			</y:log>
 			<y:log
 				index="78"
 				level="warning"
 				nature="user-log"
-				origin-nb-ms="40.47"
+				origin-nb-ms="25.68"
 				file="C:/Users/asuarez/Documents/gitRepos/libcube-tests/lib/libCube/_classes/Fact.yclass"
 				line="268">
-				<y:message>missing dimension :&apos;0x55B7&apos; for fact :&apos;0x563A&apos;</y:message>
+				<y:message>missing dimension :&apos;0x56E1&apos; for fact :&apos;0x5772&apos;</y:message>
 			</y:log>
 			<y:log
 				index="79"
 				level="warning"
 				nature="user-log"
-				origin-nb-ms="40.64"
+				origin-nb-ms="25.75"
 				file="C:/Users/asuarez/Documents/gitRepos/libcube-tests/lib/libCube/_classes/Fact.yclass"
 				line="268">
-				<y:message>missing dimension :&apos;0x55A9&apos; for fact :&apos;0x563A&apos;</y:message>
+				<y:message>missing dimension :&apos;0x56D6&apos; for fact :&apos;0x5772&apos;</y:message>
 			</y:log>
 			<y:log
 				index="80"
 				level="warning"
 				nature="user-log"
-				origin-nb-ms="40.94"
+				origin-nb-ms="25.82"
 				file="C:/Users/asuarez/Documents/gitRepos/libcube-tests/lib/libCube/_classes/Fact.yclass"
 				line="268">
-				<y:message>missing dimension :&apos;0x559E&apos; for fact :&apos;0x563A&apos;</y:message>
+				<y:message>missing dimension :&apos;0x5627&apos; for fact :&apos;0x5772&apos;</y:message>
 			</y:log>
 			<y:log
 				index="81"
 				level="warning"
 				nature="user-log"
-				origin-nb-ms="41.09"
+				origin-nb-ms="25.88"
 				file="C:/Users/asuarez/Documents/gitRepos/libcube-tests/lib/libCube/_classes/Fact.yclass"
 				line="268">
-				<y:message>missing dimension :&apos;0x54EF&apos; for fact :&apos;0x563A&apos;</y:message>
+				<y:message>missing dimension :&apos;0x5626&apos; for fact :&apos;0x5772&apos;</y:message>
 			</y:log>
 			<y:log
 				index="82"
-				level="warning"
-				nature="user-log"
-				origin-nb-ms="42.12"
-				file="C:/Users/asuarez/Documents/gitRepos/libcube-tests/lib/libCube/_classes/Fact.yclass"
-				line="268">
-				<y:message>missing dimension :&apos;0x54EE&apos; for fact :&apos;0x563A&apos;</y:message>
-			</y:log>
-			<y:log
-				index="83"
 				level="info"
 				nature="user-log"
-				origin-nb-ms="42.48"
+				origin-nb-ms="26.03"
 				file="C:/Users/asuarez/Documents/gitRepos/libcube-tests/lib/libCube/tests/unit_tests2.dcl"
 				line="253">
 				<y:message>LibCube:Test:checkDimensionsTest() passed</y:message>
 			</y:log>
 			<y:log
-				index="84"
+				index="83"
 				level="info"
 				nature="user-log"
-				origin-nb-ms="42.79"
+				origin-nb-ms="26.12"
 				file="C:/Users/asuarez/Documents/gitRepos/libcube-tests/lib/libCube/tests/unit_tests2.dcl"
 				line="264">
 				<y:message>Testing getPendingFactSelectionTest</y:message>
 			</y:log>
 			<y:log
-				index="85"
+				index="84"
 				level="info"
 				nature="user-log"
-				origin-nb-ms="43.78"
+				origin-nb-ms="26.29"
 				file="C:/Users/asuarez/Documents/gitRepos/libcube-tests/lib/libCube/tests/unit_tests2.dcl"
 				line="287">
 				<y:message>LibCube:Test:getPendingFactSelectionTest() passed</y:message>
 			</y:log>
 			<y:log
+				index="85"
+				level="info"
+				nature="user-log"
+				origin-nb-ms="26.40"
+				file="C:/Users/asuarez/Documents/gitRepos/libcube-tests/lib/libCube/tests/unit_tests2.dcl"
+				line="311">
+				<y:message>Testing factsSorterTest</y:message>
+			</y:log>
+			<y:log
 				index="86"
 				level="info"
 				nature="user-log"
-				origin-nb-ms="44.04"
+				origin-nb-ms="27.23"
 				file="C:/Users/asuarez/Documents/gitRepos/libcube-tests/lib/libCube/tests/unit_tests2.dcl"
-				line="306">
-				<y:message>Testing factsSorterTest</y:message>
+				line="470">
+				<y:message>LibCube:Test:factsSorterTest() passed</y:message>
 			</y:log>
 			<y:log
 				index="87"
 				level="info"
 				nature="user-log"
-				origin-nb-ms="44.78"
+				origin-nb-ms="27.29"
 				file="C:/Users/asuarez/Documents/gitRepos/libcube-tests/lib/libCube/tests/unit_tests2.dcl"
-				line="422">
-				<y:message>LibCube:Test:factsSorterTest() passed</y:message>
+				line="482">
+				<y:message>Testing jointureChildParentDimensionCondition</y:message>
+			</y:log>
+			<y:log
+				index="88"
+				level="info"
+				nature="user-log"
+				origin-nb-ms="27.80"
+				file="C:/Users/asuarez/Documents/gitRepos/libcube-tests/lib/libCube/tests/unit_tests2.dcl"
+				line="537">
+				<y:message>LibCube:Test:jointureChildParentDimensionCondition() passed</y:message>
+			</y:log>
+			<y:log
+				index="89"
+				level="info"
+				nature="user-log"
+				origin-nb-ms="27.86"
+				file="C:/Users/asuarez/Documents/gitRepos/libcube-tests/lib/libCube/tests/unit_tests2.dcl"
+				line="545">
+				<y:message>Testing measureGetMdxFullNameTest</y:message>
+			</y:log>
+			<y:log
+				index="90"
+				level="warning"
+				nature="user-log"
+				origin-nb-ms="27.93"
+				file="C:/Users/asuarez/Documents/gitRepos/libcube-tests/lib/libCube/_classes/Measure.yclass"
+				line="88">
+				<y:message>Can&apos;t get MdxFullName from Measure, null because no mdx name was defined</y:message>
+			</y:log>
+			<y:log
+				index="91"
+				level="info"
+				nature="user-log"
+				origin-nb-ms="28.08"
+				file="C:/Users/asuarez/Documents/gitRepos/libcube-tests/lib/libCube/tests/unit_tests2.dcl"
+				line="558">
+				<y:message>LibCube:Test:measureGetMdxFullNameTest() passed</y:message>
+			</y:log>
+			<y:log
+				index="92"
+				level="info"
+				nature="user-log"
+				origin-nb-ms="28.14"
+				file="C:/Users/asuarez/Documents/gitRepos/libcube-tests/lib/libCube/tests/unit_tests2.dcl"
+				line="577">
+				<y:message>Testing memberGetMdxFullNameTest</y:message>
+			</y:log>
+			<y:log
+				index="93"
+				level="warning"
+				nature="user-log"
+				origin-nb-ms="28.22"
+				file="C:/Users/asuarez/Documents/gitRepos/libcube-tests/lib/libCube/_classes/Member.yclass"
+				line="127">
+				<y:message>Can&apos;t get full mdx name of the member: null since the mdxName is null</y:message>
+			</y:log>
+			<y:log
+				index="94"
+				level="warning"
+				nature="user-log"
+				origin-nb-ms="28.29"
+				file="C:/Users/asuarez/Documents/gitRepos/libcube-tests/lib/libCube/_classes/Member.yclass"
+				line="132">
+				<y:message>MdxName of the dimension: nullis null</y:message>
+			</y:log>
+			<y:log
+				index="95"
+				level="warning"
+				nature="user-log"
+				origin-nb-ms="28.45"
+				file="C:/Users/asuarez/Documents/gitRepos/libcube-tests/lib/libCube/_classes/Member.yclass"
+				line="152">
+				<y:message>MdxName of the hierarchy: nullis null</y:message>
+			</y:log>
+			<y:log
+				index="96"
+				level="info"
+				nature="user-log"
+				origin-nb-ms="28.61"
+				file="C:/Users/asuarez/Documents/gitRepos/libcube-tests/lib/libCube/tests/unit_tests2.dcl"
+				line="621">
+				<y:message>LibCube:Test:memberGetMdxFullNameTest() passed</y:message>
 			</y:log>
 		</y:logging>
 		<y:synthesis>
 			<y:language
 				id="en"/>
 			<y:random
-				seed="257942839"
+				seed="154775308"
 				peak="0"/>
 			<y:process
-				id="17B0"
-				start-runtime="2019-01-16T11:43:54:997"
+				id="55C"
+				start-runtime="2019-01-17T14:24:39:339"
 				runtime="erunbc_"
 				engine-version="7.2.0.M1-002"
 				os="WINDOWS 6.2"
@@ -846,13 +927,13 @@ theAccessor.leafMembers.add(0x425C);
 				creation-date="2018-12-19"
 				expiration-date="2019-01-30"/>
 			<y:request-exec-time
-				begin="2019-01-16T11:43:55:075"
-				end="2019-01-16T11:43:55:123"/>
+				begin="2019-01-17T14:24:39:396"
+				end="2019-01-17T14:24:39:426"/>
 			<y:stat
 				errors="0"
 				warnings="1"
 				success-rule-fire="0"
-				text-write="169"
+				text-write="183"
 				main-words="0"
 				main-chars="0"/>
 		</y:synthesis>
