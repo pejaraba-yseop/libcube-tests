@@ -374,7 +374,7 @@ function LibCube:FactsSorter::sortFacts()
             
             foreach(_fact, facts){
                 hasAttributes = true;
-                if(_fact.getDimension(dimension) == null){
+                if(_fact.getMember(dimension) == null){
                     logWarning("The following fact does not have the ", dimension.members.label, " dimension sorting: ", _fact);
                     hasAllMeasures = false
                 } 

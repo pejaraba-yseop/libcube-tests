@@ -7,7 +7,7 @@
                     <yseop-yml:text>The fund's
 //\_texts:Options:SectorWeightStatus()
 position in
-// \value(theGeneralData.driverSectorsFact.getDimension(DIMENSION_SECTOR))
+// \value(theGeneralData.driverSectorsFact.getMember(DIMENSION_SECTOR))
 securities was the most significant contributor to performance at the sector level. Specifically, the overweight stance in securitised bonds of Aspire Defense, Tesco and Enterprise Inns added value.</yseop-yml:text>
                     <yseop-yml:inline-assemblies/>
                     <yseop-yml:inline-dslFunctionCalls/>

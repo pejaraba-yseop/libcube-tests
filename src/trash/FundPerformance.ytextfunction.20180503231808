@@ -20,7 +20,7 @@
         \_texts:Options:FundPerformanceVsIndex()
         ,primarily due to
         \_texts:Options:FundDriverPolarity()
-        \value(theGeneralData.fundPerformanceDriverFact.getDimension(DIMENSION_MEASURE))
+        \value(theGeneralData.fundPerformanceDriverFact.getMember(DIMENSION_MEASURE))
         .
         \p
 
@@ -32,7 +32,7 @@
 
         \endOfLine
         \_texts:Options:FundDriverPolarity()
-        \value(theGeneralData.fundPerformanceDriverFact.getDimension(DIMENSION_MEASURE))
+        \value(theGeneralData.fundPerformanceDriverFact.getMember(DIMENSION_MEASURE))
         was the main driver of the fund's
         \_texts:Options:FundMovement2()
         over the quarter and

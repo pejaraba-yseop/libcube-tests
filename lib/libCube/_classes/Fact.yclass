@@ -247,7 +247,7 @@ function LibCube:Fact::getMeasureValue()
 ;
 
 function LibCube:Fact::getDate()
---> return this.getDimension(DIMENSION_TIME).date
+--> return this.getMember(DIMENSION_TIME).date
 ;
 
 function LibCube:Fact::checkDimensions()
@@ -290,7 +290,7 @@ function LibCube:Fact::getRelatedIndicatorFact(LibCube:IndicatorMember indicator
         relatedFacts = as(?fact, ?fact.nonIndicatorMembersId == this.nonIndicatorMembersId);
         relatedFactsByIndicator = new(HashMap);
         foreach(_relatedFact,relatedFacts){
-            relatedFactsByIndicator[_relatedFact.getDimension(DIMENSION_INDICATOR)] = _relatedFact;
+            relatedFactsByIndicator[_relatedFact.getMember(DIMENSION_INDICATOR)] = _relatedFact;
         }
     }
     

@@ -81,9 +81,7 @@ function getExistingMembersByDimension(Collection facts, Collection dimensions)
     foreach(_dimension, dimensions){
         members = new(HashSet);
         foreach(_fact, facts){
-        //    if(members.contains(_fact.getDimension(_dimension)) == false){
-                members.add(_fact.getDimension(_dimension));
-        //    }
+            members.add(_fact.getMember(_dimension));
         }
 
         membersByDimension[_dimension] = members;
@@ -113,8 +111,8 @@ function LibCube:MultidimensionalTotalFactsCreator::calculateTotals()
     foreach(_fact, facts){
         currentMembers = new(HashSet);
         foreach(_dimension, dimensions){
-            if(membersByDimension[_dimension].contains(_fact.getDimension(_dimension)) == true){
-                currentMembers.add(_fact.getDimension(_dimension));
+            if(membersByDimension[_dimension].contains(_fact.getMember(_dimension)) == true){
+                currentMembers.add(_fact.getMember(_dimension));
             }
         }
 

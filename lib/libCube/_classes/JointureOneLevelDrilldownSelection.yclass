@@ -37,7 +37,7 @@ function LibCube:JointureOneLevelDrilldownSelection::populateSelection()
 --> local Collection theSelectedFacts, LibCube:Member selectedMember
 --> action {
     if(parentFact != null){
-        selectedMember = parentFact.getDimension(dimension); 
+        selectedMember = parentFact.getMember(dimension); 
 	    theSelectedFacts = as(?fact,
                         ?fact.factMeasures != null, 
                         //?att = jointure.attribute,

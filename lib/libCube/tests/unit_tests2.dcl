@@ -560,9 +560,116 @@ function LibCube:Test:measureGetMdxFullNameTest()
 ;
 
 function LibCube:Test:multidimensionalTotalFactsCreatorTest()
---> local LibCube:MultidimensionalTotalFactsCreator multidimensionalTotalFactsCreator
---> action {
+--> local LibCube:MultidimensionalTotalFactsCreator multidimensionalTotalFactsCreator,
+          LibCube:Dimension dimensionStore,
+          LibCube:Dimension dimensionCity,
+          LibCube:Dimension dimensionProduct,
+          Collection facts, 
+          Collection dimensions,
 
+          LibCube:Fact fact1,
+          LibCube:Fact fact2,
+          LibCube:Fact fact3,
+
+          LibCube:FactMeasure factMeasure1,
+          LibCube:FactMeasure factMeasure2,
+          LibCube:FactMeasure factMeasure3,
+
+          LibCube:Measure valueMeasure,
+          LibCube:Measure theTotalMeasure,
+
+          LibCube:Member storeMember,
+          LibCube:Member cityMember,
+          LibCube:Member productMember
+--> action {
+    logInfo("Testing multidimensionalTotalFactsCreatorTest");
+
+    //label for the measure for any fact
+    valueMeasure = new(LibCube:Measure);
+    valueMeasure.label = "value";
+
+    theTotalMeasure = new(LibCube:Measure);
+    theTotalMeasure.label = "totalvalue";
+    //-----------------------------------------------------------------------------------
+    storeMember = new(LibCube:Member);
+    storeMember.dimension = DIMENSION_STORE;
+    storeMember.label = "SuperStic Store";
+    
+    cityMember = new(LibCube:Member);
+    cityMember.dimension = DIMENSION_CITY;
+    cityMember.label = "Bogota";
+
+    productMember = new(LibCube:Member);
+    productMember.dimension = DIMENSION_PRODUCT;
+    productMember.label = "Product American";
+
+    //setting fact measure values
+    factMeasure1 = new(LibCube:FactMeasure);
+    factMeasure1.measure = valueMeasure;
+    factMeasure1.value = 5;
+
+    factMeasure2 = new(LibCube:FactMeasure);
+    factMeasure2.measure = valueMeasure;
+    factMeasure2.value = -8;
+
+    factMeasure3 = new(LibCube:FactMeasure);
+    factMeasure3.measure = valueMeasure;
+    factMeasure3.value = 10;
+    //------------------------
+    fact1 = new(LibCube:Fact);
+    fact1.factMeasures.add(factMeasure1);
+    fact2 = new(LibCube:Fact);
+    fact2.factMeasures.add(factMeasure2);
+    fact3 = new(LibCube:Fact);
+    fact3.factMeasures.add(factMeasure3);
+
+    //----------
+    fact1.members.add(storeMember);
+    fact1.members.add(cityMember);
+    fact1.members.add(productMember);
+    
+    fact2.members.add(storeMember);
+    fact2.members.add(cityMember);
+    fact2.members.add(productMember);
+
+    fact3.members.add(storeMember);
+    fact3.members.add(cityMember);
+    fact3.members.add(productMember);
+    //-------------------------------------------------------------------
+
+    multidimensionalTotalFactsCreator = new(LibCube:MultidimensionalTotalFactsCreator);
+    //--------------------addDimension-----------------------------------------------------
+        //CASE 1
+    assert(multidimensionalTotalFactsCreator.dimensions.size()==0);
+        //CASE 2
+    dimensionStore = new(LibCube:Dimension);
+    dimensionStore.mdxName = "dimension1.mdxName";
+    multidimensionalTotalFactsCreator.addDimension(dimensionStore);
+    assert(multidimensionalTotalFactsCreator.dimensions.size()==1);
+    assert(multidimensionalTotalFactsCreator.dimensions.get(_FIRST)==dimensionStore);
+    //--------------------------------------------------------------------------------------
+    //--------------------calculateTotals--------------------------------------------------
+    dimensions = new(List);
+    dimensions.add(DIMENSION_CITY);
+    dimensions.add(DIMENSION_STORE);
+    dimensions.add(DIMENSION_PRODUCT);
+
+    facts = new(List);
+    facts.add(fact1);
+    facts.add(fact2);
+    facts.add(fact3);
+
+    multidimensionalTotalFactsCreator.facts = facts;
+    multidimensionalTotalFactsCreator.dimensions = dimensions;
+    multidimensionalTotalFactsCreator.measureForTotal = valueMeasure;
+    multidimensionalTotalFactsCreator.totalMeasure = theTotalMeasure;
+    multidimensionalTotalFactsCreator.calculateTotals();
+
+    foreach(_factMeasures,multidimensionalTotalFactsCreator.totalFacts.get(1).factMeasures){
+        assert(_factMeasures.value == factMeasure1.value + factMeasure2.value + factMeasure3.value );
+    }
+    //--------------------------------------------------------------------------------------
+    logInfo("LibCube:Test:multidimensionalTotalFactsCreatorTest() passed");
 }
 ;
 
@@ -622,10 +729,227 @@ function LibCube:Test:memberGetMdxFullNameTest()
 }
 ;
 
+function LibCube:Test:NonIndicatorMembersIdTest()
+--> local 
+           LibCube:NonIndicatorMembersId nonIndicatorMembersId,
+           LibCube:NonIndicatorMembersId nonIndicatorMembersIdComparator,
+           HashSet nonIndicatorMembers,
+           LibCube:Member member1,
+           LibCube:Member member2,
+           LibCube:Member member3
+--> action {
+    logInfo("Running NonIndicatorMembersIdTest tests");
+    member1 = new(LibCube:Member);
+    member1.label = "member1.label";
+    member2 = new(LibCube:Member);
+    member2.label = "member2.label";
+    member3 = new(LibCube:Member);
+    member3.label = "member3.label";
+    //---------------isEqualTo,equalMembers--------------------------------------------
+    nonIndicatorMembersId = new(LibCube:NonIndicatorMembersId);
+    nonIndicatorMembersIdComparator = new(LibCube:NonIndicatorMembersId);
+    nonIndicatorMembers = new(HashSet);
+    nonIndicatorMembers.add(member1);
+    nonIndicatorMembers.add(member2);
+    nonIndicatorMembers.add(member3);
+    nonIndicatorMembersId.nonIndicatorMembers = nonIndicatorMembers;
+    nonIndicatorMembersIdComparator.nonIndicatorMembers = new(HashSet);
+    assert( nonIndicatorMembersId.isEqualTo(nonIndicatorMembersIdComparator) == false );
+    nonIndicatorMembersIdComparator.nonIndicatorMembers = nonIndicatorMembers;
+    assert( nonIndicatorMembersId.isEqualTo(nonIndicatorMembersIdComparator) == true );
+    //----------------------------------------------------------------------------------
+    assert(nonIndicatorMembersId.getText() == concat(member1.label,member2.label,member3.label));
+    logInfo("LibCube:Test:NonIndicatorMembersIdTest() passed");
+}
+;
+
+function LibCube:Test:positiveNegativeFactsSorterTest()
+--> local 
+          LibCube:PositiveNegativeFactsSorter positiveNegativeFactsSorter,
+          LibCube:Measure valueMeasure,
+          LibCube:TimeMember time2k19,
+          LibCube:TimeMember time2k18,
+          LibCube:TimeMember time2k17,
+          LibCube:TimeMember time2k16,
+          LibCube:TimeMember time2k15,
+          LibCube:FactMeasure factMeasure2k15,
+          LibCube:FactMeasure factMeasure2k16,
+          LibCube:FactMeasure factMeasure2k17,
+          LibCube:FactMeasure factMeasure2k18,
+          LibCube:FactMeasure factMeasure2k19,
+          LibCube:Fact fact2k15,
+          LibCube:Fact fact2k16,
+          LibCube:Fact fact2k17,
+          LibCube:Fact fact2k18,
+          LibCube:Fact fact2k19,
+          List facts
+--> action{
+
+    logInfo("Running positiveNegativeFactsSorterTest tests");
+    //fact value and label to give them shape-------------------------------------------------
+    time2k19 = new(LibCube:TimeMember);
+    time2k19.dimension = DIMENSION_TIME;
+    time2k19.label = "2018";
+    time2k19.date = Date..stringToDate("2018-01-01");
+
+    time2k18 = new(LibCube:TimeMember);
+    time2k18.dimension = DIMENSION_TIME;
+    time2k18.label = "2018";
+    time2k18.date = Date..stringToDate("2018-01-01");
+
+    time2k17 = new(LibCube:TimeMember);
+    time2k17.dimension = DIMENSION_TIME;
+    time2k17.label = "2017";
+    time2k17.date = Date..stringToDate("2017-01-01");
+
+    time2k16 = new(LibCube:TimeMember);
+    time2k16.dimension = DIMENSION_TIME;
+    time2k16.label = "2016";
+    time2k16.date = Date..stringToDate("2016-01-01");
+
+    time2k15 = new(LibCube:TimeMember);
+    time2k15.dimension = DIMENSION_TIME;
+    time2k15.label = "2015";
+    time2k15.date = Date..stringToDate("2015-01-01");
+
+    //-----------------------------------------------------------------------------------------
+    
+    //label for the measure for any fact
+    valueMeasure = new(LibCube:Measure);
+    valueMeasure.label = "value";
+    //-----------------------------------------------------------------------------------
+
+    //setting fact measure values
+    factMeasure2k15 = new(LibCube:FactMeasure);
+    factMeasure2k15.measure = valueMeasure;
+    factMeasure2k15.value = -8;
+
+    factMeasure2k16 = new(LibCube:FactMeasure);
+    factMeasure2k16.measure = valueMeasure;
+    factMeasure2k16.value = 8;
+
+    factMeasure2k17 = new(LibCube:FactMeasure);
+    factMeasure2k17.measure = valueMeasure;
+    factMeasure2k17.value = 5;
+
+    factMeasure2k18 = new(LibCube:FactMeasure);
+    factMeasure2k18.measure = valueMeasure;
+    factMeasure2k18.value = 10;
+
+    factMeasure2k19 = new(LibCube:FactMeasure);
+    factMeasure2k19.measure = valueMeasure;
+    factMeasure2k19.value = -9;
+
+    //-----------------------------------------------------------------------------------
+
+    //init of every fact that will be inside the factSorter class
+    fact2k15 = new(LibCube:Fact);
+    fact2k15.timeMember = time2k15;//setting the fact shape 
+    fact2k15.members.add(time2k15);//setting the fact shape
+    fact2k15.factMeasures = factMeasure2k15;
+
+    fact2k16 = new(LibCube:Fact);
+    fact2k16.timeMember = time2k16;//setting the fact shape 
+    fact2k16.members.add(time2k16);//setting the fact shape
+    fact2k16.factMeasures = factMeasure2k16;
+    
+    fact2k17 = new(LibCube:Fact);
+    fact2k17.timeMember = time2k17;//setting the fact shape 
+    fact2k17.members.add(time2k17);//setting the fact shape
+    fact2k17.factMeasures = factMeasure2k17;
+
+    fact2k18 = new(LibCube:Fact);
+    fact2k18.timeMember = time2k18;//setting the fact shape 
+    fact2k18.members.add(time2k18);//setting the fact shape
+    fact2k18.factMeasures = factMeasure2k18;
+
+    fact2k19 = new(LibCube:Fact);
+    fact2k19.timeMember = time2k19;//setting the fact shape 
+    fact2k19.members.add(time2k18);//setting the fact shape
+    fact2k19.factMeasures = factMeasure2k19;
+
+    //---------------------------------------------------------------------------------------
+
+    //Adding the every fact to facts list
+    facts = new(List); 
+    facts.add(fact2k16);
+    facts.add(fact2k17);
+    facts.add(fact2k18);
+
+    positiveNegativeFactsSorter = new(LibCube:PositiveNegativeFactsSorter);
+    positiveNegativeFactsSorter.sortType = SORT_TYPE_ONE_MEASURE;
+    positiveNegativeFactsSorter.useAbsoluteValue = true;
+    positiveNegativeFactsSorter.measure = valueMeasure;
+    positiveNegativeFactsSorter.facts = facts;
+
+    //-----------------------sortFacts-----------------------------------------------
+    positiveNegativeFactsSorter.sortFacts();
+    assert(positiveNegativeFactsSorter.positiveSortedFacts.size() == 3);
+    assert(positiveNegativeFactsSorter.negativeSortedFacts.size() == 0);
+    assert(positiveNegativeFactsSorter.positiveSortedFacts.get(_FIRST) == fact2k18);
+    //CASE 2
+    facts.add(fact2k15);
+    positiveNegativeFactsSorter.facts = facts;
+    positiveNegativeFactsSorter.sortFacts();
+    assert(positiveNegativeFactsSorter.positiveSortedFacts.size() == 3);
+    assert(positiveNegativeFactsSorter.negativeSortedFacts.size() == 1);
+    assert(positiveNegativeFactsSorter.negativeSortedFacts.get(_FIRST) == fact2k15);
+    //--------------------------------------------------------------------------------
+    //-----------------------getTopNPositiveFacts-------------------------------------
+    facts.remove(fact2k17);
+    positiveNegativeFactsSorter.facts = facts;
+    positiveNegativeFactsSorter.sortFacts();
+    assert(positiveNegativeFactsSorter.getTopNPositiveFacts(2).get(2) == fact2k16);
+    //--------------------------------------------------------------------------------
+    //-----------------------getTopNNegativeFacts-------------------------------------
+    assert(positiveNegativeFactsSorter.getTopNNegativeFacts(2).get(_FIRST) == fact2k15);
+    //--------------------------------------------------------------------------------
+    //-----------------------getTopPositiveFact-------------------------------------
+    assert(positiveNegativeFactsSorter.getTopPositiveFact() == fact2k18);
+    facts.remove(fact2k18);
+    positiveNegativeFactsSorter.facts = facts;
+    positiveNegativeFactsSorter.sortFacts();
+    assert(positiveNegativeFactsSorter.getTopPositiveFact() == fact2k16);
+    //---------------------------------------------------------------------------------
+    //-----------------------getTopNegativeFact----------------------------------------
+    facts = new(List); 
+    facts.add(fact2k15);
+    facts.add(fact2k16);
+    facts.add(fact2k17);
+    facts.add(fact2k19);
+    facts.add(fact2k18);
+    positiveNegativeFactsSorter.facts = facts;
+    positiveNegativeFactsSorter.sortFacts();
+    assert(positiveNegativeFactsSorter.getTopNegativeFact() == fact2k19);
+    //---------------------------------------------------------------------------------
+    //-----------------------getPositiveFact-------------------------------------------
+    assert(positiveNegativeFactsSorter.getPositiveFact(1) == fact2k18);
+    assert(positiveNegativeFactsSorter.getPositiveFact(2) == fact2k16);
+    //---------------------------------------------------------------------------------
+    //-----------------------getNegativeFact-------------------------------------------
+    assert(positiveNegativeFactsSorter.getNegativeFact(1) == fact2k19);
+    assert(positiveNegativeFactsSorter.getNegativeFact(2) == fact2k15);
+    //---------------------------------------------------------------------------------
+    //-----------------------getPositiveFactsGreaterThan-------------------------------
+    assert(positiveNegativeFactsSorter.getPositiveFactsGreaterThan(10).size() == 0);
+    assert(positiveNegativeFactsSorter.getPositiveFactsGreaterThan(5).size() == 2);
+    assert(positiveNegativeFactsSorter.getPositiveFactsGreaterThan(0).size() == 3);
+    //---------------------------------------------------------------------------------
+    //-----------------------getNegativeFactsGreaterThan-------------------------------
+    assert(positiveNegativeFactsSorter.getNegativeFactsGreaterThan(10).size() == 0);
+    assert(positiveNegativeFactsSorter.getNegativeFactsGreaterThan(-5).size() == 0);
+    assert(positiveNegativeFactsSorter.getNegativeFactsGreaterThan(-10).size() == 2);
+    assert(positiveNegativeFactsSorter.getNegativeFactsGreaterThan(-9).size() == 1);
+    //---------------------------------------------------------------------------------
+    logInfo("LibCube:Test:positiveNegativeFactsSorterTest() passed");
+
+}
+;
+
 function LibCube:Test:main2()
 --> action {
     logInfo("Running LibCube unit tests");
-    
+  
     LibCube:Test:dimensionTest();
     LibCube:Test:getDimensionNameFromMdxNameTest();
     LibCube:Test:getDateTest();
@@ -635,6 +959,9 @@ function LibCube:Test:main2()
     LibCube:Test:jointureChildParentDimensionCondition();
     LibCube:Test:measureGetMdxFullNameTest();
     LibCube:Test:memberGetMdxFullNameTest();
-    
+    LibCube:Test:NonIndicatorMembersIdTest();
+
+    LibCube:Test:positiveNegativeFactsSorterTest();
+    //LibCube:Test:multidimensionalTotalFactsCreatorTest();
 }
 ;

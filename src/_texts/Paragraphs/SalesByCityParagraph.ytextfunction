@@ -11,15 +11,15 @@
 
 \endOfLine
 The city with the most sales revenue was
-\value(theGeneralData.topSalesRevenueCityFact.getDimension(DIMENSION_CITY).label)
+\value(theGeneralData.topSalesRevenueCityFact.getMember(DIMENSION_CITY).label)
 with incomes worth
 \value(theGeneralData.topSalesRevenueCityFact.getMeasure(MEASURE_SALE_VALUE).value)
 USD. However, the city with the biggest amount of sold units was
-\value(theGeneralData.topSoldUnitsCityFact.getDimension(DIMENSION_CITY).label)
+\value(theGeneralData.topSoldUnitsCityFact.getMember(DIMENSION_CITY).label)
  , reporting
 \value(theGeneralData.topSoldUnitsCityFact.getMeasure(MEASURE_SOLD_UNITS).value)
 sold cheeses.
-\value(theGeneralData.leastSalesRevenueCityFact.getDimension(DIMENSION_CITY).label)
+\value(theGeneralData.leastSalesRevenueCityFact.getMember(DIMENSION_CITY).label)
 was the city with the least amount of sales revenue with
 \value(theGeneralData.leastSalesRevenueCityFact.getMeasure(MEASURE_SALE_VALUE).value)
 USD</yseop-yml:text>

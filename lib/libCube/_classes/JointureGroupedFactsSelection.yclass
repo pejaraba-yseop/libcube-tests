@@ -55,7 +55,7 @@ function LibCube:JointureGroupedFactsSelection::getGroupedFacts()
    if(this._groupedSelectedFacts == null){
        this._groupedSelectedFacts = new(HashMap);
        foreach(_fact, this>>selectedFacts){
-           currentMember = _fact.getDimension(this.groupingDimension);
+           currentMember = _fact.getMember(this.groupingDimension);
            if(this._groupedSelectedFacts.containsKey(currentMember) == false){
              this._groupedSelectedFacts[currentMember] = new(List);
            }

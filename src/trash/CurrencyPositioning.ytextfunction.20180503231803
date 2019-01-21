@@ -13,7 +13,7 @@
 \endOfLine
 The fund's interest rate strategy, specifically the
 \_texts:Options:WeightStatus(theGeneralData.currencyDriverFact.weightStatus)
-\value(theGeneralData.currencyDriverFact.getDimension(DIMENSION_CURRENCY_ATTRIBUTION).label)
+\value(theGeneralData.currencyDriverFact.getMember(DIMENSION_CURRENCY_ATTRIBUTION).label)
 duration position
 \_texts:Options:ReturnsStatus(theGeneralData.allCurrenciesDurationFact.returnStatus)
 .
@@ -25,7 +25,7 @@ duration position
 \endIf
 
  were partially offset by the cross-market exposure to
-\value(theGeneralData.currencyDriverOffsetFact.getDimension(DIMENSION_CURRENCY_ATTRIBUTION).label)
+\value(theGeneralData.currencyDriverOffsetFact.getMember(DIMENSION_CURRENCY_ATTRIBUTION).label)
 duration .</yseop-yml:text>
                     <yseop-yml:inline-assemblies/>
                     <yseop-yml:inline-dslFunctionCalls/>

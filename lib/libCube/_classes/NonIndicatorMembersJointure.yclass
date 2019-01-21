@@ -39,7 +39,7 @@ function LibCube:NonIndicatorMembersJointure::getJointureResult(LibCube:Fact the
         
     }
     else{
-      if(_dimensionCondition.acceptsEmpty == true && theFact.getDimension(_dimensionCondition.dimension) == null){
+      if(_dimensionCondition.acceptsEmpty == true && theFact.getMember(_dimensionCondition.dimension) == null){
         dimOK = true;
       }
     }

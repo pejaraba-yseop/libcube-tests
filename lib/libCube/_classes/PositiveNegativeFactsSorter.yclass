@@ -159,7 +159,7 @@ interface LibCube:PositiveNegativeFactsSorter extends LibCube:FactsSorter
     method getNegativeRank(LibCube:Member member)
     --> domains Number
     --> documentation "Gets the rank of a negative fact that has a given dimension member"
-    
+
     classProperties
     --> dsl -> Textualization
         --> language LANG_en
@@ -173,7 +173,7 @@ implementation LibCube:PositiveNegativeFactsSorter override{
 }
 ;
 
-Function LibCube:PositiveNegativeFactsSorter::sortFacts()
+function LibCube:PositiveNegativeFactsSorter::sortFacts()
 --> local Boolean hasAllMeasures, 
           Boolean hasAttributes, 
           SortParameter sortParam, 
@@ -187,6 +187,9 @@ Function LibCube:PositiveNegativeFactsSorter::sortFacts()
     negativeSortedFacts = new(OrderedSet);
     
     sortParam = new(SortParameter);
+    positiveSortParam = new(SortParameter);
+    negativeSortParam = new(SortParameter);
+
     sortingOptions = new(LibCube:SortingOptions);
     
     sortingOptions.sortType = sortType;
@@ -196,7 +199,7 @@ Function LibCube:PositiveNegativeFactsSorter::sortFacts()
         case(SORT_TYPE_ONE_MEASURE):{
             sortingOptions.measure = measure;
             sortParam.expressionToValuate = LibCube:FactsSorter::oneMeasureComparatorFunc;
-
+            
             // only sort facts with the measure
             foreach(_fact, facts){
                 hasAllMeasures = true
@@ -273,12 +276,17 @@ Function LibCube:PositiveNegativeFactsSorter::sortFacts()
     sortParam.argumentForExpressionToValuate = sortingOptions;
     sortParam.order = _CALCULATED_RELATIVE_ORDER;
     sortParam.ascendant = isAscendant;
-    positiveSortParam = sortParam.clone();
-    negativeSortParam = sortParam.clone();
-
-    positiveSortParam.ascendant = isPositiveAscendant;
-    negativeSortParam.ascendant = isNegativeAscendant;
     
+    positiveSortParam.argumentForExpressionToValuate = sortingOptions;
+    positiveSortParam.order = _CALCULATED_RELATIVE_ORDER;
+    positiveSortParam.ascendant = isPositiveAscendant;
+    positiveSortParam.expressionToValuate = sortParam.expressionToValuate;
+    
+    negativeSortParam.argumentForExpressionToValuate = sortingOptions;
+    negativeSortParam.order = _CALCULATED_RELATIVE_ORDER;
+    negativeSortParam.ascendant = isNegativeAscendant;
+    negativeSortParam.expressionToValuate = sortParam.expressionToValuate;
+
     if(sortedFacts != null && sortedFacts.isEmpty() == false){
       sortedFacts.sort(sortParam);
     }
@@ -310,43 +318,43 @@ function genericGetTopNFacts(OrderedSet sortedFacts, Number numberOfFacts)
 }
 ;
 
-Function LibCube:PositiveNegativeFactsSorter::getTopNPositiveFacts(Number numberOfFacts)
+function LibCube:PositiveNegativeFactsSorter::getTopNPositiveFacts(Number numberOfFacts)
 --> action {
     return genericGetTopNFacts(positiveSortedFacts, numberOfFacts);
 }
 ;
 
-Function LibCube:PositiveNegativeFactsSorter::getTopNNegativeFacts(Number numberOfFacts)
+function LibCube:PositiveNegativeFactsSorter::getTopNNegativeFacts(Number numberOfFacts)
 --> action {
     return genericGetTopNFacts(negativeSortedFacts, numberOfFacts);
 }
 ;
 
-Function LibCube:PositiveNegativeFactsSorter::getTopPositiveFact()
+function LibCube:PositiveNegativeFactsSorter::getTopPositiveFact()
 --> action {
     return positiveSortedFacts.get(_FIRST)
 }
 ;
 
-Function LibCube:PositiveNegativeFactsSorter::getTopNegativeFact()
+function LibCube:PositiveNegativeFactsSorter::getTopNegativeFact()
 --> action {
     return negativeSortedFacts.get(_FIRST)
 }
 ;
 
-Function LibCube:PositiveNegativeFactsSorter::getPositiveFact(Number position)
+function LibCube:PositiveNegativeFactsSorter::getPositiveFact(Number position)
 --> action {
     return positiveSortedFacts.get(position)
 }
 ;
 
-Function LibCube:PositiveNegativeFactsSorter::getNegativeFact(Number position)
+function LibCube:PositiveNegativeFactsSorter::getNegativeFact(Number position)
 --> action {
     return negativeSortedFacts.get(position)
 }
 ;
 
-Function LibCube:PositiveNegativeFactsSorter::getPositiveFactsGreaterThan(Number value)
+function LibCube:PositiveNegativeFactsSorter::getPositiveFactsGreaterThan(Number value)
 --> local OrderedSet greaterFacts
 --> action {
     greaterFacts = new(OrderedSet)
@@ -376,7 +384,7 @@ Function LibCube:PositiveNegativeFactsSorter::getPositiveFactsGreaterThan(Number
 }
 ;
 
-Function LibCube:PositiveNegativeFactsSorter::getNegativeFactsGreaterThan(Number value)
+function LibCube:PositiveNegativeFactsSorter::getNegativeFactsGreaterThan(Number value)
 --> local OrderedSet greaterFacts
 --> action {
     greaterFacts = new(OrderedSet)
@@ -406,7 +414,7 @@ Function LibCube:PositiveNegativeFactsSorter::getNegativeFactsGreaterThan(Number
 }
 ;
 
-Function LibCube:PositiveNegativeFactsSorter::getPositiveFactsLowerThan(Number value)
+function LibCube:PositiveNegativeFactsSorter::getPositiveFactsLowerThan(Number value)
 --> local OrderedSet lowerFacts
 --> action {
     lowerFacts = new(OrderedSet)
@@ -435,7 +443,7 @@ Function LibCube:PositiveNegativeFactsSorter::getPositiveFactsLowerThan(Number v
 }
 ;
 
-Function LibCube:PositiveNegativeFactsSorter::getNegativeFactsLowerThan(Number value)
+function LibCube:PositiveNegativeFactsSorter::getNegativeFactsLowerThan(Number value)
 --> local OrderedSet lowerFacts
 --> action {
     lowerFacts = new(OrderedSet)
@@ -464,7 +472,7 @@ Function LibCube:PositiveNegativeFactsSorter::getNegativeFactsLowerThan(Number v
 }
 ;
 
-Function LibCube:PositiveNegativeFactsSorter::getPositiveFactsSumUnderTotalPercentage(Number percentage)
+function LibCube:PositiveNegativeFactsSorter::getPositiveFactsSumUnderTotalPercentage(Number percentage)
 --> local OrderedSet factsUnderTotal
 --> action {
     factsUnderTotal = new(OrderedSet)
@@ -473,7 +481,7 @@ Function LibCube:PositiveNegativeFactsSorter::getPositiveFactsSumUnderTotalPerce
 }
 ;
 
-Function LibCube:PositiveNegativeFactsSorter::getNegativeFactsSumUnderTotalPercentage(Number percentage)
+function LibCube:PositiveNegativeFactsSorter::getNegativeFactsSumUnderTotalPercentage(Number percentage)
 --> local OrderedSet factsUnderTotal
 --> action {
     factsUnderTotal = new(OrderedSet)
@@ -486,7 +494,7 @@ function genericGetRank(OrderedSet sortedFacts, LibCube:Member member)
 --> domains Number
 --> action {
     foreach(_fact, sortedFacts){
-        if(_fact.getDimension(member.dimension) == member){
+        if(_fact.getMember(member.dimension) == member){
             return sortedFacts.indexOf(_fact);
         }
     }

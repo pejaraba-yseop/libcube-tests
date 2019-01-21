@@ -1,6 +1,7 @@
 interface LibCube:NonIndicatorMembersId
     field nonIndicatorMembers
         --> domains HashSet
+        --> domainsLevel2 LibCube:Member
         --> xmlMapping XmlMappingProperty_NO_SAVE
         --> dsl -> Textualization
             --> language LANG_en
@@ -51,7 +52,12 @@ function LibCube:NonIndicatorMembersId::getText()
 --> action {
     id=""
     foreach(_member, this.nonIndicatorMembers){
-        id = concat(id, _member.identifier);
+        if(_member.identifier == null){
+            id = concat(id, _member.label);
+        }
+        else{
+            id = concat(id, _member.identifier);
+        }
     }
     return id;
 }

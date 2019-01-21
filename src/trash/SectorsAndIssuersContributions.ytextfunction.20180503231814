@@ -17,7 +17,7 @@
     \_texts:Options:WeightStatus(Fact:_Fact.weightStatus)
     \_texts:WordSynonyms:PositionSynonym()
     in
-    \value(Fact:_Fact.getDimension(DIMENSION_SECTOR).label)
+    \value(Fact:_Fact.getMember(DIMENSION_SECTOR).label)
     securities
 
     \if(TEXT_LIST_EXECUTION_CONTEXT.currentItemIndex == 1)
@@ -27,7 +27,7 @@
     such as
 
     \foreach(_issuerFact, Fact:_Fact.topDriverIssuersFacts, #VOX5#)
-        \value(_issuerFact.getDimension(DIMENSION_ISSUER).label)
+        \value(_issuerFact.getMember(DIMENSION_ISSUER).label)
 
     \endForeach
 
@@ -54,7 +54,7 @@
 
 \_texts:WordSynonyms:ConverselySynonym()
 ,the bias towards
-\value(theGeneralData.bottomIssuerFact.getDimension(DIMENSION_ISSUER).label)
+\value(theGeneralData.bottomIssuerFact.getMember(DIMENSION_ISSUER).label)
 ,
 
 \switch(theGeneralData.creditPositioningStatus)

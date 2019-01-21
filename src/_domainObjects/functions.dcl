@@ -76,7 +76,7 @@ function setTopProductTypeSalesRevenueDriver()
 --> action {
     topTypeProductsFacts = new(List);
     foreach(_productFact, PRODUCT_SALES_FACTS_SELECTION.selectedFacts){
-        if(_productFact.getDimension(DIMENSION_PRODUCT).parent == getGeneralData().topSalesRevenueProductTypeFact.getDimension(DIMENSION_PRODUCT)){
+        if(_productFact.getMember(DIMENSION_PRODUCT).parent == getGeneralData().topSalesRevenueProductTypeFact.getMember(DIMENSION_PRODUCT)){
             topTypeProductsFacts.add(_productFact);
         }
     }
@@ -114,7 +114,7 @@ function setTopProductTypeSoldUnitsDriver()
 --> action {
     topTypeProductsFacts = new(List);
     foreach(_productFact, PRODUCT_SALES_FACTS_SELECTION.selectedFacts){
-        if(_productFact.getDimension(DIMENSION_PRODUCT).parent == getGeneralData().topSoldUnitsProductTypeFact.getDimension(DIMENSION_PRODUCT)){
+        if(_productFact.getMember(DIMENSION_PRODUCT).parent == getGeneralData().topSoldUnitsProductTypeFact.getMember(DIMENSION_PRODUCT)){
             topTypeProductsFacts.add(_productFact);
         }
     }
