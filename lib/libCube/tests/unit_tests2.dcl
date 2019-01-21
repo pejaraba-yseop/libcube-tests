@@ -946,6 +946,90 @@ function LibCube:Test:positiveNegativeFactsSorterTest()
 }
 ;
 
+function LibCube:Test:requestContextTest()
+--> local 
+            LibCube:RequestContext requestContext,
+            LibCube:DimensionRequestContext dimContext,
+            LibCube:MeasureRequestContext mesContext
+--> action{
+    logInfo("Running requestContextTest tests");
+    requestContext = new(LibCube:RequestContext);
+    //-----------------------addDimensionContext-------------------------------
+    requestContext.addDimensionContext("dimensionContextMdxName", "dimensionContextYseopId", "dimensionContextYseopMembersClass");
+    dimContext = requestContext.dimensionContexts.get(_FIRST);
+    assert(dimContext.mdxName == "dimensionContextMdxName");
+    assert(dimContext.yseopId == "dimensionContextYseopId");
+    assert(dimContext.yseopMembersClass == "dimensionContextYseopMembersClass");
+    //---------------------------------------------------------------------------------
+    //-----------------------addMeasureContext---------------------------------------
+    requestContext.addMeasureContext("measureContextMdxName", "measureContextYseopId");
+    mesContext = requestContext.measureContexts.get(_FIRST);
+    assert(mesContext.mdxName == "measureContextMdxName");
+    assert(mesContext.yseopId == "measureContextYseopId");
+    //---------------------------------------------------------------------------------
+    logInfo("LibCube:Test:requestContextTest() passed");
+}
+;
+
+function LibCube:Test:timeDimensionTest()
+--> local LibCube:TimeDimension timeDimension,
+          LibCube:TimeMember time2k19,
+          LibCube:TimeMember time2k18,
+          LibCube:TimeMember time2k18_2,
+          LibCube:TimeMember time2k17,
+          LibCube:TimeMember time2k16,
+          LibCube:TimeMember time2k15,
+          LibCube:TimeMember comparator
+--> action {
+    logInfo("Running timeDimensionTest tests");
+
+    time2k19 = new(LibCube:TimeMember);
+    time2k19.dimension = DIMENSION_TIME;
+    time2k19.label = "2019";
+    time2k19.date = Date..stringToDate("2019-01-21");
+
+    time2k18 = new(LibCube:TimeMember);
+    time2k18.dimension = DIMENSION_TIME;
+    time2k18.label = "2018-11";
+    time2k18.date = Date..stringToDate("2018-11-01");
+
+    time2k18_2 = new(LibCube:TimeMember);
+    time2k18_2.dimension = DIMENSION_TIME;
+    time2k18_2.label = "2018-06";
+    time2k18_2.date = Date..stringToDate("2018-06-16");
+
+    time2k17 = new(LibCube:TimeMember);
+    time2k17.dimension = DIMENSION_TIME;
+    time2k17.label = "2017";
+    time2k17.date = Date..stringToDate("2017-01-01");
+
+    time2k16 = new(LibCube:TimeMember);
+    time2k16.dimension = DIMENSION_TIME;
+    time2k16.label = "2016";
+    time2k16.date = Date..stringToDate("2016-01-01");
+
+    time2k15 = new(LibCube:TimeMember);
+    time2k15.dimension = DIMENSION_TIME;
+    time2k15.label = "2015";
+    time2k15.date = Date..stringToDate("2015-01-01");
+
+    timeDimension = new(LibCube:TimeDimension);
+    timeDimension.members.add(time2k17);
+    timeDimension.members.add(time2k18_2);
+    timeDimension.members.add(time2k16);
+    timeDimension.members.add(time2k18);
+    timeDimension.members.add(time2k15);
+    
+    comparator = timeDimension.getCurrentTimeMember();
+    assert(comparator.label == time2k18.label);
+    timeDimension.members.add(time2k19);
+    comparator = timeDimension.getCurrentTimeMember();
+    assert(comparator.label == time2k19.label);
+
+    logInfo("LibCube:Test:timeDimensionTest() passed");
+}
+;
+
 function LibCube:Test:main2()
 --> action {
     logInfo("Running LibCube unit tests");
@@ -962,6 +1046,8 @@ function LibCube:Test:main2()
     LibCube:Test:NonIndicatorMembersIdTest();
 
     LibCube:Test:positiveNegativeFactsSorterTest();
+    LibCube:Test:requestContextTest();
+    LibCube:Test:timeDimensionTest();
     //LibCube:Test:multidimensionalTotalFactsCreatorTest();
 }
 ;
