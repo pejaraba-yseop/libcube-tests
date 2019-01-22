@@ -38,16 +38,7 @@ interface LibCube:Dimension
             --> root "hierarchies"
             --> number PLURAL
         ;
-    field hierarchyMembersAccesors
-        --> domains LibCube:HierarchyMembersAccesor
-        --> documentation "The hierarchy accessors of the dimension."
-        --> xmlMapping XmlMappingProperty_NO_SAVE
-        --> multivalued true
-        --> dsl -> Textualization
-            --> language LANG_en
-            --> root "hierarchies"
-            --> number PLURAL
-        ;        
+    
     field defaultHierarchy
         --> domains LibCube:Hierarchy
         --> xmlMapping XmlMappingProperty_NO_SAVE
@@ -85,13 +76,14 @@ interface LibCube:Dimension
 
     method processDimension()
     --> domains Void
-
+    
     method getElemFullMdxName(LibCube:HierarchyElement elem, LibCube:Hierarchy hierarchy)
         --> domains String
 
 
     method getHierarchyAccessor(LibCube:Hierarchy hierarchy)
-        --> domains LibCube:HierarchyMembersAccesor
+        --> domains LibCube:Hierarchy
+        --> deprecated "Beta14"
 
     classProperties
     --> dsl -> Textualization
@@ -107,12 +99,12 @@ implementation LibCube:Dimension
 ;
 
 function LibCube:Dimension::processDimension()
---> local LibCube:HierarchyMembersAccesor theAccessor
+--> local LibCube:Hierarchy theAccessor
 --> action {
   foreach(_hierarchy , this>>hierarchies) {   
-    theAccessor = new(LibCube:HierarchyMembersAccesor)
+    theAccessor = new(LibCube:Hierarchy)
     theAccessor.hierarchyIdentifier = _hierarchy.identifier
-    theAccessor.hierarchy = _hierarchy;
+    theAccessor = _hierarchy;
     
     foreach(_node , _hierarchy) {
       this.members := LibCube:Hierarchy(_node).value;
@@ -137,7 +129,7 @@ function LibCube:Dimension::processDimension()
 
       theAccessor.membersByLevel.get(_node.depth()).add(_node.value)
     }
-    hierarchyMembersAccesors := theAccessor
+    hierarchies := theAccessor
   }
   
   //Loop through the members and add dimension to members
@@ -170,10 +162,11 @@ function LibCube:Dimension::getElemFullMdxName(LibCube:HierarchyElement elem, Li
 
 function LibCube:Dimension::getHierarchyAccessor(LibCube:Hierarchy hierarchy)
 --> action {
-    foreach(_accessor, hierarchyMembersAccesors){
+    return hierarchy;
+    /*foreach(_accessor, hierarchies){
         if(_accessor.hierarchy == hierarchy){
             return _accessor;
         }
-    }
+    }*/
 }
 ;

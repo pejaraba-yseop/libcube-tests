@@ -43,7 +43,7 @@ implementation LibCube:JointureChildParentDimensionCondition override {
 ;
 
 function LibCube:JointureChildParentDimensionCondition::init()
---> local Boolean valid, LibCube:Hierarchy theHierarchy, LibCube:HierarchyMembersAccesor hierarchyAccesor, Collection descendants, Collection pendingDescendants, LibCube:HierarchyElement currentDesc, Collection children
+--> local Boolean valid, LibCube:Hierarchy theHierarchy, LibCube:Hierarchy hierarchyAccesor, Collection descendants, Collection pendingDescendants, LibCube:HierarchyElement currentDesc, Collection children
 --> action{
     valid = true;
     if(this.members != null || (this.membersCollection.isEmpty() == false)){
@@ -65,7 +65,7 @@ function LibCube:JointureChildParentDimensionCondition::init()
         valid = false;
     }
     if(theHierarchy != null){
-        hierarchyAccesor = dimension.getHierarchyAccessor(theHierarchy);
+        hierarchyAccesor = theHierarchy;
     }
 
     if(hierarchyAccesor == null){
@@ -115,6 +115,7 @@ function LibCube:JointureChildParentDimensionCondition::init()
         
 }
 ;
+
 function LibCube:JointureChildParentDimensionCondition::generateQueryFragment() 
 --> local Boolean valid, LibCube:Hierarchy theHierarchy
 --> action{

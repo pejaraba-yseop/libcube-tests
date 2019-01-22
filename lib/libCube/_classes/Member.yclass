@@ -47,7 +47,7 @@ interface LibCube:Member extends LibCube:PrintableValuesObject
 
     method getMdxFullName
     args {
-			LibCube:Hierarchy    		hierarchy
+			LibCube:Hierarchy 		hierarchy
 			--> nullable			    true
 	}
     --> domains String	        
@@ -116,7 +116,7 @@ function LibCube:Member::compareSameClass (LibCube:Member ob)
 
 function LibCube:Member::getMdxFullName
 args {
-        LibCube:Hierarchy    		hierarchy
+        LibCube:Hierarchy 		hierarchy
         --> nullable			    true
 }
 --> action {

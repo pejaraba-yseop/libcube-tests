@@ -1,4 +1,4 @@
-interface LibCube:JointureDimensionCondition
+interface LibCube:JointureDimensionCondition 
     field dimension
         --> domains LibCube:Dimension
         --> xmlMapping XmlMappingProperty_NO_SAVE

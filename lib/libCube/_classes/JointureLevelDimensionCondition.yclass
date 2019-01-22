@@ -54,15 +54,15 @@ implementation LibCube:JointureLevelDimensionCondition override {
 ;
 
 function LibCube:JointureLevelDimensionCondition::init() 
---> local LibCube:HierarchyMembersAccesor hierarchyAccesor, Integer accesorIndex, Collection levelDescendants, Integer currentLevel, Collection leaves, Collection children
+--> local LibCube:Hierarchy hierarchyAccesor, Integer accesorIndex, Collection levelDescendants, Integer currentLevel, Collection leaves, Collection children
 --> action{
     if(this.membersCollection == null || this.membersCollection.isEmpty() == true){
         if(hierarchy==null){
-            hierarchyAccesor = dimension>>hierarchyMembersAccesors.get(_FIRST);
+            hierarchyAccesor = dimension>>hierarchies.get(_FIRST);
         }
         else{
             accesorIndex = dimension>>hierarchies.indexOf(hierarchy);
-            hierarchyAccesor = dimension>>hierarchyMembersAccesors.get(accesorIndex);
+            hierarchyAccesor = dimension>>hierarchies.get(accesorIndex);
         }
         
         if(hierarchyAccesor != null){

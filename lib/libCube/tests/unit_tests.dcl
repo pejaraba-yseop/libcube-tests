@@ -1208,8 +1208,6 @@ function LibCube:Test:getMeasureValue()
     fact.factMeasures.add(factMeasure2);
 
     comparingFactMeasure = fact.getMeasureValue();
-    logInfo(comparingFactMeasure);
-    logInfo(factMeasure2);
     assert(factMeasure2 == comparingFactMeasure );
 
     logInfo("LibCube:Test:getMeasureValue() passed");
@@ -1733,135 +1731,6 @@ function LibCube:Test:jointureMeasureConditionTest()
 }
 ;
 
-function LibCube:Test:getParentByLevelTest()
---> local 
-          LibCube:Cube cube,
-          LibCube:TimeMember memberYear,
-          LibCube:TimeMember memberMonthJan,
-          LibCube:TimeMember memberMonthFeb,
-          LibCube:TimeMember memberWeek3,
-          LibCube:TimeMember memberWeek2,
-          LibCube:TimeMember memberWeek1,
-          LibCube:TimeMember memberDay1,
-
-          LibCube:Dimension dimension,
-          LibCube:Hierarchy dimensionHierarchies,
-          
-          LibCube:Hierarchy yearHierarchy,
-          LibCube:Hierarchy monthJanHierarchy,
-          LibCube:Hierarchy monthFebHierarchy,
-          LibCube:Hierarchy week3Hierarchy,
-          LibCube:Hierarchy week2Hierarchy,
-          LibCube:Hierarchy week1Hierarchy,
-          LibCube:Hierarchy day1Hierarchy,
-
-          LibCube:HierarchyMembersAccesor theAccessor,
-
-          LibCube:Member resMember
---> action {
-    logInfo("Testing getParentByLevelTest");
-    //dimensions members---------------------------------
-    memberYear = new(LibCube:TimeMember);
-    memberYear.label = "2018";
-    memberYear.date = Date..stringToDate("2018-01-01");
-    
-    memberMonthJan = new(LibCube:TimeMember);
-    memberMonthJan.label = "January";
-    memberMonthJan.date = Date..stringToDate("2018-01-01");
-
-    memberMonthFeb = new(LibCube:TimeMember);
-    memberMonthFeb.label = "February";
-    memberMonthFeb.date = Date..stringToDate("2018-02-01");
-
-    memberWeek3 = new(LibCube:TimeMember);
-    memberWeek3.label = "Third Week";
-    memberWeek3.date = Date..stringToDate("2018-02-10");
-
-    memberWeek2 = new(LibCube:TimeMember);
-    memberWeek2.label = "Second Week";
-    memberWeek2.date = Date..stringToDate("2018-01-08");
-
-    memberWeek1 = new(LibCube:TimeMember);
-    memberWeek1.label = "First Week";
-    memberWeek1.date = Date..stringToDate("2018-01-05");
-
-    memberDay1 = new(LibCube:TimeMember);
-    memberDay1.label = "01";
-    memberDay1.date = Date..stringToDate("2018-01-01");
-    
-    //hierarchies -----------------------------------------
-    day1Hierarchy = new(LibCube:Hierarchy);
-    day1Hierarchy.label = "01";
-    day1Hierarchy.value = memberDay1;
-
-    week3Hierarchy = new(LibCube:Hierarchy);
-    week3Hierarchy.label = "Third week";
-    week3Hierarchy.value = memberWeek3;
-    week3Hierarchy.addChild(day1Hierarchy);
-
-    week2Hierarchy = new(LibCube:Hierarchy);
-    week2Hierarchy.label = "Second week";
-    week2Hierarchy.value = memberWeek2;
-
-    week1Hierarchy = new(LibCube:Hierarchy);
-    week1Hierarchy.label = "First Week";
-    week1Hierarchy.value = memberWeek1;
-
-    monthJanHierarchy = new(LibCube:Hierarchy);
-    monthJanHierarchy.label = "January";
-    monthJanHierarchy.value = memberMonthJan;
-    monthJanHierarchy.addChild(week2Hierarchy);
-    monthJanHierarchy.addChild(week1Hierarchy);
-    
-    monthFebHierarchy = new(LibCube:Hierarchy);
-    monthFebHierarchy.label = "February";
-    monthFebHierarchy.value = memberMonthFeb;
-    monthFebHierarchy.addChild(week3Hierarchy);
-
-    yearHierarchy = new(LibCube:Hierarchy);
-    yearHierarchy.label = "2018"; 
-    yearHierarchy.value = memberYear;
-    yearHierarchy.addChild(monthJanHierarchy);
-    yearHierarchy.addChild(monthFebHierarchy);
-    //---------------------------------------------------
-
-    //dimension setting
-    dimension = new(LibCube:Dimension);
-    dimension.hierarchies.add(yearHierarchy);
-    
-    //---------------------------------------------------
-    cube = new(LibCube:Cube);
-    cube.dimensions.add(dimension);
-    
-    cube.initDimensions();
-    
-    foreach(_dimension , cube>>dimensions){
-        foreach(_member,_dimension>>members){
-                
-            if(_member.label == "01"){
-                assert(_member.getParentByLevel(3) == memberYear);
-                assert(_member.getParentByLevel(2) == memberMonthFeb);
-                assert(_member.getParentByLevel(1) == memberWeek3);
-            }
-            if(_member.label == "January" || _member.label == "February"){
-                assert(_member.getParentByLevel(1) == memberYear);
-                assert(_member.getParentByLevel(2) == null);
-            }
-            if(_member.label == "2018"){
-                assert(_member.getParentByLevel(1) == null);
-            }
-            if(_member.label == "First Week"){
-                assert(_member.getParentByLevel(1) == memberMonthJan);
-                assert(_member.getParentByLevel(2) == memberYear);
-                assert(_member.getParentByLevel(3) == null);
-            }
-        }
-    }
-    logInfo("LibCube:Test:getParentByLevelTest() passed");
-    
-}
-;
-
 function LibCube:Test:populateSelectionTest()
 --> local LibCube:Jointure jointure,
           LibCube:JointureOneFactSelection jointureOneFactSelection,
@@ -2155,7 +2024,6 @@ function LibCube:Test:main()
     LibCube:Test:jointureFactsSelectionTest();
     LibCube:Test:jointureLevelDimensionConditionTest();
     LibCube:Test:jointureMeasureConditionTest();
-    LibCube:Test:getParentByLevelTest();//issue22
     
     LibCube:Test:getIndicatorMemberTest();//issue26
     

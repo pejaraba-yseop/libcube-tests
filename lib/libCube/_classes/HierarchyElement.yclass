@@ -1,4 +1,4 @@
-interface LibCube:HierarchyElement extends LibCube:Member
+interface LibCube:HierarchyElement extends LibCube:Member 
     field correlation
         --> domains libCube:_constLists:correlation
         --> documentation "The correlation of the Hierarchy Element (i.e. positive/negative is good/bad)"
