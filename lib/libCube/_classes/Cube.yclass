@@ -250,7 +250,6 @@ function LibCube:Cube::init()
 --> action {
     initDimensions();
     calculateJointures();
-
 }
 ;
 
