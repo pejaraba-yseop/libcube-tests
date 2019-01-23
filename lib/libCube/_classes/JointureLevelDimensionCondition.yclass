@@ -54,24 +54,24 @@ implementation LibCube:JointureLevelDimensionCondition override {
 ;
 
 function LibCube:JointureLevelDimensionCondition::init() 
---> local LibCube:Hierarchy hierarchyAccesor, Integer accesorIndex, Collection levelDescendants, Integer currentLevel, Collection leaves, Collection children
+--> local LibCube:Hierarchy theHierarchy, Integer accesorIndex, Collection levelDescendants, Integer currentLevel, Collection leaves, Collection children
 --> action{
     if(this.membersCollection == null || this.membersCollection.isEmpty() == true){
         if(hierarchy==null){
-            hierarchyAccesor = dimension>>hierarchies.get(_FIRST);
+            theHierarchy = dimension>>hierarchies.get(_FIRST);
         }
         else{
             accesorIndex = dimension>>hierarchies.indexOf(hierarchy);
-            hierarchyAccesor = dimension>>hierarchies.get(accesorIndex);
+            theHierarchy = dimension>>hierarchies.get(accesorIndex);
         }
         
-        if(hierarchyAccesor != null){
+        if(theHierarchy != null){
             if(originMember == null){
                 if(areLeaves == true){
-                    this.membersCollection = hierarchyAccesor.leafMembers;
+                    this.membersCollection = theHierarchy.leafMembers;
                 }
                 else{
-                    this.membersCollection = hierarchyAccesor.getMembersByLevel(level);
+                    this.membersCollection = theHierarchy.getMembersByLevel(level);
                 }
             }else{
                 if(areLeaves == true){
@@ -80,7 +80,7 @@ function LibCube:JointureLevelDimensionCondition::init()
                     levelDescendants.add(originMember);
                     while(levelDescendants.isEmpty() == false){
                         foreach(_descendant, levelDescendants){
-                            children = hierarchyAccesor.getChildren(_descendant);
+                            children = theHierarchy.getChildren(_descendant);
                             if(children == null || children.isEmpty() == true){
                                 leaves.add(_descendant);
                             }
@@ -98,7 +98,7 @@ function LibCube:JointureLevelDimensionCondition::init()
                     levelDescendants.add(originMember);
                     while(currentLevel < level){
                         foreach(_descendant, levelDescendants){
-                            children = hierarchyAccesor.getChildren(_descendant);
+                            children = theHierarchy.getChildren(_descendant);
                             levelDescendants.addAll(children);
                             levelDescendants.remove(_descendant);
                         }

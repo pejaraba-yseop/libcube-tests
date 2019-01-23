@@ -80,11 +80,6 @@ interface LibCube:Dimension
     method getElemFullMdxName(LibCube:HierarchyElement elem, LibCube:Hierarchy hierarchy)
         --> domains String
 
-
-    method getHierarchyAccessor(LibCube:Hierarchy hierarchy)
-        --> domains LibCube:Hierarchy
-        --> deprecated "Beta14"
-
     classProperties
     --> dsl -> Textualization
         --> language LANG_en
@@ -99,37 +94,37 @@ implementation LibCube:Dimension
 ;
 
 function LibCube:Dimension::processDimension()
---> local LibCube:Hierarchy theAccessor
+--> local LibCube:Hierarchy theHierarchy
 --> action {
   foreach(_hierarchy , this>>hierarchies) {   
-    theAccessor = new(LibCube:Hierarchy)
-    theAccessor.hierarchyIdentifier = _hierarchy.identifier
-    theAccessor = _hierarchy;
+    theHierarchy = new(LibCube:Hierarchy)
+    theHierarchy.hierarchyIdentifier = _hierarchy.identifier
+    theHierarchy = _hierarchy;
     
     foreach(_node , _hierarchy) {
       this.members := LibCube:Hierarchy(_node).value;
-      theAccessor.maxHierarchyLevel = LibCube:Hierarchy(_node).depth();
+      theHierarchy.maxHierarchyLevel = LibCube:Hierarchy(_node).depth();
       if (LibCube:Hierarchy(_node).depth() > 1) {
         LibCube:HierarchyElement(_node.value).parent = _node.getParentNode().value;
 		if (LibCube:Hierarchy(_node).depth() > 2) {
 			LibCube:HierarchyElement(_node.value).grandparent = _node.getParentNode().getParentNode().value;
 		}
       } else {
-        theAccessor.rootMember = LibCube:Hierarchy(_node).value
+        theHierarchy.rootMember = LibCube:Hierarchy(_node).value
       }
 
       if(_node.isALeaf() == true) {               
         LibCube:HierarchyElement(_node.value).isLeaf = true
-        theAccessor.leafMembers.add(_node.value)
+        theHierarchy.leafMembers.add(_node.value)
       } 
 
-      if(theAccessor.membersByLevel.containsKey(_node.depth()) == false){
-        theAccessor.membersByLevel.put(_node.depth(), new(List))
+      if(theHierarchy.membersByLevel.containsKey(_node.depth()) == false){
+        theHierarchy.membersByLevel.put(_node.depth(), new(List))
       }
 
-      theAccessor.membersByLevel.get(_node.depth()).add(_node.value)
+      theHierarchy.membersByLevel.get(_node.depth()).add(_node.value)
     }
-    hierarchies := theAccessor
+    hierarchies := theHierarchy
   }
   
   //Loop through the members and add dimension to members
@@ -156,17 +151,5 @@ function LibCube:Dimension::getElemFullMdxName(LibCube:HierarchyElement elem, Li
     
     fullMdxName = concat("[", this.mdxName, ".", hierarchy.mdxName, "].", fullMdxName);
     return fullMdxName;
-}
-;
-
-
-function LibCube:Dimension::getHierarchyAccessor(LibCube:Hierarchy hierarchy)
---> action {
-    return hierarchy;
-    /*foreach(_accessor, hierarchies){
-        if(_accessor.hierarchy == hierarchy){
-            return _accessor;
-        }
-    }*/
 }
 ;

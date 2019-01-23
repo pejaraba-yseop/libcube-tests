@@ -150,16 +150,17 @@ function LibCube:Test:dimensionTest()
     }
 
 
-    assert(_dimension.getHierarchyAccessor(yearHierarchy).maxHierarchyLevel == 4);
+    assert(yearHierarchy.maxHierarchyLevel == 4);
     //--------------------------------------getMembersByLevel----------------------------------------------------------------
-    assert(_dimension.getHierarchyAccessor(yearHierarchy).getMembersByLevel(3).toList().get(3) == memberWeek3);
-    assert(_dimension.getHierarchyAccessor(yearHierarchy).getMembersByLevel(2).toList().get(1) == memberMonthJan);//month
-    assert(_dimension.getHierarchyAccessor(yearHierarchy).getMembersByLevel(2).toList().get(2) == memberMonthFeb);//month
-    assert(_dimension.getHierarchyAccessor(yearHierarchy).getMembersByLevel(1).toList().get(1) == memberYear);
+    assert(yearHierarchy.getMembersByLevel(3).toList().get(3) == memberWeek3);
+    
+    assert(yearHierarchy.getMembersByLevel(2).toList().get(1) == memberMonthJan);//month
+    assert(yearHierarchy.getMembersByLevel(2).toList().get(2) == memberMonthFeb);//month
+    assert(yearHierarchy.getMembersByLevel(1).toList().get(1) == memberYear);
     //------------------------------------------------------------------------------------------------------------------------
     //--------------------------------------getChildren-----------------------------------------------------------------------
-    assert(_dimension.getHierarchyAccessor(yearHierarchy).getChildren(memberYear).contains(memberMonthJan) == true);
-    assert(_dimension.getHierarchyAccessor(yearHierarchy).getChildren(memberYear).contains(memberMonthFeb) == true);
+    assert(yearHierarchy.getChildren(memberYear).contains(memberMonthJan) == true);
+    assert(yearHierarchy.getChildren(memberYear).contains(memberMonthFeb) == true);
     
     //------------------------------------------------------------------------------------------------------------------------
 
