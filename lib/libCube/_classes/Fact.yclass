@@ -182,9 +182,15 @@ interface LibCube:Fact extends LibCube:PrintableValuesObject
             --> hasDeterminer false
         ;
 
+    method createHierarchyByMdxname()
+    --> domains Void
+    /*
+    method generateHierarchyByMdxname()
+    --> domains Void
+    */
     method checkDimensions()
     --> domains Void
-        
+    
 
     classProperties
     --> dsl -> Textualization
@@ -315,6 +321,14 @@ function LibCube:Fact::getDimensionNameFromMdxName(String mdxName)
 
 function LibCube:Fact::getIndicatorMember()
 --> action return getMember(DIMENSION_INDICATOR);
+;
+
+function LibCube:Fact::createHierarchyByMdxname()
+--> action {
+    foreach(_member, this>>members){
+		_member.generateHierarchyByMdxname(_member.mdxName, null);
+    }
+}
 ;
 
 textMethod LibCube:Fact::printValues()
