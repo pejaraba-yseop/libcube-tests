@@ -51,7 +51,16 @@ interface LibCube:Member extends LibCube:PrintableValuesObject
 			--> nullable			    true
 	}
     --> domains String	        
-	
+
+    method generateHierarchyByMdxname(Text previousMember {__nullable},LibCube:Hierarchy child {__nullable})
+    --> domains Void
+
+    method buildNodeByMdxName(Text mdxNameToSearch)
+    --> domains LibCube:Hierarchy
+
+    method getMemberByMdxName(Text mdxNameToSearch)
+    --> domains LibCube:Member
+
     classProperties
     --> dsl -> Textualization
         --> language LANG_en
@@ -164,6 +173,106 @@ args {
     }
 }
 ;
+
+//Recursive Function to create a hierarchy based on a given MdxName
+function LibCube:Member::generateHierarchyByMdxname(Text theMdxName {__nullable},LibCube:Hierarchy child {__nullable})
+--> local Text mdxNameAuxiliar,
+          Integer indexOfLastOccurrence,
+          LibCube:Hierarchy theHierarchy
+
+--> action {
+    mdxNameAuxiliar = theMdxName;
+    
+    //It finds the index of last occurrence of ´].[´
+    indexOfLastOccurrence = mdxNameAuxiliar.length() - 
+        (ifExpr(mdxNameAuxiliar.reverse().indexOfText(_REGEXP, "[[][\.[]]") == 0) 
+            then mdxNameAuxiliar.length() 
+            else mdxNameAuxiliar.reverse().indexOfText(_REGEXP, "[[][\.[]]"))
+    ;
+    //this line to know just if it should create root or child
+    //We should consider a flag here to validate if root should be created with specific conditions
+    if(indexOfLastOccurrence > 0){
+        //Building node based on resulting mdxName, if the node exists,it is returned
+        theHierarchy = buildNodeByMdxName(mdxNameAuxiliar);
+        mdxNameAuxiliar = mdxNameAuxiliar.truncate(indexOfLastOccurrence - 1);
+        if(child != null){
+            //Il n’est pas nécessaire d’indiquer l’arbre d’appartenance du nœud puisqu’un nœud appartient à un seul arbre.
+            child.removeNode();
+            theHierarchy.addChild(child);
+        }    
+        generateHierarchyByMdxname(mdxNameAuxiliar,theHierarchy);
+    }
+    else{
+        //This part is based on specific client cube configuration (MONDRIAN)
+        mdxNameAuxiliar = mdxNameAuxiliar.replace("[", "[All ");
+        mdxNameAuxiliar = mdxNameAuxiliar.replace("]", "s]");
+        //-------------------------------------------------------------------
+        theHierarchy = buildNodeByMdxName(mdxNameAuxiliar);    
+        if(child != null){
+            //Il n’est pas nécessaire d’indiquer l’arbre d’appartenance du nœud puisqu’un nœud appartient à un seul arbre.
+            child.removeNode();
+            theHierarchy.addChild(child);
+        }
+        this.dimension.hierarchies.add(theHierarchy);
+    }
+    
+}
+;
+
+function LibCube:Member::buildNodeByMdxName(Text mdxNameToSearch)
+--> local 
+          LibCube:Hierarchy theHierarchy,
+          Collection theNodeCollection
+--> action {
+    //Search a tree with the same conditions
+    theNodeCollection = as(?hierarchy, ?hierarchy.hierarchyIdentifier != null, ?hierarchy.dimension == dimension
+    , ?hierarchy.mdxName == mdxNameToSearch );
+    if(theNodeCollection.toList().get(_FIRST) != null){
+        theHierarchy = theNodeCollection.toList().get(_FIRST);
+        if(theNodeCollection.toList().size() > 1){
+            logWarning("there is more than one hierarchy with dimension.mdxName:", dimension.mdxName, " and hierarchy.mdxName: " , theHierarchy.mdxName);
+        }
+    }
+    else{
+        //If the result of the search is null and the flag parameter is true then the tree is created
+        theHierarchy = new(LibCube:Hierarchy);
+        theHierarchy.mdxName = mdxNameToSearch;
+        theHierarchy.dimension = dimension;
+        theHierarchy.hierarchyIdentifier = "unknown";
+        theHierarchy.value = getMemberByMdxName(mdxNameToSearch);
+    }
+
+    return theHierarchy;
+}
+;
+
+function LibCube:Member::getMemberByMdxName(Text mdxNameToSearch)
+--> local Collection theMemberCollection,
+          LibCube:Member theMember
+--> action{
+    if(mdxName == mdxNameToSearch){
+        return this;
+    }
+    else{
+        theMemberCollection = as(?member, ?member.mdxName == mdxNameToSearch, ?member.dimension == dimension
+        , ?member.class == LibCube:Member); //waht happen if it is a subclass
+        if(theMemberCollection.toList().get(_FIRST) != null){
+            theMember = theMemberCollection.toList().get(_FIRST);
+            if(theMemberCollection.toList().size() > 1){
+                logWarning("there is more than one member with dimension.mdxName:", dimension.mdxName, " and member.mdxName: " , theMember.mdxName);
+            }
+        }
+        else{
+            logWarning("there is not a member with dimension.mdxName:", dimension.mdxName, " and member.mdxName: " , mdxNameToSearch);
+        }
+
+        return theMember;
+    }
+}
+;
+
+
+
 textMethod LibCube:Member::printValues()
 --> text 
 \( 
@@ -174,3 +283,4 @@ textMethod LibCube:Member::printValues()
     \endIf
 \)
 ;
+

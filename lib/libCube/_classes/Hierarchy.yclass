@@ -18,7 +18,7 @@ interface LibCube:Hierarchy extends Tree
             --> number SINGULAR
         ;
 
-    field hierarchyIdentifier
+    field hierarchyIdentifier //getRoot
         --> domains Text
         --> xmlMapping XmlMappingProperty_NO_SAVE
         --> dsl -> Textualization
@@ -56,16 +56,6 @@ interface LibCube:Hierarchy extends Tree
             --> root "Members by level in  the hierarchy"
             --> number PLURAL
         ;
-    
-    field maxHierarchyLevel
-        --> domains Integer
-        --> documentation "Final level (by number) in the hierarchy"
-        --> xmlMapping XmlMappingProperty_SAVE
-        --> dsl -> Textualization
-            --> language LANG_en
-            --> root "maxHierarchyLevel"
-            --> number SINGULAR
-    ;
 
     method getMembersByLevel(Number level)
         --> domainsLevel2 LibCube:Member

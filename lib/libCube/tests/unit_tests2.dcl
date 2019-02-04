@@ -149,8 +149,6 @@ function LibCube:Test:dimensionTest()
             }
     }
 
-
-    assert(yearHierarchy.maxHierarchyLevel == 4);
     //--------------------------------------getMembersByLevel----------------------------------------------------------------
     assert(yearHierarchy.getMembersByLevel(3).toList().get(3) == memberWeek3);
     
@@ -1190,10 +1188,95 @@ function LibCube:Test:getParentByLevelTest()
 }
 ;
 
+function LibCube:Test:createHierarchyByMdxnameTest()
+--> local 
+    LibCube:Fact theFact,
+    LibCube:Fact theFact2,
+    LibCube:Fact theFact3,
+    LibCube:Fact theFact4,
+    LibCube:Dimension theDimension,
+    LibCube:TimeMember member1,
+    LibCube:TimeMember member2,
+    LibCube:TimeMember member3,
+    LibCube:Member member4
+--> action {
+    
+    logInfo("Testing createHierarchyByMdxnameTest");
+
+    theDimension = new(LibCube:Dimension);
+    theDimension.mdxName = "[DIM_ENTITY]";
+    member1 = new(LibCube:TimeMember);
+    member1.label = "2018";
+    member1.mdxName = "[DIM_ENTITY.ENTITIES].[Acacia Ridge].[Child2].[memberYear]";
+    member1.date = Date..stringToDate("2018-01-01");
+    member1.dimension = theDimension;
+    
+    member2 = new(LibCube:TimeMember);
+    member2.label = "2018-02";
+    member2.mdxName = "[DIM_ENTITY.ENTITIES].[Acacia Ridge].[Child].[GrandSon].[memberMonth]";
+    member2.date = Date..stringToDate("2018-02-01");
+    member2.dimension = theDimension;
+
+    member3 = new(LibCube:TimeMember);
+    member3.label = "2018-02-04";
+    member3.mdxName = "[DIM_ENTITY.ENTITIES].[Ashmore].[memberDay]";
+    member3.date = Date..stringToDate("2018-02-04");
+    member3.dimension = theDimension;
+
+    member4 = new(LibCube:Member);
+    member4.label = "member4";
+    member4.mdxName = "[DIM_ACCOUNT.Accounts].[EBITA].[Gross Profit].[Cost of sales net]";
+    member4.dimension = theDimension;
+
+    theFact = new(LibCube:Fact);
+    theFact.members.add(member1);
+    theFact2 = new(LibCube:Fact);
+    theFact2.members.add(member2);
+    theFact3 = new(LibCube:Fact);
+    theFact3.members.add(member3);
+    theFact4 = new(LibCube:Fact);
+    theFact4.members.add(member4);
+
+    theFact.createHierarchyByMdxname();
+    theFact2.createHierarchyByMdxname();
+    theFact3.createHierarchyByMdxname();
+    theFact4.createHierarchyByMdxname();
+    
+    assert(theDimension.hierarchies.size() == 2);
+    foreach(_hierarchy, theDimension>>hierarchies){
+        if(_hierarchy.mdxName == "[All DIM_ENTITY.ENTITIESs]"){
+            assert(_hierarchy.nodesCount() == 9);
+            assert(_hierarchy.height() == 5);
+            assert(_hierarchy.getNodeByPath(".0").mdxName == "[All DIM_ENTITY.ENTITIESs]");
+            assert(_hierarchy.getNodeByPath(".1").mdxName == "[DIM_ENTITY.ENTITIES].[Acacia Ridge]");
+            assert(_hierarchy.getNodeByPath(".1.1").mdxName == "[DIM_ENTITY.ENTITIES].[Acacia Ridge].[Child2]");
+            assert(_hierarchy.getNodeByPath(".1.1.1").mdxName == "[DIM_ENTITY.ENTITIES].[Acacia Ridge].[Child2].[memberYear]");
+            assert(_hierarchy.getNodeByPath(".1.2").mdxName == "[DIM_ENTITY.ENTITIES].[Acacia Ridge].[Child]");
+            assert(_hierarchy.getNodeByPath(".1.2.1").mdxName == "[DIM_ENTITY.ENTITIES].[Acacia Ridge].[Child].[GrandSon]");
+            assert(_hierarchy.getNodeByPath(".1.2.1.1").mdxName == "[DIM_ENTITY.ENTITIES].[Acacia Ridge].[Child].[GrandSon].[memberMonth]");
+            assert(_hierarchy.getNodeByPath(".2").mdxName == "[DIM_ENTITY.ENTITIES].[Ashmore]");
+            assert(_hierarchy.getNodeByPath(".2.1").mdxName == "[DIM_ENTITY.ENTITIES].[Ashmore].[memberDay]");
+        }
+        else if(_hierarchy.mdxName == "[All DIM_ACCOUNT.Accountss]"){
+            assert(_hierarchy.nodesCount() == 4);
+            assert(_hierarchy.height() == 4);
+            assert(_hierarchy.getNodeByPath(".0").mdxName == "[All DIM_ACCOUNT.Accountss]");
+            assert(_hierarchy.getNodeByPath(".1").mdxName == "[DIM_ACCOUNT.Accounts].[EBITA]");
+            assert(_hierarchy.getNodeByPath(".1.1").mdxName == "[DIM_ACCOUNT.Accounts].[EBITA].[Gross Profit]");
+            assert(_hierarchy.getNodeByPath(".1.1.1").mdxName == "[DIM_ACCOUNT.Accounts].[EBITA].[Gross Profit].[Cost of sales net]");
+        }
+        else
+            logInfo(_hierarchy.getNodeByPath(".0").mdxName);
+    }
+    
+    logInfo("LibCube:Test:createHierarchyByMdxnameTest() passed");
+}
+;
 
 function LibCube:Test:main2()
 --> action {
     logInfo("Running LibCube unit tests");
+  
   
     LibCube:Test:dimensionTest();
     LibCube:Test:getDimensionNameFromMdxNameTest();
@@ -1210,6 +1293,7 @@ function LibCube:Test:main2()
     LibCube:Test:requestContextTest();
     LibCube:Test:timeDimensionTest();
     LibCube:Test:getParentByLevelTest();//issue22
+    LibCube:Test:createHierarchyByMdxnameTest();//issue31
     //LibCube:Test:multidimensionalTotalFactsCreatorTest();
     
 }

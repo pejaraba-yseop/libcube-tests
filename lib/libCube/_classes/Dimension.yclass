@@ -28,7 +28,7 @@ interface LibCube:Dimension
             --> root "is optional"
             --> number SINGULAR
         ;           
-    field hierarchies
+    field hierarchies   //root node of the hierarchy
         --> domains LibCube:Hierarchy
         --> documentation "The hierarchy of the dimension. A typical hierarchy would be the balance lines of a an account."
         --> xmlMapping XmlMappingProperty_NO_SAVE
@@ -94,39 +94,42 @@ implementation LibCube:Dimension
 ;
 
 function LibCube:Dimension::processDimension()
---> local LibCube:Hierarchy theHierarchy
+--> local LibCube:Hierarchy theHierarchy, LibCube:HierarchyElement rootMember
 --> action {
-  foreach(_hierarchy , this>>hierarchies) {   
-    theHierarchy = new(LibCube:Hierarchy)
-    theHierarchy.hierarchyIdentifier = _hierarchy.identifier
-    theHierarchy = _hierarchy;
-    
-    foreach(_node , _hierarchy) {
-      this.members := LibCube:Hierarchy(_node).value;
-      theHierarchy.maxHierarchyLevel = LibCube:Hierarchy(_node).depth();
-      if (LibCube:Hierarchy(_node).depth() > 1) {
-        LibCube:HierarchyElement(_node.value).parent = _node.getParentNode().value;
-		if (LibCube:Hierarchy(_node).depth() > 2) {
-			LibCube:HierarchyElement(_node.value).grandparent = _node.getParentNode().getParentNode().value;
-		}
-      } else {
-        theHierarchy.rootMember = LibCube:Hierarchy(_node).value
-      }
+    theHierarchy = hierarchies.get(_FIRST);
+    if(hierarchies.size() == 1){    
+        foreach(_node , theHierarchy) {
+            if (LibCube:Hierarchy(_node).depth() > 1) {
+                LibCube:HierarchyElement(_node.value).parent = _node.getParentNode().value;
+                if (LibCube:Hierarchy(_node).depth() > 2) {
+                    LibCube:HierarchyElement(_node.value).grandparent = _node.getParentNode().getParentNode().value;
+                }
+            } else {
+                rootMember = LibCube:Hierarchy(_node).value
+            }
 
-      if(_node.isALeaf() == true) {               
-        LibCube:HierarchyElement(_node.value).isLeaf = true
-        theHierarchy.leafMembers.add(_node.value)
-      } 
+            if(_node.isALeaf() == true) {               
+                LibCube:HierarchyElement(_node.value).isLeaf = true
+                theHierarchy.leafMembers.add(_node.value)
+            } 
 
-      if(theHierarchy.membersByLevel.containsKey(_node.depth()) == false){
-        theHierarchy.membersByLevel.put(_node.depth(), new(List))
-      }
+            if(theHierarchy.membersByLevel.containsKey(_node.depth()) == false){
+                theHierarchy.membersByLevel.put(_node.depth(), new(List))
+            }
 
-      theHierarchy.membersByLevel.get(_node.depth()).add(_node.value)
+            theHierarchy.membersByLevel.get(_node.depth()).add(_node.value)
+        }
+            theHierarchy.rootMember = rootMember;
+            hierarchies := theHierarchy;
     }
-    hierarchies := theHierarchy
-  }
-  
+    else{
+        logWarning("There is more than one hierarchy for the dimension, so it is not safe to crete member by level");
+    }
+
+    foreach(_node , theHierarchy) {
+        this.members := LibCube:Hierarchy(_node).value;
+    }
+
   //Loop through the members and add dimension to members
   foreach(_member , this>>members) {   
     _member.dimension = this;
