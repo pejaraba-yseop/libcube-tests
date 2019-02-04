@@ -57,9 +57,11 @@ interface LibCube:Member extends LibCube:PrintableValuesObject
 
     method buildNodeByMdxName(Text mdxNameToSearch)
     --> domains LibCube:Hierarchy
+    --> visibility _PRIVATE
 
     method createMemberByMdxName(Text mdxNameToSearch)
     --> domains LibCube:Member
+    --> visibility _PRIVATE
 
     classProperties
     --> dsl -> Textualization

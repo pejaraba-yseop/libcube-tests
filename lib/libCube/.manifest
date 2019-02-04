@@ -1,6 +1,6 @@
 /*@assertEngineVersionCompatible ("7.1.0.RC02")
 */
-@assertEngineVersionCompatible ("7.2.0.M1-002")
+@assertEngineVersionCompatible ("7.2.0.M2-001")
 
 @defineLibrary ("libCube", "1.0.0.BETA13")
 
