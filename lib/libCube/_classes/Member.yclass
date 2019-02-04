@@ -55,7 +55,7 @@ interface LibCube:Member extends LibCube:PrintableValuesObject
     method generateHierarchyByMdxname(Text previousMember {__nullable},LibCube:Hierarchy child {__nullable})
     --> domains Void
 
-    method buildNodeByMdxName(Text mdxNameToSearch, Boolean createIfNotExist)
+    method buildNodeByMdxName(Text mdxNameToSearch)
     --> domains LibCube:Hierarchy
 
     method getMemberByMdxName(Text mdxNameToSearch)
@@ -178,50 +178,48 @@ args {
 function LibCube:Member::generateHierarchyByMdxname(Text theMdxName {__nullable},LibCube:Hierarchy child {__nullable})
 --> local Text mdxNameAuxiliar,
           Integer indexOfLastOccurrence,
-          Text lastCharacter,
-          List mdxNameSplit,
           LibCube:Hierarchy theHierarchy
 
 --> action {
     mdxNameAuxiliar = theMdxName;
-    lastCharacter = mdxNameAuxiliar.substring(_POSITION,mdxNameAuxiliar.length(),_POSITION, mdxNameAuxiliar.length());
-    if(lastCharacter == "]"){
-        //this line to know just if it should create root or child
-        //We should consider a flag here to validate if root should be created with specific conditions
-        mdxNameSplit = mdxNameAuxiliar.split("]");
-        if(mdxNameSplit.size() > 1){
-            //Building node based on resulting mdxName, if the node exists,it is returned
-            theHierarchy = buildNodeByMdxName(mdxNameAuxiliar, true);
-            
-        }
-        else{
-            //This part is based on specific client cube configuration (MONDRIAN)
-            mdxNameAuxiliar = mdxNameAuxiliar.replace("[", "[All ");
-            mdxNameAuxiliar = mdxNameAuxiliar.replace("]", "s]");
-            //-------------------------------------------------------------------
-            theHierarchy = buildNodeByMdxName(mdxNameAuxiliar, true);
-        }
-        //It finds the index of last occurrence of ´].[´
-        indexOfLastOccurrence = mdxNameAuxiliar.length() - mdxNameAuxiliar.reverse().indexOfText(_REGEXP, "[[][\.[]]");
+    
+    //It finds the index of last occurrence of ´].[´
+    indexOfLastOccurrence = mdxNameAuxiliar.length() - 
+        (ifExpr(mdxNameAuxiliar.reverse().indexOfText(_REGEXP, "[[][\.[]]") == 0) 
+            then mdxNameAuxiliar.length() 
+            else mdxNameAuxiliar.reverse().indexOfText(_REGEXP, "[[][\.[]]"))
+    ;
+    //this line to know just if it should create root or child
+    //We should consider a flag here to validate if root should be created with specific conditions
+    if(indexOfLastOccurrence > 0){
+        //Building node based on resulting mdxName, if the node exists,it is returned
+        theHierarchy = buildNodeByMdxName(mdxNameAuxiliar);
         mdxNameAuxiliar = mdxNameAuxiliar.truncate(indexOfLastOccurrence - 1);
         if(child != null){
             //Il n’est pas nécessaire d’indiquer l’arbre d’appartenance du nœud puisqu’un nœud appartient à un seul arbre.
             child.removeNode();
             theHierarchy.addChild(child);
-        }
-        
+        }    
         generateHierarchyByMdxname(mdxNameAuxiliar,theHierarchy);
-        
     }
     else{
-        //Adding the final tree to the dimension
-        this.dimension.hierarchies.add(child);
+        //This part is based on specific client cube configuration (MONDRIAN)
+        mdxNameAuxiliar = mdxNameAuxiliar.replace("[", "[All ");
+        mdxNameAuxiliar = mdxNameAuxiliar.replace("]", "s]");
+        //-------------------------------------------------------------------
+        theHierarchy = buildNodeByMdxName(mdxNameAuxiliar);    
+        if(child != null){
+            //Il n’est pas nécessaire d’indiquer l’arbre d’appartenance du nœud puisqu’un nœud appartient à un seul arbre.
+            child.removeNode();
+            theHierarchy.addChild(child);
+        }
+        this.dimension.hierarchies.add(theHierarchy);
     }
     
 }
 ;
 
-function LibCube:Member::buildNodeByMdxName(Text mdxNameToSearch, Boolean createIfNotExist)
+function LibCube:Member::buildNodeByMdxName(Text mdxNameToSearch)
 --> local 
           LibCube:Hierarchy theHierarchy,
           Collection theNodeCollection
@@ -235,7 +233,7 @@ function LibCube:Member::buildNodeByMdxName(Text mdxNameToSearch, Boolean create
             logWarning("there is more than one hierarchy with dimension.mdxName:", dimension.mdxName, " and hierarchy.mdxName: " , theHierarchy.mdxName);
         }
     }
-    else if(createIfNotExist == true){
+    else{
         //If the result of the search is null and the flag parameter is true then the tree is created
         theHierarchy = new(LibCube:Hierarchy);
         theHierarchy.mdxName = mdxNameToSearch;

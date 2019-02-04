@@ -1277,6 +1277,7 @@ function LibCube:Test:main2()
 --> action {
     logInfo("Running LibCube unit tests");
   
+  
     LibCube:Test:dimensionTest();
     LibCube:Test:getDimensionNameFromMdxNameTest();
     LibCube:Test:getDateTest();
@@ -1294,7 +1295,6 @@ function LibCube:Test:main2()
     LibCube:Test:getParentByLevelTest();//issue22
     LibCube:Test:createHierarchyByMdxnameTest();//issue31
     //LibCube:Test:multidimensionalTotalFactsCreatorTest();
-    
     
 }
 ;
