@@ -57,7 +57,7 @@ interface LibCube:Dimension
             --> number SINGULAR
         ;
    field className
-        --> domains String
+        --> domains Class
         --> xmlMapping XmlMappingProperty_SAVE
         --> dsl -> Textualization
             --> language LANG_en
@@ -97,7 +97,7 @@ function LibCube:Dimension::processDimension()
 --> local LibCube:Hierarchy theHierarchy, LibCube:HierarchyElement rootMember
 --> action {
     theHierarchy = hierarchies.get(_FIRST);
-    if(hierarchies.size() == 1){    
+    if(hierarchies.size() == 1){  
         foreach(_node , theHierarchy) {
             if (LibCube:Hierarchy(_node).depth() > 1) {
                 LibCube:HierarchyElement(_node.value).parent = _node.getParentNode().value;

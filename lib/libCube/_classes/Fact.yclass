@@ -184,10 +184,7 @@ interface LibCube:Fact extends LibCube:PrintableValuesObject
 
     method createHierarchyByMdxname()
     --> domains Void
-    /*
-    method generateHierarchyByMdxname()
-    --> domains Void
-    */
+    
     method checkDimensions()
     --> domains Void
     

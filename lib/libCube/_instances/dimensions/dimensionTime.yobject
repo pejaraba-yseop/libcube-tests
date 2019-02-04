@@ -1,4 +1,5 @@
 LibCube:TimeDimension DIMENSION_TIME
+    --> className LibCube:TimeMember
     //--> defaultMember DIMENSION_TIME_CURRENT_MEMBER  
     --> dsl -> Textualization
         --> language LANG_en

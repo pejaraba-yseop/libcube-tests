@@ -1,4 +1,5 @@
 LibCube:Dimension DIMENSION_INDICATOR
+    --> className LibCube:IndicatorMember
     --> dsl -> Textualization
         --> language LANG_en
         --> root "dimension kpi"

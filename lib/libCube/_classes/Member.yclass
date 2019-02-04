@@ -58,7 +58,7 @@ interface LibCube:Member extends LibCube:PrintableValuesObject
     method buildNodeByMdxName(Text mdxNameToSearch)
     --> domains LibCube:Hierarchy
 
-    method getMemberByMdxName(Text mdxNameToSearch)
+    method createMemberByMdxName(Text mdxNameToSearch)
     --> domains LibCube:Member
 
     classProperties
@@ -74,7 +74,7 @@ interface LibCube:Member extends LibCube:PrintableValuesObject
 implementation LibCube:Member override {
   toStringInStream function
   printValues function
-  compareSameClass         
+  compareSameClass function      
 }
   @if (exists_object(Class::areXmlInstancesMergeable) == true)
     --> areXmlInstancesMergeable	true
@@ -194,6 +194,7 @@ function LibCube:Member::generateHierarchyByMdxname(Text theMdxName {__nullable}
     if(indexOfLastOccurrence > 0){
         //Building node based on resulting mdxName, if the node exists,it is returned
         theHierarchy = buildNodeByMdxName(mdxNameAuxiliar);
+        theHierarchy.value = createMemberByMdxName(mdxNameAuxiliar);
         mdxNameAuxiliar = mdxNameAuxiliar.truncate(indexOfLastOccurrence - 1);
         if(child != null){
             //Il n’est pas nécessaire d’indiquer l’arbre d’appartenance du nœud puisqu’un nœud appartient à un seul arbre.
@@ -207,7 +208,8 @@ function LibCube:Member::generateHierarchyByMdxname(Text theMdxName {__nullable}
         mdxNameAuxiliar = mdxNameAuxiliar.replace("[", "[All ");
         mdxNameAuxiliar = mdxNameAuxiliar.replace("]", "s]");
         //-------------------------------------------------------------------
-        theHierarchy = buildNodeByMdxName(mdxNameAuxiliar);    
+        theHierarchy = buildNodeByMdxName(mdxNameAuxiliar);
+        theHierarchy.value = createMemberByMdxName(mdxNameAuxiliar);
         if(child != null){
             //Il n’est pas nécessaire d’indiquer l’arbre d’appartenance du nœud puisqu’un nœud appartient à un seul arbre.
             child.removeNode();
@@ -239,14 +241,14 @@ function LibCube:Member::buildNodeByMdxName(Text mdxNameToSearch)
         theHierarchy.mdxName = mdxNameToSearch;
         theHierarchy.dimension = dimension;
         theHierarchy.hierarchyIdentifier = "unknown";
-        theHierarchy.value = getMemberByMdxName(mdxNameToSearch);
+        //theHierarchy.value = createMemberByMdxName(mdxNameToSearch);
     }
 
     return theHierarchy;
 }
 ;
 
-function LibCube:Member::getMemberByMdxName(Text mdxNameToSearch)
+function LibCube:Member::createMemberByMdxName(Text mdxNameToSearch)
 --> local Collection theMemberCollection,
           LibCube:Member theMember
 --> action{
@@ -263,15 +265,16 @@ function LibCube:Member::getMemberByMdxName(Text mdxNameToSearch)
             }
         }
         else{
-            logWarning("there is not a member with dimension.mdxName:", dimension.mdxName, " and member.mdxName: " , mdxNameToSearch);
+            theMember = new(LibCube:Member);
+            theMember.label = mdxNameToSearch.replace("[","").replace("]","");
+            theMember.mdxName = mdxNameToSearch;
+            theMember.dimension = dimension;
         }
 
         return theMember;
     }
 }
 ;
-
-
 
 textMethod LibCube:Member::printValues()
 --> text 

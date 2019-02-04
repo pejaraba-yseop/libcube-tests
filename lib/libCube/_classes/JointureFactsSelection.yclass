@@ -91,7 +91,7 @@ function LibCube:JointureFactsSelection::prepareFactsRequest()
           // TODO: that "LibCube:Member " should not be hardcoded
           if(_dimCondition.dimension.mdxName != null){
               if(_dimCondition.dimension.className != null){
-              	     context.addDimensionContext(_dimCondition.dimension.mdxName, _dimCondition.dimension.identifier,_dimCondition.dimension.className);
+              	     context.addDimensionContext(_dimCondition.dimension.mdxName, _dimCondition.dimension.identifier,_dimCondition.dimension.className.identifier);
               }else{
               		context.addDimensionContext(_dimCondition.dimension.mdxName, _dimCondition.dimension.identifier, "LibCube:Member");
               }	

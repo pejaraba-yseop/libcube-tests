@@ -1890,7 +1890,7 @@ function LibCube:Test:getIndicatorMemberTest()
     dimensionCity = new(LibCube:Dimension);
     dimensionProduct = new(LibCube:Dimension);
     dimensionIndicator = new(LibCube:Dimension);
-    dimensionIndicator.className = "dimensionIndicator.className";
+    //dimensionIndicator.className = "dimensionIndicator.className";
     memberComparator = new(LibCube:Member);
     memberComparator.label = "DIMENSIONINDICATOR";
     memberComparator.dimension = dimensionIndicator;

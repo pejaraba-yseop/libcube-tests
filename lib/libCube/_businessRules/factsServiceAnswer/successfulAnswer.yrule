@@ -2,6 +2,7 @@
 <yseop-yml:ymlRule xmlns:yseop-yml="http://www.yseop.com/yml/storage" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" domainModelVersion="3" identifier="58af1ea0-5ebf-4761-8a74-b3e45e1f0584">
     <yseop-yml:content>foreach(_fact, factsService.returnValue){
    	cube.factsRequestsManager.getPendingFactSelection().selectedFacts.add(_fact);
+    _fact.createHierarchyByMdxname();
  }
 logInfo("GETTING WEBSERVICE INFO");
 cube.factsRequestsManager.lastRequestStatus=factsService.runStatusCode;

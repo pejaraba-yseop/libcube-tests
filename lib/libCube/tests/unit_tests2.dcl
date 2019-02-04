@@ -20,8 +20,6 @@ function LibCube:Test:dimensionTest()
           LibCube:Hierarchy week1Hierarchy,
           LibCube:Hierarchy day1Hierarchy,
 
-          //LibCube:HierarchyMembersAccesor theAccessor,
-
           LibCube:Member resMember,
 
           String getElemFullMdxNameResult,
@@ -1202,7 +1200,7 @@ function LibCube:Test:createHierarchyByMdxnameTest()
 --> action {
     
     logInfo("Testing createHierarchyByMdxnameTest");
-
+    
     theDimension = new(LibCube:Dimension);
     theDimension.mdxName = "[DIM_ENTITY]";
     member1 = new(LibCube:TimeMember);
